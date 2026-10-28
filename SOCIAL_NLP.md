@@ -10,7 +10,7 @@
 - Run: `outputs/nlp_20261028_02`, 51 cluster dan 80 edge kemiripan.
 - Tercluster: 8.427 kalimat unik (53,1%); 8.628 kemunculan (53,3%). Sisanya noise, bukan satu topik koheren.
 
-Hanya Excel ini dan run ini disertakan. Semua run lama, salinan data dan bukti eksperimen telah dibersihkan untuk publikasi repository. Penjelasan topik dihitung dari run aktif; tidak membutuhkan ekspor penjelasan historis.
+Workbook audit lengkap `outputs/social_20261028_01/dataset.xlsx` juga disertakan untuk mempertahankan metadata sumber. Input NLP tetap `social_data.xlsx`, sheet Data; pembaca saat ini belum memakai workbook audit delapan sheet secara langsung. Penjelasan topik dihitung dari run aktif; tidak membutuhkan ekspor penjelasan historis.
 
 ## Algoritma dan evaluasi
 
@@ -41,7 +41,7 @@ Semua pengaturan ada pada social_nlp.json. Dashboard dapat memakai `--run-dir` a
 
 Run asli memakai **beesense-sentence-clusters:1**, producer asli 1.0.0; kode kini producer 1.1.0. Sembilan artifact adalah summary.json, topics.json, graph.json, comparison.json, sentences.parquet, occurrences.parquet, skipped.parquet, embeddings.npy, centroids.npy. manifest.json mengikat sembilan SHA-256. Tidak memakai pickle. Loader memeriksa checksum, skema, path traversal dan kecocokan bentuk embedding.
 
-[scripts/verify_dashboard_data.py](scripts/verify_dashboard_data.py) memverifikasi run, checksum Excel terhadap metadata, serta bahwa outputs hanya berisi sebelas file data yang diizinkan. Opsi `--check-git` juga memeriksa daftar file data yang dilacak Git. Path absolut sumber pada metadata historis tidak dipakai untuk membaca file saat dashboard dijalankan.
+[scripts/verify_dashboard_data.py](scripts/verify_dashboard_data.py) memverifikasi run, checksum input Excel terhadap metadata, serta allowlist dua belas file data: dua workbook sumber dan sepuluh file run NLP. Hash workbook audit dilaporkan terpisah; file kunci Excel sementara diabaikan. Opsi `--check-git` juga memeriksa daftar file data yang dilacak Git. Path absolut sumber pada metadata historis tidak dipakai untuk membaca file saat dashboard dijalankan.
 
 Ekspor penjelasan memakai skema sidecar **beesense-topic-explanations:1** dengan identitas source-manifest/input/hash kode; output baru atomik menolak overwrite. Ekspor baru otomatis diabaikan Git. Tidak ada perubahan database atau migrasi.
 

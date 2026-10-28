@@ -1,4 +1,4 @@
-"""Verify the single published dataset and the dashboard artifact bundle."""
+"""Verify published source workbooks and the dashboard artifact bundle."""
 
 from __future__ import annotations
 
@@ -13,6 +13,7 @@ def verify(check_git=False):
     config = json.loads((ROOT / "social_nlp.json").read_text())
     run = ROOT / config["output_dir"]
     source = ROOT / config["input_file"]
+    audit = ROOT / "outputs/social_20261028_01/dataset.xlsx"
     data = SocialNLPClusterer.load_run(run)
     if file_hash(source) != data["summary"]["source_sha256"]:
         raise ValueError("Excel source checksum differs from the fitted run")
@@ -20,15 +21,17 @@ def verify(check_git=False):
     allowed = {
         str((run / name).relative_to(ROOT))
         for name in [*manifest["files_sha256"], "manifest.json"]
-    } | {str(source.relative_to(ROOT))}
+    } | {str(source.relative_to(ROOT)), str(audit.relative_to(ROOT))}
     actual = {
         str(path.relative_to(ROOT))
         for path in (ROOT / "outputs").rglob("*")
-        if path.is_file() and path.name != ".DS_Store"
+        if path.is_file()
+        and path.name != ".DS_Store"
+        and not (path.name.startswith("~$") and path.suffix.lower() == ".xlsx")
     }
     if actual != allowed:
         raise ValueError(
-            "outputs must contain only the dashboard run and its source Excel"
+            "outputs must contain the published source workbooks and dashboard run only"
         )
     if check_git:
         tracked = set(
@@ -37,13 +40,15 @@ def verify(check_git=False):
             ).splitlines()
         )
         if tracked != allowed:
-            raise ValueError("Git dataset allowlist differs from the dashboard bundle")
+            raise ValueError("Git dataset allowlist differs from the published bundle")
     return {
         "status": "PASS",
         "dataset": config["input_file"],
         "run": config["output_dir"],
         "published_data_files": len(allowed),
         "input_sha256": data["summary"]["source_sha256"],
+        "audit_dataset": str(audit.relative_to(ROOT)),
+        "audit_sha256": file_hash(audit),
         "manifest_sha256": data["artifact_manifest_sha256"],
         "topics": len(data["topics"]),
         "sentence_occurrences": len(data["occurrences"]),

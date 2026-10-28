@@ -26,11 +26,12 @@ node_modules/
 # Browser profiles and transient crawl output
 output/
 
-# Only the dataset and fitted run used by the dashboard are publishable.
+# Preserve the full audit workbook, dashboard input and fitted run.
 outputs/*
 !outputs/social_20261028_01/
 outputs/social_20261028_01/*
 !outputs/social_20261028_01/social_data.xlsx
+!outputs/social_20261028_01/dataset.xlsx
 !outputs/nlp_20261028_02/
 outputs/nlp_20261028_02/*
 !outputs/nlp_20261028_02/manifest.json

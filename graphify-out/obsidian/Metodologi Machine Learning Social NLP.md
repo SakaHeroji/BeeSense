@@ -615,7 +615,7 @@ Run aktif tidak ditimpa. Hasil baru diabaikan Git kecuali allowlist dataset repo
 
 Skema run `beesense-sentence-clusters:1` tetap kompatibel; producer asli snapshot 1.0.0, kode sekarang 1.1.0. Save menulis ke direktori sementara lalu rename atomik. Direktori output yang sudah ada ditolak dan input tidak ditulis ulang. NumPy memakai allow_pickle=False.
 
-`load_run(verify=True)` memeriksa skema manifest, tepat sembilan nama artifact wajib, checksum, dan kesamaan jumlah baris kalimat/embedding. Itu pemeriksaan integritas dan sebagian konsistensi, bukan validasi semantik menyeluruh seluruh field Parquet atau jaminan kebenaran label. Verifier repository juga mencocokkan hash Excel dan allowlist sebelas file data.
+`load_run(verify=True)` memeriksa skema manifest, tepat sembilan nama artifact wajib, checksum, dan kesamaan jumlah baris kalimat/embedding. Itu pemeriksaan integritas dan sebagian konsistensi, bukan validasi semantik menyeluruh seluruh field Parquet atau jaminan kebenaran label. Verifier repository juga mencocokkan hash input Excel dan allowlist dua belas file data, termasuk workbook audit dataset.xlsx yang disimpan terpisah dari input NLP.
 
 **Estimator UMAP, HDBSCAN, KMeans dan vectorizer tidak diserialisasi sebagai model terfit.** Artifact adalah snapshot analisis. Tidak ada API produksi predict()/transform() untuk kalimat baru atau pembaruan cluster incremental. Run baru memerlukan fitting ulang pipeline; menghitung cosine terhadap centroid tersimpan saja tidak identik dengan memprediksi keanggotaan HDBSCAN.
 
@@ -637,7 +637,7 @@ Sidecar penjelasan opsional memakai skema `beesense-topic-explanations:1`, dua c
 
 Silhouette/ARI/coverage adalah evaluasi internal partisi pada korpus yang dipakai fitting. Unit/integration/UI tests memeriksa perilaku implementasi. Keduanya belum merupakan akurasi semantik pada held-out dataset berlabel. Tidak ada train/validation/test split atau klaim F1/accuracy berbasis label topik dalam kode ini.
 
-### 14.2 Cakupan 39 tes NLP/UI
+### 14.2 Cakupan 43 tes NLP/UI dan publikasi data
 
 | Berkas/kelompok | Jumlah metode tes | Hal yang diperiksa |
 |---|---:|---|
@@ -646,7 +646,8 @@ Silhouette/ARI/coverage adalah evaluasi internal partisi pada korpus yang dipaka
 | test_dashboard_analysis.py | 7 | Unit hitungan, denominator noise, bulan/mikrodetik, data chart, posisi/warna stabil, event cluster nol dan locale |
 | test_streamlit_app.py | 7 | Semua view, pilihan topik, URL/reset, hasil kosong, penjelasan, slider menyusut dan nilai URL invalid; UI tidak training |
 | test_topic_explanations.py | 12 | Pola naik/turun/stabil/spike, repetisi komentar, bulan hilang/parsial, platform reversal, sumber tunggal/minim, MMR/provenans, parent ID, tanggal/invalid input, sidecar dan guard tanpa encode/fit |
-| **Total** | **39** | Satu metode dapat berisi beberapa assertion/subtest |
+| test_dashboard_data_verifier.py | 4 | Workbook audit dipertahankan, file kunci Excel diabaikan, sumber hilang/data tambahan ditolak, checksum input tetap wajib cocok |
+| **Total** | **43** | Satu metode dapat berisi beberapa assertion/subtest |
 
 Fixture utama mempunyai tiga kelompok kalimat: pendidikan/beasiswa, kerja/karier dan komputer. Encoder injeksi menghasilkan vektor sintetis enam dimensi dengan sinyal kelompok yang jelas dan noise kecil deterministik. Tes menggunakan grid kecil agar cepat. Skor silhouette >0,9 pada fixture tersebut membuktikan perilaku pada data sintetis terkontrol, **bukan akurasi MiniLM pada percakapan nyata**.
 

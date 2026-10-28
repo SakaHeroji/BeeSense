@@ -20,18 +20,19 @@ Dashboard mempunyai lima tampilan: Ringkasan, Peta topik, Penjelasan topik, Kali
 
 ## Dataset yang disertakan
 
-Hanya **satu sumber data** dan **satu hasil pemrosesannya** disertakan:
+Dua workbook sumber dan satu hasil pemrosesan NLP disertakan:
 
 | Lokasi | Fungsi |
 |---|---|
+| `outputs/social_20261028_01/dataset.xlsx` | Workbook audit lengkap, 8 sheet; 8.449 record pada Contents |
 | `outputs/social_20261028_01/social_data.xlsx` | Excel sumber, satu sheet Data; 8.449 baris |
 | `outputs/nlp_20261028_02/` | Sembilan artifact clustering + manifest SHA-256 yang dibaca dashboard |
 
 Snapshot berisi 16.178 kemunculan kalimat, 15.878 kalimat unik, 7.944 komentar/balasan terwakili, dan 51 topik. Rentang post asal 27 Oktober 2025–26 Oktober 2026. Pengambilan sumber parsial; tanggal komentar YouTube dapat berupa perkiraan. Ini bukan seluruh percakapan selama setahun dan label topik belum divalidasi manusia.
 
-Excel dan sepuluh file run dipertahankan dengan checksum aslinya. Path absolut dalam metadata historis adalah provenans, bukan syarat lokasi instalasi. Konfigurasi aktif memakai path relatif. Penjelasan topik dihitung saat dibuka dari artifact tersebut; file ekspor penjelasan lama tidak diperlukan.
+Input ringkas dan sepuluh file run dipertahankan dengan checksum aslinya. Workbook audit yang ditemukan kembali ikut disimpan utuh; SHA-256 `ccfc77dc136ed8e98bce5c2c11d6243d22ff9e2a3082d9e299847b8b5aec74b3`. Sheet auditnya adalah Contents, Relations, KeywordHits, Metrics, Runs, Sources, TextChunks dan Readme. Input NLP tetap `social_data.xlsx`; penambahan workbook audit tidak menjalankan training ulang. Path absolut dalam metadata historis adalah provenans, bukan syarat lokasi instalasi. Konfigurasi aktif memakai path relatif. Penjelasan topik dihitung saat dibuka dari artifact tersebut; file ekspor penjelasan lama tidak diperlukan.
 
-Dataset/run lama, ekspor duplikat, checkpoint, profile Chrome, screenshot, log percobaan dan cache model tidak disertakan. `.gitignore` memakai allowlist sebelas file data tersebut; run baru secara default diabaikan Git. Fixture HTML kecil di `Reddit/fixtures` adalah data sintetis untuk pengujian parser.
+Dataset/run lama, checkpoint, profile Chrome, screenshot, log percobaan dan cache model tidak disertakan. `.gitignore` memakai allowlist dua belas file data tersebut; run baru secara default diabaikan Git. File kunci Excel sementara (`~$*.xlsx`) diabaikan oleh verifier dan Git. Fixture HTML kecil di `Reddit/fixtures` adalah data sintetis untuk pengujian parser.
 
 ## Struktur
 
@@ -41,7 +42,7 @@ social_nlp.py / social_nlp.json           Clustering, bukti sumber dan tren desk
 nlp_dashboard.py                         Class UI Streamlit
 Youtube/                                Adapter YouTube dan kontrak ekspor
 Reddit/                                 Adapter/runner/parser Reddit dan tes offline
-outputs/                                Satu Excel dan satu run dashboard
+outputs/                                Dua workbook sumber dan satu run dashboard
 scripts/verify_dashboard_data.py         Checksum dan allowlist data
 tests/                                 Tes crawler, NLP dan UI
 graphify-out/                          Graf kode dan catatan Obsidian yang diringkas
