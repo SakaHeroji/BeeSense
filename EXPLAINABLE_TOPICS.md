@@ -39,7 +39,7 @@ Semua opsi berada dalam bagian `explanation` pada [social_nlp.json](social_nlp.j
 ```python
 from social_nlp import SocialNLPClusterer
 
-data = SocialNLPClusterer.load_run("outputs/nlp_20261028_02")
+data = SocialNLPClusterer.load_run("outputs/nlp_20261028_coherence_01")
 options = SocialNLPClusterer("social_nlp.json").config["explanation"]
 result = SocialNLPClusterer.explain_artifacts(data, options=options)
 # Bisa dipakai setelah pipeline.fit_excel() / describe_topics():
@@ -49,7 +49,7 @@ result = SocialNLPClusterer.explain_artifacts(data, options=options)
 #     data, subset, date_start="2026-01-01", date_end="2026-09-30", options=options
 # )
 SocialNLPClusterer.save_explanations(
-    result, "outputs/penjelasan_baru", source_run="outputs/nlp_20261028_02"
+    result, "outputs/penjelasan_baru", source_run="outputs/nlp_20261028_coherence_01"
 )
 ```
 
@@ -57,7 +57,7 @@ Subset occurrence menentukan lingkup deskripsi, bukti, dan penyebut. `date_start
 
 ```bash
 # Tidak mengunduh model, meng-encode, melatih ulang, atau crawling:
-.venv-nlp/bin/python social_nlp.py --explain-run outputs/nlp_20261028_02 \
+.venv-nlp/bin/python social_nlp.py --explain-run outputs/nlp_20261028_coherence_01 \
   --output-dir outputs/penjelasan_baru
 # Batas eksplisit opsional: --trend-start 2026-01-01 --trend-end 2026-09-30
 
@@ -69,9 +69,11 @@ Dashboard menghitung penjelasan ketika tampilan penjelasan dibuka atau topik dip
 
 ## Hasil aktual dan persistensi
 
-Dashboard menghitung penjelasan dari run aktif outputs/nlp_20261028_02. File ekspor penjelasan historis telah dibersihkan; gunakan API/CLI di atas bila memerlukan sidecar baru, yang secara default diabaikan Git.
+Dashboard menghitung penjelasan dari run aktif outputs/nlp_20261028_coherence_01. File ekspor penjelasan historis telah dibersihkan; gunakan API/CLI di atas bila memerlukan sidecar baru, yang secara default diabaikan Git.
 
-| Pola snapshot | Topik |
+Hasil hitungan dan contoh numerik berikut adalah **historis dari run v1 `outputs/nlp_20261028_02`** (51 topik HDBSCAN), bukan angka untuk 52 topik DBSCAN aktif. Label dan arah run baru dihitung ulang saat dibuka.
+
+| Pola snapshot v1 | Topik |
 |---|---:|
 | Indikasi meningkat | 1 |
 | Indikasi menurun | 1 |
@@ -89,7 +91,7 @@ Skema sidecar baru **`beesense-topic-explanations:1`** menyimpan `topic_explanat
 
 ## Verifikasi dan batas deployment
 
-Pengujian NLP/UI mencakup pola naik/turun/stabil, spike, bulan hilang/parsial, duplikasi kalimat, perubahan komposisi platform, dominasi thread, tanggal perkiraan, MMR/provenans, checksum sidecar, filter dan slider, serta guard tanpa training. Dataset dan sembilan checksum artifact asli diperiksa melalui scripts/verify_dashboard_data.py. Log/screenshot eksperimen lama telah dibersihkan; tes memakai fixture sintetis dan tidak memerlukan arsip tersebut.
+Pengujian NLP/UI mencakup pola naik/turun/stabil, spike, bulan hilang/parsial, duplikasi kalimat, perubahan komposisi platform, dominasi thread, tanggal perkiraan, MMR/provenans, checksum sidecar, filter dan slider, serta guard tanpa training. Dataset, sebelas checksum artifact v2 aktif serta sembilan artifact v1 arsip diperiksa melalui scripts/verify_dashboard_data.py. Log/screenshot eksperimen lama telah dibersihkan; tes memakai fixture sintetis dan tidak memerlukan arsip tersebut.
 
 ```bash
 .venv-nlp/bin/python -m unittest discover -s tests/nlp -v

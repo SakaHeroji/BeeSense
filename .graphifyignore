@@ -5,6 +5,7 @@ output/
 Reddit/fixtures/
 .venv/
 .venv-nlp/
+.venv-sbert/
 .cache/
 .ruff_cache/
 __pycache__/

@@ -2,5 +2,6 @@
 *.xlsx binary
 *.parquet binary
 *.npy binary
+*.npz binary
 # Preserve bytes of checksummed artifacts on every platform.
-outputs/nlp_20261028_02/* -text
+outputs/nlp_*/* -text

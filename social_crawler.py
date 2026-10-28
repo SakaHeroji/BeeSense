@@ -537,6 +537,12 @@ class SocialCrawler:
             selected.append(row);seen.add(row['object_key'])
         return selected,'root_selected'
 
+    def _source_metadata(self, name, settings):
+        """Describe the acquisition backend independently of the shared export."""
+        return dict(producer_version='social-crawler:'+VERSION,
+                    extraction_method='yt_dlp_unofficial_web' if name=='youtube' else settings['backend'],
+                    access_mode='public_guest_or_local_dom_checkpoint')
+
     def run(self, output_dir=None):
         """Return an explicit target/shortfall report and write one atomic bundle."""
         reddit.verify_descriptor()
@@ -645,10 +651,9 @@ class SocialCrawler:
                 summary['posts_shortfall']=max(0,p['min_posts']-summary['qualified_posts'])
                 if summary['target_met'] and summary['stop_reason'] not in STOP_STATUSES:
                     summary['stop_reason']='TARGET_MET'
-                sink.write('Sources',factory.row('Sources',source=name,producer_version='social-crawler:'+VERSION,
+                sink.write('Sources',factory.row('Sources',source=name,**self._source_metadata(name,p),
                     upstream_version=';'.join(sorted(versions)) or None,
-                    extraction_method='yt_dlp_unofficial_web' if name=='youtube' else p['backend'],
-                    access_mode='public_guest_or_local_dom_checkpoint',config={**deepcopy(self.config),'platform_summary':summary},
+                    config={**deepcopy(self.config),'platform_summary':summary},
                     schema_fingerprint=reddit.schema_fingerprint(),observed_at=reddit.now_iso()))
             for row in relations:
                 row['resolution_status']='resolved_in_export' if row['object_key'] in object_keys else 'unresolved_reference'

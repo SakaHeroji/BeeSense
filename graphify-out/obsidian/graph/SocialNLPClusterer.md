@@ -1,0 +1,87 @@
+---
+source_file: "social_nlp.py"
+type: "code"
+community: "Pipeline dan Persistensi NLP"
+location: "L65"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Pipeline_dan_Persistensi_NLP
+---
+
+# SocialNLPClusterer
+
+## Connections
+- [[.__init__()_24]] - `method` [EXTRACTED]
+- [[._cache_dir()]] - `method` [EXTRACTED]
+- [[._clean()]] - `method` [EXTRACTED]
+- [[._ctfidf_terms()]] - `method` [EXTRACTED]
+- [[._encode_sbert()]] - `method` [EXTRACTED]
+- [[._evaluate()]] - `method` [EXTRACTED]
+- [[._event()]] - `method` [EXTRACTED]
+- [[._explanation_evidence()]] - `method` [EXTRACTED]
+- [[._explanation_term_changes()]] - `method` [EXTRACTED]
+- [[._explanation_trend()]] - `method` [EXTRACTED]
+- [[._filter_radius()]] - `method` [EXTRACTED]
+- [[._radius_graph()]] - `method` [EXTRACTED]
+- [[._reduce_embeddings()]] - `method` [EXTRACTED]
+- [[._topic_vectorizer()]] - `method` [EXTRACTED]
+- [[._validate_config()]] - `method` [EXTRACTED]
+- [[._validate_explanation_options()]] - `method` [EXTRACTED]
+- [[.build_topic_graph()]] - `method` [EXTRACTED]
+- [[.compare()]] - `method` [EXTRACTED]
+- [[.describe_topics()]] - `method` [EXTRACTED]
+- [[.encode()]] - `method` [EXTRACTED]
+- [[.evaluate_run_coherence()]] - `method` [EXTRACTED]
+- [[.explain_artifacts()]] - `method` [EXTRACTED]
+- [[.explain_topics()]] - `method` [EXTRACTED]
+- [[.fit_excel()]] - `method` [EXTRACTED]
+- [[.load_explanations()]] - `method` [EXTRACTED]
+- [[.load_run()]] - `method` [EXTRACTED]
+- [[.parent_post_key()]] - `method` [EXTRACTED]
+- [[.prepare_excel()]] - `method` [EXTRACTED]
+- [[.save()]] - `method` [EXTRACTED]
+- [[.save_explanations()]] - `method` [EXTRACTED]
+- [[.score_coherence()]] - `method` [EXTRACTED]
+- [[.select_candidate()]] - `method` [EXTRACTED]
+- [[.sentence_spans()]] - `method` [EXTRACTED]
+- [[.setUp()_6]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_1]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_2]] - `calls` [EXTRACTED]
+- [[.stability()]] - `method` [EXTRACTED]
+- [[.test_bad_input_and_configuration_are_rejected()]] - `calls` [EXTRACTED]
+- [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - `calls` [EXTRACTED]
+- [[.test_coherence_search_evaluates_all_near_ties_and_skips_lower_scores()]] - `calls` [EXTRACTED]
+- [[.test_ctfidf_never_pads_short_topics_with_zero_weight_terms()]] - `calls` [EXTRACTED]
+- [[.test_cv_distinguishes_coherent_terms_and_rejects_missing_topics()]] - `calls` [EXTRACTED]
+- [[.test_dbscan_memory_guard_and_no_eligible_candidate_are_explicit()]] - `calls` [EXTRACTED]
+- [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - `calls` [EXTRACTED]
+- [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - `calls` [EXTRACTED]
+- [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - `indirect_call` [INFERRED]
+- [[.test_real_umap_projections_and_cache_are_validated()]] - `calls` [EXTRACTED]
+- [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - `calls` [EXTRACTED]
+- [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `calls` [EXTRACTED]
+- [[Additive v2 coherence metadata with v1v2-compatible loaders]] - `shares_data_with` [EXTRACTED]
+- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
+- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[DashboardTests]] - `uses` [INFERRED]
+- [[Encode multilingual sentences with SBERT and fit UMAP + DBSCAN.      Encoder inj]] - `rationale_for` [EXTRACTED]
+- [[ExplanationTests]] - `uses` [INFERRED]
+- [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `implements` [EXTRACTED]
+- [[NLPTests]] - `uses` [INFERRED]
+- [[Non-noise c-TF-IDF unigrambigram labels]] - `implements` [EXTRACTED]
+- [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
+- [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `uses` [INFERRED]
+- [[StreamlitTests]] - `uses` [INFERRED]
+- [[Two UMAP 10D projections seeded 42 and 43]] - `implements` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
+- [[model_from_counts()]] - `calls` [EXTRACTED]
+- [[nlp_dashboard.py]] - `imports` [EXTRACTED]
+- [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[test_social_nlp.py]] - `imports` [EXTRACTED]
+- [[test_streamlit_app.py]] - `imports` [EXTRACTED]
+- [[test_topic_explanations.py]] - `imports` [EXTRACTED]
+- [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

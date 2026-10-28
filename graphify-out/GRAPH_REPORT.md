@@ -1,166 +1,187 @@
-# Graph Report - /Users/socs3/Documents/BeeSense  (2026-10-28)
+# Graph Report - /Users/sakaheroji/Documents/BeeSense  (2026-10-28)
 
 ## Corpus Check
-- Corpus is ~35,722 words - fits in a single context window. You may not need a graph.
+- 57 files · ~45,293 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 565 nodes · 1299 edges · 28 communities (24 shown, 4 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 55 edges (avg confidence: 0.58)
-- Token cost: deterministic AST 0; semantic agent usage unknown (not exposed)
+- 668 nodes · 1520 edges · 33 communities (28 shown, 5 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 88 edges (avg confidence: 0.64)
+- Token cost: AST 0; semantic token usage unavailable (not measured).
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Parser dan Runner Reddit|Parser dan Runner Reddit]]
-- [[_COMMUNITY_Orkestrasi SocialCrawler|Orkestrasi SocialCrawler]]
-- [[_COMMUNITY_Eksplorasi Dashboard Streamlit|Eksplorasi Dashboard Streamlit]]
-- [[_COMMUNITY_Clustering dan Penjelasan NLP|Clustering dan Penjelasan NLP]]
-- [[_COMMUNITY_Parser dan Runner Reddit 2|Parser dan Runner Reddit 2]]
-- [[_COMMUNITY_Adapter dan Kontrak YouTube|Adapter dan Kontrak YouTube]]
-- [[_COMMUNITY_Pengujian dan Regresi|Pengujian dan Regresi]]
-- [[_COMMUNITY_Parser dan Runner Reddit 3|Parser dan Runner Reddit 3]]
-- [[_COMMUNITY_Pengujian dan Regresi 2|Pengujian dan Regresi 2]]
-- [[_COMMUNITY_Metodologi Machine Learning|Metodologi Machine Learning]]
-- [[_COMMUNITY_Parser dan Runner Reddit 4|Parser dan Runner Reddit 4]]
-- [[_COMMUNITY_Pengujian dan Regresi 3|Pengujian dan Regresi 3]]
-- [[_COMMUNITY_Dokumentasi dan Konfigurasi|Dokumentasi dan Konfigurasi]]
-- [[_COMMUNITY_Metodologi Machine Learning 2|Metodologi Machine Learning 2]]
-- [[_COMMUNITY_Metodologi Machine Learning 3|Metodologi Machine Learning 3]]
-- [[_COMMUNITY_Parser dan Runner Reddit 5|Parser dan Runner Reddit 5]]
-- [[_COMMUNITY_Pengujian dan Regresi 4|Pengujian dan Regresi 4]]
-- [[_COMMUNITY_Dokumentasi dan Konfigurasi 2|Dokumentasi dan Konfigurasi 2]]
-- [[_COMMUNITY_Parser dan Runner Reddit 6|Parser dan Runner Reddit 6]]
-- [[_COMMUNITY_Metodologi Machine Learning 4|Metodologi Machine Learning 4]]
-- [[_COMMUNITY_Metodologi Machine Learning 5|Metodologi Machine Learning 5]]
+- Pipeline dan Persistensi NLP
+- Alur Akuisisi Sosial Terpadu
+- Adapter Akuisisi YouTube
+- Eksplorasi Dashboard Streamlit
+- Crawler Selenium Terisolasi
+- Parser dan Runner Reddit
+- Identitas dan Kontrak Data
+- Akses dan Parsing HTML
+- Ekspor Campaign dan Resume
+- Bundle Excel dan Provenans
+- Coherence dan Quality Gate
+- Runner Playwright Reddit
+- Pengujian Penjelasan Topik
+- Dashboard dan Tren Deskriptif
+- Arsitektur Crawler dan Dependensi
+- Runbook dan Verifikasi Lokal
+- Helper Campaign Browser
+- Pengujian UI Streamlit
+- Validasi Redirect dan Kesalahan
+- Snapshot NLP dan Arsip
+- Verifikasi Dataset Berversi
+- Parser DOM Terbatas
+- Encoder SBERT dan Cache
+- Ekstraksi Cuplikan Publik
+- Memori Startup Dashboard
+- Dependensi NLP dan Dashboard
 
 ## God Nodes (most connected - your core abstractions)
-1. `SocialNLPClusterer` - 57 edges
-2. `SocialNLPStreamlitApp` - 53 edges
-3. `SocialCrawler` - 34 edges
+1. `SocialNLPClusterer` - 71 edges
+2. `SocialCrawler` - 45 edges
+3. `SocialNLPStreamlitApp` - 42 edges
 4. `SocialCrawlerTests` - 32 edges
-5. `Metodologi Machine Learning Social NLP` - 31 edges
-6. `run()` - 21 edges
-7. `RedditHtmlParser` - 20 edges
-8. `RedditTests` - 20 edges
-9. `file_hash()` - 19 edges
-10. `import_pilot()` - 17 edges
+5. `NLPTests` - 25 edges
+6. `SocialCrawlerSelenium` - 24 edges
+7. `file_hash()` - 23 edges
+8. `run()` - 21 edges
+9. `RedditHtmlParser` - 20 edges
+10. `RedditTests` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `SocialCrawler` --implements--> `Compact Excel and verified reexport`  [EXTRACTED]
+- `SocialCrawler` --references--> `Per-platform qualifying-root targets and shortfalls`  [EXTRACTED]
   social_crawler.py → SOCIAL_CRAWLER.md
-- `SocialCrawler` --references--> `Reddit backend selection`  [EXTRACTED]
-  social_crawler.py → SOCIAL_CRAWLER.md
-- `SocialNLPStreamlitApp` --implements--> `Occurrence, sentence and comment units`  [EXTRACTED]
-  nlp_dashboard.py → DASHBOARD_DESIGN.md
-- `SocialNLPClusterer` --implements--> `Sentence and occurrence provenance`  [EXTRACTED]
+- `SocialNLPClusterer` --implements--> `Non-noise c-TF-IDF unigram/bigram labels`  [EXTRACTED]
   social_nlp.py → SOCIAL_NLP.md
-- `SocialCrawler` --references--> `social_crawler.json`  [EXTRACTED]
-  social_crawler.py → SOCIAL_CRAWLER.md
+- `SocialNLPClusterer` --implements--> `Two UMAP 10D projections seeded 42 and 43`  [EXTRACTED]
+  social_nlp.py → SOCIAL_NLP.md
+- `SocialNLPClusterer` --shares_data_with--> `Additive v2 coherence metadata with v1/v2-compatible loaders`  [EXTRACTED]
+  social_nlp.py → SOCIAL_NLP.md
+- `Obsidian c_v corpus and token protocol` --semantically_similar_to--> `Gensim c_v protocol: top 10 terms, window 110, phrase tokens`  [INFERRED] [semantically similar]
+  graphify-out/obsidian/Metodologi Machine Learning Social NLP.md → SOCIAL_NLP.md
 
 ## Import Cycles
 - None detected.
 
 ## Hyperedges (group relationships)
-- **Common-space comparison of candidate families** — graphify_out_obsidian_metodologi_machine_learning_social_nlp_umap_hdbscan, graphify_out_obsidian_metodologi_machine_learning_social_nlp_semantic_kmeans, graphify_out_obsidian_metodologi_machine_learning_social_nlp_lexical_baseline, graphify_out_obsidian_metodologi_machine_learning_social_nlp_eligibility_silhouette, graphify_out_obsidian_metodologi_machine_learning_social_nlp_noise_ari, graphify_out_obsidian_metodologi_machine_learning_social_nlp_selection_policy [EXTRACTED 1.00]
-- **Frozen inference, corpus fitting and saved exploration** — graphify_out_obsidian_metodologi_machine_learning_social_nlp_encoder_fitting, graphify_out_obsidian_metodologi_machine_learning_social_nlp_function_pipeline, graphify_out_obsidian_metodologi_machine_learning_social_nlp_snapshot_not_estimator, social_nlp_socialnlpclusterer, nlp_dashboard_socialnlpstreamlitapp [EXTRACTED 1.00]
-- **Supported snapshot explanation** — explainable_topics_extractive_mmr, explainable_topics_comment_topic_share, explainable_topics_temporal_direction, explainable_topics_support_and_platform_mix, explainable_topics_phrase_change [EXTRACTED 1.00]
+- **Frozen native SBERT to UMAP, density clustering and c-TF-IDF labels** — social_nlp_native_sbert, social_nlp_overflow_normalization, social_nlp_dual_umap, social_nlp_euclidean_dbscan, social_nlp_ctfidf [EXTRACTED 1.00]
+- **Fixed c_v token protocol, full unique reference corpus and unweighted aggregate** — social_nlp_coherence_protocol, social_nlp_coherence_reference, social_nlp_coherence_aggregation, social_nlp_invalid_topic_failure [EXTRACTED 1.00]
+- **Passing global c_v with unchanged baseline, individual shortfalls and in-sample limits** — social_nlp_coherence_result, social_nlp_unchanged_baseline, social_nlp_individual_shortfalls, social_nlp_insample_limit, social_nlp_original_space_silhouette [EXTRACTED 1.00]
+- **Shared social workbook contract** — selenium_crawler_inherited_export, social_crawler_compact_excel, social_crawler_audit_bundle, graphify_out_obsidian_crawler_selenium_shared_excel [EXTRACTED 1.00]
 
-## Communities (28 total, 4 thin omitted)
+## Communities (33 total, 5 thin omitted)
 
-### Community 0 - "Parser dan Runner Reddit"
-Cohesion: 0.07
-Nodes (36): add_readme(), BundleSink, ContentInput, ContractTests, Dataset, digest(), dumps(), KeywordMatcher (+28 more)
-
-### Community 1 - "Orkestrasi SocialCrawler"
+### Community 0 - "Pipeline dan Persistensi NLP"
 Cohesion: 0.06
-Nodes (24): Offline CI validation suite, Verify BeeSense workflow, Pinned crawler dependency group, Combined installation requirements, _config(), Literal source filtering and bounded acquisition, _keywords(), main() (+16 more)
+Nodes (23): _explain_filtered(), main(), Verify published source workbooks and the dashboard artifact bundle., verify(), file_hash(), json_write(), main(), Identify the parent thread, not the individual comment URL. (+15 more)
 
-### Community 2 - "Eksplorasi Dashboard Streamlit"
+### Community 1 - "Alur Akuisisi Sosial Terpadu"
 Cohesion: 0.06
-Nodes (20): Accessible and safe dashboard rendering, Native URL state and bounded controls, Filtered explanation lifecycle, _explain_filtered(), _graph_positions(), _load_artifacts(), main(), number() (+12 more)
+Nodes (29): Advanced connected-browser Reddit campaign helpers, Checkpoint export to the eight-sheet contract, Native-ID provenance and bounded public excerpts, Isolated browser profile and access-barrier stops, Shared rendered_thread_dom.mjs extraction, Reddit Playwright CLI runner, Inherited SocialCrawler filters and Excel exporters, JSONL audit, dataset.xlsx and checksum manifest (+21 more)
 
-### Community 3 - "Clustering dan Penjelasan NLP"
-Cohesion: 0.07
-Nodes (18): main(), Verify published source workbooks and the dashboard artifact bundle., verify(), file_hash(), json_write(), main(), Evidence-grounded topic descriptions and descriptive, source-aware trends., Explain already verified artifacts without encoding or fitting again. (+10 more)
-
-### Community 4 - "Parser dan Runner Reddit 2"
-Cohesion: 0.07
-Nodes (28): Exception, HTMLParser, HTTPRedirectHandler, assert_accessible(), bounded_events(), BoundedDom, content_node(), first() (+20 more)
-
-### Community 5 - "Adapter dan Kontrak YouTube"
+### Community 2 - "Adapter Akuisisi YouTube"
 Cohesion: 0.09
 Nodes (34): SourceAdapter, error_code(), load_settings(), main(), parser(), run(), SafeLogger, Settings (+26 more)
 
-### Community 6 - "Pengujian dan Regresi"
+### Community 3 - "Eksplorasi Dashboard Streamlit"
+Cohesion: 0.08
+Nodes (12): _graph_positions(), _load_artifacts(), main(), number(), percent(), Streamlit presentation only. Training lives in SocialNLPClusterer., Read-only exploration of completed NLP runs; no training on page reruns., Bounded topic graph: volume from filtered rows, semantic edges from the full mod (+4 more)
+
+### Community 4 - "Crawler Selenium Terisolasi"
+Cohesion: 0.08
+Nodes (19): _barrier(), _create_driver(), main(), Content quoting an error is never used to classify an access barrier., Convert the shared rendered DOM capture without inventing identities., One browser operation. The parent enforces the hard process deadline., Stream evidence before completion; the original supervisor can retain it., Drop-in SocialCrawler with Selenium for both platforms and shared exports. (+11 more)
+
+### Community 5 - "Parser dan Runner Reddit"
+Cohesion: 0.09
+Nodes (23): bounded_events(), HtmlPage, HtmlSource, load_settings(), LocalHtmlSource, native_fullname(), now_iso(), object_key() (+15 more)
+
+### Community 6 - "Identitas dan Kontrak Data"
+Cohesion: 0.13
+Nodes (12): ContentInput, ContractTests, Dataset, digest(), KeywordMatcher, MemorySink, Aho-Corasick; offsets refer to Python Unicode code points in source., Shared pipeline; adapters cannot choose their own headers or cell formats. (+4 more)
+
+### Community 7 - "Akses dan Parsing HTML"
+Cohesion: 0.22
+Nodes (9): assert_accessible(), content_node(), first(), fixture_page(), RedditHtmlParser, RedditTests, rendered_text(), source_time() (+1 more)
+
+### Community 8 - "Ekspor Campaign dan Resume"
 Cohesion: 0.13
 Nodes (3): export_campaign(), load_campaign(), ResumeTests
 
-### Community 7 - "Parser dan Runner Reddit 3"
+### Community 9 - "Bundle Excel dan Provenans"
+Cohesion: 0.20
+Nodes (12): add_readme(), BundleSink, dumps(), main(), parser(), Validate the embedded contract; an external descriptor is optional., Atomic new directory; streaming JSONL + streaming, formula-safe Excel., run() (+4 more)
+
+### Community 10 - "Coherence dan Quality Gate"
+Cohesion: 0.12
+Nodes (20): Negative original-space silhouette warning remains visible, Coherence mean 0.4097 passes while 31/52 topics remain low, Obsidian c_v corpus and token protocol, Global c_v target met with 31/52 individual shortfalls, Unweighted mean across all 52 non-noise topics, Additional c_v >=0.4 gate preserves earlier eligibility rules, Gensim c_v protocol: top 10 terms, window 110, phrase tokens, Reference corpus: all 15878 unique embedding_text sentences including noise (+12 more)
+
+### Community 11 - "Runner Playwright Reddit"
 Cohesion: 0.23
 Nodes (12): atomic_json(), barrier_status(), campaign_plan(), decode_cli_output(), find_cli(), PlaywrightCLI, rate_limit_seconds(), run() (+4 more)
 
-### Community 8 - "Pengujian dan Regresi 2"
+### Community 12 - "Pengujian Penjelasan Topik"
 Cohesion: 0.26
 Nodes (3): ExplanationTests, model_from_counts(), profile()
 
-### Community 9 - "Metodologi Machine Learning"
-Cohesion: 0.18
-Nodes (16): Represented-comment trend denominator, Metodologi Machine Learning Social NLP, Embedding cache identity and validation, In-sample candidate evaluation, Excel input and population guards, TF-IDF, SVD and KMeans baseline, Pinned local multilingual ONNX encoder, Overflow windows and equal-window pooling (+8 more)
+### Community 13 - "Dashboard dan Tren Deskriptif"
+Cohesion: 0.13
+Nodes (16): Filters retain model membership and do not recompute c_v, Global c_v on all views and per-topic/baseline table, Sentence occurrences, unique sentences and represented comments differ, Five artifact-backed Streamlit analysis views, On-demand explanations from active coherence run, Historical v1 HDBSCAN directional counts for 51 topics, MMR evidence and guarded Theil-Sen/Kendall directions, Source-bound beesense-topic-explanations:1 sidecar manifest (+8 more)
 
-### Community 10 - "Parser dan Runner Reddit 4"
+### Community 14 - "Arsitektur Crawler dan Dependensi"
+Cohesion: 0.14
+Nodes (15): Bounded native-ID evidence and explicit uncertainty, Obsidian: Crawler Selenium architecture, Shared BundleSink and dual-workbook export path, BeeSense Obsidian architecture and dataset index, Combined locked NLP and crawler installation, Pinned openpyxl and yt-dlp crawler dependencies, Pinned Selenium 4.51.0 plus crawler requirements, Relative dates remain calendar estimates (+7 more)
+
+### Community 15 - "Runbook dan Verifikasi Lokal"
+Cohesion: 0.18
+Nodes (14): Coherence dependencies and NLP/UI regression verification, Verify BeeSense offline CI, Historical Graphify memory of the native SBERT/UMAP/DBSCAN migration, Artifact-only dashboard without Gensim/Torch imports, BeeSense startup, verification and coherence training runbook, Separate .venv-sbert training with explicit coherence baseline, Active outputs/nlp_20261028_coherence_01 snapshot, Separate archived v1 ONNX/HDBSCAN and pre-coherence v2 DBSCAN runs (+6 more)
+
+### Community 16 - "Helper Campaign Browser"
 Cohesion: 0.27
 Nodes (8): classifyCaptureFailure(), enrichBatch(), rateLimitSeconds(), inWindow(), mergeCandidates(), row, source, window
 
-### Community 12 - "Dokumentasi dan Konfigurasi"
+### Community 18 - "Validasi Redirect dan Kesalahan"
 Cohesion: 0.20
-Nodes (10): Five dashboard views, Semantic similarity map interpretation, Occurrence, sentence and comment units, Represented-comment topic share, Extractive MMR descriptions, Support and platform-mixture sensitivity, Calendar-aware descriptive direction, Traceable topic explanations (+2 more)
+Nodes (5): Exception, HTTPRedirectHandler, Node, RestrictedRedirect, SourceFailure
 
-### Community 13 - "Metodologi Machine Learning 2"
-Cohesion: 0.25
-Nodes (8): Within-topic phrase change, Eligibility gates and original-space silhouette, Frozen encoder versus corpus fitting, Explicit fit and explanation lifecycle, Noise-aware two-seed ARI, Composite score and tolerance policy, Heuristic model-selection tradeoff, Local multilingual topic-modeling pipeline
+### Community 19 - "Snapshot NLP dan Arsip"
+Cohesion: 0.22
+Nodes (10): Active coherence run with eleven v2 artifacts, Same-protocol baseline and retrain c_v approximately 0.4097033012, Obsidian dashboard dataset provenance, Source workbook and multi-snapshot integrity verification, Active 52-topic DBSCAN result at eps 0.3 and min_samples 10, Four Parquet files, UMAP npz and eleven-artifact v2 manifest, Unchanged MMR and source-guarded Theil-Sen/Kendall explanations, Obsidian methodology: SBERT, UMAP, DBSCAN and coherence (+2 more)
 
-### Community 14 - "Metodologi Machine Learning 3"
-Cohesion: 0.29
-Nodes (7): BERTopic c-TF-IDF reference, Sparse class TF-IDF weighting, Automatic labels and centroid representatives, Extractive relevance and MMR, Carbonell and Goldstein MMR (1998), Sentence-level lexical vocabulary, Centroid graph and unused node cap
+### Community 21 - "Parser DOM Terbatas"
+Cohesion: 0.38
+Nodes (3): HTMLParser, BoundedDom, Small serialised-DOM reader, not a browser or full HTML5 repair engine.
 
-### Community 15 - "Parser dan Runner Reddit 5"
-Cohesion: 0.33
-Nodes (7): Snapshot artifacts without prediction estimators, Connected-browser campaign helpers, Checkpoint export and evidence limits, User-supplied checkpoint integrity, Reddit Playwright runner, Reddit backend selection, Validated clustering storage contract
-
-### Community 17 - "Dokumentasi dan Konfigurasi 2"
-Cohesion: 0.33
-Nodes (6): Preserved full audit workbook, BeeSense, Twelve-file data allowlist, BeeSense README, Retained dashboard Excel input, Compact Excel and verified reexport
-
-### Community 19 - "Metodologi Machine Learning 4"
-Cohesion: 0.67
-Nodes (3): Deduplicated fitting and occurrence units, Embedding text and deterministic identities, Sentence and occurrence provenance
+### Community 22 - "Encoder SBERT dan Cache"
+Cohesion: 0.40
+Nodes (5): Requested DBSCAN clustering, Requested SBERT-based embeddings, Pinned multilingual SentenceTransformer safetensors encoder, Overflow-window averaging and L2-normalized 384D embeddings, Encoder cache bound to immutable revision and text/checksums
 
 ## Knowledge Gaps
-- **10 isolated node(s):** `social_crawler.json`, `NLP and dashboard dependency group`, `window`, `source`, `row` (+5 more)
+- **24 isolated node(s):** `window`, `source`, `row`, `candidate`, `Checkpoint export to the eight-sheet contract` (+19 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `file_hash()` connect `Clustering dan Penjelasan NLP` to `Parser dan Runner Reddit`, `Orkestrasi SocialCrawler`, `Eksplorasi Dashboard Streamlit`, `Adapter dan Kontrak YouTube`?**
-  _High betweenness centrality (0.330) - this node is a cross-community bridge._
-- **Why does `SocialNLPClusterer` connect `Clustering dan Penjelasan NLP` to `Orkestrasi SocialCrawler`, `Eksplorasi Dashboard Streamlit`, `Pengujian dan Regresi 2`, `Pengujian dan Regresi 3`, `Dokumentasi dan Konfigurasi`, `Metodologi Machine Learning 2`, `Parser dan Runner Reddit 5`, `Dokumentasi dan Konfigurasi 2`, `Metodologi Machine Learning 4`, `Metodologi Machine Learning 5`?**
-  _High betweenness centrality (0.289) - this node is a cross-community bridge._
-- **Why does `SocialCrawler` connect `Orkestrasi SocialCrawler` to `Dokumentasi dan Konfigurasi 2`, `Parser dan Runner Reddit 5`?**
-  _High betweenness centrality (0.191) - this node is a cross-community bridge._
-- **Are the 6 inferred relationships involving `SocialNLPClusterer` (e.g. with `SocialNLPStreamlitApp` and `DashboardTests`) actually correct?**
-  _`SocialNLPClusterer` has 6 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `file_hash()` connect `Pipeline dan Persistensi NLP` to `Bundle Excel dan Provenans`, `Adapter Akuisisi YouTube`, `Eksplorasi Dashboard Streamlit`, `Alur Akuisisi Sosial Terpadu`?**
+  _High betweenness centrality (0.421) - this node is a cross-community bridge._
+- **Why does `SocialNLPClusterer` connect `Pipeline dan Persistensi NLP` to `Eksplorasi Dashboard Streamlit`, `Coherence dan Quality Gate`, `Pengujian Penjelasan Topik`, `Dashboard dan Tren Deskriptif`, `Runbook dan Verifikasi Lokal`, `Pengujian UI Streamlit`, `Snapshot NLP dan Arsip`, `Encoder SBERT dan Cache`?**
+  _High betweenness centrality (0.276) - this node is a cross-community bridge._
+- **Why does `SocialCrawler` connect `Alur Akuisisi Sosial Terpadu` to `Crawler Selenium Terisolasi`, `Arsitektur Crawler dan Dependensi`?**
+  _High betweenness centrality (0.264) - this node is a cross-community bridge._
+- **Are the 8 inferred relationships involving `SocialNLPClusterer` (e.g. with `SocialNLPStreamlitApp` and `DashboardTests`) actually correct?**
+  _`SocialNLPClusterer` has 8 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 6 inferred relationships involving `SocialCrawler` (e.g. with `_SeleniumSource` and `SocialCrawlerSelenium`) actually correct?**
+  _`SocialCrawler` has 6 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 4 inferred relationships involving `SocialNLPStreamlitApp` (e.g. with `SocialNLPClusterer` and `AnalysisTests`) actually correct?**
   _`SocialNLPStreamlitApp` has 4 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 2 inferred relationships involving `SocialCrawler` (e.g. with `Clock` and `SocialCrawlerTests`) actually correct?**
-  _`SocialCrawler` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `social_crawler.json`, `NLP and dashboard dependency group`, `window` to the rest of the system?**
-  _10 weakly-connected nodes found - possible documentation gaps or missing edges._
-## Preserved full audit workbook
+- **Are the 2 inferred relationships involving `NLPTests` (e.g. with `SocialNLPStreamlitApp` and `SocialNLPClusterer`) actually correct?**
+  _`NLPTests` has 2 INFERRED edges - model-reasoned connections that need verification._
+## Extraction limitations
 
-The curated Obsidian vault now includes `Metodologi Machine Learning Social NLP.md` with the actual source hash, preprocessing and sentence provenance, frozen multilingual encoder, UMAP/HDBSCAN/KMeans comparison, internal evaluation and selection policy, c-TF-IDF topic extraction, descriptive trend explanations, training limits, all 47 JSON configuration fields, hardcoded parameters and test coverage. README, SOCIAL_NLP and the architecture canvas link to it. Documentation changes do not rerun acquisition, embedding or clustering.
+AST token cost: 0. Semantic token usage is unavailable from the delegated tool; displayed 0 counters are placeholders, not measured zero cost.
 
-The published data allowlist now contains twelve files: the full eight-sheet audit workbook `outputs/social_20261028_01/dataset.xlsx`, the unchanged compact NLP input `social_data.xlsx`, and ten files under `outputs/nlp_20261028_02`. The audit workbook is 6,480,303 bytes; SHA-256 ccfc77dc136ed8e98bce5c2c11d6243d22ff9e2a3082d9e299847b8b5aec74b3. Contents has 8,449 records: 6,167 comments, 2,051 replies and 231 root posts/videos. Relations has 16,436 relationship records, a different unit from comments. The saved NLP run has 16,178 sentence occurrences. Input and all nine artifact hashes still pass. No NLP class, input configuration, model weights or cluster result was changed. The verifier accepts both source workbooks, ignores temporary Excel owner files and still rejects missing or unlisted datasets; four regression tests cover these boundaries.
+Raw extraction diagnostics: {"dangling_endpoint_edges": 49, "undirected_same_endpoint_collapsed_edges": 10}. These include external/unresolved symbols and same-endpoint relationship collapse in the undirected view. The exported graph has been checked separately for dangling endpoints.
 
-Graph extraction: 224 raw unresolved endpoint edges and 22 collapsed pairs. These structural extraction gaps are distinct from final graph integrity: zero dangling endpoints and zero self-loops. Six JSON configurations without AST symbols retain their file nodes. No raw conversation quotes or historical Reddit post nodes were introduced.
-
-Obsidian remains a curated set of five notes and a canvas; the complete code map is in JSON/HTML. Deterministic AST token use is zero; semantic token use is unavailable from the agent API and is not reported as zero. Local NLP/UI/data-verifier tests and lint pass. The preceding main commit passed GitHub Actions. This upload triggers a new remote workflow. Docker build/runtime remain unverified because the local daemon is unavailable; there is no database migration.
+The changed social_nlp.json configuration produces no AST symbols; its retained configuration node and current code/document relationships remain available. All changed Python/test files are structurally indexed. The active model uses SBERT, UMAP, DBSCAN and c-TF-IDF; negative original-space silhouette remains an explicit limitation.

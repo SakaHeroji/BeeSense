@@ -35,9 +35,27 @@ class StreamlitTests(unittest.TestCase):
             on="sentence_id",
             validate="many_to_one",
         )
+        pipeline.reduced_embeddings = [
+            pipeline.embeddings[:, :2].copy(),
+            pipeline.embeddings[:, :2].copy(),
+        ]
+        pipeline.reduction_info = {
+            "algorithm": "UMAP",
+            "synthetic_fixture": True,
+            "seeds": [42, 43],
+        }
         pipeline.evaluation_indices = np.arange(36)
         pipeline.selected = pipeline._evaluate(
-            "synthetic_known_groups", labels, labels, {}, 0
+            "synthetic_dbscan_groups",
+            labels,
+            labels,
+            {
+                "algorithm": "DBSCAN",
+                "eps": 0.08,
+                "min_samples": 3,
+                "metric": "euclidean",
+            },
+            0,
         )
         pipeline.selection_policy = {"score_tolerance": 0.005}
         pipeline.describe_topics()
@@ -75,6 +93,7 @@ class StreamlitTests(unittest.TestCase):
         app = self.app()
         self.assertFalse(app.exception)
         self.assertEqual(app.title[0].value, "Percakapan YouTube & Reddit")
+        self.assertTrue(any("SBERT" in caption.value for caption in app.caption))
         self.assertEqual(
             app.radio(key="view").options,
             [
@@ -113,6 +132,15 @@ class StreamlitTests(unittest.TestCase):
         app.text_input(key="query").set_value("__no_sentence_can_match_this__").run()
         self.assertFalse(app.exception)
         self.assertIn("Tidak ada kalimat", app.info[0].value)
+
+    def test_coherence_metric_and_per_topic_scores_are_visible(self):
+        app = self.app({"view": "Metode & data"})
+        self.assertFalse(app.exception)
+        self.assertTrue(any(metric.label == "Coherence c_v" for metric in app.metric))
+        self.assertTrue(
+            any("berada di bawah target" in item.value for item in app.markdown)
+        )
+        self.assertTrue(any("c_v" in item.value.columns for item in app.dataframe))
 
     def test_url_initializes_filters_and_reset_clears_state(self):
         # AppTest has no browser to write bound query parameters. Seed the

@@ -25,8 +25,10 @@ jobs:
           cache-dependency-path: |
             requirements-nlp.lock
             requirements-crawler.txt
+            requirements-selenium.txt
+            requirements-coherence.txt
       - name: Install dependencies
-        run: python -m pip install -r requirements.txt
+        run: python -m pip install -r requirements.txt -r requirements-selenium.txt -r requirements-coherence.txt
       - name: Verify shipped dashboard dataset
         run: python -m scripts.verify_dashboard_data --check-git
       - name: Check NLP and dashboard code
@@ -36,7 +38,11 @@ jobs:
       - name: NLP and Streamlit regression tests
         run: python -m unittest discover -s tests/nlp -v
       - name: SocialCrawler offline tests
-        run: python -m unittest discover -s tests -p test_social_crawler.py -v
+        run: python -m unittest discover -s tests -p 'test_social_crawler*.py' -v
+      - name: Selenium crawler lint
+        run: |
+          python -m ruff check --isolated --select E4,E7,E9,F,I social_crawler_selenium.py tests/test_social_crawler_selenium.py
+          python -m ruff format --isolated --check social_crawler_selenium.py tests/test_social_crawler_selenium.py
       - name: Reddit runner offline tests
         run: python -m unittest discover -s Reddit -p test_crawl_reddit_playwright.py -v
       - name: Browser helper parsers

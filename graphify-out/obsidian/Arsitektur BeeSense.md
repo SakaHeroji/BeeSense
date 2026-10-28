@@ -7,8 +7,10 @@ tags: [beesense, crawler, nlp, streamlit]
 
 SocialCrawler → Excel → SocialNLPClusterer → artifact terverifikasi → SocialNLPStreamlitApp.
 
+[[Crawler Selenium|SocialCrawlerSelenium]] menyediakan pengambilan Chrome melalui Selenium untuk kedua platform, dengan filter dan exporter SocialCrawler yang sama.
+
 - [SocialCrawler](../../social_crawler.py) memakai adapter YouTube/Reddit dan satu social_crawler.json untuk rentang tanggal, jeda, keyword serta batas post/komentar.
-- [SocialNLPClusterer](../../social_nlp.py) memisahkan preparasi kalimat, embedding multilingual ONNX, perbandingan clustering, c-TF-IDF, graf dan persistensi. Tidak mengimpor Streamlit.
+- [SocialNLPClusterer](../../social_nlp.py) memisahkan preparasi kalimat, embedding SBERT native multilingual, UMAP → DBSCAN Euclidean pada ruang UMAP, c-TF-IDF, evaluasi coherence c_v, graf dan persistensi. Tidak mengimpor Streamlit.
 - [SocialNLPStreamlitApp](../../nlp_dashboard.py) membaca hasil tersimpan. Lima tampilan: ringkasan, peta topik, penjelasan topik, kalimat/sumber dan metode/data. UI tidak training saat rerun.
 - MMR memilih bukti kalimat beragam. Theil–Sen/Kendall dan dua jendela waktu menyusun arah deskriptif dengan pemeriksaan sumber/platform/dukungan. Ini bukan sebab, ramalan atau tren populasi.
 - Binding URL menyimpan filter/pilihan. Slider peta menyesuaikan nilai tersimpan saat hasil pencarian mengecil.

@@ -22,8 +22,10 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "1.1.0"
-SCHEMA_VERSION = "beesense-sentence-clusters:1"
+VERSION = "2.1.0"
+ENCODER_CACHE_VERSION = "2.0.0"  # Coherence changes do not change SBERT encoding.
+SCHEMA_VERSION = "beesense-sentence-clusters:2"
+LEGACY_SCHEMA_VERSION = "beesense-sentence-clusters:1"
 EXPLANATION_SCHEMA = "beesense-topic-explanations:1"
 REQUIRED_COLUMNS = {
     "platform",
@@ -61,10 +63,10 @@ def json_write(path, value):
 
 
 class SocialNLPClusterer:
-    """Compare semantic density/centroid clustering and a lexical baseline.
+    """Encode multilingual sentences with SBERT and fit UMAP + DBSCAN.
 
-    Encoder injection is for tests. Production uses an immutable, public ONNX
-    sentence-transformer model, mean pooling and L2 normalization on local CPU.
+    Encoder injection is for tests. Training uses an immutable public SBERT
+    model through SentenceTransformer, with L2 normalization on local CPU.
     Dates/titles/platforms are provenance, never embedding features.
     """
 
@@ -121,8 +123,8 @@ class SocialNLPClusterer:
             raise ValueError(
                 "Model requires a repository and immutable 40-character revision"
             )
-        if not m["onnx_file"].startswith("onnx/") or ".." in Path(m["onnx_file"]).parts:
-            raise ValueError("Invalid ONNX filename")
+        if m["backend"] != "sentence-transformers":
+            raise ValueError("Embedding backend must be sentence-transformers (SBERT)")
         if (
             not 16 <= m["max_tokens"] <= 512
             or not 0 <= m["stride"] < m["max_tokens"] - 2
@@ -130,20 +132,42 @@ class SocialNLPClusterer:
             raise ValueError("Invalid tokenizer window/stride")
         if not 1 <= m["batch_size"] <= 256 or not 1 <= m["threads"] <= 32:
             raise ValueError("Invalid inference batch size/threads")
+        u = c["umap"]
         if (
-            not 2 <= c["umap"]["n_components"] <= 50
-            or not 2 <= c["umap"]["n_neighbors"] <= 100
+            type(u["n_neighbors"]) is not int
+            or not 2 <= u["n_neighbors"] <= 100
+            or type(u["n_components"]) is not int
+            or not 2 <= u["n_components"] <= 50
+            or type(u["min_dist"]) not in (int, float)
+            or not np.isfinite(u["min_dist"])
+            or not 0 <= u["min_dist"] <= 1
         ):
-            raise ValueError("Invalid UMAP dimensions/neighbors")
-        for value in c["hdbscan"]["min_cluster_sizes"]:
-            if type(value) is not int or value < 2:
-                raise ValueError("min_cluster_size must be >= 2")
-        for value in c["hdbscan"]["min_samples"]:
-            if type(value) is not int or value < 1:
-                raise ValueError("min_samples must be positive")
-        for value in c["kmeans"]["cluster_counts"] + [c["tfidf_baseline_clusters"]]:
-            if type(value) is not int or value < 2:
-                raise ValueError("KMeans requires at least two clusters")
+            raise ValueError("Invalid UMAP dimensions/neighbors/min_dist")
+        d = c["dbscan"]
+        if (
+            not isinstance(d["eps"], list)
+            or not 1 <= len(d["eps"]) <= 30
+            or any(
+                type(x) not in (int, float) or not np.isfinite(x) or not 0 < x <= 10
+                for x in d["eps"]
+            )
+        ):
+            raise ValueError(
+                "DBSCAN eps must be positive finite UMAP Euclidean distances up to 10"
+            )
+        if (
+            not isinstance(d["min_samples"], list)
+            or not 1 <= len(d["min_samples"]) <= 10
+            or any(type(x) is not int or not 2 <= x <= 10000 for x in d["min_samples"])
+        ):
+            raise ValueError("DBSCAN min_samples must contain integers in 2..10000")
+        if (
+            type(d["neighborhood_batch_size"]) is not int
+            or not 1 <= d["neighborhood_batch_size"] <= 2048
+            or type(d["max_neighbor_edges"]) is not int
+            or not 1 <= d["max_neighbor_edges"] <= 50000000
+        ):
+            raise ValueError("Invalid DBSCAN neighborhood memory bounds")
         e = c["evaluation"]
         if (
             not 0 < e["min_coverage"] <= 1
@@ -160,6 +184,18 @@ class SocialNLPClusterer:
         ):
             raise ValueError("Invalid graph bounds")
         self._validate_explanation_options(c["explanation"])
+        coherence = c["coherence"]
+        if (
+            coherence["metric"] != "c_v"
+            or type(coherence["topn"]) is not int
+            or not 2 <= coherence["topn"] <= 12
+            or type(coherence["window_size"]) is not int
+            or not 2 <= coherence["window_size"] <= 1000
+            or type(coherence["min_score"]) not in (int, float)
+            or not np.isfinite(coherence["min_score"])
+            or not 0 <= coherence["min_score"] <= 1
+        ):
+            raise ValueError("Invalid coherence settings")
 
     def _event(self, stage, **values):
         self.progress({"stage": stage, **values})
@@ -218,6 +254,8 @@ class SocialNLPClusterer:
         return re.sub(r"\s+", " ", text).strip()
 
     def prepare_excel(self, path=None):
+        for attribute in ("_term_matrix", "_term_vocabulary", "_coherence_reference"):
+            self.__dict__.pop(attribute, None)
         from openpyxl import load_workbook
 
         path = Path(path or self.config["input_file"])
@@ -243,6 +281,11 @@ class SocialNLPClusterer:
                 sources.append(row)
         finally:
             workbook.close()
+        self.source_data = pd.DataFrame(sources)
+        for column in ("tanggal_post_wib", "tanggal_konten_wib"):
+            self.source_data[column] = self.source_data[column].map(
+                lambda value: value.isoformat() if hasattr(value, "isoformat") else None
+            )
         unique = {}
         occurrences, skipped = [], []
         eligible = 0
@@ -343,101 +386,88 @@ class SocialNLPClusterer:
         self._event("prepared", **self.preparation)
         return self
 
-    def _encode_onnx(self, texts):
-        import onnxruntime as ort
-        from huggingface_hub import hf_hub_download
-        from tokenizers import Tokenizer
+    def _encode_sbert(self, texts):
+        import torch
+        from huggingface_hub import snapshot_download
+        from sentence_transformers import SentenceTransformer
 
         model = self.config["model"]
-        cache = self._cache_dir() / "models"
-        paths = {
-            name: Path(
-                hf_hub_download(
-                    repo_id=model["repo"],
-                    revision=model["revision"],
-                    filename=name,
-                    cache_dir=str(cache),
-                    token=False,
-                )
+        snapshot = Path(
+            snapshot_download(
+                repo_id=model["repo"],
+                revision=model["revision"],
+                cache_dir=str(self._cache_dir() / "models"),
+                token=False,
+                allow_patterns=[
+                    "*.json",
+                    "vocab.txt",
+                    "1_Pooling/config.json",
+                    "model.safetensors",
+                ],
+                ignore_patterns=["onnx/*", "openvino/*"],
             )
-            for name in [model["onnx_file"], "tokenizer.json", "config.json"]
-        }
-        tokenizer = Tokenizer.from_file(str(paths["tokenizer.json"]))
-        tokenizer.enable_truncation(
-            max_length=model["max_tokens"], stride=model["stride"]
         )
-        pad_id = json.loads(paths["config.json"].read_text()).get("pad_token_id", 0)
-        options = ort.SessionOptions()
-        options.intra_op_num_threads = model["threads"]
-        options.inter_op_num_threads = 1
-        session = ort.InferenceSession(
-            str(paths[model["onnx_file"]]),
-            sess_options=options,
-            providers=["CPUExecutionProvider"],
+        weights = snapshot / "model.safetensors"
+        if not weights.is_file():
+            raise ValueError("Pinned SBERT revision must provide safetensors weights")
+        torch.set_num_threads(model["threads"])
+        torch.manual_seed(self.config["seed"])
+        encoder = SentenceTransformer(
+            str(snapshot),
+            device="cpu",
+            local_files_only=True,
+            trust_remote_code=False,
+            model_kwargs={"use_safetensors": True},
         )
-        names = {item.name for item in session.get_inputs()}
-        if not names <= {"input_ids", "attention_mask", "token_type_ids"}:
-            raise ValueError("Unsupported encoder input signature")
-        self.model_info = {
-            "repo": model["repo"],
-            "revision": model["revision"],
-            "onnx_file": model["onnx_file"],
-            "weights_sha256": file_hash(paths[model["onnx_file"]]),
-            "tokenizer_sha256": file_hash(paths["tokenizer.json"]),
-            "backend": "onnxruntime-cpu",
-            "pooling": "attention_mask_mean_then_l2",
-            "test_encoder": False,
-            "max_tokens": model["max_tokens"],
-            "stride": model["stride"],
-        }
-        vectors, window_counts = [], []
+        encoder.max_seq_length = model["max_tokens"]
+        encoder.eval()
+        self.model_info = dict(
+            family="SBERT",
+            repo=model["repo"],
+            revision=model["revision"],
+            weights_sha256=file_hash(weights),
+            tokenizer_sha256=file_hash(snapshot / "tokenizer.json"),
+            backend="sentence-transformers-pytorch-cpu",
+            pooling="SBERT modules; mean of overflow windows then L2",
+            test_encoder=False,
+            max_tokens=model["max_tokens"],
+            stride=model["stride"],
+            fine_tuned_on_source=False,
+        )
+        vectors, self.window_counts = [], []
         for offset in range(0, len(texts), model["batch_size"]):
-            encoded = tokenizer.encode_batch(
-                texts[offset : offset + model["batch_size"]]
+            batch = texts[offset : offset + model["batch_size"]]
+            tokens = encoder.tokenizer(
+                batch,
+                truncation=True,
+                max_length=model["max_tokens"],
+                stride=model["stride"],
+                return_overflowing_tokens=True,
+                padding=True,
+                return_tensors="pt",
             )
-            windows, owners = [], []
-            for owner, encoding in enumerate(encoded):
-                parts = [encoding] + encoding.overflowing
-                window_counts.append(len(parts))
-                windows.extend(parts)
-                owners.extend([owner] * len(parts))
-            pooled = [[] for _ in encoded]
-            for start in range(0, len(windows), model["batch_size"]):
-                batch = windows[start : start + model["batch_size"]]
-                width = max(len(item.ids) for item in batch)
-                ids = np.full((len(batch), width), pad_id, dtype=np.int64)
-                masks = np.zeros_like(ids)
-                types = np.zeros_like(ids)
-                for i, item in enumerate(batch):
-                    n = len(item.ids)
-                    ids[i, :n] = item.ids
-                    masks[i, :n] = item.attention_mask
-                    types[i, :n] = item.type_ids
-                feed = {
-                    "input_ids": ids,
-                    "attention_mask": masks,
-                    "token_type_ids": types,
-                }
-                hidden = session.run(
-                    None, {key: value for key, value in feed.items() if key in names}
-                )[0]
-                if hidden.ndim != 3:
-                    raise ValueError(
-                        "Encoder must return token embeddings for documented mean pooling"
-                    )
-                embeddings = (hidden * masks[:, :, None]).sum(axis=1) / np.maximum(
-                    masks.sum(axis=1, keepdims=True), 1
-                )
-                for i, vector in enumerate(embeddings):
-                    pooled[owners[start + i]].append(vector)
+            owners = tokens.pop("overflow_to_sample_mapping").numpy()
+            pooled = [[] for _ in batch]
+            with torch.inference_mode():
+                for index in range(0, len(owners), model["batch_size"]):
+                    features = {
+                        key: value[index : index + model["batch_size"]]
+                        for key, value in tokens.items()
+                    }
+                    embeddings = encoder(features)["sentence_embedding"].cpu().numpy()
+                    for owner, vector in zip(
+                        owners[index : index + model["batch_size"]], embeddings
+                    ):
+                        pooled[int(owner)].append(vector)
+            self.window_counts.extend(len(group) for group in pooled)
             vectors.extend(np.mean(group, axis=0) for group in pooled)
             if offset % (model["batch_size"] * 10) == 0:
                 self._event(
                     "embedding",
-                    complete=min(offset + len(encoded), len(texts)),
+                    complete=offset + len(batch),
                     total=len(texts),
+                    encoder="SBERT",
                 )
-        self.window_counts = window_counts
         return np.asarray(vectors, dtype=np.float32)
 
     def _cache_dir(self):
@@ -450,7 +480,11 @@ class SocialNLPClusterer:
         texts = self.sentences["embedding_text"].tolist()
         key = sha256(
             json.dumps(
-                {"model": self.config["model"], "texts": texts, "version": VERSION},
+                {
+                    "model": self.config["model"],
+                    "texts": texts,
+                    "version": ENCODER_CACHE_VERSION,
+                },
                 ensure_ascii=False,
                 sort_keys=True,
             ).encode()
@@ -470,7 +504,7 @@ class SocialNLPClusterer:
                 vectors = np.asarray(self.encoder(texts), dtype=np.float32)
                 self.window_counts = [1] * len(texts)
             else:
-                vectors = self._encode_onnx(texts)
+                vectors = self._encode_sbert(texts)
         vectors = np.asarray(vectors, dtype=np.float32)
         if (
             vectors.ndim != 2
@@ -563,11 +597,18 @@ class SocialNLPClusterer:
         selected = sample[labels[sample] >= 0]
         silhouette = None
         if 2 <= len(set(labels[selected])) < len(selected):
-            silhouette = float(
-                silhouette_score(
-                    self.embeddings[selected], labels[selected], metric="cosine"
+            if hasattr(self, "evaluation_distances"):
+                mask = labels[sample] >= 0
+                distances = self.evaluation_distances[np.ix_(mask, mask)]
+                silhouette = float(
+                    silhouette_score(distances, labels[selected], metric="precomputed")
                 )
-            )
+            else:
+                silhouette = float(
+                    silhouette_score(
+                        self.embeddings[selected], labels[selected], metric="cosine"
+                    )
+                )
         valid = (
             len(counts) >= 2
             and silhouette is not None
@@ -602,53 +643,174 @@ class SocialNLPClusterer:
         self._event("candidate", **result)
         return result
 
-    def compare(self):
-        from sklearn.cluster import HDBSCAN, KMeans
-        from sklearn.decomposition import TruncatedSVD
-        from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, TfidfVectorizer
-        from sklearn.preprocessing import normalize
-        from threadpoolctl import threadpool_limits
+    @staticmethod
+    def _filter_radius(graph, eps):
+        """Preserve explicit zero distances, including identical sentence vectors."""
+        from scipy.sparse import csr_matrix
+
+        keep = graph.data <= eps
+        cumulative = np.concatenate(([0], np.cumsum(keep, dtype=np.int64)))
+        return csr_matrix(
+            (graph.data[keep], graph.indices[keep], cumulative[graph.indptr]),
+            shape=graph.shape,
+        )
+
+    def _reduce_embeddings(self):
         from umap import UMAP
 
+        u = self.config["umap"]
+        n = len(self.embeddings)
+        parameters = dict(
+            n_neighbors=min(u["n_neighbors"], n - 1),
+            n_components=min(u["n_components"], n - 2),
+            min_dist=u["min_dist"],
+            metric="cosine",
+            n_jobs=1,
+        )
+        seeds = [self.config["seed"], self.config["seed"] + 1]
+        identity = dict(
+            embeddings_sha256=sha256(self.embeddings.tobytes()).hexdigest(),
+            parameters=parameters,
+            seeds=seeds,
+            umap_version=importlib.metadata.version("umap-learn"),
+        )
+        key = sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
+        cached = self._cache_dir() / ("umap_" + key + ".npz")
+        metadata = cached.with_suffix(".json")
+        cache_hit = False
+        if cached.exists() and metadata.exists():
+            info = json.loads(metadata.read_text())
+            if file_hash(cached) == info["sha256"]:
+                with np.load(cached, allow_pickle=False) as archive:
+                    reductions = [archive["seed_primary"], archive["seed_alternate"]]
+                cache_hit = all(
+                    x.shape == (n, parameters["n_components"]) and np.isfinite(x).all()
+                    for x in reductions
+                )
+        if not cache_hit:
+            reductions = []
+            for seed in seeds:
+                self._event(
+                    "reducing",
+                    algorithm="UMAP",
+                    seed=seed,
+                    dimensions=parameters["n_components"],
+                )
+                reductions.append(
+                    np.asarray(
+                        UMAP(**parameters, random_state=seed).fit_transform(
+                            self.embeddings
+                        ),
+                        dtype=np.float32,
+                    )
+                )
+            temporary = cached.with_suffix(".tmp.npz")
+            np.savez_compressed(
+                temporary, seed_primary=reductions[0], seed_alternate=reductions[1]
+            )
+            temporary.replace(cached)
+            json_write(metadata, dict(sha256=file_hash(cached), identity=identity))
+        self.reduced_embeddings = reductions
+        self.reduction_info = dict(
+            algorithm="UMAP",
+            parameters=parameters,
+            seeds=seeds,
+            cache_hit=cache_hit,
+            clustering_metric="euclidean",
+            original_dimensions=self.embeddings.shape[1],
+        )
+        self._event("reduced", **self.reduction_info)
+        return reductions
+
+    def _radius_graph(self, features=None, metric="cosine"):
+        from scipy.sparse import vstack
+        from sklearn.neighbors import NearestNeighbors
+
+        options = self.config["dbscan"]
+        features = self.embeddings if features is None else features
+        radius = max(options["eps"])
+        neighbors = NearestNeighbors(
+            radius=radius, metric=metric, algorithm="brute", n_jobs=1
+        ).fit(features)
+        batches, edges = [], 0
+        for start in range(0, len(features), options["neighborhood_batch_size"]):
+            block = neighbors.radius_neighbors_graph(
+                features[start : start + options["neighborhood_batch_size"]],
+                radius=radius,
+                mode="distance",
+                sort_results=True,
+            )
+            edges += block.nnz
+            if edges > options["max_neighbor_edges"]:
+                raise ValueError(
+                    "DBSCAN radius graph exceeds max_neighbor_edges; review eps or the explicit memory budget"
+                )
+            batches.append(block.astype(np.float32))
+            self._event(
+                "neighborhoods",
+                complete=min(start + block.shape[0], len(features)),
+                total=len(features),
+                edges=edges,
+                radius=radius,
+                metric=metric,
+            )
+        return vstack(batches, format="csr")
+
+    def compare(self):
+        """Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry."""
+        from sklearn.cluster import DBSCAN
+        from sklearn.metrics.pairwise import cosine_distances
+        from sklearn.neighbors import sort_graph_by_row_values
+        from threadpoolctl import threadpool_limits
+
         n = len(self.sentences)
-        seed = self.config["seed"]
+        rng = np.random.default_rng(self.config["seed"])
         self.evaluation_indices = np.sort(
-            np.random.default_rng(seed).choice(
+            rng.choice(
                 n, min(n, self.config["evaluation"]["sample_size"]), replace=False
             )
         )
         self.comparisons, fitted = [], {}
         with threadpool_limits(limits=self.config["model"]["threads"]):
-            u = self.config["umap"]
-            self._event("reducing", dimensions=u["n_components"])
-            reductions = [
-                UMAP(
-                    n_neighbors=min(u["n_neighbors"], n - 1),
-                    n_components=min(u["n_components"], n - 2),
-                    min_dist=u["min_dist"],
-                    metric="cosine",
-                    random_state=s,
-                    n_jobs=1,
-                ).fit_transform(self.embeddings)
-                for s in [seed, seed + 1]
+            self.evaluation_distances = cosine_distances(
+                self.embeddings[self.evaluation_indices]
+            )
+            np.fill_diagonal(self.evaluation_distances, 0)
+            reductions = self._reduce_embeddings()
+            graphs = [
+                self._radius_graph(features, metric="euclidean")
+                for features in reductions
             ]
-            for size in self.config["hdbscan"]["min_cluster_sizes"]:
-                if size >= n:
-                    continue
-                for samples in self.config["hdbscan"]["min_samples"]:
+            for eps in self.config["dbscan"]["eps"]:
+                filtered = [
+                    sort_graph_by_row_values(
+                        self._filter_radius(graph, eps),
+                        copy=False,
+                        warn_when_not_sorted=False,
+                    )
+                    for graph in graphs
+                ]
+                for samples in self.config["dbscan"]["min_samples"]:
+                    if samples > n:
+                        continue
                     started = time.monotonic()
-                    parameters = {"min_cluster_size": size, "min_samples": samples}
                     models = [
-                        HDBSCAN(
-                            **parameters,
-                            metric="euclidean",
-                            cluster_selection_method="eom",
-                            n_jobs=1,
-                            copy=True,
-                        ).fit(x)
-                        for x in reductions
+                        DBSCAN(
+                            eps=eps, min_samples=samples, metric="precomputed", n_jobs=1
+                        ).fit(graph)
+                        for graph in filtered
                     ]
-                    name = f"semantic_hdbscan_m{size}_s{samples}"
+                    name = f"sbert_umap_dbscan_eps{eps:g}_min{samples}"
+                    parameters = dict(
+                        algorithm="DBSCAN",
+                        eps=eps,
+                        min_samples=samples,
+                        metric="euclidean",
+                        fit_space="UMAP_of_normalized_Sbert_embeddings",
+                        umap=self.reduction_info["parameters"],
+                        umap_seeds=self.reduction_info["seeds"],
+                        neighborhood="sparse_radius_graph",
+                    )
                     result = self._evaluate(
                         name,
                         models[0].labels_,
@@ -656,74 +818,52 @@ class SocialNLPClusterer:
                         parameters,
                         time.monotonic() - started,
                     )
-                    fitted[name] = (models[0].labels_, models[0].probabilities_, result)
-            for k in self.config["kmeans"]["cluster_counts"]:
-                if k >= n:
-                    continue
-                started = time.monotonic()
-                models = [
-                    KMeans(
-                        n_clusters=k,
-                        n_init=self.config["kmeans"]["n_init"],
-                        random_state=s,
-                    ).fit(self.embeddings)
-                    for s in [seed, seed + 1]
-                ]
-                name = f"semantic_kmeans_k{k}"
-                result = self._evaluate(
-                    name,
-                    models[0].labels_,
-                    models[1].labels_,
-                    {"n_clusters": k},
-                    time.monotonic() - started,
-                )
-                fitted[name] = (models[0].labels_, np.full(n, np.nan), result)
-            started = time.monotonic()
-            vectorizer = TfidfVectorizer(
-                ngram_range=(1, 2),
-                min_df=2,
-                max_df=0.95,
-                max_features=25000,
-                stop_words=sorted(INDONESIAN_STOPWORDS | set(ENGLISH_STOP_WORDS)),
-                sublinear_tf=True,
+                    result["geometry_eligible"] = result["eligible"]
+                    result["coherence_cv"] = None
+                    result["coherence_status"] = "not_evaluated_geometry_constraints"
+                    core = np.zeros(n, dtype=bool)
+                    core[models[0].core_sample_indices_] = True
+                    fitted[name] = (models[0].labels_.copy(), core, result)
+        # Evaluate in composite-score order. Once a passing score is known,
+        # only its tolerance band can win. Lower scores need no expensive
+        # coherence calculation; this preserves the exact selection rule.
+        best_passing = None
+        tolerance = self.config["evaluation"]["score_tolerance"]
+        for result in sorted(
+            (row for row in self.comparisons if row["geometry_eligible"]),
+            key=lambda row: row["selection_score"],
+            reverse=True,
+        ):
+            if (
+                best_passing is not None
+                and result["selection_score"] < best_passing - tolerance
+            ):
+                result["eligible"] = False
+                result["coherence_status"] = "not_evaluated_below_passing_score_band"
+                continue
+            coherence = self.score_coherence(
+                self._ctfidf_terms(fitted[result["candidate"]][0])
             )
-            lexical = vectorizer.fit_transform(self.sentences["embedding_text"])
-            dims = min(100, lexical.shape[1] - 1, n - 1)
-            if dims >= 2:
-                reduced = normalize(
-                    TruncatedSVD(n_components=dims, random_state=seed).fit_transform(
-                        lexical
-                    )
-                )
-                k = min(self.config["tfidf_baseline_clusters"], n - 1)
-                models = [
-                    KMeans(
-                        n_clusters=k,
-                        n_init=self.config["kmeans"]["n_init"],
-                        random_state=s,
-                    ).fit(reduced)
-                    for s in [seed, seed + 1]
-                ]
-                name = f"tfidf_svd_kmeans_k{k}"
-                result = self._evaluate(
-                    name,
-                    models[0].labels_,
-                    models[1].labels_,
-                    {"n_clusters": k, "svd_dimensions": dims},
-                    time.monotonic() - started,
-                )
-                fitted[name] = (models[0].labels_, np.full(n, np.nan), result)
-        eligible = [row for row in self.comparisons if row["eligible"]]
-        if not eligible:
-            raise ValueError(
-                "No candidate passed the documented quality/coverage constraints; review comparison logs"
-            )
+            result["coherence_cv"] = coherence["macro_mean"]
+            result["coherence_topics"] = coherence["topics_evaluated"]
+            result["eligible"] = coherence["target_met"]
+            result["coherence_status"] = "passed" if result["eligible"] else "failed"
+            if result["eligible"] and best_passing is None:
+                best_passing = result["selection_score"]
+            self._event("candidate_coherence", **result)
         self.selected, self.selection_policy = self.select_candidate(
             self.comparisons, self.config["evaluation"]["score_tolerance"]
         )
-        labels, strengths, _ = fitted[self.selected["candidate"]]
+        self.selection_policy.update(
+            candidate_family="SBERT + UMAP + DBSCAN",
+            stability_test="DBSCAN partitions on two seeded UMAP projections",
+            coherence_gate=self.config["coherence"],
+            coherence_search="descending composite score; all candidates in the best passing score tolerance band are evaluated; lower scores are explicitly marked unevaluated",
+        )
+        labels, core, _ = fitted[self.selected["candidate"]]
         self.sentences["cluster_id"] = np.asarray(labels, dtype=int)
-        self.sentences["membership_strength"] = strengths
+        self.sentences["dbscan_core_point"] = core
+        self.sentences["membership_strength"] = np.nan
         self.sentences["embedding_windows"] = self.window_counts
         self.occurrences = self.occurrences.merge(
             self.sentences[["sentence_id", "cluster_id"]],
@@ -733,14 +873,11 @@ class SocialNLPClusterer:
         self._event("selected", **self.selected)
         return self
 
-    def describe_topics(self):
-        from scipy.sparse import csr_matrix
+    @staticmethod
+    def _topic_vectorizer():
         from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS, CountVectorizer
-        from sklearn.preprocessing import normalize
 
-        labels = self.sentences["cluster_id"].to_numpy()
-        ids = sorted(set(labels) - {-1})
-        vectorizer = CountVectorizer(
+        return CountVectorizer(
             ngram_range=(1, 2),
             min_df=2,
             max_df=0.95,
@@ -748,7 +885,20 @@ class SocialNLPClusterer:
             stop_words=sorted(INDONESIAN_STOPWORDS | set(ENGLISH_STOP_WORDS)),
             token_pattern=r"(?u)\b[^\W\d_]\w+\b",
         )
-        terms = vectorizer.fit_transform(self.sentences["embedding_text"])
+
+    def _ctfidf_terms(self, labels):
+        """Use the same class TF-IDF vocabulary for selection and publication."""
+        from scipy.sparse import csr_matrix
+        from sklearn.preprocessing import normalize
+
+        labels = np.asarray(labels)
+        ids = sorted(set(labels) - {-1})
+        if not hasattr(self, "_term_matrix"):
+            vectorizer = self._topic_vectorizer()
+            self._term_matrix = vectorizer.fit_transform(
+                self.sentences["embedding_text"]
+            )
+            self._term_vocabulary = np.asarray(vectorizer.get_feature_names_out())
         mapping = {cid: i for i, cid in enumerate(ids)}
         assigned_indices = np.flatnonzero(labels >= 0)
         group = csr_matrix(
@@ -758,13 +908,128 @@ class SocialNLPClusterer:
             ),
             shape=(len(ids), len(labels)),
         )
-        counts = group @ terms
+        counts = group @ self._term_matrix
         average_length = float(np.asarray(counts.sum(axis=1)).mean())
         idf = np.log1p(
             average_length / np.maximum(np.asarray(counts.sum(axis=0)).ravel(), 1)
         )
         ctfidf = normalize(counts, norm="l1", axis=1).multiply(idf).tocsr()
-        words = np.asarray(vectorizer.get_feature_names_out())
+        result = {}
+        for cid in ids:
+            scores = ctfidf[mapping[cid]].toarray().ravel()
+            ranked = np.argsort(scores)[::-1]
+            # A short topic must not be padded with zero-weight unrelated words.
+            result[int(cid)] = self._term_vocabulary[
+                ranked[scores[ranked] > 0][:12]
+            ].tolist()
+        return result
+
+    def score_coherence(self, topic_terms):
+        """Macro c_v on ALL non-noise topics and a fixed full-corpus reference.
+
+        Unigrams and bigrams use exactly the c-TF-IDF analyzer. A bigram is one
+        token, not split after ranking. Duplicate sentence occurrences are not
+        repeated; reference texts include noise. Invalid topics invalidate the
+        aggregate instead of being silently discarded.
+        """
+        from gensim.corpora import Dictionary
+        from gensim.models import CoherenceModel
+
+        settings = self.config["coherence"]
+        if not hasattr(self, "_coherence_reference"):
+            analyzer = self._topic_vectorizer().build_analyzer()
+            texts = [analyzer(text) for text in self.sentences["embedding_text"]]
+            self._coherence_reference = (
+                texts,
+                Dictionary(texts),
+                sha256(
+                    json.dumps(
+                        texts, ensure_ascii=False, separators=(",", ":")
+                    ).encode()
+                ).hexdigest(),
+            )
+        texts, dictionary, corpus_sha256 = self._coherence_reference
+        rows = [
+            {
+                "cluster_id": int(cid),
+                "terms": list(terms[: settings["topn"]]),
+                "score": None,
+            }
+            for cid, terms in sorted(topic_terms.items())
+            if cid >= 0
+        ]
+        valid = [
+            row
+            for row in rows
+            if len(set(row["terms"])) >= 2
+            and all(term in dictionary.token2id for term in row["terms"])
+        ]
+        if valid:
+            model = CoherenceModel(
+                topics=[row["terms"] for row in valid],
+                texts=texts,
+                dictionary=dictionary,
+                coherence="c_v",
+                topn=settings["topn"],
+                window_size=settings["window_size"],
+                processes=1,
+            )
+            for row, value in zip(valid, model.get_coherence_per_topic()):
+                if np.isfinite(value):
+                    row["score"] = float(value)
+        evaluated = sum(row["score"] is not None for row in rows)
+        mean = (
+            float(np.mean([row["score"] for row in rows]))
+            if rows and evaluated == len(rows)
+            else None
+        )
+        return {
+            **settings,
+            "macro_mean": mean,
+            "target_met": mean is not None and mean >= settings["min_score"],
+            "topics_total": len(rows),
+            "topics_evaluated": evaluated,
+            "topics_below_target": sum(
+                row["score"] is None or row["score"] < settings["min_score"]
+                for row in rows
+            ),
+            "reference_documents": len(texts),
+            "reference_sha256": corpus_sha256,
+            "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+            "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+            "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+            "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+            "gensim_version": importlib.metadata.version("gensim"),
+            "per_topic": rows,
+        }
+
+    @classmethod
+    def evaluate_run_coherence(cls, directory, settings=None):
+        data = cls.load_run(directory)
+        evaluator = cls({"coherence": settings} if settings else None)
+        evaluator.sentences = data["sentences"]
+        result = evaluator.score_coherence(
+            {topic["cluster_id"]: topic["terms"] for topic in data["topics"]}
+        )
+        result.update(
+            source_run=str(Path(directory)),
+            source_manifest_sha256=data["artifact_manifest_sha256"],
+            source_sha256=data["summary"]["source_sha256"],
+        )
+        return result
+
+    def describe_topics(self):
+        labels = self.sentences["cluster_id"].to_numpy()
+        topic_terms = self._ctfidf_terms(labels)
+        self.coherence = self.score_coherence(topic_terms)
+        if not self.coherence["target_met"]:
+            raise ValueError("Selected topics failed the coherence c_v threshold")
+        if hasattr(self, "selected"):
+            self.selected["coherence_cv"] = self.coherence["macro_mean"]
+        scores_by_id = {
+            row["cluster_id"]: row["score"] for row in self.coherence["per_topic"]
+        }
+        ids = sorted(topic_terms)
         topics, centroids = [], []
         occurrence_counts = self.occurrences.groupby("cluster_id").size().to_dict()
         for cid in ids:
@@ -776,8 +1041,7 @@ class SocialNLPClusterer:
             self.sentences.loc[self.sentences.index[indices], "centroid_similarity"] = (
                 similarities
             )
-            scores = ctfidf[mapping[cid]].toarray().ravel()
-            top = words[np.argsort(scores)[::-1][:12]].tolist()
+            top = topic_terms[cid]
             chosen = []
             for term in top:
                 if not any(
@@ -795,6 +1059,7 @@ class SocialNLPClusterer:
                     "cluster_id": int(cid),
                     "label": " / ".join(chosen) or f"Topik {cid}",
                     "terms": top,
+                    "coherence_cv": scores_by_id[cid],
                     "unique_sentences": len(indices),
                     "occurrences": int(occurrence_counts.get(cid, 0)),
                     "platform_counts": {
@@ -1638,7 +1903,10 @@ class SocialNLPClusterer:
         cls, data, occurrences=None, *, date_start=None, date_end=None, options=None
     ):
         """Explain already verified artifacts without encoding or fitting again."""
-        instance = cls(data["summary"].get("config", {}))
+        # Explanation depends on saved data/options, not the historical fitting
+        # backend. Legacy ONNX/UMAP/HDBSCAN runs remain readable without retraining.
+        stored = data["summary"].get("config", {})
+        instance = cls({"explanation": stored.get("explanation", {})})
         instance.topics = data["topics"]
         instance.sentences = data["sentences"]
         instance.occurrences = data["occurrences"]
@@ -1743,6 +2011,16 @@ class SocialNLPClusterer:
     def save(self, output_dir=None):
         if not self.topics or "cluster_id" not in self.sentences:
             raise ValueError("Fit and describe clusters before saving")
+        if not self.coherence["target_met"]:
+            raise ValueError("Cannot publish topics below the coherence threshold")
+        baseline = getattr(self, "coherence_baseline", None)
+        if baseline and baseline["source_sha256"] != self.input_sha256:
+            raise ValueError("Coherence baseline must use the same source workbook")
+        if baseline and any(
+            baseline[key] != self.coherence[key]
+            for key in ("metric", "topn", "window_size", "reference_sha256")
+        ):
+            raise ValueError("Coherence baseline protocol or reference corpus differs")
         output = Path(output_dir or self.config["output_dir"])
         if not output.is_absolute():
             output = ROOT / output
@@ -1751,25 +2029,35 @@ class SocialNLPClusterer:
         output.parent.mkdir(parents=True, exist_ok=True)
         stage = Path(tempfile.mkdtemp(prefix=".nlp-run-", dir=output.parent))
         try:
+            self.source_data.to_parquet(stage / "social_data.parquet", index=False)
             self.sentences.to_parquet(stage / "sentences.parquet", index=False)
             self.occurrences.to_parquet(stage / "occurrences.parquet", index=False)
             self.skipped.to_parquet(stage / "skipped.parquet", index=False)
             np.save(stage / "embeddings.npy", self.embeddings, allow_pickle=False)
+            np.savez_compressed(
+                stage / "umap_embeddings.npz",
+                seed_primary=self.reduced_embeddings[0],
+                seed_alternate=self.reduced_embeddings[1],
+            )
             np.save(stage / "centroids.npy", self.centroids, allow_pickle=False)
             json_write(stage / "topics.json", self.topics)
             json_write(stage / "graph.json", self.graph)
             json_write(stage / "comparison.json", self.comparisons)
-            versions = {
-                name: importlib.metadata.version(name)
-                for name in [
-                    "numpy",
-                    "pandas",
-                    "scikit-learn",
-                    "umap-learn",
-                    "onnxruntime",
-                    "tokenizers",
-                ]
-            }
+            versions = {}
+            for name in [
+                "numpy",
+                "pandas",
+                "scikit-learn",
+                "sentence-transformers",
+                "torch",
+                "transformers",
+                "tokenizers",
+                "gensim",
+            ]:
+                try:
+                    versions[name] = importlib.metadata.version(name)
+                except importlib.metadata.PackageNotFoundError:
+                    versions[name] = None
             summary = {
                 "schema_version": SCHEMA_VERSION,
                 "producer_version": VERSION,
@@ -1791,8 +2079,12 @@ class SocialNLPClusterer:
                 ),
                 "selection_rule": "0.60*max(cosine_silhouette,0)*coverage + 0.25*max(stability_ARI,0) + 0.15*coverage",
                 "selection_policy": self.selection_policy,
+                "coherence": self.coherence,
+                "coherence_baseline": baseline,
                 "evaluation_scope": "Internal comparison on this corpus; no labeled semantic ground truth or universal-best claim",
-                "stability_scope": "HDBSCAN uses two UMAP seeds; centroid methods use two KMeans seeds with fixed SVD for lexical baseline. ARI uses union of assigned points, noise singletons, shared-noise points excluded.",
+                "stability_scope": "DBSCAN partitions on two seeded UMAP projections; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
+                "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> c-TF-IDF topic descriptions",
+                "reduction": self.reduction_info,
                 "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
                 "synthetic": self.encoder is not None,
             }
@@ -1819,7 +2111,10 @@ class SocialNLPClusterer:
         directory = Path(directory).resolve()
         manifest_bytes = (directory / "manifest.json").read_bytes()
         manifest = json.loads(manifest_bytes)
-        if manifest.get("schema_version") != SCHEMA_VERSION:
+        if manifest.get("schema_version") not in {
+            SCHEMA_VERSION,
+            LEGACY_SCHEMA_VERSION,
+        }:
             raise ValueError("Unsupported NLP artifact schema")
         required = {
             "summary.json",
@@ -1832,6 +2127,8 @@ class SocialNLPClusterer:
             "embeddings.npy",
             "centroids.npy",
         }
+        if manifest["schema_version"] == SCHEMA_VERSION:
+            required.update({"social_data.parquet", "umap_embeddings.npz"})
         if set(manifest["files_sha256"]) != required:
             raise ValueError("Artifact manifest must cover all required files")
         if verify:
@@ -1844,6 +2141,29 @@ class SocialNLPClusterer:
         }
         for name in ["sentences", "occurrences", "skipped"]:
             result[name] = pd.read_parquet(directory / (name + ".parquet"))
+        if manifest["schema_version"] == SCHEMA_VERSION:
+            result["social_data"] = pd.read_parquet(directory / "social_data.parquet")
+            with np.load(
+                directory / "umap_embeddings.npz", allow_pickle=False
+            ) as projections:
+                if set(projections.files) != {"seed_primary", "seed_alternate"}:
+                    raise ValueError("Unexpected UMAP projection archive")
+                result["umap_embeddings"] = [
+                    projections["seed_primary"],
+                    projections["seed_alternate"],
+                ]
+            if any(
+                len(x) != len(result["sentences"])
+                or x.ndim != 2
+                or not np.isfinite(x).all()
+                for x in result["umap_embeddings"]
+            ):
+                raise ValueError("UMAP projection shape or values mismatch")
+            if (
+                len(result["social_data"])
+                != result["summary"]["preparation"]["input_rows"]
+            ):
+                raise ValueError("Source Parquet row count mismatch")
         result["embeddings"] = np.load(directory / "embeddings.npy", allow_pickle=False)
         result["centroids"] = np.load(directory / "centroids.npy", allow_pickle=False)
         if len(result["sentences"]) != len(result["embeddings"]):
@@ -1859,6 +2179,11 @@ def main():
     parser.add_argument("--input", type=Path)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--prepare-only", action="store_true")
+    parser.add_argument(
+        "--coherence-baseline",
+        type=Path,
+        help="Measure a previous fitted run with the same c_v protocol before retraining",
+    )
     parser.add_argument(
         "--explain-run",
         type=Path,
@@ -1912,6 +2237,18 @@ def main():
             if output.exists():
                 raise FileExistsError(
                     "Output exists; use --output-dir with a new directory"
+                )
+            if args.coherence_baseline:
+                pipeline.coherence_baseline = pipeline.evaluate_run_coherence(
+                    args.coherence_baseline, pipeline.config["coherence"]
+                )
+                pipeline._event(
+                    "coherence_baseline",
+                    **{
+                        key: value
+                        for key, value in pipeline.coherence_baseline.items()
+                        if key != "per_topic"
+                    },
                 )
             pipeline.fit_excel(args.input).save(args.output_dir)
         return 0

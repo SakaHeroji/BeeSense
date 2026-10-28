@@ -59,17 +59,52 @@ class PublishedDataTests(unittest.TestCase):
 
     def test_missing_preserved_audit_is_rejected(self):
         self.audit.unlink()
-        with self.assertRaisesRegex(ValueError, "published source workbooks"):
+        with self.assertRaisesRegex(ValueError, "Published source workbooks"):
             verifier.verify()
 
     def test_unexpected_workbook_is_rejected(self):
         self.source.with_name("other_dataset.xlsx").write_bytes(b"unpublished")
-        with self.assertRaisesRegex(ValueError, "published source workbooks"):
+        with self.assertRaisesRegex(ValueError, "Published source workbooks"):
             verifier.verify()
 
     def test_input_integrity_remains_enforced(self):
         self.source.write_bytes(b"changed dashboard input")
         with self.assertRaisesRegex(ValueError, "checksum differs"):
+            verifier.verify()
+
+    def test_archived_nlp_snapshot_and_separate_crawl_output_are_supported(self):
+        archive = self.root / "outputs/nlp_previous"
+        archive.mkdir()
+        (archive / "summary.json").write_text("{}")
+        (archive / "manifest.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": "beesense-sentence-clusters:1",
+                    "files_sha256": {"summary.json": "verified by load_run"},
+                }
+            )
+        )
+        crawl = self.root / "outputs/social_selenium_test"
+        crawl.mkdir()
+        (crawl / "dataset.xlsx").write_bytes(b"unrelated local crawl")
+        result = verifier.verify()
+        self.assertEqual(result["archived_runs"], ["outputs/nlp_previous"])
+        self.assertEqual(result["published_data_files"], 6)
+
+    def test_unexpected_file_in_archive_is_rejected(self):
+        archive = self.root / "outputs/nlp_previous"
+        archive.mkdir()
+        (archive / "summary.json").write_text("{}")
+        (archive / "unlisted.parquet").write_bytes(b"unlisted")
+        (archive / "manifest.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": "beesense-sentence-clusters:1",
+                    "files_sha256": {"summary.json": "verified by load_run"},
+                }
+            )
+        )
+        with self.assertRaisesRegex(ValueError, "unexpected files"):
             verifier.verify()
 
 

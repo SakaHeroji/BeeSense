@@ -1,0 +1,1915 @@
+{
+  "schema_version": "beesense-sentence-clusters:2",
+  "producer_version": "2.1.0",
+  "created_at": "2026-10-28T15:49:12.900908+00:00",
+  "source_file": "/Users/sakaheroji/Documents/BeeSense/outputs/social_20261028_01/social_data.xlsx",
+  "source_sha256": "939f5869ffdfc2ca14c98e8f39cffa7e15292fdb5ea7faaf27c043670fea56e2",
+  "preparation": {
+    "input_rows": 8449,
+    "eligible_source_rows": 8218,
+    "sentence_occurrences": 16178,
+    "unique_sentences": 15878,
+    "duplicate_occurrences": 300,
+    "skipped_segments": 1045,
+    "included_kinds": [
+      "comment",
+      "reply"
+    ],
+    "source_timezone": "Asia/Jakarta"
+  },
+  "selected": {
+    "candidate": "sbert_umap_dbscan_eps0.3_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.3,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph"
+    },
+    "clusters": 52,
+    "coverage": 0.9511273460133518,
+    "noise_fraction": 0.048872653986648196,
+    "largest_cluster_fraction": 0.377036154151768,
+    "silhouette_cosine": -0.10336727648973465,
+    "stability_ari": 0.8251319331148675,
+    "selection_score": 0.34895208518071963,
+    "eligible": true,
+    "seconds": 0.12783336299980874,
+    "silhouette_sample_assigned": 1725,
+    "stability_union_points": 15401,
+    "geometry_eligible": true,
+    "coherence_cv": 0.40970330118194137,
+    "coherence_topics": 52,
+    "coherence_status": "passed"
+  },
+  "model": {
+    "family": "SBERT",
+    "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "backend": "sentence-transformers-pytorch-cpu",
+    "pooling": "SBERT modules; mean of overflow windows then L2",
+    "test_encoder": false,
+    "max_tokens": 128,
+    "stride": 24,
+    "fine_tuned_on_source": false,
+    "cache_hit": true,
+    "dimensions": 384,
+    "long_sentence_windows": 20
+  },
+  "fit_seconds": 19.005363551999835,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": "3.4.1",
+    "torch": "2.2.2",
+    "transformers": "4.49.0",
+    "tokenizers": "0.21.4",
+    "gensim": "4.4.0"
+  },
+  "config": {
+    "input_file": "outputs/social_20261028_01/social_data.xlsx",
+    "output_dir": "outputs/nlp_20261028_coherence_01",
+    "cache_dir": ".cache/social_nlp",
+    "seed": 42,
+    "include_kinds": [
+      "comment",
+      "reply"
+    ],
+    "min_words": 2,
+    "min_characters": 8,
+    "max_segment_characters": 1200,
+    "max_unique_sentences": 100000,
+    "model": {
+      "backend": "sentence-transformers",
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "max_tokens": 128,
+      "stride": 24,
+      "batch_size": 32,
+      "threads": 4
+    },
+    "dbscan": {
+      "eps": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "min_samples": [
+        3,
+        5,
+        10
+      ],
+      "neighborhood_batch_size": 256,
+      "max_neighbor_edges": 8000000
+    },
+    "evaluation": {
+      "sample_size": 1800,
+      "min_coverage": 0.4,
+      "max_largest_cluster": 0.5,
+      "score_tolerance": 0.005
+    },
+    "graph": {
+      "max_nodes": 180,
+      "neighbors": 3,
+      "min_similarity": 0.55
+    },
+    "explanation": {
+      "date_basis": "post_date",
+      "include_estimated_dates": true,
+      "window_months": 3,
+      "min_periods": 6,
+      "min_monthly_comments": 20,
+      "min_topic_comments": 20,
+      "min_window_topic_comments": 5,
+      "min_roots": 3,
+      "dominance_warning_threshold": 0.6,
+      "change_threshold_pp": 2.0,
+      "slope_threshold_pp": 0.25,
+      "kendall_threshold": 0.25,
+      "platform_shift_threshold_pp": 15.0,
+      "min_term_comments": 5,
+      "max_evidence": 3,
+      "mmr_lambda": 0.75
+    },
+    "umap": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0
+    },
+    "coherence": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    }
+  },
+  "clusters": 52,
+  "unclustered_unique": 776,
+  "unclustered_occurrences": 802,
+  "selection_rule": "0.60*max(cosine_silhouette,0)*coverage + 0.25*max(stability_ARI,0) + 0.15*coverage",
+  "selection_policy": {
+    "highest_composite_score": 0.34895208518071963,
+    "score_tolerance": 0.005,
+    "near_tie_candidates": [
+      "sbert_umap_dbscan_eps0.3_min10"
+    ],
+    "tie_break": "prefer larger cosine silhouette in original embedding space, then stability and coverage",
+    "interpretation": "heuristic operational tolerance, not statistical significance or labeled accuracy",
+    "candidate_family": "SBERT + UMAP + DBSCAN",
+    "stability_test": "DBSCAN partitions on two seeded UMAP projections",
+    "coherence_gate": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    },
+    "coherence_search": "descending composite score; all candidates in the best passing score tolerance band are evaluated; lower scores are explicitly marked unevaluated"
+  },
+  "coherence": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4,
+    "macro_mean": 0.40970330118194137,
+    "target_met": true,
+    "topics_total": 52,
+    "topics_evaluated": 52,
+    "topics_below_target": 31,
+    "reference_documents": 15878,
+    "reference_sha256": "a614e01fe6b13504447a969955493f30b816aefd630884ae2f1951a70f760c54",
+    "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+    "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+    "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+    "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+    "gensim_version": "4.4.0",
+    "per_topic": [
+      {
+        "cluster_id": 0,
+        "terms": [
+          "orang",
+          "sama",
+          "semoga",
+          "kalo",
+          "tau",
+          "danang",
+          "jangan",
+          "diri",
+          "allah",
+          "selalu"
+        ],
+        "score": 0.3778499742803729
+      },
+      {
+        "cluster_id": 1,
+        "terms": [
+          "ibunya",
+          "ibu",
+          "anak",
+          "adik",
+          "keluarga",
+          "sama",
+          "adiknya",
+          "kakaknya",
+          "danang",
+          "ku"
+        ],
+        "score": 0.5547830820725645
+      },
+      {
+        "cluster_id": 2,
+        "terms": [
+          "kartu",
+          "kartu kip",
+          "punya kartu",
+          "kartunya",
+          "kip",
+          "caranya",
+          "tidak punya",
+          "kks",
+          "pip",
+          "ad"
+        ],
+        "score": 0.5561680951538153
+      },
+      {
+        "cluster_id": 3,
+        "terms": [
+          "kuliah",
+          "beasiswa",
+          "kerja",
+          "lpdp",
+          "uang",
+          "sekolah",
+          "anak",
+          "orang",
+          "kampus",
+          "negara"
+        ],
+        "score": 0.5713586257653185
+      },
+      {
+        "cluster_id": 4,
+        "terms": [
+          "daftar",
+          "daftarnya",
+          "dek",
+          "set",
+          "set set",
+          "nanti daftar",
+          "daftar jalur",
+          "masing",
+          "nanti",
+          "cek"
+        ],
+        "score": 0.32117400249421224
+      },
+      {
+        "cluster_id": 5,
+        "terms": [
+          "umur",
+          "gym",
+          "senior",
+          "tua",
+          "orang tua",
+          "usia",
+          "muda",
+          "orang",
+          "olahraga",
+          "otot"
+        ],
+        "score": 0.32671832585230465
+      },
+      {
+        "cluster_id": 6,
+        "terms": [
+          "indonesia",
+          "rakyat indonesia",
+          "rakyat",
+          "negara",
+          "indonesian",
+          "lpdp",
+          "negara indonesia",
+          "tidak",
+          "blacklist",
+          "negeri"
+        ],
+        "score": 0.5733172186417232
+      },
+      {
+        "cluster_id": 7,
+        "terms": [
+          "namanya",
+          "samaan",
+          "nama",
+          "wahhh samaan",
+          "sob namanya",
+          "samaan sob",
+          "samaan namanya",
+          "wahhh",
+          "sama",
+          "sebarkan"
+        ],
+        "score": 0.44832137255855864
+      },
+      {
+        "cluster_id": 8,
+        "terms": [
+          "dokumen",
+          "data",
+          "buku",
+          "apostile",
+          "berkas",
+          "baca",
+          "email",
+          "pdf",
+          "tulis",
+          "foto"
+        ],
+        "score": 0.2364545493388876
+      },
+      {
+        "cluster_id": 9,
+        "terms": [
+          "knows",
+          "sob",
+          "mana",
+          "benarkah",
+          "luring",
+          "beneran",
+          "berita",
+          "dina",
+          "knp",
+          "maksudnya"
+        ],
+        "score": 0.5242013621047282
+      },
+      {
+        "cluster_id": 10,
+        "terms": [
+          "pendaftaran",
+          "revisi",
+          "link",
+          "unk",
+          "step",
+          "sidang",
+          "kartu",
+          "dn",
+          "pendaftaran kip",
+          "desil berdasarkan"
+        ],
+        "score": 0.30563704474232967
+      },
+      {
+        "cluster_id": 11,
+        "terms": [
+          "sorry",
+          "maaf",
+          "minta maaf",
+          "rant",
+          "maaf tanya",
+          "minta",
+          "sorry op",
+          "sorry happens",
+          "experienced",
+          "sblmnya"
+        ],
+        "score": 0.26572726274836256
+      },
+      {
+        "cluster_id": 12,
+        "terms": [
+          "bahasa",
+          "inggris",
+          "bahasa inggris",
+          "dokumen",
+          "rusia",
+          "terjemahan",
+          "asli",
+          "english",
+          "translate",
+          "dokumen asli"
+        ],
+        "score": 0.5421705017637625
+      },
+      {
+        "cluster_id": 13,
+        "terms": [
+          "rumah",
+          "saiful",
+          "rumahnya",
+          "tetangga",
+          "nurul",
+          "pulang",
+          "foto rumah",
+          "tempat",
+          "sarah rama",
+          "rama ilham"
+        ],
+        "score": 0.4956142550793582
+      },
+      {
+        "cluster_id": 14,
+        "terms": [
+          "inggris",
+          "kusut",
+          "inggris kakk",
+          "pake bhs",
+          "hebat kali",
+          "benang kusut",
+          "negara manapun",
+          "sombongnya minta",
+          "biar pinter",
+          "dy hidup"
+        ],
+        "score": 0.1857113232462853
+      },
+      {
+        "cluster_id": 15,
+        "terms": [
+          "video",
+          "rizky",
+          "videonya",
+          "rizky riplay",
+          "riplay",
+          "bikin video",
+          "youtube",
+          "nonton",
+          "bikin",
+          "videonya viral"
+        ],
+        "score": 0.3693420858955131
+      },
+      {
+        "cluster_id": 16,
+        "terms": [
+          "dokter",
+          "psikiater",
+          "psikolog",
+          "adhd",
+          "bpjs",
+          "spesialis",
+          "obat",
+          "kesehatan",
+          "dokter umum",
+          "umum"
+        ],
+        "score": 0.48615415337924944
+      },
+      {
+        "cluster_id": 17,
+        "terms": [
+          "ielts",
+          "toefl",
+          "bahkan menurut",
+          "skor ielts",
+          "toefl itp",
+          "c1",
+          "itp",
+          "toefl ielts",
+          "skor",
+          "hsk"
+        ],
+        "score": 0.4265642168787195
+      },
+      {
+        "cluster_id": 18,
+        "terms": [
+          "jerman",
+          "kuliah jerman",
+          "applicant",
+          "german",
+          "studienkolleg",
+          "students",
+          "relate",
+          "eu lain",
+          "students relate",
+          "indonesian students"
+        ],
+        "score": 0.5912790626069234
+      },
+      {
+        "cluster_id": 19,
+        "terms": [
+          "negara",
+          "indo",
+          "penghianat",
+          "bangsa",
+          "presiden",
+          "prabowo",
+          "menteri",
+          "pemerintah",
+          "amran",
+          "cabut"
+        ],
+        "score": 0.2073603396201571
+      },
+      {
+        "cluster_id": 20,
+        "terms": [
+          "ipdn",
+          "ipi",
+          "stan",
+          "ipdn stan",
+          "uri",
+          "setengah",
+          "rata",
+          "ukt",
+          "masuk ipdn",
+          "upi"
+        ],
+        "score": 0.26053986390299627
+      },
+      {
+        "cluster_id": 21,
+        "terms": [
+          "ibuk",
+          "sama ibuk",
+          "minum",
+          "ko",
+          "nonton sambil",
+          "agak laen",
+          "ru",
+          "bangun tidur",
+          "ngacung",
+          "negoro"
+        ],
+        "score": 0.3095589326506255
+      },
+      {
+        "cluster_id": 22,
+        "terms": [
+          "china",
+          "mandarin",
+          "jepang",
+          "cina",
+          "bahasa",
+          "chinese",
+          "asia",
+          "bhs",
+          "bhs mandarin",
+          "belajar"
+        ],
+        "score": 0.27140715928264547
+      },
+      {
+        "cluster_id": 23,
+        "terms": [
+          "pin",
+          "spmb",
+          "jatim",
+          "spmb jatim",
+          "ambil pin",
+          "ambil",
+          "berkas",
+          "upload",
+          "hsk",
+          "daftar"
+        ],
+        "score": 0.7621611902867848
+      },
+      {
+        "cluster_id": 24,
+        "terms": [
+          "iq",
+          "smart",
+          "manusia sperti",
+          "pangkat",
+          "bermacam2",
+          "catch",
+          "isi hati",
+          "intelijen",
+          "hdup",
+          "siapa suruh"
+        ],
+        "score": 0.29459376151550254
+      },
+      {
+        "cluster_id": 25,
+        "terms": [
+          "air",
+          "data center",
+          "center",
+          "air bersih",
+          "air laut",
+          "salmon",
+          "akibat",
+          "kolam",
+          "water",
+          "laut"
+        ],
+        "score": 0.2505301208150683
+      },
+      {
+        "cluster_id": 26,
+        "terms": [
+          "gua",
+          "batu",
+          "emas",
+          "dikit",
+          "gua kerja",
+          "mah",
+          "ade",
+          "sama",
+          "gravel",
+          "kalo"
+        ],
+        "score": 0.3326592244733981
+      },
+      {
+        "cluster_id": 27,
+        "terms": [
+          "xiaomi",
+          "hp",
+          "kamera",
+          "flagship",
+          "redmi",
+          "zoom",
+          "kameranya",
+          "hyperos",
+          "camera",
+          "bug"
+        ],
+        "score": 0.3516606784542253
+      },
+      {
+        "cluster_id": 28,
+        "terms": [
+          "kek",
+          "kek gini",
+          "kaka",
+          "ibu kek",
+          "gini",
+          "ibu",
+          "keknya",
+          "ibuknya kek",
+          "cerita kek",
+          "kek anj"
+        ],
+        "score": 0.33078084077627534
+      },
+      {
+        "cluster_id": 29,
+        "terms": [
+          "kasian",
+          "kasian kaka",
+          "kaka",
+          "danang kasian",
+          "kka",
+          "kasian danang",
+          "taruhannya",
+          "komennya",
+          "fucking",
+          "kost"
+        ],
+        "score": 0.4057460604858226
+      },
+      {
+        "cluster_id": 30,
+        "terms": [
+          "anjing",
+          "ibunya anjing",
+          "ibu anjing",
+          "kek anjing",
+          "majikan",
+          "menggigit",
+          "ibunya",
+          "ngerusak mental",
+          "peliharaan",
+          "jelekin"
+        ],
+        "score": 0.40344418083711303
+      },
+      {
+        "cluster_id": 31,
+        "terms": [
+          "final",
+          "final sob",
+          "endingnya",
+          "yahhh sayangnya",
+          "yahhh",
+          "kesempatan terakhir",
+          "sayangnya final",
+          "terakhir",
+          "sob",
+          "ending"
+        ],
+        "score": 0.2957570098116033
+      },
+      {
+        "cluster_id": 32,
+        "terms": [
+          "lagu",
+          "lagunya",
+          "pink",
+          "pink floyd",
+          "floyd",
+          "day",
+          "terharu",
+          "nangis",
+          "engineernya",
+          "ane kasih"
+        ],
+        "score": 0.622980652667392
+      },
+      {
+        "cluster_id": 33,
+        "terms": [
+          "istri",
+          "suami",
+          "istrinya",
+          "nikah",
+          "perempuan",
+          "wanita",
+          "menikah",
+          "laki",
+          "cewek",
+          "gender"
+        ],
+        "score": 0.2923765978033993
+      },
+      {
+        "cluster_id": 34,
+        "terms": [
+          "cewek",
+          "ceweknya",
+          "korban",
+          "wkwkwkwkw",
+          "usah kerja",
+          "twist",
+          "plot twist",
+          "ember",
+          "gadis",
+          "lantas"
+        ],
+        "score": 0.26795589122807595
+      },
+      {
+        "cluster_id": 35,
+        "terms": [
+          "mati",
+          "meninggal",
+          "tembak mati",
+          "tembak",
+          "nkri harga",
+          "harga mati",
+          "meninggalkan",
+          "nkri",
+          "harga",
+          "buah jatuh"
+        ],
+        "score": 0.3682701771246434
+      },
+      {
+        "cluster_id": 36,
+        "terms": [
+          "viral",
+          "uin",
+          "buatin viral",
+          "barita viral",
+          "barita",
+          "virus",
+          "azab",
+          "mahasiswi",
+          "buatin",
+          "kasus"
+        ],
+        "score": 0.35636508755254426
+      },
+      {
+        "cluster_id": 37,
+        "terms": [
+          "sepeda",
+          "gravel",
+          "mtb",
+          "bike",
+          "fork",
+          "rigid",
+          "sepeda gravel",
+          "ganti",
+          "motor",
+          "ban"
+        ],
+        "score": 0.4597952118607358
+      },
+      {
+        "cluster_id": 38,
+        "terms": [
+          "sabun",
+          "rambut",
+          "toilet",
+          "hair",
+          "pake sabun",
+          "pake",
+          "mandi",
+          "soap",
+          "tonic",
+          "minoxidil"
+        ],
+        "score": 0.2522595013322689
+      },
+      {
+        "cluster_id": 39,
+        "terms": [
+          "swasta",
+          "kapitalisme",
+          "private",
+          "kapitalis",
+          "capitalism",
+          "pasar",
+          "ekonomi",
+          "varian",
+          "neoliberal",
+          "negara kuat"
+        ],
+        "score": 0.2991279541332764
+      },
+      {
+        "cluster_id": 40,
+        "terms": [
+          "gas",
+          "listrik",
+          "spbu",
+          "bensin",
+          "ketemu spbu",
+          "ac",
+          "ngontrak",
+          "rumah",
+          "dapat uang",
+          "wa"
+        ],
+        "score": 0.24977758389504764
+      },
+      {
+        "cluster_id": 41,
+        "terms": [
+          "palsu",
+          "pidana",
+          "pidana penjara",
+          "penjara lama",
+          "penjara",
+          "hukum",
+          "nama palsu",
+          "lama empat",
+          "rangkaian",
+          "piutang"
+        ],
+        "score": 0.9943253812143074
+      },
+      {
+        "cluster_id": 42,
+        "terms": [
+          "sidang",
+          "yudisium",
+          "sidang skripsi",
+          "skripsi",
+          "wisuda",
+          "syarat",
+          "berdasarkan",
+          "lulus",
+          "lulus berdasarkan",
+          "lulus sidang"
+        ],
+        "score": 0.6091571967702584
+      },
+      {
+        "cluster_id": 43,
+        "terms": [
+          "romania",
+          "bucharest",
+          "university bucharest",
+          "sampai romania",
+          "university",
+          "accommodation",
+          "accommodation letter",
+          "perlu dikeluarkan",
+          "romania langsung",
+          "rumania"
+        ],
+        "score": 0.6772464281777703
+      },
+      {
+        "cluster_id": 44,
+        "terms": [
+          "arya",
+          "istrinya",
+          "istri arya",
+          "arya istrinya",
+          "enteng arya",
+          "bapaknya arya",
+          "bapaknya",
+          "kewarga",
+          "bt",
+          "ds"
+        ],
+        "score": 0.3535822412809246
+      },
+      {
+        "cluster_id": 45,
+        "terms": [
+          "bunga",
+          "bunganya",
+          "beserta",
+          "beserta bunganya",
+          "berikut",
+          "berbunga",
+          "berikut bunganya",
+          "beserta bunga",
+          "buah kesombongan",
+          "segera kembalikan"
+        ],
+        "score": 0.2440826938791411
+      },
+      {
+        "cluster_id": 46,
+        "terms": [
+          "blacklist",
+          "black",
+          "black list",
+          "list",
+          "blacklist seluruh",
+          "sekalian",
+          "nkri",
+          "seluruh dunia",
+          "turunan",
+          "mampus"
+        ],
+        "score": 0.2825140857435078
+      },
+      {
+        "cluster_id": 47,
+        "terms": [
+          "kacang lupa",
+          "kacang",
+          "lupa",
+          "kulit",
+          "lupa kulitnya",
+          "kulitnya",
+          "lupa kulit",
+          "forgot",
+          "ingredients",
+          "kynya"
+        ],
+        "score": 0.46171171855168824
+      },
+      {
+        "cluster_id": 48,
+        "terms": [
+          "gay",
+          "lgbt",
+          "queer",
+          "anti lgbt",
+          "anti",
+          "lgbtq",
+          "lingkungan organisasi",
+          "gaydar",
+          "gerakan",
+          "diam"
+        ],
+        "score": 0.3353653393775871
+      },
+      {
+        "cluster_id": 49,
+        "terms": [
+          "nuklir",
+          "teknik nuklir",
+          "teknik",
+          "nuklir ugm",
+          "sertifikasi petugas",
+          "proteksi radiasi",
+          "radiasi",
+          "nuclear",
+          "petugas proteksi",
+          "ugm"
+        ],
+        "score": 0.8028455924216636
+      },
+      {
+        "cluster_id": 50,
+        "terms": [
+          "international",
+          "ui",
+          "acceptance rate",
+          "average",
+          "acceptance",
+          "students",
+          "rate",
+          "student",
+          "classes",
+          "domestic"
+        ],
+        "score": 0.35744081069265754
+      },
+      {
+        "cluster_id": 51,
+        "terms": [
+          "vaksin",
+          "mrna",
+          "vaccine",
+          "dengue",
+          "immune",
+          "response",
+          "imun",
+          "immune response",
+          "protein",
+          "respons"
+        ],
+        "score": 0.38264563823884845
+      }
+    ]
+  },
+  "coherence_baseline": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4,
+    "macro_mean": 0.40970330118194137,
+    "target_met": true,
+    "topics_total": 52,
+    "topics_evaluated": 52,
+    "topics_below_target": 31,
+    "reference_documents": 15878,
+    "reference_sha256": "a614e01fe6b13504447a969955493f30b816aefd630884ae2f1951a70f760c54",
+    "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+    "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+    "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+    "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+    "gensim_version": "4.4.0",
+    "per_topic": [
+      {
+        "cluster_id": 0,
+        "terms": [
+          "orang",
+          "sama",
+          "semoga",
+          "kalo",
+          "tau",
+          "danang",
+          "jangan",
+          "diri",
+          "allah",
+          "selalu"
+        ],
+        "score": 0.3778499742803729
+      },
+      {
+        "cluster_id": 1,
+        "terms": [
+          "ibunya",
+          "ibu",
+          "anak",
+          "adik",
+          "keluarga",
+          "sama",
+          "adiknya",
+          "kakaknya",
+          "danang",
+          "ku"
+        ],
+        "score": 0.5547830820725645
+      },
+      {
+        "cluster_id": 2,
+        "terms": [
+          "kartu",
+          "kartu kip",
+          "punya kartu",
+          "kartunya",
+          "kip",
+          "caranya",
+          "tidak punya",
+          "kks",
+          "pip",
+          "ad"
+        ],
+        "score": 0.5561680951538153
+      },
+      {
+        "cluster_id": 3,
+        "terms": [
+          "kuliah",
+          "beasiswa",
+          "kerja",
+          "lpdp",
+          "uang",
+          "sekolah",
+          "anak",
+          "orang",
+          "kampus",
+          "negara"
+        ],
+        "score": 0.5713586257653185
+      },
+      {
+        "cluster_id": 4,
+        "terms": [
+          "daftar",
+          "daftarnya",
+          "dek",
+          "set",
+          "set set",
+          "nanti daftar",
+          "daftar jalur",
+          "masing",
+          "nanti",
+          "cek"
+        ],
+        "score": 0.32117400249421224
+      },
+      {
+        "cluster_id": 5,
+        "terms": [
+          "umur",
+          "gym",
+          "senior",
+          "tua",
+          "orang tua",
+          "usia",
+          "muda",
+          "orang",
+          "olahraga",
+          "otot"
+        ],
+        "score": 0.32671832585230465
+      },
+      {
+        "cluster_id": 6,
+        "terms": [
+          "indonesia",
+          "rakyat indonesia",
+          "rakyat",
+          "negara",
+          "indonesian",
+          "lpdp",
+          "negara indonesia",
+          "tidak",
+          "blacklist",
+          "negeri"
+        ],
+        "score": 0.5733172186417232
+      },
+      {
+        "cluster_id": 7,
+        "terms": [
+          "namanya",
+          "samaan",
+          "nama",
+          "wahhh samaan",
+          "sob namanya",
+          "samaan sob",
+          "samaan namanya",
+          "wahhh",
+          "sama",
+          "sebarkan"
+        ],
+        "score": 0.44832137255855864
+      },
+      {
+        "cluster_id": 8,
+        "terms": [
+          "dokumen",
+          "data",
+          "buku",
+          "apostile",
+          "berkas",
+          "baca",
+          "email",
+          "pdf",
+          "tulis",
+          "foto"
+        ],
+        "score": 0.2364545493388876
+      },
+      {
+        "cluster_id": 9,
+        "terms": [
+          "knows",
+          "sob",
+          "mana",
+          "benarkah",
+          "luring",
+          "beneran",
+          "berita",
+          "dina",
+          "knp",
+          "maksudnya"
+        ],
+        "score": 0.5242013621047282
+      },
+      {
+        "cluster_id": 10,
+        "terms": [
+          "pendaftaran",
+          "revisi",
+          "link",
+          "unk",
+          "step",
+          "sidang",
+          "kartu",
+          "dn",
+          "pendaftaran kip",
+          "desil berdasarkan"
+        ],
+        "score": 0.30563704474232967
+      },
+      {
+        "cluster_id": 11,
+        "terms": [
+          "sorry",
+          "maaf",
+          "minta maaf",
+          "rant",
+          "maaf tanya",
+          "minta",
+          "sorry op",
+          "sorry happens",
+          "experienced",
+          "sblmnya"
+        ],
+        "score": 0.26572726274836256
+      },
+      {
+        "cluster_id": 12,
+        "terms": [
+          "bahasa",
+          "inggris",
+          "bahasa inggris",
+          "dokumen",
+          "rusia",
+          "terjemahan",
+          "asli",
+          "english",
+          "translate",
+          "dokumen asli"
+        ],
+        "score": 0.5421705017637625
+      },
+      {
+        "cluster_id": 13,
+        "terms": [
+          "rumah",
+          "saiful",
+          "rumahnya",
+          "tetangga",
+          "nurul",
+          "pulang",
+          "foto rumah",
+          "tempat",
+          "sarah rama",
+          "rama ilham"
+        ],
+        "score": 0.4956142550793582
+      },
+      {
+        "cluster_id": 14,
+        "terms": [
+          "inggris",
+          "kusut",
+          "inggris kakk",
+          "pake bhs",
+          "hebat kali",
+          "benang kusut",
+          "negara manapun",
+          "sombongnya minta",
+          "biar pinter",
+          "dy hidup"
+        ],
+        "score": 0.1857113232462853
+      },
+      {
+        "cluster_id": 15,
+        "terms": [
+          "video",
+          "rizky",
+          "videonya",
+          "rizky riplay",
+          "riplay",
+          "bikin video",
+          "youtube",
+          "nonton",
+          "bikin",
+          "videonya viral"
+        ],
+        "score": 0.3693420858955131
+      },
+      {
+        "cluster_id": 16,
+        "terms": [
+          "dokter",
+          "psikiater",
+          "psikolog",
+          "adhd",
+          "bpjs",
+          "spesialis",
+          "obat",
+          "kesehatan",
+          "dokter umum",
+          "umum"
+        ],
+        "score": 0.48615415337924944
+      },
+      {
+        "cluster_id": 17,
+        "terms": [
+          "ielts",
+          "toefl",
+          "bahkan menurut",
+          "skor ielts",
+          "toefl itp",
+          "c1",
+          "itp",
+          "toefl ielts",
+          "skor",
+          "hsk"
+        ],
+        "score": 0.4265642168787195
+      },
+      {
+        "cluster_id": 18,
+        "terms": [
+          "jerman",
+          "kuliah jerman",
+          "applicant",
+          "german",
+          "studienkolleg",
+          "students",
+          "relate",
+          "eu lain",
+          "students relate",
+          "indonesian students"
+        ],
+        "score": 0.5912790626069234
+      },
+      {
+        "cluster_id": 19,
+        "terms": [
+          "negara",
+          "indo",
+          "penghianat",
+          "bangsa",
+          "presiden",
+          "prabowo",
+          "menteri",
+          "pemerintah",
+          "amran",
+          "cabut"
+        ],
+        "score": 0.2073603396201571
+      },
+      {
+        "cluster_id": 20,
+        "terms": [
+          "ipdn",
+          "ipi",
+          "stan",
+          "ipdn stan",
+          "uri",
+          "setengah",
+          "rata",
+          "ukt",
+          "masuk ipdn",
+          "upi"
+        ],
+        "score": 0.26053986390299627
+      },
+      {
+        "cluster_id": 21,
+        "terms": [
+          "ibuk",
+          "sama ibuk",
+          "minum",
+          "ko",
+          "nonton sambil",
+          "agak laen",
+          "ru",
+          "bangun tidur",
+          "ngacung",
+          "negoro"
+        ],
+        "score": 0.3095589326506255
+      },
+      {
+        "cluster_id": 22,
+        "terms": [
+          "china",
+          "mandarin",
+          "jepang",
+          "cina",
+          "bahasa",
+          "chinese",
+          "asia",
+          "bhs",
+          "bhs mandarin",
+          "belajar"
+        ],
+        "score": 0.27140715928264547
+      },
+      {
+        "cluster_id": 23,
+        "terms": [
+          "pin",
+          "spmb",
+          "jatim",
+          "spmb jatim",
+          "ambil pin",
+          "ambil",
+          "berkas",
+          "upload",
+          "hsk",
+          "daftar"
+        ],
+        "score": 0.7621611902867848
+      },
+      {
+        "cluster_id": 24,
+        "terms": [
+          "iq",
+          "smart",
+          "manusia sperti",
+          "pangkat",
+          "bermacam2",
+          "catch",
+          "isi hati",
+          "intelijen",
+          "hdup",
+          "siapa suruh"
+        ],
+        "score": 0.29459376151550254
+      },
+      {
+        "cluster_id": 25,
+        "terms": [
+          "air",
+          "data center",
+          "center",
+          "air bersih",
+          "air laut",
+          "salmon",
+          "akibat",
+          "kolam",
+          "water",
+          "laut"
+        ],
+        "score": 0.2505301208150683
+      },
+      {
+        "cluster_id": 26,
+        "terms": [
+          "gua",
+          "batu",
+          "emas",
+          "dikit",
+          "gua kerja",
+          "mah",
+          "ade",
+          "sama",
+          "gravel",
+          "kalo"
+        ],
+        "score": 0.3326592244733981
+      },
+      {
+        "cluster_id": 27,
+        "terms": [
+          "xiaomi",
+          "hp",
+          "kamera",
+          "flagship",
+          "redmi",
+          "zoom",
+          "kameranya",
+          "hyperos",
+          "camera",
+          "bug"
+        ],
+        "score": 0.3516606784542253
+      },
+      {
+        "cluster_id": 28,
+        "terms": [
+          "kek",
+          "kek gini",
+          "kaka",
+          "ibu kek",
+          "gini",
+          "ibu",
+          "keknya",
+          "ibuknya kek",
+          "cerita kek",
+          "kek anj"
+        ],
+        "score": 0.33078084077627534
+      },
+      {
+        "cluster_id": 29,
+        "terms": [
+          "kasian",
+          "kasian kaka",
+          "kaka",
+          "danang kasian",
+          "kka",
+          "kasian danang",
+          "taruhannya",
+          "komennya",
+          "fucking",
+          "kost"
+        ],
+        "score": 0.4057460604858226
+      },
+      {
+        "cluster_id": 30,
+        "terms": [
+          "anjing",
+          "ibunya anjing",
+          "ibu anjing",
+          "kek anjing",
+          "majikan",
+          "menggigit",
+          "ibunya",
+          "ngerusak mental",
+          "peliharaan",
+          "jelekin"
+        ],
+        "score": 0.40344418083711303
+      },
+      {
+        "cluster_id": 31,
+        "terms": [
+          "final",
+          "final sob",
+          "endingnya",
+          "yahhh sayangnya",
+          "yahhh",
+          "kesempatan terakhir",
+          "sayangnya final",
+          "terakhir",
+          "sob",
+          "ending"
+        ],
+        "score": 0.2957570098116033
+      },
+      {
+        "cluster_id": 32,
+        "terms": [
+          "lagu",
+          "lagunya",
+          "pink",
+          "pink floyd",
+          "floyd",
+          "day",
+          "terharu",
+          "nangis",
+          "engineernya",
+          "ane kasih"
+        ],
+        "score": 0.622980652667392
+      },
+      {
+        "cluster_id": 33,
+        "terms": [
+          "istri",
+          "suami",
+          "istrinya",
+          "nikah",
+          "perempuan",
+          "wanita",
+          "menikah",
+          "laki",
+          "cewek",
+          "gender"
+        ],
+        "score": 0.2923765978033993
+      },
+      {
+        "cluster_id": 34,
+        "terms": [
+          "cewek",
+          "ceweknya",
+          "korban",
+          "wkwkwkwkw",
+          "usah kerja",
+          "twist",
+          "plot twist",
+          "ember",
+          "gadis",
+          "lantas"
+        ],
+        "score": 0.26795589122807595
+      },
+      {
+        "cluster_id": 35,
+        "terms": [
+          "mati",
+          "meninggal",
+          "tembak mati",
+          "tembak",
+          "nkri harga",
+          "harga mati",
+          "meninggalkan",
+          "nkri",
+          "harga",
+          "buah jatuh"
+        ],
+        "score": 0.3682701771246434
+      },
+      {
+        "cluster_id": 36,
+        "terms": [
+          "viral",
+          "uin",
+          "buatin viral",
+          "barita viral",
+          "barita",
+          "virus",
+          "azab",
+          "mahasiswi",
+          "buatin",
+          "kasus"
+        ],
+        "score": 0.35636508755254426
+      },
+      {
+        "cluster_id": 37,
+        "terms": [
+          "sepeda",
+          "gravel",
+          "mtb",
+          "bike",
+          "fork",
+          "rigid",
+          "sepeda gravel",
+          "ganti",
+          "motor",
+          "ban"
+        ],
+        "score": 0.4597952118607358
+      },
+      {
+        "cluster_id": 38,
+        "terms": [
+          "sabun",
+          "rambut",
+          "toilet",
+          "hair",
+          "pake sabun",
+          "pake",
+          "mandi",
+          "soap",
+          "tonic",
+          "minoxidil"
+        ],
+        "score": 0.2522595013322689
+      },
+      {
+        "cluster_id": 39,
+        "terms": [
+          "swasta",
+          "kapitalisme",
+          "private",
+          "kapitalis",
+          "capitalism",
+          "pasar",
+          "ekonomi",
+          "varian",
+          "neoliberal",
+          "negara kuat"
+        ],
+        "score": 0.2991279541332764
+      },
+      {
+        "cluster_id": 40,
+        "terms": [
+          "gas",
+          "listrik",
+          "spbu",
+          "bensin",
+          "ketemu spbu",
+          "ac",
+          "ngontrak",
+          "rumah",
+          "dapat uang",
+          "wa"
+        ],
+        "score": 0.24977758389504764
+      },
+      {
+        "cluster_id": 41,
+        "terms": [
+          "palsu",
+          "pidana",
+          "pidana penjara",
+          "penjara lama",
+          "penjara",
+          "hukum",
+          "nama palsu",
+          "lama empat",
+          "rangkaian",
+          "piutang"
+        ],
+        "score": 0.9943253812143074
+      },
+      {
+        "cluster_id": 42,
+        "terms": [
+          "sidang",
+          "yudisium",
+          "sidang skripsi",
+          "skripsi",
+          "wisuda",
+          "syarat",
+          "berdasarkan",
+          "lulus",
+          "lulus berdasarkan",
+          "lulus sidang"
+        ],
+        "score": 0.6091571967702584
+      },
+      {
+        "cluster_id": 43,
+        "terms": [
+          "romania",
+          "bucharest",
+          "university bucharest",
+          "sampai romania",
+          "university",
+          "accommodation",
+          "accommodation letter",
+          "perlu dikeluarkan",
+          "romania langsung",
+          "rumania"
+        ],
+        "score": 0.6772464281777703
+      },
+      {
+        "cluster_id": 44,
+        "terms": [
+          "arya",
+          "istrinya",
+          "istri arya",
+          "arya istrinya",
+          "enteng arya",
+          "bapaknya arya",
+          "bapaknya",
+          "kewarga",
+          "bt",
+          "ds"
+        ],
+        "score": 0.3535822412809246
+      },
+      {
+        "cluster_id": 45,
+        "terms": [
+          "bunga",
+          "bunganya",
+          "beserta",
+          "beserta bunganya",
+          "berikut",
+          "berbunga",
+          "berikut bunganya",
+          "beserta bunga",
+          "buah kesombongan",
+          "segera kembalikan"
+        ],
+        "score": 0.2440826938791411
+      },
+      {
+        "cluster_id": 46,
+        "terms": [
+          "blacklist",
+          "black",
+          "black list",
+          "list",
+          "blacklist seluruh",
+          "sekalian",
+          "nkri",
+          "seluruh dunia",
+          "turunan",
+          "mampus"
+        ],
+        "score": 0.2825140857435078
+      },
+      {
+        "cluster_id": 47,
+        "terms": [
+          "kacang lupa",
+          "kacang",
+          "lupa",
+          "kulit",
+          "lupa kulitnya",
+          "kulitnya",
+          "lupa kulit",
+          "forgot",
+          "ingredients",
+          "kynya"
+        ],
+        "score": 0.46171171855168824
+      },
+      {
+        "cluster_id": 48,
+        "terms": [
+          "gay",
+          "lgbt",
+          "queer",
+          "anti lgbt",
+          "anti",
+          "lgbtq",
+          "lingkungan organisasi",
+          "gaydar",
+          "gerakan",
+          "diam"
+        ],
+        "score": 0.3353653393775871
+      },
+      {
+        "cluster_id": 49,
+        "terms": [
+          "nuklir",
+          "teknik nuklir",
+          "teknik",
+          "nuklir ugm",
+          "sertifikasi petugas",
+          "proteksi radiasi",
+          "radiasi",
+          "nuclear",
+          "petugas proteksi",
+          "ugm"
+        ],
+        "score": 0.8028455924216636
+      },
+      {
+        "cluster_id": 50,
+        "terms": [
+          "international",
+          "ui",
+          "acceptance rate",
+          "average",
+          "acceptance",
+          "students",
+          "rate",
+          "student",
+          "classes",
+          "domestic"
+        ],
+        "score": 0.35744081069265754
+      },
+      {
+        "cluster_id": 51,
+        "terms": [
+          "vaksin",
+          "mrna",
+          "vaccine",
+          "dengue",
+          "immune",
+          "response",
+          "imun",
+          "immune response",
+          "protein",
+          "respons"
+        ],
+        "score": 0.38264563823884845
+      }
+    ],
+    "source_run": "outputs/nlp_20261028_sbert_dbscan_01",
+    "source_manifest_sha256": "799d5bfa1ce6fbe18371d4012f8dae0a69a31d3374116ad69ad1dec618c466da",
+    "source_sha256": "939f5869ffdfc2ca14c98e8f39cffa7e15292fdb5ea7faaf27c043670fea56e2"
+  },
+  "evaluation_scope": "Internal comparison on this corpus; no labeled semantic ground truth or universal-best claim",
+  "stability_scope": "DBSCAN partitions on two seeded UMAP projections; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
+  "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> c-TF-IDF topic descriptions",
+  "reduction": {
+    "algorithm": "UMAP",
+    "parameters": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0,
+      "metric": "cosine",
+      "n_jobs": 1
+    },
+    "seeds": [
+      42,
+      43
+    ],
+    "cache_hit": true,
+    "clustering_metric": "euclidean",
+    "original_dimensions": 384
+  },
+  "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
+  "synthetic": false
+}

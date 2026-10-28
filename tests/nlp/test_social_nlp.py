@@ -6,6 +6,7 @@ import tempfile
 import unittest
 from datetime import date, datetime
 from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 from openpyxl import Workbook
@@ -104,15 +105,28 @@ class NLPTests(unittest.TestCase):
         fixture(cls.input, duplicate=True)
         cls.config = {
             "cache_dir": str(cls.root / "cache"),
-            "hdbscan": {"min_cluster_sizes": [5], "min_samples": [2]},
-            "kmeans": {"cluster_counts": [3], "n_init": 3},
-            "tfidf_baseline_clusters": 3,
+            "dbscan": {"eps": [0.05, 0.1, 0.2], "min_samples": [3]},
             "umap": {"n_neighbors": 4, "n_components": 2},
             "evaluation": {"sample_size": 100, "max_largest_cluster": 0.6},
         }
-        cls.pipeline = SocialNLPClusterer(cls.config, encoder=encoder).fit_excel(
-            cls.input
-        )
+
+        def known_projection(instance):
+            # Isolate DBSCAN from UMAP variability for the known-group tests.
+            # A separate test exercises real UMAP and its projection cache.
+            features = instance.embeddings[:, :2].copy()
+            instance.reduced_embeddings = [features, features.copy()]
+            instance.reduction_info = {
+                "algorithm": "UMAP",
+                "synthetic_fixture": True,
+                "parameters": {"n_components": 2},
+                "seeds": [42, 43],
+            }
+            return instance.reduced_embeddings
+
+        with patch.object(SocialNLPClusterer, "_reduce_embeddings", known_projection):
+            cls.pipeline = SocialNLPClusterer(cls.config, encoder=encoder).fit_excel(
+                cls.input
+            )
         cls.output = cls.pipeline.save(cls.root / "result")
 
     @classmethod
@@ -163,6 +177,135 @@ class NLPTests(unittest.TestCase):
             set(p.occurrences["sentence_id"]) <= set(p.sentences["sentence_id"])
         )
         self.assertEqual(p.input_sha256, file_hash(self.input))
+        self.assertEqual(p.selected["parameters"]["algorithm"], "DBSCAN")
+        self.assertEqual(p.selected["parameters"]["metric"], "euclidean")
+        self.assertTrue(
+            all(
+                row["candidate"].startswith("sbert_umap_dbscan_")
+                for row in p.comparisons
+            )
+        )
+        self.assertTrue(p.sentences["membership_strength"].isna().all())
+        self.assertEqual(p.sentences["dbscan_core_point"].dtype, bool)
+        self.assertGreaterEqual(p.selected["coherence_cv"], 0.4)
+        self.assertEqual(p.coherence["topics_evaluated"], 3)
+        self.assertEqual(p.coherence["reference_documents"], 36)
+
+    def test_cv_distinguishes_coherent_terms_and_rejects_missing_topics(self):
+        import pandas as pd
+
+        p = SocialNLPClusterer()
+        p.sentences = pd.DataFrame(
+            {
+                "embedding_text": ["apple orange banana orchard fruit"] * 20
+                + ["engine motor wheel vehicle road"] * 20
+            }
+        )
+        coherent = p.score_coherence(
+            {0: ["apple", "orange", "banana"], 1: ["engine", "motor", "wheel"]}
+        )
+        mixed = p.score_coherence(
+            {0: ["apple", "engine", "banana"], 1: ["engine", "orange", "wheel"]}
+        )
+        self.assertGreater(coherent["macro_mean"], mixed["macro_mean"] + 0.2)
+        self.assertEqual(coherent["reference_sha256"], mixed["reference_sha256"])
+        invalid = p.score_coherence(
+            {0: ["apple", "orange"], 1: ["not_in_reference", "engine"]}
+        )
+        self.assertIsNone(invalid["macro_mean"])
+        self.assertFalse(invalid["target_met"])
+        self.assertEqual(invalid["topics_total"], 2)
+        self.assertEqual(invalid["topics_evaluated"], 1)
+
+    def test_ctfidf_never_pads_short_topics_with_zero_weight_terms(self):
+        import pandas as pd
+
+        p = SocialNLPClusterer()
+        p.sentences = pd.DataFrame(
+            {"embedding_text": ["orchard", "orchard", "engine", "engine"]}
+        )
+        self.assertEqual(p._ctfidf_terms([0, 0, 1, 1]), {0: ["orchard"], 1: ["engine"]})
+
+    def test_coherence_gate_rejects_below_target_and_blocks_publication(self):
+        p = SocialNLPClusterer(self.config, encoder=encoder).prepare_excel(self.input)
+        p.encode()
+
+        def projection():
+            features = p.embeddings[:, :2]
+            p.reduction_info = {"parameters": {}, "seeds": [42, 43]}
+            return [features, features.copy()]
+
+        with (
+            patch.object(p, "_reduce_embeddings", side_effect=projection),
+            patch.object(
+                p,
+                "score_coherence",
+                return_value={
+                    "macro_mean": 0.39,
+                    "topics_evaluated": 3,
+                    "target_met": False,
+                },
+            ),
+            self.assertRaisesRegex(ValueError, "No candidate"),
+        ):
+            p.compare()
+        self.assertTrue(all(row["geometry_eligible"] for row in p.comparisons))
+        self.assertTrue(all(not row["eligible"] for row in p.comparisons))
+        with (
+            patch.object(self.pipeline, "coherence", {"target_met": False}),
+            self.assertRaisesRegex(ValueError, "coherence threshold"),
+        ):
+            self.pipeline.save(self.root / "rejected")
+        self.assertFalse((self.root / "rejected").exists())
+
+    def test_saved_run_coherence_reproduces_the_published_score(self):
+        result = SocialNLPClusterer.evaluate_run_coherence(self.output)
+        self.assertAlmostEqual(
+            result["macro_mean"], self.pipeline.coherence["macro_mean"]
+        )
+        self.assertEqual(
+            result["reference_sha256"], self.pipeline.coherence["reference_sha256"]
+        )
+        self.assertEqual(result["topn"], 10)
+        self.assertEqual(result["window_size"], 110)
+        self.assertEqual(result["source_sha256"], file_hash(self.input))
+        result["reference_sha256"] = "different_reference"
+        with (
+            patch.object(self.pipeline, "coherence_baseline", result, create=True),
+            self.assertRaisesRegex(ValueError, "reference corpus differs"),
+        ):
+            self.pipeline.save(self.root / "different_corpus")
+
+    def test_coherence_search_evaluates_all_near_ties_and_skips_lower_scores(self):
+        p = SocialNLPClusterer(self.config, encoder=encoder).prepare_excel(self.input)
+        p.encode()
+
+        def projection():
+            features = p.embeddings[:, :2]
+            p.reduction_info = {"parameters": {}, "seeds": [42, 43]}
+            return [features, features.copy()]
+
+        original = p._evaluate
+        composite_scores = iter([0.3, 0.299, 0.28])
+
+        def evaluate(*args):
+            result = original(*args)
+            result["selection_score"] = next(composite_scores)
+            return result
+
+        with (
+            patch.object(p, "_reduce_embeddings", side_effect=projection),
+            patch.object(p, "_evaluate", side_effect=evaluate),
+            patch.object(p, "score_coherence", wraps=p.score_coherence) as scoring,
+        ):
+            p.compare()
+        self.assertEqual(scoring.call_count, 2)
+        self.assertTrue(all(row["eligible"] for row in p.comparisons[:2]))
+        self.assertIsNone(p.comparisons[2]["coherence_cv"])
+        self.assertEqual(
+            p.comparisons[2]["coherence_status"],
+            "not_evaluated_below_passing_score_band",
+        )
 
     def test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability(self):
         first = np.array([-1] * 20)
@@ -172,6 +315,27 @@ class NLPTests(unittest.TestCase):
         self.assertEqual(SocialNLPClusterer.stability(a, b), 1)
         b[:5] = -1
         self.assertLess(SocialNLPClusterer.stability(a, b), 1)
+
+    def test_real_umap_projections_and_cache_are_validated(self):
+        with tempfile.TemporaryDirectory() as directory:
+            p = SocialNLPClusterer(
+                {"cache_dir": directory, "umap": {"n_neighbors": 4, "n_components": 2}}
+            )
+            p.embeddings = self.pipeline.embeddings.copy()
+            projections = p._reduce_embeddings()
+            self.assertEqual([x.shape for x in projections], [(36, 2), (36, 2)])
+            self.assertTrue(all(np.isfinite(x).all() for x in projections))
+            self.assertFalse(p.reduction_info["cache_hit"])
+            self.assertEqual(p.reduction_info["seeds"], [42, 43])
+            with patch(
+                "umap.UMAP",
+                side_effect=AssertionError("Projection cache should be used"),
+            ):
+                repeated = p._reduce_embeddings()
+            self.assertTrue(p.reduction_info["cache_hit"])
+            self.assertTrue(
+                all(np.array_equal(a, b) for a, b in zip(projections, repeated))
+            )
 
     def test_close_scores_prefer_separation_without_hardcoding_algorithm(self):
         candidates = [
@@ -218,6 +382,10 @@ class NLPTests(unittest.TestCase):
         self.assertTrue(data["summary"]["synthetic"])
         self.assertTrue(np.allclose(data["embeddings"], self.pipeline.embeddings))
         self.assertEqual(data["summary"]["source_sha256"], file_hash(self.input))
+        self.assertEqual(
+            len(data["social_data"]), data["summary"]["preparation"]["input_rows"]
+        )
+        self.assertTrue(REQUIRED_COLUMNS <= set(data["social_data"].columns))
         with tempfile.TemporaryDirectory() as directory:
             copied = Path(directory) / "copy"
             shutil.copytree(self.output, copied)
@@ -242,12 +410,74 @@ class NLPTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "truncated"):
                 SocialNLPClusterer(self.config, encoder=encoder).prepare_excel(path)
 
+    def test_legacy_v1_artifact_and_explanations_remain_readable(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copied = Path(directory) / "legacy"
+            shutil.copytree(self.output, copied)
+            (copied / "social_data.parquet").unlink()
+            (copied / "umap_embeddings.npz").unlink()
+            summary = json.loads((copied / "summary.json").read_text())
+            summary["schema_version"] = "beesense-sentence-clusters:1"
+            summary["config"].pop("dbscan")
+            summary["config"]["umap"] = {"n_neighbors": 4, "n_components": 2}
+            summary["config"]["hdbscan"] = {
+                "min_cluster_sizes": [5],
+                "min_samples": [2],
+            }
+            (copied / "summary.json").write_text(json.dumps(summary))
+            manifest = json.loads((copied / "manifest.json").read_text())
+            manifest["schema_version"] = "beesense-sentence-clusters:1"
+            manifest["files_sha256"].pop("social_data.parquet")
+            manifest["files_sha256"].pop("umap_embeddings.npz")
+            manifest["files_sha256"]["summary.json"] = file_hash(
+                copied / "summary.json"
+            )
+            (copied / "manifest.json").write_text(json.dumps(manifest))
+            with patch.object(
+                SocialNLPClusterer,
+                "encode",
+                side_effect=AssertionError("No retraining"),
+            ):
+                data = SocialNLPClusterer.load_run(copied)
+                explained = SocialNLPClusterer.explain_artifacts(data)
+            self.assertEqual(len(explained["topics"]), 3)
+
+    def test_sparse_dbscan_preserves_zero_distance_neighbors(self):
+        import pandas as pd
+
+        p = SocialNLPClusterer({"dbscan": {"eps": [0.01], "min_samples": [3]}})
+        p.embeddings = np.repeat(np.eye(3, dtype=np.float32), 4, axis=0)
+        p.sentences = pd.DataFrame({"sentence_id": [f"s{i}" for i in range(12)]})
+        p.occurrences = p.sentences.copy()
+        p.window_counts = [1] * 12
+        from sklearn.cluster import DBSCAN
+
+        graph = p._filter_radius(p._radius_graph(), 0.01)
+        model = DBSCAN(eps=0.01, min_samples=3, metric="precomputed").fit(graph)
+        self.assertEqual(len(set(model.labels_)), 3)
+        self.assertTrue((model.labels_ >= 0).all())
+        self.assertEqual(len(model.core_sample_indices_), 12)
+
+    def test_dbscan_memory_guard_and_no_eligible_candidate_are_explicit(self):
+        p = SocialNLPClusterer({"dbscan": {"max_neighbor_edges": 1}})
+        p.embeddings = np.repeat(np.eye(3, dtype=np.float32), 4, axis=0)
+        with self.assertRaisesRegex(ValueError, "max_neighbor_edges"):
+            p._radius_graph()
+        with self.assertRaisesRegex(ValueError, "No candidate"):
+            SocialNLPClusterer.select_candidate([{"eligible": False}], 0.005)
+
     def test_bad_input_and_configuration_are_rejected(self):
         for config in [
             {"unknown": 1},
             {"graph": {"max_nodes": 20000}},
             {"model": {"revision": "main"}},
-            {"model": {"onnx_file": "../model.onnx"}},
+            {"model": {"backend": "unsupported"}},
+            {"dbscan": {"eps": [float("nan")]}},
+            {"dbscan": {"eps": []}},
+            {"dbscan": {"min_samples": [True]}},
+            {"coherence": {"metric": "u_mass"}},
+            {"coherence": {"min_score": float("nan")}},
+            {"coherence": {"topn": 1}},
             {"include_kinds": ["user"]},
         ]:
             with self.subTest(config=config), self.assertRaises(ValueError):

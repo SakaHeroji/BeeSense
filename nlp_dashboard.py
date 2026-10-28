@@ -1298,6 +1298,14 @@ class SocialNLPStreamlitApp:
             topic = next(t for t in data["topics"] if t["cluster_id"] == selected)
             st.header(f"T{selected + 1:02d} · {topic['label']}")
             st.caption("Istilah pembeda: " + ", ".join(topic["terms"][:8]))
+            if topic.get("coherence_cv") is not None:
+                st.caption(
+                    "Coherence c_v topik ini: "
+                    + format_decimal(
+                        topic["coherence_cv"], format="0.0000", locale="id_ID"
+                    )
+                    + " · Skor korpus penuh; filter tidak menghitung ulang."
+                )
         st.write(
             f"{number(len(subset))} kemunculan dari {number(subset.sentence_id.nunique())} kalimat unik, dalam {number(subset.source_row.nunique())} komentar/balasan."
         )
@@ -1416,7 +1424,8 @@ class SocialNLPStreamlitApp:
             "Hasil ini membantu eksplorasi percakapan. Label topik dibuat otomatis; belum ada label acuan untuk mengukur akurasi semantik."
         )
         selected = summary["selected"]
-        cols = st.columns(3)
+        coherence = summary.get("coherence")
+        cols = st.columns(4 if coherence else 3)
         for col, label, value in zip(
             cols,
             ["Cakupan kalimat unik", "Pemisahan cosine", "Kestabilan ARI"],
@@ -1431,9 +1440,64 @@ class SocialNLPStreamlitApp:
             ],
         ):
             col.metric(label, value)
+        if coherence:
+            cols[3].metric(
+                "Coherence c_v",
+                format_decimal(
+                    coherence["macro_mean"], format="0.0000", locale="id_ID"
+                ),
+            )
+            target = format_decimal(coherence["min_score"], locale="id_ID")
+            status = "tercapai" if coherence["target_met"] else "belum tercapai"
+            st.write(
+                f"Target rata-rata c_v ≥ {target} **{status}**. "
+                f"{coherence['topics_below_target']} dari {coherence['topics_total']} topik "
+                "berada di bawah target secara individual. Skor ini mengukur keterkaitan istilah, bukan akurasi label."
+            )
+            st.caption(
+                f"Protokol tetap: maksimum {coherence['topn']} istilah c-TF-IDF per topik, "
+                f"window {coherence['window_size']} token unigram/bigram, "
+                f"{number(coherence['reference_documents'])} kalimat unik termasuk noise; "
+                "rata-rata semua topik tanpa pembobotan. Evaluasi memakai korpus training."
+            )
+            baseline = summary.get("coherence_baseline")
+            if baseline:
+                st.write(
+                    "Sebelum retrain: **"
+                    + format_decimal(
+                        baseline["macro_mean"], format="0.0000", locale="id_ID"
+                    )
+                    + "** dengan protokol dan korpus referensi yang sama."
+                )
+            with st.expander("Coherence setiap topik"):
+                st.dataframe(
+                    pd.DataFrame(
+                        [
+                            {
+                                "Topik": topic["label"],
+                                "c_v": topic.get("coherence_cv"),
+                                "Kalimat unik": topic["unique_sentences"],
+                            }
+                            for topic in data["topics"]
+                        ]
+                    ),
+                    hide_index=True,
+                    width="stretch",
+                )
         st.write(
             f"Metode terpilih: **{selected['candidate']}**; {number(selected['clusters'])} topik pada korpus penuh."
         )
+        parameters = selected.get("parameters", {})
+        is_dbscan = parameters.get("algorithm") == "DBSCAN"
+        if is_dbscan:
+            st.write(
+                f"**SBERT multilingual → UMAP → DBSCAN → c-TF-IDF** · Jarak Euclidean pada UMAP · eps {parameters['eps']:g} · "
+                f"min_samples {parameters['min_samples']}. Kalimat yang tidak memenuhi kepadatan tetap menjadi noise."
+            )
+            if selected["silhouette_cosine"] < 0:
+                st.warning(
+                    "Silhouette pada embedding SBERT asli bernilai negatif: beberapa kelompok masih tumpang tindih secara semantik. Cakupan tinggi tidak berarti label sudah akurat; periksa kalimat sumber dan validasi topik secara manual."
+                )
         comparisons = pd.DataFrame(data["comparison"]).sort_values(
             "selection_score", ascending=False, na_position="last"
         )
@@ -1446,6 +1510,12 @@ class SocialNLPStreamlitApp:
                     "noise_fraction",
                     "silhouette_cosine",
                     "stability_ari",
+                    *(["coherence_cv"] if "coherence_cv" in comparisons else []),
+                    *(
+                        ["coherence_status"]
+                        if "coherence_status" in comparisons
+                        else []
+                    ),
                     "selection_score",
                     "eligible",
                 ]
@@ -1461,18 +1531,26 @@ class SocialNLPStreamlitApp:
                 ),
                 "silhouette_cosine": "Silhouette cosine",
                 "stability_ari": "Stabilitas ARI",
+                "coherence_cv": "Coherence c_v",
+                "coherence_status": "Status evaluasi c_v",
                 "selection_score": "Skor",
                 "eligible": "Memenuhi syarat",
             },
         )
         st.caption(
-            "Silhouette seluruh kandidat diukur pada embedding asli. ARI membandingkan dua seed; cakupan tetap dilaporkan agar noise tidak tersembunyi."
+            "Silhouette diukur pada embedding SBERT asli. ARI membandingkan hasil DBSCAN dari dua seed UMAP; cakupan dan noise tetap dilaporkan. DBSCAN tidak menghasilkan probabilitas keanggotaan."
+            if is_dbscan
+            else "Silhouette seluruh kandidat diukur pada embedding asli. ARI membandingkan dua seed; cakupan tetap dilaporkan agar noise tidak tersembunyi."
         )
         policy = summary.get("selection_policy", {})
         if policy:
             st.write(
-                f"Dalam toleransi skor {format_decimal(policy['score_tolerance'], locale='id_ID')}, pemilihan mengutamakan pemisahan cosine yang lebih tinggi. KMeans dapat memiliki skor gabungan sedikit lebih tinggi. Toleransi ini heuristik, bukan uji signifikansi."
+                f"Dalam toleransi skor {format_decimal(policy['score_tolerance'], locale='id_ID')}, pemilihan mengutamakan pemisahan cosine yang lebih tinggi, lalu kestabilan dan cakupan. Toleransi ini heuristik, bukan uji signifikansi."
             )
+            if policy.get("coherence_search"):
+                st.caption(
+                    "c_v dihitung mulai dari skor komposit tertinggi. Semua kandidat dalam toleransi skor terbaik yang lolos c_v diperiksa; kandidat di bawah rentang itu ditandai belum dievaluasi, bukan gagal coherence."
+                )
         with st.expander("Aturan evaluasi & metadata model"):
             st.code(summary["selection_rule"], language=None)
             st.json(
@@ -1484,6 +1562,8 @@ class SocialNLPStreamlitApp:
                 },
                 expanded=False,
             )
+            if coherence:
+                st.json(coherence, expanded=False)
         st.divider()
         st.header("Apa yang tercakup dalam snapshot?")
         prep = summary["preparation"]
@@ -1499,7 +1579,7 @@ class SocialNLPStreamlitApp:
         with st.expander("Lihat potongan yang tidak masuk clustering"):
             st.dataframe(data["skipped"].head(1000), hide_index=True, width="stretch")
         st.markdown(
-            "[Model multilingual resmi](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) · [HDBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.HDBSCAN.html) · [Pipeline topik](https://maartengr.github.io/BERTopic/algorithm/algorithm.html)"
+            "[Model SBERT multilingual](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2) · [SBERT](https://sbert.net/) · [DBSCAN](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html)"
         )
 
     def render(self):
@@ -1529,6 +1609,22 @@ class SocialNLPStreamlitApp:
                 + str(error)
             )
             return
+        if (
+            data["summary"]["selected"].get("parameters", {}).get("algorithm")
+            == "DBSCAN"
+        ):
+            st.caption(
+                "Topik dibentuk dengan SBERT multilingual → UMAP → DBSCAN; label memakai c-TF-IDF."
+            )
+        coherence = data["summary"].get("coherence")
+        if coherence:
+            st.caption(
+                "Coherence c_v korpus penuh: "
+                + format_decimal(
+                    coherence["macro_mean"], format="0.0000", locale="id_ID"
+                )
+                + " · Rincian evaluasi tersedia pada Metode & data."
+            )
         frame = self._sidebar(data["occurrences"])
         if frame.empty:
             st.info(

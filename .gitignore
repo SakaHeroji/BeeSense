@@ -45,18 +45,58 @@ outputs/nlp_20261028_02/*
 !outputs/nlp_20261028_02/embeddings.npy
 !outputs/nlp_20261028_02/centroids.npy
 
-# Publish the current project map and curated Obsidian notes, not caches/history.
+# Native SBERT + UMAP + DBSCAN retraining; retain the previous snapshot.
+!outputs/nlp_20261028_sbert_dbscan_01/
+outputs/nlp_20261028_sbert_dbscan_01/*
+!outputs/nlp_20261028_sbert_dbscan_01/manifest.json
+!outputs/nlp_20261028_sbert_dbscan_01/summary.json
+!outputs/nlp_20261028_sbert_dbscan_01/topics.json
+!outputs/nlp_20261028_sbert_dbscan_01/graph.json
+!outputs/nlp_20261028_sbert_dbscan_01/comparison.json
+!outputs/nlp_20261028_sbert_dbscan_01/social_data.parquet
+!outputs/nlp_20261028_sbert_dbscan_01/sentences.parquet
+!outputs/nlp_20261028_sbert_dbscan_01/occurrences.parquet
+!outputs/nlp_20261028_sbert_dbscan_01/skipped.parquet
+!outputs/nlp_20261028_sbert_dbscan_01/embeddings.npy
+!outputs/nlp_20261028_sbert_dbscan_01/centroids.npy
+!outputs/nlp_20261028_sbert_dbscan_01/umap_embeddings.npz
+
+# Coherence-evaluated retraining, preserving both historical snapshots.
+!outputs/nlp_20261028_coherence_01/
+outputs/nlp_20261028_coherence_01/*
+!outputs/nlp_20261028_coherence_01/manifest.json
+!outputs/nlp_20261028_coherence_01/summary.json
+!outputs/nlp_20261028_coherence_01/topics.json
+!outputs/nlp_20261028_coherence_01/graph.json
+!outputs/nlp_20261028_coherence_01/comparison.json
+!outputs/nlp_20261028_coherence_01/social_data.parquet
+!outputs/nlp_20261028_coherence_01/sentences.parquet
+!outputs/nlp_20261028_coherence_01/occurrences.parquet
+!outputs/nlp_20261028_coherence_01/skipped.parquet
+!outputs/nlp_20261028_coherence_01/embeddings.npy
+!outputs/nlp_20261028_coherence_01/centroids.npy
+!outputs/nlp_20261028_coherence_01/umap_embeddings.npz
+
+# Publish the project map, audit trail and complete Obsidian vault.
 **/.graphify/
 Reddit/graphify-out/
 graphify-out/*
 !graphify-out/graph.json
 !graphify-out/graph.html
 !graphify-out/GRAPH_REPORT.md
+!graphify-out/manifest.json
+!graphify-out/.graphify_labels.json
+!graphify-out/.graphify_raw_diagnostics.json
+!graphify-out/cost.json
+!graphify-out/memory/
+!graphify-out/reflections/
 !graphify-out/obsidian/
 graphify-out/obsidian/*
 !graphify-out/obsidian/HOME.md
 !graphify-out/obsidian/Arsitektur BeeSense.md
+!graphify-out/obsidian/Crawler Selenium.md
 !graphify-out/obsidian/Dataset Dashboard.md
 !graphify-out/obsidian/Menjalankan BeeSense.md
 !graphify-out/obsidian/graph.canvas
 !graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+!graphify-out/obsidian/graph/

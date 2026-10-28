@@ -1,28 +1,53 @@
 {
   "input_file": "outputs/social_20261028_01/social_data.xlsx",
-  "output_dir": "outputs/nlp_20261028_02",
+  "output_dir": "outputs/nlp_20261028_coherence_01",
   "cache_dir": ".cache/social_nlp",
   "seed": 42,
-  "include_kinds": ["comment", "reply"],
+  "include_kinds": [
+    "comment",
+    "reply"
+  ],
   "min_words": 2,
   "min_characters": 8,
   "max_segment_characters": 1200,
   "max_unique_sentences": 100000,
   "model": {
+    "backend": "sentence-transformers",
     "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
-    "onnx_file": "onnx/model_quint8_avx2.onnx",
     "max_tokens": 128,
     "stride": 24,
     "batch_size": 32,
     "threads": 4
   },
-  "umap": {"n_neighbors": 15, "n_components": 10, "min_dist": 0.0},
-  "hdbscan": {"min_cluster_sizes": [15, 30, 60], "min_samples": [5, 10]},
-  "kmeans": {"cluster_counts": [40, 80, 120], "n_init": 10},
-  "tfidf_baseline_clusters": 80,
-  "evaluation": {"sample_size": 1800, "min_coverage": 0.4, "max_largest_cluster": 0.5, "score_tolerance": 0.005},
-  "graph": {"max_nodes": 180, "neighbors": 3, "min_similarity": 0.55},
+  "dbscan": {
+    "eps": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6
+    ],
+    "min_samples": [
+      3,
+      5,
+      10
+    ],
+    "neighborhood_batch_size": 256,
+    "max_neighbor_edges": 8000000
+  },
+  "evaluation": {
+    "sample_size": 1800,
+    "min_coverage": 0.4,
+    "max_largest_cluster": 0.5,
+    "score_tolerance": 0.005
+  },
+  "graph": {
+    "max_nodes": 180,
+    "neighbors": 3,
+    "min_similarity": 0.55
+  },
   "explanation": {
     "date_basis": "post_date",
     "include_estimated_dates": true,
@@ -40,5 +65,16 @@
     "min_term_comments": 5,
     "max_evidence": 3,
     "mmr_lambda": 0.75
+  },
+  "umap": {
+    "n_neighbors": 15,
+    "n_components": 10,
+    "min_dist": 0.0
+  },
+  "coherence": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4
   }
 }

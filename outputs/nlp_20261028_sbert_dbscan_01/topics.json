@@ -1,0 +1,1659 @@
+[
+  {
+    "cluster_id": 0,
+    "label": "orang / sama / semoga",
+    "terms": [
+      "orang",
+      "sama",
+      "semoga",
+      "kalo",
+      "tau",
+      "danang",
+      "jangan",
+      "diri",
+      "allah",
+      "selalu",
+      "semangat",
+      "cerita"
+    ],
+    "unique_sentences": 5694,
+    "occurrences": 5823,
+    "platform_counts": {
+      "youtube": 3095,
+      "reddit": 2728
+    },
+    "mean_centroid_similarity": 0.54120934009552,
+    "representative_ids": [
+      "2c53f7eb750172d70c667860",
+      "512aa6503afe38f7ebfad6f9",
+      "98a337295099c4d59d13d54e",
+      "71f792795363c39783367239",
+      "e97d14b26e4ab026b8545e21"
+    ]
+  },
+  {
+    "cluster_id": 1,
+    "label": "ibunya / ibu / anak",
+    "terms": [
+      "ibunya",
+      "ibu",
+      "anak",
+      "adik",
+      "keluarga",
+      "sama",
+      "adiknya",
+      "kakaknya",
+      "danang",
+      "ku",
+      "dina",
+      "hamil"
+    ],
+    "unique_sentences": 943,
+    "occurrences": 958,
+    "platform_counts": {
+      "youtube": 794,
+      "reddit": 164
+    },
+    "mean_centroid_similarity": 0.6567304134368896,
+    "representative_ids": [
+      "3eb5526b67421785b3946d24",
+      "a8c751df9aa5cdf837c0572c",
+      "3b7b8b0af0e4e2f41494218c",
+      "06b0897966c71babcf5b63d4",
+      "aa509e40b95a4af32acb7e45"
+    ]
+  },
+  {
+    "cluster_id": 2,
+    "label": "kartu / kartunya / kip",
+    "terms": [
+      "kartu",
+      "kartu kip",
+      "punya kartu",
+      "kartunya",
+      "kip",
+      "caranya",
+      "tidak punya",
+      "kks",
+      "pip",
+      "ad",
+      "punya",
+      "klu"
+    ],
+    "unique_sentences": 12,
+    "occurrences": 12,
+    "platform_counts": {
+      "youtube": 12
+    },
+    "mean_centroid_similarity": 0.8139384388923645,
+    "representative_ids": [
+      "c324b2e1b2aa8b95b37747b1",
+      "8be0834b57f3c159dae23e30",
+      "35f39a71e1c13db8a7fccee7",
+      "c90e491a2fcd74cb18672489",
+      "1ce1988915a015dbfb364177"
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "label": "kuliah / beasiswa / kerja",
+    "terms": [
+      "kuliah",
+      "beasiswa",
+      "kerja",
+      "lpdp",
+      "uang",
+      "sekolah",
+      "anak",
+      "orang",
+      "kampus",
+      "negara",
+      "biaya",
+      "dapat"
+    ],
+    "unique_sentences": 4789,
+    "occurrences": 4835,
+    "platform_counts": {
+      "reddit": 2668,
+      "youtube": 2167
+    },
+    "mean_centroid_similarity": 0.4676971733570099,
+    "representative_ids": [
+      "6d16d287de2429e6913118b5",
+      "a98aff1e0b85f149f95ae926",
+      "e9409fffafb0198bbb9ddce6",
+      "5061470b565debee601aacd3",
+      "a219a959f6090c092b7781b9"
+    ]
+  },
+  {
+    "cluster_id": 4,
+    "label": "daftar / daftarnya / dek",
+    "terms": [
+      "daftar",
+      "daftarnya",
+      "dek",
+      "set",
+      "set set",
+      "nanti daftar",
+      "daftar jalur",
+      "masing",
+      "nanti",
+      "cek",
+      "kira",
+      "daftar sekarang"
+    ],
+    "unique_sentences": 35,
+    "occurrences": 35,
+    "platform_counts": {
+      "youtube": 31,
+      "reddit": 4
+    },
+    "mean_centroid_similarity": 0.7706303000450134,
+    "representative_ids": [
+      "f40f4ff9663d2c4374158b2c",
+      "c253aef5de3680d98f9356e6",
+      "940816c148c55f8ddb5e1fa9",
+      "ddb63df5d2a2257885097e35",
+      "06bf0cdc7f64f01ec5c82f99"
+    ]
+  },
+  {
+    "cluster_id": 5,
+    "label": "umur / gym / senior",
+    "terms": [
+      "umur",
+      "gym",
+      "senior",
+      "tua",
+      "orang tua",
+      "usia",
+      "muda",
+      "orang",
+      "olahraga",
+      "otot",
+      "mulai",
+      "batas"
+    ],
+    "unique_sentences": 162,
+    "occurrences": 164,
+    "platform_counts": {
+      "reddit": 127,
+      "youtube": 37
+    },
+    "mean_centroid_similarity": 0.5821741819381714,
+    "representative_ids": [
+      "06f0a8afd9043a481c8ff228",
+      "ae9630515a827ba9741ba544",
+      "cddf219ec5b4aa7f279a1a04",
+      "9109a7ecdd05780b3b89d3c1",
+      "792222f084cd8656cebcd553"
+    ]
+  },
+  {
+    "cluster_id": 6,
+    "label": "indonesia / rakyat / negara",
+    "terms": [
+      "indonesia",
+      "rakyat indonesia",
+      "rakyat",
+      "negara",
+      "indonesian",
+      "lpdp",
+      "negara indonesia",
+      "tidak",
+      "blacklist",
+      "negeri",
+      "orang",
+      "jakarta"
+    ],
+    "unique_sentences": 615,
+    "occurrences": 632,
+    "platform_counts": {
+      "youtube": 420,
+      "reddit": 212
+    },
+    "mean_centroid_similarity": 0.6744359731674194,
+    "representative_ids": [
+      "30bcee2039f01cf0c334b30a",
+      "45e75f476783e8ac64ac5257",
+      "692ad1d540de94dfb7e3e5cf",
+      "bb74629711807cf4d4aa5a37",
+      "261a8bc32963ad8eeb4fc2eb"
+    ]
+  },
+  {
+    "cluster_id": 7,
+    "label": "namanya / samaan / nama",
+    "terms": [
+      "namanya",
+      "samaan",
+      "nama",
+      "wahhh samaan",
+      "sob namanya",
+      "samaan sob",
+      "samaan namanya",
+      "wahhh",
+      "sama",
+      "sebarkan",
+      "req",
+      "punya nama"
+    ],
+    "unique_sentences": 21,
+    "occurrences": 21,
+    "platform_counts": {
+      "youtube": 13,
+      "reddit": 8
+    },
+    "mean_centroid_similarity": 0.7776617407798767,
+    "representative_ids": [
+      "6a2457d330a3b26c01d45020",
+      "3e822e00b9243a65c18b8c99",
+      "183f39b030ca46bd751a1536",
+      "99230a43c6e8a0589ee98608",
+      "34757c3f8ff3ee5fc008226c"
+    ]
+  },
+  {
+    "cluster_id": 8,
+    "label": "dokumen / data / buku",
+    "terms": [
+      "dokumen",
+      "data",
+      "buku",
+      "apostile",
+      "berkas",
+      "baca",
+      "email",
+      "pdf",
+      "tulis",
+      "foto",
+      "skripsi",
+      "akun"
+    ],
+    "unique_sentences": 148,
+    "occurrences": 148,
+    "platform_counts": {
+      "youtube": 77,
+      "reddit": 71
+    },
+    "mean_centroid_similarity": 0.5336211919784546,
+    "representative_ids": [
+      "1bcb23f492375af83f4f1731",
+      "5c50c04cee3a6beb0e466292",
+      "66c891c3cd822af0a6644067",
+      "ba6bae1548c0cdb73e374ab6",
+      "b6de066d96ea0d4816a05f49"
+    ]
+  },
+  {
+    "cluster_id": 9,
+    "label": "knows / sob / mana",
+    "terms": [
+      "knows",
+      "sob",
+      "mana",
+      "benarkah",
+      "luring",
+      "beneran",
+      "berita",
+      "dina",
+      "knp",
+      "maksudnya",
+      "serius",
+      "tuh"
+    ],
+    "unique_sentences": 130,
+    "occurrences": 134,
+    "platform_counts": {
+      "reddit": 77,
+      "youtube": 57
+    },
+    "mean_centroid_similarity": 0.7164788246154785,
+    "representative_ids": [
+      "28eddfd292fd994c23777e9a",
+      "306035cf58b9e372dbfba9d2",
+      "2ab983ffb5b8037aea7090c3",
+      "a070b162e231e5f3ee8a7919",
+      "39f017b8481aace2039069e5"
+    ]
+  },
+  {
+    "cluster_id": 10,
+    "label": "pendaftaran / revisi / link",
+    "terms": [
+      "pendaftaran",
+      "revisi",
+      "link",
+      "unk",
+      "step",
+      "sidang",
+      "kartu",
+      "dn",
+      "pendaftaran kip",
+      "desil berdasarkan",
+      "maaf link",
+      "thn lalu"
+    ],
+    "unique_sentences": 10,
+    "occurrences": 10,
+    "platform_counts": {
+      "youtube": 8,
+      "reddit": 2
+    },
+    "mean_centroid_similarity": 0.6652821898460388,
+    "representative_ids": [
+      "c7d521bd890a80183966b806",
+      "4e5334d090171dd0fdb7bafa",
+      "8517e04433edc2f312ebce83",
+      "781ac596bf78eaf1554afc3c",
+      "27c8c29c430a67267a668b5a"
+    ]
+  },
+  {
+    "cluster_id": 11,
+    "label": "sorry / maaf / rant",
+    "terms": [
+      "sorry",
+      "maaf",
+      "minta maaf",
+      "rant",
+      "maaf tanya",
+      "minta",
+      "sorry op",
+      "sorry happens",
+      "experienced",
+      "sblmnya",
+      "halo maaf",
+      "permisi"
+    ],
+    "unique_sentences": 24,
+    "occurrences": 24,
+    "platform_counts": {
+      "youtube": 12,
+      "reddit": 12
+    },
+    "mean_centroid_similarity": 0.8201444745063782,
+    "representative_ids": [
+      "b6af6078ba57bd4f792f18c8",
+      "226e2b4fbe253f6bacff76c6",
+      "f854be60ebf22b71d2166e20",
+      "beb3f79a99e0554b31503688",
+      "b855cab1135201fe1960d5d7"
+    ]
+  },
+  {
+    "cluster_id": 12,
+    "label": "bahasa / inggris / dokumen",
+    "terms": [
+      "bahasa",
+      "inggris",
+      "bahasa inggris",
+      "dokumen",
+      "rusia",
+      "terjemahan",
+      "asli",
+      "english",
+      "translate",
+      "dokumen asli",
+      "apostile",
+      "penerjemah"
+    ],
+    "unique_sentences": 126,
+    "occurrences": 127,
+    "platform_counts": {
+      "youtube": 91,
+      "reddit": 36
+    },
+    "mean_centroid_similarity": 0.6266878247261047,
+    "representative_ids": [
+      "da6a5f57472b406134e84ad8",
+      "7a327446a7e5859e646d5d5b",
+      "88ae2bdcd93e4510ad903cde",
+      "bd99cea293a408a535e6649a",
+      "45ed4666528eb18856591640"
+    ]
+  },
+  {
+    "cluster_id": 13,
+    "label": "rumah / saiful / rumahnya",
+    "terms": [
+      "rumah",
+      "saiful",
+      "rumahnya",
+      "tetangga",
+      "nurul",
+      "pulang",
+      "foto rumah",
+      "tempat",
+      "sarah rama",
+      "rama ilham",
+      "tinggal",
+      "rama"
+    ],
+    "unique_sentences": 69,
+    "occurrences": 69,
+    "platform_counts": {
+      "reddit": 45,
+      "youtube": 24
+    },
+    "mean_centroid_similarity": 0.6349520087242126,
+    "representative_ids": [
+      "bbf3954e6f26f94540cac04b",
+      "7e7e8e312a25b84ff5cf0b09",
+      "095bcaf5e11ae60e9baff8d9",
+      "a9a7039f92758bae2eff0f12",
+      "fe112b97e0f38d74c1bba39b"
+    ]
+  },
+  {
+    "cluster_id": 14,
+    "label": "inggris / kusut / pake bhs",
+    "terms": [
+      "inggris",
+      "kusut",
+      "inggris kakk",
+      "pake bhs",
+      "hebat kali",
+      "benang kusut",
+      "negara manapun",
+      "sombongnya minta",
+      "biar pinter",
+      "dy hidup",
+      "orang diajak",
+      "mengembalikan lpdp"
+    ],
+    "unique_sentences": 14,
+    "occurrences": 14,
+    "platform_counts": {
+      "youtube": 9,
+      "reddit": 5
+    },
+    "mean_centroid_similarity": 0.7537476420402527,
+    "representative_ids": [
+      "5c03fb1f206ea575432532a2",
+      "6d599ff2faa0aa30ba3211f5",
+      "ccae63595a01f9f5272aaa71",
+      "9f944cc10d5502ea12bcba80",
+      "a4b0a4dfbcdd53de39ff5838"
+    ]
+  },
+  {
+    "cluster_id": 15,
+    "label": "video / rizky / videonya",
+    "terms": [
+      "video",
+      "rizky",
+      "videonya",
+      "rizky riplay",
+      "riplay",
+      "bikin video",
+      "youtube",
+      "nonton",
+      "bikin",
+      "videonya viral",
+      "video gini",
+      "rizky bikin"
+    ],
+    "unique_sentences": 51,
+    "occurrences": 59,
+    "platform_counts": {
+      "youtube": 44,
+      "reddit": 15
+    },
+    "mean_centroid_similarity": 0.7272722721099854,
+    "representative_ids": [
+      "149f9e4a3c54bd96f5314d1c",
+      "7dab8e880a5ba667a02793f9",
+      "f2b5066214535a2d74abc989",
+      "6659c072e3d6953869fbf6a5",
+      "eab634dacc70ff9f9e0f67cb"
+    ]
+  },
+  {
+    "cluster_id": 16,
+    "label": "dokter / psikiater / psikolog",
+    "terms": [
+      "dokter",
+      "psikiater",
+      "psikolog",
+      "adhd",
+      "bpjs",
+      "spesialis",
+      "obat",
+      "kesehatan",
+      "dokter umum",
+      "umum",
+      "rujukan",
+      "diagnosa"
+    ],
+    "unique_sentences": 223,
+    "occurrences": 225,
+    "platform_counts": {
+      "reddit": 181,
+      "youtube": 44
+    },
+    "mean_centroid_similarity": 0.5857354402542114,
+    "representative_ids": [
+      "3aa8e9f15d65ae59fb5519ba",
+      "c1b2c18b2bb4a245921334f5",
+      "4fc7870fe7575e294b323e5b",
+      "fcd6c90ad3467005ea55f744",
+      "16e4d7193e3e27443ae659b9"
+    ]
+  },
+  {
+    "cluster_id": 17,
+    "label": "ielts / toefl / bahkan menurut",
+    "terms": [
+      "ielts",
+      "toefl",
+      "bahkan menurut",
+      "skor ielts",
+      "toefl itp",
+      "c1",
+      "itp",
+      "toefl ielts",
+      "skor",
+      "hsk",
+      "sertifikat",
+      "bahasa"
+    ],
+    "unique_sentences": 13,
+    "occurrences": 13,
+    "platform_counts": {
+      "youtube": 7,
+      "reddit": 6
+    },
+    "mean_centroid_similarity": 0.6928857564926147,
+    "representative_ids": [
+      "507d37e42d3d7bf6af5ba515",
+      "5a4cfe3e470bc9181b2e7095",
+      "36dab6a5da3c6bacdadf4285",
+      "52788df4ac3885f67a62f543",
+      "5c5e313a5250909c37eb4ff1"
+    ]
+  },
+  {
+    "cluster_id": 18,
+    "label": "jerman / applicant / german",
+    "terms": [
+      "jerman",
+      "kuliah jerman",
+      "applicant",
+      "german",
+      "studienkolleg",
+      "students",
+      "relate",
+      "eu lain",
+      "students relate",
+      "indonesian students",
+      "bahasa jerman",
+      "jerman rata2"
+    ],
+    "unique_sentences": 21,
+    "occurrences": 21,
+    "platform_counts": {
+      "reddit": 15,
+      "youtube": 6
+    },
+    "mean_centroid_similarity": 0.66009920835495,
+    "representative_ids": [
+      "7efcf939f4c58a49b8a64744",
+      "0b3fee80dc1acec8dbfbaa77",
+      "51c248c769362a6f2aa6f8b5",
+      "8a670563aa5c1d12faf2e66c",
+      "6904d37db03067f50fd16074"
+    ]
+  },
+  {
+    "cluster_id": 19,
+    "label": "negara / indo / penghianat",
+    "terms": [
+      "negara",
+      "indo",
+      "penghianat",
+      "bangsa",
+      "presiden",
+      "prabowo",
+      "menteri",
+      "pemerintah",
+      "amran",
+      "cabut",
+      "kewarganegaraan",
+      "menghina"
+    ],
+    "unique_sentences": 732,
+    "occurrences": 739,
+    "platform_counts": {
+      "youtube": 472,
+      "reddit": 267
+    },
+    "mean_centroid_similarity": 0.5410515069961548,
+    "representative_ids": [
+      "752c71c31096045bb3480464",
+      "1c90cddd9a0a2164a2d69efc",
+      "ab99041156d1963f154b57c3",
+      "95fcccee3de115500f309560",
+      "a0a8af98cd436bca22e2814e"
+    ]
+  },
+  {
+    "cluster_id": 20,
+    "label": "ipdn / ipi / stan",
+    "terms": [
+      "ipdn",
+      "ipi",
+      "stan",
+      "ipdn stan",
+      "uri",
+      "setengah",
+      "rata",
+      "ukt",
+      "masuk ipdn",
+      "upi",
+      "daerah sesuai",
+      "standart"
+    ],
+    "unique_sentences": 13,
+    "occurrences": 13,
+    "platform_counts": {
+      "reddit": 8,
+      "youtube": 5
+    },
+    "mean_centroid_similarity": 0.702775239944458,
+    "representative_ids": [
+      "a6eedcaa8a856c7cdfe4ea01",
+      "104088349dd67a2be38aea11",
+      "0f7a8a7000f478cb6fa5a1ce",
+      "1cd80e9be481941a4daa34cf",
+      "7660ace7399e19bff26e064d"
+    ]
+  },
+  {
+    "cluster_id": 21,
+    "label": "ibuk / minum / ko",
+    "terms": [
+      "ibuk",
+      "sama ibuk",
+      "minum",
+      "ko",
+      "nonton sambil",
+      "agak laen",
+      "ru",
+      "bangun tidur",
+      "ngacung",
+      "negoro",
+      "muak gua",
+      "kyak"
+    ],
+    "unique_sentences": 24,
+    "occurrences": 24,
+    "platform_counts": {
+      "youtube": 21,
+      "reddit": 3
+    },
+    "mean_centroid_similarity": 0.7979180812835693,
+    "representative_ids": [
+      "ccd333a23409d67519666a23",
+      "8bf437ac8a96ef472c60bd47",
+      "8008b388e80fac60bdbf0b87",
+      "12bfcd4cfc4abf067ac1d589",
+      "9eed6fa2d4b09c7c0ff8dc4c"
+    ]
+  },
+  {
+    "cluster_id": 22,
+    "label": "china / mandarin / jepang",
+    "terms": [
+      "china",
+      "mandarin",
+      "jepang",
+      "cina",
+      "bahasa",
+      "chinese",
+      "asia",
+      "bhs",
+      "bhs mandarin",
+      "belajar",
+      "bahasa mandarin",
+      "japan"
+    ],
+    "unique_sentences": 173,
+    "occurrences": 183,
+    "platform_counts": {
+      "youtube": 106,
+      "reddit": 77
+    },
+    "mean_centroid_similarity": 0.6363062262535095,
+    "representative_ids": [
+      "58e3556f3c8223141086a44c",
+      "c34b56c34631196558a1d9f6",
+      "8be05c5f41389dd2763593e7",
+      "7a608dbf14e595c52200739b",
+      "1d5b23a3209227214e1e256d"
+    ]
+  },
+  {
+    "cluster_id": 23,
+    "label": "pin / spmb / jatim",
+    "terms": [
+      "pin",
+      "spmb",
+      "jatim",
+      "spmb jatim",
+      "ambil pin",
+      "ambil",
+      "berkas",
+      "upload",
+      "hsk",
+      "daftar",
+      "sistem spmb",
+      "sma smk"
+    ],
+    "unique_sentences": 85,
+    "occurrences": 104,
+    "platform_counts": {
+      "youtube": 90,
+      "reddit": 14
+    },
+    "mean_centroid_similarity": 0.5762398838996887,
+    "representative_ids": [
+      "3d27b4015d1ea8878743eab5",
+      "d511217fc61353f8e277368a",
+      "a59f72b5fcedf272eeb8830d",
+      "697861e32d2b8da15871177c",
+      "f74c8b7773800fd645d954bc"
+    ]
+  },
+  {
+    "cluster_id": 24,
+    "label": "iq / smart / manusia sperti",
+    "terms": [
+      "iq",
+      "smart",
+      "manusia sperti",
+      "pangkat",
+      "bermacam2",
+      "catch",
+      "isi hati",
+      "intelijen",
+      "hdup",
+      "siapa suruh",
+      "kecerdasan",
+      "jongkok"
+    ],
+    "unique_sentences": 10,
+    "occurrences": 10,
+    "platform_counts": {
+      "youtube": 7,
+      "reddit": 3
+    },
+    "mean_centroid_similarity": 0.7704482674598694,
+    "representative_ids": [
+      "a6de7aeffbcdc060bdf3cb1d",
+      "37df8703b6a8611165aa20bb",
+      "0f3189ce8bb79d2dfb8813ff",
+      "0d18714506bec3d487cca4e9",
+      "0e246044067f98a433f28992"
+    ]
+  },
+  {
+    "cluster_id": 25,
+    "label": "air / data center / salmon",
+    "terms": [
+      "air",
+      "data center",
+      "center",
+      "air bersih",
+      "air laut",
+      "salmon",
+      "akibat",
+      "kolam",
+      "water",
+      "laut",
+      "ngabisin",
+      "data"
+    ],
+    "unique_sentences": 21,
+    "occurrences": 21,
+    "platform_counts": {
+      "reddit": 18,
+      "youtube": 3
+    },
+    "mean_centroid_similarity": 0.6647403240203857,
+    "representative_ids": [
+      "7081b9ac839be11d4788bbc7",
+      "43c6e11a47f68bca9efad711",
+      "75df7fc594c61db7bdc991b0",
+      "696b81ce3ff95f325557376f",
+      "66f74c44b6617389b7116416"
+    ]
+  },
+  {
+    "cluster_id": 26,
+    "label": "gua / batu / emas",
+    "terms": [
+      "gua",
+      "batu",
+      "emas",
+      "dikit",
+      "gua kerja",
+      "mah",
+      "ade",
+      "sama",
+      "gravel",
+      "kalo",
+      "temen",
+      "berlian"
+    ],
+    "unique_sentences": 74,
+    "occurrences": 74,
+    "platform_counts": {
+      "reddit": 47,
+      "youtube": 27
+    },
+    "mean_centroid_similarity": 0.6562932729721069,
+    "representative_ids": [
+      "42094b492c0327855f9364ae",
+      "4bda7ef62b2700d8f4095b00",
+      "64c9598ed021607370c15163",
+      "d2dec9b8edc7626dcefbfbdc",
+      "bd53dbc7da475d9afd8ecf55"
+    ]
+  },
+  {
+    "cluster_id": 27,
+    "label": "xiaomi / hp / kamera",
+    "terms": [
+      "xiaomi",
+      "hp",
+      "kamera",
+      "flagship",
+      "redmi",
+      "zoom",
+      "kameranya",
+      "hyperos",
+      "camera",
+      "bug",
+      "user",
+      "samsung"
+    ],
+    "unique_sentences": 77,
+    "occurrences": 77,
+    "platform_counts": {
+      "reddit": 75,
+      "youtube": 2
+    },
+    "mean_centroid_similarity": 0.5091308355331421,
+    "representative_ids": [
+      "d0d5e9df4d53b0c10f46b612",
+      "a30b07a403530e8c4f20365a",
+      "4c0406cae11e138ec2828a93",
+      "792fe90ff3d1369a7b2f998d",
+      "4718ff7323f54e8891386045"
+    ]
+  },
+  {
+    "cluster_id": 28,
+    "label": "kek / kaka / gini",
+    "terms": [
+      "kek",
+      "kek gini",
+      "kaka",
+      "ibu kek",
+      "gini",
+      "ibu",
+      "keknya",
+      "ibuknya kek",
+      "cerita kek",
+      "kek anj",
+      "keluarga kek",
+      "sama kek"
+    ],
+    "unique_sentences": 66,
+    "occurrences": 66,
+    "platform_counts": {
+      "youtube": 44,
+      "reddit": 22
+    },
+    "mean_centroid_similarity": 0.7843359708786011,
+    "representative_ids": [
+      "287a6d85a51b9dd441b1db36",
+      "744c7bef1f54ed094ffe39ad",
+      "7660e0887e5ba36cb4fc0ef3",
+      "d76484730eef6cae40154d12",
+      "be912ac69963748aefe0b23c"
+    ]
+  },
+  {
+    "cluster_id": 29,
+    "label": "kasian / kaka / kka",
+    "terms": [
+      "kasian",
+      "kasian kaka",
+      "kaka",
+      "danang kasian",
+      "kka",
+      "kasian danang",
+      "taruhannya",
+      "komennya",
+      "fucking",
+      "kost",
+      "looks",
+      "nyawa"
+    ],
+    "unique_sentences": 11,
+    "occurrences": 11,
+    "platform_counts": {
+      "youtube": 9,
+      "reddit": 2
+    },
+    "mean_centroid_similarity": 0.8494158387184143,
+    "representative_ids": [
+      "6d3569e76ca1c515af6bd516",
+      "c9b02dd0b5f896084b61f559",
+      "6632c8190a3509d7edfd98d4",
+      "598db8625fe59956dc7f2fd9",
+      "657fd03d156eeaace16b31b6"
+    ]
+  },
+  {
+    "cluster_id": 30,
+    "label": "anjing / majikan / menggigit",
+    "terms": [
+      "anjing",
+      "ibunya anjing",
+      "ibu anjing",
+      "kek anjing",
+      "majikan",
+      "menggigit",
+      "ibunya",
+      "ngerusak mental",
+      "peliharaan",
+      "jelekin",
+      "mental anak",
+      "patuh"
+    ],
+    "unique_sentences": 23,
+    "occurrences": 23,
+    "platform_counts": {
+      "youtube": 17,
+      "reddit": 6
+    },
+    "mean_centroid_similarity": 0.7959305047988892,
+    "representative_ids": [
+      "4f1b40915c1468836e69a32e",
+      "18b815db6e952a7ce46aa8fa",
+      "d336ad85e730646a2699cb86",
+      "79983a1f66405d414f3bfae4",
+      "ab67adb5d71c01c9dd4f3fd0"
+    ]
+  },
+  {
+    "cluster_id": 31,
+    "label": "final / endingnya / yahhh sayangnya",
+    "terms": [
+      "final",
+      "final sob",
+      "endingnya",
+      "yahhh sayangnya",
+      "yahhh",
+      "kesempatan terakhir",
+      "sayangnya final",
+      "terakhir",
+      "sob",
+      "ending",
+      "sayangnya",
+      "suka"
+    ],
+    "unique_sentences": 18,
+    "occurrences": 24,
+    "platform_counts": {
+      "youtube": 18,
+      "reddit": 6
+    },
+    "mean_centroid_similarity": 0.8223509788513184,
+    "representative_ids": [
+      "1a4cf0b99793d57f7ba9cbb8",
+      "b028be5c02da5dcf01a789eb",
+      "2197587785ea0681876d98a7",
+      "56c37ce7315df654957583fe",
+      "3ee59f90e901144b56efb122"
+    ]
+  },
+  {
+    "cluster_id": 32,
+    "label": "lagu / lagunya / pink",
+    "terms": [
+      "lagu",
+      "lagunya",
+      "pink",
+      "pink floyd",
+      "floyd",
+      "day",
+      "terharu",
+      "nangis",
+      "engineernya",
+      "ane kasih",
+      "konseran",
+      "baik cari"
+    ],
+    "unique_sentences": 17,
+    "occurrences": 20,
+    "platform_counts": {
+      "youtube": 12,
+      "reddit": 8
+    },
+    "mean_centroid_similarity": 0.7130772471427917,
+    "representative_ids": [
+      "4fbf0a9dfcacaa6568e5c1f3",
+      "7af668caf3271118e9db3897",
+      "47d35c617ce39b8a1ed0973e",
+      "b1053a5a0db11cfcca2560c4",
+      "a35ea3909a9fff4fb3998db3"
+    ]
+  },
+  {
+    "cluster_id": 33,
+    "label": "istri / suami / istrinya",
+    "terms": [
+      "istri",
+      "suami",
+      "istrinya",
+      "nikah",
+      "perempuan",
+      "wanita",
+      "menikah",
+      "laki",
+      "cewek",
+      "gender",
+      "laki laki",
+      "suami istri"
+    ],
+    "unique_sentences": 177,
+    "occurrences": 179,
+    "platform_counts": {
+      "reddit": 90,
+      "youtube": 89
+    },
+    "mean_centroid_similarity": 0.6266647577285767,
+    "representative_ids": [
+      "e81742551f961130764aeadc",
+      "58f171feb47007316860b84e",
+      "30333184bbceba81f4e33057",
+      "bb5551cf7cfd24b3f64d88e8",
+      "0e7568ab2a8218d667583b23"
+    ]
+  },
+  {
+    "cluster_id": 34,
+    "label": "cewek / ceweknya / korban",
+    "terms": [
+      "cewek",
+      "ceweknya",
+      "korban",
+      "wkwkwkwkw",
+      "usah kerja",
+      "twist",
+      "plot twist",
+      "ember",
+      "gadis",
+      "lantas",
+      "ldr",
+      "pemain"
+    ],
+    "unique_sentences": 11,
+    "occurrences": 11,
+    "platform_counts": {
+      "youtube": 9,
+      "reddit": 2
+    },
+    "mean_centroid_similarity": 0.7617418766021729,
+    "representative_ids": [
+      "7d1098a67f936b09580faf07",
+      "4ea750cb460dcb60f5d3bfb4",
+      "38c9fb79924cf28ae1e5669a",
+      "095fb46830d103b753528019",
+      "7fef0d78112fd170f222e675"
+    ]
+  },
+  {
+    "cluster_id": 35,
+    "label": "mati / meninggal / tembak",
+    "terms": [
+      "mati",
+      "meninggal",
+      "tembak mati",
+      "tembak",
+      "nkri harga",
+      "harga mati",
+      "meninggalkan",
+      "nkri",
+      "harga",
+      "buah jatuh",
+      "dibunuh",
+      "pohonnya"
+    ],
+    "unique_sentences": 15,
+    "occurrences": 15,
+    "platform_counts": {
+      "youtube": 11,
+      "reddit": 4
+    },
+    "mean_centroid_similarity": 0.7538357973098755,
+    "representative_ids": [
+      "7a7be63b99b7ce1feacf89ac",
+      "27553f4f3022a99d729d4ee7",
+      "7b939f60dd59ce514e32a63b",
+      "b2e4aba1b5124b9cf98f9258",
+      "078def7a8c55300af819088a"
+    ]
+  },
+  {
+    "cluster_id": 36,
+    "label": "viral / uin / barita",
+    "terms": [
+      "viral",
+      "uin",
+      "buatin viral",
+      "barita viral",
+      "barita",
+      "virus",
+      "azab",
+      "mahasiswi",
+      "buatin",
+      "kasus",
+      "diam",
+      "tolak"
+    ],
+    "unique_sentences": 33,
+    "occurrences": 33,
+    "platform_counts": {
+      "youtube": 25,
+      "reddit": 8
+    },
+    "mean_centroid_similarity": 0.729214072227478,
+    "representative_ids": [
+      "19e1c60c1c22c783536332ae",
+      "f123db5d6cce56bfd1bd8f77",
+      "cd37c83ea287408c1a3ce519",
+      "b2db2edc4f328f04f6ed932a",
+      "371ac1e9847654348a0cb0e8"
+    ]
+  },
+  {
+    "cluster_id": 37,
+    "label": "sepeda / gravel / mtb",
+    "terms": [
+      "sepeda",
+      "gravel",
+      "mtb",
+      "bike",
+      "fork",
+      "rigid",
+      "sepeda gravel",
+      "ganti",
+      "motor",
+      "ban",
+      "range",
+      "enteng"
+    ],
+    "unique_sentences": 29,
+    "occurrences": 29,
+    "platform_counts": {
+      "reddit": 26,
+      "youtube": 3
+    },
+    "mean_centroid_similarity": 0.600155234336853,
+    "representative_ids": [
+      "b3508e54f5219a8e51a286b7",
+      "335d5d98eaa34faad905b856",
+      "1c3157a458573f5be9022078",
+      "88296d71d635a9c40e8f17a6",
+      "ce6e2da78ff2a0142c9359b1"
+    ]
+  },
+  {
+    "cluster_id": 38,
+    "label": "sabun / rambut / toilet",
+    "terms": [
+      "sabun",
+      "rambut",
+      "toilet",
+      "hair",
+      "pake sabun",
+      "pake",
+      "mandi",
+      "soap",
+      "tonic",
+      "minoxidil",
+      "use",
+      "bawa sabun"
+    ],
+    "unique_sentences": 87,
+    "occurrences": 89,
+    "platform_counts": {
+      "reddit": 85,
+      "youtube": 4
+    },
+    "mean_centroid_similarity": 0.5969151258468628,
+    "representative_ids": [
+      "ace6590c7dbc3d41934818d2",
+      "fa21206e424b0b16233dcad3",
+      "0e18593351cf811e36dbb0ba",
+      "f23f90bbbe3f295c96939a4a",
+      "b51eefdafffe5b9612119e0e"
+    ]
+  },
+  {
+    "cluster_id": 39,
+    "label": "swasta / kapitalisme / private",
+    "terms": [
+      "swasta",
+      "kapitalisme",
+      "private",
+      "kapitalis",
+      "capitalism",
+      "pasar",
+      "ekonomi",
+      "varian",
+      "neoliberal",
+      "negara kuat",
+      "spektrum",
+      "state"
+    ],
+    "unique_sentences": 53,
+    "occurrences": 53,
+    "platform_counts": {
+      "reddit": 50,
+      "youtube": 3
+    },
+    "mean_centroid_similarity": 0.6159079074859619,
+    "representative_ids": [
+      "38b77bf49398127866a91704",
+      "9db381aab3500859f8b335c9",
+      "8ddfb810099481341f3c8867",
+      "9c1d30a564a0f1617cef0d22",
+      "7b19b11ecfa594ea65bc3a1e"
+    ]
+  },
+  {
+    "cluster_id": 40,
+    "label": "gas / listrik / spbu",
+    "terms": [
+      "gas",
+      "listrik",
+      "spbu",
+      "bensin",
+      "ketemu spbu",
+      "ac",
+      "ngontrak",
+      "rumah",
+      "dapat uang",
+      "wa",
+      "tim",
+      "ketemu"
+    ],
+    "unique_sentences": 30,
+    "occurrences": 30,
+    "platform_counts": {
+      "reddit": 25,
+      "youtube": 5
+    },
+    "mean_centroid_similarity": 0.6370981335639954,
+    "representative_ids": [
+      "8996c90d77e709efe3ea0b46",
+      "191df78ece8df6cc41b84b5d",
+      "be3f098c38a46b0d0c299976",
+      "7b762979243481575dc85f1e",
+      "5eb5f24516848ca96bbceb52"
+    ]
+  },
+  {
+    "cluster_id": 41,
+    "label": "palsu / pidana / penjara lama",
+    "terms": [
+      "palsu",
+      "pidana",
+      "pidana penjara",
+      "penjara lama",
+      "penjara",
+      "hukum",
+      "nama palsu",
+      "lama empat",
+      "rangkaian",
+      "piutang",
+      "pidananya",
+      "pidana denda"
+    ],
+    "unique_sentences": 21,
+    "occurrences": 22,
+    "platform_counts": {
+      "reddit": 15,
+      "youtube": 7
+    },
+    "mean_centroid_similarity": 0.6915857195854187,
+    "representative_ids": [
+      "01b9740c3db5db4820a91954",
+      "60a10f8b2b119457b34ccae9",
+      "d2e4c99f54b91775d639f83c",
+      "5c628de52c33d34e05cf43a9",
+      "3c1a0d69462a7f18a118e055"
+    ]
+  },
+  {
+    "cluster_id": 42,
+    "label": "sidang / yudisium / skripsi",
+    "terms": [
+      "sidang",
+      "yudisium",
+      "sidang skripsi",
+      "skripsi",
+      "wisuda",
+      "syarat",
+      "berdasarkan",
+      "lulus",
+      "lulus berdasarkan",
+      "lulus sidang",
+      "skripsi semua",
+      "berdasarkan yudisium"
+    ],
+    "unique_sentences": 18,
+    "occurrences": 18,
+    "platform_counts": {
+      "reddit": 17,
+      "youtube": 1
+    },
+    "mean_centroid_similarity": 0.6937370300292969,
+    "representative_ids": [
+      "d1fabbb55b1131fa6fdecdd3",
+      "2fd3b7fdf8c210c41099a1c3",
+      "ff8939fd7d0102a9d90ce336",
+      "319f499287acfbb4dec62979",
+      "491aee3eb25d9acb7d92fde8"
+    ]
+  },
+  {
+    "cluster_id": 43,
+    "label": "romania / bucharest / university",
+    "terms": [
+      "romania",
+      "bucharest",
+      "university bucharest",
+      "sampai romania",
+      "university",
+      "accommodation",
+      "accommodation letter",
+      "perlu dikeluarkan",
+      "romania langsung",
+      "rumania",
+      "beasiswa biaya",
+      "dikeluarkan"
+    ],
+    "unique_sentences": 16,
+    "occurrences": 16,
+    "platform_counts": {
+      "youtube": 15,
+      "reddit": 1
+    },
+    "mean_centroid_similarity": 0.7316284775733948,
+    "representative_ids": [
+      "ccd87adefd5154de93d3a0b5",
+      "d3f355fb36acb9795b548120",
+      "fd06c4d41276740399942e62",
+      "8fbec127f36a20173a73ffbb",
+      "073eefdec3126dd2c6860c74"
+    ]
+  },
+  {
+    "cluster_id": 44,
+    "label": "arya / istrinya / bapaknya",
+    "terms": [
+      "arya",
+      "istrinya",
+      "istri arya",
+      "arya istrinya",
+      "enteng arya",
+      "bapaknya arya",
+      "bapaknya",
+      "kewarga",
+      "bt",
+      "ds",
+      "enteng",
+      "sangsi"
+    ],
+    "unique_sentences": 21,
+    "occurrences": 21,
+    "platform_counts": {
+      "youtube": 21
+    },
+    "mean_centroid_similarity": 0.7957085967063904,
+    "representative_ids": [
+      "e2dacef362ec4bd5741dbfe7",
+      "3fc8a7278732f15e78d44e1e",
+      "021bd56ece1ace5971d49e01",
+      "b9b29089ba6799eec9797822",
+      "7f2ccc64a4b93f64c62e58fa"
+    ]
+  },
+  {
+    "cluster_id": 45,
+    "label": "bunga / bunganya / beserta",
+    "terms": [
+      "bunga",
+      "bunganya",
+      "beserta",
+      "beserta bunganya",
+      "berikut",
+      "berbunga",
+      "berikut bunganya",
+      "beserta bunga",
+      "buah kesombongan",
+      "segera kembalikan",
+      "dah tu",
+      "kembalikan beserta"
+    ],
+    "unique_sentences": 12,
+    "occurrences": 12,
+    "platform_counts": {
+      "youtube": 12
+    },
+    "mean_centroid_similarity": 0.8454301953315735,
+    "representative_ids": [
+      "532147d3e52d54fedc41e236",
+      "f8a45af719f73732438c3377",
+      "fbad0b23ab7382aed586e5ef",
+      "8df1e3b02ecee5af89d39fa5",
+      "07b4e1e8da52542af54e646e"
+    ]
+  },
+  {
+    "cluster_id": 46,
+    "label": "blacklist / black / list",
+    "terms": [
+      "blacklist",
+      "black",
+      "black list",
+      "list",
+      "blacklist seluruh",
+      "sekalian",
+      "nkri",
+      "seluruh dunia",
+      "turunan",
+      "mampus",
+      "pemerintahan",
+      "keluarganya"
+    ],
+    "unique_sentences": 32,
+    "occurrences": 32,
+    "platform_counts": {
+      "youtube": 30,
+      "reddit": 2
+    },
+    "mean_centroid_similarity": 0.7432175874710083,
+    "representative_ids": [
+      "71ff203b6a896cdcb3b5a595",
+      "f7f0c5d9bfd7e939cc85006c",
+      "0d57e472839bbae92d4b1b09",
+      "d5d397f7c912fa9a3234eab8",
+      "aa455e01e1fd397749bd4bc1"
+    ]
+  },
+  {
+    "cluster_id": 47,
+    "label": "kacang lupa / kulit / lupa kulitnya",
+    "terms": [
+      "kacang lupa",
+      "kacang",
+      "lupa",
+      "kulit",
+      "lupa kulitnya",
+      "kulitnya",
+      "lupa kulit",
+      "forgot",
+      "ingredients",
+      "kynya",
+      "sama kulit",
+      "biarlah"
+    ],
+    "unique_sentences": 11,
+    "occurrences": 11,
+    "platform_counts": {
+      "youtube": 10,
+      "reddit": 1
+    },
+    "mean_centroid_similarity": 0.8645822405815125,
+    "representative_ids": [
+      "f83cd86cfa624484a28b9e34",
+      "e6e77faa458b1cf1a4bd985b",
+      "c1700240bbd0449ce80de6ba",
+      "72ef3cb369c0bd4c582bc5c2",
+      "51fc3b0109581184ad13c45e"
+    ]
+  },
+  {
+    "cluster_id": 48,
+    "label": "gay / lgbt / queer",
+    "terms": [
+      "gay",
+      "lgbt",
+      "queer",
+      "anti lgbt",
+      "anti",
+      "lgbtq",
+      "lingkungan organisasi",
+      "gaydar",
+      "gerakan",
+      "diam",
+      "kinda",
+      "question"
+    ],
+    "unique_sentences": 28,
+    "occurrences": 28,
+    "platform_counts": {
+      "reddit": 28
+    },
+    "mean_centroid_similarity": 0.7108797430992126,
+    "representative_ids": [
+      "e2208c6a8e9c81489b23778e",
+      "96ffcc2ea8b61345e91591da",
+      "bae87df44938553996c1b6c0",
+      "2fa0eb0e24090aae281967c6",
+      "139c1435ffdba5a523f1a283"
+    ]
+  },
+  {
+    "cluster_id": 49,
+    "label": "nuklir / teknik / sertifikasi petugas",
+    "terms": [
+      "nuklir",
+      "teknik nuklir",
+      "teknik",
+      "nuklir ugm",
+      "sertifikasi petugas",
+      "proteksi radiasi",
+      "radiasi",
+      "nuclear",
+      "petugas proteksi",
+      "ugm",
+      "proteksi",
+      "petugas"
+    ],
+    "unique_sentences": 13,
+    "occurrences": 13,
+    "platform_counts": {
+      "reddit": 13
+    },
+    "mean_centroid_similarity": 0.7615565657615662,
+    "representative_ids": [
+      "f37fd6dc33dd710b6a311184",
+      "d22de76e9937eda01bc0f752",
+      "52d249760d522d1e7aeac715",
+      "5f36babf5e4626dd45e609e8",
+      "d071d7236d1227541a6b8a97"
+    ]
+  },
+  {
+    "cluster_id": 50,
+    "label": "international / ui / acceptance rate",
+    "terms": [
+      "international",
+      "ui",
+      "acceptance rate",
+      "average",
+      "acceptance",
+      "students",
+      "rate",
+      "student",
+      "classes",
+      "domestic",
+      "domestic kki",
+      "foreigner"
+    ],
+    "unique_sentences": 7,
+    "occurrences": 7,
+    "platform_counts": {
+      "reddit": 7
+    },
+    "mean_centroid_similarity": 0.7515839338302612,
+    "representative_ids": [
+      "19585f7651b595d02606e503",
+      "3a5ff582f5f2b9ea9956dd4f",
+      "25384f3f884d0392b311e9be",
+      "66f6cbfb076a2c3e3f28fe16",
+      "778da35666886ca98c01dc27"
+    ]
+  },
+  {
+    "cluster_id": 51,
+    "label": "vaksin / mrna / vaccine",
+    "terms": [
+      "vaksin",
+      "mrna",
+      "vaccine",
+      "dengue",
+      "immune",
+      "response",
+      "imun",
+      "immune response",
+      "protein",
+      "respons",
+      "virus",
+      "tubuh"
+    ],
+    "unique_sentences": 44,
+    "occurrences": 44,
+    "platform_counts": {
+      "reddit": 44
+    },
+    "mean_centroid_similarity": 0.6235978603363037,
+    "representative_ids": [
+      "2edcd7bedac7c1f749608dd6",
+      "299c519f7f3b9801ca4add3a",
+      "9e89cdcd3b5835b7cae726c4",
+      "33a407f1e189defecbef251a",
+      "59221b4f29f1240bbe50078e"
+    ]
+  }
+]

@@ -17,3 +17,14 @@ Dashboard langsung membaca [[Dataset Dashboard]] tanpa login, browser crawler at
 [Dockerfile](../../Dockerfile.nlp) memakai user non-root dan artifact read-only. Build/runtime Docker belum diverifikasi karena daemon lokal belum aktif. Tidak perlu migrasi database.
 
 [README](../../README.md) · [[Arsitektur BeeSense]] · [[HOME]]
+
+Training memakai `.venv-sbert` dan `requirements-sbert.txt`; Mac Intel dapat
+memakai `requirements-sbert-macos-intel.lock`. Evaluasi c_v memakai Gensim pada
+`requirements-coherence.txt`. Dashboard membaca artifact tanpa mengimpor Gensim/Torch.
+
+    .venv-sbert/bin/python social_nlp.py --coherence-baseline outputs/nlp_20261028_sbert_dbscan_01 --output-dir outputs/nlp_run_baru
+
+Konfigurasi aktif menunjuk `outputs/nlp_20261028_coherence_01`; dua snapshot lama
+tetap tersedia. Coherence c_v 0,4097 memenuhi ambang rata-rata 0,4, dengan 31/52
+topik masih di bawah ambang individual. Empat Parquet disimpan pada run aktif.
+Lihat [[Metodologi Machine Learning Social NLP]].

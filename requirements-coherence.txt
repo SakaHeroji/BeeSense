@@ -1,0 +1,4 @@
+# Training/evaluation only; loading fitted dashboard artifacts needs no Gensim.
+gensim==4.4.0
+smart_open==9.0.0
+wrapt==2.5.1
