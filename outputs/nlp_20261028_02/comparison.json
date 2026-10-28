@@ -1,0 +1,179 @@
+[
+  {
+    "candidate": "semantic_hdbscan_m15_s5",
+    "parameters": {
+      "min_cluster_size": 15,
+      "min_samples": 5
+    },
+    "clusters": 179,
+    "coverage": 0.6026577654616451,
+    "noise_fraction": 0.39734223453835493,
+    "largest_cluster_fraction": 0.06332950151530986,
+    "silhouette_cosine": 0.023173635825514793,
+    "stability_ari": 0.6713518206676609,
+    "selection_score": 0.266616082936698,
+    "eligible": true,
+    "seconds": 4.358284846999595,
+    "silhouette_sample_assigned": 1081,
+    "stability_union_points": 10865
+  },
+  {
+    "candidate": "semantic_hdbscan_m15_s10",
+    "parameters": {
+      "min_cluster_size": 15,
+      "min_samples": 10
+    },
+    "clusters": 153,
+    "coverage": 0.5676407608011085,
+    "noise_fraction": 0.4323592391988915,
+    "largest_cluster_fraction": 0.07566847886386331,
+    "silhouette_cosine": 0.03926331177353859,
+    "stability_ari": 0.6871330575139502,
+    "selection_score": 0.27030185219867536,
+    "eligible": true,
+    "seconds": 4.405120592000458,
+    "silhouette_sample_assigned": 1010,
+    "stability_union_points": 10029
+  },
+  {
+    "candidate": "semantic_hdbscan_m30_s5",
+    "parameters": {
+      "min_cluster_size": 30,
+      "min_samples": 5
+    },
+    "clusters": 103,
+    "coverage": 0.6031616072553219,
+    "noise_fraction": 0.39683839274467814,
+    "largest_cluster_fraction": 0.06985486060352929,
+    "silhouette_cosine": 0.0640605092048645,
+    "stability_ari": 0.6830839293414978,
+    "selection_score": 0.284428527239833,
+    "eligible": true,
+    "seconds": 4.348074727999119,
+    "silhouette_sample_assigned": 1090,
+    "stability_union_points": 10715
+  },
+  {
+    "candidate": "semantic_hdbscan_m30_s10",
+    "parameters": {
+      "min_cluster_size": 30,
+      "min_samples": 10
+    },
+    "clusters": 93,
+    "coverage": 0.562854263761179,
+    "noise_fraction": 0.437145736238821,
+    "largest_cluster_fraction": 0.07631196150833613,
+    "silhouette_cosine": 0.045247167348861694,
+    "stability_ari": 0.8181623148892941,
+    "selection_score": 0.30424925492575383,
+    "eligible": true,
+    "seconds": 4.403196633000334,
+    "silhouette_sample_assigned": 1013,
+    "stability_union_points": 9943
+  },
+  {
+    "candidate": "semantic_hdbscan_m60_s5",
+    "parameters": {
+      "min_cluster_size": 60,
+      "min_samples": 5
+    },
+    "clusters": 51,
+    "coverage": 0.5691522861821388,
+    "noise_fraction": 0.43084771381786124,
+    "largest_cluster_fraction": 0.07889786433550958,
+    "silhouette_cosine": 0.09100997447967529,
+    "stability_ari": 0.6920304784776151,
+    "selection_score": 0.28945958357101575,
+    "eligible": true,
+    "seconds": 4.294505477999337,
+    "silhouette_sample_assigned": 1023,
+    "stability_union_points": 10056
+  },
+  {
+    "candidate": "semantic_hdbscan_m60_s10",
+    "parameters": {
+      "min_cluster_size": 60,
+      "min_samples": 10
+    },
+    "clusters": 51,
+    "coverage": 0.5307343494142839,
+    "noise_fraction": 0.4692656505857161,
+    "largest_cluster_fraction": 0.08093034294529489,
+    "silhouette_cosine": 0.09509526193141937,
+    "stability_ari": 0.8059970322044341,
+    "selection_score": 0.3113916036473828,
+    "eligible": true,
+    "seconds": 4.406694084000264,
+    "silhouette_sample_assigned": 939,
+    "stability_union_points": 9337
+  },
+  {
+    "candidate": "semantic_kmeans_k40",
+    "parameters": {
+      "n_clusters": 40
+    },
+    "clusters": 40,
+    "coverage": 1.0,
+    "noise_fraction": 0.0,
+    "largest_cluster_fraction": 0.04377125582567074,
+    "silhouette_cosine": 0.03330593928694725,
+    "stability_ari": 0.5658569443875109,
+    "selection_score": 0.31144779966904607,
+    "eligible": true,
+    "seconds": 16.43080946599912,
+    "silhouette_sample_assigned": 1800,
+    "stability_union_points": 15878
+  },
+  {
+    "candidate": "semantic_kmeans_k80",
+    "parameters": {
+      "n_clusters": 80
+    },
+    "clusters": 80,
+    "coverage": 1.0,
+    "noise_fraction": 0.0,
+    "largest_cluster_fraction": 0.02840408111852878,
+    "silhouette_cosine": 0.03186943009495735,
+    "stability_ari": 0.44060374311079903,
+    "selection_score": 0.2792725938346742,
+    "eligible": true,
+    "seconds": 31.429245321000053,
+    "silhouette_sample_assigned": 1800,
+    "stability_union_points": 15878
+  },
+  {
+    "candidate": "semantic_kmeans_k120",
+    "parameters": {
+      "n_clusters": 120
+    },
+    "clusters": 120,
+    "coverage": 1.0,
+    "noise_fraction": 0.0,
+    "largest_cluster_fraction": 0.017067640760801108,
+    "silhouette_cosine": 0.02718675322830677,
+    "stability_ari": 0.4412739915228078,
+    "selection_score": 0.276630549817686,
+    "eligible": true,
+    "seconds": 38.16361842100014,
+    "silhouette_sample_assigned": 1800,
+    "stability_union_points": 15878
+  },
+  {
+    "candidate": "tfidf_svd_kmeans_k80",
+    "parameters": {
+      "n_clusters": 80,
+      "svd_dimensions": 100
+    },
+    "clusters": 80,
+    "coverage": 1.0,
+    "noise_fraction": 0.0,
+    "largest_cluster_fraction": 0.07752865600201536,
+    "silhouette_cosine": -0.1399509757757187,
+    "stability_ari": 0.500574186924636,
+    "selection_score": 0.275143546731159,
+    "eligible": true,
+    "seconds": 6.436375049999697,
+    "silhouette_sample_assigned": 1800,
+    "stability_union_points": 15878
+  }
+]

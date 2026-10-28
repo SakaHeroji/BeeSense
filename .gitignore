@@ -1,0 +1,61 @@
+# Local Python environments, caches and editor files
+.venv/
+.venv-*/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+.coverage
+htmlcov/
+.DS_Store
+.idea/
+.vscode/
+node_modules/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+*.log
+.cleanup-staging/
+
+# Browser profiles and transient crawl output
+output/
+
+# Only the dataset and fitted run used by the dashboard are publishable.
+outputs/*
+!outputs/social_20261028_01/
+outputs/social_20261028_01/*
+!outputs/social_20261028_01/social_data.xlsx
+!outputs/nlp_20261028_02/
+outputs/nlp_20261028_02/*
+!outputs/nlp_20261028_02/manifest.json
+!outputs/nlp_20261028_02/summary.json
+!outputs/nlp_20261028_02/topics.json
+!outputs/nlp_20261028_02/graph.json
+!outputs/nlp_20261028_02/comparison.json
+!outputs/nlp_20261028_02/sentences.parquet
+!outputs/nlp_20261028_02/occurrences.parquet
+!outputs/nlp_20261028_02/skipped.parquet
+!outputs/nlp_20261028_02/embeddings.npy
+!outputs/nlp_20261028_02/centroids.npy
+
+# Publish the current project map and curated Obsidian notes, not caches/history.
+**/.graphify/
+Reddit/graphify-out/
+graphify-out/*
+!graphify-out/graph.json
+!graphify-out/graph.html
+!graphify-out/GRAPH_REPORT.md
+!graphify-out/obsidian/
+graphify-out/obsidian/*
+!graphify-out/obsidian/HOME.md
+!graphify-out/obsidian/Arsitektur BeeSense.md
+!graphify-out/obsidian/Dataset Dashboard.md
+!graphify-out/obsidian/Menjalankan BeeSense.md
+!graphify-out/obsidian/graph.canvas
+!graphify-out/obsidian/Metodologi Machine Learning Social NLP.md

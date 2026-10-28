@@ -1,0 +1,10 @@
+# Current source architecture only; datasets are mapped explicitly.
+outputs/
+output/
+.cleanup-staging/
+Reddit/fixtures/
+.venv/
+.venv-nlp/
+.cache/
+.ruff_cache/
+__pycache__/

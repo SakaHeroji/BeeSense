@@ -1,0 +1,8 @@
+*
+!Dockerfile.nlp
+!requirements-nlp.lock
+!social_nlp.py
+!nlp_dashboard.py
+!social_nlp.json
+!.streamlit/
+!.streamlit/config.toml

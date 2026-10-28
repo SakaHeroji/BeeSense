@@ -1,0 +1,2 @@
+-r requirements-nlp.lock
+-r requirements-crawler.txt

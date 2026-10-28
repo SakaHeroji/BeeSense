@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.xlsx binary
+*.parquet binary
+*.npy binary
+# Preserve bytes of checksummed artifacts on every platform.
+outputs/nlp_20261028_02/* -text

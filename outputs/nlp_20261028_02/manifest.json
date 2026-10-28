@@ -1,0 +1,14 @@
+{
+  "schema_version": "beesense-sentence-clusters:1",
+  "files_sha256": {
+    "summary.json": "a4230bd4696c5467f797261a35022594d534b8f6c661f9da7cdec0106544030b",
+    "sentences.parquet": "a5663c983529969d4dbe462527fa4896bd1aae54c937d67d9dd1fc516cd261db",
+    "centroids.npy": "7323d73ed251d256416733229423f78c5d7a8f14c7bce48f7249b45c8e1550ba",
+    "occurrences.parquet": "ee39ef790188dd0cb729c04ff77a7f7ae657d64573629f162888241537d33959",
+    "comparison.json": "f1831d5cb2b3b00e68ebdcfbbe7a37c42568ab74da40b077be954e474e571fe6",
+    "embeddings.npy": "089c17128e7702edf2ee3d094ef989bf1bb9cfcb98c28fd352de900524bd2aa4",
+    "graph.json": "7a333abb0a4a34538e2fa6ea380d4c4280f3dc94d6af355e9e9e9e8a068f9693",
+    "skipped.parquet": "7fd536bb2b7297d02b8c093416305d3268c7cfd9bdea7fa5d5002be7111b80fa",
+    "topics.json": "d622b794f1d0763dc7c09baed30b15024e727637f9756344246f56c48e099727"
+  }
+}
