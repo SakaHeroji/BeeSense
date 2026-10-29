@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/crawl_youtube.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Monitor Akuisisi Sintetis"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # crawl_youtube.py
@@ -35,4 +35,4 @@ tags:
 - [[video_url()]] - `contains` [EXTRACTED]
 - [[worker()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

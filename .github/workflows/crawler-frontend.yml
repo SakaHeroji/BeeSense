@@ -1,0 +1,40 @@
+name: Verify Crawler Frontend
+on:
+  push:
+    paths: ['Crawler/Frontend/**', '.github/workflows/crawler-frontend.yml']
+  pull_request:
+    paths: ['Crawler/Frontend/**', '.github/workflows/crawler-frontend.yml']
+permissions:
+  contents: read
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: Crawler/Frontend
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: Crawler/Frontend/package-lock.json
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run build
+      - name: Build container
+        run: docker build --build-arg VITE_DATA_MODE=demo -t beesense-crawler-frontend:ci .
+      - name: Check container and SPA deep link
+        run: |
+          docker run -d --name crawler-frontend -p 127.0.0.1:4174:8080 beesense-crawler-frontend:ci
+          for attempt in $(seq 1 20); do
+            if curl --fail http://127.0.0.1:4174/healthz; then break; fi
+            sleep 1
+          done
+          curl --fail http://127.0.0.1:4174/healthz
+          curl --fail http://127.0.0.1:4174/crawler/manual | grep 'id="root"'

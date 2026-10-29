@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/rendered_thread_dom.mjs"
 type: "code"
-community: "Pengujian Penjelasan Topik"
+community: "Topik dan Verifikasi NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Penjelasan_Topik
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # rendered_thread_dom.mjs
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[captureRenderedThread()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Penjelasan_Topik
+#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

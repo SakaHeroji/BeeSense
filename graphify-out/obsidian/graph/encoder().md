@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L87"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # encoder()
@@ -22,4 +22,4 @@ tags:
 - [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - `indirect_call` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/INFERRED #community/Alur_Akuisisi_Sosial_Terpadu

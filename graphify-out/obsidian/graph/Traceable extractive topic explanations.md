@@ -12,7 +12,6 @@ tags:
 # Traceable extractive topic explanations
 
 ## Connections
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Healthy combined 20 local Docker runtime serves the new model]] - `references` [EXTRACTED]
 - [[Historical v 1 HDBSCAN directional counts for 51 topics]] - `references` [EXTRACTED]

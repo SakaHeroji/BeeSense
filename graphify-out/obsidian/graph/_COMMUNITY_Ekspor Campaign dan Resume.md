@@ -1,15 +1,16 @@
 ---
 type: community
-cohesion: 0.18
-members: 0
+cohesion: 0.33
+members: 1
 ---
 
 # Ekspor Campaign dan Resume
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 0 nodes
+**Cohesion:** 0.33 - loosely connected
+**Members:** 1 nodes
 
 ## Members
+- [[Reddit Playwright CLI runner]] - document - Reddit/README_playwright.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -17,3 +18,9 @@ members: 0
 TABLE source_file, type FROM #community/Ekspor_Campaign_dan_Resume
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
+
+## Top bridge nodes
+- [[Reddit Playwright CLI runner]] - degree 6, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_data_verifier.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Workspace React Crawler"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Workspace_React_Crawler
 ---
 
 # PublishedDataTests
@@ -25,4 +25,4 @@ tags:
 - [[.test_unexpected_workbook_is_rejected()]] - `method` [EXTRACTED]
 - [[test_dashboard_data_verifier.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler

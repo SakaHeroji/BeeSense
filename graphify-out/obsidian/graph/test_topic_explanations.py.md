@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_explanations.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Workspace React Crawler"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Workspace_React_Crawler
 ---
 
 # test_topic_explanations.py
@@ -18,4 +18,4 @@ tags:
 - [[profile()]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler

@@ -12,7 +12,6 @@ tags:
 # Isolated dashboard-runtime matrix for Python 3.12 and3.14
 
 ## Connections
-- [[Architecture separates saved-artifact deployment from full trainingdev packages]] - `references` [EXTRACTED]
 - [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - `references` [EXTRACTED]
 - [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - `references` [EXTRACTED]
 - [[Dashboard-only artifactexplanationUI dependency boundary]] - `references` [EXTRACTED]

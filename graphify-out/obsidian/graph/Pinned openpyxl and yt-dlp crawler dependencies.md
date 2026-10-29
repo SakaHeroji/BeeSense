@@ -1,12 +1,12 @@
 ---
 source_file: "requirements-crawler.txt"
 type: "document"
-community: "Crawler Selenium Terisolasi"
+community: "Adapter Akuisisi YouTube"
 location: "lines 1-2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # Pinned openpyxl and yt-dlp crawler dependencies
@@ -16,4 +16,4 @@ tags:
 - [[Pinned Selenium 4.51.0 plus crawler requirements]] - `references` [EXTRACTED]
 - [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/document #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

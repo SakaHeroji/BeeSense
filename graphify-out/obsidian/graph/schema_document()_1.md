@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Monitor Akuisisi Sintetis"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # schema_document()
@@ -17,4 +17,4 @@ tags:
 - [[social_common.py]] - `contains` [EXTRACTED]
 - [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

@@ -13,8 +13,6 @@ tags:
 
 ## Connections
 - [[Active combined 20-topic resultDBSCAN eps0.2min_samples 10]] - `references` [EXTRACTED]
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Coherence preserves negative silhouette and in-sample limits]] - `references` [EXTRACTED]

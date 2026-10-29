@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # NLPTests
@@ -39,4 +39,4 @@ tags:
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `method` [EXTRACTED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

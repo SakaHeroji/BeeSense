@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Konfigurasi Tujuh Sumber"
 location: "L482"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Konfigurasi_Tujuh_Sumber
 ---
 
 # SourceFailure
@@ -26,4 +26,4 @@ tags:
 - [[assert_accessible()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber

@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Konfigurasi Tujuh Sumber"
 location: "L831"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Konfigurasi_Tujuh_Sumber
 ---
 
 # Whole-post comment budget includes replies; nested replies share thread cap.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[bounded_events()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber

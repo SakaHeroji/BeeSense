@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.json"
 type: "document"
-community: "Pengujian UI Streamlit"
+community: "Pipeline dan Persistensi NLP"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Pengujian_UI_Streamlit
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # social_nlp.json
@@ -19,4 +19,4 @@ tags:
 - [[Configured final topic target 20]] - `references` [EXTRACTED]
 - [[Configured merged workbook identity and SHA-256]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pengujian_UI_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

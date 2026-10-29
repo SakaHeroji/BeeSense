@@ -1,0 +1,12 @@
+node_modules
+dist
+coverage
+.git
+.env
+.env.*
+*.log
+*.tsbuildinfo
+README.md
+docs
+
+graphify-out/

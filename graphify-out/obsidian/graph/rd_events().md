@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_social_crawler.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Adapter Akuisisi YouTube"
 location: "L55"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # rd_events()
@@ -16,4 +16,4 @@ tags:
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - `calls` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

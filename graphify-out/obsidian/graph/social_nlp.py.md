@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # social_nlp.py
@@ -23,4 +23,4 @@ tags:
 - [[test_topic_explanations.py]] - `imports_from` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

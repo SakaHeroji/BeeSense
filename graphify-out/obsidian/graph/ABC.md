@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Eksplorasi Dashboard Streamlit"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # ABC
@@ -15,4 +15,4 @@ tags:
 - [[SourceAdapter]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

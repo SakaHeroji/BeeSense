@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign_detail.mjs"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Bundle Excel dan Provenans"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # enrichBatch()
@@ -17,4 +17,4 @@ tags:
 - [[inWindow()]] - `calls` [EXTRACTED]
 - [[rateLimitSeconds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

@@ -1,94 +1,80 @@
 ---
 type: community
-cohesion: 0.07
-members: 79
+cohesion: 0.06
+members: 65
 ---
 
 # Adapter Akuisisi YouTube
 
-**Cohesion:** 0.07 - loosely connected
-**Members:** 79 nodes
+**Cohesion:** 0.06 - loosely connected
+**Members:** 65 nodes
 
 ## Members
-- [[.__init__()_3]] - code - Reddit/crawl_reddit_single.py
-- [[.__init__()_2]] - code - Reddit/crawl_reddit_single.py
-- [[.__init__()]] - code - Reddit/crawl_reddit_single.py
-- [[.__init__()_1]] - code - Reddit/crawl_reddit_single.py
-- [[.__init__()_10]] - code - Reddit/crawl_reddit_single.py
-- [[._cells()]] - code - Reddit/crawl_reddit_single.py
-- [[.abort()]] - code - Reddit/crawl_reddit_single.py
-- [[.accept()_1]] - code - Reddit/crawl_reddit_single.py
-- [[.accept()]] - code - Reddit/crawl_reddit_single.py
-- [[.add_content()]] - code - Reddit/crawl_reddit_single.py
-- [[.chunks()]] - code - Reddit/crawl_reddit_single.py
-- [[.content()]] - code - Reddit/crawl_reddit_single.py
-- [[.content()_1]] - code - Reddit/crawl_reddit_single.py
-- [[.find()]] - code - Reddit/crawl_reddit_single.py
-- [[.finish()]] - code - Reddit/crawl_reddit_single.py
-- [[.finish_relations()]] - code - Reddit/crawl_reddit_single.py
-- [[.key()]] - code - Reddit/crawl_reddit_single.py
-- [[.row()]] - code - Reddit/crawl_reddit_single.py
-- [[.setUp()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_01_frozen_header_fingerprint()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_02_cross_source_identical_columns_and_types()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_03_unknown_columns_rejected()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_04_unicode_offsets_boundary_and_casefold()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_05_identical_text_different_ids_is_not_dedup()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_06_changed_text_keeps_distinct_observation()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_07_child_before_parent_and_unresolved()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_09_no_zero_fill_missing_metrics()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_10_exact_time_normalized_utc_and_role_evidence()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_13_excel_literal_ids_and_lossless_text()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_14_settings_bounds_and_no_zero_fill()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_16_hard_timeout_keeps_already_received_event()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_16_trend_index_uses_metrics_without_fake_comment()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - code - Reddit/crawl_reddit_single.py
-- [[.validate()]] - code - Reddit/crawl_reddit_single.py
-- [[.write()]] - code - Reddit/crawl_reddit_single.py
-- [[.write()_1]] - code - Reddit/crawl_reddit_single.py
-- [[ABC]] - code
-- [[Aho-Corasick; offsets refer to Python Unicode code points in source.]] - rationale - Reddit/crawl_reddit_single.py
-- [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - rationale - Reddit/crawl_reddit_single.py
-- [[BundleSink]] - code - Reddit/crawl_reddit_single.py
-- [[ContentInput]] - code - Reddit/crawl_reddit_single.py
-- [[ContractTests]] - code - Reddit/crawl_reddit_single.py
-- [[Dataset]] - code - Reddit/crawl_reddit_single.py
-- [[KeywordMatcher]] - code - Reddit/crawl_reddit_single.py
-- [[MemorySink]] - code - Reddit/crawl_reddit_single.py
-- [[Normalize a source event; write only through the shared DatasetSink.]] - rationale - Reddit/crawl_reddit_single.py
-- [[RecordFactory]] - code - Reddit/crawl_reddit_single.py
-- [[RedditAdapter]] - code - Reddit/crawl_reddit_single.py
-- [[RedditRecordFactory]] - code - Reddit/crawl_reddit_single.py
-- [[Settings]] - code - Reddit/crawl_reddit_single.py
-- [[Shared pipeline; adapters cannot choose their own headers or cell formats.]] - rationale - Reddit/crawl_reddit_single.py
-- [[SourceAdapter]] - code - Reddit/crawl_reddit_single.py
-- [[Validate the embedded contract; an external descriptor is optional.]] - rationale - Reddit/crawl_reddit_single.py
-- [[add_readme()]] - code - Reddit/crawl_reddit_single.py
-- [[crawl_reddit_single.py]] - code - Reddit/crawl_reddit_single.py
-- [[digest()]] - code - Reddit/crawl_reddit_single.py
-- [[dumps()]] - code - Reddit/crawl_reddit_single.py
-- [[fields()]] - code - Reddit/crawl_reddit_single.py
-- [[import_public_web_sections.py]] - code - Reddit/import_public_web_sections.py
-- [[import_sections()]] - code - Reddit/import_public_web_sections.py
-- [[load_settings()]] - code - Reddit/crawl_reddit_single.py
-- [[main()]] - code - Reddit/crawl_reddit_single.py
-- [[native_fullname()]] - code - Reddit/crawl_reddit_single.py
-- [[now_iso()]] - code - Reddit/crawl_reddit_single.py
-- [[object_key()]] - code - Reddit/crawl_reddit_single.py
-- [[parsed_number()]] - code - Reddit/crawl_reddit_single.py
-- [[parser()]] - code - Reddit/crawl_reddit_single.py
-- [[run()]] - code - Reddit/crawl_reddit_single.py
-- [[run_self_tests()]] - code - Reddit/crawl_reddit_single.py
-- [[run_worker()]] - code - Reddit/crawl_reddit_single.py
-- [[schema_document()]] - code - Reddit/crawl_reddit_single.py
-- [[schema_fingerprint()]] - code - Reddit/crawl_reddit_single.py
-- [[timeout_fixture()]] - code - Reddit/crawl_reddit_single.py
-- [[utc_datetime()]] - code - Reddit/crawl_reddit_single.py
-- [[validate_row()]] - code - Reddit/crawl_reddit_single.py
-- [[verify_descriptor()]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_21]] - code - social_crawler.py
+- [[.__init__()_23]] - code - tests/test_social_crawler.py
+- [[._browser_call()]] - code - social_crawler.py
+- [[._calendar_date()]] - code - social_crawler.py
+- [[._checkpoint_items()_1]] - code - social_crawler.py
+- [[._delay()]] - code - social_crawler.py
+- [[._dom_events()]] - code - social_crawler.py
+- [[._execute()_1]] - code - social_crawler.py
+- [[._legacy_settings()_1]] - code - social_crawler.py
+- [[._normalize()_1]] - code - social_crawler.py
+- [[._pace()]] - code - social_crawler.py
+- [[._select()]] - code - social_crawler.py
+- [[._write_compact()]] - code - social_crawler.py
+- [[.clock()]] - code - tests/test_social_crawler.py
+- [[.crawler()]] - code - tests/test_social_crawler.py
+- [[.error()]] - code - Youtube/crawl_youtube.py
+- [[.export_compact()]] - code - social_crawler.py
+- [[.plan()_1]] - code - social_crawler.py
+- [[.read()]] - code - tests/test_social_crawler.py
+- [[.run()_1]] - code - social_crawler.py
+- [[.setUp()_3]] - code - tests/test_social_crawler.py
+- [[.sleep()]] - code - tests/test_social_crawler.py
+- [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - code - tests/test_social_crawler.py
+- [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - code - tests/test_social_crawler.py
+- [[.test_calendar_month_boundary_date_only_and_unrecognized_dates()]] - code - tests/test_social_crawler.py
+- [[.test_candidate_cap_and_post_cap_are_independent_when_minimum_fits()]] - code - tests/test_social_crawler.py
+- [[.test_checkpoint_dom_import_does_not_make_network_calls()]] - code - tests/test_social_crawler.py
+- [[.test_combined_bundle_uses_original_contract_and_separate_platform_minimums()]] - code - tests/test_social_crawler.py
+- [[.test_comment_exclusion_preserves_child_with_unresolved_parent_and_context_comments()]] - code - tests/test_social_crawler.py
+- [[.test_compact_long_unicode_text_is_marked_and_formula_text_stays_literal()]] - code - tests/test_social_crawler.py
+- [[.test_compact_reexport_refilters_saved_data_and_keeps_source_unchanged()]] - code - tests/test_social_crawler.py
+- [[.test_date_window_is_inclusive_start_exclusive_end_and_unknown_is_excluded()]] - code - tests/test_social_crawler.py
+- [[.test_default_uses_one_json_and_plan_does_not_access_sources()]] - code - tests/test_social_crawler.py
+- [[.test_delay_cannot_start_another_request_after_global_budget()]] - code - tests/test_social_crawler.py
+- [[.test_discovery_refills_after_a_filtered_candidate_without_repeating_urls()]] - code - tests/test_social_crawler.py
+- [[.test_expanded_youtube_search_budget_reaches_worker_without_old_cli_cap()]] - code - tests/test_social_crawler.py
+- [[.test_include_all_across_title_and_description_and_exclude_wins()]] - code - tests/test_social_crawler.py
+- [[.test_interrupt_during_delay_publishes_already_captured_evidence()]] - code - tests/test_social_crawler.py
+- [[.test_invalid_config_is_rejected_before_output_or_requests()]] - code - tests/test_social_crawler.py
+- [[.test_invalid_native_identity_does_not_become_a_success()]] - code - tests/test_social_crawler.py
+- [[.test_minimum_counts_only_roots_with_enough_unique_comments()]] - code - tests/test_social_crawler.py
+- [[.test_minimum_shortage_is_reported_at_hard_post_cap()]] - code - tests/test_social_crawler.py
+- [[.test_original_youtube_process_worker_boundary_works_as_package_import()]] - code - tests/test_social_crawler.py
+- [[.test_partial_metadata_survives_a_worker_timeout()]] - code - tests/test_social_crawler.py
+- [[.test_random_and_fixed_delays_are_between_operations()]] - code - tests/test_social_crawler.py
+- [[.test_relative_calendar_dates_use_source_capture_timezone_and_edit_suffix()]] - code - tests/test_social_crawler.py
+- [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - code - tests/test_social_crawler.py
+- [[.test_source_exception_is_sanitized_and_stops_after_three_calls()]] - code - tests/test_social_crawler.py
+- [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - code - tests/test_social_crawler.py
+- [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - document - .github/workflows/ci.yml
+- [[Clock]] - code - tests/test_social_crawler.py
+- [[Pinned openpyxl and yt-dlp crawler dependencies]] - document - requirements-crawler.txt
+- [[SocialCrawler]] - code - social_crawler.py
+- [[SocialCrawlerTests]] - code - tests/test_social_crawler.py
+- [[_config()]] - code - social_crawler.py
+- [[_keywords()]] - code - social_crawler.py
+- [[_number()]] - code - social_crawler.py
+- [[_url()]] - code - social_crawler.py
+- [[main()_4]] - code - social_crawler.py
+- [[rd_events()]] - code - tests/test_social_crawler.py
+- [[receipt()]] - code - tests/test_social_crawler.py
+- [[social_crawler.py]] - code - social_crawler.py
+- [[spawn_youtube_fixture()]] - code - tests/test_social_crawler.py
+- [[test_social_crawler.py]] - code - tests/test_social_crawler.py
+- [[yt_events()]] - code - tests/test_social_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -98,14 +84,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 49 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 1 edge to [[_COMMUNITY_Akses dan Parsing HTML]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 2 edges to [[_COMMUNITY_Monitor Akuisisi Sintetis]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 1 edge to [[_COMMUNITY_Ekspor Campaign dan Resume]]
 
 ## Top bridge nodes
-- [[crawl_reddit_single.py]] - degree 58, connects to 3 communities
-- [[.accept()_1]] - degree 13, connects to 1 community
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 1 community
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 1 community
-- [[digest()]] - degree 9, connects to 1 community
+- [[SocialCrawler]] - degree 58, connects to 1 community
+- [[.crawler()]] - degree 32, connects to 1 community
+- [[social_crawler.py]] - degree 10, connects to 1 community
+- [[.export_compact()]] - degree 5, connects to 1 community
+- [[.error()]] - degree 4, connects to 1 community

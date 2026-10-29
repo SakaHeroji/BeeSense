@@ -1,14 +1,14 @@
 ---
 source_file: "Reddit/config_reddit.json"
 type: "document"
-community: "Validasi Redirect dan Kesalahan"
+community: "Workspace React Crawler"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Validasi_Redirect_dan_Kesalahan
+  - community/Workspace_React_Crawler
 ---
 
 # Reddit/config_reddit.json
 
-#graphify/document #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan
+#graphify/document #graphify/EXTRACTED #community/Workspace_React_Crawler

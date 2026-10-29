@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # fixture()
@@ -17,4 +17,4 @@ tags:
 - [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - `calls` [EXTRACTED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

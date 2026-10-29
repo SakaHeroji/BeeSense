@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/README_playwright.md"
 type: "document"
-community: "Pipeline dan Persistensi NLP"
+community: "Ekspor Campaign dan Resume"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Ekspor_Campaign_dan_Resume
 ---
 
 # Reddit Playwright CLI runner
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/document #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume

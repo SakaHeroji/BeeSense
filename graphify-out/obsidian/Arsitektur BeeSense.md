@@ -7,6 +7,8 @@ tags: [beesense, crawler, nlp, streamlit]
 
 SocialCrawler → Excel → SocialNLPClusterer → artifact terverifikasi → SocialNLPStreamlitApp.
 
+[[Frontend React Crawler]] menambahkan workspace React terpisah di `Crawler/Frontend`, berdasarkan [[PRD Frontend Crawler]]. Typed adapter memisahkan demo sintetis dari API/worker yang masih perlu diimplementasikan; aplikasi React tidak menjalankan crawler dari tab. UI mencakup tujuh sumber (YouTube, Reddit, Instagram, TikTok, Threads, Facebook, X/Twitter), dengan capability gating untuk lima adapter baru yang belum diimplementasikan. Survei memakai kontrak baru, sementara alur workbook sosial dan Dashboard Streamlit tetap terpisah.
+
 [[Crawler Selenium|SocialCrawlerSelenium]] menyediakan pengambilan Chrome melalui Selenium untuk kedua platform, dengan filter dan exporter SocialCrawler yang sama.
 
 - [SocialCrawler](../../social_crawler.py) memakai adapter YouTube/Reddit dan satu social_crawler.json untuk rentang tanggal, jeda, keyword serta batas post/komentar.

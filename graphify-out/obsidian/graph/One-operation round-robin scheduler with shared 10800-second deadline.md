@@ -17,7 +17,6 @@ tags:
 - [[Configured global acquisition budget 10800 seconds]] - `conceptually_related_to` [INFERRED]
 - [[Configured platform_execution=round_robin]] - `conceptually_related_to` [INFERRED]
 - [[Historical Reddit pause after HTTP 429, superseded by user-authorized resume]] - `references` [EXTRACTED]
-- [[Host crawler campaign preserves independent dashboard artifacts]] - `conceptually_related_to` [INFERRED]
 - [[Manual CAPTCHA completion poll every 5 seconds for at most 600 seconds]] - `references` [EXTRACTED]
 - [[Original deadline stopped acquisition; no operation started afterward]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `implements` [EXTRACTED]

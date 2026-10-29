@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Adapter Akuisisi YouTube"
 location: "L326"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # SocialCrawler
@@ -71,4 +71,4 @@ tags:
 - [[test_social_crawler.py]] - `imports` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

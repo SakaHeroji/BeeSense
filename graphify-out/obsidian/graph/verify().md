@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/verify_browser_campaign.py"
 type: "code"
-community: "Snapshot NLP dan Arsip"
+community: "Pipeline dan Persistensi NLP"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # verify()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_browser_campaign.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

@@ -12,13 +12,14 @@ tags:
 # BeeSense Obsidian architecture and dataset index
 
 ## Connections
+- [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
-- [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
-- [[Campaign index 1000-new-root targets with manual CAPTCHA and live counts]] - `references` [EXTRACTED]
-- [[Combined 20 topicsmean c_v 0.4720 passes;720 individually below 0.4]] - `references` [EXTRACTED]
+- [[Curated Crawler PRD statusfrontend implemented, backend pending]] - `references` [EXTRACTED]
+- [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
+- [[Existing combined20-topic Dashboard context remains separate from React acquisition]] - `references` [EXTRACTED]
+- [[Historical partial acquisition context does not represent React demo collection]] - `references` [EXTRACTED]
 - [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
-- [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 

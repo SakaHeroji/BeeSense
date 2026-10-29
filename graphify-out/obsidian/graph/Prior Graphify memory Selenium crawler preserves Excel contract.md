@@ -12,6 +12,6 @@ tags:
 # Prior Graphify memory: Selenium crawler preserves Excel contract
 
 ## Connections
-- [[Crawler Excel to independent NLPcoherence artifacts to Streamlit]] - `conceptually_related_to` [INFERRED]
+- [[Existing Python datamodel pipeline and new React workspace remain separate]] - `conceptually_related_to` [INFERRED]
 
 #graphify/document #graphify/INFERRED #community/Community_None

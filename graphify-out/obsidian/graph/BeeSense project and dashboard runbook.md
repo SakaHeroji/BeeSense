@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Konfigurasi SocialCrawler"
+community: "Monitor Akuisisi Sintetis"
 location: "# BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Konfigurasi_SocialCrawler
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # BeeSense project and dashboard runbook
@@ -27,4 +27,4 @@ tags:
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[Unchanged compact source and eight-sheet audit workbooks]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler
+#graphify/document #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

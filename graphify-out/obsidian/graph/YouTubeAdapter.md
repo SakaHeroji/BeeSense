@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/crawl_youtube.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Monitor Akuisisi Sintetis"
 location: "L187"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # YouTubeAdapter
@@ -24,4 +24,4 @@ tags:
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/INFERRED #community/Monitor_Akuisisi_Sintetis

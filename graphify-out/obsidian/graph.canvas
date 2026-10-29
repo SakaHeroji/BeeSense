@@ -53,6 +53,24 @@
       "y": 700,
       "width": 440,
       "height": 260
+    },
+    {
+      "id": "crawler-prd",
+      "type": "file",
+      "file": "PRD Frontend Crawler.md",
+      "x": 1000,
+      "y": 380,
+      "width": 420,
+      "height": 300
+    },
+    {
+      "id": "crawler-frontend",
+      "type": "file",
+      "file": "Frontend React Crawler.md",
+      "x": 1000,
+      "y": 800,
+      "width": 420,
+      "height": 300
     }
   ],
   "edges": [
@@ -118,6 +136,29 @@
       "fromSide": "right",
       "toNode": "1",
       "toSide": "bottom"
+    },
+    {
+      "id": "home-crawler-prd",
+      "fromNode": "3",
+      "fromSide": "right",
+      "toNode": "crawler-prd",
+      "toSide": "top"
+    },
+    {
+      "id": "prd-frontend",
+      "fromNode": "crawler-prd",
+      "fromSide": "bottom",
+      "toNode": "crawler-frontend",
+      "toSide": "top",
+      "label": "React UI diimplementasikan"
+    },
+    {
+      "id": "frontend-architecture",
+      "fromNode": "crawler-frontend",
+      "fromSide": "left",
+      "toNode": "0",
+      "toSide": "bottom",
+      "label": "API / lima adapter masih direncanakan"
     }
   ]
 }

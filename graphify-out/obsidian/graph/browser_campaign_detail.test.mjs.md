@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign_detail.test.mjs"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Bundle Excel dan Provenans"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # browser_campaign_detail.test.mjs
@@ -16,4 +16,4 @@ tags:
 - [[classifyCaptureFailure()]] - `imports` [EXTRACTED]
 - [[rateLimitSeconds()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

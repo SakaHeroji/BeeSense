@@ -12,7 +12,6 @@ tags:
 # Five artifact-backed Streamlit analysis views
 
 ## Connections
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [INFERRED]
 - [[Combined20 runtime and desktopnarrow-screen topic QA verified]] - `references` [EXTRACTED]
 - [[Filters retain model membership and do not recompute c_v]] - `references` [EXTRACTED]

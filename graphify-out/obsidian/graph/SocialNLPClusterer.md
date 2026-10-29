@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # SocialNLPClusterer
@@ -68,7 +68,6 @@ tags:
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `calls` [EXTRACTED]
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `calls` [EXTRACTED]
 - [[Additive v 2 reduction and coherence metadata with v1v2 loaders]] - `shares_data_with` [EXTRACTED]
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
 - [[CloudRuntimeTests]] - `uses` [INFERRED]
@@ -93,4 +92,4 @@ tags:
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

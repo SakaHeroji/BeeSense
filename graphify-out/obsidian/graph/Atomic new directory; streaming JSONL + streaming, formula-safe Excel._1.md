@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "rationale"
-community: "Bundle Excel dan Provenans"
+community: "Monitor Akuisisi Sintetis"
 location: "L300"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # Atomic new directory; streaming JSONL + streaming, formula-safe Excel.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BundleSink_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/rationale #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

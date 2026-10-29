@@ -12,7 +12,6 @@ tags:
 # Dashboard-only artifact/explanation/UI dependency boundary
 
 ## Connections
-- [[Architecture separates saved-artifact deployment from full trainingdev packages]] - `references` [EXTRACTED]
 - [[Cloud root requirements now install dashboard-only dependencies]] - `references` [EXTRACTED]
 - [[Docker runtime ARG selects Python 3.12 or3.14 and installs only root wheels]] - `references` [EXTRACTED]
 - [[Historical Python 3.14.10 Cloud install failureONNX cp314 wheels and Numba support]] - `references` [EXTRACTED]

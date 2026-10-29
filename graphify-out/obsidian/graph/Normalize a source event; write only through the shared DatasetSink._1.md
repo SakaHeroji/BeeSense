@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "rationale"
-community: "Bundle Excel dan Provenans"
+community: "Monitor Akuisisi Sintetis"
 location: "L296"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # Normalize a source event; write only through the shared Dataset/Sink.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.accept()_3]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/rationale #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

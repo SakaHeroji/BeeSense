@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Crawler Selenium Terisolasi"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # AnalysisTests
@@ -24,4 +24,4 @@ tags:
 - [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - `method` [EXTRACTED]
 - [[test_dashboard_analysis.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

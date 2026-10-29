@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # fields()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

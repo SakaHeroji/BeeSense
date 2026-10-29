@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # verify_descriptor()
@@ -21,4 +21,4 @@ tags:
 - [[schema_document()]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

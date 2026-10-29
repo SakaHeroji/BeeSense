@@ -1,12 +1,12 @@
 ---
 type: community
-cohesion: 0.29
+cohesion: 1.00
 members: 0
 ---
 
 # Runner Playwright Reddit
 
-**Cohesion:** 0.29 - loosely connected
+**Cohesion:** 1.00 - tightly connected
 **Members:** 0 nodes
 
 ## Members

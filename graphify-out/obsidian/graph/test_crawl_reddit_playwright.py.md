@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Snapshot NLP dan Arsip"
+community: "Pipeline dan Persistensi NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # test_crawl_reddit_playwright.py
@@ -17,4 +17,4 @@ tags:
 - [[export_browser_campaign.py]] - `imports` [EXTRACTED]
 - [[verify_browser_campaign.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

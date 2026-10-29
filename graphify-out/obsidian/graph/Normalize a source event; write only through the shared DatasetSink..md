@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Adapter Akuisisi YouTube"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L342"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Normalize a source event; write only through the shared Dataset/Sink.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.accept()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

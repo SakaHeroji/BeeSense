@@ -1,16 +1,16 @@
 ---
 type: community
-cohesion: 0.33
+cohesion: 1.00
 members: 1
 ---
 
 # Pipeline dan Persistensi NLP
 
-**Cohesion:** 0.33 - loosely connected
+**Cohesion:** 1.00 - tightly connected
 **Members:** 1 nodes
 
 ## Members
-- [[Reddit Playwright CLI runner]] - document - Reddit/README_playwright.md
+- [[social_nlp.json]] - document - social_nlp.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -18,9 +18,3 @@ members: 1
 TABLE source_file, type FROM #community/Pipeline_dan_Persistensi_NLP
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
-
-## Top bridge nodes
-- [[Reddit Playwright CLI runner]] - degree 6, connects to 1 community

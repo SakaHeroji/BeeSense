@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # barrier_status()
@@ -18,4 +18,4 @@ tags:
 - [[run()_2]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

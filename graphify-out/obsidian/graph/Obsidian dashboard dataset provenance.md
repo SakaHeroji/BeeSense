@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Active combined 20-topic run with eleven artifacts and manifest]] - `references` [EXTRACTED]
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Four immutable older NLP snapshots including baseline 20-topic run]] - `references` [EXTRACTED]
 - [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - `references` [EXTRACTED]

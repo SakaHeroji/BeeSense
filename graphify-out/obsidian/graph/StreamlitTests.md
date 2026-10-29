@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_streamlit_app.py"
 type: "code"
-community: "Topik dan Verifikasi NLP"
+community: "Akses dan Parsing HTML"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Akses_dan_Parsing_HTML
 ---
 
 # StreamlitTests
@@ -28,4 +28,4 @@ tags:
 - [[.test_url_initializes_filters_and_reset_clears_state()]] - `method` [EXTRACTED]
 - [[test_streamlit_app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML

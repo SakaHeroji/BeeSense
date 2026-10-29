@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.json"
 type: "document"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Parser DOM Terbatas"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Parser_DOM_Terbatas
 ---
 
 # social_crawler.json
@@ -24,4 +24,4 @@ tags:
 - [[Reddit CAPTCHA wait 600 seconds, poll 5 seconds]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Parser_DOM_Terbatas

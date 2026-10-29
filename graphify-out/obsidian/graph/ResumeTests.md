@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Snapshot NLP dan Arsip"
+community: "Pipeline dan Persistensi NLP"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # ResumeTests
@@ -29,4 +29,4 @@ tags:
 - [[.test_resume_skips_dom_and_prioritizes_missing_before_excerpts()]] - `method` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

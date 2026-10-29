@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/import_public_web_sections.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # import_sections()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_public_web_sections.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

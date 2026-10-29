@@ -288,5 +288,205 @@
     "mtime": 1793259494.0773315,
     "ast_hash": "2dbde82125be51157c63202205c58507",
     "semantic_hash": "2dbde82125be51157c63202205c58507"
+  },
+  "Crawler/Frontend/.prettierrc.json": {
+    "mtime": 1793277028.2993784,
+    "ast_hash": "4caf313700301927e89cfb1134a86494",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/eslint.config.js": {
+    "mtime": 1793277190.8723643,
+    "ast_hash": "74507a9342112f9d347e0888884959fb",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/package.json": {
+    "mtime": 1793276834.7524517,
+    "ast_hash": "ef40a4c08634b06bbe870a1c385ea20a",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/app/App.tsx": {
+    "mtime": 1793277636.5706196,
+    "ast_hash": "1fafc25a343d37a7b241a04959be36ce",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/app/Shell.tsx": {
+    "mtime": 1793277790.415331,
+    "ast_hash": "2905b787e9ed51536ac0e5040466dc7b",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/features/Automatic.tsx": {
+    "mtime": 1793279569.096738,
+    "ast_hash": "2d565faf60a9ca1d44d75d40afde4c85",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/features/DatasetView.tsx": {
+    "mtime": 1793279066.6795108,
+    "ast_hash": "b4fc237cba93858e10799eb303f42ead",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/features/History.tsx": {
+    "mtime": 1793279066.718228,
+    "ast_hash": "aecc16a6bf32ce6905bc997d79c64a69",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/features/JobDetail.tsx": {
+    "mtime": 1793279066.8096974,
+    "ast_hash": "d20dc33946dcf39ae8afb72c343679a5",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/features/Manual.tsx": {
+    "mtime": 1793279065.2657282,
+    "ast_hash": "987adab7091c065e73a109113e00d76b",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/features/Survey.tsx": {
+    "mtime": 1793278282.2723308,
+    "ast_hash": "eafb161b44c8f7e19c6398cf3019fe06",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/main.tsx": {
+    "mtime": 1793277634.6434157,
+    "ast_hash": "7c89ce8519ea1a3d8d3f6e9f34bbd595",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/api.ts": {
+    "mtime": 1793277192.3630674,
+    "ast_hash": "8bfad456f3c36715be3f77ec290f2050",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/context.ts": {
+    "mtime": 1793277634.3711393,
+    "ast_hash": "d0ffe95a2012bc470ce2d4cb723431ec",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/demo.ts": {
+    "mtime": 1793279575.7407496,
+    "ast_hash": "c2371a011163ec11a4be1142e68d2fc4",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/domain.ts": {
+    "mtime": 1793279532.4724815,
+    "ast_hash": "1bc177346193b9ed5722bb155e02ec40",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/hooks.ts": {
+    "mtime": 1793277790.3643115,
+    "ast_hash": "fe39ce0188f8b139487fa3178ed8dcc7",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/types.ts": {
+    "mtime": 1793279532.366951,
+    "ast_hash": "5c406a9cb9f529dcdd4ea56a8af69e60",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/shared/ui.tsx": {
+    "mtime": 1793279049.2566698,
+    "ast_hash": "012f782e5586741f14424dd8231572f0",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/test/api.test.ts": {
+    "mtime": 1793277453.5124516,
+    "ast_hash": "bad273dc17851a55aab71afd17f2957d",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/test/domain.test.ts": {
+    "mtime": 1793279571.0437593,
+    "ast_hash": "532ec3ff61a9fd054f89e305ef037e73",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/test/setup.ts": {
+    "mtime": 1793277395.4986067,
+    "ast_hash": "7e24b38b125a934380a1168b8e1e5b77",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/src/test/workflows.test.tsx": {
+    "mtime": 1793279571.0827715,
+    "ast_hash": "d01b69d92f1bb060b1c60f2c390d968c",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/tsconfig.json": {
+    "mtime": 1793277193.375678,
+    "ast_hash": "9e7cee94e93148889968e07e79081daf",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/vite.config.ts": {
+    "mtime": 1793275610.4971282,
+    "ast_hash": "7cf943ce02145fdd2564fe12cad98ae8",
+    "semantic_hash": ""
+  },
+  "Crawler/Frontend/vitest.config.ts": {
+    "mtime": 1793275610.5406528,
+    "ast_hash": "1a2f3c8e13e71bad7cbb5b5a4e349f08",
+    "semantic_hash": ""
+  },
+  "PRD/PRD Backend/README.md": {
+    "mtime": 1793279628.811613,
+    "ast_hash": "",
+    "semantic_hash": "aeb3eba74ce047e00804c29a207303b0"
+  },
+  "PRD/PRD Frontend/Acceptance Criteria Crawler.md": {
+    "mtime": 1793279234.776755,
+    "ast_hash": "",
+    "semantic_hash": "3d83ff9c8ec7ce4c2953b0b44e80b1c2"
+  },
+  "PRD/PRD Frontend/PRD Frontend Crawler.md": {
+    "mtime": 1793279234.7724946,
+    "ast_hash": "",
+    "semantic_hash": "27ea23b035e67234bbdad30b82562745"
+  },
+  "PRD/PRD Frontend/README.md": {
+    "mtime": 1793279234.7787273,
+    "ast_hash": "",
+    "semantic_hash": "83e92b3cc3544fd81620c207ca771139"
+  },
+  "PRD/PRD Frontend/Rancangan Layar Crawler.md": {
+    "mtime": 1793279234.7745411,
+    "ast_hash": "",
+    "semantic_hash": "a94b21cb6d9189d63230fa3146b73a09"
+  },
+  "PRD/PRD Machine Learning/README.md": {
+    "mtime": 1793279628.8130271,
+    "ast_hash": "",
+    "semantic_hash": "b05fff4f019d198a2fd6b01552cd9eea"
+  },
+  "PRD/README.md": {
+    "mtime": 1793279234.7778966,
+    "ast_hash": "",
+    "semantic_hash": "ee887c825b8b169cf864142fa04ab643"
+  },
+  "Crawler/Frontend/docs/API_CONTRACT.md": {
+    "mtime": 1793279628.8096185,
+    "ast_hash": "",
+    "semantic_hash": "2f050a9478fcbcb28ec74b05891e38ec"
+  },
+  "Crawler/Frontend/docs/DELIVERY.md": {
+    "mtime": 1793279814.8409338,
+    "ast_hash": "",
+    "semantic_hash": "9f569ac9c4a5f946c45ece6e4e2a4ead"
+  },
+  "Crawler/Frontend/README.md": {
+    "mtime": 1793279628.8085837,
+    "ast_hash": "",
+    "semantic_hash": "862ac24f53b02ecbb376d50a97da581e"
+  },
+  "graphify-out/obsidian/HOME.md": {
+    "mtime": 1793279814.8425765,
+    "ast_hash": "",
+    "semantic_hash": "9e63035a200aabf3311ffced59f9352b"
+  },
+  "graphify-out/obsidian/Arsitektur BeeSense.md": {
+    "mtime": 1793279814.8433883,
+    "ast_hash": "",
+    "semantic_hash": "9f93fee17f8ff6856aeddfa944c21ae1"
+  },
+  "graphify-out/obsidian/PRD Frontend Crawler.md": {
+    "mtime": 1793279628.817153,
+    "ast_hash": "",
+    "semantic_hash": "8ed03ca60da5fd4fe699a9cf18103f05"
+  },
+  "graphify-out/obsidian/Frontend React Crawler.md": {
+    "mtime": 1793279628.813718,
+    "ast_hash": "",
+    "semantic_hash": "baa12eeec897b10e2eab9080a23344ef"
   }
 }

@@ -13,8 +13,6 @@ tags:
 
 ## Connections
 - [[Artifact-only dashboard without GensimTorch imports]] - `references` [EXTRACTED]
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - `references` [EXTRACTED]
 - [[New-corpus native SBERT encoding or exact verified cache reuse]] - `references` [EXTRACTED]

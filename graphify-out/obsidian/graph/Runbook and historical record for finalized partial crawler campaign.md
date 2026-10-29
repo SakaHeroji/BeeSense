@@ -14,12 +14,10 @@ tags:
 ## Connections
 - [[1000 qualified-root targets per platform within shared three-hour budget]] - `references` [EXTRACTED]
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Before 04 cumulative qualified YouTube77Reddit26; evidence32547]] - `references` [EXTRACTED]
 - [[Before segment 03 qualified YouTube6Reddit17; exported evidence831]] - `references` [EXTRACTED]
 - [[Campaign descriptor records finalized PARTIAL status and five-segment accounting]] - `references` [EXTRACTED]
-- [[Campaign index 1000-new-root targets with manual CAPTCHA and live counts]] - `references` [EXTRACTED]
 - [[Combined-corpus training completed20topics, c_v 0.4720034333858867]] - `references` [EXTRACTED]
 - [[Cooldown verification50 crawler tests, 49pass1skip;12 Reddit runner tests pass]] - `references` [EXTRACTED]
 - [[Each continuation excludes original dataset and every prior campaign segment]] - `references` [EXTRACTED]
