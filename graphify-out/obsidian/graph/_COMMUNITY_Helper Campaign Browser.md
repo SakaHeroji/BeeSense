@@ -1,28 +1,16 @@
 ---
 type: community
-cohesion: 0.27
-members: 13
+cohesion: 1.00
+members: 1
 ---
 
 # Helper Campaign Browser
 
-**Cohesion:** 0.27 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 1 nodes
 
 ## Members
-- [[browser_campaign.mjs]] - code - Reddit/browser_campaign.mjs
-- [[browser_campaign.test.mjs]] - code - Reddit/browser_campaign.test.mjs
-- [[browser_campaign_detail.mjs]] - code - Reddit/browser_campaign_detail.mjs
-- [[browser_campaign_detail.test.mjs]] - code - Reddit/browser_campaign_detail.test.mjs
-- [[classifyCaptureFailure()]] - code - Reddit/browser_campaign_detail.mjs
-- [[createCollector()]] - code - Reddit/browser_campaign.mjs
-- [[enrichBatch()]] - code - Reddit/browser_campaign_detail.mjs
-- [[inWindow()]] - code - Reddit/browser_campaign.mjs
-- [[mergeCandidates()]] - code - Reddit/browser_campaign.mjs
-- [[rateLimitSeconds()]] - code - Reddit/browser_campaign_detail.mjs
-- [[row]] - code - Reddit/browser_campaign.test.mjs
-- [[source]] - code - Reddit/browser_campaign.test.mjs
-- [[window]] - code - Reddit/browser_campaign.test.mjs
+- [[social_crawler.json]] - document - social_crawler.json
 
 ## Live Query (requires Dataview plugin)
 

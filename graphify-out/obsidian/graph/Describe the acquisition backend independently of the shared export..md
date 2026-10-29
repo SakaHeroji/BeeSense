@@ -1,17 +1,17 @@
 ---
 source_file: "social_crawler.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L541"
+community: "Community None"
+location: "L1231"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # Describe the acquisition backend independently of the shared export.
 
 ## Connections
-- [[._source_metadata()]] - `rationale_for` [EXTRACTED]
+- [[._source_metadata()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

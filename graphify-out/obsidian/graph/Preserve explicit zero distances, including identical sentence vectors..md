@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L648"
+community: "Community None"
+location: "L685"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # Preserve explicit zero distances, including identical sentence vectors.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._filter_radius()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

@@ -1,12 +1,16 @@
 # Penjelasan dan tren topik BeeSense
 
-Revisi 28 Oktober 2026, producer `1.1.0`. `SocialNLPClusterer` pada [social_nlp.py](social_nlp.py) kini menghasilkan penjelasan yang dapat ditelusuri untuk setiap cluster. `SocialNLPStreamlitApp` pada [nlp_dashboard.py](nlp_dashboard.py) menampilkannya melalui **Penjelasan topik**, serta detail topik pada tampilan lain. Pemisahan class ML dan UI tetap berlaku.
+Revisi 29 Oktober 2026; producer aktif mengikuti manifest run. `SocialNLPClusterer` pada [social_nlp.py](social_nlp.py) kini menghasilkan penjelasan yang dapat ditelusuri untuk setiap cluster. `SocialNLPStreamlitApp` pada [main.py](main.py) menampilkannya melalui **Penjelasan topik**, dengan pintasan dari ringkasan, peta, dan daftar kalimat. Pemisahan class ML dan UI tetap berlaku.
 
 ## Isi penjelasan
 
 Setiap topik mempunyai istilah pembeda, deskripsi ekstraktif, tiga contoh kalimat asli beserta source_row Excel/tanggal/tautan, label pola, narasi perbandingan waktu, porsi bulanan gabungan/per platform, perubahan frasa, dan alasan keterbatasan. Kutipan berstatus **EXTRACTED**; pemilihan contoh, interpretasi cluster, dan arah merupakan **INFERRED**. Noise tidak diperlakukan sebagai satu topik koheren.
 
 Deskripsi menggabungkan kosakata c-TF-IDF model penuh dengan kalimat representatif. Relevansi kandidat berbobot kedekatan centroid (0,45), kecocokan istilah pembeda (0,40), dan panjang informatif (0,15). Dari maksimal 200 kandidat, **Maximal Marginal Relevance (MMR)** menyeimbangkan relevansi dan redundansi cosine embedding dengan lambda 0,75. Bila tersedia, kalimat berisi istilah dan minimal enam kata didahulukan; sumber dari post/komentar berbeda diprioritaskan. Tanpa embedding, redundansi memakai token Jaccard. Ringkasan mengambil cuplikan maksimal 260 karakter; kalimat lengkap tetap tersedia pada bukti. Metode ini tidak menghasilkan parafrasa abstraktif atau diagnosis/sentimen/penyebab yang tidak dibuktikan sumber. Mutu label semantik tetap belum divalidasi dengan anotasi manusia.
+
+## Panel topik terpilih
+
+Empat card membedakan komentar unik, porsi komentar, jumlah video/thread asal, dan coherence c_v topik. Rata-rata model ditampilkan sebagai pembanding; ambang rata-rata 0,4 tidak menjamin setiap topik mempunyai skor 0,4. Grafik istilah menghitung kehadiran istilah model penuh pada kalimat unik terfilter, bukan probabilitas. Grafik platform dan sumber memakai komentar unik, dengan catatan bila satu post menyumbang >60%. Tabel angka tersedia sebagai alternatif grafik, diikuti grafik porsi waktu dan kutipan bertautan. Memilih **Jelaskan topik ini** mempertahankan topik dan filter di URL.
 
 ## Mengukur pola waktu
 
@@ -39,7 +43,7 @@ Semua opsi berada dalam bagian `explanation` pada [social_nlp.json](social_nlp.j
 ```python
 from social_nlp import SocialNLPClusterer
 
-data = SocialNLPClusterer.load_run("outputs/nlp_20261028_coherence_01")
+data = SocialNLPClusterer.load_run("outputs/nlp_20261029_combined_topics20_01")
 options = SocialNLPClusterer("social_nlp.json").config["explanation"]
 result = SocialNLPClusterer.explain_artifacts(data, options=options)
 # Bisa dipakai setelah pipeline.fit_excel() / describe_topics():
@@ -49,7 +53,7 @@ result = SocialNLPClusterer.explain_artifacts(data, options=options)
 #     data, subset, date_start="2026-01-01", date_end="2026-09-30", options=options
 # )
 SocialNLPClusterer.save_explanations(
-    result, "outputs/penjelasan_baru", source_run="outputs/nlp_20261028_coherence_01"
+    result, "outputs/penjelasan_baru", source_run="outputs/nlp_20261029_combined_topics20_01"
 )
 ```
 
@@ -57,11 +61,11 @@ Subset occurrence menentukan lingkup deskripsi, bukti, dan penyebut. `date_start
 
 ```bash
 # Tidak mengunduh model, meng-encode, melatih ulang, atau crawling:
-.venv-nlp/bin/python social_nlp.py --explain-run outputs/nlp_20261028_coherence_01 \
+.venv-nlp/bin/python social_nlp.py --explain-run outputs/nlp_20261029_combined_topics20_01 \
   --output-dir outputs/penjelasan_baru
 # Batas eksplisit opsional: --trend-start 2026-01-01 --trend-end 2026-09-30
 
-.venv-nlp/bin/python -m streamlit run nlp_dashboard.py \
+.venv-nlp/bin/python -m streamlit run main.py \
   --server.address=127.0.0.1 --server.port=8501
 ```
 
@@ -69,9 +73,9 @@ Dashboard menghitung penjelasan ketika tampilan penjelasan dibuka atau topik dip
 
 ## Hasil aktual dan persistensi
 
-Dashboard menghitung penjelasan dari run aktif outputs/nlp_20261028_coherence_01. File ekspor penjelasan historis telah dibersihkan; gunakan API/CLI di atas bila memerlukan sidecar baru, yang secara default diabaikan Git.
+Dashboard menghitung penjelasan dari run aktif outputs/nlp_20261029_combined_topics20_01. File ekspor penjelasan historis telah dibersihkan; gunakan API/CLI di atas bila memerlukan sidecar baru, yang secara default diabaikan Git.
 
-Hasil hitungan dan contoh numerik berikut adalah **historis dari run v1 `outputs/nlp_20261028_02`** (51 topik HDBSCAN), bukan angka untuk 52 topik DBSCAN aktif. Label dan arah run baru dihitung ulang saat dibuka.
+Hasil hitungan dan contoh numerik berikut adalah **historis dari run v1 `outputs/nlp_20261028_02`** (51 topik HDBSCAN), bukan angka untuk model 20 topik aktif. Label dan arah run baru dihitung ulang saat dibuka.
 
 | Pola snapshot v1 | Topik |
 |---|---:|
@@ -91,16 +95,16 @@ Skema sidecar baru **`beesense-topic-explanations:1`** menyimpan `topic_explanat
 
 ## Verifikasi dan batas deployment
 
-Pengujian NLP/UI mencakup pola naik/turun/stabil, spike, bulan hilang/parsial, duplikasi kalimat, perubahan komposisi platform, dominasi thread, tanggal perkiraan, MMR/provenans, checksum sidecar, filter dan slider, serta guard tanpa training. Dataset, sebelas checksum artifact v2 aktif serta sembilan artifact v1 arsip diperiksa melalui scripts/verify_dashboard_data.py. Log/screenshot eksperimen lama telah dibersihkan; tes memakai fixture sintetis dan tidak memerlukan arsip tersebut.
+Pengujian NLP/UI mencakup pola naik/turun/stabil, spike, bulan hilang/parsial, duplikasi kalimat, perubahan komposisi platform, dominasi thread, tanggal perkiraan, MMR/provenans, checksum sidecar, filter dan slider, serta guard tanpa training. Workbook sumber serta seluruh artifact aktif dan snapshot arsip diperiksa melalui scripts/verify_dashboard_data.py. Log/screenshot eksperimen lama telah dibersihkan; tes memakai fixture sintetis dan tidak memerlukan arsip tersebut.
 
 ```bash
 .venv-nlp/bin/python -m unittest discover -s tests/nlp -v
-.venv-nlp/bin/python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py nlp_dashboard.py tests/nlp
-.venv-nlp/bin/python -m ruff format --isolated --check social_nlp.py nlp_dashboard.py tests/nlp
+.venv-nlp/bin/python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py tests/nlp
+.venv-nlp/bin/python -m ruff format --isolated --check social_nlp.py main.py tests/nlp
 .venv-nlp/bin/python -m scripts.verify_dashboard_data
 ```
 
-Dockerfile.nlp tetap mencakup dua class dan JSON; tidak perlu dependency tambahan. Docker daemon belum aktif, sehingga image/runtime revisi ini **belum diverifikasi**. Perintah tertunda: `docker build -f Dockerfile.nlp -t beesense-nlp .`. Tidak ada deployment production.
+Dockerfile.nlp tetap mencakup dua class dan JSON; tidak perlu dependency tambahan. Image UI `beesense-nlp:main` telah dibangun dan container lokal pada http://127.0.0.1:8501 sehat, non-root, dengan mount artifact read-only. Runtime membaca run gabungan `outputs/nlp_20261029_combined_topics20_01` dengan 20 topik dan rata-rata c_v 0,4720. Tidak ada deployment production.
 
 ## Referensi primer
 

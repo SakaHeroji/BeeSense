@@ -1,12 +1,12 @@
 ---
 source_file: "requirements-sbert.txt"
 type: "rationale"
-community: "Runbook dan Verifikasi Lokal"
+community: "Community None"
 location: "platform-specific dependency markers"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Community_None
 ---
 
 # Platform-specific macOS Intel Torch and numerical compatibility
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

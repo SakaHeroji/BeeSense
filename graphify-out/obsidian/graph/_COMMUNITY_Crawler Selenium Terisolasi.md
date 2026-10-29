@@ -1,71 +1,69 @@
 ---
 type: community
-cohesion: 0.08
-members: 56
+cohesion: 0.07
+members: 54
 ---
 
 # Crawler Selenium Terisolasi
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 56 nodes
+**Cohesion:** 0.07 - loosely connected
+**Members:** 54 nodes
 
 ## Members
-- [[.__init__()_21]] - code - social_crawler_selenium.py
-- [[._checkpoint_items()_1]] - code - social_crawler_selenium.py
-- [[._execute()_1]] - code - social_crawler_selenium.py
-- [[._legacy_settings()_1]] - code - social_crawler_selenium.py
-- [[._normalize()_1]] - code - social_crawler_selenium.py
-- [[._source_metadata()_1]] - code - social_crawler_selenium.py
-- [[._youtube_reply()]] - code - social_crawler_selenium.py
-- [[._youtube_sort()]] - code - social_crawler_selenium.py
-- [[.navigate()]] - code - social_crawler_selenium.py
-- [[.pause()]] - code - social_crawler_selenium.py
-- [[.plan()_1]] - code - social_crawler_selenium.py
-- [[.reddit()]] - code - social_crawler_selenium.py
-- [[.rows()]] - code - tests/test_social_crawler_selenium.py
-- [[.run()_1]] - code - social_crawler_selenium.py
-- [[.search()]] - code - social_crawler_selenium.py
-- [[.selected_root()]] - code - social_crawler_selenium.py
-- [[.selenium_version()]] - code - social_crawler_selenium.py
-- [[.setUp()_5]] - code - tests/test_social_crawler_selenium.py
-- [[.setUpClass()]] - code - tests/test_social_crawler_selenium.py
-- [[.state()]] - code - social_crawler_selenium.py
-- [[.tearDownClass()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_barrier_stops_after_first_call_and_still_exports_headers()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_both_workbooks_preserve_schema_and_selenium_provenance()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_captcha_quotes_are_ignored_when_content_is_present()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_disabled_checkpoint_and_remote_credentials_are_rejected()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_dry_run_uses_same_config_and_excel_contract_without_browser()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_existing_output_is_not_overwritten()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_reddit_identity_and_subreddit_checks()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_search_scroll_deduplicates_and_enforces_candidate_cap()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_timeout_keeps_streamed_evidence_and_source_version()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_worker_sanitizes_errors_and_closes_browser()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_youtube_acquisition_enforces_total_and_reply_caps()]] - code - tests/test_social_crawler_selenium.py
-- [[.test_youtube_scripts_extract_only_native_ids_and_own_text()]] - code - tests/test_social_crawler_selenium.py
-- [[.youtube()]] - code - social_crawler_selenium.py
-- [[Content quoting an error is never used to classify an access barrier.]] - rationale - social_crawler_selenium.py
-- [[Convert the shared rendered DOM capture without inventing identities.]] - rationale - social_crawler_selenium.py
-- [[Drop-in SocialCrawler with Selenium for both platforms and shared exports.]] - rationale - social_crawler_selenium.py
-- [[Offline exportworker tests, plus opt-in real Chrome DOM fixtures.]] - rationale - tests/test_social_crawler_selenium.py
-- [[One browser operation. The parent enforces the hard process deadline.]] - rationale - social_crawler_selenium.py
-- [[SeleniumDOMTests]] - code - tests/test_social_crawler_selenium.py
-- [[SocialCrawlerSelenium]] - code - social_crawler_selenium.py
-- [[SocialCrawlerSeleniumTests]] - code - tests/test_social_crawler_selenium.py
-- [[Stream evidence before completion; the original supervisor can retain it.]] - rationale - social_crawler_selenium.py
-- [[_SeleniumSource]] - code - social_crawler_selenium.py
-- [[_barrier()]] - code - social_crawler_selenium.py
-- [[_create_driver()]] - code - social_crawler_selenium.py
-- [[_receipt()]] - code - social_crawler_selenium.py
-- [[_reddit_records()]] - code - social_crawler_selenium.py
-- [[_timestamp()]] - code - social_crawler_selenium.py
-- [[capture()]] - code - tests/test_social_crawler_selenium.py
-- [[main()_4]] - code - social_crawler_selenium.py
-- [[selenium_worker()]] - code - social_crawler_selenium.py
-- [[social_crawler_selenium.py]] - code - social_crawler_selenium.py
-- [[test_social_crawler_selenium.py]] - code - tests/test_social_crawler_selenium.py
-- [[youtube_events()]] - code - tests/test_social_crawler_selenium.py
+- [[.__init__()_20]] - code - social_nlp.py
+- [[._cache_dir()]] - code - social_nlp.py
+- [[._clean()]] - code - social_nlp.py
+- [[._evaluate()]] - code - social_nlp.py
+- [[._event()]] - code - social_nlp.py
+- [[._explanation_evidence()]] - code - social_nlp.py
+- [[._explanation_term_changes()]] - code - social_nlp.py
+- [[._explanation_trend()]] - code - social_nlp.py
+- [[._validate_config()]] - code - social_nlp.py
+- [[._validate_explanation_options()]] - code - social_nlp.py
+- [[.build_topic_graph()]] - code - social_nlp.py
+- [[.compare()]] - code - social_nlp.py
+- [[.describe_topics()]] - code - social_nlp.py
+- [[.encode()]] - code - social_nlp.py
+- [[.explain_artifacts()]] - code - social_nlp.py
+- [[.explain_topics()]] - code - social_nlp.py
+- [[.fit_excel()]] - code - social_nlp.py
+- [[.load_explanations()]] - code - social_nlp.py
+- [[.load_run()]] - code - social_nlp.py
+- [[.parent_post_key()]] - code - social_nlp.py
+- [[.prepare_excel()]] - code - social_nlp.py
+- [[.save()]] - code - social_nlp.py
+- [[.save_explanations()]] - code - social_nlp.py
+- [[.select_candidate()]] - code - social_nlp.py
+- [[.sentence_spans()]] - code - social_nlp.py
+- [[.setUpClass()_2]] - code - tests/nlp/test_social_nlp.py
+- [[.setUpClass()_1]] - code - tests/nlp/test_streamlit_app.py
+- [[.stability()]] - code - social_nlp.py
+- [[.tearDownClass()_2]] - code - tests/nlp/test_social_nlp.py
+- [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_bad_input_and_configuration_are_rejected()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_dedup_preserves_both_occurrences_and_original_dates()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_long_segments_cover_text_without_silent_truncation()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_span_offsets_and_abbreviations_are_source_faithful()]] - code - tests/nlp/test_social_nlp.py
+- [[DashboardTests]] - code - tests/nlp/test_social_nlp.py
+- [[NLPTests]] - code - tests/nlp/test_social_nlp.py
+- [[SocialNLPClusterer]] - code - social_nlp.py
+- [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
+- [[encoder()]] - code - tests/nlp/test_social_nlp.py
+- [[file_hash()]] - code - social_nlp.py
+- [[fixture()]] - code - tests/nlp/test_social_nlp.py
+- [[json_write()]] - code - social_nlp.py
+- [[main()_7]] - code - scripts/verify_dashboard_data.py
+- [[main()_3]] - code - social_nlp.py
+- [[social_nlp.py]] - code - social_nlp.py
+- [[test_social_nlp.py]] - code - tests/nlp/test_social_nlp.py
+- [[test_streamlit_app.py]] - code - tests/nlp/test_streamlit_app.py
+- [[verify()_1]] - code - scripts/verify_dashboard_data.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -75,11 +73,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 4 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
+- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 2 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 1 edge to [[_COMMUNITY_Bundle Excel dan Provenans]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 1 edge to [[_COMMUNITY_Parser DOM Terbatas]]
 
 ## Top bridge nodes
-- [[SocialCrawlerSelenium]] - degree 24, connects to 1 community
-- [[_SeleniumSource]] - degree 18, connects to 1 community
-- [[SocialCrawlerSeleniumTests]] - degree 18, connects to 1 community
-- [[test_social_crawler_selenium.py]] - degree 16, connects to 1 community
-- [[selenium_worker()]] - degree 13, connects to 1 community
+- [[SocialNLPClusterer]] - degree 76, connects to 3 communities
+- [[file_hash()]] - degree 23, connects to 3 communities
+- [[social_nlp.py]] - degree 9, connects to 1 community
+- [[test_streamlit_app.py]] - degree 4, connects to 1 community
+- [[.setUpClass()_1]] - degree 4, connects to 1 community

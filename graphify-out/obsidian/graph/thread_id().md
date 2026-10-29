@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Snapshot NLP dan Arsip"
 location: "L498"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # thread_id()
@@ -18,4 +18,4 @@ tags:
 - [[thread_url()]] - `calls` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

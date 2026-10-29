@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L164"
+community: "Community None"
+location: "L327"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # Compose the original adapters and workers; one JSON configuration and bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawler]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

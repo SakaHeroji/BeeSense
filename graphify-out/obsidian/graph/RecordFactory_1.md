@@ -1,18 +1,18 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # RecordFactory
 
 ## Connections
-- [[.__init__()_16]] - `method` [EXTRACTED]
+- [[.__init__()_15]] - `method` [EXTRACTED]
 - [[.content()_2]] - `method` [EXTRACTED]
 - [[.key()_1]] - `method` [EXTRACTED]
 - [[.row()_1]] - `method` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[YouTubeAdapter]] - `uses` [INFERRED]
 - [[crawl_youtube.py]] - `imports` [EXTRACTED]
 - [[import_pilot()]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 - [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

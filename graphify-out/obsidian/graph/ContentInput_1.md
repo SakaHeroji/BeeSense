@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L170"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # ContentInput
@@ -22,4 +22,4 @@ tags:
 - [[import_pilot()]] - `calls` [EXTRACTED]
 - [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

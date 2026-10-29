@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Pipeline dan Persistensi NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # crawl_reddit_single.py
@@ -54,7 +54,7 @@ tags:
 - [[parsed_number()]] - `contains` [EXTRACTED]
 - [[parser()]] - `contains` [EXTRACTED]
 - [[rendered_text()]] - `contains` [EXTRACTED]
-- [[run()_1]] - `contains` [EXTRACTED]
+- [[run()]] - `contains` [EXTRACTED]
 - [[run_self_tests()]] - `contains` [EXTRACTED]
 - [[run_worker()]] - `contains` [EXTRACTED]
 - [[safe_web_url()]] - `contains` [EXTRACTED]
@@ -71,4 +71,4 @@ tags:
 - [[walk()]] - `contains` [EXTRACTED]
 - [[worker()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

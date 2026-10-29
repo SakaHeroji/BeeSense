@@ -1,12 +1,12 @@
 ---
 source_file: "SELENIUM_CRAWLER.md"
 type: "concept"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "# SocialCrawlerSelenium"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # SocialCrawlerSelenium class
@@ -23,4 +23,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[Worker hard deadline preserves streamed partial events]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/concept #graphify/EXTRACTED #community/Community_None

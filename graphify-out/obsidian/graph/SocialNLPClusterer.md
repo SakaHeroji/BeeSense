@@ -1,18 +1,18 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Crawler Selenium Terisolasi"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # SocialNLPClusterer
 
 ## Connections
-- [[.__init__()_24]] - `method` [EXTRACTED]
+- [[.__init__()_20]] - `method` [EXTRACTED]
 - [[._cache_dir()]] - `method` [EXTRACTED]
 - [[._clean()]] - `method` [EXTRACTED]
 - [[._ctfidf_terms()]] - `method` [EXTRACTED]
@@ -23,8 +23,10 @@ tags:
 - [[._explanation_term_changes()]] - `method` [EXTRACTED]
 - [[._explanation_trend()]] - `method` [EXTRACTED]
 - [[._filter_radius()]] - `method` [EXTRACTED]
+- [[._merge_topics()]] - `method` [EXTRACTED]
 - [[._radius_graph()]] - `method` [EXTRACTED]
 - [[._reduce_embeddings()]] - `method` [EXTRACTED]
+- [[._reuse_embeddings()]] - `method` [EXTRACTED]
 - [[._topic_vectorizer()]] - `method` [EXTRACTED]
 - [[._validate_config()]] - `method` [EXTRACTED]
 - [[._validate_explanation_options()]] - `method` [EXTRACTED]
@@ -45,9 +47,9 @@ tags:
 - [[.score_coherence()]] - `method` [EXTRACTED]
 - [[.select_candidate()]] - `method` [EXTRACTED]
 - [[.sentence_spans()]] - `method` [EXTRACTED]
-- [[.setUp()_6]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_1]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_2]] - `calls` [EXTRACTED]
+- [[.setUp()_7]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_2]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_1]] - `calls` [EXTRACTED]
 - [[.stability()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `calls` [EXTRACTED]
 - [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - `calls` [EXTRACTED]
@@ -59,29 +61,32 @@ tags:
 - [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - `calls` [EXTRACTED]
 - [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - `indirect_call` [INFERRED]
 - [[.test_real_umap_projections_and_cache_are_validated()]] - `calls` [EXTRACTED]
+- [[.test_retraining_reduces_topics_and_persists_original_dbscan_ids()]] - `calls` [EXTRACTED]
+- [[.test_saved_embeddings_require_matching_source_model_and_sentence_order()]] - `calls` [EXTRACTED]
 - [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - `calls` [EXTRACTED]
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `calls` [EXTRACTED]
-- [[Additive v2 coherence metadata with v1v2-compatible loaders]] - `shares_data_with` [EXTRACTED]
+- [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `calls` [EXTRACTED]
+- [[Additive v 2 reduction and coherence metadata with v1v2 loaders]] - `shares_data_with` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
-- [[DashboardTests]] - `uses` [INFERRED]
-- [[Encode multilingual sentences with SBERT and fit UMAP + DBSCAN.      Encoder inj]] - `rationale_for` [EXTRACTED]
+- [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
+- [[Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.]] - `rationale_for` [EXTRACTED]
 - [[ExplanationTests]] - `uses` [INFERRED]
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `implements` [EXTRACTED]
-- [[NLPTests]] - `uses` [INFERRED]
+- [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
+- [[New combined-corpus SBERT and dual-UMAP features reused only through exact verified caches]] - `implements` [INFERRED]
 - [[Non-noise c-TF-IDF unigrambigram labels]] - `implements` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `uses` [INFERRED]
-- [[StreamlitTests]] - `uses` [INFERRED]
-- [[Two UMAP 10D projections seeded 42 and 43]] - `implements` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[Published 15-candidate DBSCAN grid preserves 8 million-edge guard]] - `implements` [INFERRED]
+- [[Two UMAP 10 D projections seeded 42 and 43]] - `implements` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
+- [[main.py]] - `imports` [EXTRACTED]
 - [[model_from_counts()]] - `calls` [EXTRACTED]
-- [[nlp_dashboard.py]] - `imports` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports` [EXTRACTED]
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

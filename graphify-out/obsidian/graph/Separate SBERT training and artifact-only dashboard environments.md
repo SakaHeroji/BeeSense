@@ -1,18 +1,19 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Runbook dan Verifikasi Lokal"
+community: "Community None"
 location: "## Crawling atau training baru"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Community_None
 ---
 
 # Separate SBERT training and artifact-only dashboard environments
 
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[Checksum-verified reuse of immutable SBERT embeddings]] - `references` [EXTRACTED]
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/rendered_thread_dom.mjs"
 type: "code"
-community: "Ekstraksi DOM Reddit"
+community: "Validasi Redirect dan Kesalahan"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekstraksi_DOM_Reddit
+  - community/Validasi_Redirect_dan_Kesalahan
 ---
 
 # captureRenderedThread()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[rendered_thread_dom.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekstraksi_DOM_Reddit
+#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan

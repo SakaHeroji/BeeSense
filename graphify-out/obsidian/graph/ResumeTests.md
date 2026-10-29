@@ -1,18 +1,18 @@
 ---
 source_file: "Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Ekspor Campaign dan Resume"
+community: "Konfigurasi SocialCrawler"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_Campaign_dan_Resume
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # ResumeTests
 
 ## Connections
-- [[.capture()_1]] - `method` [EXTRACTED]
+- [[.capture()]] - `method` [EXTRACTED]
 - [[.save_raw()]] - `method` [EXTRACTED]
 - [[.setUp()_1]] - `method` [EXTRACTED]
 - [[.test_candidate_rejects_wrong_host_identity_and_window()]] - `method` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[.test_resume_skips_dom_and_prioritizes_missing_before_excerpts()]] - `method` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

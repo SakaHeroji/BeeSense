@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_social_crawler_selenium.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Community None"
 location: "L427"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Community_None
 ---
 
 # SeleniumDOMTests
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawlerSelenium]] - `uses` [INFERRED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Community_None

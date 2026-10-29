@@ -1,12 +1,12 @@
 ---
 source_file: "SELENIUM_CRAWLER.md"
 type: "concept"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "## Docker lokal"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # Separate non-root crawler container with Selenium Grid
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/concept #graphify/EXTRACTED #community/Community_None

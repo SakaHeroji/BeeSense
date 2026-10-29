@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/import_public_web_sections.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Pipeline dan Persistensi NLP"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # import_sections()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_public_web_sections.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

@@ -120,7 +120,7 @@ def barrier_status(capture, now=None):
     if re.search(r'ERR_BLOCKED_BY_CLIENT|This page has been blocked by Chrome', text, re.I):
         return 'CLIENT_BROWSER_BLOCK', None
     # User post/comment text is never used as a CAPTCHA signal when a post exists.
-    if not capture.get('post') and re.search(r'prove your humanity|verify (?:that )?you.re human|complete the challenge|recaptcha', text, re.I):
+    if not capture.get('post') and re.search(r'prove your humanity|verify (?:that )?you(?:.re| are) human|complete the challenge|recaptcha', text, re.I):
         return 'CAPTCHA_REQUIRED', None
     if status in {401, 403} or re.search(r'you.ve been blocked|blocked by network|log in to continue|login required', text, re.I):
         return 'ACCESS_BARRIER', None

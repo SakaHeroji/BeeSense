@@ -1,12 +1,12 @@
 ---
 source_file: "SELENIUM_CRAWLER.md"
 type: "concept"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "opening paragraph"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # Official Selenium Manager ChromeDriver selection
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/concept #graphify/EXTRACTED #community/Community_None

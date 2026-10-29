@@ -1,12 +1,12 @@
 ---
 source_file: "SELENIUM_CRAWLER.md"
 type: "rationale"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "## Kontrak Excel"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # Relative dates remain calendar estimates
@@ -15,4 +15,4 @@ tags:
 - [[Bounded native-ID evidence and explicit uncertainty]] - `semantically_similar_to` [INFERRED]
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

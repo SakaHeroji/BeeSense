@@ -1,287 +1,277 @@
 {
   "Reddit/browser_campaign.mjs": {
-    "mtime": 1793193106.7746038,
+    "mtime": 1793071652.7287831,
     "ast_hash": "0a141460b014a7b9259332a34d889de2",
     "semantic_hash": "0a141460b014a7b9259332a34d889de2"
   },
   "Reddit/browser_campaign.test.mjs": {
-    "mtime": 1793193106.7748048,
+    "mtime": 1793071652.772914,
     "ast_hash": "314567c100323589677908809a482b63",
     "semantic_hash": "314567c100323589677908809a482b63"
   },
   "Reddit/browser_campaign_detail.mjs": {
-    "mtime": 1793193106.7751195,
+    "mtime": 1793077903.589066,
     "ast_hash": "33945e5335952c3e2e27383fcd29bec5",
     "semantic_hash": "33945e5335952c3e2e27383fcd29bec5"
   },
   "Reddit/browser_campaign_detail.test.mjs": {
-    "mtime": 1793193106.775336,
+    "mtime": 1793074415.358514,
     "ast_hash": "7f681c02342a7e4edb8a5ccdc239b1f0",
     "semantic_hash": "7f681c02342a7e4edb8a5ccdc239b1f0"
   },
   "Reddit/config_reddit.json": {
-    "mtime": 1793193106.775477,
+    "mtime": 1793069724.9899154,
     "ast_hash": "6337254c4cd9a85f1ba69c7559cfc414",
     "semantic_hash": "6337254c4cd9a85f1ba69c7559cfc414"
   },
   "Reddit/config_reddit_1000.json": {
-    "mtime": 1793193106.775679,
+    "mtime": 1793083706.3464196,
     "ast_hash": "0ddd07045541eb504134b892d4a49c4a",
     "semantic_hash": "0ddd07045541eb504134b892d4a49c4a"
   },
   "Reddit/crawl_reddit_playwright.py": {
-    "mtime": 1793193106.7759,
-    "ast_hash": "9fa96044c5be5b1b7d81c078e44f5873",
-    "semantic_hash": "9fa96044c5be5b1b7d81c078e44f5873"
+    "mtime": 1793242672.8749306,
+    "ast_hash": "b47edeb541aa7b571b3db417c5304d2f",
+    "semantic_hash": "b47edeb541aa7b571b3db417c5304d2f"
   },
   "Reddit/crawl_reddit_single.py": {
-    "mtime": 1793193106.7765868,
+    "mtime": 1793069540.566515,
     "ast_hash": "25ae463bc19ac6f8cae2f5cd940219d7",
     "semantic_hash": "25ae463bc19ac6f8cae2f5cd940219d7"
   },
   "Reddit/export_browser_campaign.py": {
-    "mtime": 1793193106.7770312,
+    "mtime": 1793083954.652675,
     "ast_hash": "2655a67c3c7d7573834960aded07c3a9",
     "semantic_hash": "2655a67c3c7d7573834960aded07c3a9"
   },
   "Reddit/import_public_web_sections.py": {
-    "mtime": 1793193106.7774754,
+    "mtime": 1793076711.3482842,
     "ast_hash": "0108b4b28edf4fabc86dd527990014ad",
     "semantic_hash": "0108b4b28edf4fabc86dd527990014ad"
   },
   "Reddit/public_web_post.mjs": {
-    "mtime": 1793193106.7776954,
+    "mtime": 1793076591.620049,
     "ast_hash": "037f842a27adc3ceb6e3b0c9536dc34b",
     "semantic_hash": "037f842a27adc3ceb6e3b0c9536dc34b"
   },
   "Reddit/public_web_post.test.mjs": {
-    "mtime": 1793193106.7778883,
+    "mtime": 1793076591.66644,
     "ast_hash": "d0888e89b4ad68ff599c84ac8bc26326",
     "semantic_hash": "d0888e89b4ad68ff599c84ac8bc26326"
   },
   "Reddit/rendered_thread_dom.mjs": {
-    "mtime": 1793193106.7780714,
+    "mtime": 1793083365.506742,
     "ast_hash": "892b7209f1fbc609312e16615750d70e",
     "semantic_hash": "892b7209f1fbc609312e16615750d70e"
   },
   "Reddit/test_crawl_reddit_playwright.py": {
-    "mtime": 1793193106.7789247,
+    "mtime": 1793090953.3632476,
     "ast_hash": "0d6eefdec32f1a843e44121ba90f89c7",
     "semantic_hash": "0d6eefdec32f1a843e44121ba90f89c7"
   },
   "Reddit/verify_browser_campaign.py": {
-    "mtime": 1793193106.7794948,
+    "mtime": 1793078390.915501,
     "ast_hash": "e13c598211d323e33654edc129165240",
     "semantic_hash": "e13c598211d323e33654edc129165240"
   },
   "Youtube/config_youtube.json": {
-    "mtime": 1793193106.7809317,
+    "mtime": 1792988347.097452,
     "ast_hash": "7a5b9646ad63eda615b8f25cc350aec9",
     "semantic_hash": "7a5b9646ad63eda615b8f25cc350aec9"
   },
   "Youtube/contract.json": {
-    "mtime": 1793193106.781469,
+    "mtime": 1792982678.5357409,
     "ast_hash": "334adb502137dde3d7ad9c9d958e5459",
     "semantic_hash": "334adb502137dde3d7ad9c9d958e5459"
   },
   "Youtube/crawl_youtube.py": {
-    "mtime": 1793193106.7821033,
+    "mtime": 1793086164.4703283,
     "ast_hash": "8ee1e464e0bb71778c376bb7200ac84b",
     "semantic_hash": "8ee1e464e0bb71778c376bb7200ac84b"
   },
   "Youtube/social_common.py": {
-    "mtime": 1793193106.7827919,
+    "mtime": 1792947814.0,
     "ast_hash": "08634992a822538c9951fd79383064bb",
     "semantic_hash": "08634992a822538c9951fd79383064bb"
   },
-  "nlp_dashboard.py": {
-    "mtime": 1793202726.7474136,
-    "ast_hash": "5b48b95661a3b8496148c382f40d1c19",
-    "semantic_hash": "5b48b95661a3b8496148c382f40d1c19"
-  },
   "scripts/verify_dashboard_data.py": {
-    "mtime": 1793199528.1923885,
-    "ast_hash": "06ab2255571e5285c48aef58a00d8dfa",
-    "semantic_hash": "06ab2255571e5285c48aef58a00d8dfa"
+    "mtime": 1793252889.4298155,
+    "ast_hash": "76fb318b5306f39d70f7423a7cc40506",
+    "semantic_hash": "76fb318b5306f39d70f7423a7cc40506"
   },
   "social_crawler.json": {
-    "mtime": 1793193107.0911844,
-    "ast_hash": "cf0c12cfa948fe83d74525675a720ce0",
-    "semantic_hash": "cf0c12cfa948fe83d74525675a720ce0"
+    "mtime": 1793245530.0736814,
+    "ast_hash": "7c4ffe9abf8587074b865bdf4aa1ce81",
+    "semantic_hash": "7c4ffe9abf8587074b865bdf4aa1ce81"
   },
   "social_crawler.py": {
-    "mtime": 1793194825.7956173,
-    "ast_hash": "a934235bbd1abb7268af9244d7a8d68c",
-    "semantic_hash": "a934235bbd1abb7268af9244d7a8d68c"
+    "mtime": 1793245707.7763512,
+    "ast_hash": "d7fb8f53fb32a61910ccdb354b54a296",
+    "semantic_hash": "d7fb8f53fb32a61910ccdb354b54a296"
   },
   "social_crawler_selenium.py": {
-    "mtime": 1793194945.9978487,
+    "mtime": 1793240136.384513,
     "ast_hash": "87486c64b6756ecdfda498685b4e6f72",
     "semantic_hash": "87486c64b6756ecdfda498685b4e6f72"
   },
   "social_nlp.json": {
-    "mtime": 1793202296.834925,
-    "ast_hash": "e7328121308b8571481451f5e13c93b8",
-    "semantic_hash": "e7328121308b8571481451f5e13c93b8"
+    "mtime": 1793255254.216524,
+    "ast_hash": "4cfdd20384920952c70df0347e630385",
+    "semantic_hash": "4cfdd20384920952c70df0347e630385"
   },
   "social_nlp.py": {
-    "mtime": 1793202588.4127066,
-    "ast_hash": "68a0875d4acd7b4a80023e8a326c3733",
-    "semantic_hash": "68a0875d4acd7b4a80023e8a326c3733"
+    "mtime": 1793241163.8003764,
+    "ast_hash": "0b05997391025ec31c3ab9358c48aca5",
+    "semantic_hash": "0b05997391025ec31c3ab9358c48aca5"
   },
   "tests/nlp/test_dashboard_analysis.py": {
-    "mtime": 1793193107.0937116,
-    "ast_hash": "119c79f4d8b093db5fc53778ea7b214e",
-    "semantic_hash": "119c79f4d8b093db5fc53778ea7b214e"
+    "mtime": 1793258244.7138162,
+    "ast_hash": "7b0a3ef866a7bf1d598af63d189a9c36",
+    "semantic_hash": "7b0a3ef866a7bf1d598af63d189a9c36"
   },
   "tests/nlp/test_dashboard_data_verifier.py": {
-    "mtime": 1793199528.1918762,
-    "ast_hash": "0790bd9f452665e7823811d5f9047bb2",
-    "semantic_hash": "0790bd9f452665e7823811d5f9047bb2"
+    "mtime": 1793252918.8734252,
+    "ast_hash": "84bd867a548c11825263f2f06ce35f33",
+    "semantic_hash": "84bd867a548c11825263f2f06ce35f33"
   },
   "tests/nlp/test_social_nlp.py": {
-    "mtime": 1793202782.7107859,
-    "ast_hash": "1fc9f68df83462c071e464779c97d611",
-    "semantic_hash": "1fc9f68df83462c071e464779c97d611"
+    "mtime": 1793258244.7155566,
+    "ast_hash": "817ed5f12724da80a2581b015c16b570",
+    "semantic_hash": "817ed5f12724da80a2581b015c16b570"
   },
   "tests/nlp/test_streamlit_app.py": {
-    "mtime": 1793202448.4492676,
-    "ast_hash": "7d8e6142f564c1d0c5bdcbe5c35ea24f",
-    "semantic_hash": "7d8e6142f564c1d0c5bdcbe5c35ea24f"
+    "mtime": 1793258244.7170327,
+    "ast_hash": "00b2f01863073bfccd34a512e13b510b",
+    "semantic_hash": "00b2f01863073bfccd34a512e13b510b"
   },
   "tests/nlp/test_topic_explanations.py": {
-    "mtime": 1793193107.095741,
+    "mtime": 1793171561.847619,
     "ast_hash": "0ccfbc55158847a3813aec38864a67bb",
     "semantic_hash": "0ccfbc55158847a3813aec38864a67bb"
   },
   "tests/test_social_crawler.py": {
-    "mtime": 1793193107.0962846,
-    "ast_hash": "dd83c83ffd8f28e31e738c966faa00e4",
-    "semantic_hash": "dd83c83ffd8f28e31e738c966faa00e4"
+    "mtime": 1793245708.185341,
+    "ast_hash": "cf9d2c14e66c1a249e649f0d55a061e4",
+    "semantic_hash": "cf9d2c14e66c1a249e649f0d55a061e4"
   },
   "tests/test_social_crawler_selenium.py": {
-    "mtime": 1793195442.854518,
+    "mtime": 1793240136.3928373,
     "ast_hash": "ae2d45571f7dc94337d13ec80c56a21d",
     "semantic_hash": "ae2d45571f7dc94337d13ec80c56a21d"
   },
   ".github/workflows/ci.yml": {
-    "mtime": 1793202362.3620853,
-    "ast_hash": "a1395530795c5aecd433529d912f16b4",
-    "semantic_hash": "a1395530795c5aecd433529d912f16b4"
+    "mtime": 1793258244.7118754,
+    "ast_hash": "501a8cdba2d3903ac7972f7e53afe875",
+    "semantic_hash": "501a8cdba2d3903ac7972f7e53afe875"
   },
   "DASHBOARD_DESIGN.md": {
-    "mtime": 1793202646.6012642,
-    "ast_hash": "d192f86d32a4df75e2e8500aa53b815c",
-    "semantic_hash": "d192f86d32a4df75e2e8500aa53b815c"
+    "mtime": 1793258244.7050264,
+    "ast_hash": "0ed991b825ccf91c4e502f2d204a5790",
+    "semantic_hash": "0ed991b825ccf91c4e502f2d204a5790"
   },
   "EXPLAINABLE_TOPICS.md": {
-    "mtime": 1793202646.5995142,
-    "ast_hash": "61ad50d797cd9db8f610b5dc15f450ac",
-    "semantic_hash": "61ad50d797cd9db8f610b5dc15f450ac"
+    "mtime": 1793258244.7081275,
+    "ast_hash": "86f9593b7e350424c7680877999876d7",
+    "semantic_hash": "86f9593b7e350424c7680877999876d7"
   },
   "README.md": {
-    "mtime": 1793202646.5982878,
-    "ast_hash": "62da081bd99026a96eda9d1ae97ce6c0",
-    "semantic_hash": "62da081bd99026a96eda9d1ae97ce6c0"
+    "mtime": 1793258384.6586993,
+    "ast_hash": "b92224ad557f27ec1b55a99b4be064d8",
+    "semantic_hash": "b92224ad557f27ec1b55a99b4be064d8"
   },
   "Reddit/README_browser_campaign.md": {
-    "mtime": 1793193106.774253,
+    "mtime": 1793177232.2545836,
     "ast_hash": "f591d1b19efc64fe69b77b942250d51e",
     "semantic_hash": "f591d1b19efc64fe69b77b942250d51e"
   },
   "Reddit/README_playwright.md": {
-    "mtime": 1793193106.7744045,
-    "ast_hash": "344f3eaffa52418a29a284b39a46f9e7",
-    "semantic_hash": "344f3eaffa52418a29a284b39a46f9e7"
+    "mtime": 1793245620.344281,
+    "ast_hash": "8ce34c588e1b633bc26ff4b1766a4f9b",
+    "semantic_hash": "8ce34c588e1b633bc26ff4b1766a4f9b"
   },
   "SELENIUM_CRAWLER.md": {
-    "mtime": 1793195139.1145115,
+    "mtime": 1793240135.673867,
     "ast_hash": "e0ced9047dd977c0f293b8e168474b65",
     "semantic_hash": "e0ced9047dd977c0f293b8e168474b65"
   },
   "SOCIAL_CRAWLER.md": {
-    "mtime": 1793193106.7800267,
-    "ast_hash": "d02e1a89c48bd903dac60395a8955cfb",
-    "semantic_hash": "d02e1a89c48bd903dac60395a8955cfb"
+    "mtime": 1793253786.132196,
+    "ast_hash": "3574abd9a3652bf06cc63137484fcf24",
+    "semantic_hash": "3574abd9a3652bf06cc63137484fcf24"
   },
   "SOCIAL_NLP.md": {
-    "mtime": 1793202646.5989487,
-    "ast_hash": "7737a09aa939778d8c1c51a86e436334",
-    "semantic_hash": "7737a09aa939778d8c1c51a86e436334"
+    "mtime": 1793258244.7035809,
+    "ast_hash": "dd5d89e3dee7663cd46626b2be2b3ed6",
+    "semantic_hash": "dd5d89e3dee7663cd46626b2be2b3ed6"
   },
   "graphify-out/memory/query_20261028_132041_jalankan_dashboard_streamlitnya.md": {
-    "mtime": 1793193641.26462,
+    "mtime": 1793240135.6860385,
     "ast_hash": "bfbf0363ebc25ba2948465caf9d407ba",
     "semantic_hash": "bfbf0363ebc25ba2948465caf9d407ba"
   },
   "requirements-crawler.txt": {
-    "mtime": 1793193107.0896618,
+    "mtime": 1793176821.0097325,
     "ast_hash": "5219c0c3a8e9a1d4978388241d13b693",
     "semantic_hash": "5219c0c3a8e9a1d4978388241d13b693"
   },
   "requirements-nlp.txt": {
-    "mtime": 1793193107.090141,
+    "mtime": 1793176821.5648026,
     "ast_hash": "9996ed2b9dd702726c27f0e5874c0e7a",
     "semantic_hash": "9996ed2b9dd702726c27f0e5874c0e7a"
   },
   "requirements-selenium.txt": {
-    "mtime": 1793194825.847901,
+    "mtime": 1793240136.3823595,
     "ast_hash": "42165588789e52a7fdc2c88df560e76f",
     "semantic_hash": "42165588789e52a7fdc2c88df560e76f"
   },
   "requirements.txt": {
-    "mtime": 1793193107.0903425,
+    "mtime": 1793176821.0141788,
     "ast_hash": "812d8d3e6e77a77e5ab7e22ea9e0daa1",
     "semantic_hash": "812d8d3e6e77a77e5ab7e22ea9e0daa1"
   },
   "graphify-out/memory/query_20261028_135700_buat_versi_socialcrawler_dalam_file_baru_memakai_s.md": {
-    "mtime": 1793195820.6278803,
+    "mtime": 1793240135.6862915,
     "ast_hash": "27d28d31a367b60c7685fe4d8e5cf624",
     "semantic_hash": "27d28d31a367b60c7685fe4d8e5cf624"
   },
   "note.md": {
-    "mtime": 1793196964.61522,
+    "mtime": 1793240135.8214831,
     "ast_hash": "fec449926e22f9cd36dc775b5c4bb352",
     "semantic_hash": "fec449926e22f9cd36dc775b5c4bb352"
   },
   "requirements-sbert.txt": {
-    "mtime": 1793202362.3062153,
+    "mtime": 1793240136.3800082,
     "ast_hash": "9630159c800cfd96ae11e49d0e99b720",
     "semantic_hash": "9630159c800cfd96ae11e49d0e99b720"
   },
   "graphify-out/memory/query_20261028_153533_update_social_nlp_py_ke_embedding_sbert__umap_sesu.md": {
-    "mtime": 1793201733.8789542,
+    "mtime": 1793240135.6867309,
     "ast_hash": "4ad6bcc8ad9216be4b5de057a0a86e59",
     "semantic_hash": "4ad6bcc8ad9216be4b5de057a0a86e59"
   },
   "requirements-coherence.txt": {
-    "mtime": 1793202362.3780437,
+    "mtime": 1793240136.3795097,
     "ast_hash": "de65fa97856788d202b1fbf4f9ac7776",
     "semantic_hash": "de65fa97856788d202b1fbf4f9ac7776"
   },
-  "graphify-out/obsidian/Metodologi Machine Learning Social NLP.md": {
-    "mtime": 1793202646.6008387,
-    "ast_hash": "9678099b443bd4e44241b96e2bb98ee6",
-    "semantic_hash": "9678099b443bd4e44241b96e2bb98ee6"
+  "graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md": {
+    "mtime": 1793240135.687009,
+    "ast_hash": "bd6cc23eae1275df62fa72a344788716",
+    "semantic_hash": "bd6cc23eae1275df62fa72a344788716"
   },
-  "graphify-out/obsidian/Dataset Dashboard.md": {
-    "mtime": 1793202646.5999334,
-    "ast_hash": "61a1fc8d439e950796c3a757628da0be",
-    "semantic_hash": "61a1fc8d439e950796c3a757628da0be"
+  "scripts/merge_social_datasets.py": {
+    "mtime": 1793252099.7958593,
+    "ast_hash": "4597592a017e085cd593bcce4b0b6348",
+    "semantic_hash": "4597592a017e085cd593bcce4b0b6348"
   },
-  "graphify-out/obsidian/HOME.md": {
-    "mtime": 1793202646.6022196,
-    "ast_hash": "748dc3c689aa79592b2729bbc2beb6d7",
-    "semantic_hash": "748dc3c689aa79592b2729bbc2beb6d7"
+  "tests/nlp/test_dataset_merge.py": {
+    "mtime": 1793252093.4085793,
+    "ast_hash": "d8d20f2eaf174812010fe0d33acba56b",
+    "semantic_hash": "d8d20f2eaf174812010fe0d33acba56b"
   },
-  "graphify-out/obsidian/Arsitektur BeeSense.md": {
-    "mtime": 1793202646.601654,
-    "ast_hash": "c5afb416f84439e9962809f7aa745e89",
-    "semantic_hash": "c5afb416f84439e9962809f7aa745e89"
-  },
-  "graphify-out/obsidian/Menjalankan BeeSense.md": {
-    "mtime": 1793202646.6004746,
-    "ast_hash": "237e9e4b00261361fef804e9d449be21",
-    "semantic_hash": "237e9e4b00261361fef804e9d449be21"
+  "main.py": {
+    "mtime": 1793258244.72606,
+    "ast_hash": "d67638431ad20ca1c1c98b7195e9260b",
+    "semantic_hash": "d67638431ad20ca1c1c98b7195e9260b"
   }
 }

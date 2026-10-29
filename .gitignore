@@ -77,6 +77,41 @@ outputs/nlp_20261028_coherence_01/*
 !outputs/nlp_20261028_coherence_01/centroids.npy
 !outputs/nlp_20261028_coherence_01/umap_embeddings.npz
 
+# Twenty-topic retraining; preserve all earlier snapshots.
+!outputs/nlp_20261029_topics20_01/
+outputs/nlp_20261029_topics20_01/*
+!outputs/nlp_20261029_topics20_01/manifest.json
+!outputs/nlp_20261029_topics20_01/summary.json
+!outputs/nlp_20261029_topics20_01/topics.json
+!outputs/nlp_20261029_topics20_01/graph.json
+!outputs/nlp_20261029_topics20_01/comparison.json
+!outputs/nlp_20261029_topics20_01/social_data.parquet
+!outputs/nlp_20261029_topics20_01/sentences.parquet
+!outputs/nlp_20261029_topics20_01/occurrences.parquet
+!outputs/nlp_20261029_topics20_01/skipped.parquet
+!outputs/nlp_20261029_topics20_01/embeddings.npy
+!outputs/nlp_20261029_topics20_01/centroids.npy
+!outputs/nlp_20261029_topics20_01/umap_embeddings.npz
+
+# Baseline + 29 October acquisition, with a new versioned training snapshot.
+!outputs/social_20261029_combined/
+outputs/social_20261029_combined/*
+!outputs/social_20261029_combined/social_data.xlsx
+!outputs/nlp_20261029_combined_topics20_01/
+outputs/nlp_20261029_combined_topics20_01/*
+!outputs/nlp_20261029_combined_topics20_01/manifest.json
+!outputs/nlp_20261029_combined_topics20_01/summary.json
+!outputs/nlp_20261029_combined_topics20_01/topics.json
+!outputs/nlp_20261029_combined_topics20_01/graph.json
+!outputs/nlp_20261029_combined_topics20_01/comparison.json
+!outputs/nlp_20261029_combined_topics20_01/social_data.parquet
+!outputs/nlp_20261029_combined_topics20_01/sentences.parquet
+!outputs/nlp_20261029_combined_topics20_01/occurrences.parquet
+!outputs/nlp_20261029_combined_topics20_01/skipped.parquet
+!outputs/nlp_20261029_combined_topics20_01/embeddings.npy
+!outputs/nlp_20261029_combined_topics20_01/centroids.npy
+!outputs/nlp_20261029_combined_topics20_01/umap_embeddings.npz
+
 # Publish the project map, audit trail and complete Obsidian vault.
 **/.graphify/
 Reddit/graphify-out/
@@ -95,6 +130,7 @@ graphify-out/obsidian/*
 !graphify-out/obsidian/HOME.md
 !graphify-out/obsidian/Arsitektur BeeSense.md
 !graphify-out/obsidian/Crawler Selenium.md
+!graphify-out/obsidian/Crawling 1000 Post Baru.md
 !graphify-out/obsidian/Dataset Dashboard.md
 !graphify-out/obsidian/Menjalankan BeeSense.md
 !graphify-out/obsidian/graph.canvas

@@ -1,12 +1,12 @@
 ---
-source_file: "nlp_dashboard.py"
+source_file: "main.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L102"
+community: "Community None"
+location: "L106"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # _load_artifacts()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[.load_run()]] - `calls` [EXTRACTED]
 - [[.render()]] - `calls` [EXTRACTED]
-- [[nlp_dashboard.py]] - `contains` [EXTRACTED]
+- [[main.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

@@ -1,52 +1,32 @@
 ---
 type: community
-cohesion: 0.09
-members: 37
+cohesion: 0.26
+members: 17
 ---
 
 # Parser dan Runner Reddit
 
-**Cohesion:** 0.09 - loosely connected
-**Members:** 37 nodes
+**Cohesion:** 0.26 - loosely connected
+**Members:** 17 nodes
 
 ## Members
-- [[.__init__()_7]] - code - Reddit/crawl_reddit_single.py
-- [[.__init__()_11]] - code - Reddit/crawl_reddit_single.py
-- [[.accept()]] - code - Reddit/crawl_reddit_single.py
-- [[.fetch()]] - code - Reddit/crawl_reddit_single.py
-- [[.fetch()_2]] - code - Reddit/crawl_reddit_single.py
-- [[.fetch()_1]] - code - Reddit/crawl_reddit_single.py
-- [[.test_08_urls_reject_credentials_api_and_external_hosts()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_14_settings_bounds_and_no_zero_fill()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_16_hard_timeout_keeps_already_received_event()]] - code - Reddit/crawl_reddit_single.py
-- [[.validate()]] - code - Reddit/crawl_reddit_single.py
-- [[ABC]] - code
-- [[HtmlPage]] - code - Reddit/crawl_reddit_single.py
-- [[HtmlSource]] - code - Reddit/crawl_reddit_single.py
-- [[LocalHtmlSource]] - code - Reddit/crawl_reddit_single.py
-- [[Normalize a source event; write only through the shared DatasetSink.]] - rationale - Reddit/crawl_reddit_single.py
-- [[Only public HTML pages on the canonical host; never authAPI routes.]] - rationale - Reddit/crawl_reddit_single.py
-- [[PublicHtmlSource]] - code - Reddit/crawl_reddit_single.py
-- [[RedditAdapter]] - code - Reddit/crawl_reddit_single.py
-- [[Settings]] - code - Reddit/crawl_reddit_single.py
-- [[SourceAdapter]] - code - Reddit/crawl_reddit_single.py
-- [[Whole-post comment budget includes replies; nested replies share thread cap.]] - rationale - Reddit/crawl_reddit_single.py
-- [[bounded_events()]] - code - Reddit/crawl_reddit_single.py
-- [[crawl_reddit_single.py]] - code - Reddit/crawl_reddit_single.py
-- [[fields()]] - code - Reddit/crawl_reddit_single.py
-- [[import_public_web_sections.py]] - code - Reddit/import_public_web_sections.py
-- [[import_sections()]] - code - Reddit/import_public_web_sections.py
-- [[load_settings()]] - code - Reddit/crawl_reddit_single.py
-- [[native_fullname()]] - code - Reddit/crawl_reddit_single.py
-- [[now_iso()]] - code - Reddit/crawl_reddit_single.py
-- [[object_key()]] - code - Reddit/crawl_reddit_single.py
-- [[parsed_number()]] - code - Reddit/crawl_reddit_single.py
-- [[run_worker()]] - code - Reddit/crawl_reddit_single.py
-- [[safe_web_url()]] - code - Reddit/crawl_reddit_single.py
-- [[thread_id()]] - code - Reddit/crawl_reddit_single.py
-- [[thread_url()]] - code - Reddit/crawl_reddit_single.py
-- [[timeout_fixture()]] - code - Reddit/crawl_reddit_single.py
-- [[worker()]] - code - Reddit/crawl_reddit_single.py
+- [[.explain()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_extractive_evidence_preserves_source_and_diversifies_roots()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_known_increasing_and_decreasing_shares()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_missing_month_is_unknown_not_zero_and_calendar_gap_is_preserved()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_parent_keys_separate_native_threads_from_comments()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_partial_edge_month_does_not_drive_slope()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_platform_composition_can_reverse_pooled_direction()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_saved_artifact_explanations_never_encode_or_train()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_sentence_repetition_does_not_inflate_comment_trend()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_sidecar_roundtrip_checksum_and_source_binding()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_stable_and_episodic_patterns()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - code - tests/nlp/test_topic_explanations.py
+- [[ExplanationTests]] - code - tests/nlp/test_topic_explanations.py
+- [[model_from_counts()]] - code - tests/nlp/test_topic_explanations.py
+- [[profile()]] - code - tests/nlp/test_topic_explanations.py
+- [[test_topic_explanations.py]] - code - tests/nlp/test_topic_explanations.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -56,17 +36,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
-- 21 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
-- 14 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 7 edges to [[_COMMUNITY_Validasi Redirect dan Kesalahan]]
-- 2 edges to [[_COMMUNITY_Ekspor Campaign dan Resume]]
-- 1 edge to [[_COMMUNITY_Runner Playwright Reddit]]
-- 1 edge to [[_COMMUNITY_Parser DOM Terbatas]]
+- 4 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
 
 ## Top bridge nodes
-- [[crawl_reddit_single.py]] - degree 58, connects to 7 communities
-- [[.fetch()_2]] - degree 7, connects to 2 communities
-- [[RedditAdapter]] - degree 7, connects to 2 communities
-- [[native_fullname()]] - degree 5, connects to 2 communities
-- [[.test_16_hard_timeout_keeps_already_received_event()]] - degree 5, connects to 2 communities
+- [[ExplanationTests]] - degree 15, connects to 1 community
+- [[test_topic_explanations.py]] - degree 5, connects to 1 community
+- [[model_from_counts()]] - degree 5, connects to 1 community

@@ -1,38 +1,35 @@
 # Dashboard BeeSense
 
-[SocialNLPStreamlitApp](nlp_dashboard.py) membaca run aktif dari [social_nlp.json](social_nlp.json). Dashboard tidak melakukan crawling atau training. File dataset dan hasil clustering yang dikirim bersama repository dijelaskan dalam [README.md](README.md).
+[SocialNLPStreamlitApp](main.py) membaca snapshot aktif dari [social_nlp.json](social_nlp.json). Dashboard tidak melakukan crawling atau training. Jumlah topik, coherence, volume, tanggal, dan bukti selalu dibaca dari artifact terverifikasi, bukan angka yang ditulis di UI.
 
-Coherence c_v global **0,4097** (target rata-rata ≥0,4) ditampilkan pada seluruh
-halaman. Metode & data memuat baseline, protokol tetap, skor setiap topik dan
-peringatan bahwa 31/52 topik belum mencapai 0,4 secara individual. Rerun/filter
-tidak mengevaluasi atau melatih model lagi. Skema v1/v2 tanpa coherence tetap terbaca.
+## Alur eksplorasi
 
-## Lima tampilan
+1. **Ringkasan:** komentar dan kalimat pada filter, 12 topik terbesar per platform, cakupan/noise, serta distribusi menurut bulan post induk. Pilihan topik mempunyai tombol **Jelaskan topik ini**.
+2. **Peta topik:** posisi model penuh tetap di bawah filter. Ukuran menunjukkan kemunculan kalimat; warna menunjukkan campuran YouTube/Reddit. Garis adalah kemiripan semantik. Dropdown memberikan alternatif keyboard untuk pemilihan node.
+3. **Penjelasan topik:** fokus pada topik terpilih terlebih dahulu. Empat card merangkum komentar unik, porsi komentar, post asal, dan coherence topik dengan rata-rata model sebagai pembanding. Grafik menunjukkan istilah, platform, lima post penyumbang, serta porsi bulanan. Kutipan asli dan tautan sumber membantu memeriksa penjelasan. Perbandingan seluruh topik berada dalam panel terlipat.
+4. **Kalimat & sumber:** tabel maksimal 1.000 baris, detail tanggal/judul/URL, unduhan seluruh hasil filter, serta graf maksimal 100 kalimat representatif.
+5. **Metode & data:** protokol coherence, skor per topik, evaluasi kandidat, konfigurasi, checksum, bagian terlewat, dan keterbatasan. Catatan pembentukan topik juga tersedia di bagian bawah halaman.
 
-1. **Ringkasan:** volume kalimat/komentar, 12 topik terbesar dalam batang YouTube/Reddit, cakupan/noise tiap platform, serta distribusi menurut bulan post induk.
-2. **Peta topik:** kode T01–T52, ukuran menurut kemunculan kalimat dan warna menurut proporsi platform. Biru Reddit, toska seimbang, merah YouTube. Posisi model penuh tetap di bawah filter; topik tanpa edge tetap ada. Garis adalah kemiripan semantik, bukan hubungan antar akun.
-3. **Penjelasan topik:** deskripsi ekstraktif, label pola, narasi perbandingan periode, grafik porsi dan bukti sumber. Panel Mengapa penjelasan ini muncul? membuka aturan dan dukungan data.
-4. **Kalimat & sumber:** tabel maksimal 1.000 baris, detail kalimat/tanggal/judul/URL dan unduhan seluruh hasil filter. Graf kalimat topik dibatasi 100 representatif.
-5. **Metode & data:** evaluasi kandidat, metadata model, bagian terlewat dan keterbatasan.
+## Arti angka
 
-## Definisi angka
+Kemunculan, kalimat unik, komentar, dan post asal adalah unit berbeda. Komentar memakai platform + source_row Excel; satu komentar dapat menyumbang beberapa kalimat dan topik. Porsi topik memakai komentar bertopik dibagi seluruh komentar terwakili pada filter, termasuk noise, sehingga porsi antar topik tidak harus berjumlah 100%.
 
-Snapshot SBERT → UMAP → DBSCAN → c-TF-IDF: 16.178 kemunculan, 15.878 kalimat unik, 7.944 komentar/balasan terwakili, 52 topik. Cakupan kemunculan 15.376/16.178 = 95,0%; cakupan unik 15.102/15.878 = 95,1%. YouTube 8.337 kemunculan/5.644 komentar/96,3% cakupan; Reddit 7.841/2.300/93,7%. Silhouette asli −0,103 menunjukkan tumpang tindih semantik; tampilan metode menampilkan peringatan sehingga coverage tidak dibaca sebagai akurasi.
+Grafik istilah menghitung kalimat unik terfilter yang memuat istilah c-TF-IDF model penuh dengan batas kata/frasa. Ini frekuensi kehadiran, bukan bobot c-TF-IDF atau probabilitas. Grafik sumber menghitung komentar unik per video/thread; ID induk menjaga dua post dengan judul sama tetap terpisah. Jika identitas induk memakai hash konteks, UI memberi catatan. Sumber dominan >60% juga mendapat catatan.
 
-Occurrence, kalimat unik dan komentar adalah unit berbeda. Komentar memakai identitas platform/source_row; dapat menghasilkan beberapa kalimat dan topik. Porsi penjelasan menggunakan komentar bertopik dibagi seluruh komentar terwakili bulan itu, termasuk noise. Porsi antar topik tidak harus berjumlah 100%.
+Coherence c_v model penuh dan coherence topik terpilih ditampilkan terpisah. Target rata-rata ≥0,4 tidak menjamin setiap topik mencapai 0,4. Filter mengubah jumlah serta bukti; keanggotaan dan skor model tidak dihitung ulang. Skema artifact lama tetap terbaca. Coherence adalah keselarasan leksikal pada korpus, bukan akurasi, validasi manusia, atau ukuran keterwakilan platform.
 
-Distribusi memakai tanggal post/video asal; tanggal komentar YouTube tetap perkiraan. Parser tanggal campuran mempertahankan mikrodetik Reddit. Ringkasan jumlah dapat menampilkan nol bulan kosong dalam snapshot; grafik porsi penjelasan meninggalkan celah pada bulan tanpa dukungan. Bulan kalender parsial tidak menentukan arah.
+Distribusi default memakai tanggal post/video asal, bukan riwayat penulisan komentar. Tanggal perkiraan diberi tanda. Grafik porsi meninggalkan celah pada bulan parsial, tanpa pengamatan, atau dengan dukungan kecil. Narasi arah mengikuti dukungan dan pemeriksaan campuran platform dalam [EXPLAINABLE_TOPICS.md](EXPLAINABLE_TOPICS.md).
 
 ## Interaksi dan aksesibilitas
 
-Kontrol native Streamlit ≥1.66 memakai binding query-params untuk platform, tanggal, pencarian literal, topik, view dan slider. Klik chart/tabel memperbarui topik sebelum rerun. Dropdown memberi alternatif keyboard. Reset mengembalikan filter. Nilai tersimpan node_limit dibatasi sebelum slider dibuat ketika hasil pencarian mengecil; pilihan yang masih valid dipertahankan dan kasus satu topik tetap aman.
+Kontrol native Streamlit memakai binding query-params untuk platform, tanggal, pencarian literal, topik, tampilan, dan slider. Memilih grafik/tabel atau membuka penjelasan mempertahankan filter. Reset mengembalikan lingkup data. Nilai slider dibatasi sebelum dibuat saat hasil mengecil; kasus satu/nol topik aman. Kondisi kosong menyertakan tindakan pemulihan.
 
-Palet kertas putih, latar #F4F7FB, tinta #172D43, teks sekunder #52657B, aksen #116D78. Angka memakai tabular numerals, locale Indonesia melalui Babel, fokus terlihat, caption berkontras, pembungkusan teks, reduced motion dan susunan ringkasan responsif. Grafik memiliki deskripsi serta tabel alternatif. Kutipan HTML di-escape dan link sumber dibatasi HTTP(S).
+Palet putih, latar #F4F7FB, tinta #172D43, teks sekunder #52657B, aksen #116D78; warna platform tetap konsisten. Avenir Next memakai fallback sistem tanpa unduhan font. Angka menggunakan locale Indonesia melalui Babel dan tabular numerals. Fokus keyboard terlihat, reduced motion dihormati, judul/teks panjang membungkus, dan card menjadi dua kolom pada layar sempit. Grafik memiliki deskripsi dan tabel alternatif. Kutipan HTML di-escape; link sumber hanya HTTP(S).
 
-Review mengikuti [Web Interface Guidelines](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md). Grafik tetap membutuhkan penafsiran: sumbu layout bukan ukuran semantik terkalibrasi dan label otomatis belum ditinjau manusia.
+Review memakai [Web Interface Guidelines](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md). Pemeriksaan mencakup label, struktur heading, skip link bawaan Streamlit, fokus, URL state, kondisi kosong, bounded tables, reduced motion, dan overflow. Pengujian ini bukan sertifikasi aksesibilitas penuh terhadap seluruh komponen pihak ketiga.
 
-## Verifikasi dan batas
+## Verifikasi dan runtime
 
-Tes mencakup unit/noise, filter literal, timestamp campuran, posisi stabil, proporsi platform, event cluster nol, URL/reset, seluruh view, penjelasan dan guard agar UI tidak training. Regresi slider mencakup hasil dua/satu/nol topik serta URL berisi nilai tidak valid. Pengujian browser revisi ini memeriksa 52 topik, pipeline c-TF-IDF, parameter DBSCAN serta peringatan silhouette. Regresi pencarian beasiswa 51→14 berasal dari snapshot v1. Perintah pengujian ada pada README.
+Tes unit memeriksa identitas komentar/post, istilah berbatas kata, judul sumber identik, noise, filter, posisi stabil, dan pemisahan data/model. Streamlit AppTest mencakup seluruh tampilan, navigasi ke penjelasan dengan topik/filter tetap, URL/reset, serta guard tanpa training. Pemeriksaan browser desktop dan layar sempit memastikan card/grafik/bukti tampil dan tidak terjadi overflow horizontal.
 
-Cache mengikat identitas artifact serta lingkup filter; penjelasan juga mengikat hash kode dan opsi. Dokumen [EXPLAINABLE_TOPICS.md](EXPLAINABLE_TOPICS.md) menjelaskan algoritma dan batas inferensi. Dockerfile non-root membaca artifact read-only; build/runtime Docker belum diverifikasi karena daemon lokal belum aktif. Tidak perlu migrasi database.
+Image `Dockerfile.nlp` telah dibangun dan container lokal `beesense-dashboard` diganti pada `http://127.0.0.1:8501`. Runtime non-root UID 10001 membaca snapshot melalui bind mount read-only, healthcheck aktif, dan hanya port loopback yang diterbitkan. Runtime akhir telah diverifikasi memakai run gabungan `outputs/nlp_20261029_combined_topics20_01`: 20 topik dan rata-rata c_v 0,4720. Grafik/card/bukti mengikuti filter pada snapshot tersebut. Tidak ada migrasi database.

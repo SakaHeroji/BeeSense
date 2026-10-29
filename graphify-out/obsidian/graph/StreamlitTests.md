@@ -1,22 +1,22 @@
 ---
 source_file: "tests/nlp/test_streamlit_app.py"
 type: "code"
-community: "Pengujian UI Streamlit"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_UI_Streamlit
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # StreamlitTests
 
 ## Connections
 - [[.app()]] - `method` [EXTRACTED]
-- [[.setUp()_6]] - `method` [EXTRACTED]
-- [[.setUpClass()_2]] - `method` [EXTRACTED]
+- [[.setUp()_7]] - `method` [EXTRACTED]
+- [[.setUpClass()_1]] - `method` [EXTRACTED]
 - [[.tearDown()]] - `method` [EXTRACTED]
-- [[.tearDownClass()_2]] - `method` [EXTRACTED]
+- [[.tearDownClass()_1]] - `method` [EXTRACTED]
 - [[.test_all_views_and_noise_only_selection()]] - `method` [EXTRACTED]
 - [[.test_coherence_metric_and_per_topic_scores_are_visible()]] - `method` [EXTRACTED]
 - [[.test_dashboard_renders_and_topic_selection_works_without_training()]] - `method` [EXTRACTED]
@@ -24,8 +24,8 @@ tags:
 - [[.test_network_limit_tracks_filter_bounds_and_preserves_valid_choices()]] - `method` [EXTRACTED]
 - [[.test_network_url_limits_are_safe_on_initial_filtered_load()]] - `method` [EXTRACTED]
 - [[.test_search_empty_state_and_platform_filter()]] - `method` [EXTRACTED]
+- [[.test_selected_topic_opens_explanation_without_losing_filter()]] - `method` [EXTRACTED]
 - [[.test_url_initializes_filters_and_reset_clears_state()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_streamlit_app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_UI_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

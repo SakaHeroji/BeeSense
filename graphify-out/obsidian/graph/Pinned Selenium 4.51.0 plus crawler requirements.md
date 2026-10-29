@@ -1,12 +1,12 @@
 ---
 source_file: "requirements-selenium.txt"
 type: "document"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "lines 1-2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # Pinned Selenium 4.51.0 plus crawler requirements
@@ -15,4 +15,4 @@ tags:
 - [[Pinned openpyxl and yt-dlp crawler dependencies]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/document #graphify/EXTRACTED #community/Community_None

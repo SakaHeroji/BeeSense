@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # validate_row()
@@ -19,4 +19,4 @@ tags:
 - [[social_common.py]] - `contains` [EXTRACTED]
 - [[utc_datetime()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

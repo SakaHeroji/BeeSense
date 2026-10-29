@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validasi Redirect dan Kesalahan"
+community: "Snapshot NLP dan Arsip"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Redirect_dan_Kesalahan
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SourceFailure]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

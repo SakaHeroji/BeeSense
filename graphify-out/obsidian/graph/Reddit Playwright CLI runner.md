@@ -1,20 +1,22 @@
 ---
 source_file: "Reddit/README_playwright.md"
 type: "document"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Eksplorasi Dashboard Streamlit"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Reddit Playwright CLI runner
 
 ## Connections
 - [[Advanced connected-browser Reddit campaign helpers]] - `references` [EXTRACTED]
-- [[Isolated browser profile and access-barrier stops]] - `references` [EXTRACTED]
+- [[Coordinator waits for manual CAPTCHA without automated clicks]] - `references` [EXTRACTED]
+- [[Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops]] - `references` [EXTRACTED]
 - [[Shared rendered_thread_dom.mjs extraction]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
+- [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

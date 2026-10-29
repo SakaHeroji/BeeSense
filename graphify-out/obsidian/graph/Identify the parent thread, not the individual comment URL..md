@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L1168"
+community: "Community None"
+location: "L1297"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # Identify the parent thread, not the individual comment URL.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.parent_post_key()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler_selenium.py"
 type: "rationale"
-community: "Crawler Selenium Terisolasi"
+community: "Community None"
 location: "L161"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Community_None
 ---
 
 # Convert the shared rendered DOM capture without inventing identities.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_reddit_records()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

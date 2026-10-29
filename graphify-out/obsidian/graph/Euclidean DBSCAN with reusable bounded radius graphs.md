@@ -1,12 +1,12 @@
 ---
 source_file: "SOCIAL_NLP.md"
 type: "concept"
-community: "Coherence dan Quality Gate"
+community: "Community None"
 location: "## DBSCAN dan quality gate"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Community_None
 ---
 
 # Euclidean DBSCAN with reusable bounded radius graphs
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[DBSCAN core points and noise without membership probabilities]] - `references` [EXTRACTED]
 - [[Fixed coverage, dominance and composite-score eligibility]] - `references` [EXTRACTED]
-- [[Two UMAP 10D projections seeded 42 and 43]] - `shares_data_with` [EXTRACTED]
+- [[Sentence-weighted Ward merges complete DBSCAN groups to exactly 20]] - `references` [EXTRACTED]
+- [[Two UMAP 10 D projections seeded 42 and 43]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/concept #graphify/EXTRACTED #community/Community_None

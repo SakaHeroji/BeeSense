@@ -44,6 +44,15 @@
       "y": 380,
       "width": 920,
       "height": 360
+    },
+    {
+      "id": "5",
+      "type": "file",
+      "file": "Crawling 1000 Post Baru.md",
+      "x": 0,
+      "y": 700,
+      "width": 440,
+      "height": 260
     }
   ],
   "edges": [
@@ -94,6 +103,20 @@
       "fromNode": "4",
       "fromSide": "right",
       "toNode": "2",
+      "toSide": "bottom"
+    },
+    {
+      "id": "crawl-architecture",
+      "fromNode": "5",
+      "fromSide": "top",
+      "toNode": "0",
+      "toSide": "bottom"
+    },
+    {
+      "id": "crawl-data",
+      "fromNode": "5",
+      "fromSide": "right",
+      "toNode": "1",
       "toSide": "bottom"
     }
   ]

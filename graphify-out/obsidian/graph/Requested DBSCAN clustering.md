@@ -1,12 +1,12 @@
 ---
 source_file: "note.md"
 type: "concept"
-community: "Encoder SBERT dan Cache"
+community: "Community None"
 location: "line 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Encoder_SBERT_dan_Cache
+  - community/Community_None
 ---
 
 # Requested DBSCAN clustering
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Requested SBERT-based embeddings]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Encoder_SBERT_dan_Cache
+#graphify/concept #graphify/EXTRACTED #community/Community_None

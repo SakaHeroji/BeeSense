@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Parser DOM Terbatas"
+community: "Snapshot NLP dan Arsip"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_DOM_Terbatas
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # HTMLParser
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BoundedDom]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

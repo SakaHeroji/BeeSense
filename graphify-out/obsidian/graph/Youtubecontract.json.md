@@ -1,14 +1,14 @@
 ---
 source_file: "Youtube/contract.json"
 type: "document"
-community: "Kontrak Tabel YouTube"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Kontrak_Tabel_YouTube
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Youtube/contract.json
 
-#graphify/document #graphify/EXTRACTED #community/Kontrak_Tabel_YouTube
+#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

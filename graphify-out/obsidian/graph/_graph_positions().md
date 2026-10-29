@@ -1,12 +1,12 @@
 ---
-source_file: "nlp_dashboard.py"
+source_file: "main.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L54"
+community: "Community None"
+location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # _graph_positions()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[.topic_figure()]] - `calls` [EXTRACTED]
 - [[Keep the full-model layout stable while volume and edge filters change.]] - `rationale_for` [EXTRACTED]
-- [[nlp_dashboard.py]] - `contains` [EXTRACTED]
+- [[main.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

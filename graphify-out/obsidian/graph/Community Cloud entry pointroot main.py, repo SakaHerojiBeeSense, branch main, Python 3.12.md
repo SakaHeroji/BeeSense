@@ -1,0 +1,23 @@
+---
+source_file: "README.md"
+type: "concept"
+community: "Community None"
+location: "## Deploy ke Streamlit Community Cloud"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Community_None
+---
+
+# Community Cloud entry point:root main.py, repo SakaHeroji/BeeSense, branch main, Python 3.12
+
+## Connections
+- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[Cloud installs root requirements.txt with both referenced dependency files]] - `references` [EXTRACTED]
+- [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
+- [[Cloud uses relative artifacts and platform-controlled bind; local loopback stays explicit]] - `references` [EXTRACTED]
+- [[Obsidian Cloud runbookmain.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
+- [[main.py]] - `references` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Community_None

@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Runner Playwright Reddit"
+community: "Akses dan Parsing HTML"
 location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Runner_Playwright_Reddit
+  - community/Akses_dan_Parsing_HTML
 ---
 
 # save_capture()
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[atomic_json()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
-- [[run()]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
 - [[utcnow()]] - `calls` [EXTRACTED]
 - [[validate_capture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Runner_Playwright_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML

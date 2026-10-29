@@ -2,7 +2,7 @@
 source_file: "social_crawler.py"
 type: "code"
 community: "Alur Akuisisi Sosial Terpadu"
-location: "L57"
+location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED

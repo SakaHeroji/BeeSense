@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Dataset Dashboard.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
-location: "opening source paragraphs / closing provenance paragraph"
+community: "Community None"
+location: "# Dataset Dashboard"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Community_None
 ---
 
 # Source workbook and multi-snapshot integrity verification
@@ -15,4 +15,4 @@ tags:
 - [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
 - [[Text spans, source_row and date certainty survive embedding deduplication]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/INFERRED #community/Community_None

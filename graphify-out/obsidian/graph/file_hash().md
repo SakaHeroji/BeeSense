@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Crawler Selenium Terisolasi"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # file_hash()
@@ -30,10 +30,10 @@ tags:
 - [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - `calls` [EXTRACTED]
 - [[.test_saved_run_coherence_reproduces_the_published_score()]] - `calls` [EXTRACTED]
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `calls` [EXTRACTED]
-- [[nlp_dashboard.py]] - `imports` [EXTRACTED]
+- [[main.py]] - `imports` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

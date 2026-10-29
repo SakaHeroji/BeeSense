@@ -1,12 +1,12 @@
 ---
-source_file: "nlp_dashboard.py"
+source_file: "main.py"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L345"
+community: "Community None"
+location: "L349"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # Count sentence occurrences; never confuse them with distinct comments.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.topic_summary()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

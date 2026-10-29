@@ -1,18 +1,18 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Pipeline dan Persistensi NLP"
 location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # KeywordMatcher
 
 ## Connections
-- [[.__init__()_1]] - `method` [EXTRACTED]
+- [[.__init__()]] - `method` [EXTRACTED]
 - [[.find()]] - `method` [EXTRACTED]
 - [[.setUp()]] - `calls` [EXTRACTED]
 - [[.test_04_unicode_offsets_boundary_and_casefold()]] - `calls` [EXTRACTED]
@@ -21,6 +21,6 @@ tags:
 - [[.validate()]] - `calls` [EXTRACTED]
 - [[Aho-Corasick; offsets refer to Python Unicode code points in source.]] - `rationale_for` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[run()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

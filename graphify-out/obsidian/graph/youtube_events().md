@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_social_crawler_selenium.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Community None"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Community_None
 ---
 
 # youtube_events()
@@ -15,4 +15,4 @@ tags:
 - [[.worker()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Community_None

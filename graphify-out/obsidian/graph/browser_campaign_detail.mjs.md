@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign_detail.mjs"
 type: "code"
-community: "Helper Campaign Browser"
+community: "Topik dan Verifikasi NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Helper_Campaign_Browser
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # browser_campaign_detail.mjs
@@ -19,4 +19,4 @@ tags:
 - [[inWindow()]] - `imports` [EXTRACTED]
 - [[rateLimitSeconds()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Helper_Campaign_Browser
+#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

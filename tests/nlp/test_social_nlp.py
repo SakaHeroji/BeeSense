@@ -104,6 +104,7 @@ class NLPTests(unittest.TestCase):
         cls.input = cls.root / "source.xlsx"
         fixture(cls.input, duplicate=True)
         cls.config = {
+            "target_topics": None,
             "cache_dir": str(cls.root / "cache"),
             "dbscan": {"eps": [0.05, 0.1, 0.2], "min_samples": [3]},
             "umap": {"n_neighbors": 4, "n_components": 2},
@@ -316,6 +317,95 @@ class NLPTests(unittest.TestCase):
         b[:5] = -1
         self.assertLess(SocialNLPClusterer.stability(a, b), 1)
 
+    def test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights(self):
+        p = SocialNLPClusterer({"target_topics": 2})
+        # Two nearby large groups should stay separate: merging the small
+        # groups adds less total squared error despite their larger distance.
+        p.embeddings = np.array(
+            [[1.0, 0.0]] * 100
+            + [[0.99, 0.1]] * 100
+            + [[-1.0, 0.0], [-0.8, -0.6], [0.0, 1.0]],
+            dtype=np.float32,
+        )
+        original = np.array([4] * 100 + [8] * 100 + [12, 20, -1])
+        labels, info = p._merge_topics(original)
+        self.assertEqual(set(labels), {-1, 0, 1})
+        self.assertEqual(info["original_topics"], 4)
+        self.assertEqual(info["final_topics"], 2)
+        self.assertEqual(info["merges"][0]["left"], [12])
+        self.assertEqual(info["merges"][0]["right"], [20])
+        self.assertTrue(np.array_equal(labels == -1, original == -1))
+        for cid in set(original) - {-1}:
+            self.assertEqual(len(set(labels[original == cid])), 1)
+        repeated, _ = p._merge_topics(original)
+        self.assertTrue(np.array_equal(labels, repeated))
+        with self.assertRaisesRegex(ValueError, "fewer groups"):
+            p._merge_topics(np.zeros(len(original), dtype=int))
+        with self.assertRaisesRegex(ValueError, "pairwise memory"):
+            p._merge_topics(np.arange(2049))
+
+    def test_retraining_reduces_topics_and_persists_original_dbscan_ids(self):
+        p = (
+            SocialNLPClusterer(
+                {
+                    **self.config,
+                    "target_topics": 2,
+                    "evaluation": {"max_largest_cluster": 0.8},
+                },
+                encoder=encoder,
+            )
+            .prepare_excel(self.input)
+            .encode()
+        )
+
+        def projection():
+            features = p.embeddings[:, :2]
+            p.reduced_embeddings = [features, features.copy()]
+            p.reduction_info = {"parameters": {}, "seeds": [42, 43]}
+            return p.reduced_embeddings
+
+        with patch.object(p, "_reduce_embeddings", side_effect=projection):
+            p.compare().describe_topics()
+        output = p.save(self.root / "two_topics")
+        data = p.load_run(output)
+        self.assertEqual(data["summary"]["clusters"], 2)
+        self.assertEqual(data["summary"]["topic_reduction"]["original_topics"], 3)
+        self.assertEqual(data["summary"]["topic_reduction"]["final_topics"], 2)
+        self.assertGreaterEqual(data["summary"]["coherence"]["macro_mean"], 0.4)
+        self.assertEqual(set(data["sentences"]["cluster_id"]), {0, 1})
+        self.assertEqual(set(data["occurrences"]["dbscan_cluster_id"]), {0, 1, 2})
+        mapped = data["occurrences"].merge(
+            data["sentences"][["sentence_id", "cluster_id"]],
+            on="sentence_id",
+            suffixes=("_occurrence", "_sentence"),
+        )
+        self.assertTrue(
+            (mapped.cluster_id_occurrence == mapped.cluster_id_sentence).all()
+        )
+        with (
+            patch.dict(p.config, {"target_topics": 3}),
+            self.assertRaisesRegex(ValueError, "differs from target_topics"),
+        ):
+            p.save(self.root / "wrong_count")
+
+    def test_saved_embeddings_require_matching_source_model_and_sentence_order(self):
+        p = SocialNLPClusterer(self.config).prepare_excel(self.input)
+        with patch.object(p, "_encode_sbert", side_effect=AssertionError("must reuse")):
+            p.encode(reuse_run=self.output)
+        self.assertTrue(np.array_equal(p.embeddings, self.pipeline.embeddings))
+        self.assertTrue(p.model_info["test_encoder"])
+        self.assertIn("reused_manifest_sha256", p.model_info)
+        with patch.dict(p.config["model"], {"max_tokens": 64}):
+            with self.assertRaisesRegex(ValueError, "model configuration differs"):
+                p.encode(reuse_run=self.output)
+        p.input_sha256 = "different workbook"
+        with self.assertRaisesRegex(ValueError, "source workbook differs"):
+            p.encode(reuse_run=self.output)
+        p.input_sha256 = self.pipeline.input_sha256
+        p.sentences = p.sentences.iloc[::-1]
+        with self.assertRaisesRegex(ValueError, "Prepared sentences differ"):
+            p.encode(reuse_run=self.output)
+
     def test_real_umap_projections_and_cache_are_validated(self):
         with tempfile.TemporaryDirectory() as directory:
             p = SocialNLPClusterer(
@@ -479,6 +569,10 @@ class NLPTests(unittest.TestCase):
             {"coherence": {"min_score": float("nan")}},
             {"coherence": {"topn": 1}},
             {"include_kinds": ["user"]},
+            {"target_topics": True},
+            {"target_topics": 1},
+            {"target_topics": 20.0},
+            {"target_topics": 501},
         ]:
             with self.subTest(config=config), self.assertRaises(ValueError):
                 SocialNLPClusterer(config)
@@ -516,7 +610,7 @@ class DashboardTests(unittest.TestCase):
     def test_filters_are_literal_and_respect_platform_dates(self):
         import pandas as pd
 
-        from nlp_dashboard import SocialNLPStreamlitApp
+        from main import SocialNLPStreamlitApp
 
         frame = pd.DataFrame(
             [
@@ -551,7 +645,7 @@ class DashboardTests(unittest.TestCase):
     def test_topic_graph_is_bounded_and_noise_is_not_a_topic(self):
         import pandas as pd
 
-        from nlp_dashboard import SocialNLPStreamlitApp
+        from main import SocialNLPStreamlitApp
 
         topics = [{"cluster_id": i, "label": f"Topik {i}"} for i in range(30)]
         occurrences = pd.DataFrame(

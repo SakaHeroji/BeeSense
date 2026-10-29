@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L1905"
+community: "Community None"
+location: "L2034"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # Explain already verified artifacts without encoding or fitting again.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.explain_artifacts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

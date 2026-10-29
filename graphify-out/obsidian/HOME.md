@@ -11,10 +11,10 @@ tags: [beesense, dashboard]
 
 [Buka dashboard](http://127.0.0.1:8501) · [README](../../README.md) · [Graf kode](../graph.html) · [Laporan Graphify](../GRAPH_REPORT.md) · [[graph.canvas|Canvas arsitektur]]
 
-Vault ini dipadatkan untuk repository GitHub. Dua workbook sumber dipertahankan: dataset.xlsx untuk audit lengkap dan social_data.xlsx untuk input NLP, bersama satu run dashboard. Graf memetakan kode/dokumentasi aktif, bukan arsip percakapan lain.
+Vault memuat alur akuisisi → pemeriksaan ID/checksum → workbook gabungan → training → dashboard. Tiga workbook diterbitkan bersama run aktif dan empat snapshot NLP sebelumnya. Bundle akuisisi lokal tetap tersedia untuk audit.
 
 Statistik graf, cohesion, biaya token dan keterbatasan ekstraksi tersedia pada [laporan aktif](../GRAPH_REPORT.md). [[Crawler Selenium]] menghubungkan backend browser baru dengan exporter dan kontrak Excel yang dipertahankan.
 
-Retrain aktif: coherence **c_v 0,4097**, ambang rata-rata **0,4 tercapai**;
-31/52 topik tetap di bawah 0,4 secara individual. [[Metodologi Machine Learning Social NLP]]
-menyimpan protokol, baseline dan keterbatasannya.
+Retrain gabungan aktif: **20 topik**, rata-rata **c_v 0,4720**, ambang rata-rata **0,4 tercapai**. 7/20 topik masih <0,4 individual. [[Dataset Dashboard]] dan [[Metodologi Machine Learning Social NLP]] memuat sumber/metode/batasnya.
+
+[[Crawling 1000 Post Baru]]: target 1.000 post baru per platform dalam 3 jam, pengecualian ID dataset lama dan CAPTCHA manual di Chrome. Hasil: YouTube 1.188 post/300 qualified dan Reddit 98/58; target qualified belum tercapai. Hasil digabung dengan baseline dan dashboard memakai snapshot baru.

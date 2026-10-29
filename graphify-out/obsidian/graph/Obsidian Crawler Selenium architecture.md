@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawler Selenium.md"
 type: "document"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "# Crawler Selenium"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # Obsidian: Crawler Selenium architecture
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/document #graphify/EXTRACTED #community/Community_None

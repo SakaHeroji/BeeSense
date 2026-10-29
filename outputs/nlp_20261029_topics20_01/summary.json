@@ -1,0 +1,4986 @@
+{
+  "schema_version": "beesense-sentence-clusters:2",
+  "producer_version": "2.2.0",
+  "created_at": "2026-10-29T02:30:42.353081+00:00",
+  "source_file": "/Users/socs3/Documents/BeeSense/outputs/social_20261028_01/social_data.xlsx",
+  "source_sha256": "939f5869ffdfc2ca14c98e8f39cffa7e15292fdb5ea7faaf27c043670fea56e2",
+  "preparation": {
+    "input_rows": 8449,
+    "eligible_source_rows": 8218,
+    "sentence_occurrences": 16178,
+    "unique_sentences": 15878,
+    "duplicate_occurrences": 300,
+    "skipped_segments": 1045,
+    "included_kinds": [
+      "comment",
+      "reply"
+    ],
+    "source_timezone": "Asia/Jakarta"
+  },
+  "selected": {
+    "candidate": "sbert_umap_dbscan_eps0.2_min3",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.2,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.93418566570097,
+    "noise_fraction": 0.06581433429903005,
+    "largest_cluster_fraction": 0.3492213308164228,
+    "silhouette_cosine": -0.014857168309390545,
+    "stability_ari": 0.7728483313791905,
+    "selection_score": 0.3333399326999431,
+    "eligible": true,
+    "seconds": 1.159920879999845,
+    "silhouette_sample_assigned": 1712,
+    "stability_union_points": 15232,
+    "dbscan_clusters": 257,
+    "alternate_dbscan_clusters": 283,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": 0.41432509387163935,
+    "coherence_status": "passed",
+    "coherence_topics": 20
+  },
+  "model": {
+    "family": "SBERT",
+    "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "backend": "sentence-transformers-pytorch-cpu",
+    "pooling": "SBERT modules; mean of overflow windows then L2",
+    "test_encoder": false,
+    "max_tokens": 128,
+    "stride": 24,
+    "fine_tuned_on_source": false,
+    "cache_hit": true,
+    "dimensions": 384,
+    "long_sentence_windows": 20,
+    "reused_from": "outputs/nlp_20261028_coherence_01",
+    "reused_manifest_sha256": "fd70ee0a13b5ffa52ddf41f049c4da51423337f1d01ffcc08f8b48b3af6e9f60"
+  },
+  "fit_seconds": 92.28236398299987,
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": null,
+    "torch": null,
+    "transformers": null,
+    "tokenizers": "0.23.3",
+    "gensim": "4.4.0"
+  },
+  "config": {
+    "input_file": "outputs/social_20261028_01/social_data.xlsx",
+    "output_dir": "outputs/nlp_20261029_topics20_01",
+    "target_topics": 20,
+    "cache_dir": ".cache/social_nlp",
+    "seed": 42,
+    "include_kinds": [
+      "comment",
+      "reply"
+    ],
+    "min_words": 2,
+    "min_characters": 8,
+    "max_segment_characters": 1200,
+    "max_unique_sentences": 100000,
+    "model": {
+      "backend": "sentence-transformers",
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "max_tokens": 128,
+      "stride": 24,
+      "batch_size": 32,
+      "threads": 4
+    },
+    "dbscan": {
+      "eps": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6
+      ],
+      "min_samples": [
+        3,
+        5,
+        10
+      ],
+      "neighborhood_batch_size": 256,
+      "max_neighbor_edges": 8000000
+    },
+    "evaluation": {
+      "sample_size": 1800,
+      "min_coverage": 0.4,
+      "max_largest_cluster": 0.5,
+      "score_tolerance": 0.005
+    },
+    "graph": {
+      "max_nodes": 180,
+      "neighbors": 3,
+      "min_similarity": 0.55
+    },
+    "explanation": {
+      "date_basis": "post_date",
+      "include_estimated_dates": true,
+      "window_months": 3,
+      "min_periods": 6,
+      "min_monthly_comments": 20,
+      "min_topic_comments": 20,
+      "min_window_topic_comments": 5,
+      "min_roots": 3,
+      "dominance_warning_threshold": 0.6,
+      "change_threshold_pp": 2.0,
+      "slope_threshold_pp": 0.25,
+      "kendall_threshold": 0.25,
+      "platform_shift_threshold_pp": 15.0,
+      "min_term_comments": 5,
+      "max_evidence": 3,
+      "mmr_lambda": 0.75
+    },
+    "umap": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0
+    },
+    "coherence": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    }
+  },
+  "clusters": 20,
+  "unclustered_unique": 1045,
+  "unclustered_occurrences": 1058,
+  "selection_rule": "0.60*max(cosine_silhouette,0)*coverage + 0.25*max(stability_ARI,0) + 0.15*coverage",
+  "selection_policy": {
+    "highest_composite_score": 0.3333399326999431,
+    "score_tolerance": 0.005,
+    "near_tie_candidates": [
+      "sbert_umap_dbscan_eps0.2_min3"
+    ],
+    "tie_break": "prefer larger cosine silhouette in original embedding space, then stability and coverage",
+    "interpretation": "heuristic operational tolerance, not statistical significance or labeled accuracy",
+    "candidate_family": "SBERT + UMAP + DBSCAN + optional centroid topic merging",
+    "target_topics": 20,
+    "stability_test": "final topic partitions on two seeded UMAP projections, after merging when configured",
+    "coherence_gate": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    },
+    "coherence_search": "descending composite score; all candidates in the best passing score tolerance band are evaluated; lower scores are explicitly marked unevaluated"
+  },
+  "coherence": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4,
+    "macro_mean": 0.41432509387163935,
+    "target_met": true,
+    "topics_total": 20,
+    "topics_evaluated": 20,
+    "topics_below_target": 12,
+    "reference_documents": 15878,
+    "reference_sha256": "a614e01fe6b13504447a969955493f30b816aefd630884ae2f1951a70f760c54",
+    "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+    "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+    "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+    "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+    "gensim_version": "4.4.0",
+    "per_topic": [
+      {
+        "cluster_id": 0,
+        "terms": [
+          "sama",
+          "orang",
+          "danang",
+          "semoga",
+          "allah",
+          "tau",
+          "kalo",
+          "diri",
+          "cerita",
+          "selalu"
+        ],
+        "score": 0.31043037486793745
+      },
+      {
+        "cluster_id": 1,
+        "terms": [
+          "tahun",
+          "pendaftaran",
+          "nilai",
+          "tes",
+          "sekolah",
+          "daftar",
+          "rapor",
+          "tahun depan",
+          "nilai rapor",
+          "lulusan"
+        ],
+        "score": 0.3920092184143634
+      },
+      {
+        "cluster_id": 2,
+        "terms": [
+          "anak",
+          "keluarga",
+          "adik",
+          "adiknya",
+          "kakaknya",
+          "ku",
+          "punya",
+          "abang",
+          "sama",
+          "selalu"
+        ],
+        "score": 0.5940123344247724
+      },
+      {
+        "cluster_id": 3,
+        "terms": [
+          "gua",
+          "rumah",
+          "kalo",
+          "orang",
+          "anjing",
+          "sama",
+          "sendiri",
+          "ibuk",
+          "dulu",
+          "punya"
+        ],
+        "score": 0.3738733349808326
+      },
+      {
+        "cluster_id": 4,
+        "terms": [
+          "kuliah",
+          "negara",
+          "beasiswa",
+          "kerja",
+          "lpdp",
+          "uang",
+          "orang",
+          "anak",
+          "sekolah",
+          "tidak"
+        ],
+        "score": 0.6331187719179759
+      },
+      {
+        "cluster_id": 5,
+        "terms": [
+          "buku",
+          "blacklist",
+          "daftar",
+          "dokumen",
+          "data",
+          "black",
+          "list",
+          "daftarnya",
+          "black list",
+          "beli"
+        ],
+        "score": 0.35712762704672657
+      },
+      {
+        "cluster_id": 6,
+        "terms": [
+          "umur",
+          "tua",
+          "gym",
+          "senior",
+          "orang tua",
+          "usia",
+          "orang",
+          "muda",
+          "tahun",
+          "olahraga"
+        ],
+        "score": 0.33915493588074447
+      },
+      {
+        "cluster_id": 7,
+        "terms": [
+          "indonesia",
+          "rakyat indonesia",
+          "rakyat",
+          "negara",
+          "lpdp",
+          "tidak",
+          "indonesian",
+          "orang",
+          "negara indonesia",
+          "uang"
+        ],
+        "score": 0.5755075343097424
+      },
+      {
+        "cluster_id": 8,
+        "terms": [
+          "game",
+          "pin",
+          "spmb",
+          "jatim",
+          "spmb jatim",
+          "data",
+          "ketik google",
+          "ketik",
+          "xiaomi",
+          "ambil pin"
+        ],
+        "score": 0.32181968168261144
+      },
+      {
+        "cluster_id": 9,
+        "terms": [
+          "jangan",
+          "tidak",
+          "nggak",
+          "don",
+          "doesn",
+          "kalo",
+          "enggak",
+          "usah",
+          "perlu",
+          "sama sekali"
+        ],
+        "score": 0.40846463053390886
+      },
+      {
+        "cluster_id": 10,
+        "terms": [
+          "mana",
+          "boleh tau",
+          "boleh",
+          "dimana",
+          "sob",
+          "knows",
+          "tau",
+          "tuh",
+          "benarkah",
+          "beneran"
+        ],
+        "score": 0.38759556130334233
+      },
+      {
+        "cluster_id": 11,
+        "terms": [
+          "bahasa",
+          "inggris",
+          "bahasa inggris",
+          "dokumen",
+          "rusia",
+          "terjemahan",
+          "asli",
+          "english",
+          "translate",
+          "apostile"
+        ],
+        "score": 0.5623471540992876
+      },
+      {
+        "cluster_id": 12,
+        "terms": [
+          "bersyukur",
+          "semangat",
+          "sarannya",
+          "dilancarkan",
+          "semoga dilancarkan",
+          "terimakasih",
+          "saran",
+          "dilancarkan segala",
+          "segala",
+          "sob"
+        ],
+        "score": 0.35689993695131583
+      },
+      {
+        "cluster_id": 13,
+        "terms": [
+          "video",
+          "film",
+          "rizky",
+          "videonya",
+          "animasi",
+          "rizky riplay",
+          "riplay",
+          "bikin video",
+          "nonton",
+          "subscribe"
+        ],
+        "score": 0.41539454364821643
+      },
+      {
+        "cluster_id": 14,
+        "terms": [
+          "dokter",
+          "psikiater",
+          "psikolog",
+          "adhd",
+          "bpjs",
+          "spesialis",
+          "kesehatan",
+          "obat",
+          "umum",
+          "dokter umum"
+        ],
+        "score": 0.4861541533792494
+      },
+      {
+        "cluster_id": 15,
+        "terms": [
+          "china",
+          "mandarin",
+          "jepang",
+          "cina",
+          "bahasa",
+          "chinese",
+          "bhs",
+          "belajar",
+          "asia",
+          "bhs mandarin"
+        ],
+        "score": 0.2714071592826454
+      },
+      {
+        "cluster_id": 16,
+        "terms": [
+          "sabun",
+          "viral",
+          "air",
+          "gas",
+          "pake",
+          "vaksin",
+          "rambut",
+          "hair",
+          "toilet",
+          "mrna"
+        ],
+        "score": 0.3625115669127657
+      },
+      {
+        "cluster_id": 17,
+        "terms": [
+          "kek",
+          "kek gini",
+          "kaka",
+          "ibu kek",
+          "ibu",
+          "gini",
+          "keknya",
+          "keluarga kek",
+          "ibuknya kek",
+          "kek anj"
+        ],
+        "score": 0.3580726620817114
+      },
+      {
+        "cluster_id": 18,
+        "terms": [
+          "ibunya",
+          "ibu",
+          "sama",
+          "dina",
+          "sama ibunya",
+          "greget",
+          "danang",
+          "hamil",
+          "emaknya",
+          "ngeselin"
+        ],
+        "score": 0.48822409791123833
+      },
+      {
+        "cluster_id": 19,
+        "terms": [
+          "istri",
+          "suami",
+          "istrinya",
+          "nikah",
+          "perempuan",
+          "wanita",
+          "menikah",
+          "laki",
+          "gender",
+          "cewek"
+        ],
+        "score": 0.29237659780339936
+      }
+    ]
+  },
+  "coherence_baseline": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4,
+    "macro_mean": 0.40970330118194137,
+    "target_met": true,
+    "topics_total": 52,
+    "topics_evaluated": 52,
+    "topics_below_target": 31,
+    "reference_documents": 15878,
+    "reference_sha256": "a614e01fe6b13504447a969955493f30b816aefd630884ae2f1951a70f760c54",
+    "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+    "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+    "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+    "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+    "gensim_version": "4.4.0",
+    "per_topic": [
+      {
+        "cluster_id": 0,
+        "terms": [
+          "orang",
+          "sama",
+          "semoga",
+          "kalo",
+          "tau",
+          "danang",
+          "jangan",
+          "diri",
+          "allah",
+          "selalu"
+        ],
+        "score": 0.37784997428037287
+      },
+      {
+        "cluster_id": 1,
+        "terms": [
+          "ibunya",
+          "ibu",
+          "anak",
+          "adik",
+          "keluarga",
+          "sama",
+          "adiknya",
+          "kakaknya",
+          "danang",
+          "ku"
+        ],
+        "score": 0.5547830820725645
+      },
+      {
+        "cluster_id": 2,
+        "terms": [
+          "kartu",
+          "kartu kip",
+          "punya kartu",
+          "kartunya",
+          "kip",
+          "caranya",
+          "tidak punya",
+          "kks",
+          "pip",
+          "ad"
+        ],
+        "score": 0.5561680951538153
+      },
+      {
+        "cluster_id": 3,
+        "terms": [
+          "kuliah",
+          "beasiswa",
+          "kerja",
+          "lpdp",
+          "uang",
+          "sekolah",
+          "anak",
+          "orang",
+          "kampus",
+          "negara"
+        ],
+        "score": 0.5713586257653185
+      },
+      {
+        "cluster_id": 4,
+        "terms": [
+          "daftar",
+          "daftarnya",
+          "dek",
+          "set",
+          "set set",
+          "nanti daftar",
+          "daftar jalur",
+          "masing",
+          "nanti",
+          "cek"
+        ],
+        "score": 0.3211740024942123
+      },
+      {
+        "cluster_id": 5,
+        "terms": [
+          "umur",
+          "gym",
+          "senior",
+          "tua",
+          "orang tua",
+          "usia",
+          "muda",
+          "orang",
+          "olahraga",
+          "otot"
+        ],
+        "score": 0.3267183258523047
+      },
+      {
+        "cluster_id": 6,
+        "terms": [
+          "indonesia",
+          "rakyat indonesia",
+          "rakyat",
+          "negara",
+          "indonesian",
+          "lpdp",
+          "negara indonesia",
+          "tidak",
+          "blacklist",
+          "negeri"
+        ],
+        "score": 0.5733172186417232
+      },
+      {
+        "cluster_id": 7,
+        "terms": [
+          "namanya",
+          "samaan",
+          "nama",
+          "wahhh samaan",
+          "sob namanya",
+          "samaan sob",
+          "samaan namanya",
+          "wahhh",
+          "sama",
+          "sebarkan"
+        ],
+        "score": 0.4483213725585585
+      },
+      {
+        "cluster_id": 8,
+        "terms": [
+          "dokumen",
+          "data",
+          "buku",
+          "apostile",
+          "berkas",
+          "baca",
+          "email",
+          "pdf",
+          "tulis",
+          "foto"
+        ],
+        "score": 0.2364545493388877
+      },
+      {
+        "cluster_id": 9,
+        "terms": [
+          "knows",
+          "sob",
+          "mana",
+          "benarkah",
+          "luring",
+          "beneran",
+          "berita",
+          "dina",
+          "knp",
+          "maksudnya"
+        ],
+        "score": 0.5242013621047283
+      },
+      {
+        "cluster_id": 10,
+        "terms": [
+          "pendaftaran",
+          "revisi",
+          "link",
+          "unk",
+          "step",
+          "sidang",
+          "kartu",
+          "dn",
+          "pendaftaran kip",
+          "desil berdasarkan"
+        ],
+        "score": 0.3056370447423297
+      },
+      {
+        "cluster_id": 11,
+        "terms": [
+          "sorry",
+          "maaf",
+          "minta maaf",
+          "rant",
+          "maaf tanya",
+          "minta",
+          "sorry op",
+          "sorry happens",
+          "experienced",
+          "sblmnya"
+        ],
+        "score": 0.26572726274836267
+      },
+      {
+        "cluster_id": 12,
+        "terms": [
+          "bahasa",
+          "inggris",
+          "bahasa inggris",
+          "dokumen",
+          "rusia",
+          "terjemahan",
+          "asli",
+          "english",
+          "translate",
+          "dokumen asli"
+        ],
+        "score": 0.5421705017637622
+      },
+      {
+        "cluster_id": 13,
+        "terms": [
+          "rumah",
+          "saiful",
+          "rumahnya",
+          "tetangga",
+          "nurul",
+          "pulang",
+          "foto rumah",
+          "tempat",
+          "sarah rama",
+          "rama ilham"
+        ],
+        "score": 0.4956142550793582
+      },
+      {
+        "cluster_id": 14,
+        "terms": [
+          "inggris",
+          "kusut",
+          "inggris kakk",
+          "pake bhs",
+          "hebat kali",
+          "benang kusut",
+          "negara manapun",
+          "sombongnya minta",
+          "biar pinter",
+          "dy hidup"
+        ],
+        "score": 0.18571132324628528
+      },
+      {
+        "cluster_id": 15,
+        "terms": [
+          "video",
+          "rizky",
+          "videonya",
+          "rizky riplay",
+          "riplay",
+          "bikin video",
+          "youtube",
+          "nonton",
+          "bikin",
+          "videonya viral"
+        ],
+        "score": 0.36934208589551304
+      },
+      {
+        "cluster_id": 16,
+        "terms": [
+          "dokter",
+          "psikiater",
+          "psikolog",
+          "adhd",
+          "bpjs",
+          "spesialis",
+          "obat",
+          "kesehatan",
+          "dokter umum",
+          "umum"
+        ],
+        "score": 0.48615415337924944
+      },
+      {
+        "cluster_id": 17,
+        "terms": [
+          "ielts",
+          "toefl",
+          "bahkan menurut",
+          "skor ielts",
+          "toefl itp",
+          "c1",
+          "itp",
+          "toefl ielts",
+          "skor",
+          "hsk"
+        ],
+        "score": 0.42656421687871937
+      },
+      {
+        "cluster_id": 18,
+        "terms": [
+          "jerman",
+          "kuliah jerman",
+          "applicant",
+          "german",
+          "studienkolleg",
+          "students",
+          "relate",
+          "eu lain",
+          "students relate",
+          "indonesian students"
+        ],
+        "score": 0.5912790626069234
+      },
+      {
+        "cluster_id": 19,
+        "terms": [
+          "negara",
+          "indo",
+          "penghianat",
+          "bangsa",
+          "presiden",
+          "prabowo",
+          "menteri",
+          "pemerintah",
+          "amran",
+          "cabut"
+        ],
+        "score": 0.20736033962015704
+      },
+      {
+        "cluster_id": 20,
+        "terms": [
+          "ipdn",
+          "ipi",
+          "stan",
+          "ipdn stan",
+          "uri",
+          "setengah",
+          "rata",
+          "ukt",
+          "masuk ipdn",
+          "upi"
+        ],
+        "score": 0.2605398639029964
+      },
+      {
+        "cluster_id": 21,
+        "terms": [
+          "ibuk",
+          "sama ibuk",
+          "minum",
+          "ko",
+          "nonton sambil",
+          "agak laen",
+          "ru",
+          "bangun tidur",
+          "ngacung",
+          "negoro"
+        ],
+        "score": 0.30955893265062556
+      },
+      {
+        "cluster_id": 22,
+        "terms": [
+          "china",
+          "mandarin",
+          "jepang",
+          "cina",
+          "bahasa",
+          "chinese",
+          "asia",
+          "bhs",
+          "bhs mandarin",
+          "belajar"
+        ],
+        "score": 0.2714071592826454
+      },
+      {
+        "cluster_id": 23,
+        "terms": [
+          "pin",
+          "spmb",
+          "jatim",
+          "spmb jatim",
+          "ambil pin",
+          "ambil",
+          "berkas",
+          "upload",
+          "hsk",
+          "daftar"
+        ],
+        "score": 0.762161190286785
+      },
+      {
+        "cluster_id": 24,
+        "terms": [
+          "iq",
+          "smart",
+          "manusia sperti",
+          "pangkat",
+          "bermacam2",
+          "catch",
+          "isi hati",
+          "intelijen",
+          "hdup",
+          "siapa suruh"
+        ],
+        "score": 0.29459376151550265
+      },
+      {
+        "cluster_id": 25,
+        "terms": [
+          "air",
+          "data center",
+          "center",
+          "air bersih",
+          "air laut",
+          "salmon",
+          "akibat",
+          "kolam",
+          "water",
+          "laut"
+        ],
+        "score": 0.25053012081506826
+      },
+      {
+        "cluster_id": 26,
+        "terms": [
+          "gua",
+          "batu",
+          "emas",
+          "dikit",
+          "gua kerja",
+          "mah",
+          "ade",
+          "sama",
+          "gravel",
+          "kalo"
+        ],
+        "score": 0.33265922447339813
+      },
+      {
+        "cluster_id": 27,
+        "terms": [
+          "xiaomi",
+          "hp",
+          "kamera",
+          "flagship",
+          "redmi",
+          "zoom",
+          "kameranya",
+          "hyperos",
+          "camera",
+          "bug"
+        ],
+        "score": 0.3516606784542252
+      },
+      {
+        "cluster_id": 28,
+        "terms": [
+          "kek",
+          "kek gini",
+          "kaka",
+          "ibu kek",
+          "gini",
+          "ibu",
+          "keknya",
+          "ibuknya kek",
+          "cerita kek",
+          "kek anj"
+        ],
+        "score": 0.33078084077627534
+      },
+      {
+        "cluster_id": 29,
+        "terms": [
+          "kasian",
+          "kasian kaka",
+          "kaka",
+          "danang kasian",
+          "kka",
+          "kasian danang",
+          "taruhannya",
+          "komennya",
+          "fucking",
+          "kost"
+        ],
+        "score": 0.40574606048582257
+      },
+      {
+        "cluster_id": 30,
+        "terms": [
+          "anjing",
+          "ibunya anjing",
+          "ibu anjing",
+          "kek anjing",
+          "majikan",
+          "menggigit",
+          "ibunya",
+          "ngerusak mental",
+          "peliharaan",
+          "jelekin"
+        ],
+        "score": 0.40344418083711303
+      },
+      {
+        "cluster_id": 31,
+        "terms": [
+          "final",
+          "final sob",
+          "endingnya",
+          "yahhh sayangnya",
+          "yahhh",
+          "kesempatan terakhir",
+          "sayangnya final",
+          "terakhir",
+          "sob",
+          "ending"
+        ],
+        "score": 0.29575700981160324
+      },
+      {
+        "cluster_id": 32,
+        "terms": [
+          "lagu",
+          "lagunya",
+          "pink",
+          "pink floyd",
+          "floyd",
+          "day",
+          "terharu",
+          "nangis",
+          "engineernya",
+          "ane kasih"
+        ],
+        "score": 0.6229806526673919
+      },
+      {
+        "cluster_id": 33,
+        "terms": [
+          "istri",
+          "suami",
+          "istrinya",
+          "nikah",
+          "perempuan",
+          "wanita",
+          "menikah",
+          "laki",
+          "cewek",
+          "gender"
+        ],
+        "score": 0.2923765978033993
+      },
+      {
+        "cluster_id": 34,
+        "terms": [
+          "cewek",
+          "ceweknya",
+          "korban",
+          "wkwkwkwkw",
+          "usah kerja",
+          "twist",
+          "plot twist",
+          "ember",
+          "gadis",
+          "lantas"
+        ],
+        "score": 0.267955891228076
+      },
+      {
+        "cluster_id": 35,
+        "terms": [
+          "mati",
+          "meninggal",
+          "tembak mati",
+          "tembak",
+          "nkri harga",
+          "harga mati",
+          "meninggalkan",
+          "nkri",
+          "harga",
+          "buah jatuh"
+        ],
+        "score": 0.3682701771246434
+      },
+      {
+        "cluster_id": 36,
+        "terms": [
+          "viral",
+          "uin",
+          "buatin viral",
+          "barita viral",
+          "barita",
+          "virus",
+          "azab",
+          "mahasiswi",
+          "buatin",
+          "kasus"
+        ],
+        "score": 0.35636508755254426
+      },
+      {
+        "cluster_id": 37,
+        "terms": [
+          "sepeda",
+          "gravel",
+          "mtb",
+          "bike",
+          "fork",
+          "rigid",
+          "sepeda gravel",
+          "ganti",
+          "motor",
+          "ban"
+        ],
+        "score": 0.4597952118607359
+      },
+      {
+        "cluster_id": 38,
+        "terms": [
+          "sabun",
+          "rambut",
+          "toilet",
+          "hair",
+          "pake sabun",
+          "pake",
+          "mandi",
+          "soap",
+          "tonic",
+          "minoxidil"
+        ],
+        "score": 0.25225950133226893
+      },
+      {
+        "cluster_id": 39,
+        "terms": [
+          "swasta",
+          "kapitalisme",
+          "private",
+          "kapitalis",
+          "capitalism",
+          "pasar",
+          "ekonomi",
+          "varian",
+          "neoliberal",
+          "negara kuat"
+        ],
+        "score": 0.29912795413327636
+      },
+      {
+        "cluster_id": 40,
+        "terms": [
+          "gas",
+          "listrik",
+          "spbu",
+          "bensin",
+          "ketemu spbu",
+          "ac",
+          "ngontrak",
+          "rumah",
+          "dapat uang",
+          "wa"
+        ],
+        "score": 0.24977758389504764
+      },
+      {
+        "cluster_id": 41,
+        "terms": [
+          "palsu",
+          "pidana",
+          "pidana penjara",
+          "penjara lama",
+          "penjara",
+          "hukum",
+          "nama palsu",
+          "lama empat",
+          "rangkaian",
+          "piutang"
+        ],
+        "score": 0.9943253812143074
+      },
+      {
+        "cluster_id": 42,
+        "terms": [
+          "sidang",
+          "yudisium",
+          "sidang skripsi",
+          "skripsi",
+          "wisuda",
+          "syarat",
+          "berdasarkan",
+          "lulus",
+          "lulus berdasarkan",
+          "lulus sidang"
+        ],
+        "score": 0.6091571967702584
+      },
+      {
+        "cluster_id": 43,
+        "terms": [
+          "romania",
+          "bucharest",
+          "university bucharest",
+          "sampai romania",
+          "university",
+          "accommodation",
+          "accommodation letter",
+          "perlu dikeluarkan",
+          "romania langsung",
+          "rumania"
+        ],
+        "score": 0.6772464281777701
+      },
+      {
+        "cluster_id": 44,
+        "terms": [
+          "arya",
+          "istrinya",
+          "istri arya",
+          "arya istrinya",
+          "enteng arya",
+          "bapaknya arya",
+          "bapaknya",
+          "kewarga",
+          "bt",
+          "ds"
+        ],
+        "score": 0.3535822412809246
+      },
+      {
+        "cluster_id": 45,
+        "terms": [
+          "bunga",
+          "bunganya",
+          "beserta",
+          "beserta bunganya",
+          "berikut",
+          "berbunga",
+          "berikut bunganya",
+          "beserta bunga",
+          "buah kesombongan",
+          "segera kembalikan"
+        ],
+        "score": 0.24408269387914108
+      },
+      {
+        "cluster_id": 46,
+        "terms": [
+          "blacklist",
+          "black",
+          "black list",
+          "list",
+          "blacklist seluruh",
+          "sekalian",
+          "nkri",
+          "seluruh dunia",
+          "turunan",
+          "mampus"
+        ],
+        "score": 0.28251408574350767
+      },
+      {
+        "cluster_id": 47,
+        "terms": [
+          "kacang lupa",
+          "kacang",
+          "lupa",
+          "kulit",
+          "lupa kulitnya",
+          "kulitnya",
+          "lupa kulit",
+          "forgot",
+          "ingredients",
+          "kynya"
+        ],
+        "score": 0.46171171855168824
+      },
+      {
+        "cluster_id": 48,
+        "terms": [
+          "gay",
+          "lgbt",
+          "queer",
+          "anti lgbt",
+          "anti",
+          "lgbtq",
+          "lingkungan organisasi",
+          "gaydar",
+          "gerakan",
+          "diam"
+        ],
+        "score": 0.335365339377587
+      },
+      {
+        "cluster_id": 49,
+        "terms": [
+          "nuklir",
+          "teknik nuklir",
+          "teknik",
+          "nuklir ugm",
+          "sertifikasi petugas",
+          "proteksi radiasi",
+          "radiasi",
+          "nuclear",
+          "petugas proteksi",
+          "ugm"
+        ],
+        "score": 0.8028455924216636
+      },
+      {
+        "cluster_id": 50,
+        "terms": [
+          "international",
+          "ui",
+          "acceptance rate",
+          "average",
+          "acceptance",
+          "students",
+          "rate",
+          "student",
+          "classes",
+          "domestic"
+        ],
+        "score": 0.35744081069265754
+      },
+      {
+        "cluster_id": 51,
+        "terms": [
+          "vaksin",
+          "mrna",
+          "vaccine",
+          "dengue",
+          "immune",
+          "response",
+          "imun",
+          "immune response",
+          "protein",
+          "respons"
+        ],
+        "score": 0.3826456382388485
+      }
+    ],
+    "source_run": "outputs/nlp_20261028_coherence_01",
+    "source_manifest_sha256": "fd70ee0a13b5ffa52ddf41f049c4da51423337f1d01ffcc08f8b48b3af6e9f60",
+    "source_sha256": "939f5869ffdfc2ca14c98e8f39cffa7e15292fdb5ea7faaf27c043670fea56e2"
+  },
+  "evaluation_scope": "Internal comparison on this corpus; no labeled semantic ground truth or universal-best claim",
+  "stability_scope": "Final topic partitions on two seeded UMAP projections, including configured centroid merging; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
+  "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> optional SBERT centroid topic merging -> c-TF-IDF topic descriptions",
+  "reduction": {
+    "algorithm": "UMAP",
+    "parameters": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0,
+      "metric": "cosine",
+      "n_jobs": 1
+    },
+    "seeds": [
+      42,
+      43
+    ],
+    "cache_hit": false,
+    "clustering_metric": "euclidean",
+    "original_dimensions": 384
+  },
+  "topic_reduction": {
+    "method": "sentence_weighted_ward",
+    "embedding_space": "original_normalized_SBERT",
+    "target_topics": 20,
+    "original_topics": 257,
+    "final_topics": 20,
+    "noise_preserved": true,
+    "mapping": {
+      "0": 0,
+      "7": 0,
+      "10": 0,
+      "20": 0,
+      "25": 0,
+      "36": 0,
+      "53": 0,
+      "55": 0,
+      "58": 0,
+      "77": 0,
+      "80": 0,
+      "83": 0,
+      "85": 0,
+      "87": 0,
+      "94": 0,
+      "96": 0,
+      "97": 0,
+      "98": 0,
+      "104": 0,
+      "105": 0,
+      "106": 0,
+      "109": 0,
+      "120": 0,
+      "121": 0,
+      "122": 0,
+      "131": 0,
+      "135": 0,
+      "145": 0,
+      "150": 0,
+      "151": 0,
+      "158": 0,
+      "164": 0,
+      "172": 0,
+      "185": 0,
+      "187": 0,
+      "215": 0,
+      "226": 0,
+      "229": 0,
+      "234": 0,
+      "242": 0,
+      "1": 1,
+      "11": 1,
+      "17": 1,
+      "30": 1,
+      "31": 1,
+      "49": 1,
+      "70": 1,
+      "71": 1,
+      "123": 1,
+      "170": 1,
+      "192": 1,
+      "203": 1,
+      "222": 1,
+      "230": 1,
+      "247": 1,
+      "2": 2,
+      "3": 3,
+      "22": 3,
+      "27": 3,
+      "33": 3,
+      "37": 3,
+      "39": 3,
+      "40": 3,
+      "41": 3,
+      "43": 3,
+      "44": 3,
+      "45": 3,
+      "46": 3,
+      "47": 3,
+      "50": 3,
+      "54": 3,
+      "56": 3,
+      "57": 3,
+      "59": 3,
+      "63": 3,
+      "64": 3,
+      "69": 3,
+      "73": 3,
+      "74": 3,
+      "78": 3,
+      "86": 3,
+      "95": 3,
+      "99": 3,
+      "100": 3,
+      "107": 3,
+      "113": 3,
+      "114": 3,
+      "115": 3,
+      "116": 3,
+      "117": 3,
+      "125": 3,
+      "129": 3,
+      "132": 3,
+      "133": 3,
+      "134": 3,
+      "137": 3,
+      "139": 3,
+      "142": 3,
+      "143": 3,
+      "146": 3,
+      "149": 3,
+      "157": 3,
+      "159": 3,
+      "160": 3,
+      "162": 3,
+      "166": 3,
+      "168": 3,
+      "169": 3,
+      "174": 3,
+      "175": 3,
+      "176": 3,
+      "179": 3,
+      "181": 3,
+      "182": 3,
+      "183": 3,
+      "184": 3,
+      "186": 3,
+      "188": 3,
+      "189": 3,
+      "190": 3,
+      "194": 3,
+      "196": 3,
+      "197": 3,
+      "198": 3,
+      "199": 3,
+      "201": 3,
+      "202": 3,
+      "204": 3,
+      "205": 3,
+      "206": 3,
+      "208": 3,
+      "212": 3,
+      "213": 3,
+      "216": 3,
+      "218": 3,
+      "220": 3,
+      "221": 3,
+      "224": 3,
+      "225": 3,
+      "227": 3,
+      "235": 3,
+      "236": 3,
+      "237": 3,
+      "238": 3,
+      "240": 3,
+      "241": 3,
+      "245": 3,
+      "246": 3,
+      "249": 3,
+      "250": 3,
+      "251": 3,
+      "254": 3,
+      "4": 4,
+      "32": 4,
+      "90": 4,
+      "124": 4,
+      "127": 4,
+      "144": 4,
+      "193": 4,
+      "253": 4,
+      "256": 4,
+      "5": 5,
+      "12": 5,
+      "16": 5,
+      "23": 5,
+      "61": 5,
+      "79": 5,
+      "126": 5,
+      "130": 5,
+      "154": 5,
+      "156": 5,
+      "214": 5,
+      "244": 5,
+      "252": 5,
+      "255": 5,
+      "6": 6,
+      "9": 6,
+      "112": 6,
+      "140": 6,
+      "178": 6,
+      "219": 6,
+      "8": 7,
+      "13": 8,
+      "18": 8,
+      "29": 8,
+      "34": 8,
+      "35": 8,
+      "38": 8,
+      "60": 8,
+      "65": 8,
+      "66": 8,
+      "67": 8,
+      "92": 8,
+      "128": 8,
+      "136": 8,
+      "141": 8,
+      "148": 8,
+      "152": 8,
+      "163": 8,
+      "195": 8,
+      "207": 8,
+      "209": 8,
+      "210": 8,
+      "211": 8,
+      "223": 8,
+      "228": 8,
+      "233": 8,
+      "248": 8,
+      "14": 9,
+      "15": 10,
+      "19": 10,
+      "21": 11,
+      "24": 12,
+      "42": 12,
+      "89": 12,
+      "93": 12,
+      "103": 12,
+      "138": 12,
+      "153": 12,
+      "165": 12,
+      "171": 12,
+      "200": 12,
+      "217": 12,
+      "26": 13,
+      "76": 13,
+      "84": 13,
+      "102": 13,
+      "28": 14,
+      "72": 14,
+      "48": 15,
+      "147": 15,
+      "51": 16,
+      "52": 16,
+      "62": 16,
+      "81": 16,
+      "88": 16,
+      "101": 16,
+      "108": 16,
+      "110": 16,
+      "111": 16,
+      "118": 16,
+      "119": 16,
+      "155": 16,
+      "161": 16,
+      "167": 16,
+      "173": 16,
+      "177": 16,
+      "180": 16,
+      "191": 16,
+      "231": 16,
+      "232": 16,
+      "239": 16,
+      "68": 17,
+      "75": 18,
+      "82": 18,
+      "91": 19,
+      "243": 19
+    },
+    "merges": [
+      {
+        "left": [
+          168
+        ],
+        "right": [
+          250
+        ],
+        "squared_error_increase": 0.6221388517273507
+      },
+      {
+        "left": [
+          235
+        ],
+        "right": [
+          236
+        ],
+        "squared_error_increase": 0.6901734704427737
+      },
+      {
+        "left": [
+          40
+        ],
+        "right": [
+          159
+        ],
+        "squared_error_increase": 0.6967252212539012
+      },
+      {
+        "left": [
+          191
+        ],
+        "right": [
+          231
+        ],
+        "squared_error_increase": 0.7052395289827776
+      },
+      {
+        "left": [
+          125
+        ],
+        "right": [
+          225
+        ],
+        "squared_error_increase": 0.7149844983793371
+      },
+      {
+        "left": [
+          145
+        ],
+        "right": [
+          164
+        ],
+        "squared_error_increase": 0.7304465239902379
+      },
+      {
+        "left": [
+          83
+        ],
+        "right": [
+          105
+        ],
+        "squared_error_increase": 0.7439566354044507
+      },
+      {
+        "left": [
+          199
+        ],
+        "right": [
+          249
+        ],
+        "squared_error_increase": 0.7717976741502167
+      },
+      {
+        "left": [
+          120
+        ],
+        "right": [
+          229
+        ],
+        "squared_error_increase": 0.7809364007019169
+      },
+      {
+        "left": [
+          59
+        ],
+        "right": [
+          166
+        ],
+        "squared_error_increase": 0.7832652205353098
+      },
+      {
+        "left": [
+          61
+        ],
+        "right": [
+          244
+        ],
+        "squared_error_increase": 0.793354776308219
+      },
+      {
+        "left": [
+          95
+        ],
+        "right": [
+          100
+        ],
+        "squared_error_increase": 0.8065945363404075
+      },
+      {
+        "left": [
+          39
+        ],
+        "right": [
+          197
+        ],
+        "squared_error_increase": 0.8214455437073351
+      },
+      {
+        "left": [
+          157
+        ],
+        "right": [
+          169
+        ],
+        "squared_error_increase": 0.8253068111708547
+      },
+      {
+        "left": [
+          168,
+          250
+        ],
+        "right": [
+          179
+        ],
+        "squared_error_increase": 0.8311125251095266
+      },
+      {
+        "left": [
+          63
+        ],
+        "right": [
+          116
+        ],
+        "squared_error_increase": 0.8365970784675341
+      },
+      {
+        "left": [
+          17
+        ],
+        "right": [
+          70
+        ],
+        "squared_error_increase": 0.8392670487071849
+      },
+      {
+        "left": [
+          181
+        ],
+        "right": [
+          218
+        ],
+        "squared_error_increase": 0.8437451962211657
+      },
+      {
+        "left": [
+          79
+        ],
+        "right": [
+          156
+        ],
+        "squared_error_increase": 0.8486744934557052
+      },
+      {
+        "left": [
+          136
+        ],
+        "right": [
+          248
+        ],
+        "squared_error_increase": 0.9233100180374934
+      },
+      {
+        "left": [
+          216
+        ],
+        "right": [
+          251
+        ],
+        "squared_error_increase": 0.9255347144275186
+      },
+      {
+        "left": [
+          52
+        ],
+        "right": [
+          191,
+          231
+        ],
+        "squared_error_increase": 0.9440191702018487
+      },
+      {
+        "left": [
+          54
+        ],
+        "right": [
+          146
+        ],
+        "squared_error_increase": 0.947564375473672
+      },
+      {
+        "left": [
+          73
+        ],
+        "right": [
+          194
+        ],
+        "squared_error_increase": 0.949776538075576
+      },
+      {
+        "left": [
+          192
+        ],
+        "right": [
+          230
+        ],
+        "squared_error_increase": 0.9505287735336098
+      },
+      {
+        "left": [
+          165
+        ],
+        "right": [
+          217
+        ],
+        "squared_error_increase": 0.9572405336760558
+      },
+      {
+        "left": [
+          185
+        ],
+        "right": [
+          242
+        ],
+        "squared_error_increase": 0.9584356777649885
+      },
+      {
+        "left": [
+          94
+        ],
+        "right": [
+          109
+        ],
+        "squared_error_increase": 0.961235949130578
+      },
+      {
+        "left": [
+          145,
+          164
+        ],
+        "right": [
+          226
+        ],
+        "squared_error_increase": 0.9669307146085986
+      },
+      {
+        "left": [
+          202
+        ],
+        "right": [
+          237
+        ],
+        "squared_error_increase": 0.9716253602127761
+      },
+      {
+        "left": [
+          88
+        ],
+        "right": [
+          161
+        ],
+        "squared_error_increase": 0.9779143525751145
+      },
+      {
+        "left": [
+          55
+        ],
+        "right": [
+          121
+        ],
+        "squared_error_increase": 0.9792058457726439
+      },
+      {
+        "left": [
+          203
+        ],
+        "right": [
+          247
+        ],
+        "squared_error_increase": 0.9918255746881393
+      },
+      {
+        "left": [
+          41
+        ],
+        "right": [
+          143
+        ],
+        "squared_error_increase": 0.9940568301639319
+      },
+      {
+        "left": [
+          178
+        ],
+        "right": [
+          219
+        ],
+        "squared_error_increase": 0.9967687967217006
+      },
+      {
+        "left": [
+          255
+        ],
+        "right": [
+          23
+        ],
+        "squared_error_increase": 0.9980967083825483
+      },
+      {
+        "left": [
+          160
+        ],
+        "right": [
+          183
+        ],
+        "squared_error_increase": 1.0443491947376493
+      },
+      {
+        "left": [
+          111
+        ],
+        "right": [
+          232
+        ],
+        "squared_error_increase": 1.050156820160822
+      },
+      {
+        "left": [
+          184
+        ],
+        "right": [
+          186
+        ],
+        "squared_error_increase": 1.0553588760577455
+      },
+      {
+        "left": [
+          182
+        ],
+        "right": [
+          245
+        ],
+        "squared_error_increase": 1.057325118255298
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          224
+        ],
+        "squared_error_increase": 1.087172822028678
+      },
+      {
+        "left": [
+          145,
+          164,
+          226
+        ],
+        "right": [
+          234
+        ],
+        "squared_error_increase": 1.0892372548370233
+      },
+      {
+        "left": [
+          104
+        ],
+        "right": [
+          131
+        ],
+        "squared_error_increase": 1.1156104147629058
+      },
+      {
+        "left": [
+          61,
+          244
+        ],
+        "right": [
+          79,
+          156
+        ],
+        "squared_error_increase": 1.1189344275678696
+      },
+      {
+        "left": [
+          39,
+          197
+        ],
+        "right": [
+          44
+        ],
+        "squared_error_increase": 1.1338619084023804
+      },
+      {
+        "left": [
+          148
+        ],
+        "right": [
+          211
+        ],
+        "squared_error_increase": 1.1340095335498173
+      },
+      {
+        "left": [
+          205
+        ],
+        "right": [
+          212
+        ],
+        "squared_error_increase": 1.1375335069122736
+      },
+      {
+        "left": [
+          204
+        ],
+        "right": [
+          246
+        ],
+        "squared_error_increase": 1.1509863733962733
+      },
+      {
+        "left": [
+          220
+        ],
+        "right": [
+          227
+        ],
+        "squared_error_increase": 1.1513937874765825
+      },
+      {
+        "left": [
+          139
+        ],
+        "right": [
+          208
+        ],
+        "squared_error_increase": 1.154043486913587
+      },
+      {
+        "left": [
+          149
+        ],
+        "right": [
+          181,
+          218
+        ],
+        "squared_error_increase": 1.164331977151292
+      },
+      {
+        "left": [
+          85
+        ],
+        "right": [
+          172
+        ],
+        "squared_error_increase": 1.1664862296976777
+      },
+      {
+        "left": [
+          27
+        ],
+        "right": [
+          43
+        ],
+        "squared_error_increase": 1.1686162063099776
+      },
+      {
+        "left": [
+          235,
+          236
+        ],
+        "right": [
+          240
+        ],
+        "squared_error_increase": 1.1858464212874935
+      },
+      {
+        "left": [
+          86
+        ],
+        "right": [
+          107
+        ],
+        "squared_error_increase": 1.1957928167001557
+      },
+      {
+        "left": [
+          36
+        ],
+        "right": [
+          55,
+          121
+        ],
+        "squared_error_increase": 1.2134917320130507
+      },
+      {
+        "left": [
+          198
+        ],
+        "right": [
+          199,
+          249
+        ],
+        "squared_error_increase": 1.2143726628817455
+      },
+      {
+        "left": [
+          58
+        ],
+        "right": [
+          158
+        ],
+        "squared_error_increase": 1.2319065362136807
+      },
+      {
+        "left": [
+          138
+        ],
+        "right": [
+          42
+        ],
+        "squared_error_increase": 1.2373179035119852
+      },
+      {
+        "left": [
+          189
+        ],
+        "right": [
+          204,
+          246
+        ],
+        "squared_error_increase": 1.2442979505097391
+      },
+      {
+        "left": [
+          34
+        ],
+        "right": [
+          136,
+          248
+        ],
+        "squared_error_increase": 1.2529425189336652
+      },
+      {
+        "left": [
+          140
+        ],
+        "right": [
+          178,
+          219
+        ],
+        "squared_error_increase": 1.2549468215311477
+      },
+      {
+        "left": [
+          93
+        ],
+        "right": [
+          200
+        ],
+        "squared_error_increase": 1.2701233758552575
+      },
+      {
+        "left": [
+          91
+        ],
+        "right": [
+          243
+        ],
+        "squared_error_increase": 1.276004580480407
+      },
+      {
+        "left": [
+          18
+        ],
+        "right": [
+          34,
+          136,
+          248
+        ],
+        "squared_error_increase": 1.2769325374238572
+      },
+      {
+        "left": [
+          33
+        ],
+        "right": [
+          196
+        ],
+        "squared_error_increase": 1.293341345311075
+      },
+      {
+        "left": [
+          113
+        ],
+        "right": [
+          182,
+          245
+        ],
+        "squared_error_increase": 1.29589864261476
+      },
+      {
+        "left": [
+          124
+        ],
+        "right": [
+          256
+        ],
+        "squared_error_increase": 1.3091210472149168
+      },
+      {
+        "left": [
+          35
+        ],
+        "right": [
+          223
+        ],
+        "squared_error_increase": 1.3154837897688405
+      },
+      {
+        "left": [
+          39,
+          44,
+          197
+        ],
+        "right": [
+          45
+        ],
+        "squared_error_increase": 1.3262726584266018
+      },
+      {
+        "left": [
+          59,
+          166
+        ],
+        "right": [
+          190
+        ],
+        "squared_error_increase": 1.343104692579199
+      },
+      {
+        "left": [
+          175
+        ],
+        "right": [
+          129
+        ],
+        "squared_error_increase": 1.3483459610143584
+      },
+      {
+        "left": [
+          104,
+          131
+        ],
+        "right": [
+          145,
+          164,
+          226,
+          234
+        ],
+        "squared_error_increase": 1.349909504559437
+      },
+      {
+        "left": [
+          83,
+          105
+        ],
+        "right": [
+          215
+        ],
+        "squared_error_increase": 1.355826913640783
+      },
+      {
+        "left": [
+          165,
+          217
+        ],
+        "right": [
+          171
+        ],
+        "squared_error_increase": 1.36138973079923
+      },
+      {
+        "left": [
+          253
+        ],
+        "right": [
+          193
+        ],
+        "squared_error_increase": 1.3694005771986901
+      },
+      {
+        "left": [
+          125,
+          225
+        ],
+        "right": [
+          157,
+          169
+        ],
+        "squared_error_increase": 1.3719071195066173
+      },
+      {
+        "left": [
+          205,
+          212
+        ],
+        "right": [
+          254
+        ],
+        "squared_error_increase": 1.381021587880029
+      },
+      {
+        "left": [
+          168,
+          179,
+          250
+        ],
+        "right": [
+          241
+        ],
+        "squared_error_increase": 1.399319669516549
+      },
+      {
+        "left": [
+          48
+        ],
+        "right": [
+          147
+        ],
+        "squared_error_increase": 1.4004002928922343
+      },
+      {
+        "left": [
+          77
+        ],
+        "right": [
+          120,
+          229
+        ],
+        "squared_error_increase": 1.4289260341022727
+      },
+      {
+        "left": [
+          92
+        ],
+        "right": [
+          128
+        ],
+        "squared_error_increase": 1.4392333768692527
+      },
+      {
+        "left": [
+          40,
+          159
+        ],
+        "right": [
+          202,
+          237
+        ],
+        "squared_error_increase": 1.439315661691391
+      },
+      {
+        "left": [
+          123
+        ],
+        "right": [
+          222
+        ],
+        "squared_error_increase": 1.4562065775222022
+      },
+      {
+        "left": [
+          37
+        ],
+        "right": [
+          41,
+          143
+        ],
+        "squared_error_increase": 1.4734930053476718
+      },
+      {
+        "left": [
+          84
+        ],
+        "right": [
+          102
+        ],
+        "squared_error_increase": 1.4834729378488267
+      },
+      {
+        "left": [
+          141
+        ],
+        "right": [
+          195
+        ],
+        "squared_error_increase": 1.5079032245751862
+      },
+      {
+        "left": [
+          137
+        ],
+        "right": [
+          129,
+          175
+        ],
+        "squared_error_increase": 1.5536007213809055
+      },
+      {
+        "left": [
+          53
+        ],
+        "right": [
+          83,
+          105,
+          215
+        ],
+        "squared_error_increase": 1.555235866501374
+      },
+      {
+        "left": [
+          176
+        ],
+        "right": [
+          216,
+          251
+        ],
+        "squared_error_increase": 1.5654130311874226
+      },
+      {
+        "left": [
+          85,
+          172
+        ],
+        "right": [
+          185,
+          242
+        ],
+        "squared_error_increase": 1.5968005084892078
+      },
+      {
+        "left": [
+          69
+        ],
+        "right": [
+          220,
+          227
+        ],
+        "squared_error_increase": 1.6002790573486714
+      },
+      {
+        "left": [
+          214
+        ],
+        "right": [
+          23,
+          255
+        ],
+        "squared_error_increase": 1.6063113827570645
+      },
+      {
+        "left": [
+          36,
+          55,
+          121
+        ],
+        "right": [
+          94,
+          109
+        ],
+        "squared_error_increase": 1.6258929351977043
+      },
+      {
+        "left": [
+          56
+        ],
+        "right": [
+          95,
+          100
+        ],
+        "squared_error_increase": 1.6405731461655086
+      },
+      {
+        "left": [
+          49
+        ],
+        "right": [
+          192,
+          230
+        ],
+        "squared_error_increase": 1.6597852692089932
+      },
+      {
+        "left": [
+          6
+        ],
+        "right": [
+          112
+        ],
+        "squared_error_increase": 1.670846175044064
+      },
+      {
+        "left": [
+          99
+        ],
+        "right": [
+          114
+        ],
+        "squared_error_increase": 1.6717553000419856
+      },
+      {
+        "left": [
+          27,
+          43
+        ],
+        "right": [
+          57
+        ],
+        "squared_error_increase": 1.6993649473350447
+      },
+      {
+        "left": [
+          39,
+          44,
+          45,
+          197
+        ],
+        "right": [
+          198,
+          199,
+          249
+        ],
+        "squared_error_increase": 1.700421542518304
+      },
+      {
+        "left": [
+          18,
+          34,
+          136,
+          248
+        ],
+        "right": [
+          35,
+          223
+        ],
+        "squared_error_increase": 1.705167706369978
+      },
+      {
+        "left": [
+          160,
+          183
+        ],
+        "right": [
+          201
+        ],
+        "squared_error_increase": 1.705797438537179
+      },
+      {
+        "left": [
+          33,
+          196
+        ],
+        "right": [
+          238
+        ],
+        "squared_error_increase": 1.7125807423379078
+      },
+      {
+        "left": [
+          188
+        ],
+        "right": [
+          235,
+          236,
+          240
+        ],
+        "squared_error_increase": 1.7180780964693492
+      },
+      {
+        "left": [
+          77,
+          120,
+          229
+        ],
+        "right": [
+          122
+        ],
+        "squared_error_increase": 1.7376164586946663
+      },
+      {
+        "left": [
+          71
+        ],
+        "right": [
+          203,
+          247
+        ],
+        "squared_error_increase": 1.757314516975678
+      },
+      {
+        "left": [
+          162
+        ],
+        "right": [
+          221
+        ],
+        "squared_error_increase": 1.7644801910883101
+      },
+      {
+        "left": [
+          160,
+          183,
+          201
+        ],
+        "right": [
+          213
+        ],
+        "squared_error_increase": 1.7947748972832478
+      },
+      {
+        "left": [
+          117
+        ],
+        "right": [
+          189,
+          204,
+          246
+        ],
+        "squared_error_increase": 1.8321387852555684
+      },
+      {
+        "left": [
+          56,
+          95,
+          100
+        ],
+        "right": [
+          86,
+          107
+        ],
+        "squared_error_increase": 1.8416476571056064
+      },
+      {
+        "left": [
+          52,
+          191,
+          231
+        ],
+        "right": [
+          111,
+          232
+        ],
+        "squared_error_increase": 1.8722245231073429
+      },
+      {
+        "left": [
+          62
+        ],
+        "right": [
+          108
+        ],
+        "squared_error_increase": 1.872526626278943
+      },
+      {
+        "left": [
+          13
+        ],
+        "right": [
+          18,
+          34,
+          35,
+          136,
+          223,
+          248
+        ],
+        "squared_error_increase": 1.886862846049746
+      },
+      {
+        "left": [
+          54,
+          146
+        ],
+        "right": [
+          134
+        ],
+        "squared_error_increase": 1.908728739034461
+      },
+      {
+        "left": [
+          149,
+          181,
+          218
+        ],
+        "right": [
+          168,
+          179,
+          241,
+          250
+        ],
+        "squared_error_increase": 1.9360615842939195
+      },
+      {
+        "left": [
+          61,
+          79,
+          156,
+          244
+        ],
+        "right": [
+          252
+        ],
+        "squared_error_increase": 1.9410245138994775
+      },
+      {
+        "left": [
+          210
+        ],
+        "right": [
+          233
+        ],
+        "squared_error_increase": 1.9636107967095626
+      },
+      {
+        "left": [
+          53,
+          83,
+          105,
+          215
+        ],
+        "right": [
+          104,
+          131,
+          145,
+          164,
+          226,
+          234
+        ],
+        "squared_error_increase": 1.9884704754223785
+      },
+      {
+        "left": [
+          17,
+          70
+        ],
+        "right": [
+          31
+        ],
+        "squared_error_increase": 2.001263944263285
+      },
+      {
+        "left": [
+          188,
+          235,
+          236,
+          240
+        ],
+        "right": [
+          205,
+          212,
+          254
+        ],
+        "squared_error_increase": 2.0465535674040525
+      },
+      {
+        "left": [
+          33,
+          196,
+          238
+        ],
+        "right": [
+          139,
+          208
+        ],
+        "squared_error_increase": 2.1043839565459956
+      },
+      {
+        "left": [
+          49,
+          192,
+          230
+        ],
+        "right": [
+          123,
+          222
+        ],
+        "squared_error_increase": 2.1085393547003166
+      },
+      {
+        "left": [
+          162,
+          221
+        ],
+        "right": [
+          174
+        ],
+        "squared_error_increase": 2.115626334273565
+      },
+      {
+        "left": [
+          125,
+          157,
+          169,
+          225
+        ],
+        "right": [
+          129,
+          137,
+          175
+        ],
+        "squared_error_increase": 2.170933036562326
+      },
+      {
+        "left": [
+          167
+        ],
+        "right": [
+          173
+        ],
+        "squared_error_increase": 2.1896509150921877
+      },
+      {
+        "left": [
+          40,
+          159,
+          202,
+          237
+        ],
+        "right": [
+          99,
+          114
+        ],
+        "squared_error_increase": 2.20902948847677
+      },
+      {
+        "left": [
+          73,
+          194
+        ],
+        "right": [
+          117,
+          189,
+          204,
+          246
+        ],
+        "squared_error_increase": 2.231214454504324
+      },
+      {
+        "left": [
+          85,
+          172,
+          185,
+          242
+        ],
+        "right": [
+          97
+        ],
+        "squared_error_increase": 2.3141096083082155
+      },
+      {
+        "left": [
+          42,
+          138
+        ],
+        "right": [
+          165,
+          171,
+          217
+        ],
+        "squared_error_increase": 2.3617200550048776
+      },
+      {
+        "left": [
+          92,
+          128
+        ],
+        "right": [
+          141,
+          195
+        ],
+        "squared_error_increase": 2.407621472124979
+      },
+      {
+        "left": [
+          63,
+          116
+        ],
+        "right": [
+          115
+        ],
+        "squared_error_increase": 2.43055912612147
+      },
+      {
+        "left": [
+          59,
+          166,
+          190
+        ],
+        "right": [
+          184,
+          186
+        ],
+        "squared_error_increase": 2.4572888159578277
+      },
+      {
+        "left": [
+          92,
+          128,
+          141,
+          195
+        ],
+        "right": [
+          148,
+          211
+        ],
+        "squared_error_increase": 2.5362121039137935
+      },
+      {
+        "left": [
+          69,
+          220,
+          227
+        ],
+        "right": [
+          176,
+          216,
+          251
+        ],
+        "squared_error_increase": 2.5884191361017272
+      },
+      {
+        "left": [
+          77,
+          120,
+          122,
+          229
+        ],
+        "right": [
+          96
+        ],
+        "squared_error_increase": 2.600145610805995
+      },
+      {
+        "left": [
+          61,
+          79,
+          156,
+          244,
+          252
+        ],
+        "right": [
+          23,
+          214,
+          255
+        ],
+        "squared_error_increase": 2.606557607720041
+      },
+      {
+        "left": [
+          49,
+          123,
+          192,
+          222,
+          230
+        ],
+        "right": [
+          170
+        ],
+        "squared_error_increase": 2.625251653233489
+      },
+      {
+        "left": [
+          39,
+          44,
+          45,
+          197,
+          198,
+          199,
+          249
+        ],
+        "right": [
+          206
+        ],
+        "squared_error_increase": 2.637335663149289
+      },
+      {
+        "left": [
+          92,
+          128,
+          141,
+          148,
+          195,
+          211
+        ],
+        "right": [
+          210,
+          233
+        ],
+        "squared_error_increase": 2.6610788539289105
+      },
+      {
+        "left": [
+          37,
+          41,
+          143
+        ],
+        "right": [
+          54,
+          134,
+          146
+        ],
+        "squared_error_increase": 2.71036328234356
+      },
+      {
+        "left": [
+          3
+        ],
+        "right": [
+          74
+        ],
+        "squared_error_increase": 2.816941643263848
+      },
+      {
+        "left": [
+          36,
+          55,
+          94,
+          109,
+          121
+        ],
+        "right": [
+          85,
+          97,
+          172,
+          185,
+          242
+        ],
+        "squared_error_increase": 2.848440405797867
+      },
+      {
+        "left": [
+          33,
+          139,
+          196,
+          208,
+          238
+        ],
+        "right": [
+          69,
+          176,
+          216,
+          220,
+          227,
+          251
+        ],
+        "squared_error_increase": 2.8636322158253384
+      },
+      {
+        "left": [
+          60
+        ],
+        "right": [
+          67
+        ],
+        "squared_error_increase": 2.8715365679019964
+      },
+      {
+        "left": [
+          56,
+          86,
+          95,
+          100,
+          107
+        ],
+        "right": [
+          125,
+          129,
+          137,
+          157,
+          169,
+          175,
+          225
+        ],
+        "squared_error_increase": 2.8997818546584635
+      },
+      {
+        "left": [
+          132
+        ],
+        "right": [
+          149,
+          168,
+          179,
+          181,
+          218,
+          241,
+          250
+        ],
+        "squared_error_increase": 2.9234760782877305
+      },
+      {
+        "left": [
+          27,
+          43,
+          57
+        ],
+        "right": [
+          162,
+          174,
+          221
+        ],
+        "squared_error_increase": 2.9462932118170904
+      },
+      {
+        "left": [
+          81
+        ],
+        "right": [
+          51
+        ],
+        "squared_error_increase": 2.947234626411856
+      },
+      {
+        "left": [
+          187
+        ],
+        "right": [
+          106
+        ],
+        "squared_error_increase": 2.9552636790534916
+      },
+      {
+        "left": [
+          50,
+          224
+        ],
+        "right": [
+          113,
+          182,
+          245
+        ],
+        "squared_error_increase": 2.9978978546248114
+      },
+      {
+        "left": [
+          17,
+          31,
+          70
+        ],
+        "right": [
+          71,
+          203,
+          247
+        ],
+        "squared_error_increase": 3.087924017582796
+      },
+      {
+        "left": [
+          28
+        ],
+        "right": [
+          72
+        ],
+        "squared_error_increase": 3.0955805155957803
+      },
+      {
+        "left": [
+          93,
+          200
+        ],
+        "right": [
+          153
+        ],
+        "squared_error_increase": 3.1167393660328724
+      },
+      {
+        "left": [
+          15
+        ],
+        "right": [
+          19
+        ],
+        "squared_error_increase": 3.133242737650397
+      },
+      {
+        "left": [
+          52,
+          111,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          167,
+          173
+        ],
+        "squared_error_increase": 3.1407662156954617
+      },
+      {
+        "left": [
+          36,
+          55,
+          85,
+          94,
+          97,
+          109,
+          121,
+          172,
+          185,
+          242
+        ],
+        "right": [
+          77,
+          96,
+          120,
+          122,
+          229
+        ],
+        "squared_error_increase": 3.235143110572342
+      },
+      {
+        "left": [
+          76
+        ],
+        "right": [
+          84,
+          102
+        ],
+        "squared_error_increase": 3.281868084123457
+      },
+      {
+        "left": [
+          75
+        ],
+        "right": [
+          82
+        ],
+        "squared_error_increase": 3.3421611157523867
+      },
+      {
+        "left": [
+          0
+        ],
+        "right": [
+          135
+        ],
+        "squared_error_increase": 3.35306338928301
+      },
+      {
+        "left": [
+          90
+        ],
+        "right": [
+          193,
+          253
+        ],
+        "squared_error_increase": 3.386375424426796
+      },
+      {
+        "left": [
+          56,
+          86,
+          95,
+          100,
+          107,
+          125,
+          129,
+          137,
+          157,
+          169,
+          175,
+          225
+        ],
+        "right": [
+          59,
+          166,
+          184,
+          186,
+          190
+        ],
+        "squared_error_increase": 3.4369779316870064
+      },
+      {
+        "left": [
+          0,
+          135
+        ],
+        "right": [
+          53,
+          83,
+          104,
+          105,
+          131,
+          145,
+          164,
+          215,
+          226,
+          234
+        ],
+        "squared_error_increase": 3.717251806324425
+      },
+      {
+        "left": [
+          9
+        ],
+        "right": [
+          140,
+          178,
+          219
+        ],
+        "squared_error_increase": 3.717741812966516
+      },
+      {
+        "left": [
+          37,
+          41,
+          54,
+          134,
+          143,
+          146
+        ],
+        "right": [
+          160,
+          183,
+          201,
+          213
+        ],
+        "squared_error_increase": 3.730122011944636
+      },
+      {
+        "left": [
+          33,
+          69,
+          139,
+          176,
+          196,
+          208,
+          216,
+          220,
+          227,
+          238,
+          251
+        ],
+        "right": [
+          188,
+          205,
+          212,
+          235,
+          236,
+          240,
+          254
+        ],
+        "squared_error_increase": 3.7450289258503657
+      },
+      {
+        "left": [
+          13,
+          18,
+          34,
+          35,
+          136,
+          223,
+          248
+        ],
+        "right": [
+          38
+        ],
+        "squared_error_increase": 3.764981964478846
+      },
+      {
+        "left": [
+          32
+        ],
+        "right": [
+          124,
+          256
+        ],
+        "squared_error_increase": 3.8298368747548857
+      },
+      {
+        "left": [
+          89
+        ],
+        "right": [
+          42,
+          138,
+          165,
+          171,
+          217
+        ],
+        "squared_error_increase": 3.8986758722235533
+      },
+      {
+        "left": [
+          80
+        ],
+        "right": [
+          98
+        ],
+        "squared_error_increase": 3.929895871775159
+      },
+      {
+        "left": [
+          13,
+          18,
+          34,
+          35,
+          38,
+          136,
+          223,
+          248
+        ],
+        "right": [
+          29
+        ],
+        "squared_error_increase": 3.9858576947008495
+      },
+      {
+        "left": [
+          10
+        ],
+        "right": [
+          87
+        ],
+        "squared_error_increase": 4.004696659454535
+      },
+      {
+        "left": [
+          16
+        ],
+        "right": [
+          23,
+          61,
+          79,
+          156,
+          214,
+          244,
+          252,
+          255
+        ],
+        "squared_error_increase": 4.063184855836455
+      },
+      {
+        "left": [
+          0,
+          53,
+          83,
+          104,
+          105,
+          131,
+          135,
+          145,
+          164,
+          215,
+          226,
+          234
+        ],
+        "right": [
+          106,
+          187
+        ],
+        "squared_error_increase": 4.12196810962571
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          136,
+          223,
+          248
+        ],
+        "right": [
+          92,
+          128,
+          141,
+          148,
+          195,
+          210,
+          211,
+          233
+        ],
+        "squared_error_increase": 4.127874509993517
+      },
+      {
+        "left": [
+          27,
+          43,
+          57,
+          162,
+          174,
+          221
+        ],
+        "right": [
+          63,
+          115,
+          116
+        ],
+        "squared_error_increase": 4.1497427497967765
+      },
+      {
+        "left": [
+          52,
+          111,
+          167,
+          173,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          51,
+          81
+        ],
+        "squared_error_increase": 4.281273925639979
+      },
+      {
+        "left": [
+          88,
+          161
+        ],
+        "right": [
+          101
+        ],
+        "squared_error_increase": 4.345364240454797
+      },
+      {
+        "left": [
+          10,
+          87
+        ],
+        "right": [
+          36,
+          55,
+          77,
+          85,
+          94,
+          96,
+          97,
+          109,
+          120,
+          121,
+          122,
+          172,
+          185,
+          229,
+          242
+        ],
+        "squared_error_increase": 4.44031562475146
+      },
+      {
+        "left": [
+          1
+        ],
+        "right": [
+          11
+        ],
+        "squared_error_increase": 4.767390821043551
+      },
+      {
+        "left": [
+          37,
+          41,
+          54,
+          134,
+          143,
+          146,
+          160,
+          183,
+          201,
+          213
+        ],
+        "right": [
+          142
+        ],
+        "squared_error_increase": 4.779213568025569
+      },
+      {
+        "left": [
+          51,
+          52,
+          81,
+          111,
+          167,
+          173,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          155
+        ],
+        "squared_error_increase": 4.8337681583605185
+      },
+      {
+        "left": [
+          130
+        ],
+        "right": [
+          126
+        ],
+        "squared_error_increase": 4.9428187671981325
+      },
+      {
+        "left": [
+          25
+        ],
+        "right": [
+          151
+        ],
+        "squared_error_increase": 4.977130623684041
+      },
+      {
+        "left": [
+          207
+        ],
+        "right": [
+          228
+        ],
+        "squared_error_increase": 5.0123574374867195
+      },
+      {
+        "left": [
+          39,
+          44,
+          45,
+          197,
+          198,
+          199,
+          206,
+          249
+        ],
+        "right": [
+          73,
+          117,
+          189,
+          194,
+          204,
+          246
+        ],
+        "squared_error_increase": 5.04238196674514
+      },
+      {
+        "left": [
+          4
+        ],
+        "right": [
+          90,
+          193,
+          253
+        ],
+        "squared_error_increase": 5.0524358566279055
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          92,
+          128,
+          136,
+          141,
+          148,
+          195,
+          210,
+          211,
+          223,
+          233,
+          248
+        ],
+        "right": [
+          163
+        ],
+        "squared_error_increase": 5.055712157716809
+      },
+      {
+        "left": [
+          32,
+          124,
+          256
+        ],
+        "right": [
+          144
+        ],
+        "squared_error_increase": 5.126446786847466
+      },
+      {
+        "left": [
+          26
+        ],
+        "right": [
+          76,
+          84,
+          102
+        ],
+        "squared_error_increase": 5.142506933674058
+      },
+      {
+        "left": [
+          56,
+          59,
+          86,
+          95,
+          100,
+          107,
+          125,
+          129,
+          137,
+          157,
+          166,
+          169,
+          175,
+          184,
+          186,
+          190,
+          225
+        ],
+        "right": [
+          133
+        ],
+        "squared_error_increase": 5.279037671299556
+      },
+      {
+        "left": [
+          27,
+          43,
+          57,
+          63,
+          115,
+          116,
+          162,
+          174,
+          221
+        ],
+        "right": [
+          33,
+          69,
+          139,
+          176,
+          188,
+          196,
+          205,
+          208,
+          212,
+          216,
+          220,
+          227,
+          235,
+          236,
+          238,
+          240,
+          251,
+          254
+        ],
+        "squared_error_increase": 5.312021825893475
+      },
+      {
+        "left": [
+          24
+        ],
+        "right": [
+          93,
+          153,
+          200
+        ],
+        "squared_error_increase": 5.579397737433844
+      },
+      {
+        "left": [
+          3,
+          74
+        ],
+        "right": [
+          47
+        ],
+        "squared_error_increase": 5.680262047843274
+      },
+      {
+        "left": [
+          51,
+          52,
+          81,
+          111,
+          155,
+          167,
+          173,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          110
+        ],
+        "squared_error_increase": 5.707511984914137
+      },
+      {
+        "left": [
+          62,
+          108
+        ],
+        "right": [
+          119
+        ],
+        "squared_error_increase": 5.709456314635229
+      },
+      {
+        "left": [
+          6,
+          112
+        ],
+        "right": [
+          9,
+          140,
+          178,
+          219
+        ],
+        "squared_error_increase": 5.912339932961005
+      },
+      {
+        "left": [
+          17,
+          31,
+          70,
+          71,
+          203,
+          247
+        ],
+        "right": [
+          49,
+          123,
+          170,
+          192,
+          222,
+          230
+        ],
+        "squared_error_increase": 5.992005972247865
+      },
+      {
+        "left": [
+          40,
+          99,
+          114,
+          159,
+          202,
+          237
+        ],
+        "right": [
+          132,
+          149,
+          168,
+          179,
+          181,
+          218,
+          241,
+          250
+        ],
+        "squared_error_increase": 6.012104866238605
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          92,
+          128,
+          136,
+          141,
+          148,
+          163,
+          195,
+          210,
+          211,
+          223,
+          233,
+          248
+        ],
+        "right": [
+          65
+        ],
+        "squared_error_increase": 6.1920034442152305
+      },
+      {
+        "left": [
+          25,
+          151
+        ],
+        "right": [
+          58,
+          158
+        ],
+        "squared_error_increase": 6.209611406938093
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          65,
+          92,
+          128,
+          136,
+          141,
+          148,
+          163,
+          195,
+          210,
+          211,
+          223,
+          233,
+          248
+        ],
+        "right": [
+          207,
+          228
+        ],
+        "squared_error_increase": 6.373791596889453
+      },
+      {
+        "left": [
+          39,
+          44,
+          45,
+          73,
+          117,
+          189,
+          194,
+          197,
+          198,
+          199,
+          204,
+          206,
+          246,
+          249
+        ],
+        "right": [
+          46
+        ],
+        "squared_error_increase": 6.743329106963847
+      },
+      {
+        "left": [
+          17,
+          31,
+          49,
+          70,
+          71,
+          123,
+          170,
+          192,
+          203,
+          222,
+          230,
+          247
+        ],
+        "right": [
+          30
+        ],
+        "squared_error_increase": 6.912947548962226
+      },
+      {
+        "left": [
+          60,
+          67
+        ],
+        "right": [
+          209
+        ],
+        "squared_error_increase": 7.050809929115894
+      },
+      {
+        "left": [
+          12
+        ],
+        "right": [
+          16,
+          23,
+          61,
+          79,
+          156,
+          214,
+          244,
+          252,
+          255
+        ],
+        "squared_error_increase": 7.050852553155711
+      },
+      {
+        "left": [
+          7
+        ],
+        "right": [
+          150
+        ],
+        "squared_error_increase": 7.092803768604323
+      },
+      {
+        "left": [
+          20
+        ],
+        "right": [
+          80,
+          98
+        ],
+        "squared_error_increase": 7.198308401776074
+      },
+      {
+        "left": [
+          5
+        ],
+        "right": [
+          154
+        ],
+        "squared_error_increase": 7.412763122493492
+      },
+      {
+        "left": [
+          37,
+          41,
+          54,
+          134,
+          142,
+          143,
+          146,
+          160,
+          183,
+          201,
+          213
+        ],
+        "right": [
+          56,
+          59,
+          86,
+          95,
+          100,
+          107,
+          125,
+          129,
+          133,
+          137,
+          157,
+          166,
+          169,
+          175,
+          184,
+          186,
+          190,
+          225
+        ],
+        "squared_error_increase": 7.51821751018717
+      },
+      {
+        "left": [
+          24,
+          93,
+          153,
+          200
+        ],
+        "right": [
+          103
+        ],
+        "squared_error_increase": 7.521417765022014
+      },
+      {
+        "left": [
+          0,
+          53,
+          83,
+          104,
+          105,
+          106,
+          131,
+          135,
+          145,
+          164,
+          187,
+          215,
+          226,
+          234
+        ],
+        "right": [
+          10,
+          36,
+          55,
+          77,
+          85,
+          87,
+          94,
+          96,
+          97,
+          109,
+          120,
+          121,
+          122,
+          172,
+          185,
+          229,
+          242
+        ],
+        "squared_error_increase": 7.721813777541262
+      },
+      {
+        "left": [
+          88,
+          101,
+          161
+        ],
+        "right": [
+          239
+        ],
+        "squared_error_increase": 8.074672918618075
+      },
+      {
+        "left": [
+          24,
+          93,
+          103,
+          153,
+          200
+        ],
+        "right": [
+          42,
+          89,
+          138,
+          165,
+          171,
+          217
+        ],
+        "squared_error_increase": 8.249610835529579
+      },
+      {
+        "left": [
+          3,
+          47,
+          74
+        ],
+        "right": [
+          39,
+          44,
+          45,
+          46,
+          73,
+          117,
+          189,
+          194,
+          197,
+          198,
+          199,
+          204,
+          206,
+          246,
+          249
+        ],
+        "squared_error_increase": 8.334445775107566
+      },
+      {
+        "left": [
+          27,
+          33,
+          43,
+          57,
+          63,
+          69,
+          115,
+          116,
+          139,
+          162,
+          174,
+          176,
+          188,
+          196,
+          205,
+          208,
+          212,
+          216,
+          220,
+          221,
+          227,
+          235,
+          236,
+          238,
+          240,
+          251,
+          254
+        ],
+        "right": [
+          37,
+          41,
+          54,
+          56,
+          59,
+          86,
+          95,
+          100,
+          107,
+          125,
+          129,
+          133,
+          134,
+          137,
+          142,
+          143,
+          146,
+          157,
+          160,
+          166,
+          169,
+          175,
+          183,
+          184,
+          186,
+          190,
+          201,
+          213,
+          225
+        ],
+        "squared_error_increase": 8.567316465586561
+      },
+      {
+        "left": [
+          20,
+          80,
+          98
+        ],
+        "right": [
+          25,
+          58,
+          151,
+          158
+        ],
+        "squared_error_increase": 8.925818973783088
+      },
+      {
+        "left": [
+          51,
+          52,
+          81,
+          110,
+          111,
+          155,
+          167,
+          173,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          177
+        ],
+        "squared_error_increase": 9.406098318466631
+      },
+      {
+        "left": [
+          3,
+          39,
+          44,
+          45,
+          46,
+          47,
+          73,
+          74,
+          117,
+          189,
+          194,
+          197,
+          198,
+          199,
+          204,
+          206,
+          246,
+          249
+        ],
+        "right": [
+          40,
+          99,
+          114,
+          132,
+          149,
+          159,
+          168,
+          179,
+          181,
+          202,
+          218,
+          237,
+          241,
+          250
+        ],
+        "squared_error_increase": 9.486845070583986
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          65,
+          92,
+          128,
+          136,
+          141,
+          148,
+          163,
+          195,
+          207,
+          210,
+          211,
+          223,
+          228,
+          233,
+          248
+        ],
+        "right": [
+          66
+        ],
+        "squared_error_increase": 9.491176275537981
+      },
+      {
+        "left": [
+          22
+        ],
+        "right": [
+          78
+        ],
+        "squared_error_increase": 9.950079837706834
+      },
+      {
+        "left": [
+          62,
+          108,
+          119
+        ],
+        "right": [
+          118
+        ],
+        "squared_error_increase": 10.247788573669943
+      },
+      {
+        "left": [
+          12,
+          16,
+          23,
+          61,
+          79,
+          156,
+          214,
+          244,
+          252,
+          255
+        ],
+        "right": [
+          126,
+          130
+        ],
+        "squared_error_increase": 10.290665210226322
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          65,
+          66,
+          92,
+          128,
+          136,
+          141,
+          148,
+          163,
+          195,
+          207,
+          210,
+          211,
+          223,
+          228,
+          233,
+          248
+        ],
+        "right": [
+          60,
+          67,
+          209
+        ],
+        "squared_error_increase": 10.7443361478059
+      },
+      {
+        "left": [
+          7,
+          150
+        ],
+        "right": [
+          20,
+          25,
+          58,
+          80,
+          98,
+          151,
+          158
+        ],
+        "squared_error_increase": 11.217709215492038
+      },
+      {
+        "left": [
+          0,
+          10,
+          36,
+          53,
+          55,
+          77,
+          83,
+          85,
+          87,
+          94,
+          96,
+          97,
+          104,
+          105,
+          106,
+          109,
+          120,
+          121,
+          122,
+          131,
+          135,
+          145,
+          164,
+          172,
+          185,
+          187,
+          215,
+          226,
+          229,
+          234,
+          242
+        ],
+        "right": [
+          7,
+          20,
+          25,
+          58,
+          80,
+          98,
+          150,
+          151,
+          158
+        ],
+        "squared_error_increase": 11.828558070538573
+      },
+      {
+        "left": [
+          3,
+          39,
+          40,
+          44,
+          45,
+          46,
+          47,
+          73,
+          74,
+          99,
+          114,
+          117,
+          132,
+          149,
+          159,
+          168,
+          179,
+          181,
+          189,
+          194,
+          197,
+          198,
+          199,
+          202,
+          204,
+          206,
+          218,
+          237,
+          241,
+          246,
+          249,
+          250
+        ],
+        "right": [
+          22,
+          78
+        ],
+        "squared_error_increase": 11.90484805584037
+      },
+      {
+        "left": [
+          88,
+          101,
+          161,
+          239
+        ],
+        "right": [
+          180
+        ],
+        "squared_error_increase": 12.251101316887073
+      },
+      {
+        "left": [
+          51,
+          52,
+          81,
+          110,
+          111,
+          155,
+          167,
+          173,
+          177,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          62,
+          108,
+          118,
+          119
+        ],
+        "squared_error_increase": 12.328364619947163
+      },
+      {
+        "left": [
+          32,
+          124,
+          144,
+          256
+        ],
+        "right": [
+          127
+        ],
+        "squared_error_increase": 12.32934771902536
+      },
+      {
+        "left": [
+          27,
+          33,
+          37,
+          41,
+          43,
+          54,
+          56,
+          57,
+          59,
+          63,
+          69,
+          86,
+          95,
+          100,
+          107,
+          115,
+          116,
+          125,
+          129,
+          133,
+          134,
+          137,
+          139,
+          142,
+          143,
+          146,
+          157,
+          160,
+          162,
+          166,
+          169,
+          174,
+          175,
+          176,
+          183,
+          184,
+          186,
+          188,
+          190,
+          196,
+          201,
+          205,
+          208,
+          212,
+          213,
+          216,
+          220,
+          221,
+          225,
+          227,
+          235,
+          236,
+          238,
+          240,
+          251,
+          254
+        ],
+        "right": [
+          50,
+          113,
+          182,
+          224,
+          245
+        ],
+        "squared_error_increase": 12.700533719096425
+      },
+      {
+        "left": [
+          5,
+          154
+        ],
+        "right": [
+          12,
+          16,
+          23,
+          61,
+          79,
+          126,
+          130,
+          156,
+          214,
+          244,
+          252,
+          255
+        ],
+        "squared_error_increase": 13.904770978695653
+      },
+      {
+        "left": [
+          1,
+          11
+        ],
+        "right": [
+          17,
+          30,
+          31,
+          49,
+          70,
+          71,
+          123,
+          170,
+          192,
+          203,
+          222,
+          230,
+          247
+        ],
+        "squared_error_increase": 13.975776619070519
+      },
+      {
+        "left": [
+          13,
+          18,
+          29,
+          34,
+          35,
+          38,
+          60,
+          65,
+          66,
+          67,
+          92,
+          128,
+          136,
+          141,
+          148,
+          163,
+          195,
+          207,
+          209,
+          210,
+          211,
+          223,
+          228,
+          233,
+          248
+        ],
+        "right": [
+          152
+        ],
+        "squared_error_increase": 15.183444149254193
+      },
+      {
+        "left": [
+          3,
+          22,
+          39,
+          40,
+          44,
+          45,
+          46,
+          47,
+          73,
+          74,
+          78,
+          99,
+          114,
+          117,
+          132,
+          149,
+          159,
+          168,
+          179,
+          181,
+          189,
+          194,
+          197,
+          198,
+          199,
+          202,
+          204,
+          206,
+          218,
+          237,
+          241,
+          246,
+          249,
+          250
+        ],
+        "right": [
+          64
+        ],
+        "squared_error_increase": 16.600909699841697
+      },
+      {
+        "left": [
+          4,
+          90,
+          193,
+          253
+        ],
+        "right": [
+          32,
+          124,
+          127,
+          144,
+          256
+        ],
+        "squared_error_increase": 16.8924728615582
+      },
+      {
+        "left": [
+          3,
+          22,
+          39,
+          40,
+          44,
+          45,
+          46,
+          47,
+          64,
+          73,
+          74,
+          78,
+          99,
+          114,
+          117,
+          132,
+          149,
+          159,
+          168,
+          179,
+          181,
+          189,
+          194,
+          197,
+          198,
+          199,
+          202,
+          204,
+          206,
+          218,
+          237,
+          241,
+          246,
+          249,
+          250
+        ],
+        "right": [
+          27,
+          33,
+          37,
+          41,
+          43,
+          50,
+          54,
+          56,
+          57,
+          59,
+          63,
+          69,
+          86,
+          95,
+          100,
+          107,
+          113,
+          115,
+          116,
+          125,
+          129,
+          133,
+          134,
+          137,
+          139,
+          142,
+          143,
+          146,
+          157,
+          160,
+          162,
+          166,
+          169,
+          174,
+          175,
+          176,
+          182,
+          183,
+          184,
+          186,
+          188,
+          190,
+          196,
+          201,
+          205,
+          208,
+          212,
+          213,
+          216,
+          220,
+          221,
+          224,
+          225,
+          227,
+          235,
+          236,
+          238,
+          240,
+          245,
+          251,
+          254
+        ],
+        "squared_error_increase": 18.105866121584206
+      },
+      {
+        "left": [
+          51,
+          52,
+          62,
+          81,
+          108,
+          110,
+          111,
+          118,
+          119,
+          155,
+          167,
+          173,
+          177,
+          191,
+          231,
+          232
+        ],
+        "right": [
+          88,
+          101,
+          161,
+          180,
+          239
+        ],
+        "squared_error_increase": 18.609495854528447
+      }
+    ]
+  },
+  "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
+  "synthetic": false
+}

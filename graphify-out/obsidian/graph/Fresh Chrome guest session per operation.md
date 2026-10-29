@@ -1,12 +1,12 @@
 ---
 source_file: "SELENIUM_CRAWLER.md"
 type: "rationale"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Community None"
 location: "## Menjalankan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Community_None
 ---
 
 # Fresh Chrome guest session per operation
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

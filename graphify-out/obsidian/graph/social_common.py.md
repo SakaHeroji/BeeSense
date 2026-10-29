@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # social_common.py
@@ -33,4 +33,4 @@ tags:
 - [[validate_row()_1]] - `contains` [EXTRACTED]
 - [[verify_descriptor()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

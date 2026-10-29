@@ -33,8 +33,8 @@ jobs:
         run: python -m scripts.verify_dashboard_data --check-git
       - name: Check NLP and dashboard code
         run: |
-          python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py nlp_dashboard.py scripts tests/nlp
-          python -m ruff format --isolated --check social_nlp.py nlp_dashboard.py scripts tests/nlp
+          python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py scripts tests/nlp
+          python -m ruff format --isolated --check social_nlp.py main.py scripts tests/nlp
       - name: NLP and Streamlit regression tests
         run: python -m unittest discover -s tests/nlp -v
       - name: SocialCrawler offline tests

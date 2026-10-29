@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_explanations.py"
 type: "code"
-community: "Pengujian Penjelasan Topik"
+community: "Parser dan Runner Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Penjelasan_Topik
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # test_topic_explanations.py
@@ -18,4 +18,4 @@ tags:
 - [[profile()]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Penjelasan_Topik
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

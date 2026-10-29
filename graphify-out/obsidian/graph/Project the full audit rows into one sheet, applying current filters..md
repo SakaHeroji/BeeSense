@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L230"
+community: "Community None"
+location: "L576"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # Project the full audit rows into one sheet, applying current filters.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._write_compact()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

@@ -1,18 +1,18 @@
 ---
 source_file: "Youtube/crawl_youtube.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # SafeLogger
 
 ## Connections
-- [[.__init__()_13]] - `method` [EXTRACTED]
+- [[.__init__()_12]] - `method` [EXTRACTED]
 - [[.debug()]] - `method` [EXTRACTED]
 - [[.error()]] - `method` [EXTRACTED]
 - [[.info()]] - `method` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[worker()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L1618"
+community: "Community None"
+location: "L1747"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # Evidence-grounded topic descriptions and descriptive, source-aware trends.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.explain_topics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

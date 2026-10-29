@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Runner Playwright Reddit"
+community: "Akses dan Parsing HTML"
 location: "L365"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Runner_Playwright_Reddit
+  - community/Akses_dan_Parsing_HTML
 ---
 
 # arguments()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Runner_Playwright_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML

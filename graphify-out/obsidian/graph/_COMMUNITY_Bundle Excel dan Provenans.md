@@ -1,36 +1,76 @@
 ---
 type: community
-cohesion: 0.20
-members: 21
+cohesion: 0.09
+members: 61
 ---
 
 # Bundle Excel dan Provenans
 
-**Cohesion:** 0.20 - loosely connected
-**Members:** 21 nodes
+**Cohesion:** 0.09 - loosely connected
+**Members:** 61 nodes
 
 ## Members
-- [[.__init__()_4]] - code - Reddit/crawl_reddit_single.py
-- [[._cells()]] - code - Reddit/crawl_reddit_single.py
-- [[.abort()]] - code - Reddit/crawl_reddit_single.py
-- [[.chunks()]] - code - Reddit/crawl_reddit_single.py
-- [[.finish()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_01_frozen_header_fingerprint()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - code - Reddit/crawl_reddit_single.py
-- [[.write()]] - code - Reddit/crawl_reddit_single.py
-- [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - rationale - Reddit/crawl_reddit_single.py
-- [[BundleSink]] - code - Reddit/crawl_reddit_single.py
-- [[Validate the embedded contract; an external descriptor is optional.]] - rationale - Reddit/crawl_reddit_single.py
-- [[add_readme()]] - code - Reddit/crawl_reddit_single.py
-- [[dumps()]] - code - Reddit/crawl_reddit_single.py
-- [[main()]] - code - Reddit/crawl_reddit_single.py
-- [[parser()]] - code - Reddit/crawl_reddit_single.py
-- [[run()_1]] - code - Reddit/crawl_reddit_single.py
-- [[run_self_tests()]] - code - Reddit/crawl_reddit_single.py
-- [[schema_document()]] - code - Reddit/crawl_reddit_single.py
-- [[schema_fingerprint()]] - code - Reddit/crawl_reddit_single.py
-- [[verify_descriptor()]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_12]] - code - Youtube/crawl_youtube.py
+- [[.__init__()_13]] - code - Youtube/crawl_youtube.py
+- [[.__init__()_17]] - code - Youtube/social_common.py
+- [[.__init__()_16]] - code - Youtube/social_common.py
+- [[.__init__()_14]] - code - Youtube/social_common.py
+- [[.__init__()_15]] - code - Youtube/social_common.py
+- [[._cells()_1]] - code - Youtube/social_common.py
+- [[.abort()_1]] - code - Youtube/social_common.py
+- [[.accept()_2]] - code - Youtube/crawl_youtube.py
+- [[.accept()_3]] - code - Youtube/social_common.py
+- [[.add_content()_1]] - code - Youtube/social_common.py
+- [[.chunks()_1]] - code - Youtube/social_common.py
+- [[.content()_2]] - code - Youtube/social_common.py
+- [[.debug()]] - code - Youtube/crawl_youtube.py
+- [[.find()_1]] - code - Youtube/social_common.py
+- [[.finish()_1]] - code - Youtube/social_common.py
+- [[.finish_relations()_1]] - code - Youtube/social_common.py
+- [[.info()]] - code - Youtube/crawl_youtube.py
+- [[.key()_1]] - code - Youtube/social_common.py
+- [[.row()_1]] - code - Youtube/social_common.py
+- [[.validate()_1]] - code - Youtube/crawl_youtube.py
+- [[.warning()]] - code - Youtube/crawl_youtube.py
+- [[.write()_2]] - code - Youtube/social_common.py
+- [[ABC_1]] - code
+- [[Aho-Corasick; offsets refer to Python Unicode code points in source._1]] - rationale - Youtube/social_common.py
+- [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel._1]] - rationale - Youtube/social_common.py
+- [[BundleSink_1]] - code - Youtube/social_common.py
+- [[ContentInput_1]] - code - Youtube/social_common.py
+- [[Dataset_1]] - code - Youtube/social_common.py
+- [[Explicit conversion of the earlier CommentsPostsRuns pilot workbook.      This]] - rationale - Youtube/social_common.py
+- [[KeywordMatcher_1]] - code - Youtube/social_common.py
+- [[Normalize a source event; write only through the shared DatasetSink._1]] - rationale - Youtube/social_common.py
+- [[RecordFactory_1]] - code - Youtube/social_common.py
+- [[SafeLogger]] - code - Youtube/crawl_youtube.py
+- [[Settings_1]] - code - Youtube/crawl_youtube.py
+- [[Shared export contract for every source script. Python 3.12+.  This is a tabular]] - rationale - Youtube/social_common.py
+- [[Shared pipeline; adapters cannot choose their own headers or cell formats._1]] - rationale - Youtube/social_common.py
+- [[SourceAdapter_1]] - code
+- [[SourceAdapter_2]] - code - Youtube/social_common.py
+- [[YouTubeAdapter]] - code - Youtube/crawl_youtube.py
+- [[add_readme()_1]] - code - Youtube/social_common.py
+- [[crawl_youtube.py]] - code - Youtube/crawl_youtube.py
+- [[digest()_1]] - code - Youtube/social_common.py
+- [[dumps()_1]] - code - Youtube/social_common.py
+- [[error_code()]] - code - Youtube/crawl_youtube.py
+- [[fields()_1]] - code - Youtube/social_common.py
+- [[import_pilot()]] - code - Youtube/social_common.py
+- [[load_settings()_1]] - code - Youtube/crawl_youtube.py
+- [[main()_1]] - code - Youtube/crawl_youtube.py
+- [[now_iso()_1]] - code - Youtube/social_common.py
+- [[parser()_1]] - code - Youtube/crawl_youtube.py
+- [[run()_1]] - code - Youtube/crawl_youtube.py
+- [[run_worker()_1]] - code - Youtube/crawl_youtube.py
+- [[schema_document()_1]] - code - Youtube/social_common.py
+- [[schema_fingerprint()_1]] - code - Youtube/social_common.py
+- [[social_common.py]] - code - Youtube/social_common.py
+- [[utc_datetime()_1]] - code - Youtube/social_common.py
+- [[validate_row()_1]] - code - Youtube/social_common.py
+- [[verify_descriptor()_1]] - code - Youtube/social_common.py
+- [[video_url()]] - code - Youtube/crawl_youtube.py
+- [[worker()_1]] - code - Youtube/crawl_youtube.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,14 +80,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 23 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
-- 14 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 3 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
 
 ## Top bridge nodes
-- [[.finish()]] - degree 8, connects to 3 communities
-- [[run_self_tests()]] - degree 5, connects to 3 communities
-- [[run()_1]] - degree 21, connects to 2 communities
-- [[dumps()]] - degree 11, connects to 2 communities
-- [[BundleSink]] - degree 10, connects to 2 communities
+- [[SafeLogger]] - degree 13, connects to 1 community
+- [[.finish()_1]] - degree 7, connects to 1 community
+- [[.warning()]] - degree 3, connects to 1 community

@@ -1,19 +1,19 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Crawler Selenium Terisolasi"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # NLPTests
 
 ## Connections
-- [[.setUpClass()_1]] - `method` [EXTRACTED]
-- [[.tearDownClass()_1]] - `method` [EXTRACTED]
+- [[.setUpClass()_2]] - `method` [EXTRACTED]
+- [[.tearDownClass()_2]] - `method` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - `method` [EXTRACTED]
@@ -29,13 +29,14 @@ tags:
 - [[.test_long_segments_cover_text_without_silent_truncation()]] - `method` [EXTRACTED]
 - [[.test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability()]] - `method` [EXTRACTED]
 - [[.test_real_umap_projections_and_cache_are_validated()]] - `method` [EXTRACTED]
+- [[.test_retraining_reduces_topics_and_persists_original_dbscan_ids()]] - `method` [EXTRACTED]
+- [[.test_saved_embeddings_require_matching_source_model_and_sentence_order()]] - `method` [EXTRACTED]
 - [[.test_saved_run_coherence_reproduces_the_published_score()]] - `method` [EXTRACTED]
 - [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - `method` [EXTRACTED]
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `method` [EXTRACTED]
 - [[.test_span_offsets_and_abbreviations_are_source_faithful()]] - `method` [EXTRACTED]
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer]] - `uses` [INFERRED]
-- [[SocialNLPStreamlitApp]] - `uses` [INFERRED]
+- [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `method` [EXTRACTED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

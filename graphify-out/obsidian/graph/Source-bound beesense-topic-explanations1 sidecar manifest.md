@@ -1,12 +1,12 @@
 ---
 source_file: "EXPLAINABLE_TOPICS.md"
 type: "rationale"
-community: "Dashboard dan Tren Deskriptif"
+community: "Community None"
 location: "## Hasil aktual dan persistensi"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Dashboard_dan_Tren_Deskriptif
+  - community/Community_None
 ---
 
 # Source-bound beesense-topic-explanations:1 sidecar manifest
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Dashboard_dan_Tren_Deskriptif
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

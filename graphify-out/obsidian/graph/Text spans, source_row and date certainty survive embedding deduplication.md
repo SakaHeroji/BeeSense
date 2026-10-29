@@ -1,18 +1,19 @@
 ---
-source_file: "graphify-out/obsidian/Metodologi Machine Learning Social NLP.md"
+source_file: "SOCIAL_NLP.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Community None"
 location: "## Penjelasan, sumber dan batas interpretasi"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - graphify/INFERRED
+  - community/Community_None
 ---
 
 # Text spans, source_row and date certainty survive embedding deduplication
 
 ## Connections
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
+- [[Platform and top-five source graphs count unique topic comments]] - `conceptually_related_to` [INFERRED]
 - [[Source workbook and multi-snapshot integrity verification]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/INFERRED #community/Community_None

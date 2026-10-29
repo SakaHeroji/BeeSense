@@ -22,7 +22,7 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parent
-VERSION = "2.1.0"
+VERSION = "2.2.0"
 ENCODER_CACHE_VERSION = "2.0.0"  # Coherence changes do not change SBERT encoding.
 SCHEMA_VERSION = "beesense-sentence-clusters:2"
 LEGACY_SCHEMA_VERSION = "beesense-sentence-clusters:1"
@@ -63,7 +63,7 @@ def json_write(path, value):
 
 
 class SocialNLPClusterer:
-    """Encode multilingual sentences with SBERT and fit UMAP + DBSCAN.
+    """Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.
 
     Encoder injection is for tests. Training uses an immutable public SBERT
     model through SentenceTransformer, with L2 normalization on local CPU.
@@ -184,6 +184,9 @@ class SocialNLPClusterer:
         ):
             raise ValueError("Invalid graph bounds")
         self._validate_explanation_options(c["explanation"])
+        target = c["target_topics"]
+        if target is not None and (type(target) is not int or not 2 <= target <= 500):
+            raise ValueError("target_topics must be null or an integer in 2..500")
         coherence = c["coherence"]
         if (
             coherence["metric"] != "c_v"
@@ -476,7 +479,41 @@ class SocialNLPClusterer:
         path.mkdir(parents=True, exist_ok=True)
         return path
 
-    def encode(self):
+    def _reuse_embeddings(self, directory):
+        """Reuse immutable SBERT features only after verifying data/model identity."""
+        data = self.load_run(directory)
+        summary = data["summary"]
+        if summary["source_sha256"] != self.input_sha256:
+            raise ValueError("Embedding source workbook differs from the current input")
+        if summary["config"]["model"] != self.config["model"]:
+            raise ValueError("Embedding model configuration differs from the saved run")
+        for column in ("sentence_id", "embedding_text"):
+            if data["sentences"][column].tolist() != self.sentences[column].tolist():
+                raise ValueError("Prepared sentences differ from the embedding source")
+        vectors = data["embeddings"]
+        if (
+            vectors.ndim != 2
+            or not np.isfinite(vectors).all()
+            or not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5)
+        ):
+            raise ValueError("Saved SBERT embeddings must be finite and L2 normalized")
+        self.embeddings = vectors.copy()
+        self.window_counts = data["sentences"]["embedding_windows"].astype(int).tolist()
+        self.model_info = deepcopy(summary["model"])
+        self.model_info.update(
+            reused_from=str(directory),
+            reused_manifest_sha256=data["artifact_manifest_sha256"],
+        )
+        self._event("embeddings_reused", **self.model_info)
+        return self
+
+    def encode(self, *, reuse_run=None):
+        if reuse_run is not None:
+            if self.encoder is not None:
+                raise ValueError(
+                    "Cannot combine an injected encoder and saved embeddings"
+                )
+            return self._reuse_embeddings(reuse_run)
         texts = self.sentences["embedding_text"].tolist()
         key = sha256(
             json.dumps(
@@ -756,6 +793,79 @@ class SocialNLPClusterer:
             )
         return vstack(batches, format="csr")
 
+    def _merge_topics(self, labels):
+        """Merge entire DBSCAN groups using sentence-weighted Ward linkage.
+
+        Minimize the increase in within-topic squared error in original SBERT
+        space. Noise stays -1; source groups never split. Ties follow source IDs.
+        """
+        labels = np.asarray(labels, dtype=int)
+        ids = np.unique(labels[labels >= 0])
+        target = self.config["target_topics"]
+        if target is None:
+            return labels.copy(), None
+        if len(ids) < target:
+            raise ValueError("DBSCAN found fewer groups than target_topics")
+        if len(ids) > 2048:
+            raise ValueError(
+                "Topic reduction exceeds 2048 source groups; review the DBSCAN grid to bound pairwise memory"
+            )
+        assigned = labels >= 0
+        positions = np.searchsorted(ids, labels[assigned])
+        sums = np.zeros((len(ids), self.embeddings.shape[1]), dtype=np.float64)
+        np.add.at(sums, positions, self.embeddings[assigned])
+        sizes = np.bincount(positions, minlength=len(ids)).astype(np.float64)
+        means = sums / sizes[:, None]
+        norms = (means**2).sum(axis=1)
+        distances = np.maximum(norms[:, None] + norms[None, :] - 2 * means @ means.T, 0)
+        costs = (
+            distances
+            * sizes[:, None]
+            * sizes[None, :]
+            / (sizes[:, None] + sizes[None, :])
+        )
+        np.fill_diagonal(costs, np.inf)
+        active = np.ones(len(ids), dtype=bool)
+        members = [[int(cid)] for cid in ids]
+        merges = []
+        while active.sum() > target:
+            a, b = np.unravel_index(np.argmin(costs), costs.shape)
+            merges.append(
+                {
+                    "left": members[a].copy(),
+                    "right": members[b].copy(),
+                    "squared_error_increase": float(costs[a, b]),
+                }
+            )
+            sums[a] += sums[b]
+            sizes[a] += sizes[b]
+            members[a] = sorted(members[a] + members[b])
+            active[b] = False
+            means[a] = sums[a] / sizes[a]
+            distances = ((means - means[a]) ** 2).sum(axis=1)
+            costs[a, :] = distances * sizes[a] * sizes / (sizes[a] + sizes)
+            costs[:, a] = costs[a, :]
+            costs[~active, :] = np.inf
+            costs[:, ~active] = np.inf
+            costs[a, a] = np.inf
+        mapping = {
+            cid: final_id
+            for final_id, index in enumerate(np.flatnonzero(active))
+            for cid in members[index]
+        }
+        reduced = np.full_like(labels, -1)
+        reduced[assigned] = np.array([mapping[int(cid)] for cid in ids])[positions]
+        return reduced, {
+            "method": "sentence_weighted_ward",
+            "embedding_space": "original_normalized_SBERT",
+            "target_topics": target,
+            "original_topics": len(ids),
+            "final_topics": int(active.sum()),
+            "noise_preserved": True,
+            "mapping": {str(cid): int(final) for cid, final in mapping.items()},
+            "merges": merges,
+        }
+
     def compare(self):
         """Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry."""
         from sklearn.cluster import DBSCAN
@@ -811,19 +921,34 @@ class SocialNLPClusterer:
                         umap_seeds=self.reduction_info["seeds"],
                         neighborhood="sparse_radius_graph",
                     )
+                    raw_labels = models[0].labels_.copy()
+                    labels, alternate = raw_labels, models[1].labels_
+                    raw_counts = [len(set(x) - {-1}) for x in (labels, alternate)]
+                    target = self.config["target_topics"]
+                    topic_count_eligible = target is None or min(raw_counts) >= target
+                    reduction = None
+                    if target is not None and topic_count_eligible:
+                        labels, reduction = self._merge_topics(labels)
+                        alternate, _ = self._merge_topics(alternate)
+                        parameters["topic_reduction"] = reduction["method"]
+                        parameters["target_topics"] = target
                     result = self._evaluate(
                         name,
-                        models[0].labels_,
-                        models[1].labels_,
+                        labels,
+                        alternate,
                         parameters,
                         time.monotonic() - started,
                     )
+                    result["dbscan_clusters"] = raw_counts[0]
+                    result["alternate_dbscan_clusters"] = raw_counts[1]
+                    result["topic_count_eligible"] = topic_count_eligible
+                    result["eligible"] &= topic_count_eligible
                     result["geometry_eligible"] = result["eligible"]
                     result["coherence_cv"] = None
                     result["coherence_status"] = "not_evaluated_geometry_constraints"
                     core = np.zeros(n, dtype=bool)
                     core[models[0].core_sample_indices_] = True
-                    fitted[name] = (models[0].labels_.copy(), core, result)
+                    fitted[name] = (labels, core, raw_labels, reduction)
         # Evaluate in composite-score order. Once a passing score is known,
         # only its tolerance band can win. Lower scores need no expensive
         # coherence calculation; this preserves the exact selection rule.
@@ -855,18 +980,22 @@ class SocialNLPClusterer:
             self.comparisons, self.config["evaluation"]["score_tolerance"]
         )
         self.selection_policy.update(
-            candidate_family="SBERT + UMAP + DBSCAN",
-            stability_test="DBSCAN partitions on two seeded UMAP projections",
+            candidate_family="SBERT + UMAP + DBSCAN + optional centroid topic merging",
+            target_topics=self.config["target_topics"],
+            stability_test="final topic partitions on two seeded UMAP projections, after merging when configured",
             coherence_gate=self.config["coherence"],
             coherence_search="descending composite score; all candidates in the best passing score tolerance band are evaluated; lower scores are explicitly marked unevaluated",
         )
-        labels, core, _ = fitted[self.selected["candidate"]]
+        labels, core, raw_labels, self.topic_reduction = fitted[
+            self.selected["candidate"]
+        ]
         self.sentences["cluster_id"] = np.asarray(labels, dtype=int)
+        self.sentences["dbscan_cluster_id"] = raw_labels
         self.sentences["dbscan_core_point"] = core
         self.sentences["membership_strength"] = np.nan
         self.sentences["embedding_windows"] = self.window_counts
         self.occurrences = self.occurrences.merge(
-            self.sentences[["sentence_id", "cluster_id"]],
+            self.sentences[["sentence_id", "cluster_id", "dbscan_cluster_id"]],
             on="sentence_id",
             validate="many_to_one",
         )
@@ -2002,9 +2131,11 @@ class SocialNLPClusterer:
             raise ValueError("Explanation belongs to a different source run")
         return result
 
-    def fit_excel(self, path=None):
+    def fit_excel(self, path=None, *, embeddings_from=None):
         started = time.monotonic()
-        self.prepare_excel(path).encode().compare().describe_topics()
+        self.prepare_excel(path).encode(
+            reuse_run=embeddings_from
+        ).compare().describe_topics()
         self.fit_seconds = time.monotonic() - started
         return self
 
@@ -2013,6 +2144,9 @@ class SocialNLPClusterer:
             raise ValueError("Fit and describe clusters before saving")
         if not self.coherence["target_met"]:
             raise ValueError("Cannot publish topics below the coherence threshold")
+        target = self.config["target_topics"]
+        if target is not None and len(self.topics) != target:
+            raise ValueError("Cannot publish a run that differs from target_topics")
         baseline = getattr(self, "coherence_baseline", None)
         if baseline and baseline["source_sha256"] != self.input_sha256:
             raise ValueError("Coherence baseline must use the same source workbook")
@@ -2082,11 +2216,12 @@ class SocialNLPClusterer:
                 "coherence": self.coherence,
                 "coherence_baseline": baseline,
                 "evaluation_scope": "Internal comparison on this corpus; no labeled semantic ground truth or universal-best claim",
-                "stability_scope": "DBSCAN partitions on two seeded UMAP projections; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
-                "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> c-TF-IDF topic descriptions",
+                "stability_scope": "Final topic partitions on two seeded UMAP projections, including configured centroid merging; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
+                "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> optional SBERT centroid topic merging -> c-TF-IDF topic descriptions",
                 "reduction": self.reduction_info,
+                "topic_reduction": getattr(self, "topic_reduction", None),
                 "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
-                "synthetic": self.encoder is not None,
+                "synthetic": self.model_info.get("test_encoder", False),
             }
             json_write(stage / "summary.json", summary)
             json_write(
@@ -2180,6 +2315,11 @@ def main():
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument(
+        "--reuse-embeddings-from",
+        type=Path,
+        help="Reuse checksum-verified SBERT embeddings for identical input/model; refit UMAP and DBSCAN",
+    )
+    parser.add_argument(
         "--coherence-baseline",
         type=Path,
         help="Measure a previous fitted run with the same c_v protocol before retraining",
@@ -2193,6 +2333,8 @@ def main():
     parser.add_argument("--trend-end", type=date.fromisoformat)
     args = parser.parse_args()
     try:
+        if args.reuse_embeddings_from and (args.explain_run or args.prepare_only):
+            raise ValueError("Saved embeddings require a training run")
         pipeline = SocialNLPClusterer(
             args.config,
             progress=lambda event: print(
@@ -2250,7 +2392,9 @@ def main():
                         if key != "per_topic"
                     },
                 )
-            pipeline.fit_excel(args.input).save(args.output_dir)
+            pipeline.fit_excel(
+                args.input, embeddings_from=args.reuse_embeddings_from
+            ).save(args.output_dir)
         return 0
     except (ValueError, OSError, KeyError, TypeError) as error:
         print(

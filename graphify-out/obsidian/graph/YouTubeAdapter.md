@@ -1,18 +1,18 @@
 ---
 source_file: "Youtube/crawl_youtube.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L187"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # YouTubeAdapter
 
 ## Connections
-- [[.__init__()_14]] - `method` [EXTRACTED]
+- [[.__init__()_13]] - `method` [EXTRACTED]
 - [[.accept()_2]] - `method` [EXTRACTED]
 - [[BundleSink_1]] - `uses` [INFERRED]
 - [[ContentInput_1]] - `uses` [INFERRED]
@@ -22,6 +22,6 @@ tags:
 - [[SourceAdapter_1]] - `inherits` [EXTRACTED]
 - [[SourceAdapter_2]] - `uses` [INFERRED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/INFERRED #community/Bundle_Excel_dan_Provenans

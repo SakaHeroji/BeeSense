@@ -1,0 +1,16 @@
+{
+  "schema_version": "beesense-sentence-clusters:2",
+  "files_sha256": {
+    "summary.json": "c06ea76679ba3150eef2f1738c144abe7a284cbf0518bc1a13f5497d51dcae11",
+    "sentences.parquet": "d23c1238ea5eb3f55ab369da1cf6da58f7c63c41789e9776b523ea64bd8866fc",
+    "centroids.npy": "71c511fe0fa7bebc5346bbc4c0670ad23cc2e8bcf340ae35a7a4b6f20f233512",
+    "occurrences.parquet": "e7b8e142e7a6ce320d2c21a587ef1e63f79d966f3417ed478d78c97200749a6d",
+    "comparison.json": "37958ea4f6500cda233361fbeac10f5667f0d675cb5f51f3d7199f7606a59997",
+    "embeddings.npy": "fa10eab5ca4a27c0d4e5c96c8c41d7cf85714f77c96703501e4ef3970eaff1a1",
+    "graph.json": "329df4eddec6f19b94a3a33621ff5fe4d47baddd61238ffbd99850d8e644980a",
+    "social_data.parquet": "23bbfb476a4ac584bb07b2faec33eacd43436b590ea8a293e2331ae4d11b1fa8",
+    "umap_embeddings.npz": "174f8cd054f65f5f07f7955c847195038abf4705847aad3b18a3001817d5f2d7",
+    "skipped.parquet": "1fb38bc18a85e2ede8ceeb231a948b251b460ecfdc58114453079cd440c6c5d1",
+    "topics.json": "41239e73753ffc13ccfce55a5e4957bd8c7a2031f25dcb998d029a62343d7ff9"
+  }
+}

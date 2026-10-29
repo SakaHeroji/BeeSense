@@ -21,7 +21,10 @@ class StreamlitTests(unittest.TestCase):
         source = root / "source.xlsx"
         fixture(source, duplicate=True)
         pipeline = (
-            SocialNLPClusterer({"cache_dir": str(root / "cache")}, encoder=encoder)
+            SocialNLPClusterer(
+                {"cache_dir": str(root / "cache"), "target_topics": None},
+                encoder=encoder,
+            )
             .prepare_excel(source)
             .encode()
         )
@@ -84,7 +87,7 @@ class StreamlitTests(unittest.TestCase):
         self.environment.stop()
 
     def app(self, query=None):
-        app = AppTest.from_file(str(ROOT / "nlp_dashboard.py"), default_timeout=30)
+        app = AppTest.from_file(str(ROOT / "main.py"), default_timeout=30)
         if query:
             app.query_params.update(query)
         return app.run()
@@ -209,6 +212,13 @@ class StreamlitTests(unittest.TestCase):
         self.assertTrue(
             any("Mengapa penjelasan ini muncul?" == item.label for item in app.expander)
         )
+        for title in [
+            "Istilah yang mewakili topik",
+            "Dari mana percakapannya?",
+            "Post asal yang paling banyak menyumbang",
+            "Bukti kalimat dari sumber",
+        ]:
+            self.assertTrue(any(item.value == title for item in app.subheader), title)
         app.multiselect(key="platforms").set_value(["Reddit"]).run()
         self.assertFalse(app.exception)
         # The download and source cards remain available after platform reruns;
@@ -218,6 +228,26 @@ class StreamlitTests(unittest.TestCase):
         )
         self.assertTrue(
             any("Unduh penjelasan" in item.label for item in app.get("download_button"))
+        )
+
+    def test_selected_topic_opens_explanation_without_losing_filter(self):
+        app = self.app()
+        app.text_input(key="query").set_value("Beasiswa").run()
+        choice = next(
+            value
+            for value in app.selectbox(key="topic_select").options
+            if value.startswith("T01 ·")
+        )
+        app.selectbox(key="topic_select").set_value(choice).run()
+        next(
+            button for button in app.button if button.label == "Jelaskan topik ini"
+        ).click().run()
+        self.assertFalse(app.exception)
+        self.assertEqual(app.radio(key="view").value, "Penjelasan topik")
+        self.assertEqual(app.selectbox(key="topic_select").value, choice)
+        self.assertEqual(app.text_input(key="query").value, "Beasiswa")
+        self.assertTrue(
+            any(item.value == "Istilah yang mewakili topik" for item in app.subheader)
         )
 
     def test_network_limit_tracks_filter_bounds_and_preserves_valid_choices(self):

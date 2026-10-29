@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Adapter Akuisisi YouTube"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # test_dashboard_analysis.py
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[AnalysisTests]] - `contains` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `imports` [EXTRACTED]
-- [[nlp_dashboard.py]] - `imports_from` [EXTRACTED]
+- [[main.py]] - `imports_from` [EXTRACTED]
 - [[number()]] - `imports` [EXTRACTED]
 - [[percent()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

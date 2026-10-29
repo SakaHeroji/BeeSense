@@ -1,21 +1,21 @@
 ---
-source_file: "social_crawler_selenium.py"
+source_file: "social_crawler.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
-location: "L838"
+community: "Alur Akuisisi Sosial Terpadu"
+location: "L1740"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # main()
 
 ## Connections
-- [[.error()]] - `indirect_call` [INFERRED]
+- [[.export_compact()]] - `calls` [EXTRACTED]
 - [[.plan()_1]] - `calls` [EXTRACTED]
 - [[.run()_1]] - `calls` [EXTRACTED]
-- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
-- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[SocialCrawler]] - `calls` [EXTRACTED]
+- [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

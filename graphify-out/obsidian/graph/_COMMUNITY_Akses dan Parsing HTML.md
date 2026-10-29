@@ -1,41 +1,34 @@
 ---
 type: community
-cohesion: 0.22
-members: 26
+cohesion: 0.23
+members: 19
 ---
 
 # Akses dan Parsing HTML
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 26 nodes
+**Cohesion:** 0.23 - loosely connected
+**Members:** 19 nodes
 
 ## Members
-- [[.__init__()_10]] - code - Reddit/crawl_reddit_single.py
-- [[.discover()]] - code - Reddit/crawl_reddit_single.py
-- [[.fullname()]] - code - Reddit/crawl_reddit_single.py
-- [[.has_class()]] - code - Reddit/crawl_reddit_single.py
-- [[.own_body()]] - code - Reddit/crawl_reddit_single.py
-- [[.parent()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_01_shreddit_extracts_body_not_buttons_or_templates()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_02_old_nested_comments_do_not_merge_text_or_guess_role()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_03_relative_date_only_and_exact_are_distinct()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_04_deleted_and_truncated_are_not_full_original_text()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_05_http_200_javascript_challenge_not_empty_comments()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_06_block_login_and_legitimate_quoted_error()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_07_wrong_thread_is_rejected_not_relabelled()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_09_search_uses_recognized_cards_not_sidebar_links()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - code - Reddit/crawl_reddit_single.py
-- [[.test_11_missing_parent_remains_unknown()]] - code - Reddit/crawl_reddit_single.py
-- [[.thread()]] - code - Reddit/crawl_reddit_single.py
-- [[RedditHtmlParser]] - code - Reddit/crawl_reddit_single.py
-- [[RedditTests]] - code - Reddit/crawl_reddit_single.py
-- [[assert_accessible()]] - code - Reddit/crawl_reddit_single.py
-- [[content_node()]] - code - Reddit/crawl_reddit_single.py
-- [[first()]] - code - Reddit/crawl_reddit_single.py
-- [[fixture_page()]] - code - Reddit/crawl_reddit_single.py
-- [[rendered_text()]] - code - Reddit/crawl_reddit_single.py
-- [[source_time()]] - code - Reddit/crawl_reddit_single.py
-- [[walk()]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_22]] - code - Reddit/crawl_reddit_playwright.py
+- [[.call()]] - code - Reddit/crawl_reddit_playwright.py
+- [[.capture()_1]] - code - Reddit/crawl_reddit_playwright.py
+- [[.evidence()]] - code - Reddit/crawl_reddit_playwright.py
+- [[.inspect()]] - code - Reddit/crawl_reddit_playwright.py
+- [[PlaywrightCLI]] - code - Reddit/crawl_reddit_playwright.py
+- [[arguments()]] - code - Reddit/crawl_reddit_playwright.py
+- [[atomic_json()]] - code - Reddit/crawl_reddit_playwright.py
+- [[barrier_status()]] - code - Reddit/crawl_reddit_playwright.py
+- [[campaign_plan()]] - code - Reddit/crawl_reddit_playwright.py
+- [[crawl_reddit_playwright.py]] - code - Reddit/crawl_reddit_playwright.py
+- [[decode_cli_output()]] - code - Reddit/crawl_reddit_playwright.py
+- [[find_cli()]] - code - Reddit/crawl_reddit_playwright.py
+- [[rate_limit_seconds()]] - code - Reddit/crawl_reddit_playwright.py
+- [[run()_2]] - code - Reddit/crawl_reddit_playwright.py
+- [[save_capture()]] - code - Reddit/crawl_reddit_playwright.py
+- [[utcnow()]] - code - Reddit/crawl_reddit_playwright.py
+- [[valid_candidate()]] - code - Reddit/crawl_reddit_playwright.py
+- [[validate_capture()]] - code - Reddit/crawl_reddit_playwright.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,15 +38,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 10 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
-- 8 edges to [[_COMMUNITY_Validasi Redirect dan Kesalahan]]
-- 3 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 1 edge to [[_COMMUNITY_Parser DOM Terbatas]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler]]
 
 ## Top bridge nodes
-- [[RedditTests]] - degree 20, connects to 4 communities
-- [[.thread()]] - degree 22, connects to 3 communities
-- [[RedditHtmlParser]] - degree 20, connects to 2 communities
-- [[fixture_page()]] - degree 15, connects to 2 communities
-- [[walk()]] - degree 8, connects to 2 communities
+- [[crawl_reddit_playwright.py]] - degree 15, connects to 2 communities
+- [[barrier_status()]] - degree 5, connects to 1 community
+- [[.capture()_1]] - degree 4, connects to 1 community

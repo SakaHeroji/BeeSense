@@ -1,19 +1,21 @@
 ---
-source_file: "scripts/verify_dashboard_data.py"
+source_file: "social_crawler_selenium.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L75"
+community: "Community None"
+location: "L838"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # main()
 
 ## Connections
 - [[.error()]] - `indirect_call` [INFERRED]
-- [[verify()_1]] - `calls` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
+- [[.plan()]] - `calls` [EXTRACTED]
+- [[.run()]] - `calls` [EXTRACTED]
+- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Community_None

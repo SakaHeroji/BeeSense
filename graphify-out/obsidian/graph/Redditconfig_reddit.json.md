@@ -1,14 +1,14 @@
 ---
 source_file: "Reddit/config_reddit.json"
 type: "document"
-community: "Konfigurasi Adapter Reddit"
+community: "Arsitektur Crawler dan Dependensi"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Konfigurasi_Adapter_Reddit
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # Reddit/config_reddit.json
 
-#graphify/document #graphify/EXTRACTED #community/Konfigurasi_Adapter_Reddit
+#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

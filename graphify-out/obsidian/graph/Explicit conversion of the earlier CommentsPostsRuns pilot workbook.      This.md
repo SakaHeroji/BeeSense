@@ -1,12 +1,12 @@
 ---
 source_file: "Youtube/social_common.py"
 type: "rationale"
-community: "Adapter Akuisisi YouTube"
+community: "Bundle Excel dan Provenans"
 location: "L411"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # Explicit conversion of the earlier Comments/Posts/Runs pilot workbook.      This
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_pilot()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/rationale #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

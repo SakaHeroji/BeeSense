@@ -72,6 +72,54 @@ class PublishedDataTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "checksum differs"):
             verifier.verify()
 
+    def test_merged_input_preserves_and_checks_both_baseline_workbooks(self):
+        merged = self.root / "outputs/social_combined/social_data.xlsx"
+        merged.parent.mkdir()
+        merged.write_bytes(b"merged dashboard input")
+        path = self.root / "social_nlp.json"
+        config = json.loads(path.read_text())
+        config["input_file"] = str(merged.relative_to(self.root))
+        path.write_text(json.dumps(config))
+        snapshot = verifier.SocialNLPClusterer.load_run.return_value
+        snapshot["summary"]["source_sha256"] = hashlib.sha256(
+            merged.read_bytes()
+        ).hexdigest()
+        self.assertEqual(verifier.verify()["published_data_files"], 5)
+        self.source.with_name("unpublished.xlsx").write_bytes(b"unexpected")
+        with self.assertRaisesRegex(ValueError, "unexpected files"):
+            verifier.verify()
+
+    def test_missing_baseline_compact_is_rejected_for_merged_input(self):
+        merged = self.root / "outputs/social_combined/social_data.xlsx"
+        merged.parent.mkdir()
+        merged.write_bytes(self.source.read_bytes())
+        path = self.root / "social_nlp.json"
+        config = json.loads(path.read_text())
+        config["input_file"] = str(merged.relative_to(self.root))
+        path.write_text(json.dumps(config))
+        self.source.unlink()
+        with self.assertRaisesRegex(ValueError, "Published source workbooks"):
+            verifier.verify()
+
+    def test_active_topic_count_and_coherence_threshold_are_enforced(self):
+        path = self.root / "social_nlp.json"
+        config = json.loads(path.read_text())
+        config.update(target_topics=20, coherence={"min_score": 0.4})
+        path.write_text(json.dumps(config))
+        snapshot = verifier.SocialNLPClusterer.load_run.return_value
+        with self.assertRaisesRegex(ValueError, "target_topics"):
+            verifier.verify()
+        snapshot["topics"] = list(range(20))
+        for score in [None, 0.39, float("nan")]:
+            snapshot["summary"]["coherence"] = {"macro_mean": score}
+            with (
+                self.subTest(score=score),
+                self.assertRaisesRegex(ValueError, "coherence threshold"),
+            ):
+                verifier.verify()
+        snapshot["summary"]["coherence"] = {"macro_mean": 0.4}
+        self.assertEqual(verifier.verify()["topics"], 20)
+
     def test_archived_nlp_snapshot_and_separate_crawl_output_are_supported(self):
         archive = self.root / "outputs/nlp_previous"
         archive.mkdir()
@@ -90,6 +138,34 @@ class PublishedDataTests(unittest.TestCase):
         result = verifier.verify()
         self.assertEqual(result["archived_runs"], ["outputs/nlp_previous"])
         self.assertEqual(result["published_data_files"], 6)
+
+    def test_preserved_baseline_hash_is_checked_after_switching_to_merged_input(self):
+        merged = self.root / "outputs/social_combined/social_data.xlsx"
+        merged.parent.mkdir()
+        merged.write_bytes(self.source.read_bytes())
+        path = self.root / "social_nlp.json"
+        config = json.loads(path.read_text())
+        config["input_file"] = str(merged.relative_to(self.root))
+        path.write_text(json.dumps(config))
+        archive = self.root / "outputs/nlp_previous"
+        archive.mkdir()
+        (archive / "summary.json").write_text("{}")
+        (archive / "manifest.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": "beesense-sentence-clusters:2",
+                    "files_sha256": {"summary.json": "verified by load_run"},
+                }
+            )
+        )
+        active = verifier.SocialNLPClusterer.load_run.return_value
+        old = {"summary": {**active["summary"], "source_file": str(self.source)}}
+        verifier.SocialNLPClusterer.load_run.side_effect = lambda directory: (
+            old if directory == archive else active
+        )
+        self.source.write_bytes(b"modified historical workbook")
+        with self.assertRaisesRegex(ValueError, "Preserved baseline checksum"):
+            verifier.verify()
 
     def test_unexpected_file_in_archive_is_rejected(self):
         archive = self.root / "outputs/nlp_previous"

@@ -1,20 +1,20 @@
 ---
 source_file: "SOCIAL_NLP.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Community None"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Community_None
 ---
 
 # Training-corpus coherence is not holdout or labeled accuracy
 
 ## Connections
-- [[31 of 52 individual topics remain below c_v 0.4]] - `references` [EXTRACTED]
+- [[7 of 20 combined-corpus topics remain below c_v 0.4]] - `references` [EXTRACTED]
+- [[Combined-corpus original-space silhouette -0.00027895558741874993]] - `references` [EXTRACTED]
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `references` [EXTRACTED]
-- [[Negative original-space silhouette warning remains visible]] - `conceptually_related_to` [INFERRED]
-- [[Original-SBERT-space cosine silhouette remains -0.103367]] - `references` [EXTRACTED]
+- [[Internal model metrics do not establish accuracy or representativeness]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

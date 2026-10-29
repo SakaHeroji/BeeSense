@@ -1,18 +1,18 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Snapshot NLP dan Arsip"
 location: "L723"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # RedditHtmlParser
 
 ## Connections
-- [[.__init__()_10]] - `method` [EXTRACTED]
+- [[.__init__()_9]] - `method` [EXTRACTED]
 - [[.discover()]] - `method` [EXTRACTED]
 - [[.fullname()]] - `method` [EXTRACTED]
 - [[.own_body()]] - `method` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

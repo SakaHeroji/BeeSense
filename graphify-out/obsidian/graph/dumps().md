@@ -1,18 +1,18 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Pipeline dan Persistensi NLP"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # dumps()
 
 ## Connections
-- [[.__init__()_1]] - `calls` [EXTRACTED]
+- [[.__init__()]] - `calls` [EXTRACTED]
 - [[.accept()_1]] - `calls` [EXTRACTED]
 - [[.add_content()]] - `calls` [EXTRACTED]
 - [[.content()]] - `calls` [EXTRACTED]
@@ -24,4 +24,4 @@ tags:
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[validate_row()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

@@ -1,21 +1,21 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Validasi Redirect dan Kesalahan"
+community: "Snapshot NLP dan Arsip"
 location: "L572"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Redirect_dan_Kesalahan
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # RestrictedRedirect
 
 ## Connections
-- [[.__init__()_6]] - `calls` [EXTRACTED]
+- [[.__init__()_5]] - `calls` [EXTRACTED]
 - [[.redirect_request()]] - `method` [EXTRACTED]
 - [[.test_15_redirect_checks_before_following()]] - `calls` [EXTRACTED]
 - [[HTTPRedirectHandler]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

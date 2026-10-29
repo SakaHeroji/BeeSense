@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/export_browser_campaign.py"
 type: "code"
-community: "Ekspor Campaign dan Resume"
+community: "Konfigurasi SocialCrawler"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_Campaign_dan_Resume
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # export_campaign()
@@ -15,4 +15,4 @@ tags:
 - [[export_browser_campaign.py]] - `contains` [EXTRACTED]
 - [[load_campaign()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

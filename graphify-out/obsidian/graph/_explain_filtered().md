@@ -1,12 +1,12 @@
 ---
-source_file: "nlp_dashboard.py"
+source_file: "main.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L109"
+community: "Community None"
+location: "L113"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # _explain_filtered()
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[.explain_artifacts()]] - `calls` [EXTRACTED]
 - [[.render()]] - `calls` [EXTRACTED]
-- [[nlp_dashboard.py]] - `contains` [EXTRACTED]
+- [[main.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Community_None

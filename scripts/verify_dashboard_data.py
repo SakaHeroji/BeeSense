@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import subprocess
+from pathlib import Path
 
 from social_nlp import ROOT, SocialNLPClusterer, file_hash
 
@@ -14,9 +16,18 @@ def verify(check_git=False):
     run = ROOT / config["output_dir"]
     source = ROOT / config["input_file"]
     audit = ROOT / "outputs/social_20261028_01/dataset.xlsx"
+    baseline = audit.with_name("social_data.xlsx")
     data = SocialNLPClusterer.load_run(run)
     if file_hash(source) != data["summary"]["source_sha256"]:
         raise ValueError("Excel source checksum differs from the fitted run")
+    target = config.get("target_topics")
+    if target is not None and len(data["topics"]) != target:
+        raise ValueError("Active run differs from configured target_topics")
+    minimum = config.get("coherence", {}).get("min_score")
+    if minimum is not None:
+        score = data["summary"].get("coherence", {}).get("macro_mean")
+        if score is None or not math.isfinite(score) or score < minimum:
+            raise ValueError("Active run fails the configured coherence threshold")
     manifest = json.loads((run / "manifest.json").read_text())
     runs = {run: manifest}
     # Versioned NLP snapshots are retained across retraining. Crawler output and
@@ -29,16 +40,23 @@ def verify(check_git=False):
             "beesense-sentence-clusters:1",
             "beesense-sentence-clusters:2",
         }:
-            SocialNLPClusterer.load_run(path.parent)
+            archived = SocialNLPClusterer.load_run(path.parent)
+            archived_source = Path(archived["summary"].get("source_file", ""))
+            if archived_source.parts[-3:] == baseline.parts[-3:] and (
+                file_hash(baseline) != archived["summary"]["source_sha256"]
+            ):
+                raise ValueError(
+                    "Preserved baseline checksum differs from its fitted run"
+                )
             runs[path.parent] = descriptor
     allowed = {
         str((directory / name).relative_to(ROOT))
         for directory, descriptor in runs.items()
         for name in [*descriptor["files_sha256"], "manifest.json"]
-    } | {str(source.relative_to(ROOT)), str(audit.relative_to(ROOT))}
+    } | {str(path.relative_to(ROOT)) for path in (source, audit, baseline)}
     actual = {
         str(path.relative_to(ROOT))
-        for directory in {source.parent, *runs}
+        for directory in {source.parent, audit.parent, *runs}
         for path in directory.rglob("*")
         if path.is_file()
         and path.name != ".DS_Store"

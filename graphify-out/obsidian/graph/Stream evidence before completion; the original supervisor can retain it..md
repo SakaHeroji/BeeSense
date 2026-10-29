@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler_selenium.py"
 type: "rationale"
-community: "Crawler Selenium Terisolasi"
+community: "Community None"
 location: "L572"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Community_None
 ---
 
 # Stream evidence before completion; the original supervisor can retain it.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[selenium_worker()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

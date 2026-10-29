@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/README_browser_campaign.md"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Community None"
 location: "Default eksportir / helper descriptions"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # Native-ID provenance and bounded public excerpts
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Advanced connected-browser Reddit campaign helpers]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

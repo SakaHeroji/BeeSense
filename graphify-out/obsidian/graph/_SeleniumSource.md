@@ -1,18 +1,18 @@
 ---
 source_file: "social_crawler_selenium.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Community None"
 location: "L246"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Community_None
 ---
 
 # _SeleniumSource
 
 ## Connections
-- [[.__init__()_20]] - `method` [EXTRACTED]
+- [[.__init__()_18]] - `method` [EXTRACTED]
 - [[._youtube_reply()]] - `method` [EXTRACTED]
 - [[._youtube_sort()]] - `method` [EXTRACTED]
 - [[.navigate()]] - `method` [EXTRACTED]
@@ -31,4 +31,4 @@ tags:
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Community_None

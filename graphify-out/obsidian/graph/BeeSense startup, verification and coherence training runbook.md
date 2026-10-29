@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "document"
-community: "Runbook dan Verifikasi Lokal"
+community: "Community None"
 location: "# Menjalankan BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Community_None
 ---
 
 # BeeSense startup, verification and coherence training runbook
@@ -16,9 +16,11 @@ tags:
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[New-corpus native SBERT encoding or exact verified cache reuse]] - `references` [EXTRACTED]
+- [[Obsidian Cloud runbookmain.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
 - [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
-- [[Separate .venv-sbert training with explicit coherence baseline]] - `references` [EXTRACTED]
+- [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[Verify BeeSense offline CI]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/document #graphify/EXTRACTED #community/Community_None

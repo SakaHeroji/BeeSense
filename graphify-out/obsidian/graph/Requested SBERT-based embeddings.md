@@ -1,12 +1,12 @@
 ---
 source_file: "note.md"
 type: "concept"
-community: "Encoder SBERT dan Cache"
+community: "Community None"
 location: "line 1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Encoder_SBERT_dan_Cache
+  - community/Community_None
 ---
 
 # Requested SBERT-based embeddings
@@ -15,4 +15,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `conceptually_related_to` [INFERRED]
 - [[Requested DBSCAN clustering]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Encoder_SBERT_dan_Cache
+#graphify/concept #graphify/EXTRACTED #community/Community_None

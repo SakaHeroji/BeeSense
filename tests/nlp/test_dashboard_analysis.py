@@ -5,8 +5,8 @@ import unittest
 import numpy as np
 import pandas as pd
 
-from nlp_dashboard import SocialNLPStreamlitApp as App
-from nlp_dashboard import number, percent
+from main import SocialNLPStreamlitApp as App
+from main import number, percent
 
 
 class AnalysisTests(unittest.TestCase):
@@ -123,6 +123,57 @@ class AnalysisTests(unittest.TestCase):
         empty = self.frame.head(0)
         self.assertTrue(App.topic_summary(self.topics, empty).empty)
         self.assertTrue(App.monthly_summary(empty).empty)
+
+    def test_topic_evidence_profile_deduplicates_units_and_matches_whole_terms(self):
+        frame = self.frame.copy()
+        frame["sentence"] = [
+            "Biaya kuliah",
+            "Biaya kuliah",
+            "Kuliah gratis",
+            "Kerja",
+            "Lain",
+            "Lain",
+        ]
+        frame["url"] = [
+            "https://www.youtube.com/watch?v=AAAAAAAAAAA&lc=a",
+            "https://www.youtube.com/watch?v=AAAAAAAAAAA&lc=b",
+            "https://www.reddit.com/comments/abc/_/c/",
+            "https://www.reddit.com/comments/abc/_/c/",
+            "https://www.reddit.com/comments/def/_/d/",
+            "https://www.youtube.com/watch?v=BBBBBBBBBBB&lc=e",
+        ]
+        frame["post_title"] = "Judul sama"
+        result = App.topic_profile(frame, 0, ["kuliah", "biaya kuliah", "kuli"])
+        self.assertEqual(
+            (result["occurrences"], result["unique_sentences"], result["comments"]),
+            (3, 2, 3),
+        )
+        self.assertEqual(result["comment_share"], 3 / 5)
+        self.assertEqual((result["roots"], result["fallback_roots"]), (2, 0))
+        self.assertEqual(result["platforms"], {"youtube": 2, "reddit": 1})
+        self.assertEqual(result["terms"].sentences.tolist(), [2, 1, 0])
+        self.assertEqual(result["sources"].comments.tolist(), [2, 1])
+        self.assertAlmostEqual(result["dominant_share"], 2 / 3)
+        self.assertEqual(list(App.term_figure(result["terms"]).data[0].x), [0, 1, 2])
+        # Different native posts with the same title must occupy separate bars.
+        figure = App.source_figure(result["sources"])
+        self.assertEqual(len(set(figure.data[0].y)), 2)
+        self.assertEqual(sum(figure.data[0].x), 3)
+        self.assertEqual(
+            sum(App.topic_platform_figure(result["platforms"]).data[0].x), 3
+        )
+
+    def test_topic_profile_marks_context_fallback_without_inventing_native_ids(self):
+        frame = self.frame.copy()
+        frame["sentence"] = "Kuliah"
+        frame["post_title"] = "Judul tanpa URL"
+        frame["url"] = ""
+        result = App.topic_profile(frame, 0, ["kuliah"])
+        self.assertGreater(result["fallback_roots"], 0)
+        empty = App.topic_profile(frame.head(0), 0, ["kuliah"])
+        self.assertEqual(
+            (empty["comments"], empty["roots"], empty["comment_share"]), (0, 0, 0)
+        )
 
 
 if __name__ == "__main__":

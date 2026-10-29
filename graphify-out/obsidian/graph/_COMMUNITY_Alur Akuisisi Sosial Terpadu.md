@@ -1,38 +1,36 @@
 ---
 type: community
 cohesion: 0.06
-members: 83
+members: 65
 ---
 
 # Alur Akuisisi Sosial Terpadu
 
 **Cohesion:** 0.06 - loosely connected
-**Members:** 83 nodes
+**Members:** 65 nodes
 
 ## Members
-- [[.__init__()_20]] - code - social_crawler_selenium.py
-- [[.__init__()_19]] - code - social_crawler.py
-- [[.__init__()_22]] - code - tests/test_social_crawler.py
+- [[.__init__()_21]] - code - social_crawler.py
+- [[.__init__()_23]] - code - tests/test_social_crawler.py
 - [[._browser_call()]] - code - social_crawler.py
 - [[._calendar_date()]] - code - social_crawler.py
-- [[._checkpoint_items()]] - code - social_crawler.py
+- [[._checkpoint_items()_1]] - code - social_crawler.py
 - [[._delay()]] - code - social_crawler.py
 - [[._dom_events()]] - code - social_crawler.py
-- [[._execute()]] - code - social_crawler.py
-- [[._legacy_settings()]] - code - social_crawler.py
-- [[._normalize()]] - code - social_crawler.py
+- [[._execute()_1]] - code - social_crawler.py
+- [[._legacy_settings()_1]] - code - social_crawler.py
+- [[._normalize()_1]] - code - social_crawler.py
 - [[._pace()]] - code - social_crawler.py
 - [[._select()]] - code - social_crawler.py
-- [[._source_metadata()]] - code - social_crawler.py
 - [[._write_compact()]] - code - social_crawler.py
 - [[.clock()]] - code - tests/test_social_crawler.py
 - [[.crawler()]] - code - tests/test_social_crawler.py
 - [[.error()]] - code - Youtube/crawl_youtube.py
 - [[.export_compact()]] - code - social_crawler.py
-- [[.plan()]] - code - social_crawler.py
+- [[.plan()_1]] - code - social_crawler.py
 - [[.read()]] - code - tests/test_social_crawler.py
-- [[.run()]] - code - social_crawler.py
-- [[.setUp()_4]] - code - tests/test_social_crawler.py
+- [[.run()_1]] - code - social_crawler.py
+- [[.setUp()_3]] - code - tests/test_social_crawler.py
 - [[.sleep()]] - code - tests/test_social_crawler.py
 - [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - code - tests/test_social_crawler.py
 - [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - code - tests/test_social_crawler.py
@@ -61,35 +59,19 @@ members: 83
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - code - tests/test_social_crawler.py
 - [[.test_source_exception_is_sanitized_and_stops_after_three_calls()]] - code - tests/test_social_crawler.py
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - code - tests/test_social_crawler.py
-- [[.worker()]] - code - tests/test_social_crawler_selenium.py
-- [[Advanced connected-browser Reddit campaign helpers]] - document - Reddit/README_browser_campaign.md
-- [[Checkpoint export to the eight-sheet contract]] - concept - Reddit/README_browser_campaign.md
 - [[Clock]] - code - tests/test_social_crawler.py
-- [[Compose the original adapters and workers; one JSON configuration and bundle.]] - rationale - social_crawler.py
-- [[Describe the acquisition backend independently of the shared export.]] - rationale - social_crawler.py
-- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - SELENIUM_CRAWLER.md
-- [[Isolated browser profile and access-barrier stops]] - rationale - Reddit/README_playwright.md
-- [[JSONL audit, dataset.xlsx and checksum manifest]] - concept - SOCIAL_CRAWLER.md
-- [[Native-ID provenance and bounded public excerpts]] - rationale - Reddit/README_browser_campaign.md
-- [[Project the full audit rows into one sheet, applying current filters.]] - rationale - social_crawler.py
-- [[Re-export saved Contents without network or modifying the source bundle.]] - rationale - social_crawler.py
-- [[Reddit Playwright CLI runner]] - document - Reddit/README_playwright.md
-- [[Return a local date for display; relative source dates stay estimates.]] - rationale - social_crawler.py
-- [[Return an explicit targetshortfall report and write one atomic bundle.]] - rationale - social_crawler.py
-- [[Root-publication date and literal keyword selection]] - concept - SOCIAL_CRAWLER.md
-- [[Shared rendered_thread_dom.mjs extraction]] - concept - Reddit/README_playwright.md
+- [[Pinned openpyxl and yt-dlp crawler dependencies]] - document - requirements-crawler.txt
 - [[SocialCrawler]] - code - social_crawler.py
 - [[SocialCrawlerTests]] - code - tests/test_social_crawler.py
-- [[Validate and return the effective plan without browsernetwork access.]] - rationale - social_crawler.py
+- [[Verify BeeSense offline CI]] - document - .github/workflows/ci.yml
 - [[_config()]] - code - social_crawler.py
 - [[_keywords()]] - code - social_crawler.py
 - [[_number()]] - code - social_crawler.py
 - [[_url()]] - code - social_crawler.py
-- [[main()_3]] - code - social_crawler.py
+- [[main()_4]] - code - social_crawler.py
 - [[rd_events()]] - code - tests/test_social_crawler.py
 - [[receipt()]] - code - tests/test_social_crawler.py
 - [[social_crawler.py]] - code - social_crawler.py
-- [[social_data.xlsx ten-column Data worksheet]] - concept - SOCIAL_CRAWLER.md
 - [[spawn_youtube_fixture()]] - code - tests/test_social_crawler.py
 - [[test_social_crawler.py]] - code - tests/test_social_crawler.py
 - [[yt_events()]] - code - tests/test_social_crawler.py
@@ -102,15 +84,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
-- 5 edges to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 2 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
-- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Runner Playwright Reddit]]
+- 2 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
+- 2 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
 
 ## Top bridge nodes
-- [[.error()]] - degree 9, connects to 4 communities
-- [[SocialCrawler]] - degree 45, connects to 2 communities
-- [[.crawler()]] - degree 23, connects to 1 community
-- [[.worker()]] - degree 11, connects to 1 community
-- [[social_crawler.py]] - degree 9, connects to 1 community
+- [[SocialCrawler]] - degree 58, connects to 1 community
+- [[.crawler()]] - degree 32, connects to 1 community
+- [[social_crawler.py]] - degree 10, connects to 1 community
+- [[.export_compact()]] - degree 5, connects to 1 community
+- [[.error()]] - degree 4, connects to 1 community

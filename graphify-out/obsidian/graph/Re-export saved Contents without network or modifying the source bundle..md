@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L293"
+community: "Community None"
+location: "L707"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # Re-export saved Contents without network or modifying the source bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.export_compact()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

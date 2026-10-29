@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Runbook dan Verifikasi Lokal"
+community: "Community None"
 location: "## Dataset yang disertakan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Community_None
 ---
 
 # Unchanged compact source and eight-sheet audit workbooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

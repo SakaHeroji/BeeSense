@@ -1,29 +1,27 @@
 ---
-source_file: "Youtube/crawl_youtube.py"
+source_file: "Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akses dan Parsing HTML"
 location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akses_dan_Parsing_HTML
 ---
 
 # run()
 
 ## Connections
-- [[.accept()_2]] - `calls` [EXTRACTED]
-- [[BundleSink_1]] - `calls` [EXTRACTED]
-- [[Dataset_1]] - `calls` [EXTRACTED]
-- [[KeywordMatcher_1]] - `calls` [EXTRACTED]
-- [[RecordFactory_1]] - `calls` [EXTRACTED]
-- [[YouTubeAdapter]] - `calls` [EXTRACTED]
-- [[add_readme()_1]] - `calls` [EXTRACTED]
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[load_settings()_1]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
-- [[now_iso()_1]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
-- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
+- [[.call()]] - `calls` [EXTRACTED]
+- [[.capture()_1]] - `calls` [EXTRACTED]
+- [[.evidence()]] - `calls` [EXTRACTED]
+- [[.inspect()]] - `calls` [EXTRACTED]
+- [[PlaywrightCLI]] - `calls` [EXTRACTED]
+- [[barrier_status()]] - `calls` [EXTRACTED]
+- [[campaign_plan()]] - `calls` [EXTRACTED]
+- [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
+- [[find_cli()]] - `calls` [EXTRACTED]
+- [[save_capture()]] - `calls` [EXTRACTED]
+- [[utcnow()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML

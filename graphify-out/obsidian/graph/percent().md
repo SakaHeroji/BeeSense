@@ -1,12 +1,12 @@
 ---
-source_file: "nlp_dashboard.py"
+source_file: "main.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L49"
+community: "Community None"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # percent()
@@ -16,8 +16,10 @@ tags:
 - [[._methods()]] - `calls` [EXTRACTED]
 - [[._metrics()]] - `calls` [EXTRACTED]
 - [[._overview()]] - `calls` [EXTRACTED]
+- [[._topic_detail()]] - `calls` [EXTRACTED]
+- [[.term_figure()]] - `calls` [EXTRACTED]
 - [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - `calls` [EXTRACTED]
-- [[nlp_dashboard.py]] - `contains` [EXTRACTED]
+- [[main.py]] - `contains` [EXTRACTED]
 - [[test_dashboard_analysis.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

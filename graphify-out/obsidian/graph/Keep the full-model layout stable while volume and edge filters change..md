@@ -1,12 +1,12 @@
 ---
-source_file: "nlp_dashboard.py"
+source_file: "main.py"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L55"
+community: "Community None"
+location: "L59"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # Keep the full-model layout stable while volume and edge filters change.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_graph_positions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

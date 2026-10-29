@@ -1,8 +1,8 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Youtube/crawl_youtube.py"
 type: "code"
 community: "Bundle Excel dan Provenans"
-location: "L971"
+location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,26 +12,18 @@ tags:
 # run()
 
 ## Connections
-- [[.abort()]] - `calls` [EXTRACTED]
-- [[.accept()_1]] - `calls` [EXTRACTED]
-- [[.finish()]] - `calls` [EXTRACTED]
-- [[.finish_relations()]] - `calls` [EXTRACTED]
-- [[.row()]] - `calls` [EXTRACTED]
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - `calls` [EXTRACTED]
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - `calls` [EXTRACTED]
-- [[.write()_1]] - `calls` [EXTRACTED]
-- [[BundleSink]] - `calls` [EXTRACTED]
-- [[Dataset]] - `calls` [EXTRACTED]
-- [[KeywordMatcher]] - `calls` [EXTRACTED]
-- [[RedditAdapter]] - `calls` [EXTRACTED]
-- [[RedditRecordFactory]] - `calls` [EXTRACTED]
-- [[add_readme()]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[load_settings()]] - `calls` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
-- [[now_iso()]] - `calls` [EXTRACTED]
-- [[run_self_tests()]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()]] - `calls` [EXTRACTED]
-- [[verify_descriptor()]] - `calls` [EXTRACTED]
+- [[.accept()_2]] - `calls` [EXTRACTED]
+- [[BundleSink_1]] - `calls` [EXTRACTED]
+- [[Dataset_1]] - `calls` [EXTRACTED]
+- [[KeywordMatcher_1]] - `calls` [EXTRACTED]
+- [[RecordFactory_1]] - `calls` [EXTRACTED]
+- [[YouTubeAdapter]] - `calls` [EXTRACTED]
+- [[add_readme()_1]] - `calls` [EXTRACTED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[load_settings()_1]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
+- [[now_iso()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
+- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
