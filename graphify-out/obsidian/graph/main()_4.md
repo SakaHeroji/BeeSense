@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Crawler Selenium Terisolasi"
 location: "L1740"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # main()
@@ -18,4 +18,4 @@ tags:
 - [[SocialCrawler]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

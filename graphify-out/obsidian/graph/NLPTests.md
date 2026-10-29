@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Pipeline dan Persistensi NLP"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # NLPTests
@@ -39,4 +39,4 @@ tags:
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `method` [EXTRACTED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

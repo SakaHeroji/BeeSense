@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L624"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Node
@@ -19,4 +19,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[walk()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

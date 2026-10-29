@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Adapter Akuisisi YouTube"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # ABC
@@ -15,4 +15,4 @@ tags:
 - [[SourceAdapter]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

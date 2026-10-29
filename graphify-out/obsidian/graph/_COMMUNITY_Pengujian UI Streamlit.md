@@ -1,17 +1,16 @@
 ---
 type: community
 cohesion: 1.00
-members: 2
+members: 1
 ---
 
 # Pengujian UI Streamlit
 
 **Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Members:** 1 nodes
 
 ## Members
-- [[captureRenderedThread()]] - code - Reddit/rendered_thread_dom.mjs
-- [[rendered_thread_dom.mjs]] - code - Reddit/rendered_thread_dom.mjs
+- [[social_nlp.json]] - document - social_nlp.json
 
 ## Live Query (requires Dataview plugin)
 

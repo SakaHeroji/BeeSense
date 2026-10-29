@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Adapter Akuisisi YouTube"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # digest()
@@ -22,4 +22,4 @@ tags:
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[validate_row()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

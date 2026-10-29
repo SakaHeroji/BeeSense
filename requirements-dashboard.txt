@@ -3,7 +3,8 @@
 numpy==2.2.6; python_version < "3.14"
 numpy==2.3.5; python_version >= "3.14"
 pandas==2.3.3
-pyarrow==26.0.0
+# Match the Cloud compatibility guard for the Arrow/mimalloc thread crash (#50471).
+pyarrow==24.0.0
 scipy==1.18.1
 scikit-learn==1.9.1
 openpyxl==3.1.5

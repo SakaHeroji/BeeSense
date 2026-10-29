@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Adapter Akuisisi YouTube"
+community: "Pipeline dan Persistensi NLP"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # Verify published source workbooks and the dashboard artifact bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_dashboard_data.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

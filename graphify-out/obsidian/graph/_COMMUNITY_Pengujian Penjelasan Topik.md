@@ -1,16 +1,17 @@
 ---
 type: community
-cohesion: 0.33
-members: 1
+cohesion: 1.00
+members: 2
 ---
 
 # Pengujian Penjelasan Topik
 
-**Cohesion:** 0.33 - loosely connected
-**Members:** 1 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 2 nodes
 
 ## Members
-- [[BeeSense project and dashboard runbook]] - document - README.md
+- [[captureRenderedThread()]] - code - Reddit/rendered_thread_dom.mjs
+- [[rendered_thread_dom.mjs]] - code - Reddit/rendered_thread_dom.mjs
 
 ## Live Query (requires Dataview plugin)
 
@@ -18,9 +19,3 @@ members: 1
 TABLE source_file, type FROM #community/Pengujian_Penjelasan_Topik
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
-
-## Top bridge nodes
-- [[BeeSense project and dashboard runbook]] - degree 14, connects to 1 community

@@ -3,7 +3,7 @@
     {
       "id": "g0",
       "type": "group",
-      "label": "Pipeline dan Persistensi NLP",
+      "label": "Adapter Akuisisi YouTube",
       "x": 0,
       "y": 0,
       "width": 1980,
@@ -724,7 +724,7 @@
     {
       "id": "g1",
       "type": "group",
-      "label": "Alur Akuisisi Sosial Terpadu",
+      "label": "Crawler Selenium Terisolasi",
       "x": 2060,
       "y": 0,
       "width": 1980,
@@ -1446,7 +1446,7 @@
     {
       "id": "g3",
       "type": "group",
-      "label": "Adapter Akuisisi YouTube",
+      "label": "Pipeline dan Persistensi NLP",
       "x": 5300,
       "y": 0,
       "width": 1760,
@@ -1942,7 +1942,7 @@
     {
       "id": "g4",
       "type": "group",
-      "label": "Crawler Selenium Terisolasi",
+      "label": "Alur Akuisisi Sosial Terpadu",
       "x": 7140,
       "y": 0,
       "width": 1760,
@@ -3060,7 +3060,7 @@
     {
       "id": "g6",
       "type": "group",
-      "label": "Akses dan Parsing HTML",
+      "label": "Snapshot NLP dan Arsip",
       "x": 0,
       "y": 1100,
       "width": 1100,
@@ -3268,7 +3268,7 @@
     {
       "id": "g7",
       "type": "group",
-      "label": "Snapshot NLP dan Arsip",
+      "label": "Akses dan Parsing HTML",
       "x": 2060,
       "y": 1100,
       "width": 1100,
@@ -3622,7 +3622,7 @@
     {
       "id": "g10",
       "type": "group",
-      "label": "Identitas dan Kontrak Data",
+      "label": "Pipeline dan Persistensi NLP",
       "x": 7140,
       "y": 1100,
       "width": 880,
@@ -3749,7 +3749,7 @@
     {
       "id": "g11",
       "type": "group",
-      "label": "Eksplorasi Dashboard Streamlit",
+      "label": "Topik dan Verifikasi NLP",
       "x": 8980,
       "y": 1100,
       "width": 880,
@@ -3867,7 +3867,7 @@
     {
       "id": "g12",
       "type": "group",
-      "label": "Runner Playwright Reddit",
+      "label": "Identitas dan Kontrak Data",
       "x": 0,
       "y": 1800,
       "width": 600,
@@ -3887,7 +3887,7 @@
     {
       "id": "g14",
       "type": "group",
-      "label": "Topik dan Verifikasi NLP",
+      "label": "Runner Playwright Reddit",
       "x": 4120,
       "y": 1800,
       "width": 600,
@@ -3897,7 +3897,7 @@
     {
       "id": "g15",
       "type": "group",
-      "label": "Identitas dan Kontrak Data",
+      "label": "Pipeline dan Persistensi NLP",
       "x": 5300,
       "y": 1800,
       "width": 600,
@@ -3916,7 +3916,7 @@
     {
       "id": "g16",
       "type": "group",
-      "label": "Parser DOM Terbatas",
+      "label": "Eksplorasi Dashboard Streamlit",
       "x": 7140,
       "y": 1800,
       "width": 660,
@@ -3980,7 +3980,7 @@
     {
       "id": "g17",
       "type": "group",
-      "label": "Pengujian Penjelasan Topik",
+      "label": "Konfigurasi SocialCrawler",
       "x": 8980,
       "y": 1800,
       "width": 600,
@@ -3999,7 +3999,7 @@
     {
       "id": "g18",
       "type": "group",
-      "label": "Coherence dan Quality Gate",
+      "label": "Topik dan Verifikasi NLP",
       "x": 0,
       "y": 2280,
       "width": 600,
@@ -4045,7 +4045,7 @@
     {
       "id": "g19",
       "type": "group",
-      "label": "Validasi Redirect dan Kesalahan",
+      "label": "Identitas dan Kontrak Data",
       "x": 2060,
       "y": 2280,
       "width": 600,
@@ -4055,7 +4055,7 @@
     {
       "id": "g20",
       "type": "group",
-      "label": "Eksplorasi Dashboard Streamlit",
+      "label": "Parser DOM Terbatas",
       "x": 4120,
       "y": 2280,
       "width": 600,
@@ -4065,7 +4065,7 @@
     {
       "id": "g21",
       "type": "group",
-      "label": "Pengujian UI Streamlit",
+      "label": "Pengujian Penjelasan Topik",
       "x": 5300,
       "y": 2280,
       "width": 600,
@@ -4112,7 +4112,7 @@
     {
       "id": "g23",
       "type": "group",
-      "label": "Coherence dan Quality Gate",
+      "label": "Validasi Redirect dan Kesalahan",
       "x": 8980,
       "y": 2280,
       "width": 600,
@@ -4131,7 +4131,7 @@
     {
       "id": "g24",
       "type": "group",
-      "label": "Arsitektur Crawler dan Dependensi",
+      "label": "Eksplorasi Dashboard Streamlit",
       "x": 0,
       "y": 2760,
       "width": 600,
@@ -4150,7 +4150,7 @@
     {
       "id": "g25",
       "type": "group",
-      "label": "Helper Campaign Browser",
+      "label": "Pengujian UI Streamlit",
       "x": 2060,
       "y": 2760,
       "width": 600,
@@ -4169,7 +4169,7 @@
     {
       "id": "g26",
       "type": "group",
-      "label": "Verifikasi Dataset Berversi",
+      "label": "Coherence dan Quality Gate",
       "x": 4120,
       "y": 2760,
       "width": 600,

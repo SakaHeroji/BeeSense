@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
+community: "Adapter Akuisisi YouTube"
 location: "L170"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # Aho-Corasick; offsets refer to Python Unicode code points in source.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[KeywordMatcher]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

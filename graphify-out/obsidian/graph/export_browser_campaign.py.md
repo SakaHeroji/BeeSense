@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/export_browser_campaign.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Snapshot NLP dan Arsip"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # export_browser_campaign.py
@@ -17,4 +17,4 @@ tags:
 - [[load_campaign()]] - `contains` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

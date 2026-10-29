@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Pipeline dan Persistensi NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # test_social_nlp.py
@@ -22,4 +22,4 @@ tags:
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

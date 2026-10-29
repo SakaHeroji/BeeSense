@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Adapter Akuisisi YouTube"
 location: "L1053"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # MemorySink
@@ -19,4 +19,4 @@ tags:
 - [[.write()_1]] - `method` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

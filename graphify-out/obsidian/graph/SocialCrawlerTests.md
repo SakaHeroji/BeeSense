@@ -1,12 +1,12 @@
 ---
 source_file: "tests/test_social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Crawler Selenium Terisolasi"
 location: "L117"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # SocialCrawlerTests
@@ -54,4 +54,4 @@ tags:
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - `method` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

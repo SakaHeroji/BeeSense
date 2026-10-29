@@ -1,15 +1,16 @@
 ---
 type: community
-cohesion: 0.67
-members: 0
+cohesion: 1.00
+members: 1
 ---
 
 # Validasi Redirect dan Kesalahan
 
-**Cohesion:** 0.67 - moderately connected
-**Members:** 0 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 1 nodes
 
 ## Members
+- [[Redditconfig_reddit.json]] - document - Reddit/config_reddit.json
 
 ## Live Query (requires Dataview plugin)
 

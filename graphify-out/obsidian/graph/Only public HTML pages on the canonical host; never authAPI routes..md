@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Crawler Selenium Terisolasi"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L488"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Only public HTML pages on the canonical host; never auth/API routes.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[safe_web_url()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

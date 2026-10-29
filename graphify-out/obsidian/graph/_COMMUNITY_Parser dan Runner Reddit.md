@@ -36,7 +36,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
+- 4 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 
 ## Top bridge nodes
 - [[ExplanationTests]] - degree 15, connects to 1 community

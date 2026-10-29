@@ -10,7 +10,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[Redditconfig_reddit_1000.json]] - document - Reddit/config_reddit_1000.json
+- [[Youtubeconfig_youtube.json]] - document - Youtube/config_youtube.json
 
 ## Live Query (requires Dataview plugin)
 

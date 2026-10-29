@@ -1,34 +1,38 @@
 # Graph Report - /Users/socs3/Documents/BeeSense  (2026-10-29)
 
 ## Corpus Check
-- 58 files · ~54,422 words
+- 58 files · ~54,481 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 830 nodes · 1910 edges · 42 communities (34 shown, 8 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 150 edges (avg confidence: 0.8)
+- 831 nodes · 1913 edges · 53 communities (43 shown, 10 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 151 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6fd6dc92`
+- Built from commit: `ab6e6464`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- Pipeline dan Persistensi NLP
-- Alur Akuisisi Sosial Terpadu
-- Alur Akuisisi Sosial Terpadu
 - Adapter Akuisisi YouTube
 - Crawler Selenium Terisolasi
+- Alur Akuisisi Sosial Terpadu
+- Pipeline dan Persistensi NLP
+- Alur Akuisisi Sosial Terpadu
 - Bundle Excel dan Provenans
-- Akses dan Parsing HTML
 - Snapshot NLP dan Arsip
+- Akses dan Parsing HTML
 - Parser dan Runner Reddit
 - Ekspor Campaign dan Resume
+- Pipeline dan Persistensi NLP
+- Topik dan Verifikasi NLP
 - Identitas dan Kontrak Data
 - Eksplorasi Dashboard Streamlit
 - Runner Playwright Reddit
+- Pipeline dan Persistensi NLP
 - Eksplorasi Dashboard Streamlit
+- Konfigurasi SocialCrawler
 - Topik dan Verifikasi NLP
 - Identitas dan Kontrak Data
 - Parser DOM Terbatas
@@ -38,18 +42,25 @@
 - Eksplorasi Dashboard Streamlit
 - Pengujian UI Streamlit
 - Coherence dan Quality Gate
-- Coherence dan Quality Gate
 - Arsitektur Crawler dan Dependensi
+- Alur Akuisisi Sosial Terpadu
 - Helper Campaign Browser
 - Verifikasi Dataset Berversi
 - Arsitektur Crawler dan Dependensi
+- Alur Akuisisi Sosial Terpadu
+- Coherence dan Quality Gate
+- Pipeline dan Persistensi NLP
 - Eksplorasi Dashboard Streamlit
 - Eksplorasi Dashboard Streamlit
+- Alur Akuisisi Sosial Terpadu
 - Runbook dan Verifikasi Lokal
 - Eksplorasi Dashboard Streamlit
+- Alur Akuisisi Sosial Terpadu
+- Pipeline dan Persistensi NLP
+- Pipeline dan Persistensi NLP
+- Snapshot NLP dan Arsip
 - Eksplorasi Dashboard Streamlit
 - Coherence dan Quality Gate
-- Snapshot NLP dan Arsip
 - Ekstraksi Cuplikan Publik
 - Memori Startup Dashboard
 
@@ -66,15 +77,15 @@
 10. `RedditHtmlParser` - 20 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Per-platform bounds: max_posts 4000, max_candidates 6000` --conceptually_related_to--> `Target 1000 qualified new roots per platform, bounded attempts and candidates`  [INFERRED]
+  social_crawler.json → SOCIAL_CRAWLER.md
+- `Configured coordinator 1.3 Reddit policy cooldown:360 seconds` --conceptually_related_to--> `SocialCrawler 1.3 bounded HTTP 429 cooldown policy`  [INFERRED]
+  social_crawler.json → SOCIAL_CRAWLER.md
+- `Configured coordinator 1.3 Reddit retry cap:3 per run` --conceptually_related_to--> `SocialCrawler 1.3 bounded HTTP 429 cooldown policy`  [INFERRED]
+  social_crawler.json → SOCIAL_CRAWLER.md
 - `Historical fixed top10/window110/all15878-unique macro c_v protocol` --semantically_similar_to--> `Gensim c_v protocol: top 10 terms, window 110, phrase tokens`  [INFERRED] [semantically similar]
   graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md → SOCIAL_NLP.md
 - `SocialNLPClusterer` --implements--> `Two UMAP 10 D projections seeded 42 and 43`  [EXTRACTED]
-  social_nlp.py → SOCIAL_NLP.md
-- `SocialNLPClusterer` --implements--> `Published 15-candidate DBSCAN grid preserves 8 million-edge guard`  [INFERRED]
-  social_nlp.py → SOCIAL_NLP.md
-- `SocialNLPClusterer` --implements--> `New combined-corpus SBERT and dual-UMAP features reused only through exact verified caches`  [INFERRED]
-  social_nlp.py → SOCIAL_NLP.md
-- `SocialNLPClusterer` --references--> `Saved-model dashboard uses a separate runtime;full refitting stays Python 3.12`  [EXTRACTED]
   social_nlp.py → SOCIAL_NLP.md
 
 ## Import Cycles
@@ -90,39 +101,39 @@
 - **Dashboard-only dependencies,Docker wheels and isolated dual-Python regression** — requirements_dashboard_ui_artifact_dependencies, requirements_dashboard_python_numpy_markers, dockerfile_dashboard_wheels_python_version, _github_workflows_ci_dashboard_runtime_isolation, _github_workflows_ci_shipped_artifact_cloud_regression [INFERRED 0.95]
 - **Shared social workbook contract** — selenium_crawler_inherited_export, social_crawler_compact_excel, social_crawler_audit_bundle, graphify_out_obsidian_crawler_selenium_shared_excel [EXTRACTED 1.00]
 
-## Communities (42 total, 8 thin omitted)
+## Communities (53 total, 10 thin omitted)
 
-### Community 0 - "Pipeline dan Persistensi NLP"
-Cohesion: 0.05
-Nodes (25): main(), Verify published source workbooks and the dashboard artifact bundle., verify(), file_hash(), json_write(), main(), Use the same class TF-IDF vocabulary for selection and publication., Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un (+17 more)
-
-### Community 1 - "Alur Akuisisi Sosial Terpadu"
-Cohesion: 0.06
-Nodes (21): _config(), _keywords(), Omitted retry config defaults to zero retries for existing callers, main(), _number(), Describe the acquisition backend independently of the shared export., Compose the original adapters and workers; one JSON configuration and bundle., Validate and return the effective plan without browser/network access. (+13 more)
-
-### Community 2 - "Alur Akuisisi Sosial Terpadu"
-Cohesion: 0.05
-Nodes (70): Host crawler campaign preserves independent dashboard artifacts, Historical active-campaign state; acquisition now finalized PARTIAL, Before segment 03: qualified YouTube6/Reddit17; exported evidence8/31, Before 04 cumulative qualified YouTube77/Reddit26; evidence325/47, 1000 qualified-root targets per platform within shared three-hour budget, Campaign descriptor records finalized PARTIAL status and five-segment accounting, Cooldown verification:50 crawler tests, 49pass/1skip;12 Reddit runner tests pass, Historical descriptor-based monitoring now resolves final campaign counters (+62 more)
-
-### Community 3 - "Adapter Akuisisi YouTube"
+### Community 0 - "Adapter Akuisisi YouTube"
 Cohesion: 0.09
 Nodes (34): SourceAdapter, error_code(), load_settings(), main(), parser(), run(), SafeLogger, Settings (+26 more)
 
-### Community 4 - "Crawler Selenium Terisolasi"
-Cohesion: 0.08
+### Community 1 - "Crawler Selenium Terisolasi"
+Cohesion: 0.07
 Nodes (19): _barrier(), _create_driver(), main(), Content quoting an error is never used to classify an access barrier., Convert the shared rendered DOM capture without inventing identities., One browser operation. The parent enforces the hard process deadline., Stream evidence before completion; the original supervisor can retain it., Drop-in SocialCrawler with Selenium for both platforms and shared exports. (+11 more)
+
+### Community 2 - "Alur Akuisisi Sosial Terpadu"
+Cohesion: 0.12
+Nodes (7): Return a local date for display; relative source dates stay estimates., Clock, rd_events(), receipt(), SocialCrawlerTests, spawn_youtube_fixture(), yt_events()
+
+### Community 3 - "Pipeline dan Persistensi NLP"
+Cohesion: 0.14
+Nodes (5): Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count., SocialNLPClusterer, encoder(), fixture(), NLPTests
+
+### Community 4 - "Alur Akuisisi Sosial Terpadu"
+Cohesion: 0.12
+Nodes (15): Consolidated audit PARTIAL: shortfalls 700/942 and no pending segments, Configured 1000 new posts per platform, shared three-hour campaign, Inherited SocialCrawler filters and Excel exporters, JSONL audit, dataset.xlsx and checksum manifest, Final PARTIAL: YouTube 1, 188 exported/300 qualified; Reddit 98/58, Target 1000 qualified new roots per platform, bounded attempts and candidates, social_data.xlsx ten-column Data worksheet, Five verified segments consolidate with zero duplicate roots and zero baseline overlap (+7 more)
 
 ### Community 5 - "Bundle Excel dan Provenans"
 Cohesion: 0.17
 Nodes (13): add_readme(), BundleSink, dumps(), main(), now_iso(), parser(), Validate the embedded contract; an external descriptor is optional., Atomic new directory; streaming JSONL + streaming, formula-safe Excel. (+5 more)
 
-### Community 6 - "Akses dan Parsing HTML"
+### Community 6 - "Snapshot NLP dan Arsip"
+Cohesion: 0.11
+Nodes (24): Historical v 1 HDBSCAN directional counts for 51 topics, Prior Graphify memory: Selenium crawler preserves Excel contract, BeeSense crawler, NLP and dashboard class architecture, EXTRACTED source quotations versus INFERRED topic interpretations, Crawler Excel to independent NLP/coherence artifacts to Streamlit, Historical audit workbook: 50 YouTube and 181 Reddit root identities, Active combined 20-topic run with eleven artifacts and manifest, Four immutable older NLP snapshots including baseline 20-topic run (+16 more)
+
+### Community 7 - "Akses dan Parsing HTML"
 Cohesion: 0.22
 Nodes (8): bounded_events(), first(), fixture_page(), Whole-post comment budget includes replies; nested replies share thread cap., RedditHtmlParser, RedditTests, source_time(), worker()
-
-### Community 7 - "Snapshot NLP dan Arsip"
-Cohesion: 0.12
-Nodes (23): Historical v 1 HDBSCAN directional counts for 51 topics, Prior Graphify memory: Selenium crawler preserves Excel contract, BeeSense crawler, NLP and dashboard class architecture, EXTRACTED source quotations versus INFERRED topic interpretations, Crawler Excel to independent NLP/coherence artifacts to Streamlit, Historical audit workbook: 50 YouTube and 181 Reddit root identities, Active combined 20-topic run with eleven artifacts and manifest, Four immutable older NLP snapshots including baseline 20-topic run (+15 more)
 
 ### Community 8 - "Parser dan Runner Reddit"
 Cohesion: 0.13
@@ -132,95 +143,131 @@ Nodes (11): HtmlSource, load_settings(), LocalHtmlSource, parsed_number(), ABC, 
 Cohesion: 0.13
 Nodes (3): export_campaign(), load_campaign(), ResumeTests
 
-### Community 10 - "Identitas dan Kontrak Data"
+### Community 10 - "Pipeline dan Persistensi NLP"
+Cohesion: 0.18
+Nodes (7): json_write(), main(), Publish a new versioned sidecar; never modify the original run., Reuse immutable SBERT features only after verifying data/model identity., Preserve explicit zero distances, including identical sentence vectors., Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi, Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry.
+
+### Community 11 - "Topik dan Verifikasi NLP"
+Cohesion: 0.23
+Nodes (20): Historical active-campaign state; acquisition now finalized PARTIAL, Before segment 03: qualified YouTube6/Reddit17; exported evidence8/31, Before 04 cumulative qualified YouTube77/Reddit26; evidence325/47, Campaign descriptor records finalized PARTIAL status and five-segment accounting, Historical descriptor-based monitoring now resolves final campaign counters, Historical user request for fifteen-minute updates during active acquisition monitoring, Historical preparation restriction: cooldown implemented without restarting segment 03, New user authorization supersedes historical preparation-only restriction (+12 more)
+
+### Community 12 - "Identitas dan Kontrak Data"
 Cohesion: 0.18
 Nodes (5): ContractTests, digest(), RecordFactory, utc_datetime(), validate_row()
 
-### Community 12 - "Runner Playwright Reddit"
+### Community 14 - "Runner Playwright Reddit"
 Cohesion: 0.23
 Nodes (12): atomic_json(), barrier_status(), campaign_plan(), decode_cli_output(), find_cli(), PlaywrightCLI, rate_limit_seconds(), run() (+4 more)
 
-### Community 13 - "Eksplorasi Dashboard Streamlit"
+### Community 15 - "Pipeline dan Persistensi NLP"
+Cohesion: 0.16
+Nodes (6): main(), Verify published source workbooks and the dashboard artifact bundle., verify(), file_hash(), CloudRuntimeTests, Run in an isolated Cloud environment, using only root requirements.txt.
+
+### Community 16 - "Eksplorasi Dashboard Streamlit"
 Cohesion: 0.17
 Nodes (17): Filters retain model membership and do not recompute c_v, Selected-topic c_v card is separate from the full-model mean, Occurrences, unique sentences, comments and source roots have different denominators, Five artifact-backed Streamlit analysis views, Verified local runtime now reads combined 20-topic artifacts, Platform and top-five source graphs count unique topic comments, Four selected-topic cards: unique comments, share, source roots and topic c_v, Term bars show bounded phrase presence in unique filtered sentences (+9 more)
 
-### Community 14 - "Topik dan Verifikasi NLP"
+### Community 17 - "Konfigurasi SocialCrawler"
+Cohesion: 0.17
+Nodes (17): Host crawler campaign preserves independent dashboard artifacts, 1000 qualified-root targets per platform within shared three-hour budget, Historical Reddit pause: ten qualified and seventeen exported evidence posts, Original deadline stopped acquisition; no operation started afterward, Per-platform bounds: max_posts 4000, max_candidates 6000, Historical exclusion source outputs/social_20261028_01, Configured global acquisition budget 10800 seconds, Configured coordinator 1.3 Reddit policy cooldown:360 seconds (+9 more)
+
+### Community 18 - "Topik dan Verifikasi NLP"
 Cohesion: 0.20
 Nodes (10): Merged corpus: 29, 099 rows, 1, 517 roots and 27, 582 comments/replies, Combined workbook provenance PASS with immutable source hashes and row lineage, identity(), main(), merge(), Merge compact crawl workbooks, rejecting repeated native content identities., Return global native object ID plus its root; text never defines identity., sha() (+2 more)
 
-### Community 15 - "Identitas dan Kontrak Data"
+### Community 19 - "Identitas dan Kontrak Data"
 Cohesion: 0.18
 Nodes (10): ContentInput, Dataset, KeywordMatcher, MemorySink, native_fullname(), object_key(), Aho-Corasick; offsets refer to Python Unicode code points in source., Shared pipeline; adapters cannot choose their own headers or cell formats. (+2 more)
 
-### Community 16 - "Parser DOM Terbatas"
+### Community 20 - "Parser DOM Terbatas"
 Cohesion: 0.18
 Nodes (8): HTMLParser, assert_accessible(), BoundedDom, content_node(), Node, Small serialised-DOM reader, not a browser or full HTML5 repair engine., rendered_text(), walk()
 
-### Community 17 - "Pengujian Penjelasan Topik"
+### Community 21 - "Pengujian Penjelasan Topik"
 Cohesion: 0.26
 Nodes (3): ExplanationTests, model_from_counts(), profile()
 
-### Community 18 - "Coherence dan Quality Gate"
+### Community 22 - "Coherence dan Quality Gate"
 Cohesion: 0.17
 Nodes (15): Obsidian method: weighted Ward to 20 final topics, Stored protocol, reference hash, baseline identity and per-topic scores, Additional c_v >=0.4 gate preserves earlier eligibility rules, Configured c_v threshold 0.4 with topn 10 and window 110, DBSCAN core points and noise without membership probabilities, Original DBSCAN IDs and full reduction mapping survive final topic IDs, Two UMAP 10 D projections seeded 42 and 43, Euclidean DBSCAN with reusable bounded radius graphs (+7 more)
 
-### Community 19 - "Validasi Redirect dan Kesalahan"
+### Community 23 - "Validasi Redirect dan Kesalahan"
 Cohesion: 0.21
 Nodes (9): Exception, HTTPRedirectHandler, HtmlPage, PublicHtmlSource, Only public HTML pages on the canonical host; never auth/API routes., RestrictedRedirect, safe_web_url(), SourceFailure (+1 more)
 
-### Community 22 - "Coherence dan Quality Gate"
-Cohesion: 0.21
-Nodes (13): Combined20 runtime and desktop/narrow-screen topic QA verified, Combined-corpus training completed:20topics, c_v 0.4720034333858867, Combined 20 topics:mean c_v 0.4720 passes;7/20 individually below 0.4, Requested DBSCAN clustering, Requested SBERT-based embeddings, Local main.py runtime documented healthy, non-root and read-only, Combined-corpus mean c_v 0.4720034333858867 meets 0.4, Pinned multilingual SentenceTransformer safetensors encoder (+5 more)
-
-### Community 23 - "Coherence dan Quality Gate"
+### Community 26 - "Coherence dan Quality Gate"
 Cohesion: 0.15
 Nodes (13): Internal model metrics do not establish accuracy or representativeness, Historical 28 October 2026 coherence retrain: 52 topics, c_v 0.40970330118194137, Historical fixed top10/window110/all15878-unique macro c_v protocol, Obsidian c_v corpus and token protocol, Combined-corpus c_v 0.4720034334 passes with7/20 individual shortfalls, Unweighted mean across all 20 final non-noise topics, Gensim c_v protocol: top 10 terms, window 110, phrase tokens, Reference corpus: all 46143 unique embedding_text sentences including noise (+5 more)
 
-### Community 24 - "Arsitektur Crawler dan Dependensi"
+### Community 27 - "Arsitektur Crawler dan Dependensi"
 Cohesion: 0.17
 Nodes (13): Bounded native-ID evidence and explicit uncertainty, Obsidian: Crawler Selenium architecture, Shared BundleSink and dual-workbook export path, Shared rendered_thread_dom.mjs extraction, Pinned openpyxl and yt-dlp crawler dependencies, Pinned Selenium 4.51.0 plus crawler requirements, Relative dates remain calendar estimates, Full crawl: 500 roots per platform within one hour (+5 more)
 
-### Community 25 - "Helper Campaign Browser"
+### Community 28 - "Alur Akuisisi Sosial Terpadu"
+Cohesion: 0.26
+Nodes (12): Cooldown verification:50 crawler tests, 49pass/1skip;12 Reddit runner tests pass, Obsidian records bounded retry policy and chronological authorization, Round-robin advances YouTube while Reddit waits for readiness, SocialCrawler 1.3 bounded HTTP 429 cooldown policy, Retain the same failed Reddit operation until cooldown expires, Per-run canonical root duplicate guard, Persist actual 429 finish timestamps, cooldown deadline and retry decisions, Return an explicit target/shortfall report and write one atomic bundle. (+4 more)
+
+### Community 29 - "Helper Campaign Browser"
 Cohesion: 0.27
 Nodes (8): classifyCaptureFailure(), enrichBatch(), rateLimitSeconds(), inWindow(), mergeCandidates(), row, source, window
 
-### Community 27 - "Arsitektur Crawler dan Dependensi"
-Cohesion: 0.25
-Nodes (11): Isolated dashboard-runtime matrix for Python 3.12 and3.14, Cloud AppTest regression opens all five views/T04 without installed or imported training libraries, Docker runtime ARG selects Python 3.12 or3.14 and installs only root wheels, Architecture separates saved-artifact deployment from full training/dev packages, Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix, Historical Python 3.14.10 Cloud install failure:ONNX cp314 wheels and Numba support, Cloud root requirements now install dashboard-only dependencies, Root Community Cloud requirements include only dashboard runtime (+3 more)
+### Community 31 - "Arsitektur Crawler dan Dependensi"
+Cohesion: 0.26
+Nodes (12): Isolated dashboard-runtime matrix for Python 3.12 and3.14, Cloud AppTest regression opens all five views/T04 without installed or imported training libraries, Docker runtime ARG selects Python 3.12 or3.14 and installs only root wheels, Architecture separates saved-artifact deployment from full training/dev packages, Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix, Historical Python 3.14.10 Cloud install failure:ONNX cp314 wheels and Numba support, PyArrow 24.0.0 matches Cloud guard for Arrow/mimalloc threaded-import compatibility, Cloud root requirements now install dashboard-only dependencies (+4 more)
 
-### Community 30 - "Runbook dan Verifikasi Lokal"
+### Community 32 - "Alur Akuisisi Sosial Terpadu"
+Cohesion: 0.17
+Nodes (10): Advanced connected-browser Reddit campaign helpers, Checkpoint export to the eight-sheet contract, Native-ID provenance and bounded public excerpts, Standalone runner stops 429; coordinator 1.3 supports bounded cooldown, Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops, Coordinator waits for manual CAPTCHA without automated clicks, Reddit Playwright CLI runner, Atomic sibling .progress.json snapshots during acquisition (+2 more)
+
+### Community 33 - "Coherence dan Quality Gate"
+Cohesion: 0.25
+Nodes (11): Combined20 runtime and desktop/narrow-screen topic QA verified, Combined-corpus training completed:20topics, c_v 0.4720034333858867, Requested DBSCAN clustering, Requested SBERT-based embeddings, Combined-corpus mean c_v 0.4720034333858867 meets 0.4, Pinned multilingual SentenceTransformer safetensors encoder, New combined-corpus SBERT and dual-UMAP features reused only through exact verified caches, Overflow-window averaging and L 2-normalized 384 D embeddings (+3 more)
+
+### Community 34 - "Pipeline dan Persistensi NLP"
+Cohesion: 0.18
+Nodes (3): Identify the parent thread, not the individual comment URL., Evidence-grounded topic descriptions and descriptive, source-aware trends., Explain already verified artifacts without encoding or fitting again.
+
+### Community 37 - "Alur Akuisisi Sosial Terpadu"
+Cohesion: 0.27
+Nodes (6): _config(), _keywords(), Omitted retry config defaults to zero retries for existing callers, _number(), Read root identities only; never alter the historical workbooks., _url()
+
+### Community 38 - "Runbook dan Verifikasi Lokal"
 Cohesion: 0.31
 Nodes (9): Full Python 3.12 NLP/UI/crawler regressions use requirements-dev.txt, CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.12/3.14 matrix, New-corpus native SBERT encoding or exact verified cache reuse, Separate SBERT training and artifact-only dashboard environments, Training/evaluation-only Gensim coherence requirements, Separate Python 3.12 development/training regression dependency entry, NLP, Streamlit and Plotly dependency ranges, Platform-specific macOS Intel Torch and numerical compatibility (+1 more)
 
-### Community 31 - "Eksplorasi Dashboard Streamlit"
+### Community 39 - "Eksplorasi Dashboard Streamlit"
 Cohesion: 0.32
 Nodes (5): Responsive cards, visible keyboard focus and chart/table alternatives verified, _explain_filtered(), _load_artifacts(), main(), Streamlit entry point for local and Community Cloud dashboards.  Training lives
 
-### Community 32 - "Eksplorasi Dashboard Streamlit"
+### Community 40 - "Alur Akuisisi Sosial Terpadu"
+Cohesion: 0.25
+Nodes (4): main(), Validate and return the effective plan without browser/network access., Project the full audit rows into one sheet, applying current filters., Re-export saved Contents without network or modifying the source bundle.
+
+### Community 43 - "Snapshot NLP dan Arsip"
+Cohesion: 0.33
+Nodes (6): Historical Graphify memory of the native SBERT/UMAP/DBSCAN migration, Four retained prior NLP snapshots, including old-corpus 20-topic run, BeeSense project and dashboard runbook, Local main.py runtime documented healthy, non-root and read-only, Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries, Unchanged compact source and eight-sheet audit workbooks
+
+### Community 44 - "Eksplorasi Dashboard Streamlit"
 Cohesion: 0.33
 Nodes (4): _graph_positions(), Bounded topic graph: volume from filtered rows, semantic edges from the full mod, Keep the full-model layout stable while volume and edge filters change., DashboardTests
 
-### Community 33 - "Coherence dan Quality Gate"
+### Community 45 - "Coherence dan Quality Gate"
 Cohesion: 0.67
 Nodes (5): Cloud publication includes model code, config and complete checksummed active snapshot, Community Cloud entry point:root main.py, repo SakaHeroji/BeeSense, branch main, Python 3.12, Cloud uses relative artifacts and platform-controlled bind; local loopback stays explicit, Active artifact directory outputs/nlp_20261029_combined_topics20_01, Configured merged workbook identity and SHA-256
-
-### Community 34 - "Snapshot NLP dan Arsip"
-Cohesion: 0.40
-Nodes (5): Historical Graphify memory of the native SBERT/UMAP/DBSCAN migration, Four retained prior NLP snapshots, including old-corpus 20-topic run, BeeSense project and dashboard runbook, Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries, Unchanged compact source and eight-sheet audit workbooks
 
 ## Knowledge Gaps
 - **21 isolated node(s):** `window`, `source`, `row`, `candidate`, `Checkpoint export to the eight-sheet contract` (+16 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SocialCrawler` connect `Alur Akuisisi Sosial Terpadu` to `Arsitektur Crawler dan Dependensi`, `Alur Akuisisi Sosial Terpadu`, `Crawler Selenium Terisolasi`?**
+- **Why does `SocialCrawler` connect `Alur Akuisisi Sosial Terpadu` to `Alur Akuisisi Sosial Terpadu`, `Crawler Selenium Terisolasi`, `Alur Akuisisi Sosial Terpadu`, `Alur Akuisisi Sosial Terpadu`, `Alur Akuisisi Sosial Terpadu`, `Topik dan Verifikasi NLP`, `Konfigurasi SocialCrawler`, `Arsitektur Crawler dan Dependensi`, `Alur Akuisisi Sosial Terpadu`?**
   _High betweenness centrality (0.327) - this node is a cross-community bridge._
-- **Why does `file_hash()` connect `Pipeline dan Persistensi NLP` to `Alur Akuisisi Sosial Terpadu`, `Adapter Akuisisi YouTube`, `Bundle Excel dan Provenans`, `Eksplorasi Dashboard Streamlit`?**
+- **Why does `file_hash()` connect `Pipeline dan Persistensi NLP` to `Adapter Akuisisi YouTube`, `Pipeline dan Persistensi NLP`, `Pipeline dan Persistensi NLP`, `Bundle Excel dan Provenans`, `Eksplorasi Dashboard Streamlit`, `Alur Akuisisi Sosial Terpadu`, `Pipeline dan Persistensi NLP`?**
   _High betweenness centrality (0.322) - this node is a cross-community bridge._
-- **Why does `SocialNLPClusterer` connect `Pipeline dan Persistensi NLP` to `Coherence dan Quality Gate`, `Snapshot NLP dan Arsip`, `Snapshot NLP dan Arsip`, `Pengujian Penjelasan Topik`, `Coherence dan Quality Gate`, `Pengujian UI Streamlit`, `Coherence dan Quality Gate`, `Coherence dan Quality Gate`, `Arsitektur Crawler dan Dependensi`, `Eksplorasi Dashboard Streamlit`?**
+- **Why does `SocialNLPClusterer` connect `Pipeline dan Persistensi NLP` to `Coherence dan Quality Gate`, `Pipeline dan Persistensi NLP`, `Snapshot NLP dan Arsip`, `Eksplorasi Dashboard Streamlit`, `Pipeline dan Persistensi NLP`, `Pipeline dan Persistensi NLP`, `Snapshot NLP dan Arsip`, `Pipeline dan Persistensi NLP`, `Coherence dan Quality Gate`, `Pipeline dan Persistensi NLP`, `Pengujian Penjelasan Topik`, `Coherence dan Quality Gate`, `Pengujian UI Streamlit`, `Coherence dan Quality Gate`, `Arsitektur Crawler dan Dependensi`?**
   _High betweenness centrality (0.222) - this node is a cross-community bridge._
 - **Are the 8 inferred relationships involving `SocialNLPClusterer` (e.g. with `Published 15-candidate DBSCAN grid preserves 8 million-edge guard` and `New combined-corpus SBERT and dual-UMAP features reused only through exact verified caches`) actually correct?**
   _`SocialNLPClusterer` has 8 INFERRED edges - model-reasoned connections that need verification._

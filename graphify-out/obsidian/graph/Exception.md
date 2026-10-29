@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Alur Akuisisi Sosial Terpadu"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SourceFailure]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

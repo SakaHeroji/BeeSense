@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/public_web_post.mjs"
 type: "code"
-community: "Coherence dan Quality Gate"
+community: "Topik dan Verifikasi NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # public_web_post.mjs
@@ -15,4 +15,4 @@ tags:
 - [[parsePublicPost()]] - `contains` [EXTRACTED]
 - [[public_web_post.test.mjs]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

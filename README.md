@@ -182,3 +182,5 @@ git push origin main
 ```
 
 Status pengujian jarak jauh tersedia pada tab Actions repository. Pemeriksaan lokal tidak menggantikan hasil workflow GitHub atau build/runtime Docker.
+
+Runtime dashboard mem-pin PyArrow 24.0.0, sama dengan guard kompatibilitas Streamlit Cloud. Versi 25/26 dapat terkena crash alokasi mimalloc saat import dilakukan oleh thread skrip yang kemudian berakhir; lihat [laporan upstream Apache Arrow #50471](https://github.com/apache/arrow/issues/50471). Pin ini hanya mengubah pembaca artifact; file Parquet/NumPy dan hasil training tetap utuh.

@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Pipeline dan Persistensi NLP"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # SocialNLPClusterer
@@ -93,4 +93,4 @@ tags:
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

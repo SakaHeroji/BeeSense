@@ -80,8 +80,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-- 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
+- 2 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 
 ## Top bridge nodes
 - [[SafeLogger]] - degree 13, connects to 1 community

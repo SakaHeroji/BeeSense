@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign.mjs"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Pipeline dan Persistensi NLP"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # inWindow()
@@ -18,4 +18,4 @@ tags:
 - [[enrichBatch()]] - `calls` [EXTRACTED]
 - [[mergeCandidates()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

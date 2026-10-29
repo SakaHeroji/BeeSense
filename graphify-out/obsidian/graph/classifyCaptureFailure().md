@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign_detail.mjs"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Pipeline dan Persistensi NLP"
 location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # classifyCaptureFailure()
@@ -16,4 +16,4 @@ tags:
 - [[browser_campaign_detail.test.mjs]] - `imports` [EXTRACTED]
 - [[enrichBatch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

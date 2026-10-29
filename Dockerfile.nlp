@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
 WORKDIR /app
 COPY requirements.txt requirements-dashboard.txt /app/
-RUN pip install --no-cache-dir --only-binary=:all: -r requirements.txt \
+RUN pip install --no-cache-dir --no-compile --only-binary=:all: -r requirements.txt \
     && useradd --create-home --uid 10001 beesense \
     && chown -R beesense:beesense /app
 COPY --chown=beesense:beesense social_nlp.py main.py social_nlp.json /app/

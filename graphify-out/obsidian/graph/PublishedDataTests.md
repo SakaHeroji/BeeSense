@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_data_verifier.py"
 type: "code"
-community: "Parser DOM Terbatas"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_DOM_Terbatas
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # PublishedDataTests
@@ -25,4 +25,4 @@ tags:
 - [[.test_unexpected_workbook_is_rejected()]] - `method` [EXTRACTED]
 - [[test_dashboard_data_verifier.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

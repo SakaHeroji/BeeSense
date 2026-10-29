@@ -1,14 +1,14 @@
 ---
 source_file: "Youtube/config_youtube.json"
 type: "document"
-community: "Verifikasi Dataset Berversi"
+community: "Coherence dan Quality Gate"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Verifikasi_Dataset_Berversi
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Youtube/config_youtube.json
 
-#graphify/document #graphify/EXTRACTED #community/Verifikasi_Dataset_Berversi
+#graphify/document #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

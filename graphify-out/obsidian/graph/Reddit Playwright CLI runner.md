@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/README_playwright.md"
 type: "document"
-community: "Identitas dan Kontrak Data"
+community: "Pipeline dan Persistensi NLP"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # Reddit Playwright CLI runner
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/document #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
