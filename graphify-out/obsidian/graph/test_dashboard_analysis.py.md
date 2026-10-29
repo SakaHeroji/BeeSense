@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # test_dashboard_analysis.py
@@ -18,4 +18,4 @@ tags:
 - [[number()]] - `imports` [EXTRACTED]
 - [[percent()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

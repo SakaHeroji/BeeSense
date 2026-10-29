@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/README_playwright.md"
 type: "document"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Identitas dan Kontrak Data"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # Reddit Playwright CLI runner
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

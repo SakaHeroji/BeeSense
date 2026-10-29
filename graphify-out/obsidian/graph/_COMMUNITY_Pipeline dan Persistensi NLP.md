@@ -98,10 +98,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 49 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 2 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
-- 1 edge to [[_COMMUNITY_Akses dan Parsing HTML]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 49 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 2 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
 
 ## Top bridge nodes
 - [[crawl_reddit_single.py]] - degree 58, connects to 3 communities

@@ -31,7 +31,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 3 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
 
 ## Top bridge nodes
 - [[StreamlitTests]] - degree 15, connects to 1 community

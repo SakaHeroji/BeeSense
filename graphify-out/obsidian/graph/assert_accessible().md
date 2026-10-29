@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Snapshot NLP dan Arsip"
+community: "Crawler Selenium Terisolasi"
 location: "L689"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # assert_accessible()
@@ -19,4 +19,4 @@ tags:
 - [[rendered_text()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

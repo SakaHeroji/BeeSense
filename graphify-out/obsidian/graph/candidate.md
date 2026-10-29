@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/public_web_post.test.mjs"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Coherence dan Quality Gate"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # candidate
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[public_web_post.test.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

@@ -4,7 +4,7 @@ Clustering dan penelusuran percakapan YouTube/Reddit melalui dashboard Streamlit
 
 ## Menjalankan dashboard
 
-Python **3.12**, dari root proyek:
+Python **3.12** direkomendasikan; runtime dashboard juga mendukung **3.14**. Dari root proyek:
 
 ```bash
 python3.12 -m venv .venv-nlp
@@ -29,13 +29,31 @@ Entry point berada di root repository: **`main.py`**. Setelah perubahan dan data
 | Main file path | `main.py` |
 | Advanced settings → Python version | `3.12` |
 
-Pengaturan ini mengikuti [panduan deployment resmi Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy). Cloud memasang dependency dari `requirements.txt` di root, yang menyertakan `requirements-nlp.lock` dan `requirements-crawler.txt`; ketiganya harus ikut GitHub. Lihat [aturan dependency Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies).
+Pengaturan ini mengikuti [panduan deployment resmi Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy). Cloud memasang dependency dari `requirements.txt` di root, yang hanya menyertakan `requirements-dashboard.txt`; keduanya harus ikut GitHub. Runtime dashboard dipisahkan dari dependency training/crawler dan diuji pada Python 3.12 serta 3.14. Lihat [aturan dependency Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies).
 
 Sertakan `main.py`, `social_nlp.py`, `social_nlp.json`, `.streamlit/config.toml`, dan **seluruh isi snapshot aktif** `outputs/nlp_20261029_combined_topics20_01/`, termasuk manifest, Parquet, JSON, dan array NumPy. `.gitignore` sudah mengizinkan file snapshot tersebut. Jalankan `python -m scripts.verify_dashboard_data --check-git` setelah staging untuk memastikan seluruh dataset yang diterbitkan masuk Git dan checksum valid. Workbook baseline/gabungan dan snapshot arsip tetap disertakan untuk audit serta CI.
 
 Cloud memakai `output_dir` relatif pada `social_nlp.json`. Biarkan `BEESENSE_NLP_RUN_DIR` tidak diatur agar app memakai snapshot repository; `/data/nlp_run` hanya digunakan oleh container Docker lokal. Dashboard dapat dibuka tanpa secrets, API key, model download, atau training. Dockerfile tidak digunakan oleh Community Cloud.
 
 Konfigurasi bersama tidak mengunci `server.address` ke loopback agar platform hosting dapat mengatur bind address. Perintah lokal di atas tetap memakai `--server.address=127.0.0.1`; Docker tetap menerbitkan port pada loopback host. Lihat [referensi konfigurasi Streamlit](https://docs.streamlit.io/develop/api-reference/configuration/config.toml).
+
+### Error instalasi pada Python 3.14
+
+Log deployment 29 Oktober 2026 memakai Python 3.14.10 dan gagal sebelum UI dimulai: ONNX Runtime 1.23.2 tidak memiliki wheel `cp314`, lalu Numba 0.61.2 menolak Python 3.14. Penyebabnya adalah root requirements lama menarik seluruh environment training dari `requirements-nlp.lock`.
+
+Root requirements sekarang hanya memuat kebutuhan pemuatan artifact dan UI: NumPy/Pandas/PyArrow, SciPy/scikit-learn untuk penjelasan/tren, NetworkX, Plotly, Babel, OpenPyXL dan Streamlit. ONNX Runtime, Numba/llvmlite, UMAP, Torch, Gensim dan crawler tidak dipasang di Cloud. NumPy tetap 2.2.6 pada Python <3.14; Python 3.14 memakai wheel NumPy 2.3.5. Environment training terkunci tetap dipertahankan pada `requirements-nlp.lock` dan `requirements-sbert*`.
+
+Push perubahan requirements ke `main`, lalu tunggu Cloud memasang dependency baru. Jika app berhenti pada error lama, gunakan **Reboot app**. Python 3.12 tetap pilihan yang disarankan untuk deployment baru; app Python 3.14 dapat memakai runtime dashboard baru. [Dependency dapat diperbarui pada app yang sama, sedangkan mengganti versi Python membutuhkan deploy ulang](https://docs.streamlit.io/deploy/streamlit-community-cloud/manage-your-app/upgrade-python).
+
+Job CI `dashboard-runtime` memasang wheel saja pada Python 3.12/3.14 dan membuka kelima tampilan dari snapshot terbitan, termasuk topik terpilih. Tes juga memastikan paket training tidak terpasang/diimpor dan memblokir training selama UI berjalan:
+
+```bash
+python -m pip install --only-binary=:all: -r requirements.txt
+python -m pip check
+python -m unittest discover -s tests/cloud -v
+```
+
+Jalankan tes Cloud tersebut dalam environment dashboard bersih, terpisah dari `requirements-dev.txt`/training. Tidak ada retraining atau perubahan checksum dataset/model untuk perbaikan deployment ini.
 
 ## Dataset yang disertakan
 
@@ -80,7 +98,7 @@ Versi class berbasis Selenium tersedia di [social_crawler_selenium.py](social_cr
 Lihat [panduan Selenium](SELENIUM_CRAWLER.md) dan [peta Obsidian](graphify-out/obsidian/Crawler%20Selenium.md).
 Versi ini membaca JSON yang sama dan mempertahankan format kedua workbook Excel.
 
-Instalasi `requirements.txt` mencakup dependensi NLP dan crawler. Seluruh pengaturan crawl tetap berada dalam **social_crawler.json**; opsi NLP/penjelasan di **social_nlp.json**.
+Untuk tooling crawler dan tes NLP lengkap pada Python 3.12, pasang `python -m pip install -r requirements-dev.txt`. `requirements.txt` hanya memasang runtime dashboard; training SBERT tetap memakai environment tersendiri di bawah. Seluruh pengaturan crawl tetap berada dalam **social_crawler.json**; opsi NLP/penjelasan di **social_nlp.json**.
 
 ```bash
 # Validasi konfigurasi; tidak mengakses jaringan.
@@ -112,14 +130,17 @@ Reddit Playwright memerlukan Chrome dan Playwright CLI terpasang di host, atau p
 
 ## Pengujian
 
+Environment penuh Python 3.12, terpisah dari environment Cloud:
+
 ```bash
+python -m pip install -r requirements-dev.txt
 python -m scripts.verify_dashboard_data --check-git
 python -m unittest discover -s tests/nlp -v
 python -m unittest discover -s tests -p test_social_crawler.py -v
 python -m unittest discover -s Reddit -p test_crawl_reddit_playwright.py -v
 node --test Reddit/browser_campaign.test.mjs Reddit/browser_campaign_detail.test.mjs Reddit/public_web_post.test.mjs
-python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py scripts tests/nlp
-python -m ruff format --isolated --check social_nlp.py main.py scripts tests/nlp
+python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py scripts tests/nlp tests/cloud
+python -m ruff format --isolated --check social_nlp.py main.py scripts tests/nlp tests/cloud
 ```
 
 Tes berjalan offline dengan fixture sintetis; validasi dataset memeriksa artifact asli yang disertakan. Workflow [GitHub Actions](.github/workflows/ci.yml) menjalankan pemeriksaan tersebut pada push/PR; hasil eksekusi jarak jauh dapat diperiksa pada tab Actions repository. Versi action mengikuti contoh resmi [checkout](https://github.com/actions/checkout) dan [setup-python](https://github.com/actions/setup-python).
@@ -128,6 +149,8 @@ Tes berjalan offline dengan fixture sintetis; validasi dataset memeriksa artifac
 
 ```bash
 docker build -f Dockerfile.nlp -t beesense-nlp .
+# Reproduksi runtime Cloud Python 3.14:
+docker build --build-arg PYTHON_VERSION=3.14 -f Dockerfile.nlp -t beesense-nlp:py314 .
 docker run --rm -p 127.0.0.1:8501:8501 \
   -v "$PWD/outputs/nlp_20261029_combined_topics20_01:/data/nlp_run:ro" beesense-nlp
 ```
@@ -152,8 +175,8 @@ Untuk perubahan berikutnya, periksa diff dan verifikasi dataset/tes sebelum comm
 ```bash
 git status
 git diff
-python -m scripts.verify_dashboard_data --check-git
 git add <FILE_YANG_DIUBAH>
+python -m scripts.verify_dashboard_data --check-git
 git commit -m "Describe the change"
 git push origin main
 ```

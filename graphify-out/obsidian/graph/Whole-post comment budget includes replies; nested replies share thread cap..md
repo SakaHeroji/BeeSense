@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Crawler Selenium Terisolasi"
 location: "L831"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # Whole-post comment budget includes replies; nested replies share thread cap.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[bounded_events()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

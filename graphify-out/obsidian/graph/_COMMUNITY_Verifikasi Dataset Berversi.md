@@ -10,7 +10,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[social_nlp.json]] - document - social_nlp.json
+- [[Youtubeconfig_youtube.json]] - document - Youtube/config_youtube.json
 
 ## Live Query (requires Dataview plugin)
 

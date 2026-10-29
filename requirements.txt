@@ -1,2 +1,2 @@
--r requirements-nlp.lock
--r requirements-crawler.txt
+# Streamlit Community Cloud installs this file. Training has a separate environment.
+-r requirements-dashboard.txt

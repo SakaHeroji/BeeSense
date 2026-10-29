@@ -10,7 +10,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[Redditconfig_reddit.json]] - document - Reddit/config_reddit.json
+- [[social_crawler.json]] - document - social_crawler.json
 
 ## Live Query (requires Dataview plugin)
 

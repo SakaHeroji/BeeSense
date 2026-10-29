@@ -1,12 +1,12 @@
 ---
 source_file: "social_crawler.json"
 type: "document"
-community: "Helper Campaign Browser"
+community: "Arsitektur Crawler dan Dependensi"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Helper_Campaign_Browser
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # social_crawler.json
@@ -24,4 +24,4 @@ tags:
 - [[Reddit CAPTCHA wait 600 seconds, poll 5 seconds]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Helper_Campaign_Browser
+#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

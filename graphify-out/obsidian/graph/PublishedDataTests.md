@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_data_verifier.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Parser DOM Terbatas"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Parser_DOM_Terbatas
 ---
 
 # PublishedDataTests
@@ -25,4 +25,4 @@ tags:
 - [[.test_unexpected_workbook_is_rejected()]] - `method` [EXTRACTED]
 - [[test_dashboard_data_verifier.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas

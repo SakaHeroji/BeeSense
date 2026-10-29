@@ -12,6 +12,7 @@ tags:
 # BeeSense crawler, NLP and dashboard class architecture
 
 ## Connections
+- [[Architecture separates saved-artifact deployment from full trainingdev packages]] - `references` [EXTRACTED]
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Crawler Excel to independent NLPcoherence artifacts to Streamlit]] - `references` [EXTRACTED]

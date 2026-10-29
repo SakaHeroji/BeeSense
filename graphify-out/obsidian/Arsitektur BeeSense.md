@@ -26,3 +26,5 @@ Run aktif `outputs/nlp_20261029_combined_topics20_01`: 20 topik, rata-rata c_v 0
 [[Crawling 1000 Post Baru]] memakai scheduler round robin dengan satu deadline, indeks ID post historis read-only dan penantian CAPTCHA manual. Ekspor baru tetap memakai kontrak delapan sheet serta workbook ringkas; crawler host tidak mengubah artifact dashboard aktif.
 
 Panel topik terpilih memisahkan komentar, porsi, post asal dan coherence; grafik istilah/platform/sumber serta bukti bertautan mempertahankan konteks filter URL. Lihat [desain](../../DASHBOARD_DESIGN.md).
+
+Runtime deployment dipisahkan: `requirements.txt` → `requirements-dashboard.txt` untuk UI/penjelasan dengan artifact tersimpan pada Python 3.12/3.14. Dependency ONNX, Numba/llvmlite, UMAP, Torch dan Gensim hanya berada di environment training/dev terpisah. `Dockerfile.nlp` memakai daftar runtime yang sama dan ARG `PYTHON_VERSION`; CI membuka snapshot asli pada kedua versi agar ketidakcocokan ABI seperti cp314 terdeteksi sebelum deploy. Lihat [[Menjalankan BeeSense]].

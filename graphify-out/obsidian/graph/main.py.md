@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[Community Cloud entry pointroot main.py, repo SakaHerojiBeeSense, branch main, Python 3.12]] - `references` [EXTRACTED]
+- [[Docker runtime ARG selects Python 3.12 or3.14 and installs only root wheels]] - `references` [EXTRACTED]
 - [[Obsidian Cloud runbookmain.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `imports` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `contains` [EXTRACTED]

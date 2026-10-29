@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign.test.mjs"
 type: "code"
-community: "Topik dan Verifikasi NLP"
+community: "Identitas dan Kontrak Data"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # browser_campaign.test.mjs
@@ -19,4 +19,4 @@ tags:
 - [[source]] - `contains` [EXTRACTED]
 - [[window]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

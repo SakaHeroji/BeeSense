@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
-- [[Cloud installs root requirements.txt with both referenced dependency files]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
+- [[Cloud root requirements now install dashboard-only dependencies]] - `references` [EXTRACTED]
 - [[Cloud uses relative artifacts and platform-controlled bind; local loopback stays explicit]] - `references` [EXTRACTED]
 - [[Obsidian Cloud runbookmain.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]

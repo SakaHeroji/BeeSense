@@ -1,14 +1,14 @@
 ---
 source_file: "Youtube/contract.json"
 type: "document"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Arsitektur Crawler dan Dependensi"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # Youtube/contract.json
 
-#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

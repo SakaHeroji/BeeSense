@@ -1,6 +1,7 @@
 *
 !Dockerfile.nlp
-!requirements-nlp.lock
+!requirements.txt
+!requirements-dashboard.txt
 !social_nlp.py
 !main.py
 !social_nlp.json

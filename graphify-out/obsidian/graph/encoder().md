@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Adapter Akuisisi YouTube"
 location: "L87"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # encoder()
@@ -22,4 +22,4 @@ tags:
 - [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - `indirect_call` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/INFERRED #community/Adapter_Akuisisi_YouTube

@@ -23,18 +23,19 @@ jobs:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: |
+            requirements-dev.txt
             requirements-nlp.lock
             requirements-crawler.txt
             requirements-selenium.txt
             requirements-coherence.txt
       - name: Install dependencies
-        run: python -m pip install -r requirements.txt -r requirements-selenium.txt -r requirements-coherence.txt
+        run: python -m pip install -r requirements-dev.txt
       - name: Verify shipped dashboard dataset
         run: python -m scripts.verify_dashboard_data --check-git
       - name: Check NLP and dashboard code
         run: |
-          python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py scripts tests/nlp
-          python -m ruff format --isolated --check social_nlp.py main.py scripts tests/nlp
+          python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py scripts tests/nlp tests/cloud
+          python -m ruff format --isolated --check social_nlp.py main.py scripts tests/nlp tests/cloud
       - name: NLP and Streamlit regression tests
         run: python -m unittest discover -s tests/nlp -v
       - name: SocialCrawler offline tests
@@ -47,3 +48,32 @@ jobs:
         run: python -m unittest discover -s Reddit -p test_crawl_reddit_playwright.py -v
       - name: Browser helper parsers
         run: node --test Reddit/browser_campaign.test.mjs Reddit/browser_campaign_detail.test.mjs Reddit/public_web_post.test.mjs
+  dashboard-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.12", "3.14"]
+    env:
+      HF_HUB_OFFLINE: "1"
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
+      OMP_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dashboard.txt
+      - name: Install Cloud runtime using wheels only
+        run: python -m pip install --only-binary=:all: -r requirements.txt
+      - name: Check installed dependency consistency
+        run: python -m pip check
+      - name: Open shipped artifacts and all dashboard views without training
+        run: python -m unittest discover -s tests/cloud -v

@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/browser_campaign_detail.mjs"
 type: "code"
-community: "Topik dan Verifikasi NLP"
+community: "Identitas dan Kontrak Data"
 location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # enrichBatch()
@@ -17,4 +17,4 @@ tags:
 - [[inWindow()]] - `calls` [EXTRACTED]
 - [[rateLimitSeconds()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

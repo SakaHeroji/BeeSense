@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.json"
 type: "document"
-community: "Verifikasi Dataset Berversi"
+community: "Helper Campaign Browser"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Verifikasi_Dataset_Berversi
+  - community/Helper_Campaign_Browser
 ---
 
 # social_nlp.json
@@ -19,4 +19,4 @@ tags:
 - [[Configured final topic target 20]] - `references` [EXTRACTED]
 - [[Configured merged workbook identity and SHA-256]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Verifikasi_Dataset_Berversi
+#graphify/document #graphify/EXTRACTED #community/Helper_Campaign_Browser

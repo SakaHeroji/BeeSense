@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Konfigurasi SocialCrawler"
+community: "Akses dan Parsing HTML"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_SocialCrawler
+  - community/Akses_dan_Parsing_HTML
 ---
 
 # ResumeTests
@@ -29,4 +29,4 @@ tags:
 - [[.test_resume_skips_dom_and_prioritizes_missing_before_excerpts()]] - `method` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler
+#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML

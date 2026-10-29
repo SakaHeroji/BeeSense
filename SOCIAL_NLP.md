@@ -131,14 +131,14 @@ python3.12 -m venv .venv-sbert
 Mac Intel dapat memakai requirements-sbert-macos-intel.lock untuk versi teruji.
 Environment training terpisah memakai PyTorch 2.2.2, NumPy 1.26.4, SciPy 1.15.3,
 dan PyArrow 19.0.1; Gensim berada pada requirements-coherence.txt
-(kebutuhan training/evaluasi saja); dashboard tetap memakai requirements.txt tanpa mengimpor Torch.
+(kebutuhan training/evaluasi saja); dashboard memakai requirements.txt → requirements-dashboard.txt tanpa ONNX Runtime, Numba, UMAP, Gensim atau Torch. Runtime dashboard mendukung Python 3.12/3.14; training dan tes NLP penuh tetap Python 3.12.
 Parameter fit/data berada pada social_nlp.json. --run-dir/BEESENSE_NLP_RUN_DIR dapat
 memilih run lain. Dashboard menunjukkan metode SBERT, kelompok DBSCAN asal, jumlah topik akhir, coherence dan noise.
 
 Untuk mengulang clustering tanpa mengunduh model atau menghitung embedding identik:
 
 ```bash
-.venv-nlp/bin/python -m pip install -r requirements-coherence.txt
+.venv-nlp/bin/python -m pip install -r requirements-dev.txt
 .venv-nlp/bin/python -u social_nlp.py \
   --reuse-embeddings-from outputs/nlp_20261029_combined_topics20_01 \
   --coherence-baseline outputs/nlp_20261029_combined_topics20_01 \
@@ -176,7 +176,7 @@ probabilitas. Filter mengubah volume/contoh; keanggotaan mengikuti model penuh.
 ## Verifikasi dan operasional
 
 ```bash
-.venv-nlp/bin/python -m pip install -r requirements-coherence.txt
+.venv-nlp/bin/python -m pip install -r requirements-dev.txt
 .venv-nlp/bin/python -m unittest discover -s tests/nlp -v
 .venv-nlp/bin/python -m ruff check --isolated --select E4,E7,E9,F,I social_nlp.py main.py scripts tests/nlp
 .venv-nlp/bin/python -m ruff format --isolated --check social_nlp.py main.py scripts tests/nlp

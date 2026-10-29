@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Snapshot NLP dan Arsip"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # atomic_json()
@@ -15,4 +15,4 @@ tags:
 - [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 - [[save_capture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

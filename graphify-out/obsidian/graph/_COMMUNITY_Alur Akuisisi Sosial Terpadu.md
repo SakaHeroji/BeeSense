@@ -59,11 +59,11 @@ members: 65
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - code - tests/test_social_crawler.py
 - [[.test_source_exception_is_sanitized_and_stops_after_three_calls()]] - code - tests/test_social_crawler.py
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - code - tests/test_social_crawler.py
+- [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - document - .github/workflows/ci.yml
 - [[Clock]] - code - tests/test_social_crawler.py
 - [[Pinned openpyxl and yt-dlp crawler dependencies]] - document - requirements-crawler.txt
 - [[SocialCrawler]] - code - social_crawler.py
 - [[SocialCrawlerTests]] - code - tests/test_social_crawler.py
-- [[Verify BeeSense offline CI]] - document - .github/workflows/ci.yml
 - [[_config()]] - code - social_crawler.py
 - [[_keywords()]] - code - social_crawler.py
 - [[_number()]] - code - social_crawler.py
@@ -85,9 +85,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 2 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Identitas dan Kontrak Data_1]]
 
 ## Top bridge nodes
 - [[SocialCrawler]] - degree 58, connects to 1 community

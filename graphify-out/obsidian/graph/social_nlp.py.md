@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Adapter Akuisisi YouTube"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # social_nlp.py
@@ -17,9 +17,10 @@ tags:
 - [[json_write()]] - `contains` [EXTRACTED]
 - [[main()_3]] - `contains` [EXTRACTED]
 - [[main.py]] - `imports_from` [EXTRACTED]
+- [[test_dashboard_runtime.py]] - `imports_from` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_explanations.py]] - `imports_from` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

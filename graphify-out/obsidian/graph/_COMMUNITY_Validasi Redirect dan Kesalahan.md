@@ -1,17 +1,15 @@
 ---
 type: community
-cohesion: 1.00
-members: 2
+cohesion: 0.67
+members: 0
 ---
 
 # Validasi Redirect dan Kesalahan
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Cohesion:** 0.67 - moderately connected
+**Members:** 0 nodes
 
 ## Members
-- [[captureRenderedThread()]] - code - Reddit/rendered_thread_dom.mjs
-- [[rendered_thread_dom.mjs]] - code - Reddit/rendered_thread_dom.mjs
 
 ## Live Query (requires Dataview plugin)
 

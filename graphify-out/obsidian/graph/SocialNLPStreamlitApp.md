@@ -53,6 +53,7 @@ tags:
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
+- [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - `conceptually_related_to` [INFERRED]
 - [[Community Cloud entry pointroot main.py, repo SakaHerojiBeeSense, branch main, Python 3.12]] - `references` [EXTRACTED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]

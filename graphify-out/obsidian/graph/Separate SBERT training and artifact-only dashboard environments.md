@@ -15,5 +15,6 @@ tags:
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Checksum-verified reuse of immutable SBERT embeddings]] - `references` [EXTRACTED]
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
+- [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

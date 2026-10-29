@@ -1,14 +1,14 @@
 ---
 source_file: "Youtube/config_youtube.json"
 type: "document"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Verifikasi Dataset Berversi"
 location: "L1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Verifikasi_Dataset_Berversi
 ---
 
 # Youtube/config_youtube.json
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/document #graphify/EXTRACTED #community/Verifikasi_Dataset_Berversi

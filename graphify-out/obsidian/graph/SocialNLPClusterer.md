@@ -1,12 +1,12 @@
 ---
 source_file: "social_nlp.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Adapter Akuisisi YouTube"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # SocialNLPClusterer
@@ -64,12 +64,14 @@ tags:
 - [[.test_retraining_reduces_topics_and_persists_original_dbscan_ids()]] - `calls` [EXTRACTED]
 - [[.test_saved_embeddings_require_matching_source_model_and_sentence_order()]] - `calls` [EXTRACTED]
 - [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - `calls` [EXTRACTED]
+- [[.test_shipped_dashboard_and_explanations_need_no_training_environment()]] - `indirect_call` [INFERRED]
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `calls` [EXTRACTED]
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `calls` [EXTRACTED]
 - [[Additive v 2 reduction and coherence metadata with v1v2 loaders]] - `shares_data_with` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
+- [[CloudRuntimeTests]] - `uses` [INFERRED]
 - [[Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.]] - `rationale_for` [EXTRACTED]
 - [[ExplanationTests]] - `uses` [INFERRED]
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `implements` [EXTRACTED]
@@ -79,14 +81,16 @@ tags:
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
 - [[Published 15-candidate DBSCAN grid preserves 8 million-edge guard]] - `implements` [INFERRED]
+- [[Saved-model dashboard uses a separate runtime;full refitting stays Python 3.12]] - `references` [EXTRACTED]
 - [[Two UMAP 10 D projections seeded 42 and 43]] - `implements` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[main.py]] - `imports` [EXTRACTED]
 - [[model_from_counts()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[test_dashboard_runtime.py]] - `imports` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports` [EXTRACTED]
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

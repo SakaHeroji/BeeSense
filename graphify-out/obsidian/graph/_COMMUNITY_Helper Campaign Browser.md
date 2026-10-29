@@ -10,7 +10,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[social_crawler.json]] - document - social_crawler.json
+- [[social_nlp.json]] - document - social_nlp.json
 
 ## Live Query (requires Dataview plugin)
 

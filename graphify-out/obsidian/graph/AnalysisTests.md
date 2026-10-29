@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # AnalysisTests
@@ -24,4 +24,4 @@ tags:
 - [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - `method` [EXTRACTED]
 - [[test_dashboard_analysis.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

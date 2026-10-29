@@ -1,0 +1,13 @@
+# Artifact loading, topic explanations and Streamlit UI; no training libraries.
+# Keep the tested training-era NumPy on Python 3.12/3.13; CPython 3.14 needs newer wheels.
+numpy==2.2.6; python_version < "3.14"
+numpy==2.3.5; python_version >= "3.14"
+pandas==2.3.3
+pyarrow==26.0.0
+scipy==1.18.1
+scikit-learn==1.9.1
+openpyxl==3.1.5
+networkx==3.7
+streamlit==1.66.1
+plotly==6.9.0
+Babel==2.18.0

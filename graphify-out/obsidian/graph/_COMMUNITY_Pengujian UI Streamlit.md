@@ -1,16 +1,17 @@
 ---
 type: community
 cohesion: 1.00
-members: 1
+members: 2
 ---
 
 # Pengujian UI Streamlit
 
 **Cohesion:** 1.00 - tightly connected
-**Members:** 1 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[Redditconfig_reddit_1000.json]] - document - Reddit/config_reddit_1000.json
+- [[captureRenderedThread()]] - code - Reddit/rendered_thread_dom.mjs
+- [[rendered_thread_dom.mjs]] - code - Reddit/rendered_thread_dom.mjs
 
 ## Live Query (requires Dataview plugin)
 

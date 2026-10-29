@@ -1,12 +1,12 @@
 ---
 source_file: "Reddit/public_web_post.mjs"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Coherence dan Quality Gate"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # public_web_post.mjs
@@ -15,4 +15,4 @@ tags:
 - [[parsePublicPost()]] - `contains` [EXTRACTED]
 - [[public_web_post.test.mjs]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

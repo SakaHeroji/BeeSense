@@ -1,14 +1,17 @@
 ---
 source_file: "requirements-nlp.txt"
 type: "document"
-community: "Adapter Akuisisi YouTube"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "dependency declarations"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # NLP, Streamlit and Plotly dependency ranges
 
-#graphify/document #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+## Connections
+- [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Snapshot NLP dan Arsip"
+community: "Crawler Selenium Terisolasi"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # HTTPRedirectHandler
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RestrictedRedirect]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

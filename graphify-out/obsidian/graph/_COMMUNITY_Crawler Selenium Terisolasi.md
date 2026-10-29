@@ -1,69 +1,76 @@
 ---
 type: community
 cohesion: 0.07
-members: 54
+members: 61
 ---
 
 # Crawler Selenium Terisolasi
 
 **Cohesion:** 0.07 - loosely connected
-**Members:** 54 nodes
+**Members:** 61 nodes
 
 ## Members
-- [[.__init__()_20]] - code - social_nlp.py
-- [[._cache_dir()]] - code - social_nlp.py
-- [[._clean()]] - code - social_nlp.py
-- [[._evaluate()]] - code - social_nlp.py
-- [[._event()]] - code - social_nlp.py
-- [[._explanation_evidence()]] - code - social_nlp.py
-- [[._explanation_term_changes()]] - code - social_nlp.py
-- [[._explanation_trend()]] - code - social_nlp.py
-- [[._validate_config()]] - code - social_nlp.py
-- [[._validate_explanation_options()]] - code - social_nlp.py
-- [[.build_topic_graph()]] - code - social_nlp.py
-- [[.compare()]] - code - social_nlp.py
-- [[.describe_topics()]] - code - social_nlp.py
-- [[.encode()]] - code - social_nlp.py
-- [[.explain_artifacts()]] - code - social_nlp.py
-- [[.explain_topics()]] - code - social_nlp.py
-- [[.fit_excel()]] - code - social_nlp.py
-- [[.load_explanations()]] - code - social_nlp.py
-- [[.load_run()]] - code - social_nlp.py
-- [[.parent_post_key()]] - code - social_nlp.py
-- [[.prepare_excel()]] - code - social_nlp.py
-- [[.save()]] - code - social_nlp.py
-- [[.save_explanations()]] - code - social_nlp.py
-- [[.select_candidate()]] - code - social_nlp.py
-- [[.sentence_spans()]] - code - social_nlp.py
-- [[.setUpClass()_2]] - code - tests/nlp/test_social_nlp.py
-- [[.setUpClass()_1]] - code - tests/nlp/test_streamlit_app.py
-- [[.stability()]] - code - social_nlp.py
-- [[.tearDownClass()_2]] - code - tests/nlp/test_social_nlp.py
-- [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_bad_input_and_configuration_are_rejected()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_dedup_preserves_both_occurrences_and_original_dates()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_long_segments_cover_text_without_silent_truncation()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_span_offsets_and_abbreviations_are_source_faithful()]] - code - tests/nlp/test_social_nlp.py
-- [[DashboardTests]] - code - tests/nlp/test_social_nlp.py
-- [[NLPTests]] - code - tests/nlp/test_social_nlp.py
-- [[SocialNLPClusterer]] - code - social_nlp.py
-- [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
-- [[encoder()]] - code - tests/nlp/test_social_nlp.py
-- [[file_hash()]] - code - social_nlp.py
-- [[fixture()]] - code - tests/nlp/test_social_nlp.py
-- [[json_write()]] - code - social_nlp.py
-- [[main()_7]] - code - scripts/verify_dashboard_data.py
-- [[main()_3]] - code - social_nlp.py
-- [[social_nlp.py]] - code - social_nlp.py
-- [[test_social_nlp.py]] - code - tests/nlp/test_social_nlp.py
-- [[test_streamlit_app.py]] - code - tests/nlp/test_streamlit_app.py
-- [[verify()_1]] - code - scripts/verify_dashboard_data.py
+- [[.__init__()_8]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_6]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_11]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_7]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_5]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_9]] - code - Reddit/crawl_reddit_single.py
+- [[.__init__()_4]] - code - Reddit/crawl_reddit_single.py
+- [[.discover()]] - code - Reddit/crawl_reddit_single.py
+- [[.fetch()]] - code - Reddit/crawl_reddit_single.py
+- [[.fetch()_2]] - code - Reddit/crawl_reddit_single.py
+- [[.fetch()_1]] - code - Reddit/crawl_reddit_single.py
+- [[.fullname()]] - code - Reddit/crawl_reddit_single.py
+- [[.handle_data()]] - code - Reddit/crawl_reddit_single.py
+- [[.handle_endtag()]] - code - Reddit/crawl_reddit_single.py
+- [[.handle_startendtag()]] - code - Reddit/crawl_reddit_single.py
+- [[.handle_starttag()]] - code - Reddit/crawl_reddit_single.py
+- [[.has_class()]] - code - Reddit/crawl_reddit_single.py
+- [[.own_body()]] - code - Reddit/crawl_reddit_single.py
+- [[.parent()]] - code - Reddit/crawl_reddit_single.py
+- [[.redirect_request()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_01_shreddit_extracts_body_not_buttons_or_templates()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_02_old_nested_comments_do_not_merge_text_or_guess_role()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_03_relative_date_only_and_exact_are_distinct()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_04_deleted_and_truncated_are_not_full_original_text()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_05_http_200_javascript_challenge_not_empty_comments()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_06_block_login_and_legitimate_quoted_error()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_07_wrong_thread_is_rejected_not_relabelled()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_08_urls_reject_credentials_api_and_external_hosts()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_09_search_uses_recognized_cards_not_sidebar_links()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_11_missing_parent_remains_unknown()]] - code - Reddit/crawl_reddit_single.py
+- [[.test_15_redirect_checks_before_following()]] - code - Reddit/crawl_reddit_single.py
+- [[.thread()]] - code - Reddit/crawl_reddit_single.py
+- [[BoundedDom]] - code - Reddit/crawl_reddit_single.py
+- [[Exception]] - code
+- [[HTMLParser]] - code
+- [[HTTPRedirectHandler]] - code
+- [[HtmlPage]] - code - Reddit/crawl_reddit_single.py
+- [[HtmlSource]] - code - Reddit/crawl_reddit_single.py
+- [[LocalHtmlSource]] - code - Reddit/crawl_reddit_single.py
+- [[Node]] - code - Reddit/crawl_reddit_single.py
+- [[Only public HTML pages on the canonical host; never authAPI routes.]] - rationale - Reddit/crawl_reddit_single.py
+- [[PublicHtmlSource]] - code - Reddit/crawl_reddit_single.py
+- [[RedditHtmlParser]] - code - Reddit/crawl_reddit_single.py
+- [[RedditTests]] - code - Reddit/crawl_reddit_single.py
+- [[RestrictedRedirect]] - code - Reddit/crawl_reddit_single.py
+- [[Small serialised-DOM reader, not a browser or full HTML5 repair engine.]] - rationale - Reddit/crawl_reddit_single.py
+- [[SourceFailure]] - code - Reddit/crawl_reddit_single.py
+- [[Whole-post comment budget includes replies; nested replies share thread cap.]] - rationale - Reddit/crawl_reddit_single.py
+- [[assert_accessible()]] - code - Reddit/crawl_reddit_single.py
+- [[bounded_events()]] - code - Reddit/crawl_reddit_single.py
+- [[content_node()]] - code - Reddit/crawl_reddit_single.py
+- [[first()]] - code - Reddit/crawl_reddit_single.py
+- [[fixture_page()]] - code - Reddit/crawl_reddit_single.py
+- [[rendered_text()]] - code - Reddit/crawl_reddit_single.py
+- [[safe_web_url()]] - code - Reddit/crawl_reddit_single.py
+- [[source_time()]] - code - Reddit/crawl_reddit_single.py
+- [[thread_id()]] - code - Reddit/crawl_reddit_single.py
+- [[thread_url()]] - code - Reddit/crawl_reddit_single.py
+- [[walk()]] - code - Reddit/crawl_reddit_single.py
+- [[worker()]] - code - Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -73,17 +80,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
-- 2 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-- 1 edge to [[_COMMUNITY_Parser DOM Terbatas]]
+- 49 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 
 ## Top bridge nodes
-- [[SocialNLPClusterer]] - degree 76, connects to 3 communities
-- [[file_hash()]] - degree 23, connects to 3 communities
-- [[social_nlp.py]] - degree 9, connects to 1 community
-- [[test_streamlit_app.py]] - degree 4, connects to 1 community
-- [[.setUpClass()_1]] - degree 4, connects to 1 community
+- [[.thread()]] - degree 22, connects to 1 community
+- [[RedditHtmlParser]] - degree 20, connects to 1 community
+- [[RedditTests]] - degree 20, connects to 1 community
+- [[fixture_page()]] - degree 15, connects to 1 community
+- [[SourceFailure]] - degree 13, connects to 1 community
