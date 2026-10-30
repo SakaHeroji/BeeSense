@@ -42,9 +42,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Default Backend Reddit]]
+- 6 edges to [[_COMMUNITY_Default Backend Reddit]]
+- 6 edges to [[_COMMUNITY_Konfigurasi Trial Reddit]]
 - 5 edges to [[_COMMUNITY_Runtime Docker dan Display]]
-- 5 edges to [[_COMMUNITY_Konfigurasi Trial Reddit]]
 - 3 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
 - 3 edges to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]

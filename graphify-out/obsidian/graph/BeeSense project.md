@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Alur Dataset Model Dashboard"
+community: "BeeSense project"
 location: "line 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/BeeSense_project
 ---
 
 # BeeSense project
@@ -36,4 +36,4 @@ tags:
 - [[SocialCrawler Reddrixyt-dlp defaults and Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[SocialCrawler backend selection]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/document #graphify/EXTRACTED #community/BeeSense_project

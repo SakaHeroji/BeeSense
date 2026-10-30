@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Encoding dan Penyimpanan Model"
+community: "Generator Narasi Gemini"
 location: "L2186"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Generator_Narasi_Gemini
 ---
 
 # Derive Indonesian Gemini labels after topic count and coherence pass.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.generate_topic_narratives()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/rationale #graphify/EXTRACTED #community/Generator_Narasi_Gemini

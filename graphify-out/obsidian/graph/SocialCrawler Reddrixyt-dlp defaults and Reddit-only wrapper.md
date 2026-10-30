@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Default Backend Reddit"
+community: "Konfigurasi Trial Reddit"
 location: "# BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Default_Backend_Reddit
+  - community/Konfigurasi_Trial_Reddit
 ---
 
 # SocialCrawler Reddrix/yt-dlp defaults and Reddit-only wrapper
@@ -19,4 +19,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Tracked Reddit trial configuration]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Default_Backend_Reddit
+#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit

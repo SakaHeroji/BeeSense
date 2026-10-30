@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # app.py
@@ -29,4 +29,4 @@ tags:
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/code #graphify/EXTRACTED #community/apppy

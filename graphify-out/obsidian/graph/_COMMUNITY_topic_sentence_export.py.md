@@ -1,11 +1,11 @@
 ---
 type: community
-members: 9
+members: 13
 ---
 
 # topic_sentence_export.py
 
-**Members:** 9 nodes
+**Members:** 13 nodes
 
 ## Members
 - [[.data()]] - code - tests/nlp/test_topic_sentence_export.py
@@ -14,7 +14,11 @@ members: 9
 - [[Keep original variants; remove repeated occurrences of the same text.]] - rationale - scripts/topic_sentence_export.py
 - [[Prepare an original-sentence export and seal it into a new NLP snapshot.]] - rationale - scripts/topic_sentence_export.py
 - [[TopicSentenceExportTests]] - code - tests/nlp/test_topic_sentence_export.py
+- [[Verify every Excel membership before publishing the complete snapshot.]] - rationale - scripts/topic_sentence_export.py
 - [[export_payload()]] - code - scripts/topic_sentence_export.py
+- [[json_write()]] - code - MachineLearning/social_nlp.py
+- [[main()_11]] - code - scripts/topic_sentence_export.py
+- [[seal()]] - code - scripts/topic_sentence_export.py
 - [[test_topic_sentence_export.py]] - code - tests/nlp/test_topic_sentence_export.py
 - [[topic_sentence_export.py]] - code - scripts/topic_sentence_export.py
 
@@ -26,10 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Generator Narasi Gemini]]
+- 5 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
+- 4 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
+- 3 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 
 ## Top bridge nodes
 - [[topic_sentence_export.py]] - degree 9, connects to 2 communities
-- [[export_payload()]] - degree 8, connects to 2 communities
+- [[json_write()]] - degree 8, connects to 2 communities
+- [[seal()]] - degree 8, connects to 2 communities
+- [[main()_11]] - degree 7, connects to 2 communities
+- [[export_payload()]] - degree 8, connects to 1 community

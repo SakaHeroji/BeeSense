@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parsing Identitas Reddit"
+community: "Pengujian Integrasi Reddrix"
 location: "L498"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Pengujian_Integrasi_Reddrix
 ---
 
 # thread_id()
@@ -23,4 +23,4 @@ tags:
 - [[verify()]] - `calls` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Integrasi_Reddrix

@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # Streamlit entry point for local and Community Cloud dashboards.  Training lives
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[app.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/apppy

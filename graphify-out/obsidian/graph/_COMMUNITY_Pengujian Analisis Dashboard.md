@@ -1,11 +1,11 @@
 ---
 type: community
-members: 12
+members: 11
 ---
 
 # Pengujian Analisis Dashboard
 
-**Members:** 12 nodes
+**Members:** 11 nodes
 
 ## Members
 - [[.setUp()_9]] - code - tests/nlp/test_dashboard_analysis.py
@@ -19,7 +19,6 @@ members: 12
 - [[.test_topic_evidence_profile_deduplicates_units_and_matches_whole_terms()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[AnalysisTests]] - code - tests/nlp/test_dashboard_analysis.py
-- [[test_dashboard_analysis.py]] - code - tests/nlp/test_dashboard_analysis.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,9 +28,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Struktur Runtime Dashboard]]
+- 1 edge to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_Render Dashboard Streamlit]]
 
 ## Top bridge nodes
-- [[AnalysisTests]] - degree 12, connects to 1 community
-- [[test_dashboard_analysis.py]] - degree 2, connects to 1 community
+- [[AnalysisTests]] - degree 12, connects to 2 communities

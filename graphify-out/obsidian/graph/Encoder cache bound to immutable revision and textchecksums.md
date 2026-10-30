@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Lingkungan Training SBERT"
+community: "Riwayat Evaluasi Coherence"
 location: "## Encoder SBERT"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Lingkungan_Training_SBERT
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Encoder cache bound to immutable revision and text/checksums
@@ -16,4 +16,4 @@ tags:
 - [[Historical29October exact-corpus SBERTUMAP cache evidence]] - `references` [EXTRACTED]
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Lingkungan_Training_SBERT
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

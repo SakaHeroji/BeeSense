@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Arsitektur Model dan Dashboard"
+community: "thread_url"
 location: "## Kalimat topik Gemini"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Arsitektur_Model_dan_Dashboard
+  - community/thread_url
 ---
 
 # DashboardreadsverifiedCSVwithnoAPIortrainingonrerun
@@ -17,4 +17,4 @@ tags:
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Arsitektur_Model_dan_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/thread_url

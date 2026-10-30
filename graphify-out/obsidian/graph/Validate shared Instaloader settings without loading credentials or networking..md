@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "rationale"
-community: "Worker Instaloader"
+community: "Worker Reddrix"
 location: "L594"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Worker_Reddrix
 ---
 
 # Validate shared Instaloader settings without loading credentials or networking.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[instaloader_options()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/rationale #graphify/EXTRACTED #community/Worker_Reddrix

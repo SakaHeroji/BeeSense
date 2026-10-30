@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
+community: "topic_sentence_export.py"
 location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/topic_sentence_exportpy
 ---
 
 # json_write()
@@ -21,4 +21,4 @@ tags:
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[topic_sentence_export.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy

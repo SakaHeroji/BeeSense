@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp_instagram_20261030.json"
 type: "rationale"
-community: "Konfigurasi Model Aktif"
+community: "Audit Akuisisi Instagram"
 location: "$.model; $.umap; $.dbscan; $.evaluation; $.explanation"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konfigurasi_Model_Aktif
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # RetainedSBERTrevision,UMAP/DBSCANbudget andexplanationgates
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Active20-topic Instagram-inclusive model configuration_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif
+#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

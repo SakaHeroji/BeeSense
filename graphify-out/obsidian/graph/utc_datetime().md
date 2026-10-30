@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Validasi Record Reddit"
+community: "Ekspor dan Provenance Reddit"
 location: "L80"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Record_Reddit
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # utc_datetime()
@@ -34,4 +34,4 @@ tags:
 - [[validate_row()]] - `calls` [EXTRACTED]
 - [[verify()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

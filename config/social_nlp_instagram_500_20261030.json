@@ -1,6 +1,6 @@
 {
   "input_file": "outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx",
-  "output_dir": "outputs/nlp_20261030_instagram_500_topics20_01",
+  "output_dir": "outputs/nlp_20261030_instagram_500_topics20_gemini_02",
   "target_topics": 20,
   "cache_dir": ".cache/social_nlp",
   "seed": 42,
@@ -78,7 +78,7 @@
     "min_score": 0.4
   },
   "gemini": {
-    "enabled": false,
+    "enabled": true,
     "model": "gemini-3.5-flash-lite",
     "auth_file": "config/auth.json",
     "timeout_seconds": 60,

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Struktur DOM Reddit"
+community: "Pengujian Integrasi Reddrix"
 location: "L572"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Struktur_DOM_Reddit
+  - community/Pengujian_Integrasi_Reddrix
 ---
 
 # RestrictedRedirect
@@ -18,4 +18,4 @@ tags:
 - [[HTTPRedirectHandler]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Integrasi_Reddrix

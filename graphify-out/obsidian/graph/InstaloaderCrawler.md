@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "InstaloaderCrawler"
+community: "Worker Instaloader"
 location: "L629"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InstaloaderCrawler
+  - community/Worker_Instaloader
 ---
 
 # InstaloaderCrawler
@@ -21,4 +21,4 @@ tags:
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InstaloaderCrawler
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

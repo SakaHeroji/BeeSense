@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/verify_browser_campaign.py"
 type: "code"
-community: "Parsing Identitas Reddit"
+community: "Kontrak Record Reddit"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # verify()
@@ -21,4 +21,4 @@ tags:
 - [[validate_row()]] - `calls` [EXTRACTED]
 - [[verify_browser_campaign.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

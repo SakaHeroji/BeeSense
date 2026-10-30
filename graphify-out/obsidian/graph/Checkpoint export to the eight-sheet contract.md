@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_browser_campaign.md"
 type: "concept"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "Reddit Playwright CLI runner"
 location: "# Helper campaign Reddit"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/Reddit_Playwright_CLI_runner
 ---
 
 # Checkpoint export to the eight-sheet contract
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Advanced connected-browser Reddit campaign helpers]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/concept #graphify/EXTRACTED #community/Reddit_Playwright_CLI_runner

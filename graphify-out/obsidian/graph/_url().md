@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Instagram Client dan Ekspor"
+community: "Worker Reddrix"
 location: "L735"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Instagram_Client_dan_Ekspor
+  - community/Worker_Reddrix
 ---
 
 # _url()
@@ -20,4 +20,4 @@ tags:
 - [[thread_url()]] - `calls` [EXTRACTED]
 - [[video_url()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Instagram_Client_dan_Ekspor
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "Penggabungan Dataset"
 location: "## Menggabungkan workbook untuk NLP"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/Penggabungan_Dataset
 ---
 
 # Native-ID baseline-then-new workbook merge with provenance
@@ -17,4 +17,4 @@ tags:
 - [[merge()]] - `implements` [INFERRED]
 - [[social_data.xlsx ten-column Data worksheet]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/rationale #graphify/INFERRED #community/Penggabungan_Dataset

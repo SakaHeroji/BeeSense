@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Penjelasan Topik Dashboard"
+community: "Pemilihan Topik dan Coherence"
 location: "## Penjelasan, sumber dan batas interpretasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Penjelasan_Topik_Dashboard
+  - community/Pemilihan_Topik_dan_Coherence
 ---
 
 # Non-noise c-TF-IDF unigram/bigram labels
@@ -16,4 +16,4 @@ tags:
 - [[SocialNLPClusterer]] - `implements` [EXTRACTED]
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard
+#graphify/concept #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence

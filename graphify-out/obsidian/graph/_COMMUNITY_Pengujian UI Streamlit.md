@@ -33,7 +33,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 1 edge to [[_COMMUNITY_Verifikasi Artefak Dataset]]
 
 ## Top bridge nodes
 - [[StreamlitTests]] - degree 17, connects to 1 community

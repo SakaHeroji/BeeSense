@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Alur Dataset Model Dashboard"
+community: ".score_coherence"
 location: "## Crawling atau training baru"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/score_coherence
 ---
 
 # Documented Reddit coordinator cooldown: 360 seconds and at most three retries
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense project]] - `references` [EXTRACTED]
 - [[Reddit bounded 429 policy introduced in version 1.3]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/concept #graphify/EXTRACTED #community/score_coherence

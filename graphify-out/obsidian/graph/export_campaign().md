@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/export_browser_campaign.py"
 type: "code"
-community: "Validasi Record Reddit"
+community: "Ekspor dan Provenance Reddit"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Record_Reddit
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # export_campaign()
@@ -25,4 +25,4 @@ tags:
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

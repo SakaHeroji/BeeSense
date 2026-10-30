@@ -1,11 +1,11 @@
 ---
 type: community
-members: 15
+members: 14
 ---
 
 # Konteks dan Provenance Gemini
 
-**Members:** 15 nodes
+**Members:** 14 nodes
 
 ## Members
 - [[Atomic20-row contextual CSV with per-topic provenance]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
@@ -17,7 +17,6 @@ members: 15
 - [[Gemini GenerateContent APIreference]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Gemini modelscatalogreference]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Gemini structured-output documentation]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[One request per topictop10weights plus10 fitted original sentences]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Prompt2 natural Indonesian synthesis with evidence-bound claims]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Prompt2CSV2 with preserved keyword-only version1]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
@@ -32,16 +31,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
-- 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
+- 4 edges to [[_COMMUNITY_Generator Narasi Gemini]]
+- 3 edges to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
 - 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Model Aktif]]
+- 1 edge to [[_COMMUNITY_BeeSense project]]
+- 1 edge to [[_COMMUNITY_Audit Akuisisi Instagram]]
+- 1 edge to [[_COMMUNITY_thread_url]]
 
 ## Top bridge nodes
-- [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - degree 17, connects to 3 communities
+- [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - degree 17, connects to 4 communities
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - degree 6, connects to 2 communities
-- [[One request per topictop10weights plus10 fitted original sentences]] - degree 4, connects to 2 communities
 - [[Deterministic fitted-sentence context ranking]] - degree 5, connects to 1 community
 - [[Verified model configuration enables contextual Gemini CSV]] - degree 2, connects to 1 community

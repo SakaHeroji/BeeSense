@@ -1,20 +1,27 @@
 ---
 type: community
-members: 7
+members: 14
 ---
 
 # .score_coherence
 
-**Members:** 7 nodes
+**Members:** 14 nodes
 
 ## Members
-- [[._ctfidf_terms()]] - code - MachineLearning/social_nlp.py
-- [[._topic_vectorizer()]] - code - MachineLearning/social_nlp.py
-- [[.build_topic_graph()]] - code - MachineLearning/social_nlp.py
-- [[.describe_topics()]] - code - MachineLearning/social_nlp.py
-- [[.score_coherence()]] - code - MachineLearning/social_nlp.py
-- [[Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un]] - rationale - MachineLearning/social_nlp.py
-- [[Use the same class TF-IDF vocabulary for selection and publication.]] - rationale - MachineLearning/social_nlp.py
+- [[.run()_2]] - code - Crawler/Backend/social_crawler.py
+- [[429 timestamps, cooldown deadline and retry-decision audit]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Cooldown verification50 crawler tests, 49pass1skip;12 Reddit runner tests pass]] - concept - graphify-out/obsidian/Crawling 1000 Post Baru.md
+- [[Documented Reddit coordinator cooldown 360 seconds and at most three retries]] - concept - README.md
+- [[Keep the same failed operation through cooldown]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Native root duplicate guard within export]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Obsidian records bounded retry policy and chronological authorization]] - document - graphify-out/obsidian/Crawling 1000 Post Baru.md
+- [[Receipt value 60 may be Chrome parser fallback]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Recovery report interval 331.315 seconds is not a server minimum]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Reddit bounded 429 policy introduced in version 1.3]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Return an explicit targetshortfall report and write one atomic bundle.]] - rationale - Crawler/Backend/social_crawler.py
+- [[Round robin lets YouTube run while Reddit cools down]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Skip old roots before requests and check returned identity before export]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Unrepresentable or deadline-exceeding source wait forbids retry and preserves partial data]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,13 +31,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 5 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Generator Narasi Gemini]]
+- 6 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 2 edges to [[_COMMUNITY_Worker Reddrix]]
+- 2 edges to [[_COMMUNITY_Round Robin Shared Deadline]]
+- 2 edges to [[_COMMUNITY_Riwayat Pacing Instagram]]
+- 2 edges to [[_COMMUNITY_configsocial_crawler.json]]
+- 2 edges to [[_COMMUNITY_Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 1 edge to [[_COMMUNITY_Instagram Client dan Ekspor]]
+- 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 1 edge to [[_COMMUNITY_BeeSense project]]
+- 1 edge to [[_COMMUNITY_Reddit Playwright CLI runner]]
 
 ## Top bridge nodes
-- [[.describe_topics()]] - degree 6, connects to 3 communities
-- [[.score_coherence()]] - degree 7, connects to 2 communities
-- [[._ctfidf_terms()]] - degree 5, connects to 2 communities
-- [[._topic_vectorizer()]] - degree 3, connects to 1 community
-- [[.build_topic_graph()]] - degree 2, connects to 1 community
+- [[Reddit bounded 429 policy introduced in version 1.3]] - degree 18, connects to 7 communities
+- [[.run()_2]] - degree 13, connects to 6 communities
+- [[Skip old roots before requests and check returned identity before export]] - degree 4, connects to 2 communities
+- [[Obsidian records bounded retry policy and chronological authorization]] - degree 5, connects to 1 community
+- [[Cooldown verification50 crawler tests, 49pass1skip;12 Reddit runner tests pass]] - degree 2, connects to 1 community

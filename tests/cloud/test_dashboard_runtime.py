@@ -65,6 +65,15 @@ class CloudRuntimeTests(unittest.TestCase):
                 else "Percakapan YouTube & Reddit"
             )
             self.assertEqual(app.title[0].value, expected_title)
+            if saved.get("topic_narratives"):
+                self.assertIn(
+                    "Kalimat dan deskripsi 20 topik · Gemini",
+                    [item.label for item in app.expander],
+                )
+                self.assertIn(
+                    "Unduh CSV topik Gemini",
+                    [item.label for item in app.get("download_button")],
+                )
             topic = next(
                 x
                 for x in app.selectbox(key="topic_select").options
@@ -76,6 +85,21 @@ class CloudRuntimeTests(unittest.TestCase):
                     app.radio(key="view").set_value(view).run()
                     self.assertFalse(app.exception)
                     self.assertFalse(app.error)
+                    if view == "Penjelasan topik" and saved.get("topic_narratives"):
+                        narrative = next(
+                            row
+                            for row in saved["topic_narratives"]
+                            if row["cluster_id"] == 3
+                        )
+                        self.assertIn(
+                            narrative["topic_sentence"],
+                            [item.value for item in app.subheader],
+                        )
+                    if view == "Kalimat & sumber" and saved.get("topic_sentences_xlsx"):
+                        self.assertIn(
+                            "Unduh Excel topik dan kalimat",
+                            [item.label for item in app.get("download_button")],
+                        )
         for name in TRAINING_MODULES:
             self.assertNotIn(name, sys.modules, name + " imported")
 

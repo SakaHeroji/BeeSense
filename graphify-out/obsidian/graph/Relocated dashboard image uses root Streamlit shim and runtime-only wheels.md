@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.dashboard"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L1-L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # Relocated dashboard image uses root Streamlit shim and runtime-only wheels
@@ -18,4 +18,4 @@ tags:
 - [[app.py]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/apppy

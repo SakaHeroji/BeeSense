@@ -1,11 +1,11 @@
 ---
 type: community
-members: 57
+members: 58
 ---
 
 # Crawler Selenium
 
-**Members:** 57 nodes
+**Members:** 58 nodes
 
 ## Members
 - [[.__init__()_28]] - code - Crawler/Backend/social_crawler_selenium.py
@@ -40,6 +40,7 @@ members: 57
 - [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_search_scroll_deduplicates_and_enforces_candidate_cap()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_timeout_keeps_streamed_evidence_and_source_version()]] - code - tests/crawler/test_social_crawler_selenium.py
+- [[.test_worker_sanitizes_errors_and_closes_browser()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_youtube_acquisition_enforces_total_and_reply_caps()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_youtube_scripts_extract_only_native_ids_and_own_text()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.worker()_2]] - code - tests/crawler/test_social_crawler_selenium.py
@@ -76,15 +77,15 @@ SORT file.name ASC
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 5 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 3 edges to [[_COMMUNITY_Capture Reddit Playwright]]
-- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 - 2 edges to [[_COMMUNITY_Worker Reddrix]]
+- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
 - 1 edge to [[_COMMUNITY_Lingkungan Training SBERT]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[selenium_worker()]] - degree 14, connects to 3 communities
 - [[SocialCrawlerSelenium]] - degree 25, connects to 2 communities
-- [[_SeleniumSource]] - degree 18, connects to 2 communities
-- [[SocialCrawlerSeleniumTests]] - degree 18, connects to 2 communities
 - [[test_social_crawler_selenium.py]] - degree 16, connects to 2 communities
+- [[selenium_worker()]] - degree 14, connects to 2 communities
+- [[social_crawler_selenium.py]] - degree 12, connects to 2 communities
+- [[main()_7]] - degree 6, connects to 2 communities

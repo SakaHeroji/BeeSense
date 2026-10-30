@@ -70,8 +70,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 2 edges to [[_COMMUNITY_Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]]
 - 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 1 edge to [[_COMMUNITY_Round Robin Shared Deadline]]
+- 1 edge to [[_COMMUNITY_Reddit Playwright CLI runner]]
 
 ## Top bridge nodes
 - [[SocialCrawlerSelenium Guide]] - degree 12, connects to 1 community

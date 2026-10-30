@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Audit Akuisisi Instagram"
+community: "Konfigurasi Model Aktif"
 location: "## Perintah dari root repository"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audit_Akuisisi_Instagram
+  - community/Konfigurasi_Model_Aktif
 ---
 
 # Module CLIs and worker spawn import relocated packages
@@ -17,4 +17,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif

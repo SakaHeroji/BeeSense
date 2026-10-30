@@ -79,11 +79,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Instagram Client dan Ekspor]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 2 edges to [[_COMMUNITY_Worker Reddrix]]
+- 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
+- 1 edge to [[_COMMUNITY_Verifikasi Artefak Dataset]]
 
 ## Top bridge nodes
 - [[video_url()]] - degree 4, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: ".score_coherence"
+community: "Encoding dan Penyimpanan Model"
 location: "L1034"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/score_coherence
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Use the same class TF-IDF vocabulary for selection and publication.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._ctfidf_terms()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/score_coherence
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

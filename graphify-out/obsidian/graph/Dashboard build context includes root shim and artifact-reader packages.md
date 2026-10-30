@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.dashboard.dockerignore"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L1-L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # Dashboard build context includes root shim and artifact-reader packages
@@ -16,4 +16,4 @@ tags:
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 - [[topic_narratives.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/apppy

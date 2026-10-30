@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Alur Dataset Model Dashboard"
+community: "BeeSense project"
 location: "line 88"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/BeeSense_project
 ---
 
 # Active Instagram model: 20 topics and mean c_v 0.4315
@@ -17,4 +17,4 @@ tags:
 - [[BeeSense project]] - `references` [EXTRACTED]
 - [[Verified 30 October 20-topic model]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/concept #graphify/EXTRACTED #community/BeeSense_project

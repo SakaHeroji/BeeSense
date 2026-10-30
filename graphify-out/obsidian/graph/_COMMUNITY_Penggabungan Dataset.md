@@ -1,11 +1,11 @@
 ---
 type: community
-members: 38
+members: 39
 ---
 
 # Penggabungan Dataset
 
-**Members:** 38 nodes
+**Members:** 39 nodes
 
 ## Members
 - [[.run_merge()]] - code - tests/nlp/test_dataset_merge.py
@@ -35,6 +35,7 @@ members: 38
 - [[Keep the latest supplied observation per native ID, with full row lineage.]] - rationale - scripts/merge_social_datasets.py
 - [[Merge compact crawl workbooks, rejecting repeated native content identities.]] - rationale - scripts/merge_social_datasets.py
 - [[MergeTests]] - code - tests/nlp/test_dataset_merge.py
+- [[Native-ID baseline-then-new workbook merge with provenance]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[NativeDatasetTests]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[PublishedDataTests]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[Return global native object ID plus its root; text never defines identity.]] - rationale - scripts/merge_social_datasets.py
@@ -57,11 +58,13 @@ SORT file.name ASC
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Audit Akuisisi Instagram]]
-- 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
 - 2 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
+- 1 edge to [[_COMMUNITY_Riwayat Evaluasi Coherence]]
+- 1 edge to [[_COMMUNITY_Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]]
 
 ## Top bridge nodes
-- [[identity()]] - degree 10, connects to 3 communities
-- [[merge()]] - degree 14, connects to 2 communities
+- [[identity()]] - degree 10, connects to 2 communities
+- [[Native-ID baseline-then-new workbook merge with provenance]] - degree 4, connects to 2 communities
+- [[merge()]] - degree 14, connects to 1 community
 - [[merge_social_datasets.py]] - degree 9, connects to 1 community
 - [[merge_unique()]] - degree 6, connects to 1 community

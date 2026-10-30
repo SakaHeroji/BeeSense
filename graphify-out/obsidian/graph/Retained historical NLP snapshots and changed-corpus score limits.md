@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Alur Dataset Model Dashboard"
+community: "BeeSense project"
 location: "## Dataset yang disertakan"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/BeeSense_project
 ---
 
 # Retained historical NLP snapshots and changed-corpus score limits
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense project]] - `references` [EXTRACTED]
 - [[Historical Graphify memory of the native SBERTUMAPDBSCAN migration]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Alur_Dataset_Model_Dashboard
+#graphify/concept #graphify/INFERRED #community/BeeSense_project

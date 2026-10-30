@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp_instagram_20261030.json"
 type: "concept"
-community: "Konfigurasi Model Aktif"
+community: "Audit Akuisisi Instagram"
 location: "$.input_file; $.output_dir; $.target_topics; $.coherence; $.gemini"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Konfigurasi_Model_Aktif
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # Active20-topic Instagram-inclusive model configuration
@@ -19,4 +19,4 @@ tags:
 - [[Verified model configuration enables contextual Gemini CSV]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif
+#graphify/concept #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

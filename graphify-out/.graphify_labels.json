@@ -107,5 +107,15 @@
   "105": "topic_sentence_export.py",
   "106": "InstaloaderCrawler",
   "107": ".score_coherence",
-  "108": ".topic_figure"
+  "108": ".topic_figure",
+  "109": "BeeSense project",
+  "110": "config/social_crawler.json",
+  "111": "Read-only native/canonical index excludes 50 YouTube and 181 Reddit roots",
+  "112": "Round Robin Shared Deadline",
+  "113": ".render",
+  "114": "app.py",
+  "115": "Reddit Playwright CLI runner",
+  "116": "Historical Reddit continuations preserve bundles and original deadline",
+  "117": "instagram_browser_capture.mjs",
+  "118": "Q: ok sekarang training ulang menggunakan /Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx, clustering. Buat 20 topik dengan coherence minimal 0.4. Lalu buat excel baru dengan tabel dengan kolom: topik, kalimat yang berada dalam cluster topik. lalu model digunakan kembali di dashboard streamlit yang di rebuild ulang, dan di commit dan dipush semuanya ke githubnya untuk di deploy ulang"
 }

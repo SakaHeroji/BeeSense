@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "rationale"
-community: "Riwayat Dataset dan Metodologi"
+community: "Struktur Runtime Dashboard"
 location: "L8-L17; L33; L47"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Dataset_dan_Metodologi
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # Artifact-only dashboard without Gensim/Torch imports
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

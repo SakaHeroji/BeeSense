@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "concept"
-community: "Alur Dataset Model Dashboard"
+community: "BeeSense project"
 location: "line 27"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/BeeSense_project
 ---
 
 # Native-ID deduplication and latest-observation lineage
@@ -16,4 +16,4 @@ tags:
 - [[Instagram acquisition, dataset and training pipeline]] - `implements` [EXTRACTED]
 - [[Manual URL-only acquisition]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/concept #graphify/EXTRACTED #community/BeeSense_project

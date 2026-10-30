@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Riwayat Sesi Instagram"
+community: "Kontrak Ekspor Instagram"
 location: "## Integrasi dan run tiga jam"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Sesi_Instagram
+  - community/Kontrak_Ekspor_Instagram
 ---
 
 # Historical Instagram-only campaign start and unchanged three-hour targets
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Ekspor_Instagram

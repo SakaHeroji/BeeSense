@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Fixture dan Pengujian Reddit"
+community: "Worker Reddrix"
 location: "L404"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fixture_dan_Pengujian_Reddit
+  - community/Worker_Reddrix
 ---
 
 # _number()
@@ -16,4 +16,4 @@ tags:
 - [[_config()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fixture_dan_Pengujian_Reddit
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

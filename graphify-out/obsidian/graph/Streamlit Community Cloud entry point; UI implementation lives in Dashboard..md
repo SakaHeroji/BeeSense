@@ -1,12 +1,12 @@
 ---
 source_file: "streamlit_apps.py"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # Streamlit Community Cloud entry point; UI implementation lives in Dashboard.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[streamlit_apps.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/apppy

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "concept"
-community: "Konfigurasi Model Aktif"
+community: "Audit Akuisisi Instagram"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Konfigurasi_Model_Aktif
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # All20 actual contextual Gemini narratives validated
@@ -21,4 +21,4 @@ tags:
 - [[Verified current model and20context-grounded narratives]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif
+#graphify/concept #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

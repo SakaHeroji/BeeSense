@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "rationale"
-community: "Wrapper RedditCrawler"
+community: "InstaloaderCrawler"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Wrapper_RedditCrawler
+  - community/InstaloaderCrawler
 ---
 
 # Reddrix field/identity boundaries and the real, shared Excel exporter.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_reddit_crawler.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Wrapper_RedditCrawler
+#graphify/rationale #graphify/EXTRACTED #community/InstaloaderCrawler

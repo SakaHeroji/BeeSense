@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Koordinator Backend Sosial"
+community: "Worker Instaloader"
 location: "L527"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Koordinator_Backend_Sosial
+  - community/Worker_Instaloader
 ---
 
 # InstaloaderWorker
@@ -25,4 +25,4 @@ tags:
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[test_social_crawler_instagram.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

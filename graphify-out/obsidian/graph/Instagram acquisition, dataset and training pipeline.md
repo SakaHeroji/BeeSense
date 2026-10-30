@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "document"
-community: "Alur Dataset Model Dashboard"
+community: "BeeSense project"
 location: "line 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/BeeSense_project
 ---
 
 # Instagram acquisition, dataset and training pipeline
@@ -18,4 +18,4 @@ tags:
 - [[Stored Indonesian Gemini topic narratives]] - `references` [EXTRACTED]
 - [[Verified 30 October 20-topic model]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/document #graphify/EXTRACTED #community/BeeSense_project

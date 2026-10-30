@@ -195,3 +195,21 @@ outputs/nlp_20261030_instagram_500_topics20_01/*
 !outputs/nlp_20261030_instagram_500_topics20_01/topic_sentences.xlsx
 !graphify-out/obsidian/Instagram 500 Post 2 Jam.md
 !graphify-out/obsidian/Training Instagram 20 Topik.md
+
+# Same fitted model enriched with the explicitly requested Gemini translations.
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/
+outputs/nlp_20261030_instagram_500_topics20_gemini_02/*
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/centroids.npy
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/comparison.json
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/embeddings.npy
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/graph.json
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/manifest.json
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/occurrences.parquet
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/sentences.parquet
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/skipped.parquet
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/social_data.parquet
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/summary.json
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/topic_narratives.csv
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/topic_sentences.xlsx
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/topics.json
+!outputs/nlp_20261030_instagram_500_topics20_gemini_02/umap_embeddings.npz

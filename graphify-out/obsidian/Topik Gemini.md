@@ -5,6 +5,37 @@ tags: [beesense, nlp, gemini, dashboard]
 
 # Topik Gemini
 
+## Snapshot aktif setelah tambahan Instagram
+
+Label c-TF-IDF dan seluruh keanggotaan cluster dipertahankan. Sesuai instruksi pengguna, `SocialNLPClusterer.generate_topic_narratives()` membuat 20 kalimat topik dan deskripsi bahasa Indonesia melalui Gemini `gemini-3.5-flash-lite`, masing-masing dari 10 keyword berbobot dan 10 kalimat representatif. CSV beserta provenance/checksum dibaca dashboard tanpa panggilan API pada rerun. Array, Parquet, keyword, skor coherence, dan Excel identik dengan snapshot clustering sebelumnya; kedua snapshot tetap disimpan.
+
+Run `outputs/nlp_20261030_instagram_500_topics20_gemini_02`: rata-rata c_v **0,4386500025**, 20 topik, 51.979 kalimat unik. Excel 45.556 pasangan topik–kalimat tetap identik; 9 skor individual di bawah 0,4.
+
+[CSV 20 topik Gemini](../../outputs/nlp_20261030_instagram_500_topics20_gemini_02/topic_narratives.csv) · [[Training Instagram 20 Topik]]
+
+| Topik | Kalimat bahasa Indonesia |
+|---|---|
+| T01 | Penyampaian doa, harapan baik, serta berbagai ungkapan apresiasi menjadi ragam tanggapan dalam percakapan. |
+| T02 | Pembahasan mengenai batasan usia, tahun kelulusan, dan jangka waktu menjadi perhatian dalam berbagai tanggapan. |
+| T03 | Pilihan pendidikan tinggi dan jurusan menjadi bahan pembahasan yang berkaitan dengan peluang kerja serta pembiayaan. |
+| T04 | Respons dan tanggapan emosional muncul terhadap karakter ibu dalam suatu cerita atau adegan. |
+| T05 | Pembahasan mencakup dinamika hubungan keluarga dan pernikahan bersama pengalaman sehari-hari. |
+| T06 | Pembahasan mengenai pendaftaran dan informasi tertentu diwarnai berbagai tanggapan serta pertanyaan dari peserta. |
+| T07 | Berbagai tanggapan mengenai kondisi sosial dan kebijakan publik di Indonesia menjadi bahan perbincangan di tengah masyarakat. |
+| T08 | Proses pendaftaran seleksi masuk perguruan tinggi dan program bantuan biaya pendidikan menjadi pokok pertanyaan para peserta. |
+| T09 | Ungkapan terima kasih dan permohonan informasi menjadi bentuk interaksi yang dominan dalam percakapan ini. |
+| T10 | Berbagai tanggapan dan ungkapan spontan muncul dalam percakapan yang membahas beragam topik tanpa fokus utama yang jelas. |
+| T11 | Permasalahan korupsi dan penegakan hukum menjadi sorotan dalam kaitan dengan pengelolaan keuangan negara serta dampaknya terhadap kesejahteraan rakyat. |
+| T12 | Penggunaan berbagai bahasa asing serta terjemahan dokumen menjadi bahan pembahasan dalam konteks pendidikan dan persiapan studi di luar negeri. |
+| T13 | Tanggapan terhadap tayangan video yang dibagikan mencakup apresiasi atas manfaat isi konten serta izin pemanfaatannya. |
+| T14 | Profesi dokter, spesialis, dan tenaga kesehatan menjadi topik pembahasan yang mencakup bidang kedokteran serta psikologi. |
+| T15 | Pembahasan mencakup berbagai pandangan tentang cara menjalani hidup, pengambilan keputusan yang bijak, serta berbagai aktivitas keseharian. |
+| T16 | Kritik terhadap kinerja serta kepemimpinan pejabat negara menjadi pokok pembahasan utama dalam berbagai tanggapan masyarakat. |
+| T17 | Berbagai tanggapan penonton menyoroti alur cerita dan drama yang diangkat dari kisah nyata. |
+| T18 | Pilihan belajar dan kuliah di negara-negara Asia seperti China dan Jepang menjadi bahan perbincangan terkait bahasa serta peluang kerja. |
+| T19 | Perkembangan kecerdasan buatan yang sangat masif memicu pembahasan mengenai dampaknya terhadap berbagai jenis pekerjaan manusia. |
+| T20 | Pertanyaan santai dan ungkapan keheranan mendominasi percakapan yang membahas berbagai informasi dengan beragam tanggapan. |
+
 [[Arsitektur BeeSense]] menambahkan tahap Gemini pada SocialNLPClusterer 2.4.
 Setelah 20 topik dan rata-rata c_v ≥0,4 lolos, setiap topik mengirim 10 keyword
 berbobot c-TF-IDF tertinggi dan sampai 10 kalimat representatif untuk satu kalimat
@@ -28,7 +59,7 @@ Uji API nyata satu topik historis berhasil; sembilan tes offline lulus. Hasil mo
 
 [Panduan lengkap](../../docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md) · [[HOME]]
 
-## Model 30 Oktober terverifikasi
+## Riwayat sebelum tambahan Instagram
 
 Input `outputs/social_20261030_combined_3days_02/social_data.xlsx` memuat **33.034 record unik**, **1.859 root**, dan **31.175 komentar/balasan** dari hasil akuisisi 27–30 Oktober. Sebanyak 49.952 pengulangan antarberkas disisihkan; pemeriksaan menemukan 0 ID native ganda. Total Instagram 324 post/3.038 komentar mencakup batch terbaru 248 post/2.128 komentar dan trial sebelumnya 76 post/910 komentar. Pengguna menghentikan crawling setelah HTTP 429; target 1.000 post dan durasi 3 jam belum tercapai.
 

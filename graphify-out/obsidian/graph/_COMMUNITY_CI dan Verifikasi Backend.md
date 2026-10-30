@@ -34,18 +34,18 @@ SORT file.name ASC
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_Instagram Client dan Ekspor]]
 - 9 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 6 edges to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
-- 3 edges to [[_COMMUNITY_Transport GraphQL Instaloader]]
+- 4 edges to [[_COMMUNITY_Worker Reddrix]]
+- 4 edges to [[_COMMUNITY_Transport GraphQL Instaloader]]
 - 3 edges to [[_COMMUNITY_Worker Instaloader]]
+- 2 edges to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
 - 2 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 - 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 1 edge to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Kontrak Ekspor Instagram]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 
 ## Top bridge nodes
-- [[instagram_crawler.py]] - degree 37, connects to 10 communities
+- [[instagram_crawler.py]] - degree 37, connects to 9 communities
 - [[SessionInvalid]] - degree 12, connects to 5 communities
 - [[login_from_file()]] - degree 8, connects to 2 communities
 - [[login_local()]] - degree 8, connects to 1 community

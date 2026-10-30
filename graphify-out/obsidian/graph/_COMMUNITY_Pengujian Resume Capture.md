@@ -33,7 +33,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 1 edge to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
 
 ## Top bridge nodes
 - [[ResumeTests]] - degree 16, connects to 1 community

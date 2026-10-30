@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Lingkungan Training SBERT"
+community: "Riwayat Evaluasi Coherence"
 location: "## Encoder SBERT"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Lingkungan_Training_SBERT
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Overflow-window averaging and L 2-normalized 384 D embeddings
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Lingkungan_Training_SBERT
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

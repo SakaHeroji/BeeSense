@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Riwayat Dataset dan Metodologi"
+community: "Struktur Runtime Dashboard"
 location: "L9"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Dataset_dan_Metodologi
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # Crawler, MachineLearning and Dashboard packages with grouped supporting folders
@@ -17,4 +17,4 @@ tags:
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

@@ -14,7 +14,7 @@ Dashboard langsung membaca [[Dataset Dashboard]] tanpa login, browser crawler at
 
 [GitHub Actions](../../.github/workflows/ci.yml) menguji dataset/checksum, NLP/UI, crawler dan helper parser. Kode, tes dan satu dataset aktif dilacak Git untuk repository [SakaHeroji/BeeSense](https://github.com/SakaHeroji/BeeSense), branch main. Status lokal dapat diperiksa dengan git status; hasil CI tersedia pada tab Actions. Environment, browser profile, cache dan run lain diabaikan.
 
-[Dockerfile](../../deployment/docker/Dockerfile.dashboard) memakai user non-root dan artifact read-only. Build/runtime Docker lokal sudah diverifikasi: `beesense-nlp:instagram-20261030-20`, container `beesense-dashboard-20261030-20`, health `healthy`, user 10001 dan artifact read-only pada http://127.0.0.1:8501. Tidak perlu migrasi database.
+[Dockerfile](../../deployment/docker/Dockerfile.dashboard) memakai user non-root dan artifact read-only. Build/runtime Docker lokal sudah diverifikasi: `beesense-nlp:instagram-gemini-20261030-02`, container `beesense-dashboard-20261030-gemini-02`, health `healthy`, user 10001 dan artifact read-only pada http://127.0.0.1:8501. Tidak perlu migrasi database.
 
 ## Streamlit Community Cloud
 
@@ -30,7 +30,7 @@ memakai `requirements/sbert-macos-intel.lock`. Evaluasi c_v memakai Gensim pada
 
     .venv-sbert/bin/python -m MachineLearning.social_nlp --output-dir outputs/nlp_run_baru
 
-Konfigurasi aktif menunjuk `outputs/nlp_20261030_instagram_500_topics20_01` dan `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`; 20 topik, rata-rata c_v 0,4386500025, serta Excel 45.556 pasangan topik–kalimat. Snapshot sebelumnya dipertahankan. Lihat [[Training Instagram 20 Topik]].
+Konfigurasi aktif menunjuk `outputs/nlp_20261030_instagram_500_topics20_gemini_02` dan `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`; 20 topik, rata-rata c_v 0,4386500025, serta Excel 45.556 pasangan topik–kalimat. Snapshot sebelumnya dipertahankan. Lihat [[Training Instagram 20 Topik]].
 
 Jalur `--reuse-embeddings-from` memerlukan requirements/dev.txt pada Python 3.12 dan memverifikasi input/model/checksum sebelum refitting; tidak memerlukan Torch.
 
@@ -44,4 +44,4 @@ Job CI `dashboard-runtime` menginstal wheel saja pada Python 3.12/3.14, memeriks
 
 Runtime dashboard mem-pin PyArrow 24.0.0, sama dengan guard kompatibilitas Streamlit Cloud. Versi 25/26 dapat terkena crash alokasi mimalloc saat import dilakukan oleh thread skrip yang kemudian berakhir; lihat [laporan upstream Apache Arrow #50471](https://github.com/apache/arrow/issues/50471). Pin ini hanya mengubah pembaca artifact; file Parquet/NumPy dan hasil training tetap utuh.
 
-[[Struktur Proyek]] menjelaskan lokasi package, config, dependency, dokumentasi dan Docker setelah reorganisasi. Entry point Cloud tetap streamlit_apps.py di root. Build dan runtime struktur baru sudah diverifikasi pada image `beesense-nlp:instagram-20261030-20`: kelima tampilan lulus uji pada image bersih, container sehat, pengguna 10001, dan mount model hanya-baca. Tidak ada perubahan Dockerfile produksi atau variabel lingkungan produksi.
+[[Struktur Proyek]] menjelaskan lokasi package, config, dependency, dokumentasi dan Docker setelah reorganisasi. Entry point Cloud tetap streamlit_apps.py di root. Build dan runtime struktur baru sudah diverifikasi pada image `beesense-nlp:instagram-gemini-20261030-02`: kelima tampilan lulus uji pada image bersih, container sehat, pengguna 10001, dan mount model hanya-baca. Tidak ada perubahan Dockerfile produksi atau variabel lingkungan produksi.

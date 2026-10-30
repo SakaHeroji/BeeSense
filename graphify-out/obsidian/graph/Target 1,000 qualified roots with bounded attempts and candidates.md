@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "config/social_crawler.json"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/config/social_crawlerjson
 ---
 
 # Target 1,000 qualified roots with bounded attempts and candidates
@@ -19,4 +19,4 @@ tags:
 - [[Root publication dates and literal keyword selection]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/config/social_crawlerjson

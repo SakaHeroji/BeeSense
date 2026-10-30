@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Lingkungan Training SBERT"
+community: "Riwayat Evaluasi Coherence"
 location: "## Pelatihan dan dashboard"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Lingkungan_Training_SBERT
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Checksum-verified reuse of immutable SBERT embeddings
@@ -21,4 +21,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `references` [EXTRACTED]
 - [[Separate SBERT training and artifact-only dashboard environments]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Lingkungan_Training_SBERT
+#graphify/rationale #graphify/INFERRED #community/Riwayat_Evaluasi_Coherence

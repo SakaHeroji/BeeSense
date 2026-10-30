@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "code"
-community: "Fixture dan Pengujian Reddit"
+community: "Worker Reddrix"
 location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fixture_dan_Pengujian_Reddit
+  - community/Worker_Reddrix
 ---
 
 # browser_configuration()
@@ -20,4 +20,4 @@ tags:
 - [[instagram_crawler.py]] - `imports` [EXTRACTED]
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fixture_dan_Pengujian_Reddit
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "document"
-community: "Riwayat Dataset dan Metodologi"
+community: "Struktur Runtime Dashboard"
 location: "# Menjalankan BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Riwayat_Dataset_dan_Metodologi
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # BeeSense startup, verification and coherence training runbook
@@ -23,4 +23,4 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[Verify BeeSense CI]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/document #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

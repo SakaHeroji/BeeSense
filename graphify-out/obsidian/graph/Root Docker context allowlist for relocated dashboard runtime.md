@@ -1,12 +1,12 @@
 ---
 source_file: ".dockerignore"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L1-L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # Root Docker context allowlist for relocated dashboard runtime
@@ -18,4 +18,4 @@ tags:
 - [[app.py]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/apppy

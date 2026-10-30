@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser_capture.mjs"
 type: "code"
-community: "Worker Chrome Instagram"
+community: "instagram_browser_capture.mjs"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Chrome_Instagram
+  - community/instagram_browser_capturemjs
 ---
 
 # instagram_browser_capture.mjs
@@ -18,4 +18,4 @@ tags:
 - [[instagramRetryAfter()]] - `contains` [EXTRACTED]
 - [[instagramSourceRateLimit()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Chrome_Instagram
+#graphify/code #graphify/EXTRACTED #community/instagram_browser_capturemjs

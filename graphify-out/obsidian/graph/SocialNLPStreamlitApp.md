@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Render Dashboard Streamlit"
+community: "thread_url"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Render_Dashboard_Streamlit
+  - community/thread_url
 ---
 
 # SocialNLPStreamlitApp
@@ -71,4 +71,4 @@ tags:
 - [[main()_8]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/thread_url

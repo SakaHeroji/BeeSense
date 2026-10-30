@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_browser.py"
 type: "code"
-community: "Kontrak Ekspor Instagram"
+community: "Pengambilan HTML Reddit"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Ekspor_Instagram
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # InstagramBrowserTests
@@ -24,4 +24,4 @@ tags:
 - [[InstagramCrawler]] - `uses` [INFERRED]
 - [[test_instagram_browser.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Ekspor_Instagram
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

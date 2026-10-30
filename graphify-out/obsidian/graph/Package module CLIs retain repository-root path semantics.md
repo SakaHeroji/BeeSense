@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Riwayat Dataset dan Metodologi"
+community: "Struktur Runtime Dashboard"
 location: "L11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Dataset_dan_Metodologi
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # Package module CLIs retain repository-root path semantics
@@ -16,4 +16,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

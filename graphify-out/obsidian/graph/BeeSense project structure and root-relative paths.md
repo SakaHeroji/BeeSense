@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "document"
-community: "Alur Dataset Model Dashboard"
+community: "BeeSense project"
 location: "line 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/BeeSense_project
 ---
 
 # BeeSense project structure and root-relative paths
@@ -18,4 +18,4 @@ tags:
 - [[Separate dashboard, crawler and training runtimes]] - `references` [EXTRACTED]
 - [[Stored Indonesian Gemini topic narratives]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/document #graphify/EXTRACTED #community/BeeSense_project

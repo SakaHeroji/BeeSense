@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "Konfigurasi Model Aktif"
 location: "## Import Python dan path"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/Konfigurasi_Model_Aktif
 ---
 
 # Root streamlit_apps.py delegates to Dashboard.app
@@ -17,4 +17,4 @@ tags:
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif

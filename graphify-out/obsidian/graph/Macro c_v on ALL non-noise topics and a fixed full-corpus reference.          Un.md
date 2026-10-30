@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: ".score_coherence"
+community: "Encoding dan Penyimpanan Model"
 location: "L1080"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/score_coherence
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.score_coherence()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/score_coherence
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

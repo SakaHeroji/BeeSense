@@ -19,8 +19,8 @@ members: 13
 - [[Reddrix Docker image unbuilt local daemon unavailable]] - rationale - docs/crawler/REDDIT_CRAWLER.md
 - [[Reddrix-only Camoufox factory controls initial and refreshed sessions]] - rationale - docs/crawler/REDDIT_CRAWLER.md
 - [[Relocated combined crawler image runs package module as UID10001]] - rationale - deployment/docker/Dockerfile.crawler
+- [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - rationale - graphify-out/obsidian/Struktur Proyek.md
 - [[Requestedeffective display mode is visible in plan and source metadata]] - rationale - docs/crawler/REDDIT_CRAWLER.md
-- [[Tracked reddrix.display_mode=auto]] - concept - config/reddit_crawler.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,18 +31,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 3 edges to [[_COMMUNITY_Default Backend Reddit]]
 - 2 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 1 edge to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Trial Reddit]]
+- 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 2 edges to [[_COMMUNITY_Konfigurasi Trial Reddit]]
+- 2 edges to [[_COMMUNITY_Default Backend Reddit]]
 - 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
-- 1 edge to [[_COMMUNITY_Riwayat Dataset dan Metodologi]]
+- 1 edge to [[_COMMUNITY_Struktur Runtime Dashboard]]
 
 ## Top bridge nodes
 - [[Adaptive display v1.1.0 auto platform policy]] - degree 13, connects to 5 communities
 - [[Reddrix-only Camoufox factory controls initial and refreshed sessions]] - degree 4, connects to 2 communities
-- [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - degree 4, connects to 2 communities
 - [[Reddrix Docker image unbuilt local daemon unavailable]] - degree 5, connects to 1 community
 - [[Actual macOS lifecycle test versus mocked Linux display matrix]] - degree 4, connects to 1 community
+- [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - degree 4, connects to 1 community

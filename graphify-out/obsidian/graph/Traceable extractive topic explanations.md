@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
-community: "Riwayat Evaluasi Coherence"
+community: "Penjelasan Topik Dashboard"
 location: "## Isi penjelasan"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Riwayat_Evaluasi_Coherence
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Traceable extractive topic explanations
@@ -23,4 +23,4 @@ tags:
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 - [[Source-bound beesense-topic-explanations1 sidecar manifest]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence
+#graphify/concept #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard

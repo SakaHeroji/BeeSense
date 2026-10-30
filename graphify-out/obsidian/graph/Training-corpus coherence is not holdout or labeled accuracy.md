@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Pemilihan Topik dan Coherence"
+community: "Riwayat Dataset dan Metodologi"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pemilihan_Topik_dan_Coherence
+  - community/Riwayat_Dataset_dan_Metodologi
 ---
 
 # Training-corpus coherence is not holdout or labeled accuracy
@@ -17,4 +17,4 @@ tags:
 - [[Historical720 shortfalls; current model has820]] - `references` [EXTRACTED]
 - [[Internal model metrics do not establish accuracy or representativeness]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_playwright.md"
 type: "rationale"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "Reddit Playwright CLI runner"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/Reddit_Playwright_CLI_runner
 ---
 
 # Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Reddit_Playwright_CLI_runner

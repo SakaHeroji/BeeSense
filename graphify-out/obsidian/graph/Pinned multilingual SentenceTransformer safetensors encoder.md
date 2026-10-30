@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Lingkungan Training SBERT"
+community: "Riwayat Evaluasi Coherence"
 location: "## Encoder SBERT"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Lingkungan_Training_SBERT
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Pinned multilingual SentenceTransformer safetensors encoder
@@ -21,4 +21,4 @@ tags:
 - [[Sentence-weighted Ward merges complete DBSCAN groups to exactly 20]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Lingkungan_Training_SBERT
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

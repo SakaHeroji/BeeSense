@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "thread_url"
+community: "Validasi Record Reddit"
 location: "L719"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/thread_url
+  - community/Validasi_Record_Reddit
 ---
 
 # parsed_number()
@@ -16,4 +16,4 @@ tags:
 - [[.thread()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/thread_url
+#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit

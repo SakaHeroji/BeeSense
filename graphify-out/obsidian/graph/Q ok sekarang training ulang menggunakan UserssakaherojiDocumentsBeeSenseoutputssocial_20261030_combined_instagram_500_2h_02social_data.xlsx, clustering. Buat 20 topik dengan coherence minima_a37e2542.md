@@ -1,0 +1,20 @@
+---
+source_file: "graphify-out/memory/query_20261030_160647_ok_sekarang_training_ulang_menggunakan__users_saka.md"
+type: "document"
+community: "Q: ok sekarang training ulang menggunakan /Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx, clustering. Buat 20 topik dengan coherence minimal 0.4. Lalu buat excel baru dengan tabel dengan kolom: topik, kalimat yang berada dalam cluster topik. lalu model digunakan kembali di dashboard streamlit yang di rebuild ulang, dan di commit dan dipush semuanya ke githubnya untuk di deploy ulang"
+location: "L10"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Q_ok_sekarang_training_ulang_menggunakan_/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_dataxlsx_clustering_Buat_20_topik_dengan_coherence_minimal_04_Lalu_buat_excel_baru_dengan_tabel_dengan_kolom_topik_kalimat_yang_berada_dalam_cluster_topik_lalu_model_digunakan_kembali_di_dashboard_streamlit_yang_di_rebuild_ulang_dan_di_commit_dan_dipush_semuanya_ke_githubnya_untuk_di_deploy_ulang
+---
+
+# Q: ok sekarang training ulang menggunakan /Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx, clustering. Buat 20 topik dengan coherence minimal 0.4. Lalu buat excel baru dengan tabel dengan kolom: topik, kalimat yang berada dalam cluster topik. lalu model digunakan kembali di dashboard streamlit yang di rebuild ulang, dan di commit dan dipush semuanya ke githubnya untuk di deploy ulang
+
+## Connections
+- [[Answer]] - `contains` [EXTRACTED]
+- [[Outcome]] - `contains` [EXTRACTED]
+- [[Source Nodes]] - `contains` [EXTRACTED]
+- [[query_20261030_160647_ok_sekarang_training_ulang_menggunakan__users_saka]] - `contains` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Q_ok_sekarang_training_ulang_menggunakan_/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_dataxlsx_clustering_Buat_20_topik_dengan_coherence_minimal_04_Lalu_buat_excel_baru_dengan_tabel_dengan_kolom_topik_kalimat_yang_berada_dalam_cluster_topik_lalu_model_digunakan_kembali_di_dashboard_streamlit_yang_di_rebuild_ulang_dan_di_commit_dan_dipush_semuanya_ke_githubnya_untuk_di_deploy_ulang

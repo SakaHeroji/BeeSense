@@ -1,21 +1,30 @@
 ---
 type: community
-members: 8
+members: 17
 ---
 
 # Pengujian Integrasi Reddrix
 
-**Members:** 8 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[.crawler()_2]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_mixed_baseline_skips_both_platforms_before_worker_requests()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_reddrix_retry_uses_coordinator_cooldown_and_same_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[SocialCrawlerReddrixTests]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.__init__()_6]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.fetch()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.fetch()_2]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.redirect_request()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.test_15_redirect_checks_before_following()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Exception]] - code
+- [[HTTPRedirectHandler]] - code
+- [[HtmlPage]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Only public HTML pages on the canonical host; never authAPI routes.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[PublicHtmlSource]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[RestrictedRedirect]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[SourceFailure]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[import_public_web_sections.py]] - code - Crawler/Backend/Reddit/import_public_web_sections.py
+- [[import_sections()]] - code - Crawler/Backend/Reddit/import_public_web_sections.py
+- [[now_iso()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[safe_web_url()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[thread_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,15 +34,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 5 edges to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 1 edge to [[_COMMUNITY_Runtime Docker dan Display]]
-- 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
+- 11 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 9 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
+- 5 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 4 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 3 edges to [[_COMMUNITY_Worker Reddrix]]
+- 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
+- 2 edges to [[_COMMUNITY_Struktur DOM Reddit]]
+- 1 edge to [[_COMMUNITY_Instagram Client dan Ekspor]]
 
 ## Top bridge nodes
-- [[SocialCrawlerReddrixTests]] - degree 16, connects to 5 communities
-- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - degree 4, connects to 2 communities
-- [[.crawler()_2]] - degree 7, connects to 1 community
-- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - degree 3, connects to 1 community
-- [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - degree 3, connects to 1 community
+- [[thread_id()]] - degree 10, connects to 6 communities
+- [[now_iso()]] - degree 8, connects to 5 communities
+- [[SourceFailure]] - degree 13, connects to 3 communities
+- [[safe_web_url()]] - degree 9, connects to 3 communities
+- [[.fetch()_2]] - degree 7, connects to 3 communities

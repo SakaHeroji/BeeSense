@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Riwayat Evaluasi Coherence"
+community: "Penjelasan Topik Dashboard"
 location: "## Dataset yang disertakan"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Riwayat_Evaluasi_Coherence
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Active 30 October 20-topic snapshot: mean c_v 0.4315
@@ -17,4 +17,4 @@ tags:
 - [[Historical combined20 UIruntime verification retained after relocation]] - `conceptually_related_to` [INFERRED]
 - [[Historical preparation restriction cooldown implemented without restarting segment 03]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence
+#graphify/concept #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard

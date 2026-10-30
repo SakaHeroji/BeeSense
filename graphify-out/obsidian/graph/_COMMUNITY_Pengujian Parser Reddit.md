@@ -1,14 +1,13 @@
 ---
 type: community
-members: 28
+members: 24
 ---
 
 # Pengujian Parser Reddit
 
-**Members:** 28 nodes
+**Members:** 24 nodes
 
 ## Members
-- [[.__init__()_10]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.has_class()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -29,13 +28,10 @@ members: 28
 - [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[assert_accessible()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[content_node()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Whole-post comment budget includes replies; nested replies share thread cap.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[bounded_events()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[fixture_page()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[rendered_text()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[source_time()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[walk()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[worker()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,16 +41,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 11 edges to [[_COMMUNITY_Struktur DOM Reddit]]
-- 8 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 6 edges to [[_COMMUNITY_thread_url]]
-- 5 edges to [[_COMMUNITY_Validasi Record Reddit]]
-- 4 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 17 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 12 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 9 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
+- 7 edges to [[_COMMUNITY_Validasi Record Reddit]]
+- 2 edges to [[_COMMUNITY_Worker Reddrix]]
+- 2 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 2 edges to [[_COMMUNITY_Struktur DOM Reddit]]
 
 ## Top bridge nodes
 - [[RedditTests]] - degree 20, connects to 5 communities
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 5 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 5 communities
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
 - [[.thread()]] - degree 22, connects to 3 communities
-- [[fixture_page()]] - degree 15, connects to 2 communities
+- [[fixture_page()]] - degree 15, connects to 3 communities

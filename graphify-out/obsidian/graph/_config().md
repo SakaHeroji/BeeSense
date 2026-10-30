@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Fixture dan Pengujian Reddit"
+community: "Worker Reddrix"
 location: "L434"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fixture_dan_Pengujian_Reddit
+  - community/Worker_Reddrix
 ---
 
 # _config()
@@ -24,4 +24,4 @@ tags:
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fixture_dan_Pengujian_Reddit
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

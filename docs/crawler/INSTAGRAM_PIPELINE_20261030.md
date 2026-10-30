@@ -2,7 +2,7 @@
 
 ## Snapshot terbaru
 
-Konfigurasi aktif kini memakai `outputs/nlp_20261030_instagram_500_topics20_01` dari `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`: 20 topik, rata-rata c_v 0,4386500025. Excel snapshot lengkap berisi 45.556 pasangan topik–kalimat asli unik; label run ini c-TF-IDF lokal. Lihat [README](../../README.md) dan metode Social NLP untuk data serta batas interpretasi. Catatan hasil/narasi Gemini berikut merupakan riwayat snapshot sebelumnya.
+Konfigurasi aktif kini memakai `outputs/nlp_20261030_instagram_500_topics20_gemini_02` dari `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`: 20 topik, rata-rata c_v 0,4386500025. Excel snapshot lengkap berisi 45.556 pasangan topik–kalimat asli unik; run ini juga memuat 20 terjemahan/ringkasan Gemini dan deskripsinya. Lihat [README](../../README.md) dan metode Social NLP untuk data serta batas interpretasi. Catatan hasil/narasi Gemini berikut merupakan riwayat snapshot sebelumnya.
 
 
 Instruksi pengguna 30 Oktober 2026: gabungkan InstagramCrawler ke SocialCrawler,

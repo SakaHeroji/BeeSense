@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "thread_url"
+community: "Worker Reddrix"
 location: "L504"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/thread_url
+  - community/Worker_Reddrix
 ---
 
 # thread_url()
@@ -21,4 +21,4 @@ tags:
 - [[normalize_reddrix_item()]] - `calls` [EXTRACTED]
 - [[thread_id()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/thread_url
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

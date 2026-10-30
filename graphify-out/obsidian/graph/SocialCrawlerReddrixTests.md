@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Pengujian Integrasi Reddrix"
+community: "Koordinator Backend Sosial"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Integrasi_Reddrix
+  - community/Koordinator_Backend_Sosial
 ---
 
 # SocialCrawlerReddrixTests
@@ -29,4 +29,4 @@ tags:
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_social_crawler_reddrix.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Integrasi_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial

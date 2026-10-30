@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "document"
-community: "Audit Akuisisi Instagram"
+community: "Konfigurasi Model Aktif"
 location: "# Struktur proyek BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Audit_Akuisisi_Instagram
+  - community/Konfigurasi_Model_Aktif
 ---
 
 # Component-oriented repository layout after SocialCrawler integration
@@ -23,4 +23,4 @@ tags:
 - [[Runtime manifests live under requirements with relative includes]] - `references` [EXTRACTED]
 - [[topic_narratives.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram
+#graphify/document #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif

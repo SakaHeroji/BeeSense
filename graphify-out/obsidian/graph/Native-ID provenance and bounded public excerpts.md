@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_browser_campaign.md"
 type: "rationale"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "Reddit Playwright CLI runner"
 location: "# Helper campaign Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/Reddit_Playwright_CLI_runner
 ---
 
 # Native-ID provenance and bounded public excerpts
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Advanced connected-browser Reddit campaign helpers]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Reddit_Playwright_CLI_runner

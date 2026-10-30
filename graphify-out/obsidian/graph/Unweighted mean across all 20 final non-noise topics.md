@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Pemilihan Topik dan Coherence"
+community: "Riwayat Evaluasi Coherence"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Pemilihan_Topik_dan_Coherence
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Unweighted mean across all 20 final non-noise topics
@@ -16,4 +16,4 @@ tags:
 - [[Historical29October macro c_v0.4720034334]] - `shares_data_with` [EXTRACTED]
 - [[Invalid or nonfinite topic coherence cancels the aggregate]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

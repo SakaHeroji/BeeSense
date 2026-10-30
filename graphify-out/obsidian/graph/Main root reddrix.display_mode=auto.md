@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_crawler.json"
 type: "concept"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "config/social_crawler.json"
 location: "$.reddrix.display_mode"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/config/social_crawlerjson
 ---
 
 # Main root reddrix.display_mode=auto
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/concept #graphify/EXTRACTED #community/config/social_crawlerjson

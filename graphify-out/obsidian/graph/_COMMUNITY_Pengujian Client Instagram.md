@@ -61,19 +61,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 10 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_CI dan Verifikasi Backend]]
 - 1 edge to [[_COMMUNITY_Instagram Client dan Ekspor]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
 - 1 edge to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Kontrak Ekspor Instagram]]
-- 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 1 edge to [[_COMMUNITY_Kontrak Ekspor Instagram]]
+- 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
+- [[test_instagram_crawler.py]] - degree 11, connects to 4 communities
+- [[records()]] - degree 10, connects to 4 communities
 - [[InstagramCrawlerTests]] - degree 33, connects to 3 communities
-- [[test_instagram_crawler.py]] - degree 11, connects to 3 communities
-- [[records()]] - degree 10, connects to 3 communities
-- [[.ig()]] - degree 9, connects to 2 communities
+- [[.ig()]] - degree 9, connects to 3 communities
 - [[FakeClient]] - degree 9, connects to 1 community

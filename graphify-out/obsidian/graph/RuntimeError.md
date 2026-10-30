@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Capture Reddit Playwright"
+community: "Fixture dan Pengujian Reddit"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Capture_Reddit_Playwright
+  - community/Fixture_dan_Pengujian_Reddit
 ---
 
 # RuntimeError
@@ -22,4 +22,4 @@ tags:
 - [[run()]] - `calls` [INFERRED]
 - [[worker()_1]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Capture_Reddit_Playwright
+#graphify/code #graphify/INFERRED #community/Fixture_dan_Pengujian_Reddit

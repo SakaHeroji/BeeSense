@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Ekspor dan Provenance Reddit"
+community: "Kontrak Record Reddit"
 location: "L971"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_dan_Provenance_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # run()
@@ -34,4 +34,4 @@ tags:
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[verify_descriptor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

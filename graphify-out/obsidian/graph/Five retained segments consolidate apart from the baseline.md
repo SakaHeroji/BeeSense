@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: "Read-only native/canonical index excludes 50 YouTube and 181 Reddit roots"
 location: "### Hasil akhir campaign 29 Oktober 2026"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
 ---
 
 # Five retained segments consolidate apart from the baseline
@@ -17,4 +17,4 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots

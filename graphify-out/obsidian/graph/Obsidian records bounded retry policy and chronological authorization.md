@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "document"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: ".score_coherence"
 location: "## Pengamatan cooldown untuk run berikutnya"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/score_coherence
 ---
 
 # Obsidian records bounded retry policy and chronological authorization
@@ -18,4 +18,4 @@ tags:
 - [[Reddit bounded 429 policy introduced in version 1.3]] - `semantically_similar_to` [INFERRED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/document #graphify/EXTRACTED #community/score_coherence

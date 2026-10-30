@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "concept"
-community: "Penjadwalan dan Riwayat Akuisisi"
+community: ".score_coherence"
 location: "## Pengamatan cooldown untuk run berikutnya"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Penjadwalan_dan_Riwayat_Akuisisi
+  - community/score_coherence
 ---
 
 # Cooldown verification:50 crawler tests, 49pass/1skip;12 Reddit runner tests pass
@@ -15,4 +15,4 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[Unrepresentable or deadline-exceeding source wait forbids retry and preserves partial data]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi
+#graphify/concept #graphify/EXTRACTED #community/score_coherence

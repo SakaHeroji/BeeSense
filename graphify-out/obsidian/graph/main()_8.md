@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Render Dashboard Streamlit"
+community: "app.py"
 location: "L2261"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Render_Dashboard_Streamlit
+  - community/apppy
 ---
 
 # main()
@@ -17,4 +17,4 @@ tags:
 - [[app.py]] - `contains` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/apppy

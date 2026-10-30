@@ -41,11 +41,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Rencana Produk dan Survei]]
-- 3 edges to [[_COMMUNITY_Alur Dataset Model Dashboard]]
+- 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard]]
 - 2 edges to [[_COMMUNITY_Kontrak API Frontend]]
 - 2 edges to [[_COMMUNITY_Batas Integrasi Produksi]]
 - 1 edge to [[_COMMUNITY_CI Container Frontend]]
 - 1 edge to [[_COMMUNITY_Rencana Layanan Backend]]
+- 1 edge to [[_COMMUNITY_BeeSense project]]
 
 ## Top bridge nodes
 - [[Crawler frontend product requirements]] - degree 17, connects to 5 communities
