@@ -37,21 +37,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 6 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
 - 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
 - 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 
 ## Top bridge nodes
 - [[InstagramCrawler]] - degree 17, connects to 7 communities
 - [[test_instagram_browser.py]] - degree 6, connects to 3 communities
 - [[main()_4]] - degree 8, connects to 2 communities
-- [[run_instagram_worker()]] - degree 3, connects to 2 communities
 - [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - degree 3, connects to 1 community
+- [[run_instagram_worker()]] - degree 2, connects to 1 community

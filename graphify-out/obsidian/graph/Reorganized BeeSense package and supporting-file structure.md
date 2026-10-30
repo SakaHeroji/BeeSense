@@ -1,18 +1,17 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "document"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L7-L15"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Reorganized BeeSense package and supporting-file structure
 
 ## Connections
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
@@ -21,4 +20,4 @@ tags:
 - [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - `references` [EXTRACTED]
 - [[Root streamlit_apps.py delegates to Dashboard.app_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

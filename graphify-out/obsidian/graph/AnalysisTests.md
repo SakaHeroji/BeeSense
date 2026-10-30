@@ -12,7 +12,7 @@ tags:
 # AnalysisTests
 
 ## Connections
-- [[.setUp()_9]] - `method` [EXTRACTED]
+- [[.setUp()_8]] - `method` [EXTRACTED]
 - [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - `method` [EXTRACTED]
 - [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - `method` [EXTRACTED]
 - [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - `method` [EXTRACTED]

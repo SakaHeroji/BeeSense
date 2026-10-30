@@ -3,3 +3,4 @@
 -r crawler.txt
 -r selenium.txt
 -r coherence.txt
+-r instaloader.txt

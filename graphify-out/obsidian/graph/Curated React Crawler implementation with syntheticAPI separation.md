@@ -12,7 +12,6 @@ tags:
 # Curated React Crawler implementation with synthetic/API separation
 
 ## Connections
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Curated Crawler PRD statusfrontend implemented, backend pending]] - `references` [EXTRACTED]
 - [[Curated PRD 1.1 theme and seven-source UI distinguish planned backend adapters]] - `references` [EXTRACTED]

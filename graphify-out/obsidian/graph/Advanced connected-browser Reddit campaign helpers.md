@@ -15,6 +15,5 @@ tags:
 - [[Checkpoint export to the eight-sheet contract]] - `references` [EXTRACTED]
 - [[Native-ID provenance and bounded public excerpts]] - `references` [EXTRACTED]
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
-- [[SocialCrawler_1]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

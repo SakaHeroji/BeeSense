@@ -12,7 +12,7 @@ tags:
 # Chrome remains available for operator inspection
 
 ## Connections
+- [[Historical browser retention for manual barrier inspection]] - `conceptually_related_to` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
-- [[Retain Chrome for manual inspection on barriers]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

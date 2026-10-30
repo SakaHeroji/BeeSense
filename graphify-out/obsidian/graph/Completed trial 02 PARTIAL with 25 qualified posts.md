@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Adaptive display implemented after trial with no new crawl]] - `references` [EXTRACTED]
 - [[Final trial bundle passes identity, baseline and Excel integrity checks]] - `references` [EXTRACTED]
-- [[Historical Reddrix integration did not start a live crawl]] - `references` [EXTRACTED]
+- [[Historical Reddrix integration did not launch live acquisition]] - `references` [EXTRACTED]
 - [[Historical trial 01 ended PARTIAL with zero posts]] - `references` [EXTRACTED]
 - [[Installed Reddrix 1.2.14 and Camoufox 156 browser evidence]] - `references` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]

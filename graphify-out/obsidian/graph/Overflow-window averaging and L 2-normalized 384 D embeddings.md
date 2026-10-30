@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Runbook dan Verifikasi Lokal"
 location: "## Encoder SBERT"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Overflow-window averaging and L 2-normalized 384 D embeddings
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

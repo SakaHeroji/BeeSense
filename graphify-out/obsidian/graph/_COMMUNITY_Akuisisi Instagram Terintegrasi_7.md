@@ -36,10 +36,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
 - 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
 
 ## Top bridge nodes
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 3 communities

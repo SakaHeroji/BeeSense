@@ -12,7 +12,6 @@ tags:
 # Cookie accepted for login/account read; trial02 firsthashtag LOGIN_REQUIRED
 
 ## Connections
-- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - `references` [EXTRACTED]
 - [[Historical trial gate superseded by explicitintegrationauthorization]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]

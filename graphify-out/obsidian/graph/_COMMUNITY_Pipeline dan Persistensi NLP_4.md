@@ -1,22 +1,23 @@
 ---
 type: community
-cohesion: 0.33
-members: 7
+cohesion: 0.36
+members: 8
 ---
 
 # Pipeline dan Persistensi NLP
 
-**Cohesion:** 0.33 - loosely connected
-**Members:** 7 nodes
+**Cohesion:** 0.36 - loosely connected
+**Members:** 8 nodes
 
 ## Members
-- [[._ctfidf_terms()]] - code - MachineLearning/social_nlp.py
-- [[._topic_vectorizer()]] - code - MachineLearning/social_nlp.py
-- [[.build_topic_graph()]] - code - MachineLearning/social_nlp.py
-- [[.describe_topics()]] - code - MachineLearning/social_nlp.py
-- [[.score_coherence()]] - code - MachineLearning/social_nlp.py
-- [[Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un]] - rationale - MachineLearning/social_nlp.py
-- [[Use the same class TF-IDF vocabulary for selection and publication.]] - rationale - MachineLearning/social_nlp.py
+- [[A merge report binds its small, explicit audit sidecars to the input.]] - rationale - scripts/verify_dashboard_data.py
+- [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
+- [[Verify record identity independently of sentence-text deduplication.]] - rationale - scripts/verify_dashboard_data.py
+- [[main()_8]] - code - scripts/verify_dashboard_data.py
+- [[published_source_files()]] - code - scripts/verify_dashboard_data.py
+- [[verify()_1]] - code - scripts/verify_dashboard_data.py
+- [[verify_dashboard_data.py]] - code - scripts/verify_dashboard_data.py
+- [[verify_native_dataset()]] - code - scripts/verify_dashboard_data.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,14 +27,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 - 4 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
-- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
+- 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 2 edges to [[_COMMUNITY_Topik dan Verifikasi NLP]]
 
 ## Top bridge nodes
-- [[.score_coherence()]] - degree 7, connects to 3 communities
-- [[.describe_topics()]] - degree 6, connects to 3 communities
-- [[._ctfidf_terms()]] - degree 5, connects to 2 communities
-- [[._topic_vectorizer()]] - degree 3, connects to 1 community
-- [[.build_topic_graph()]] - degree 2, connects to 1 community
+- [[verify_dashboard_data.py]] - degree 9, connects to 3 communities
+- [[verify()_1]] - degree 7, connects to 2 communities
+- [[published_source_files()]] - degree 5, connects to 2 communities
+- [[verify_native_dataset()]] - degree 5, connects to 2 communities

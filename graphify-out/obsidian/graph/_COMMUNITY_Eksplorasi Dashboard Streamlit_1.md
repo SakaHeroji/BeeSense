@@ -1,35 +1,34 @@
 ---
 type: community
-cohesion: 0.15
-members: 20
+cohesion: 0.16
+members: 19
 ---
 
 # Eksplorasi Dashboard Streamlit
 
-**Cohesion:** 0.15 - loosely connected
-**Members:** 20 nodes
+**Cohesion:** 0.16 - loosely connected
+**Members:** 19 nodes
 
 ## Members
 - [[._css()]] - code - Dashboard/app.py
+- [[._topic_detail()]] - code - Dashboard/app.py
+- [[.source_figure()]] - code - Dashboard/app.py
+- [[.term_figure()]] - code - Dashboard/app.py
 - [[.topic_profile()]] - code - Dashboard/app.py
-- [[Active Instagram-inclusive 20-topic snapshot macro c_v 0.4315219014]] - concept - README.md
 - [[Count evidence in the filter, keeping sentencescommentsparents distinct.]] - rationale - Dashboard/app.py
 - [[Filters retain model membership and do not recompute c_v]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[FinalnativeIDauditwithpreservedhistoricalchecksums]] - rationale - graphify-out/obsidian/Dataset Dashboard.md
 - [[Five artifact-backed Streamlit analysis views]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
 - [[Four selected-topic cards unique comments, share, source roots and topic c_v]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Historical combined 20-topic local Docker verification; reorganized image unbuilt]] - rationale - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Historical combined20 UIruntime verification retained after relocation]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[MMR evidence and guarded Theil-SenKendall directions]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Module API creates source-bound explanation sidecars without retraining]] - rationale - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[Keyboard dropdown and URL-bound topicexplanation navigation]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Non-noise c-TF-IDF unigrambigram labels]] - concept - docs/machine-learning/SOCIAL_NLP.md
 - [[Occurrences, unique sentences, comments and source roots have different denominators]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[On-demand explanations from active combined 20-topic artifacts]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
 - [[Platform and top-five source graphs count unique topic comments]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
 - [[Responsive cards, visible keyboard focus and charttable alternatives verified]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
 - [[Selected-topic c_v card is separate from the full-model mean]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
 - [[Selected-topic explanation panel links cards, frequency graphs, time shares and source evidence]] - rationale - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Source-bound beesense-topic-explanations1 sidecar manifest]] - rationale - docs/machine-learning/EXPLAINABLE_TOPICS.md
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Traceable extractive topic explanations]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[Text spans, source_row and date certainty survive embedding deduplication]] - rationale - docs/machine-learning/SOCIAL_NLP.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,24 +38,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
-- 4 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
-- 3 edges to [[_COMMUNITY_Coherence dan Quality Gate_2]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
-- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate]]
+- 14 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 8 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
+- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_7]]
 - 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
-- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
-- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_1]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_5]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_3]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
 
 ## Top bridge nodes
-- [[Five artifact-backed Streamlit analysis views]] - degree 14, connects to 5 communities
-- [[Traceable extractive topic explanations]] - degree 10, connects to 3 communities
-- [[.topic_profile()]] - degree 6, connects to 3 communities
-- [[Platform and top-five source graphs count unique topic comments]] - degree 5, connects to 3 communities
-- [[Term bars show bounded phrase presence in unique filtered sentences]] - degree 5, connects to 3 communities
+- [[Five artifact-backed Streamlit analysis views]] - degree 14, connects to 4 communities
+- [[._topic_detail()]] - degree 12, connects to 2 communities
+- [[.term_figure()]] - degree 6, connects to 2 communities
+- [[.topic_profile()]] - degree 6, connects to 2 communities
+- [[.source_figure()]] - degree 5, connects to 2 communities

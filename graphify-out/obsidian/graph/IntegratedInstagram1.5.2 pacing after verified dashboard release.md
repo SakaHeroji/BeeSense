@@ -12,14 +12,13 @@ tags:
 # IntegratedInstagram1.5.2 pacing after verified dashboard release
 
 ## Connections
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BundleSink]] - `references` [EXTRACTED]
 - [[CAAHTTP200 without session;legacyHTTP400 needs_upgrade]] - `references` [EXTRACTED]
 - [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - `references` [EXTRACTED]
+- [[Documented local exponential cooldown respects longer Retry-After]] - `references` [EXTRACTED]
 - [[Documented public hashtag probe fails upstream AttributeError withzero data]] - `references` [EXTRACTED]
 - [[Explicit autopasswordsessionid login selection]] - `references` [EXTRACTED]
-- [[Exponential localcooldown never shortens serverRetry-After]] - `references` [EXTRACTED]
 - [[GETqesync405 carries public key;POST500 offers no proven login fix]] - `references` [EXTRACTED]
 - [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - `references` [EXTRACTED]
 - [[Historical interruptedChrome trial before1.5integration]] - `references` [EXTRACTED]
@@ -34,8 +33,8 @@ tags:
 - [[One LoginRequired recovery with verification-code preservation]] - `references` [EXTRACTED]
 - [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - `references` [EXTRACTED]
 - [[Optional Instaloader4.16 access experiment dependency]] - `references` [EXTRACTED]
-- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - `references` [EXTRACTED]
 - [[Release194e0b1 live with exact20-row200-sentence CSV]] - `references` [EXTRACTED]
+- [[Retained local jitter, batch rests and scheduler readiness]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
 - [[SocialExportMixin]] - `references` [EXTRACTED]
 - [[User-provided instagrapi scraper guidance]] - `references` [EXTRACTED]

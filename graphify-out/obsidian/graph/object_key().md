@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Identitas dan Kontrak Data"
 location: "L512"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # object_key()
@@ -16,4 +16,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[native_fullname()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

@@ -12,7 +12,7 @@ tags:
 # Bounded Instagram recovery does not override user stop
 
 ## Connections
-- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - `conceptually_related_to` [EXTRACTED]
+- [[Historical version-1.5.1 fixed Instagram recovery policy]] - `conceptually_related_to` [EXTRACTED]
 - [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Instagram1.5.1 rate-limit recovery andstagedrun chronology]] - `references` [EXTRACTED]
 

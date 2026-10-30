@@ -4,11 +4,14 @@
 !deployment/docker/Dockerfile.instagram-browser
 !requirements/
 !requirements/instagram-browser.txt
+!requirements/instaloader.txt
 !Crawler/
 !Crawler/__init__.py
 !Crawler/Backend/
 !Crawler/Backend/__init__.py
 !Crawler/Backend/instagram_crawler.py
+!Crawler/Backend/instaloader_crawler.py
+!Crawler/Backend/instaloader_browser_patch.py
 !Crawler/Backend/social_crawler.py
 !Crawler/Backend/instagram_browser.py
 !Crawler/Backend/instagram_browser_capture.mjs

@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Alur Akuisisi Sosial Terpadu"
-location: "L270"
+location: "L271"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,8 +13,7 @@ tags:
 
 ## Connections
 - [[.runner()]] - `calls` [EXTRACTED]
-- [[Reddrix normalization,display,iterator and worker owned by main core]] - `conceptually_related_to` [INFERRED]
-- [[ValueError]] - `calls` [INFERRED]
+- [[Main coordinator owns Reddrix normalization, display and worker]] - `conceptually_related_to` [INFERRED]
 - [[load_reddrix()]] - `calls` [EXTRACTED]
 - [[normalize_reddrix_item()]] - `calls` [EXTRACTED]
 - [[reddrix_receipt()]] - `calls` [EXTRACTED]

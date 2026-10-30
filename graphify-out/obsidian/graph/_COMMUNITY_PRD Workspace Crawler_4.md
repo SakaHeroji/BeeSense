@@ -33,7 +33,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_PRD Workspace Crawler]]
 - 2 edges to [[_COMMUNITY_PRD Workspace Crawler_2]]
 - 1 edge to [[_COMMUNITY_PRD Workspace Crawler_1]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_4]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
 
 ## Top bridge nodes
 - [[Machine Learning PRD remains unwritten; Crawler handoff dependencies listed]] - degree 5, connects to 2 communities

@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.18
-members: 12
+cohesion: 0.20
+members: 11
 ---
 
 # Arsitektur Crawler dan Dependensi
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.20 - loosely connected
+**Members:** 11 nodes
 
 ## Members
 - [[Bounded native-ID evidence and explicit uncertainty]] - rationale - graphify-out/obsidian/Crawler Selenium.md
@@ -21,7 +21,6 @@ members: 12
 - [[Shared BundleSink and dual-workbook export path]] - concept - graphify-out/obsidian/Crawler Selenium.md
 - [[Shared rendered_thread_dom.mjs extraction]] - concept - Crawler/Backend/Reddit/README_playwright.md
 - [[SocialCrawlerSelenium class]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Worker hard deadline preserves streamed partial events]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,17 +30,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
 - 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler]]
 - 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
+- 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler_2]]
 - 1 edge to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 
 ## Top bridge nodes
-- [[SocialCrawlerSelenium class]] - degree 10, connects to 2 communities
-- [[Obsidian Crawler Selenium architecture]] - degree 6, connects to 2 communities
+- [[SocialCrawlerSelenium class]] - degree 10, connects to 3 communities
 - [[Pinned Selenium 4.51.0 plus crawler requirements]] - degree 3, connects to 2 communities
+- [[Obsidian Crawler Selenium architecture]] - degree 5, connects to 1 community
 - [[Shared rendered_thread_dom.mjs extraction]] - degree 2, connects to 1 community
-- [[Worker hard deadline preserves streamed partial events]] - degree 2, connects to 1 community

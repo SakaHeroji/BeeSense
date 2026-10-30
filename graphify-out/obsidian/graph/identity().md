@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.test_instagram_comment_identity_conflict_and_fake_host_are_rejected()]] - `calls` [EXTRACTED]
-- [[Atomic baseline-then-new workbook merge preserves native identity and provenance]] - `implements` [INFERRED]
+- [[Native-ID baseline-then-new workbook merge with provenance]] - `implements` [INFERRED]
 - [[Return global native object ID plus its root; text never defines identity.]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
 - [[merge()]] - `calls` [EXTRACTED]

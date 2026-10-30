@@ -12,11 +12,11 @@ tags:
 # Historical Reddit pause: ten qualified and seventeen exported evidence posts
 
 ## Connections
-- [[Explicit partial export and qualified-post shortfall after acquisition]] - `references` [EXTRACTED]
-- [[Historical Reddit pause after HTTP 429, superseded by user-authorized resume]] - `semantically_similar_to` [INFERRED]
+- [[Explicit partial export and qualified-post shortfalls]] - `references` [EXTRACTED]
+- [[Historical Reddit continuations preserve bundles and original deadline]] - `references` [EXTRACTED]
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `references` [EXTRACTED]
+- [[Historical user-requested Reddit pause after 429]] - `semantically_similar_to` [INFERRED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
-- [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

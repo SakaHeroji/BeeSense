@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Ringkasan Topik Gemini"
 location: "## Kalimat topik Gemini"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Ringkasan_Topik_Gemini
 ---
 
 # DashboardreadsverifiedCSVwithnoAPIortrainingonrerun
@@ -17,4 +17,4 @@ tags:
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini

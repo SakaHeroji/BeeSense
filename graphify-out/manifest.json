@@ -35,9 +35,9 @@
     "semantic_hash": "267799ee3dd02854179ca56c107f3c7a"
   },
   "README.md": {
-    "mtime": 1793348444.1640296,
+    "mtime": 1793354859.9675314,
     "ast_hash": "46b657fb4fa8b8d8e5395bfba71c518d",
-    "semantic_hash": "650ce56d680fd06d11062b9120a0ef89"
+    "semantic_hash": "3835fb0a0cc0353786db64dfc9822506"
   },
   "graphify-out/memory/query_20261028_132041_jalankan_dashboard_streamlitnya.md": {
     "mtime": 1793240135.6860385,
@@ -260,9 +260,9 @@
     "semantic_hash": "862ac24f53b02ecbb376d50a97da581e"
   },
   "graphify-out/obsidian/HOME.md": {
-    "mtime": 1793348444.1732712,
+    "mtime": 1793354859.9703324,
     "ast_hash": "",
-    "semantic_hash": "25ff971a25c283f0e94270398245e475"
+    "semantic_hash": "e7f1e38ae3ffbbe823c299a40b6dad23"
   },
   "graphify-out/obsidian/Arsitektur BeeSense.md": {
     "mtime": 1793348444.174612,
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "Crawler/Backend/social_crawler.py": {
-    "mtime": 1793350372.924468,
-    "ast_hash": "0de636386ebbd839f8bf805c1808d565",
+    "mtime": 1793354677.6485395,
+    "ast_hash": "33664e1c2db9a45df81637ef0ce61a30",
     "semantic_hash": ""
   },
   "Crawler/Backend/social_crawler_selenium.py": {
@@ -495,9 +495,9 @@
     "semantic_hash": "e50ea573b875b2d1298415fa61941627"
   },
   "docs/crawler/SOCIAL_CRAWLER.md": {
-    "mtime": 1793350455.5149574,
+    "mtime": 1793354859.9662457,
     "ast_hash": "",
-    "semantic_hash": "071fe41430e3d437d32109ad9739a258"
+    "semantic_hash": "ce0a28a09b5844721318008375d157c5"
   },
   "docs/dashboard/DASHBOARD_DESIGN.md": {
     "mtime": 1793349226.939002,
@@ -675,8 +675,8 @@
     "semantic_hash": ""
   },
   "tests/crawler/test_social_crawler_instagram.py": {
-    "mtime": 1793350372.9201415,
-    "ast_hash": "2e6d2c6fbecec95a8a8b694fe61e8c09",
+    "mtime": 1793355411.2015529,
+    "ast_hash": "6edd5245b8c52260aa9210df996efe1c",
     "semantic_hash": ""
   },
   "MachineLearning/topic_narratives.py": {
@@ -743,5 +743,35 @@
     "mtime": 1793350304.2277935,
     "ast_hash": "",
     "semantic_hash": "3333e9e31ed04db72b790a23bfceb9a3"
+  },
+  "Crawler/Backend/instaloader_crawler.py": {
+    "mtime": 1793354677.4666114,
+    "ast_hash": "2dcbcced3e434f418b02ea3cb5bd0788",
+    "semantic_hash": ""
+  },
+  "Crawler/Backend/instaloader_browser_patch.py": {
+    "mtime": 1793353563.2916663,
+    "ast_hash": "d61da1150343688478a2b8ce05f7becf",
+    "semantic_hash": ""
+  },
+  "tests/crawler/test_instaloader_crawler.py": {
+    "mtime": 1793354763.4777677,
+    "ast_hash": "ab7b7165f0d4ff5270a749bc7ff3ccee",
+    "semantic_hash": ""
+  },
+  "tests/crawler/test_instaloader_browser_patch.py": {
+    "mtime": 1793353675.9663157,
+    "ast_hash": "6fe8a20ea6c7c1ce142c87f6b126cbd6",
+    "semantic_hash": ""
+  },
+  "docs/crawler/INSTALOADER_CRAWLER.md": {
+    "mtime": 1793355110.268745,
+    "ast_hash": "",
+    "semantic_hash": "3438070ecf052fc94295faf6adbdc592"
+  },
+  "graphify-out/obsidian/InstaloaderCrawler.md": {
+    "mtime": 1793355110.2697349,
+    "ast_hash": "",
+    "semantic_hash": "d77c48839837621d9ce9696e89086c28"
   }
 }

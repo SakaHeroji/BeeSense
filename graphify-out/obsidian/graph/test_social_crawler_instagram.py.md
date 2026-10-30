@@ -14,8 +14,10 @@ tags:
 ## Connections
 - [[Exercise Instagram through the combined coordinator, without network access.]] - `rationale_for` [EXTRACTED]
 - [[InstagramIntegrationTests]] - `contains` [EXTRACTED]
+- [[InstaloaderSettings]] - `imports` [EXTRACTED]
+- [[InstaloaderWorker]] - `imports` [EXTRACTED]
 - [[SocialCrawler_1]] - `imports` [EXTRACTED]
-- [[records()_1]] - `imports` [EXTRACTED]
+- [[instaloader_crawler.py]] - `imports_from` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]

@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[1000 qualified-root targets per platform within shared three-hour budget]] - `references` [EXTRACTED]
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Before 04 cumulative qualified YouTube77Reddit26; evidence32547]] - `references` [EXTRACTED]
 - [[Before segment 03 qualified YouTube6Reddit17; exported evidence831]] - `references` [EXTRACTED]
@@ -21,11 +20,11 @@ tags:
 - [[Combined-corpus training completed20topics, c_v 0.4720034333858867]] - `references` [EXTRACTED]
 - [[Cooldown verification50 crawler tests, 49pass1skip;12 Reddit runner tests pass]] - `references` [EXTRACTED]
 - [[Each continuation excludes original dataset and every prior campaign segment]] - `references` [EXTRACTED]
-- [[Final PARTIAL YouTube 1, 188 exported300 qualified; Reddit 9858]] - `references` [EXTRACTED]
 - [[Final campaign consolidation and explicit partial target shortfalls]] - `references` [EXTRACTED]
 - [[Finalized segment 01 INTERRUPTED one qualified YouTube, ten qualified Reddit]] - `references` [EXTRACTED]
-- [[Five verified segments consolidate with zero duplicate roots and zero baseline overlap]] - `references` [EXTRACTED]
+- [[Five retained segments consolidate apart from the baseline]] - `references` [EXTRACTED]
 - [[Historical 1.2 crawler verification44 tests with optional browser skip; Reddit 12 tests]] - `references` [EXTRACTED]
+- [[Historical PARTIAL YouTube 1,188300 qualified; Reddit 9858]] - `references` [EXTRACTED]
 - [[Historical Reddit pause ten qualified and seventeen exported evidence posts]] - `references` [EXTRACTED]
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
 - [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - `references` [EXTRACTED]

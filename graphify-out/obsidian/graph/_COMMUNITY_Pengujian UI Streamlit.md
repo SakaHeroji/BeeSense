@@ -11,7 +11,7 @@ members: 14
 
 ## Members
 - [[.app()]] - code - tests/nlp/test_streamlit_app.py
-- [[.setUp()_12]] - code - tests/nlp/test_streamlit_app.py
+- [[.setUp()_11]] - code - tests/nlp/test_streamlit_app.py
 - [[.tearDown()_1]] - code - tests/nlp/test_streamlit_app.py
 - [[.tearDownClass()_3]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_all_views_and_noise_only_selection()]] - code - tests/nlp/test_streamlit_app.py
@@ -37,4 +37,4 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[StreamlitTests]] - degree 16, connects to 1 community
-- [[.setUp()_12]] - degree 2, connects to 1 community
+- [[.setUp()_11]] - degree 2, connects to 1 community

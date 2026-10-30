@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Topik dan Verifikasi NLP"
 location: "## Dataset baru"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Latestnative-ID observation dedupwithrootconflict rejection
@@ -16,4 +16,4 @@ tags:
 - [[Versionedmergepublishesrecordlineageduplicateauditandchecksums]] - `references` [EXTRACTED]
 - [[merge_social_datasets.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

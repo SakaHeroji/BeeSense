@@ -11,8 +11,8 @@ members: 40
 
 ## Members
 - [[.run_merge()]] - code - tests/nlp/test_dataset_merge.py
-- [[.setUp()_10]] - code - tests/nlp/test_dashboard_data_verifier.py
-- [[.setUp()_8]] - code - tests/nlp/test_dataset_merge.py
+- [[.setUp()_9]] - code - tests/nlp/test_dashboard_data_verifier.py
+- [[.setUp()_7]] - code - tests/nlp/test_dataset_merge.py
 - [[.source()]] - code - tests/nlp/test_dataset_merge.py
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - code - tests/nlp/test_dashboard_data_verifier.py
@@ -33,17 +33,17 @@ members: 40
 - [[.test_same_native_id_different_kind_is_rejected_without_publication()]] - code - tests/nlp/test_dataset_merge.py
 - [[.test_unexpected_file_in_archive_is_rejected()]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[.test_unexpected_workbook_is_rejected()]] - code - tests/nlp/test_dashboard_data_verifier.py
-- [[Atomic baseline-then-new workbook merge preserves native identity and provenance]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Combined workbook provenance PASS with immutable source hashes and row lineage]] - document - output/combined_dataset_20261029.json
+- [[Historical30658-record preflight superseded by33034-record final corpus]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
 - [[Keep the latest supplied observation per native ID, with full row lineage.]] - rationale - scripts/merge_social_datasets.py
+- [[Latestnative-ID observation dedupwithrootconflict rejection]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
 - [[Merge compact crawl workbooks, rejecting repeated native content identities.]] - rationale - scripts/merge_social_datasets.py
 - [[MergeTests]] - code - tests/nlp/test_dataset_merge.py
-- [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - concept - graphify-out/obsidian/Crawling 1000 Post Baru.md
 - [[NativeDatasetTests]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[PublishedDataTests]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[Return global native object ID plus its root; text never defines identity.]] - rationale - scripts/merge_social_datasets.py
+- [[Versionedmergepublishesrecordlineageduplicateauditandchecksums]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
 - [[identity()]] - code - scripts/merge_social_datasets.py
-- [[main()_8]] - code - scripts/merge_social_datasets.py
+- [[main()_7]] - code - scripts/merge_social_datasets.py
 - [[merge()]] - code - scripts/merge_social_datasets.py
 - [[merge_social_datasets.py]] - code - scripts/merge_social_datasets.py
 - [[merge_unique()]] - code - scripts/merge_social_datasets.py
@@ -60,15 +60,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
-- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
-- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_2]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 2 edges to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
+- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_4]]
 
 ## Top bridge nodes
-- [[identity()]] - degree 10, connects to 2 communities
-- [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - degree 4, connects to 2 communities
-- [[merge()]] - degree 14, connects to 1 community
+- [[identity()]] - degree 10, connects to 3 communities
+- [[merge()]] - degree 14, connects to 2 communities
 - [[merge_social_datasets.py]] - degree 9, connects to 1 community
 - [[merge_unique()]] - degree 6, connects to 1 community
+- [[Latestnative-ID observation dedupwithrootconflict rejection]] - degree 3, connects to 1 community

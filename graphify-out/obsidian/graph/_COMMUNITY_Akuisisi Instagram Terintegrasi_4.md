@@ -1,37 +1,35 @@
 ---
 type: community
-cohesion: 0.14
-members: 22
+cohesion: 0.22
+members: 20
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.14 - loosely connected
-**Members:** 22 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 20 nodes
 
 ## Members
-- [[Browser response429 and private-header boundary]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Chrome remains available for operator inspection]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Current Instagram bounded retry configuration; historical execution chronology]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Eightfive-second scrolls and offline pacing evidence]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Enabled5–10secondjitter,batch20rest120 andexponentialbackoff]] - concept - config/social_crawler_instagram_3h.json
-- [[Enabled5–10secondjitter,batch20rest120 andexponentialbackoff_1]] - concept - config/social_crawler_instagram_resume_20261030.json
-- [[Exponential localcooldown never shortens serverRetry-After]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Historical Instagram run01248 posts and2128 comments]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Historical Instagram-only campaign start and unchanged three-hour targets]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Instagrambrowserpreset withoptional1.5.2 pacing]] - concept - config/social_crawler_instagram_3h.json
-- [[Instagrambrowserpreset withoptional1.5.2 pacing_1]] - concept - config/social_crawler_instagram_resume_20261030.json
-- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[RFC6585 section4HTTP429]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[RFC9110 section10.2.3Retry-After]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Read-onlyhistoricalbaselineandbothInstagramtrialexclusions]] - rationale - config/social_crawler_instagram_3h.json
-- [[Release194e0b1 live with exact20-row200-sentence CSV]] - concept - graphify-out/obsidian/Topik Gemini.md
-- [[Retain Chrome for manual inspection on barriers]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[User-providedDataDwipInstagram scraping reference]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Verified response429, not generic navigation failure]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Verifieddashboard publication precedes offlinecrawlerpacing]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[CAAHTTP200 without session;legacyHTTP400 needs_upgrade]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Documented public hashtag probe fails upstream AttributeError withzero data]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Explicit autopasswordsessionid login selection]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Future Instaloader worker must retain one run-wide contextrate controller]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[GETqesync405 carries public key;POST500 offers no proven login fix]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Historical real-cookie header-patch validation fails SDKAttributeError]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Historical trial gate superseded by explicitintegrationauthorization]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Instaloader preflight fails before discovery;zero acquired data]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - document - graphify-out/obsidian/InstagramCrawler instagrapi.md
+- [[Live persistence pattern fails after successful settings restore in27.15seconds]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Local restoration verified; server reason remains unknown]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[One LoginRequired recovery with verification-code preservation]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Optional Instaloader4.16 access experiment dependency]] - concept - requirements/instaloader.txt
+- [[Saved-device explicit login and bounded serial acquisition lifecycle]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[User-provided instagrapi scraper guidance]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[User-provided instagrapi session-persistence guidance]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[curl andrequests accountreads both403login_required]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,18 +39,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
-- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
+- 10 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
+- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
+- 1 edge to [[_COMMUNITY_Bundle Excel dan Provenans]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 
 ## Top bridge nodes
-- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - degree 14, connects to 5 communities
-- [[Release194e0b1 live with exact20-row200-sentence CSV]] - degree 6, connects to 4 communities
-- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - degree 10, connects to 3 communities
-- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - degree 8, connects to 3 communities
-- [[Exponential localcooldown never shortens serverRetry-After]] - degree 9, connects to 1 community
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - degree 28, connects to 8 communities
+- [[Historical trial gate superseded by explicitintegrationauthorization]] - degree 10, connects to 3 communities
+- [[Saved-device explicit login and bounded serial acquisition lifecycle]] - degree 9, connects to 1 community
+- [[Instaloader preflight fails before discovery;zero acquired data]] - degree 6, connects to 1 community
+- [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - degree 5, connects to 1 community

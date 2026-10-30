@@ -1,16 +1,15 @@
 ---
 type: community
-cohesion: 0.07
-members: 59
+cohesion: 0.08
+members: 57
 ---
 
 # Crawler Selenium Terisolasi
 
-**Cohesion:** 0.07 - loosely connected
-**Members:** 59 nodes
+**Cohesion:** 0.08 - loosely connected
+**Members:** 57 nodes
 
 ## Members
-- [[.__init__()_20]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.__init__()_21]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[._checkpoint_items()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[._execute()]] - code - Crawler/Backend/social_crawler_selenium.py
@@ -19,7 +18,6 @@ members: 59
 - [[._source_metadata()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[._youtube_reply()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[._youtube_sort()]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[.clock()]] - code - tests/crawler/test_social_crawler.py
 - [[.navigate()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.pause()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.plan()_1]] - code - Crawler/Backend/social_crawler_selenium.py
@@ -78,15 +76,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 7 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
 - 2 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
 - 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
 
 ## Top bridge nodes
 - [[SocialCrawlerSelenium]] - degree 25, connects to 2 communities
+- [[_SeleniumSource]] - degree 18, connects to 2 communities
 - [[test_social_crawler_selenium.py]] - degree 16, connects to 2 communities
 - [[social_crawler_selenium.py]] - degree 12, connects to 2 communities
-- [[_SeleniumSource]] - degree 18, connects to 1 community
 - [[SocialCrawlerSeleniumTests]] - degree 18, connects to 1 community

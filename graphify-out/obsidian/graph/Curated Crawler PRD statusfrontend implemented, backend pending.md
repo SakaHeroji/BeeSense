@@ -12,7 +12,6 @@ tags:
 # Curated Crawler PRD status:frontend implemented, backend pending
 
 ## Connections
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Crawler frontend PRD v1.1 with implemented seven-source UI and pending backend]] - `references` [EXTRACTED]

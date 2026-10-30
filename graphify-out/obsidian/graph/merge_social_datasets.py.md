@@ -16,7 +16,7 @@ tags:
 - [[Latestnative-ID observation dedupwithrootconflict rejection]] - `references` [EXTRACTED]
 - [[Merge compact crawl workbooks, rejecting repeated native content identities.]] - `rationale_for` [EXTRACTED]
 - [[identity()]] - `contains` [EXTRACTED]
-- [[main()_8]] - `contains` [EXTRACTED]
+- [[main()_7]] - `contains` [EXTRACTED]
 - [[merge()]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `contains` [EXTRACTED]
 - [[sha()]] - `contains` [EXTRACTED]

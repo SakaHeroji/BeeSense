@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Arti angka"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Internal model metrics do not establish accuracy or representativeness
@@ -15,4 +15,4 @@ tags:
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Training-corpus coherence is not holdout or labeled accuracy]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

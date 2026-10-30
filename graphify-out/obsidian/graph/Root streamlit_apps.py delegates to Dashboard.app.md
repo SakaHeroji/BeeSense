@@ -1,20 +1,20 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Akuisisi Instagram Terintegrasi"
 location: "## Import Python dan path"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Root streamlit_apps.py delegates to Dashboard.app
 
 ## Connections
-- [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - `references` [EXTRACTED]
+- [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - `references` [EXTRACTED]
 - [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

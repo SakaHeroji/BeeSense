@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
-location: "L800"
+community: "Konfigurasi SocialCrawler"
+location: "L820"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Read root identities only; never alter the historical workbooks.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._existing_posts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

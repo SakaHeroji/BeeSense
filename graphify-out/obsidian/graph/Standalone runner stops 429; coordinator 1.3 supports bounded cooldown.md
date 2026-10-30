@@ -12,7 +12,7 @@ tags:
 # Standalone runner stops 429; coordinator 1.3 supports bounded cooldown
 
 ## Connections
-- [[Bounded HTTP429 policy introduced in1.3 and retained by1.4]] - `references` [EXTRACTED]
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
+- [[Reddit bounded 429 policy introduced in version 1.3]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

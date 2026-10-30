@@ -12,7 +12,7 @@ tags:
 # Per-platform bounds: max_posts 4000, max_candidates 6000
 
 ## Connections
-- [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - `conceptually_related_to` [INFERRED]
+- [[Target 1,000 qualified roots with bounded attempts and candidates]] - `conceptually_related_to` [INFERRED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Konfigurasi_SocialCrawler

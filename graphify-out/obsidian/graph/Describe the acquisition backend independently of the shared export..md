@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Alur Akuisisi Sosial Terpadu"
-location: "L1489"
+location: "L1526"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

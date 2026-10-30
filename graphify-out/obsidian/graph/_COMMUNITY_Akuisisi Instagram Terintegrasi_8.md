@@ -1,32 +1,29 @@
 ---
 type: community
-cohesion: 0.23
-members: 17
+cohesion: 0.16
+members: 14
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.23 - loosely connected
-**Members:** 17 nodes
+**Cohesion:** 0.16 - loosely connected
+**Members:** 14 nodes
 
 ## Members
-- [[.__init__()_24]] - code - Crawler/Backend/instagram_crawler.py
-- [[._baseline()]] - code - Crawler/Backend/instagram_crawler.py
-- [[._existing_posts()]] - code - Crawler/Backend/social_crawler.py
-- [[.accept()_4]] - code - Crawler/Backend/instagram_crawler.py
-- [[.run()_1]] - code - Crawler/Backend/instagram_crawler.py
-- [[Accept only Instagram postreel permalinks; strip tracking parameters.]] - rationale - Crawler/Backend/instagram_crawler.py
-- [[InstagramAdapter]] - code - Crawler/Backend/instagram_crawler.py
-- [[Map explicit native IDstimestamps; do not infer authors or text coverage.]] - rationale - Crawler/Backend/instagram_crawler.py
-- [[Read root identities only; never alter the historical workbooks.]] - rationale - Crawler/Backend/social_crawler.py
-- [[_timestamp()_1]] - code - Crawler/Backend/instagram_crawler.py
-- [[_value()]] - code - Crawler/Backend/instagram_crawler.py
-- [[collect()]] - code - Crawler/Backend/instagram_crawler.py
-- [[media_pk_from_url()]] - code - Crawler/Backend/instagram_crawler.py
-- [[media_url()]] - code - Crawler/Backend/instagram_crawler.py
-- [[native_pk()]] - code - Crawler/Backend/instagram_crawler.py
-- [[normalize_item()]] - code - Crawler/Backend/instagram_crawler.py
-- [[object_key()_1]] - code - Crawler/Backend/instagram_crawler.py
+- [[Bounded hashtag discovery with authoritative local root filters]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Browser response429 and private-header boundary]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Chrome remains available for operator inspection]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Cookie login briefly accepted; private acquisitionreuse still rejected]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Explicit local login and session reuse with no automatic password replay]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Historical browser observed-response 429 evidence]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Historical browser retention for manual barrier inspection]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Instagram-only configured1800-second acquisition budget]] - concept - config/instagram_crawler.json
+- [[Local session path and explicit360-second3-retry policy]] - rationale - config/instagram_crawler.json
+- [[Offline testscontext checks do not establish live Instagram trial success]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Spawned operations,global deadline and bounded retry policy]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Upgradeloginchallenge barriers are distinct from verified429]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[instagrapi upstream private API and login-migration guidance]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,21 +33,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
-- 7 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 6 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 10 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
 
 ## Top bridge nodes
-- [[InstagramAdapter]] - degree 10, connects to 7 communities
-- [[._existing_posts()]] - degree 8, connects to 5 communities
-- [[media_url()]] - degree 11, connects to 4 communities
-- [[normalize_item()]] - degree 12, connects to 3 communities
-- [[collect()]] - degree 10, connects to 3 communities
+- [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - degree 20, connects to 6 communities
+- [[Explicit local login and session reuse with no automatic password replay]] - degree 7, connects to 2 communities
+- [[Offline testscontext checks do not establish live Instagram trial success]] - degree 3, connects to 2 communities
+- [[Historical browser observed-response 429 evidence]] - degree 3, connects to 2 communities
+- [[Cookie login briefly accepted; private acquisitionreuse still rejected]] - degree 2, connects to 1 community

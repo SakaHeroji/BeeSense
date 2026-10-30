@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Akuisisi Instagram Terintegrasi"
 location: "## Perintah dari root repository"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Module CLIs and worker spawn import relocated packages
@@ -17,4 +17,4 @@ tags:
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

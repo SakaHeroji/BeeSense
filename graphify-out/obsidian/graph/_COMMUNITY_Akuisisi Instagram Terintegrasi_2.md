@@ -1,42 +1,46 @@
 ---
 type: community
-cohesion: 0.15
-members: 27
+cohesion: 0.10
+members: 31
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.15 - loosely connected
-**Members:** 27 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 31 nodes
 
 ## Members
-- [[._browser_call()]] - code - Crawler/Backend/social_crawler.py
-- [[._delay()]] - code - Crawler/Backend/social_crawler.py
-- [[._dom_events()]] - code - Crawler/Backend/social_crawler.py
-- [[._execute()_1]] - code - Crawler/Backend/social_crawler.py
-- [[._legacy_settings()_1]] - code - Crawler/Backend/social_crawler.py
-- [[._pace()]] - code - Crawler/Backend/social_crawler.py
-- [[.clock()_1]] - code - tests/crawler/test_instagram_crawler.py
-- [[.setUp()_7]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_discovery_retains_bounded_cursor()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_429_honors_server_wait_and_retries_same_post()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_batch_pause_is_bounded_by_global_deadline()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_default_cooldown_matches_reddit_policy()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_exponential_backoff_is_capped_and_retry_count_is_bounded()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_only_never_calls_youtube_or_reddit_and_matches_excel_contract()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_pacing_rejects_unknown_or_unsafe_values()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_retry_cap_and_global_deadline_stop_additional_requests()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_instagram_server_wait_is_not_shortened_by_backoff_cap()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_mixed_export_keeps_native_platform_provenance()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_native_baseline_skips_instagram_before_worker()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.test_unused_instagram_settings_cannot_leak_credentials_in_other_platform_runs()]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.worker()_2]] - code - tests/crawler/test_instagram_crawler.py
-- [[Clock_1]] - code - tests/crawler/test_instagram_crawler.py
-- [[Compose platform workers with one configuration, scheduler and export bundle.]] - rationale - Crawler/Backend/social_crawler.py
-- [[InstagramIntegrationTests]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[Root-publication date and literal keyword selection]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[SocialCrawler_1]] - code - Crawler/Backend/social_crawler.py
-- [[YouTube date hint aids discovery; exact coordinator timestamp filter decides eligibility]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[20-topiccoherence gate passed; active configuration switched]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[27–30October inclusiverefers tosourceacquisitiondate,notpostdate]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Active artifacts outputsnlp_20261030_instagram_topics20_02]] - concept - config/social_nlp.json
+- [[Active20-topic Instagram-inclusive model configuration]] - document - config/social_nlp.json
+- [[Active20-topic Instagram-inclusive model configuration_1]] - concept - config/social_nlp_instagram_20261030.json
+- [[All20 actual contextual Gemini narratives validated]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Bounded Instagram recovery does not override user stop]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Cloud publication includes model code, config and complete active snapshot]] - rationale - README.md
+- [[Cloud uses relative artifact paths and platform-controlled bind]] - rationale - README.md
+- [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - concept - README.md
+- [[Component-oriented repository layout after SocialCrawler integration]] - document - docs/PROJECT_STRUCTURE.md
+- [[Configured33034-record final merged workbook]] - concept - config/social_nlp.json
+- [[Current active Gemini enabled; historical disabled state retained]] - concept - config/social_nlp.json
+- [[Documented GitHubCloud publication workflow and artifact checks]] - rationale - README.md
+- [[Final Instagram-inclusive20-topicGemini configuration]] - concept - config/social_nlp_instagram_20261030_final.json
+- [[Final audited33034-record Instagram-inclusive corpus]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Fiveintegrationtests plus76NLP andoneisolateddashboardtestpassed]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - document - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Instagram1.5.1 rate-limit recovery andstagedrun chronology]] - rationale - graphify-out/obsidian/InstagramCrawler instagrapi.md
+- [[Module CLIs and worker spawn import relocated packages]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Package ROOT preserves repository-relative configuration and artifact paths]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Published194e0b1 dashboard and byte-identical contextual CSV]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Relocated Dockerfiles preserve packageconfig layout from repository root]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Reorganization preserves data bytes and requires no migration]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[RetainedSBERTrevision,UMAPDBSCANbudget andexplanationgates]] - rationale - config/social_nlp_instagram_20261030.json
+- [[Root streamlit_apps.py delegates to Dashboard.app]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Runtime manifests live under requirements with relative includes]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[User stopped Instagram acquisition; no subsequent crawl]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Verified model configuration enables contextual Gemini CSV]] - concept - config/social_nlp_instagram_20261030.json
+- [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -46,38 +50,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
-- 11 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-- 8 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
-- 8 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
-- 6 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
-- 5 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
-- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 5 edges to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
-- 5 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
-- 2 edges to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 2 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_3]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
+- 6 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 4 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
+- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 3 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 2 edges to [[_COMMUNITY_Topik dan Verifikasi NLP]]
 - 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_1]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
 - 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_7]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_1]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate]]
+- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
 
 ## Top bridge nodes
-- [[SocialCrawler_1]] - degree 109, connects to 25 communities
-- [[InstagramIntegrationTests]] - degree 17, connects to 2 communities
-- [[.worker()_2]] - degree 13, connects to 2 communities
-- [[Clock_1]] - degree 10, connects to 1 community
-- [[._browser_call()]] - degree 4, connects to 1 community
+- [[Active20-topic Instagram-inclusive model configuration]] - degree 14, connects to 4 communities
+- [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - degree 10, connects to 4 communities
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - degree 13, connects to 3 communities
+- [[Component-oriented repository layout after SocialCrawler integration]] - degree 10, connects to 3 communities
+- [[Module CLIs and worker spawn import relocated packages]] - degree 4, connects to 3 communities

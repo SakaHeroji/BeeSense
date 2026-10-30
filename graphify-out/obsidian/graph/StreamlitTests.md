@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.app()]] - `method` [EXTRACTED]
-- [[.setUp()_12]] - `method` [EXTRACTED]
+- [[.setUp()_11]] - `method` [EXTRACTED]
 - [[.setUpClass()_3]] - `method` [EXTRACTED]
 - [[.tearDown()_1]] - `method` [EXTRACTED]
 - [[.tearDownClass()_3]] - `method` [EXTRACTED]

@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - `references` [EXTRACTED]
-- [[Seven regression cases verify shared default backend contracts]] - `conceptually_related_to` [INFERRED]
+- [[Documented regression coverage for shared backend contracts]] - `conceptually_related_to` [INFERRED]
 
 #graphify/concept #graphify/INFERRED #community/Runbook_dan_Verifikasi_Lokal

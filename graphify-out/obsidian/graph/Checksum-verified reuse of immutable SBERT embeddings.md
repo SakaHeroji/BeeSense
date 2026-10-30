@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Runbook dan Verifikasi Lokal"
 location: "## Pelatihan dan dashboard"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Checksum-verified reuse of immutable SBERT embeddings
@@ -21,4 +21,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `references` [EXTRACTED]
 - [[Separate SBERT training and artifact-only dashboard environments]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

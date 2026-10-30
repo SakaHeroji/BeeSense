@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Package module CLIs retain repository-root path semantics
@@ -16,4 +16,4 @@ tags:
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

@@ -12,7 +12,7 @@ tags:
 # Three unchanged SocialCrawler methods moved to SocialExportMixin
 
 ## Connections
-- [[Reddrix normalization,display,iterator and worker owned by main core]] - `references` [EXTRACTED]
+- [[Main coordinator owns Reddrix normalization, display and worker]] - `references` [EXTRACTED]
 - [[SocialExportMixin]] - `references` [EXTRACTED]
 - [[Standalone Instagram uses existing auditcompact Excel contract]] - `references` [EXTRACTED]
 

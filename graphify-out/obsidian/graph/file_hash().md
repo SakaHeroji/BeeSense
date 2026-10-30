@@ -16,7 +16,6 @@ tags:
 - [[._reduce_embeddings()]] - `calls` [EXTRACTED]
 - [[.encode()]] - `calls` [EXTRACTED]
 - [[.explain_topics()]] - `calls` [EXTRACTED]
-- [[.export_compact()]] - `calls` [INFERRED]
 - [[.finish()]] - `calls` [INFERRED]
 - [[.finish()_1]] - `calls` [INFERRED]
 - [[.load_explanations()]] - `calls` [EXTRACTED]

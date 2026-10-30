@@ -1,28 +1,24 @@
 ---
 type: community
-cohesion: 0.18
-members: 13
+cohesion: 0.36
+members: 9
 ---
 
 # Snapshot NLP dan Arsip
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 0.36 - loosely connected
+**Members:** 9 nodes
 
 ## Members
-- [[Artifact-only dashboard without GensimTorch imports]] - rationale - graphify-out/obsidian/Menjalankan BeeSense.md
-- [[BeeSense startup, verification and coherence training runbook]] - document - graphify-out/obsidian/Menjalankan BeeSense.md
-- [[Currentcoherencegatepreservesnegativesilhouetteandin-samplelimits]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[FinalnativeIDauditwithpreservedhistoricalchecksums]] - rationale - graphify-out/obsidian/Dataset Dashboard.md
-- [[Four Parquet files, UMAP npz and eleven-artifact v 2 manifest]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Historical v 1 HDBSCAN directional counts for 51 topics]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Historicalcorporaandscoresarenotcurrentqualitycomparators]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[ImmutableolderNLPsnapshots including29Octobercombinedrun]] - rationale - graphify-out/obsidian/Dataset Dashboard.md
-- [[Obsidian dashboard dataset provenance]] - document - graphify-out/obsidian/Dataset Dashboard.md
-- [[Obsidian method verify embeddings then refit UMAPDBSCAN]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - document - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[Text spans, source_row and date certainty survive embedding deduplication]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Unchanged MMR and source-guarded Theil-SenKendall explanations]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - rationale - .github/workflows/ci.yml
+- [[Cloud root requirements install dashboard-only dependencies]] - rationale - README.md
+- [[Dashboard-only artifactexplanationUI dependency boundary]] - rationale - requirements/dashboard.txt
+- [[Historical Python 3.14.10 install failure ONNX wheels and Numba support]] - rationale - README.md
+- [[Isolated dashboard-runtime matrix for Python 3.12 and3.14]] - rationale - .github/workflows/ci.yml
+- [[NumPy 2.2.6 below Python 3.14;2.3.5 on Python 3.14 and later]] - rationale - requirements/dashboard.txt
+- [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - document - graphify-out/obsidian/Menjalankan BeeSense.md
+- [[PyArrow 24.0.0 matches Cloud threaded-import compatibility guard]] - rationale - README.md
+- [[Root Cloud requirements include relocated dashboard-only runtime]] - document - requirements.txt
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,22 +28,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
 - 2 edges to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
-- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate]]
-- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
-- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_1]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_3]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 
 ## Top bridge nodes
-- [[BeeSense startup, verification and coherence training runbook]] - degree 10, connects to 6 communities
-- [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - degree 13, connects to 5 communities
-- [[Obsidian dashboard dataset provenance]] - degree 9, connects to 3 communities
-- [[Text spans, source_row and date certainty survive embedding deduplication]] - degree 3, connects to 1 community
-- [[Historical v 1 HDBSCAN directional counts for 51 topics]] - degree 2, connects to 1 community
+- [[Dashboard-only artifactexplanationUI dependency boundary]] - degree 9, connects to 2 communities
+- [[Historical Python 3.14.10 install failure ONNX wheels and Numba support]] - degree 5, connects to 2 communities
+- [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - degree 4, connects to 2 communities
+- [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - degree 4, connects to 1 community
+- [[Cloud root requirements install dashboard-only dependencies]] - degree 4, connects to 1 community

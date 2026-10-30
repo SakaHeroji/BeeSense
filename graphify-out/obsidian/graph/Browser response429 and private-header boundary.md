@@ -12,7 +12,7 @@ tags:
 # Browser response429 and private-header boundary
 
 ## Connections
+- [[Historical browser observed-response 429 evidence]] - `conceptually_related_to` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
-- [[Verified response429, not generic navigation failure]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

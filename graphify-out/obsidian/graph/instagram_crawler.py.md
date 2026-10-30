@@ -31,6 +31,7 @@ tags:
 - [[create_client()]] - `contains` [EXTRACTED]
 - [[error_receipt()]] - `contains` [EXTRACTED]
 - [[instagram_worker()]] - `contains` [EXTRACTED]
+- [[instaloader_crawler.py]] - `imports_from` [EXTRACTED]
 - [[load_client()]] - `contains` [EXTRACTED]
 - [[login_from_file()]] - `contains` [EXTRACTED]
 - [[login_local()]] - `contains` [EXTRACTED]

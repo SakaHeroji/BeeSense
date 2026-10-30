@@ -5,7 +5,7 @@ community: "Akuisisi Instagram Terintegrasi"
 location: "## Akuisisi"
 tags:
   - graphify/concept
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Akuisisi_Instagram_Terintegrasi
 ---
 
@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[20-topiccoherence gate passed; active configuration switched]] - `references` [EXTRACTED]
-- [[InstagramIntegrationTests]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

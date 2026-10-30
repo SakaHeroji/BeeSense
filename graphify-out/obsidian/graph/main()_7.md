@@ -1,20 +1,18 @@
 ---
-source_file: "Dashboard/app.py"
+source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L2247"
+community: "Topik dan Verifikasi NLP"
+location: "L353"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # main()
 
 ## Connections
-- [[.render()_1]] - `calls` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `calls` [EXTRACTED]
-- [[app.py]] - `contains` [EXTRACTED]
-- [[streamlit_apps.py]] - `imports` [EXTRACTED]
+- [[merge()]] - `calls` [EXTRACTED]
+- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

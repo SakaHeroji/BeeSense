@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "rationale"
-community: "Bundle Excel dan Provenans"
+community: "Akuisisi Reddit Reddrix"
 location: "# RedditCrawler Reddrix"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Async Reddrix to validated records to existing Excel pipeline
@@ -18,4 +18,4 @@ tags:
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[Verified Reddit native identity and parentroot relationships]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

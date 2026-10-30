@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Akuisisi Reddit Reddrix"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # SocialCrawlerReddrixTests
@@ -24,9 +24,9 @@ tags:
 - [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - `method` [EXTRACTED]
 - [[.youtube_worker()]] - `method` [EXTRACTED]
 - [[Clock]] - `uses` [INFERRED]
+- [[Documented regression coverage for shared backend contracts]] - `references` [INFERRED]
 - [[FakeReddrix]] - `uses` [INFERRED]
-- [[Seven regression cases verify shared default backend contracts]] - `references` [INFERRED]
 - [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[test_social_crawler_reddrix.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

@@ -12,7 +12,7 @@ tags:
 # Final campaign consolidation and explicit partial target shortfalls
 
 ## Connections
-- [[Atomic sibling .progress.json snapshots during acquisition]] - `semantically_similar_to` [INFERRED]
+- [[Atomic sibling .progress.json acquisition snapshots]] - `semantically_similar_to` [INFERRED]
 - [[Consolidated audit PARTIAL shortfalls 700942 and no pending segments]] - `references` [EXTRACTED]
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
 - [[Historical descriptor-based monitoring now resolves final campaign counters]] - `references` [EXTRACTED]

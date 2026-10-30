@@ -1,12 +1,12 @@
 # SocialCrawler
 
-## Integrasi Instagram 1.5
+## Integrasi Instagram 1.6 — Instaloader
 
-Instagram sekarang memakai scheduler, filter root, deduplikasi native ID, audit dan
-ekspor Excel SocialCrawler yang sama. Worker/adapter bersumber dari
-`instagram_crawler.py`; backend `browser` memakai profil Chrome persisten yang
-sudah login manual. Backend `instagrapi` tetap opsional, dengan sesi lokal eksplisit.
-Konfigurasi default YouTube/Reddit tetap tersedia. Run yang hanya mengambil Instagram:
+Backend Instagram default kini **Instaloader 4.16**, melalui worker persisten yang
+sama dengan `InstaloaderCrawler`. Patch runtime metadata mengirim GraphQL web
+beserta token/header sesi; komentar memakai NodeIterator query_hash sesuai PR
+upstream #2692. Uji standalone berhasil membaca 1 post/20 komentar nyata dalam
+26,56 detik tanpa HTTP 400/429. Ini bukti singkat, bukan jaminan run panjang.
 
 ```sh
 python -m Crawler.Backend.social_crawler \
@@ -14,18 +14,17 @@ python -m Crawler.Backend.social_crawler \
   --output-dir outputs/social_instagram_run_baru
 ```
 
-Preset ini **hanya mengaktifkan Instagram**, 10.800 detik, target 1.000 root dengan
-minimum 10 komentar unik. Hashtag discovery diperluas tanpa mengubah filter include/
-exclude, batas tanggal root atau kontrak output. Post lama dari baseline dan dua
-percobaan Instagram dikecualikan sebelum request. Target tidak menjamin hasil atau
-kelengkapan komentar. `instagram_browser` mengatur profil, nama sesi CLI, mode headed,
-batas scroll dan jeda. CLI @playwright/cli 0.1.22 serta Chrome diperlukan; lihat
-[panduan Instagram](INSTAGRAM_CRAWLER.md). Image Instagram browser memakai entry
-SocialCrawler, sedangkan image crawler lama mempertahankan runtime YouTube/Reddit.
+Preset Instagram-only tetap **10.800 detik**, target **1.000 post/minimum 10 komentar**.
+`instaloader` mengatur username, path auth/session, timeout request, minimum jeda
+HTTP 5 detik dan comments_transport=query_hash. Auth dibaca dari file lokal yang
+diabaikan Git; tidak ada password atau token di config publik. Retry HTTP 429
+preset adalah nol; pacing 5–10 detik dan batch pause tetap aktif. Opsi retry
+non-default mengikuti cooldown scheduler tanpa mereset context/rate controller.
 
-Lima uji integrasi offline mencakup Instagram-only tanpa memanggil sumber lain,
-baseline skip sebelum worker, cursor discovery, dan provenance gabungan dengan
-YouTube. Semua fixture tetap synthetic. Tidak ada perubahan skema database.
+Native ID, relasi parent, filter, dedup baseline dan kontrak Excel tetap digunakan
+bersama YouTube/Reddit. Worker ditutup pada akhir run. Backend browser/instagrapi
+lama tetap dapat dipilih eksplisit; preset aktif tidak memerlukan Chrome atau Node
+untuk Instagram. Lihat [class, patch, bukti dan batas Instaloader](INSTALOADER_CRAWLER.md).
 
 [SocialCrawler](../../Crawler/Backend/social_crawler.py) menggabungkan YouTube melalui yt-dlp dan Reddit melalui **Reddrix 1.2.14**. Normalisasi, factory browser adaptif, worker Reddrix dan coordinator berada di `Crawler/Backend/social_crawler.py`; kontrak serta exporter audit tetap memakai [modul Reddit](../../Crawler/Backend/Reddit/crawl_reddit_single.py). Konfigurasi gabungannya berada dalam satu [social_crawler.json](../../config/social_crawler.json). Tidak memerlukan peta Obsidian untuk mengeksekusi crawler.
 

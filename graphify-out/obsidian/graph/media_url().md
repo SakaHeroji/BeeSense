@@ -17,11 +17,9 @@ tags:
 - [[Accept only Instagram postreel permalinks; strip tracking parameters.]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [EXTRACTED]
 - [[_configuration()]] - `calls` [EXTRACTED]
-- [[_url()]] - `calls` [EXTRACTED]
 - [[collect()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[media_pk_from_url()]] - `calls` [EXTRACTED]
 - [[normalize_item()]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

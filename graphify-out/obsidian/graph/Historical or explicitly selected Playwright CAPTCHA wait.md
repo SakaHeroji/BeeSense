@@ -15,6 +15,6 @@ tags:
 - [[._wait_for_captcha()]] - `implements` [INFERRED]
 - [[Coordinator waits for manual CAPTCHA without automated clicks]] - `semantically_similar_to` [INFERRED]
 - [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - `conceptually_related_to` [INFERRED]
-- [[Retained defaulthistorical round-robin deadline;newInstagram-onlyrun separate]] - `references` [EXTRACTED]
+- [[Shared three-hour round-robin deadline; historical segments retain original budget]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Konfigurasi_SocialCrawler

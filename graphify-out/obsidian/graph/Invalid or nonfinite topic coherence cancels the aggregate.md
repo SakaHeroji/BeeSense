@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Invalid or nonfinite topic coherence cancels the aggregate
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Unweighted mean across all 20 final non-noise topics]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

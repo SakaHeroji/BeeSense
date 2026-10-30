@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.crawler"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Operasi dan Verifikasi BeeSense"
 location: "L2-L20"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Relocated combined crawler image runs package module as UID10001
@@ -18,4 +18,4 @@ tags:
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "document"
-community: "Snapshot NLP dan Arsip"
+community: "Akuisisi Instagram Terintegrasi"
 location: "# Struktur proyek BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Component-oriented repository layout after SocialCrawler integration
@@ -23,4 +23,4 @@ tags:
 - [[Runtime manifests live under requirements with relative includes]] - `references` [EXTRACTED]
 - [[topic_narratives.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/document #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

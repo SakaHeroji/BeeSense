@@ -1,32 +1,32 @@
 ---
 type: community
-cohesion: 0.19
+cohesion: 0.13
 members: 17
 ---
 
 # Pipeline dan Persistensi NLP
 
-**Cohesion:** 0.19 - loosely connected
+**Cohesion:** 0.13 - loosely connected
 **Members:** 17 nodes
 
 ## Members
-- [[.evaluate_run_coherence()]] - code - MachineLearning/social_nlp.py
-- [[.load_explanations()]] - code - MachineLearning/social_nlp.py
-- [[.load_run()]] - code - MachineLearning/social_nlp.py
-- [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_csv_manifest_and_roundtrip_bind_every_topic_and_keyword_weight()]] - code - tests/nlp/test_topic_narratives.py
-- [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_saved_run_coherence_reproduces_the_published_score()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - code - tests/nlp/test_social_nlp.py
-- [[A merge report binds its small, explicit audit sidecars to the input.]] - rationale - scripts/verify_dashboard_data.py
-- [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
-- [[Verify record identity independently of sentence-text deduplication.]] - rationale - scripts/verify_dashboard_data.py
-- [[file_hash()]] - code - MachineLearning/social_nlp.py
-- [[main()_9]] - code - scripts/verify_dashboard_data.py
-- [[published_source_files()]] - code - scripts/verify_dashboard_data.py
-- [[verify()_1]] - code - scripts/verify_dashboard_data.py
-- [[verify_dashboard_data.py]] - code - scripts/verify_dashboard_data.py
-- [[verify_native_dataset()]] - code - scripts/verify_dashboard_data.py
+- [[._ctfidf_terms()]] - code - MachineLearning/social_nlp.py
+- [[._evaluate()]] - code - MachineLearning/social_nlp.py
+- [[._filter_radius()]] - code - MachineLearning/social_nlp.py
+- [[._merge_topics()]] - code - MachineLearning/social_nlp.py
+- [[._radius_graph()]] - code - MachineLearning/social_nlp.py
+- [[._topic_vectorizer()]] - code - MachineLearning/social_nlp.py
+- [[.build_topic_graph()]] - code - MachineLearning/social_nlp.py
+- [[.compare()]] - code - MachineLearning/social_nlp.py
+- [[.describe_topics()]] - code - MachineLearning/social_nlp.py
+- [[.score_coherence()]] - code - MachineLearning/social_nlp.py
+- [[.stability()]] - code - MachineLearning/social_nlp.py
+- [[.test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability()]] - code - tests/nlp/test_social_nlp.py
+- [[Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un]] - rationale - MachineLearning/social_nlp.py
+- [[Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi]] - rationale - MachineLearning/social_nlp.py
+- [[Preserve explicit zero distances, including identical sentence vectors.]] - rationale - MachineLearning/social_nlp.py
+- [[Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry.]] - rationale - MachineLearning/social_nlp.py
+- [[Use the same class TF-IDF vocabulary for selection and publication.]] - rationale - MachineLearning/social_nlp.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,21 +36,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 9 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
-- 5 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
-- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_3]]
-- 2 edges to [[_COMMUNITY_Ringkasan Topik Gemini_1]]
-- 2 edges to [[_COMMUNITY_Topik dan Verifikasi NLP]]
-- 1 edge to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_4]]
+- 13 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 8 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
+- 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_1]]
 
 ## Top bridge nodes
-- [[file_hash()]] - degree 26, connects to 8 communities
-- [[.load_run()]] - degree 12, connects to 4 communities
-- [[.evaluate_run_coherence()]] - degree 5, connects to 3 communities
-- [[verify_dashboard_data.py]] - degree 9, connects to 2 communities
-- [[verify_native_dataset()]] - degree 5, connects to 2 communities
+- [[.compare()]] - degree 13, connects to 3 communities
+- [[.describe_topics()]] - degree 6, connects to 3 communities
+- [[._merge_topics()]] - degree 5, connects to 3 communities
+- [[._radius_graph()]] - degree 4, connects to 3 communities
+- [[.score_coherence()]] - degree 7, connects to 2 communities

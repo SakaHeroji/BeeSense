@@ -1,25 +1,25 @@
 {
-  "node_count": 541,
+  "node_count": 265,
   "unverified_node_count": 0,
-  "raw_edge_count": 1848,
+  "raw_edge_count": 699,
   "non_object_edges": 0,
   "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 635,
+  "dangling_endpoint_edges": 196,
   "self_loop_edges": 0,
-  "valid_candidate_edges": 1213,
+  "valid_candidate_edges": 503,
   "exact_duplicate_edges": 0,
-  "directed_unique_endpoint_pairs": 1209,
-  "directed_same_endpoint_collapsed_edges": 4,
-  "undirected_unique_endpoint_pairs": 1209,
-  "undirected_same_endpoint_collapsed_edges": 4,
-  "same_endpoint_group_count": 4,
-  "relation_variant_groups": 3,
+  "directed_unique_endpoint_pairs": 503,
+  "directed_same_endpoint_collapsed_edges": 0,
+  "undirected_unique_endpoint_pairs": 503,
+  "undirected_same_endpoint_collapsed_edges": 0,
+  "same_endpoint_group_count": 0,
+  "relation_variant_groups": 0,
   "source_file_variant_groups": 0,
-  "source_location_variant_groups": 1,
+  "source_location_variant_groups": 0,
   "context_variant_groups": 0,
   "post_build_graph_type": "Graph",
-  "post_build_node_count": 541,
-  "post_build_edge_count": 1210,
+  "post_build_node_count": 265,
+  "post_build_edge_count": 503,
   "post_build_error": "",
   "producer_suppression": {
     "path": "/Users/socs3/.pyenv/versions/3.12.0/lib/python3.12/site-packages/graphify/extract.py",
@@ -88,82 +88,5 @@
     ],
     "error": ""
   },
-  "examples": [
-    {
-      "source": "crawler_backend_instagram_crawler_instagramcrawler",
-      "target": "crawler_backend_social_export_socialexportmixin",
-      "edge_count": 2,
-      "relations": [
-        "inherits",
-        "uses"
-      ],
-      "source_files": [
-        "Crawler/Backend/instagram_crawler.py"
-      ],
-      "source_locations": [
-        "L31",
-        "L793"
-      ],
-      "contexts": [
-        ""
-      ]
-    },
-    {
-      "source": "crawler_backend_social_crawler_socialcrawler",
-      "target": "crawler_backend_social_export_socialexportmixin",
-      "edge_count": 2,
-      "relations": [
-        "inherits",
-        "uses"
-      ],
-      "source_files": [
-        "Crawler/Backend/social_crawler.py"
-      ],
-      "source_locations": [
-        "L35",
-        "L731"
-      ],
-      "contexts": [
-        ""
-      ]
-    },
-    {
-      "source": "crawler_backend_instagram_browser_instagrambrowserworker",
-      "target": "crawler_backend_instagram_browser_instagrambrowserworker_call",
-      "edge_count": 2,
-      "relations": [
-        "method"
-      ],
-      "source_files": [
-        "Crawler/Backend/instagram_browser.py"
-      ],
-      "source_locations": [
-        "L178",
-        "L205"
-      ],
-      "contexts": [
-        ""
-      ]
-    },
-    {
-      "source": "tests_nlp_test_social_nlp_nlptests_setupclass",
-      "target": "machinelearning_social_nlp_socialnlpclusterer",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "indirect_call"
-      ],
-      "source_files": [
-        "tests/nlp/test_social_nlp.py"
-      ],
-      "source_locations": [
-        "L128",
-        "L129"
-      ],
-      "contexts": [
-        "argument",
-        "call"
-      ]
-    }
-  ]
+  "examples": []
 }

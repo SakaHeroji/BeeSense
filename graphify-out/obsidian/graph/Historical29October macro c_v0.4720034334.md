@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Coherence dan Quality Gate"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Historical29October macro c_v0.4720034334
@@ -19,4 +19,4 @@ tags:
 - [[Historical720 shortfalls; current model has820]] - `references` [EXTRACTED]
 - [[Unweighted mean across all 20 final non-noise topics]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

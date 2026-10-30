@@ -1,0 +1,22 @@
+---
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
+type: "concept"
+community: "Eksperimen Instaloader dan GraphQL Web"
+tags:
+  - graphify/concept
+  - graphify/EXTRACTED
+  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+---
+
+# Instagram three-hour target preset
+
+## Connections
+- [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
+- [[Local JSON session handling]] - `conceptually_related_to` [EXTRACTED]
+- [[Persistent worker, rate state and hard deadline]] - `conceptually_related_to` [EXTRACTED]
+- [[Shared InstagramCrawler data contract]] - `implements` [EXTRACTED]
+- [[SocialCrawler 1.6.0 default Instaloader integration]] - `conceptually_related_to` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
+- [[Verified429 scheduler cooldown and historical evidence]] - `conceptually_related_to` [EXTRACTED]
+
+#graphify/concept #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web

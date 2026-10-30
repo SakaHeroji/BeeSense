@@ -1,24 +1,22 @@
 ---
 type: community
-cohesion: 0.36
-members: 9
+cohesion: 0.29
+members: 7
 ---
 
 # Snapshot NLP dan Arsip
 
-**Cohesion:** 0.36 - loosely connected
-**Members:** 9 nodes
+**Cohesion:** 0.29 - loosely connected
+**Members:** 7 nodes
 
 ## Members
-- [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - rationale - .github/workflows/ci.yml
-- [[Cloud root requirements now install dashboard-only dependencies]] - rationale - README.md
-- [[Dashboard-only artifactexplanationUI dependency boundary]] - rationale - requirements/dashboard.txt
-- [[Historical Python 3.14.10 Cloud install failureONNX cp314 wheels and Numba support]] - rationale - README.md
-- [[Isolated dashboard-runtime matrix for Python 3.12 and3.14]] - rationale - .github/workflows/ci.yml
-- [[NumPy 2.2.6 below Python 3.14;2.3.5 on Python 3.14 and later]] - rationale - requirements/dashboard.txt
-- [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - document - graphify-out/obsidian/Menjalankan BeeSense.md
-- [[PyArrow 24.0.0 matches Cloud guard for Arrowmimalloc threaded-import compatibility]] - rationale - README.md
-- [[Root Cloud requirements include relocated dashboard-only runtime]] - document - requirements.txt
+- [[Curated PRD 1.1 theme and seven-source UI distinguish planned backend adapters]] - rationale - graphify-out/obsidian/Frontend React Crawler.md
+- [[Curated React Crawler implementation with syntheticAPI separation]] - document - graphify-out/obsidian/Frontend React Crawler.md
+- [[Curated delivery evidence separates UX audit from real backend readiness]] - rationale - graphify-out/obsidian/Frontend React Crawler.md
+- [[Curated demo storage and API-mode failure boundaries]] - rationale - graphify-out/obsidian/Frontend React Crawler.md
+- [[Curated local React devNginx runtime is distinct from Dashboard]] - concept - graphify-out/obsidian/Frontend React Crawler.md
+- [[Delivery records 50 passing tests, lintformat and production API build]] - concept - Crawler/Frontend/docs/DELIVERY.md
+- [[Seven implemented UIdemo sources;only two Python adapters exist]] - rationale - PRD/PRD Frontend/PRD Frontend Crawler.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,17 +26,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
-- 2 edges to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 3 edges to [[_COMMUNITY_PRD Workspace Crawler_1]]
+- 2 edges to [[_COMMUNITY_PRD Workspace Crawler_2]]
+- 1 edge to [[_COMMUNITY_PRD Workspace Crawler_3]]
+- 1 edge to [[_COMMUNITY_PRD Workspace Crawler]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_PRD Workspace Crawler_4]]
 
 ## Top bridge nodes
-- [[Dashboard-only artifactexplanationUI dependency boundary]] - degree 9, connects to 2 communities
-- [[Historical Python 3.14.10 Cloud install failureONNX cp314 wheels and Numba support]] - degree 5, connects to 2 communities
-- [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - degree 4, connects to 2 communities
-- [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - degree 4, connects to 1 community
-- [[Cloud root requirements now install dashboard-only dependencies]] - degree 4, connects to 1 community
+- [[Curated React Crawler implementation with syntheticAPI separation]] - degree 10, connects to 5 communities
+- [[Seven implemented UIdemo sources;only two Python adapters exist]] - degree 4, connects to 2 communities
+- [[Delivery records 50 passing tests, lintformat and production API build]] - degree 2, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # 1000 qualified-root targets per platform within shared three-hour budget
 
 ## Connections
-- [[Retained defaulthistorical round-robin deadline;newInstagram-onlyrun separate]] - `conceptually_related_to` [INFERRED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
+- [[Shared three-hour round-robin deadline; historical segments retain original budget]] - `conceptually_related_to` [INFERRED]
 
 #graphify/rationale #graphify/INFERRED #community/Konfigurasi_SocialCrawler

@@ -7,6 +7,8 @@
 !Crawler/Backend/
 !Crawler/Backend/__init__.py
 !Crawler/Backend/social_crawler.py
+!Crawler/Backend/instaloader_crawler.py
+!Crawler/Backend/instaloader_browser_patch.py
 !Crawler/Backend/social_export.py
 !Crawler/Backend/instagram_crawler.py
 !Crawler/Backend/instagram_browser.py
@@ -26,6 +28,7 @@
 !config/social_crawler.json
 !config/reddit_crawler.json
 !requirements/crawler.txt
+!requirements/instaloader.txt
 !requirements/reddrix.txt
 !deployment/docker/Dockerfile.selenium
 !requirements/selenium.txt

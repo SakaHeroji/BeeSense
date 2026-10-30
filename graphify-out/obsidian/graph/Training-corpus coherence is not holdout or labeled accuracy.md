@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Training-corpus coherence is not holdout or labeled accuracy
@@ -17,4 +17,4 @@ tags:
 - [[Historical720 shortfalls; current model has820]] - `references` [EXTRACTED]
 - [[Internal model metrics do not establish accuracy or representativeness]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

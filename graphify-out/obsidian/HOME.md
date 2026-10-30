@@ -5,6 +5,9 @@ tags: [beesense, dashboard]
 
 # BeeSense
 
+[[InstaloaderCrawler]] menjadi backend Instagram default SocialCrawler 1.6.0; catatannya memuat patch GraphQL web pengguna,
+uji Excel/dedup dan batas aksesnya. Detail hasil terbaru ada pada catatan tersebut.
+
 [[InstagramCrawler instagrapi]] terintegrasi dalam SocialCrawler 1.5.1. Akuisisi dihentikan pengguna setelah HTTP 429; batch terbaru menyimpan 248 post/2.128 komentar. Dataset gabungan 33.034 record unik sudah dilatih menjadi 20 topik/c_v 0,4315, lengkap dengan CSV [[Topik Gemini]]. Publikasi GitHub mengikuti pemeriksaan release.
 
 [[Arsitektur BeeSense]] · [[Dataset Dashboard]] · [[Menjalankan BeeSense]] · [[Metodologi Machine Learning Social NLP]]

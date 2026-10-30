@@ -35,7 +35,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_PRD Workspace Crawler_3]]
 - 3 edges to [[_COMMUNITY_PRD Workspace Crawler_1]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_4]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
 - 2 edges to [[_COMMUNITY_PRD Workspace Crawler_4]]
 - 1 edge to [[_COMMUNITY_PRD Workspace Crawler]]
 

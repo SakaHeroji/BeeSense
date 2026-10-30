@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Identitas dan Kontrak Data"
 location: "L1201"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # timeout_fixture()
@@ -15,4 +15,4 @@ tags:
 - [[.test_16_hard_timeout_keeps_already_received_event()]] - `indirect_call` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

@@ -1,18 +1,18 @@
 ---
-source_file: "scripts/merge_social_datasets.py"
+source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Topik dan Verifikasi NLP"
-location: "L353"
+community: "Pipeline dan Persistensi NLP"
+location: "L179"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # main()
 
 ## Connections
-- [[merge()]] - `calls` [EXTRACTED]
-- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
+- [[verify()_1]] - `calls` [EXTRACTED]
+- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

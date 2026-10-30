@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Bundle Excel dan Provenans"
 location: "L71"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # now_iso()
@@ -18,4 +18,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

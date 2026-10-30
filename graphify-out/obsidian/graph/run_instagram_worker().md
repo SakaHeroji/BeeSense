@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[main()_4]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

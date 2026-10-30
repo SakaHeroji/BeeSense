@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Backend PRD is not written; APIworker services remain proposed]] - `references` [EXTRACTED]
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[Crawler frontend PRD v1.1 with implemented seven-source UI and pending backend]] - `references` [EXTRACTED]
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - `references` [EXTRACTED]
 - [[Curated Crawler PRD statusfrontend implemented, backend pending]] - `references` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/reddrix.txt"
 type: "concept"
-community: "Akuisisi Reddit Reddrix"
+community: "Operasi dan Verifikasi BeeSense"
 location: "L1-L6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Isolated Reddrix 1.2.14 crawler dependency pins
@@ -19,4 +19,4 @@ tags:
 - [[Separate SBERT training and artifact-only dashboard environments]] - `semantically_similar_to` [INFERRED]
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

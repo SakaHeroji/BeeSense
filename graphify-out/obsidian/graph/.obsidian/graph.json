@@ -1,63 +1,63 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/Adapter_Akuisisi_YouTube",
+      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
       "color": {
         "a": 1,
         "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Adapter_Akuisisi_YouTube",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Crawler_Selenium_Terisolasi",
       "color": {
         "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
-      "color": {
-        "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Eksperimen_Instaloader_dan_GraphQL_Web",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Ekspor_Campaign_dan_Resume",
+      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Topik_dan_Verifikasi_NLP",
+      "query": "tag:#community/Eksperimen_Instaloader_dan_GraphQL_Web",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "query": "tag:#community/Topik_dan_Verifikasi_NLP",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -68,122 +68,122 @@
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Identitas_dan_Kontrak_Data",
       "color": {
         "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Akses_dan_Parsing_HTML",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Topik_dan_Verifikasi_NLP",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
-      "color": {
-        "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
       "color": {
         "a": 1,
         "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Eksperimen_Instaloader_dan_GraphQL_Web",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Topik_dan_Verifikasi_NLP",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Ringkasan_Topik_Gemini",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Bundle_Excel_dan_Provenans",
       "color": {
         "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Ringkasan_Topik_Gemini",
+      "query": "tag:#community/Ekspor_Campaign_dan_Resume",
       "color": {
         "a": 1,
         "rgb": 11565729
@@ -197,76 +197,6 @@
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Pengujian_Penjelasan_Topik",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Ringkasan_Topik_Gemini",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
       "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
@@ -274,7 +204,7 @@
       }
     },
     {
-      "query": "tag:#community/PRD_Workspace_Crawler",
+      "query": "tag:#community/Akses_dan_Parsing_HTML",
       "color": {
         "a": 1,
         "rgb": 12234924
@@ -288,490 +218,210 @@
       }
     },
     {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Parser_DOM_Terbatas",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/PRD_Workspace_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/PRD_Workspace_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/PRD_Workspace_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Ringkasan_Topik_Gemini",
       "color": {
         "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Pengujian_UI_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Runbook_dan_Verifikasi_Lokal",
-      "color": {
-        "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Helper_Campaign_Browser",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Konfigurasi_SocialCrawler",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Arsitektur_Crawler_dan_Dependensi",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Identitas_dan_Kontrak_Data",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
       "color": {
         "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
         "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Penjelasan_Topik",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/PRD_Workspace_Crawler",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
-      "color": {
-        "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "query": "tag:#community/Workspace_React_Crawler",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
       "color": {
         "a": 1,
         "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Parser_dan_Runner_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Ringkasan_Topik_Gemini",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
       "color": {
         "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Ekstraksi_Cuplikan_Publik",
-      "color": {
-        "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/PRD_Workspace_Crawler",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Workspace_React_Crawler",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Ekstraksi_DOM_Reddit",
+      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/PRD_Workspace_Crawler",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/PRD_Workspace_Crawler",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Pengujian_UI_Streamlit",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Runbook_dan_Verifikasi_Lokal",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Helper_Campaign_Browser",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Parser_DOM_Terbatas",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_Campaign_Reddit",
+      "query": "tag:#community/Konfigurasi_SocialCrawler",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_Adapter_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Konfigurasi_Adapter_YouTube",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Kontrak_Tabel_YouTube",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Memori_Startup_Dashboard",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "query": "tag:#community/Konfigurasi_SocialCrawler",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -785,17 +435,360 @@
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Adapter_Akuisisi_YouTube",
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
       "color": {
         "a": 1,
         "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Arsitektur_Crawler_dan_Dependensi",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Identitas_dan_Kontrak_Data",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/PRD_Workspace_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Coherence_dan_Quality_Gate",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Runbook_dan_Verifikasi_Lokal",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Coherence_dan_Quality_Gate",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Ekstraksi_Cuplikan_Publik",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Ekstraksi_DOM_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_Campaign_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_Adapter_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_Adapter_YouTube",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_Tabel_YouTube",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Workspace_React_Crawler",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Memori_Startup_Dashboard",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Adapter_Akuisisi_YouTube",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
       }
     }
   ]

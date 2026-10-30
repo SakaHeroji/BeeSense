@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `references` [EXTRACTED]
-- [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - `conceptually_related_to` [INFERRED]
+- [[Target 1,000 qualified roots with bounded attempts and candidates]] - `conceptually_related_to` [INFERRED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

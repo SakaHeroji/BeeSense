@@ -37,7 +37,7 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_PRD Workspace Crawler]]
 - 4 edges to [[_COMMUNITY_PRD Workspace Crawler_3]]
 - 3 edges to [[_COMMUNITY_PRD Workspace Crawler_2]]
-- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_4]]
+- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
 - 1 edge to [[_COMMUNITY_PRD Workspace Crawler_4]]
 
 ## Top bridge nodes

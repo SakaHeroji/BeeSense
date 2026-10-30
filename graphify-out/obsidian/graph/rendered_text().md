@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser DOM Terbatas"
+community: "Parser dan Runner Reddit"
 location: "L648"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_DOM_Terbatas
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # rendered_text()
@@ -18,4 +18,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[source_time()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

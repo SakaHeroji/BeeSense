@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Coherence dan Quality Gate"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Gensim c_v protocol: top 10 terms, window 110, phrase tokens
@@ -23,4 +23,4 @@ tags:
 - [[Trainingevaluation-only Gensim coherence requirements]] - `references` [EXTRACTED]
 - [[Unweighted mean across all 20 final non-noise topics]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

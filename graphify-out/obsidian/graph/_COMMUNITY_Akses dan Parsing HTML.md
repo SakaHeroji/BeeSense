@@ -1,16 +1,18 @@
 ---
 type: community
-cohesion: 0.24
-members: 23
+cohesion: 0.29
+members: 21
 ---
 
 # Akses dan Parsing HTML
 
-**Cohesion:** 0.24 - loosely connected
-**Members:** 23 nodes
+**Cohesion:** 0.29 - loosely connected
+**Members:** 21 nodes
 
 ## Members
+- [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.has_class()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.own_body()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.parent()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_01_shreddit_extracts_body_not_buttons_or_templates()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -28,11 +30,7 @@ members: 23
 - [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[fixture_page()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[native_fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[object_key()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[source_time()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -42,16 +40,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 8 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
-- 8 edges to [[_COMMUNITY_Parser DOM Terbatas]]
+- 15 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
+- 13 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
+- 8 edges to [[_COMMUNITY_Parser dan Runner Reddit_1]]
 - 6 edges to [[_COMMUNITY_Identitas dan Kontrak Data_1]]
-- 5 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 4 edges to [[_COMMUNITY_Parser dan Runner Reddit_1]]
+- 3 edges to [[_COMMUNITY_Parser DOM Terbatas]]
+- 3 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
 
 ## Top bridge nodes
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
 - [[.thread()]] - degree 22, connects to 3 communities
 - [[RedditTests]] - degree 20, connects to 3 communities
-- [[source_time()]] - degree 5, connects to 3 communities
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 3 communities
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 3 communities
+- [[.discover()]] - degree 6, connects to 3 communities

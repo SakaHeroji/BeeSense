@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Dataset yang disertakan"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Retained historical NLP snapshots and changed-corpus score limits
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Historical Graphify memory of the native SBERTUMAPDBSCAN migration]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Snapshot_NLP_dan_Arsip
+#graphify/concept #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit

@@ -1,23 +1,22 @@
 ---
 type: community
-cohesion: 0.32
-members: 8
+cohesion: 0.52
+members: 7
 ---
 
 # Parser dan Runner Reddit
 
-**Cohesion:** 0.32 - loosely connected
-**Members:** 8 nodes
+**Cohesion:** 0.52 - moderately connected
+**Members:** 7 nodes
 
 ## Members
-- [[.test_14_settings_bounds_and_no_zero_fill()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_16_hard_timeout_keeps_already_received_event()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.validate()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Settings]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[load_settings()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[parsed_number()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[run_worker()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[timeout_fixture()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.__init__()_10]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[assert_accessible()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[content_node()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[rendered_text()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[source_time()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[walk()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,15 +26,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 8 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
 - 7 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 4 edges to [[_COMMUNITY_Akses dan Parsing HTML]]
-- 3 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
-- 1 edge to [[_COMMUNITY_Identitas dan Kontrak Data_1]]
-- 1 edge to [[_COMMUNITY_Bundle Excel dan Provenans]]
+- 2 edges to [[_COMMUNITY_Parser DOM Terbatas]]
+- 1 edge to [[_COMMUNITY_Identitas dan Kontrak Data]]
 
 ## Top bridge nodes
-- [[Settings]] - degree 7, connects to 2 communities
-- [[.validate()_1]] - degree 6, connects to 2 communities
-- [[load_settings()]] - degree 5, connects to 2 communities
-- [[.test_16_hard_timeout_keeps_already_received_event()]] - degree 5, connects to 2 communities
-- [[parsed_number()]] - degree 3, connects to 2 communities
+- [[walk()]] - degree 8, connects to 3 communities
+- [[source_time()]] - degree 5, connects to 3 communities
+- [[content_node()]] - degree 6, connects to 2 communities
+- [[first()]] - degree 5, connects to 2 communities
+- [[.__init__()_10]] - degree 5, connects to 2 communities

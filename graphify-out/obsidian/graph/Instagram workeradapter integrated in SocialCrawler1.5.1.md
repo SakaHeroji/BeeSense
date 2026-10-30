@@ -12,7 +12,6 @@ tags:
 # Instagram worker/adapter integrated in SocialCrawler1.5.1
 
 ## Connections
-- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Bounded hashtag discovery with authoritative local root filters]] - `references` [EXTRACTED]
 - [[Browser response429 and private-header boundary]] - `references` [EXTRACTED]
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]

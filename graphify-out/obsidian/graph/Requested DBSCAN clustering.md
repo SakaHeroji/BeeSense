@@ -1,12 +1,12 @@
 ---
 source_file: "docs/notes/note.md"
 type: "concept"
-community: "Coherence dan Quality Gate"
+community: "Runbook dan Verifikasi Lokal"
 location: "line 2"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Requested DBSCAN clustering
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Requested SBERT-based embeddings]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/concept #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

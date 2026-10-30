@@ -97,8 +97,8 @@
       "max_search_pages": 500,
       "search_tab": "recent",
       "rate_limit_cooldown_seconds": 360,
-      "rate_limit_max_retries": 3,
-      "backend": "browser"
+      "rate_limit_max_retries": 0,
+      "backend": "instaloader"
     }
   },
   "exclude_existing_datasets": [
@@ -108,18 +108,19 @@
     "outputs/social_instagram_20261030_1000_3h_01"
   ],
   "platform_execution": "sequential",
-  "instagram_browser": {
-    "profile_dir": "output/instagram_browser/chrome_profile",
-    "session": "beesense-instagram",
-    "headed": true,
-    "max_scrolls": 8,
-    "scroll_delay_seconds": 5
-  },
   "instagram_pacing": {
     "enabled": true,
     "batch_size": 20,
     "batch_pause_seconds": 120,
     "rate_limit_backoff_multiplier": 2,
     "max_cooldown_seconds": 3600
+  },
+  "instaloader": {
+    "username": "researchinnovationsocs",
+    "auth_file": "config/auth.json",
+    "session_file": "output/instaloader/session.json",
+    "request_interval_seconds": 5,
+    "request_timeout_seconds": 30,
+    "comments_transport": "query_hash"
   }
 }

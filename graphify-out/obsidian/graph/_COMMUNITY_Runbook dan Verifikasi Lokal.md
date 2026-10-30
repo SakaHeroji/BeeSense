@@ -32,17 +32,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Coherence dan Quality Gate_3]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
+- 3 edges to [[_COMMUNITY_Runbook dan Verifikasi Lokal_1]]
 - 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_1]]
 - 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_8]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
 - 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_5]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
 
 ## Top bridge nodes
 - [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - degree 5, connects to 3 communities

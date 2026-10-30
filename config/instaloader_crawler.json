@@ -1,0 +1,97 @@
+{
+  "project_id": "university-intelligence",
+  "since": "2025-10-27T10:17:00+07:00",
+  "until": "2026-10-31T00:00:00+07:00",
+  "include_keywords": [
+    "kuliah",
+    "kampus",
+    "universitas",
+    "beasiswa",
+    "jurusan"
+  ],
+  "exclude_keywords": [
+    "judi",
+    "slot gacor",
+    "politik",
+    "politikus",
+    "politik indonesia",
+    "politik luar negeri",
+    "politik internasional",
+    "politik nasional",
+    "politik lokal",
+    "politik global",
+    "politik dunia",
+    "politik regional",
+    "politik partai",
+    "politik pemerintahan",
+    "politik presiden",
+    "politik menteri",
+    "politik kabinet",
+    "politik legislatif",
+    "politik eksekutif",
+    "politik yudikatif",
+    "mbg",
+    "makan bergizi gratis",
+    "makan bergizi",
+    "makan siang gratis",
+    "kopdes",
+    "koperasi desa merah putih",
+    "koperasi kelurahan merah putih",
+    "koperasi desa/kelurahan merah putih",
+    "koperasi merah putih",
+    "kdmp",
+    "kkmp",
+    "ijazah jokowi",
+    "ijazah palsu jokowi",
+    "ijazah joko widodo",
+    "ijazah palsu joko widodo",
+    "ijazah gibran",
+    "ijazah palsu gibran",
+    "dpr",
+    "dprd",
+    "dewan perwakilan rakyat"
+  ],
+  "include_mode": "any",
+  "delay": {
+    "mode": "fixed",
+    "seconds": 5
+  },
+  "timeout_seconds": 60,
+  "total_seconds": 300,
+  "platforms": {
+    "instagram": {
+      "enabled": true,
+      "urls": [],
+      "hashtags": [
+        "kuliah"
+      ],
+      "min_posts": 10,
+      "min_comments_per_post": 1,
+      "max_posts": 10,
+      "max_candidates": 30,
+      "max_comments": 20,
+      "max_replies": 10,
+      "max_replies_per_thread": 5,
+      "search_results": 10,
+      "max_search_pages": 3,
+      "search_tab": "recent",
+      "rate_limit_cooldown_seconds": 360,
+      "rate_limit_max_retries": 0
+    }
+  },
+  "exclude_existing_datasets": [
+    "outputs/social_20261028_01",
+    "outputs/instagram_browser_20261030_30m_01",
+    "outputs/instagram_browser_20261030_30m_02",
+    "outputs/social_instagram_20261030_1000_3h_01"
+  ],
+  "backend": "instaloader",
+  "instaloader": {
+    "username": "researchinnovationsocs",
+    "auth_file": "config/auth.json",
+    "session_file": "output/instaloader/session.json",
+    "request_interval_seconds": 5,
+    "request_timeout_seconds": 30,
+    "comments_transport": "query_hash"
+  }
+}

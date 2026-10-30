@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Active30October20-topicc_v0.4315219014 snapshot]] - `references` [EXTRACTED]
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[FinalnativeIDauditwithpreservedhistoricalchecksums]] - `references` [EXTRACTED]
 - [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - `references` [EXTRACTED]

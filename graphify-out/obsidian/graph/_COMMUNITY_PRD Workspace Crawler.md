@@ -38,14 +38,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_PRD Workspace Crawler_1]]
 - 5 edges to [[_COMMUNITY_PRD Workspace Crawler_3]]
-- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
 - 2 edges to [[_COMMUNITY_PRD Workspace Crawler_4]]
 - 1 edge to [[_COMMUNITY_PRD Workspace Crawler_2]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_4]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
 
 ## Top bridge nodes
-- [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - degree 11, connects to 5 communities
-- [[Curated Crawler PRD statusfrontend implemented, backend pending]] - degree 10, connects to 4 communities
+- [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - degree 10, connects to 4 communities
+- [[Curated Crawler PRD statusfrontend implemented, backend pending]] - degree 9, connects to 4 communities
 - [[Draft acceptance criteria are release requirements, not a React test report]] - degree 9, connects to 2 communities
 - [[Frontend PRD indexCrawler detailed; NLP and Dashboard PRDs remain future]] - degree 6, connects to 2 communities
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - degree 7, connects to 1 community

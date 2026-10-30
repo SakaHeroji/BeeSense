@@ -10,18 +10,18 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
-- [[.setUp()_9]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_instagram_is_included_in_coverage_ranking_months_and_graph_hover()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_months_use_root_dates_and_zero_fill_without_losing_microseconds()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_network_positions_stable_and_platform_ratio_is_numeric()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_platform_coverage_includes_noise_and_preserves_zero_platforms()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_topic_counts_keep_occurrences_unique_sentences_and_comments_separate()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_topic_evidence_profile_deduplicates_units_and_matches_whole_terms()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - code - tests/nlp/test_dashboard_analysis.py
-- [[AnalysisTests]] - code - tests/nlp/test_dashboard_analysis.py
-- [[test_dashboard_analysis.py]] - code - tests/nlp/test_dashboard_analysis.py
+- [[Currentmacro c_v0.4315219014passeswith820individualshortfalls]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - document - graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md
+- [[Historical fixed top10window110all15878-unique macro c_v protocol]] - concept - graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md
+- [[Historical29October original-space silhouette -0.000279]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Historical46143-sentence reference; current corpus remains separately bound]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Historical720 shortfalls; current model has820]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Internal model metrics do not establish accuracy or representativeness]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Invalid or nonfinite topic coherence cancels the aggregate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Obsidian c_v corpus and token protocol]] - concept - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Training-corpus coherence is not holdout or labeled accuracy]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Unweighted mean across all 20 final non-noise topics]] - concept - docs/machine-learning/SOCIAL_NLP.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,9 +31,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
+- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
+- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate_1]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
 - 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 1 edge to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate]]
 
 ## Top bridge nodes
-- [[AnalysisTests]] - degree 12, connects to 1 community
-- [[test_dashboard_analysis.py]] - degree 2, connects to 1 community
+- [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - degree 10, connects to 5 communities
+- [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - degree 3, connects to 2 communities
+- [[Unweighted mean across all 20 final non-noise topics]] - degree 3, connects to 1 community
+- [[Historical720 shortfalls; current model has820]] - degree 3, connects to 1 community
+- [[Internal model metrics do not establish accuracy or representativeness]] - degree 2, connects to 1 community

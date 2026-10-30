@@ -23,10 +23,8 @@ tags:
 - [[Requires config, include and exclude matchers; performs no acquisition.]] - `rationale_for` [EXTRACTED]
 - [[Selenium build context allows the newly included dependency manifest]] - `references` [INFERRED]
 - [[SessionInvalid]] - `uses` [INFERRED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - `references` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[social_export.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

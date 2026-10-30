@@ -5,7 +5,9 @@ import tempfile
 import unittest
 from copy import deepcopy
 from pathlib import Path
+from unittest.mock import patch
 
+from Crawler.Backend.instaloader_crawler import InstaloaderSettings, InstaloaderWorker
 from Crawler.Backend.social_crawler import ROOT, SocialCrawler
 from tests.crawler.test_instagram_crawler import URL, records
 from tests.crawler.test_social_crawler import Clock, receipt, yt_events
@@ -28,9 +30,48 @@ class InstagramIntegrationTests(unittest.TestCase):
 
     def ig(self, operation, target, settings, seconds, emit):
         self.assertEqual(operation, "media")
+        self.assertIsInstance(settings, InstaloaderSettings)
         for row in records():
             emit("record", row)
         return receipt()
+
+    def test_instaloader_is_default_and_owns_one_persistent_worker(self):
+        cfg = deepcopy(self.cfg)
+        cfg["platforms"]["instagram"].pop("backend", None)
+        crawler = SocialCrawler(cfg)
+        try:
+            self.assertEqual(
+                crawler.config["platforms"]["instagram"]["backend"], "instaloader"
+            )
+            self.assertIsInstance(crawler._instagram_worker, InstaloaderWorker)
+            self.assertIs(crawler.workers["instagram"], crawler._instagram_worker)
+            settings = crawler._legacy_settings(
+                "instagram", crawler.config["platforms"]["instagram"]
+            )
+            self.assertIsInstance(settings, InstaloaderSettings)
+            self.assertEqual(settings.comments_transport, "query_hash")
+            self.assertEqual(settings.timeout_seconds, cfg["timeout_seconds"])
+            self.assertEqual(settings.request_interval_seconds, 5)
+        finally:
+            crawler._instagram_worker.close()
+
+    def test_owned_instaloader_worker_is_closed_when_combined_run_finishes(self):
+        cfg = deepcopy(self.cfg)
+        with patch("Crawler.Backend.instaloader_crawler.InstaloaderWorker") as factory:
+            owned = factory.return_value
+
+            def worker(operation, target, settings, seconds, emit):
+                return self.ig(operation, target, settings, seconds, emit)
+
+            owned.side_effect = worker
+            crawler = SocialCrawler(cfg)
+            crawler._synthetic = True  # Internal factory is mocked in this test.
+            report = crawler.run(self.path / "owned")
+        self.assertTrue(report["targets_met"])
+        owned.close.assert_called_once()
+        self.assertTrue(
+            json.loads((self.path / "owned/manifest.json").read_text())["synthetic"]
+        )
 
     def test_instagram_only_never_calls_youtube_or_reddit_and_matches_excel_contract(
         self,
@@ -47,9 +88,7 @@ class InstagramIntegrationTests(unittest.TestCase):
         self.assertEqual(result["platforms"]["instagram"]["posts_exported"], 1)
         self.assertEqual(result["compact"]["rows"], 3)
         source = json.loads((self.path / "ig/Sources.jsonl").read_text())
-        self.assertEqual(
-            source["extraction_method"], "playwright_chrome_rendered_document"
-        )
+        self.assertEqual(source["extraction_method"], "instaloader_saved_web_session")
         self.assertTrue(
             json.loads((self.path / "ig/manifest.json").read_text())["synthetic"]
         )
@@ -144,7 +183,7 @@ class InstagramIntegrationTests(unittest.TestCase):
         cfg["platforms"]["instagram"].pop("rate_limit_max_retries", None)
         effective = SocialCrawler(cfg).config["platforms"]["instagram"]
         self.assertEqual(effective["rate_limit_cooldown_seconds"], 360)
-        self.assertEqual(effective["rate_limit_max_retries"], 3)
+        self.assertEqual(effective["rate_limit_max_retries"], 0)
 
     def test_instagram_exponential_backoff_is_capped_and_retry_count_is_bounded(self):
         clock, calls = Clock(), []
@@ -265,7 +304,7 @@ class InstagramIntegrationTests(unittest.TestCase):
     def test_unused_instagram_settings_cannot_leak_credentials_in_other_platform_runs(
         self,
     ):
-        for field in ("instagrapi", "instagram_browser"):
+        for field in ("instagrapi", "instagram_browser", "instaloader"):
             cfg = {"platforms": {"youtube": {}}, field: {"password": "secret"}}
             with self.subTest(field=field), self.assertRaises(ValueError):
                 SocialCrawler(cfg)

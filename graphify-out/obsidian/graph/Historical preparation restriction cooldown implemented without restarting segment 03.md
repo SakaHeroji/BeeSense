@@ -12,9 +12,9 @@ tags:
 # Historical preparation restriction: cooldown implemented without restarting segment 03
 
 ## Connections
-- [[Active Instagram-inclusive 20-topic snapshot macro c_v 0.4315219014]] - `references` [EXTRACTED]
-- [[Bounded 1.3 cooldown applied to user-authorized continuation 04]] - `references` [EXTRACTED]
+- [[Active 30 October 20-topic snapshot mean c_v 0.4315]] - `references` [EXTRACTED]
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
+- [[Historical user-authorized version-1.3 continuation 04]] - `references` [EXTRACTED]
 - [[New user authorization supersedes historical preparation-only restriction]] - `references` [EXTRACTED]
 - [[Obsidian records bounded retry policy and chronological authorization]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]

@@ -12,7 +12,6 @@ tags:
 # Contextual Gemini2 CSV is verified in the live dashboard
 
 ## Connections
-- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Current20-topic macro c_v0.4315219014 model]] - `references` [EXTRACTED]
 - [[DashboardreadsverifiedCSVwithnoAPIortrainingonrerun]] - `references` [EXTRACTED]

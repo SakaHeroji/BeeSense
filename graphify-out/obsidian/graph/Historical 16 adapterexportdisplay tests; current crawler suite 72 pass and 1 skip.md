@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Actual macOS lifecycle test versus mocked Linux display matrix]] - `references` [EXTRACTED]
 - [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - `references` [EXTRACTED]
-- [[Integrated offline tests and macOS lifecycle scope]] - `references` [EXTRACTED]
+- [[Historical integrated test scope and unverified Docker runtime]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

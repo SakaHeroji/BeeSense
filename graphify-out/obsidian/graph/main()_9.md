@@ -1,18 +1,21 @@
 ---
-source_file: "scripts/verify_dashboard_data.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L179"
+community: "Eksperimen Instaloader dan GraphQL Web"
+location: "L723"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Eksperimen_Instaloader_dan_GraphQL_Web
 ---
 
 # main()
 
 ## Connections
-- [[verify()_1]] - `calls` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
+- [[.close()_3]] - `calls` [EXTRACTED]
+- [[.plan()_3]] - `calls` [EXTRACTED]
+- [[.run()_2]] - `calls` [EXTRACTED]
+- [[InstaloaderCrawler]] - `calls` [EXTRACTED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web

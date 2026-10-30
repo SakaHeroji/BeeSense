@@ -14,9 +14,9 @@ tags:
 ## Connections
 - [[All20 actual contextual Gemini narratives validated]] - `references` [EXTRACTED]
 - [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
+- [[Historical SocialCrawler 1.5 browser integration; superseded default in 1.6]] - `references` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Published194e0b1 dashboard and byte-identical contextual CSV]] - `references` [EXTRACTED]
-- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 - [[Verifieddashboard publication precedes offlinecrawlerpacing]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

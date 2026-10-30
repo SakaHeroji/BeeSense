@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.run_merge()]] - `method` [EXTRACTED]
-- [[.setUp()_8]] - `method` [EXTRACTED]
+- [[.setUp()_7]] - `method` [EXTRACTED]
 - [[.source()]] - `method` [EXTRACTED]
 - [[.test_instagram_comment_identity_conflict_and_fake_host_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_instagram_latest_record_wins_without_removing_equal_text_distinct_ids()]] - `method` [EXTRACTED]

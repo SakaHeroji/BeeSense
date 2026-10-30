@@ -1,27 +1,20 @@
 ---
-source_file: "MachineLearning/social_nlp.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L2445"
+community: "Eksplorasi Dashboard Streamlit"
+location: "L2247"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # main()
 
 ## Connections
-- [[._event()_1]] - `calls` [EXTRACTED]
-- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
-- [[.explain_artifacts()]] - `calls` [EXTRACTED]
-- [[.fit_excel()]] - `calls` [EXTRACTED]
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[.prepare_excel()]] - `calls` [EXTRACTED]
-- [[.save()]] - `calls` [EXTRACTED]
-- [[.save_explanations()]] - `calls` [EXTRACTED]
-- [[SocialNLPClusterer]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

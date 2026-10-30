@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Akuisisi Instagram Terintegrasi"
-location: "L732"
+location: "L746"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.selenium.dockerignore"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Operasi dan Verifikasi BeeSense"
 location: "L1-L41"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Selenium build context allows the newly included dependency manifest
@@ -16,4 +16,4 @@ tags:
 - [[Relocated Selenium image preserves included requirements and package modules]] - `references` [EXTRACTED]
 - [[SocialExportMixin]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

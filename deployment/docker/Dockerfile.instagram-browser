@@ -11,6 +11,7 @@ RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
     && useradd --create-home --uid 10001 beesense
 WORKDIR /app
 COPY requirements/instagram-browser.txt /app/requirements/instagram-browser.txt
+COPY requirements/instaloader.txt /app/requirements/instaloader.txt
 RUN pip install --no-cache-dir -r requirements/instagram-browser.txt
 COPY --chown=beesense:beesense Crawler /app/Crawler
 COPY --chown=beesense:beesense config /app/config

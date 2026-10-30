@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Alur Akuisisi Sosial Terpadu"
-location: "L109"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # reddrix_version()
 
 ## Connections
-- [[.plan()_3]] - `calls` [EXTRACTED]
+- [[.plan()_4]] - `calls` [EXTRACTED]
 - [[reddrix_receipt()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 

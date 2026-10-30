@@ -1,27 +1,27 @@
 ---
 type: community
-cohesion: 0.17
+cohesion: 0.20
 members: 12
 ---
 
 # Konfigurasi SocialCrawler
 
-**Cohesion:** 0.17 - loosely connected
+**Cohesion:** 0.20 - loosely connected
 **Members:** 12 nodes
 
 ## Members
-- [[._event()]] - code - Crawler/Backend/social_crawler.py
-- [[._wait_for_captcha()]] - code - Crawler/Backend/social_crawler.py
-- [[Advanced connected-browser Reddit campaign helpers]] - document - Crawler/Backend/Reddit/README_browser_campaign.md
-- [[Atomic sibling .progress.json snapshots during acquisition]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Checkpoint export to the eight-sheet contract]] - concept - Crawler/Backend/Reddit/README_browser_campaign.md
-- [[Coordinator waits for manual CAPTCHA without automated clicks]] - rationale - Crawler/Backend/Reddit/README_playwright.md
-- [[Historical or explicitly selected Playwright CAPTCHA wait]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops]] - rationale - Crawler/Backend/Reddit/README_playwright.md
-- [[Native-ID provenance and bounded public excerpts]] - rationale - Crawler/Backend/Reddit/README_browser_campaign.md
-- [[Reddit Playwright CLI runner]] - document - Crawler/Backend/Reddit/README_playwright.md
-- [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - rationale - config/social_crawler.json
-- [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - rationale - Crawler/Backend/Reddit/README_playwright.md
+- [[._existing_posts()]] - code - Crawler/Backend/social_crawler.py
+- [[Combined workbook provenance PASS with immutable source hashes and row lineage]] - document - output/combined_dataset_20261029.json
+- [[Explicit partial export and qualified-post shortfalls]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
+- [[Historical exclusion source outputssocial_20261028_01]] - concept - config/social_crawler.json
+- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[JSONL audit, dataset.xlsx and checksum manifest]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - concept - graphify-out/obsidian/Crawling 1000 Post Baru.md
+- [[Native-ID baseline-then-new workbook merge with provenance]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Read root identities only; never alter the historical workbooks.]] - rationale - Crawler/Backend/social_crawler.py
+- [[Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[social_data.xlsx ten-column Data worksheet]] - concept - docs/crawler/SOCIAL_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,15 +31,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 3 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 5 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
+- 4 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
+- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 3 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
+- 2 edges to [[_COMMUNITY_Topik dan Verifikasi NLP]]
 - 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
 
 ## Top bridge nodes
-- [[Reddit Playwright CLI runner]] - degree 6, connects to 2 communities
-- [[._event()]] - degree 4, connects to 2 communities
-- [[Atomic sibling .progress.json snapshots during acquisition]] - degree 3, connects to 2 communities
-- [[Advanced connected-browser Reddit campaign helpers]] - degree 4, connects to 1 community
-- [[._wait_for_captcha()]] - degree 4, connects to 1 community
+- [[Explicit partial export and qualified-post shortfalls]] - degree 7, connects to 3 communities
+- [[._existing_posts()]] - degree 5, connects to 3 communities
+- [[Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]] - degree 7, connects to 2 communities
+- [[JSONL audit, dataset.xlsx and checksum manifest]] - degree 5, connects to 2 communities
+- [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - degree 4, connects to 2 communities

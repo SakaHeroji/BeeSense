@@ -40,7 +40,7 @@ from Crawler.Backend.social_export import (
 )
 from Crawler.Backend.Youtube import crawl_youtube as youtube
 
-VERSION = "1.5.2"
+VERSION = "1.6.0"
 INSTAGRAM_RATE_LIMIT_DEFAULTS = {
     "rate_limit_cooldown_seconds": 360,
     "rate_limit_max_retries": 3,
@@ -90,6 +90,7 @@ DEFAULT_CONFIG = dict(
     project_id="social-intelligence",
     reddrix={"display_mode": "auto"},
     instagrapi={},
+    instaloader={},
     instagram_browser={},
     instagram_pacing=deepcopy(INSTAGRAM_PACING_DEFAULTS),
     since=None,
@@ -454,6 +455,9 @@ def _config(value):
     ):
         _number(pacing[name], "instagram_pacing." + name, low, high, integer)
     cfg["instagram_pacing"] = pacing
+    from Crawler.Backend.instaloader_crawler import instaloader_options
+
+    cfg["instaloader"] = instaloader_options(cfg["instaloader"])
     if not isinstance(cfg["instagrapi"], dict) or set(cfg["instagrapi"]) - {
         "session_file",
         "request_delay_seconds",
@@ -555,10 +559,17 @@ def _config(value):
             enabled = supplied.get("enabled", True)
             if type(enabled) is not bool:
                 raise ValueError("instagram.enabled must be boolean")
-            backend = supplied.pop("backend", "browser")
+            backend = supplied.pop("backend", "instaloader")
+            if backend not in {"instaloader", "browser", "instagrapi"}:
+                raise ValueError("Invalid Instagram backend")
             supplied["enabled"] = True
             for key, value in INSTAGRAM_RATE_LIMIT_DEFAULTS.items():
-                supplied.setdefault(key, value)
+                supplied.setdefault(
+                    key,
+                    0
+                    if backend == "instaloader" and key == "rate_limit_max_retries"
+                    else value,
+                )
             common = {
                 key: deepcopy(cfg[key])
                 for key in (
@@ -574,14 +585,17 @@ def _config(value):
                 )
             }
             common.update(
-                backend=backend,
+                backend="instagrapi" if backend == "instaloader" else backend,
                 platforms={"instagram": supplied},
-                instagrapi=cfg["instagrapi"],
+                instagrapi={} if backend == "instaloader" else cfg["instagrapi"],
             )
             if backend == "browser":
                 common["browser"] = cfg["instagram_browser"]
             checked = instagram._configuration(common)
-            cfg["instagrapi"] = checked["instagrapi"]
+            if backend != "instaloader":
+                cfg["instagrapi"] = checked["instagrapi"]
+            elif checked["platforms"][name]["search_tab"] not in {"recent", "top"}:
+                raise ValueError("Instaloader supports recent or top hashtag searches")
             if backend == "browser":
                 cfg["instagram_browser"] = checked["browser"]
             result[name] = {
@@ -775,7 +789,13 @@ class SocialCrawler(SocialExportMixin):
         if options.get("enabled"):
             from Crawler.Backend.instagram_crawler import run_instagram_worker
 
-            if options["backend"] == "browser" and "instagram" not in (workers or {}):
+            if options["backend"] == "instaloader" and "instagram" not in (
+                workers or {}
+            ):
+                from Crawler.Backend.instaloader_crawler import InstaloaderWorker
+
+                self._instagram_worker = InstaloaderWorker()
+            elif options["backend"] == "browser" and "instagram" not in (workers or {}):
                 from Crawler.Backend.instagram_browser import InstagramBrowserWorker
 
                 self._instagram_worker = InstagramBrowserWorker(
@@ -1051,6 +1071,23 @@ class SocialCrawler(SocialExportMixin):
 
     def _legacy_settings(self, name, p):
         if name == "instagram":
+            if p["backend"] == "instaloader":
+                from Crawler.Backend.instaloader_crawler import InstaloaderSettings
+
+                return InstaloaderSettings(
+                    **self.config["instaloader"],
+                    timeout_seconds=self.config["timeout_seconds"],
+                    **{
+                        key: p[key]
+                        for key in (
+                            "search_results",
+                            "max_comments",
+                            "max_replies",
+                            "max_replies_per_thread",
+                            "search_tab",
+                        )
+                    },
+                )
             from Crawler.Backend.instagram_crawler import InstagramSettings
 
             return InstagramSettings(
@@ -1488,6 +1525,16 @@ class SocialCrawler(SocialExportMixin):
     def _source_metadata(self, name, settings):
         """Describe the acquisition backend independently of the shared export."""
         if name == "instagram":
+            if settings["backend"] == "instaloader":
+                from Crawler.Backend.instaloader_crawler import (
+                    METHOD as INSTALOADER_METHOD,
+                )
+
+                return dict(
+                    producer_version="social-crawler:" + VERSION,
+                    extraction_method=INSTALOADER_METHOD,
+                    access_mode="saved_web_session;browser_graphql_patch;read_only_acquisition",
+                )
             from Crawler.Backend.instagram_browser import BROWSER_METHOD
             from Crawler.Backend.instagram_crawler import METHOD
 

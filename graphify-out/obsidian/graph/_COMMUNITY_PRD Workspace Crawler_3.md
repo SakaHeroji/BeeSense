@@ -37,7 +37,7 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_PRD Workspace Crawler]]
 - 4 edges to [[_COMMUNITY_PRD Workspace Crawler_1]]
 - 2 edges to [[_COMMUNITY_PRD Workspace Crawler_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_4]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
 
 ## Top bridge nodes
 - [[Crawler frontend PRD v1.1 with implemented seven-source UI and pending backend]] - degree 22, connects to 5 communities

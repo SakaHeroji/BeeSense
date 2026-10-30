@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Ringkasan Topik Gemini"
 location: "## Verifikasi 30 Oktober 2026"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Ringkasan_Topik_Gemini
 ---
 
 # Nine Gemini offline tests and all20 actual contextual CSV rows validated
@@ -17,4 +17,4 @@ tags:
 - [[GeminiTests]] - `references` [EXTRACTED]
 - [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini

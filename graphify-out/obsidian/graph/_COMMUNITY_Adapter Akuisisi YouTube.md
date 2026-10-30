@@ -82,9 +82,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
-- 1 edge to [[_COMMUNITY_Ekspor Campaign dan Resume]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
 - 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
 
 ## Top bridge nodes
 - [[.error()]] - degree 5, connects to 2 communities

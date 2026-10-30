@@ -1,15 +1,16 @@
 ---
 type: community
 cohesion: 0.07
-members: 45
+members: 44
 ---
 
 # Akuisisi Instagram Terintegrasi
 
 **Cohesion:** 0.07 - loosely connected
-**Members:** 45 nodes
+**Members:** 44 nodes
 
 ## Members
+- [[.clock()_1]] - code - tests/crawler/test_instagram_crawler.py
 - [[.crawler()_2]] - code - tests/crawler/test_instagram_crawler.py
 - [[.hashtag_medias_v1_chunk()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.ig()]] - code - tests/crawler/test_social_crawler_instagram.py
@@ -46,15 +47,13 @@ members: 45
 - [[.test_upgrade_gate_is_distinct_from_throttling_and_unknown_source_errors()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_url_canonicalization_and_identity()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_verified_429_respects_retry_after_and_budget()]] - code - tests/crawler/test_instagram_crawler.py
-- [[Exercise Instagram through the combined coordinator, without network access.]] - rationale - tests/crawler/test_social_crawler_instagram.py
+- [[.worker()_2]] - code - tests/crawler/test_instagram_crawler.py
+- [[Clock_1]] - code - tests/crawler/test_instagram_crawler.py
 - [[FakeClient]] - code - tests/crawler/test_instagram_crawler.py
 - [[InstagramCrawlerTests]] - code - tests/crawler/test_instagram_crawler.py
-- [[Offline contractdeadline tests; fixture data is always marked synthetic.]] - rationale - tests/crawler/test_instagram_crawler.py
 - [[records()_1]] - code - tests/crawler/test_instagram_crawler.py
 - [[spawn_fixture()]] - code - tests/crawler/test_instagram_crawler.py
 - [[spawn_hanging()]] - code - tests/crawler/test_instagram_crawler.py
-- [[test_instagram_crawler.py]] - code - tests/crawler/test_instagram_crawler.py
-- [[test_social_crawler_instagram.py]] - code - tests/crawler/test_social_crawler_instagram.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -64,17 +63,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 12 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
 
 ## Top bridge nodes
-- [[test_instagram_crawler.py]] - degree 11, connects to 3 communities
-- [[records()_1]] - degree 10, connects to 3 communities
-- [[test_social_crawler_instagram.py]] - degree 7, connects to 3 communities
+- [[records()_1]] - degree 8, connects to 3 communities
 - [[InstagramCrawlerTests]] - degree 33, connects to 2 communities
 - [[FakeClient]] - degree 9, connects to 1 community
+- [[.worker()_2]] - degree 7, connects to 1 community
+- [[.ig()]] - degree 7, connects to 1 community

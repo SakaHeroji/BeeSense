@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Ekspor Campaign dan Resume"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_Campaign_dan_Resume
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # atomic_json()
@@ -15,4 +15,4 @@ tags:
 - [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 - [[save_capture()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

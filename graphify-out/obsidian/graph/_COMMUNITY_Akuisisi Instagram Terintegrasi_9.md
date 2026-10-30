@@ -1,28 +1,28 @@
 ---
 type: community
-cohesion: 0.22
+cohesion: 0.29
 members: 13
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.22 - loosely connected
+**Cohesion:** 0.29 - loosely connected
 **Members:** 13 nodes
 
 ## Members
-- [[.__init__()_27]] - code - Crawler/Backend/instagram_browser.py
-- [[.__init__()_25]] - code - Crawler/Backend/instagram_crawler.py
-- [[.call()_1]] - code - Crawler/Backend/instagram_browser.py
-- [[.close()_1]] - code - Crawler/Backend/instagram_browser.py
-- [[InstagramBrowserWorker]] - code - Crawler/Backend/instagram_browser.py
-- [[InstagramSettings]] - code - Crawler/Backend/instagram_crawler.py
-- [[Serial Chrome acquisition using a persistent profile and manual login.  The same]] - rationale - Crawler/Backend/instagram_browser.py
-- [[_configuration()]] - code - Crawler/Backend/instagram_crawler.py
-- [[_integer()]] - code - Crawler/Backend/instagram_crawler.py
-- [[browser_configuration()]] - code - Crawler/Backend/instagram_browser.py
-- [[browser_script()]] - code - Crawler/Backend/instagram_browser.py
-- [[instagram_browser.py]] - code - Crawler/Backend/instagram_browser.py
-- [[upstream_version()]] - code - Crawler/Backend/instagram_crawler.py
+- [[.__init__()_24]] - code - Crawler/Backend/instagram_crawler.py
+- [[._baseline()]] - code - Crawler/Backend/instagram_crawler.py
+- [[.accept()_4]] - code - Crawler/Backend/instagram_crawler.py
+- [[.run()_1]] - code - Crawler/Backend/instagram_crawler.py
+- [[Accept only Instagram postreel permalinks; strip tracking parameters.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[InstagramAdapter]] - code - Crawler/Backend/instagram_crawler.py
+- [[Map explicit native IDstimestamps; do not infer authors or text coverage.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[_timestamp()_1]] - code - Crawler/Backend/instagram_crawler.py
+- [[media_pk_from_url()]] - code - Crawler/Backend/instagram_crawler.py
+- [[media_url()]] - code - Crawler/Backend/instagram_crawler.py
+- [[native_pk()]] - code - Crawler/Backend/instagram_crawler.py
+- [[normalize_item()]] - code - Crawler/Backend/instagram_crawler.py
+- [[object_key()_1]] - code - Crawler/Backend/instagram_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,19 +32,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
-- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 12 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 5 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
 - 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
 
 ## Top bridge nodes
-- [[InstagramBrowserWorker]] - degree 18, connects to 7 communities
-- [[InstagramSettings]] - degree 7, connects to 4 communities
-- [[browser_configuration()]] - degree 7, connects to 3 communities
-- [[_configuration()]] - degree 6, connects to 3 communities
-- [[instagram_browser.py]] - degree 6, connects to 2 communities
+- [[InstagramAdapter]] - degree 7, connects to 4 communities
+- [[normalize_item()]] - degree 12, connects to 3 communities
+- [[media_url()]] - degree 9, connects to 3 communities
+- [[native_pk()]] - degree 8, connects to 2 communities
+- [[._baseline()]] - degree 7, connects to 2 communities
