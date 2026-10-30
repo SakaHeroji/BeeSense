@@ -1,27 +1,32 @@
 ---
 type: community
-cohesion: 0.24
-members: 12
+cohesion: 0.15
+members: 17
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.24 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.15 - loosely connected
+**Members:** 17 nodes
 
 ## Members
-- [[.__init__()_27]] - code - Crawler/Backend/instagram_browser.py
-- [[.__init__()_25]] - code - Crawler/Backend/instagram_crawler.py
-- [[.call()_1]] - code - Crawler/Backend/instagram_browser.py
-- [[.close()_1]] - code - Crawler/Backend/instagram_browser.py
-- [[InstagramBrowserWorker]] - code - Crawler/Backend/instagram_browser.py
-- [[InstagramSettings]] - code - Crawler/Backend/instagram_crawler.py
-- [[Serial Chrome acquisition using a persistent profile and manual login.  The same]] - rationale - Crawler/Backend/instagram_browser.py
-- [[_configuration()]] - code - Crawler/Backend/instagram_crawler.py
-- [[_integer()]] - code - Crawler/Backend/instagram_crawler.py
-- [[browser_configuration()]] - code - Crawler/Backend/instagram_browser.py
-- [[browser_script()]] - code - Crawler/Backend/instagram_browser.py
-- [[instagram_browser.py]] - code - Crawler/Backend/instagram_browser.py
+- [[Bind document-script comments by native DOM permalink andsame shortcode]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Browser discovery follows InstagramUI order withlocaleligibilitychecks]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[BrowserPythondependencies separatefrom dashboard andprivateAPI]] - concept - requirements/instagram-browser.txt
+- [[Browserworker context permitscodeconfig whileexcludingauthprofiles]] - rationale - deployment/docker/Dockerfile.instagram-browser.dockerignore
+- [[Chrome backend selected by same standalone InstagramCrawler class]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Declared NodeChromePython browserworker atUID10001]] - rationale - deployment/docker/Dockerfile.instagram-browser
+- [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Historical interruptedChrome trial before1.5integration]] - concept - graphify-out/obsidian/InstagramCrawler instagrapi.md
+- [[One dedicated persistentprofile andpinnedCLIsession perrun]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Standalone browser1800-second preset, updated bounded retry]] - concept - config/instagram_browser_crawler.json
+- [[instagramBarrier()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramDocumentPayload()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramNavigate()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramRetryAfter()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramSourceRateLimit()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagram_browser_capture.mjs]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[macOS headed trial andLinuxprepared-profile requirements]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,19 +36,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
-- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
-- 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 3 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
 - 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 
 ## Top bridge nodes
-- [[InstagramBrowserWorker]] - degree 17, connects to 7 communities
-- [[InstagramSettings]] - degree 7, connects to 4 communities
-- [[browser_configuration()]] - degree 7, connects to 3 communities
-- [[_configuration()]] - degree 6, connects to 3 communities
-- [[instagram_browser.py]] - degree 6, connects to 2 communities
+- [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 3 communities
+- [[Historical interruptedChrome trial before1.5integration]] - degree 5, connects to 2 communities
+- [[Declared NodeChromePython browserworker atUID10001]] - degree 4, connects to 1 community
+- [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - degree 3, connects to 1 community
+- [[Browserworker context permitscodeconfig whileexcludingauthprofiles]] - degree 2, connects to 1 community

@@ -37,3 +37,11 @@ Run aktif `outputs/nlp_20261030_instagram_topics20_02` menghasilkan **20 topik**
 Gemini `gemini-3.5-flash-lite` menghasilkan **20 kalimat topik dan deskripsi bahasa Indonesia**, masing-masing dari 10 keyword c-TF-IDF berbobot tertinggi dan 10 kalimat terdekat dengan pusat topik. `topic_narratives.csv` beserta provenance/checksum masuk bundle model. UI membaca CSV tanpa API atau training saat rerun. Sebanyak 8 dari 20 topik masih memiliki c_v individual <0,4; ambang berlaku pada rata-rata. Evaluasi ini in-sample, bukan akurasi berlabel atau holdout. Skor dari korpus berbeda tidak menjadi perbandingan kualitas langsung.
 
 Publikasi memakai GitHub main, entry `streamlit_apps.py`, target `https://beesense.streamlit.app`. Pemeriksaan lokal mendahului push; API key tidak diperlukan pada Cloud. No migration required. Docker daemon tidak tersedia sehingga build/startup image belum diverifikasi.
+
+## Verifikasi publikasi
+
+Commit `194e0b1` telah di-push dan dashboard live terverifikasi pada 30 Oktober 2026.
+Unduhan CSV dari beesense.streamlit.app identik byte per byte dengan berkas lokal:
+20 narasi, 200 kalimat representatif, prompt `beesense-topic-id:2`. Coherence
+model tetap 0,4315219014; hanya CSV, summary dan manifest narasi yang direvisi.
+CI GitHub lulus untuk job utama serta runtime dashboard Python 3.12 dan 3.14.

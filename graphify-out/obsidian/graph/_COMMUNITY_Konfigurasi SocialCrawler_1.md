@@ -1,27 +1,27 @@
 ---
 type: community
-cohesion: 0.26
+cohesion: 0.17
 members: 12
 ---
 
 # Konfigurasi SocialCrawler
 
-**Cohesion:** 0.26 - loosely connected
+**Cohesion:** 0.17 - loosely connected
 **Members:** 12 nodes
 
 ## Members
-- [[Configured 1000 new posts per platform, shared three-hour campaign]] - rationale - README.md
-- [[Configured per-platform min_posts=1000 and min_comments_per_post=10]] - rationale - config/social_crawler.json
-- [[Current main configuration platforms.reddit.enabled=true]] - concept - config/social_crawler.json
-- [[Explicit partial export and qualified-post shortfall after acquisition]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Historical Reddit pause after HTTP 429, superseded by user-authorized resume]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Historical Reddit pause ten qualified and seventeen exported evidence posts]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
-- [[Historical platforms.reddit.enabled=false during requested pause]] - concept - graphify-out/obsidian/Crawling 1000 Post Baru.md
-- [[Per-platform bounds max_posts 4000, max_candidates 6000]] - rationale - config/social_crawler.json
-- [[Per-platform qualifying-root targets and shortfalls]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Root-publication date and literal keyword selection]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[._event()]] - code - Crawler/Backend/social_crawler.py
+- [[._wait_for_captcha()]] - code - Crawler/Backend/social_crawler.py
+- [[Advanced connected-browser Reddit campaign helpers]] - document - Crawler/Backend/Reddit/README_browser_campaign.md
+- [[Atomic sibling .progress.json snapshots during acquisition]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Checkpoint export to the eight-sheet contract]] - concept - Crawler/Backend/Reddit/README_browser_campaign.md
+- [[Coordinator waits for manual CAPTCHA without automated clicks]] - rationale - Crawler/Backend/Reddit/README_playwright.md
+- [[Historical or explicitly selected Playwright CAPTCHA wait]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops]] - rationale - Crawler/Backend/Reddit/README_playwright.md
+- [[Native-ID provenance and bounded public excerpts]] - rationale - Crawler/Backend/Reddit/README_browser_campaign.md
+- [[Reddit Playwright CLI runner]] - document - Crawler/Backend/Reddit/README_playwright.md
+- [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - rationale - config/social_crawler.json
+- [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - rationale - Crawler/Backend/Reddit/README_playwright.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,17 +31,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 6 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
-- 6 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 2 edges to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 3 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
+- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
 
 ## Top bridge nodes
-- [[Explicit partial export and qualified-post shortfall after acquisition]] - degree 7, connects to 4 communities
-- [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - degree 9, connects to 3 communities
-- [[Per-platform qualifying-root targets and shortfalls]] - degree 6, connects to 3 communities
-- [[Historical Reddit pause after HTTP 429, superseded by user-authorized resume]] - degree 6, connects to 2 communities
-- [[Root-publication date and literal keyword selection]] - degree 3, connects to 2 communities
+- [[Reddit Playwright CLI runner]] - degree 6, connects to 2 communities
+- [[._event()]] - degree 4, connects to 2 communities
+- [[Atomic sibling .progress.json snapshots during acquisition]] - degree 3, connects to 2 communities
+- [[Advanced connected-browser Reddit campaign helpers]] - degree 4, connects to 1 community
+- [[._wait_for_captcha()]] - degree 4, connects to 1 community

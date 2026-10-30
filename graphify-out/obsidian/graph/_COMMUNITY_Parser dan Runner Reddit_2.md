@@ -4,17 +4,17 @@ cohesion: 1.00
 members: 1
 ---
 
-# Akuisisi Instagram Terintegrasi
+# Parser dan Runner Reddit
 
 **Cohesion:** 1.00 - tightly connected
 **Members:** 1 nodes
 
 ## Members
-- [[Isolated instagrapi3.2.2 acquisition dependencies]] - concept - requirements/instagram.txt
+- [[ABC]] - code
 
 ## Live Query (requires Dataview plugin)
 
 ```dataview
-TABLE source_file, type FROM #community/Akuisisi_Instagram_Terintegrasi
+TABLE source_file, type FROM #community/Parser_dan_Runner_Reddit
 SORT file.name ASC
 ```

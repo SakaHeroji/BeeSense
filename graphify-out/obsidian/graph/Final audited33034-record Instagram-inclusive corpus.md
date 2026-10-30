@@ -12,7 +12,7 @@ tags:
 # Final audited33034-record Instagram-inclusive corpus
 
 ## Connections
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[User stopped Instagram acquisition; no subsequent crawl]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `shares_data_with` [EXTRACTED]
 - [[merge_social_datasets.py]] - `references` [EXTRACTED]

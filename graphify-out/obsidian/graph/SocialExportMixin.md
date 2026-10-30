@@ -19,7 +19,7 @@ tags:
 - [[InstagramAdapter]] - `uses` [INFERRED]
 - [[InstagramCrawler]] - `uses` [INFERRED]
 - [[InstagramSettings]] - `uses` [INFERRED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Requires config, include and exclude matchers; performs no acquisition.]] - `rationale_for` [EXTRACTED]
 - [[Selenium build context allows the newly included dependency manifest]] - `references` [INFERRED]
 - [[SessionInvalid]] - `uses` [INFERRED]

@@ -18,6 +18,7 @@ class InstagramIntegrationTests(unittest.TestCase):
         )
         self.cfg["exclude_existing_datasets"] = []
         self.cfg["delay"] = {"mode": "fixed", "seconds": 0}
+        self.cfg["instagram_pacing"]["enabled"] = False
         self.cfg["platforms"]["instagram"].update(
             urls=[URL], hashtags=[], min_posts=1, min_comments_per_post=2
         )
@@ -144,6 +145,99 @@ class InstagramIntegrationTests(unittest.TestCase):
         effective = SocialCrawler(cfg).config["platforms"]["instagram"]
         self.assertEqual(effective["rate_limit_cooldown_seconds"], 360)
         self.assertEqual(effective["rate_limit_max_retries"], 3)
+
+    def test_instagram_exponential_backoff_is_capped_and_retry_count_is_bounded(self):
+        clock, calls = Clock(), []
+        self.cfg["total_seconds"] = 40
+        self.cfg["instagram_pacing"].update(enabled=True, max_cooldown_seconds=8)
+        self.cfg["platforms"]["instagram"].update(
+            rate_limit_cooldown_seconds=4, rate_limit_max_retries=3
+        )
+
+        def worker(*args):
+            calls.append(clock.now)
+            return receipt("RATE_LIMITED")
+
+        report = SocialCrawler(
+            self.cfg,
+            workers={"instagram": worker},
+            sleep=clock.sleep,
+            monotonic=clock.clock,
+        ).run(self.path / "exponential")
+        self.assertEqual(calls, [0, 4, 12, 20])
+        self.assertEqual(report["platforms"]["instagram"]["rate_limit_retries"], 3)
+        self.assertEqual(
+            report["platforms"]["instagram"]["stop_reason"], "RATE_LIMITED"
+        )
+
+    def test_instagram_server_wait_is_not_shortened_by_backoff_cap(self):
+        clock, calls = Clock(), []
+        self.cfg["total_seconds"] = 40
+        self.cfg["instagram_pacing"].update(enabled=True, max_cooldown_seconds=8)
+        self.cfg["platforms"]["instagram"].update(
+            rate_limit_cooldown_seconds=4, rate_limit_max_retries=1
+        )
+
+        def worker(operation, target, settings, seconds, emit):
+            calls.append(clock.now)
+            if len(calls) == 1:
+                return {**receipt("RATE_LIMITED"), "retry_after_seconds": 20}
+            return self.ig(operation, target, settings, seconds, emit)
+
+        report = SocialCrawler(
+            self.cfg,
+            workers={"instagram": worker},
+            sleep=clock.sleep,
+            monotonic=clock.clock,
+        ).run(self.path / "long-server-wait")
+        self.assertEqual(calls, [0, 20])
+        self.assertTrue(report["targets_met"])
+
+    def test_instagram_batch_pause_is_bounded_by_global_deadline(self):
+        for budget, expected, stopped in (
+            (30, [0, 0, 7, 7], "CANDIDATES_EXHAUSTED"),
+            (5, [0, 0], "TIME_BUDGET_EXHAUSTED"),
+        ):
+            with self.subTest(budget=budget):
+                cfg = deepcopy(self.cfg)
+                cfg["total_seconds"] = budget
+                cfg["instagram_pacing"].update(
+                    enabled=True, batch_size=2, batch_pause_seconds=7
+                )
+                cfg["platforms"]["instagram"].update(urls=[], hashtags=["kuliah"])
+                clock, calls = Clock(), []
+
+                def worker(operation, target, settings, seconds, emit):
+                    self.assertEqual(operation, "search")
+                    calls.append(clock.now)
+                    return {
+                        **receipt(),
+                        "next_cursor": str(len(calls)) if len(calls) < 4 else None,
+                    }
+
+                report = SocialCrawler(
+                    cfg,
+                    workers={"instagram": worker},
+                    sleep=clock.sleep,
+                    monotonic=clock.clock,
+                ).run(self.path / f"batch{budget}")
+                self.assertEqual(calls, expected)
+                self.assertEqual(
+                    report["platforms"]["instagram"]["stop_reason"], stopped
+                )
+                self.assertEqual(report["platforms"]["instagram"]["batch_pauses"], 1)
+                self.assertLessEqual(clock.now, budget)
+
+    def test_instagram_pacing_rejects_unknown_or_unsafe_values(self):
+        for policy in (
+            {"password": "secret"},
+            {"enabled": "yes"},
+            {"batch_size": 0},
+            {"rate_limit_backoff_multiplier": float("nan")},
+            {"max_cooldown_seconds": 1, "enabled": True},
+        ):
+            with self.subTest(policy=policy), self.assertRaises(ValueError):
+                SocialCrawler({**self.cfg, "instagram_pacing": policy})
 
     def test_mixed_export_keeps_native_platform_provenance(self):
         cfg = deepcopy(self.cfg)

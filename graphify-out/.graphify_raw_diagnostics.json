@@ -1,25 +1,25 @@
 {
-  "node_count": 680,
+  "node_count": 541,
   "unverified_node_count": 0,
-  "raw_edge_count": 1803,
+  "raw_edge_count": 1848,
   "non_object_edges": 0,
   "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 313,
+  "dangling_endpoint_edges": 635,
   "self_loop_edges": 0,
-  "valid_candidate_edges": 1490,
+  "valid_candidate_edges": 1213,
   "exact_duplicate_edges": 0,
-  "directed_unique_endpoint_pairs": 1485,
-  "directed_same_endpoint_collapsed_edges": 5,
-  "undirected_unique_endpoint_pairs": 1483,
-  "undirected_same_endpoint_collapsed_edges": 7,
-  "same_endpoint_group_count": 5,
-  "relation_variant_groups": 4,
+  "directed_unique_endpoint_pairs": 1209,
+  "directed_same_endpoint_collapsed_edges": 4,
+  "undirected_unique_endpoint_pairs": 1209,
+  "undirected_same_endpoint_collapsed_edges": 4,
+  "same_endpoint_group_count": 4,
+  "relation_variant_groups": 3,
   "source_file_variant_groups": 0,
   "source_location_variant_groups": 1,
   "context_variant_groups": 0,
   "post_build_graph_type": "Graph",
-  "post_build_node_count": 680,
-  "post_build_edge_count": 1484,
+  "post_build_node_count": 541,
+  "post_build_edge_count": 1210,
   "post_build_error": "",
   "producer_suppression": {
     "path": "/Users/socs3/.pyenv/versions/3.12.0/lib/python3.12/site-packages/graphify/extract.py",
@@ -121,7 +121,7 @@
       ],
       "source_locations": [
         "L35",
-        "L701"
+        "L731"
       ],
       "contexts": [
         ""
@@ -163,24 +163,6 @@
       "contexts": [
         "argument",
         "call"
-      ]
-    },
-    {
-      "source": "docs_machine_learning_gemini_topic_narratives_verification_scope",
-      "target": "tests_nlp_test_topic_narratives_geminitests",
-      "edge_count": 2,
-      "relations": [
-        "conceptually_related_to",
-        "references"
-      ],
-      "source_files": [
-        "/Users/socs3/Documents/BeeSense/docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
-      ],
-      "source_locations": [
-        "## Verifikasi 30 Oktober 2026"
-      ],
-      "contexts": [
-        ""
       ]
     }
   ]

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Bundle Excel dan Provenans"
 location: "L916"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # RedditRecordFactory
@@ -20,4 +20,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

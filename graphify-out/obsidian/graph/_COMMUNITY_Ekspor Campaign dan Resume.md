@@ -63,7 +63,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
 - 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
 - 1 edge to [[_COMMUNITY_Adapter Akuisisi YouTube]]
 

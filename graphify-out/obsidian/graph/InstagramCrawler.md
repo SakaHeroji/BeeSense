@@ -23,7 +23,7 @@ tags:
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[InstagramBrowserTests]] - `uses` [INFERRED]
 - [[InstagramBrowserWorker]] - `uses` [INFERRED]
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 - [[SocialExportMixin]] - `uses` [INFERRED]
 - [[Standalone trial. The production SocialCrawler backend stays unchanged.]] - `rationale_for` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp_instagram_20261030_final.json"
 type: "concept"
-community: "Snapshot NLP dan Arsip"
+community: "Akuisisi Instagram Terintegrasi"
 location: "$.input_file; $.output_dir; $.target_topics; $.model; $.dbscan; $.coherence; $.gemini"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Final Instagram-inclusive20-topic/Gemini configuration
@@ -16,4 +16,4 @@ tags:
 - [[All20 actual contextual Gemini narratives validated]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

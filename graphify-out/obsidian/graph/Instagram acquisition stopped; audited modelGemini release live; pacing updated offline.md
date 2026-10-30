@@ -9,7 +9,7 @@ tags:
   - community/Akuisisi_Instagram_Terintegrasi
 ---
 
-# Instagram acquisition stopped; audited model/Gemini complete; publication pending
+# Instagram acquisition stopped; audited model/Gemini release live; pacing updated offline
 
 ## Connections
 - [[20-topiccoherence gate passed; active configuration switched]] - `references` [EXTRACTED]
@@ -18,13 +18,14 @@ tags:
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Bounded Instagram recovery does not override user stop]] - `references` [EXTRACTED]
-- [[Commitpush andStreamlitdeployauthorizedaftercompletequalitybundle]] - `references` [EXTRACTED]
 - [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 - [[Final audited33034-record Instagram-inclusive corpus]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Latestnative-ID observation dedupwithrootconflict rejection]] - `references` [EXTRACTED]
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[Published194e0b1 dashboard and byte-identical contextual CSV]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 - [[User stopped Instagram acquisition; no subsequent crawl]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `references` [EXTRACTED]
+- [[Verifieddashboard publication precedes offlinecrawlerpacing]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

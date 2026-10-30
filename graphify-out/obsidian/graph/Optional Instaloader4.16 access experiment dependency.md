@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

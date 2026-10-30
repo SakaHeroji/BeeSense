@@ -1,22 +1,21 @@
 ---
 type: community
-cohesion: 0.38
-members: 7
+cohesion: 0.33
+members: 6
 ---
 
 # Alur Akuisisi Sosial Terpadu
 
-**Cohesion:** 0.38 - loosely connected
-**Members:** 7 nodes
+**Cohesion:** 0.33 - loosely connected
+**Members:** 6 nodes
 
 ## Members
-- [[Each continuation excludes original dataset and every prior campaign segment]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
-- [[Five verified segments consolidate with zero duplicate roots and zero baseline overlap]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
 - [[Historical exclusion source outputssocial_20261028_01]] - concept - config/social_crawler.json
-- [[Historical root skip before request and returned-identity check before export]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
 - [[JSONL audit, dataset.xlsx and checksum manifest]] - concept - docs/crawler/SOCIAL_CRAWLER.md
 - [[Read-only canonicalnative identity index excludes 50 old YouTube and 181 Reddit roots]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[social_data.xlsx ten-column Data worksheet]] - concept - docs/crawler/SOCIAL_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,18 +25,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
+- 4 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
+- 3 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 - 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler]]
 - 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
-- 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
+- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
 
 ## Top bridge nodes
+- [[Read-only canonicalnative identity index excludes 50 old YouTube and 181 Reddit roots]] - degree 7, connects to 3 communities
 - [[JSONL audit, dataset.xlsx and checksum manifest]] - degree 5, connects to 3 communities
-- [[Five verified segments consolidate with zero duplicate roots and zero baseline overlap]] - degree 5, connects to 2 communities
+- [[social_data.xlsx ten-column Data worksheet]] - degree 4, connects to 3 communities
 - [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - degree 3, connects to 2 communities
-- [[Read-only canonicalnative identity index excludes 50 old YouTube and 181 Reddit roots]] - degree 7, connects to 1 community
-- [[Each continuation excludes original dataset and every prior campaign segment]] - degree 6, connects to 1 community
+- [[Inherited SocialCrawler filters and Excel exporters]] - degree 3, connects to 1 community

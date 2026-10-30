@@ -1,30 +1,26 @@
 ---
 type: community
-cohesion: 0.24
-members: 15
+cohesion: 0.18
+members: 11
 ---
 
 # Snapshot NLP dan Arsip
 
-**Cohesion:** 0.24 - loosely connected
-**Members:** 15 nodes
+**Cohesion:** 0.18 - loosely connected
+**Members:** 11 nodes
 
 ## Members
-- [[Active artifacts outputsnlp_20261030_instagram_topics20_02]] - concept - config/social_nlp.json
-- [[Active20-topic Instagram-inclusive model configuration]] - document - config/social_nlp.json
-- [[Active20-topic Instagram-inclusive model configuration_1]] - concept - config/social_nlp_instagram_20261030.json
-- [[All20 actual contextual Gemini narratives validated]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Cloud publication includes model code, config and complete checksummed active snapshot]] - rationale - README.md
-- [[Cloud uses relative artifacts and platform-controlled bind; local loopback stays explicit]] - rationale - README.md
-- [[Commitpush andStreamlitdeployauthorizedaftercompletequalitybundle]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - concept - README.md
-- [[Configured33034-record final merged workbook]] - concept - config/social_nlp.json
-- [[Current active Gemini enabled; historical disabled state retained]] - concept - config/social_nlp.json
-- [[Final Instagram-inclusive20-topicGemini configuration]] - concept - config/social_nlp_instagram_20261030_final.json
-- [[Instagram model and Gemini complete; publication still pending release checks]] - rationale - README.md
-- [[RetainedSBERTrevision,UMAPDBSCANbudget andexplanationgates]] - rationale - config/social_nlp_instagram_20261030.json
-- [[Root streamlit_apps.py delegates to Dashboard.app]] - rationale - docs/PROJECT_STRUCTURE.md
-- [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[BeeSense project and dashboard runbook]] - document - README.md
+- [[Component-oriented repository layout after SocialCrawler integration]] - document - docs/PROJECT_STRUCTURE.md
+- [[Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries]] - concept - README.md
+- [[Historical Graphify memory of the native SBERTUMAPDBSCAN migration]] - document - graphify-out/memory/query_20261028_153533_update_social_nlp_py_ke_embedding_sbert__umap_sesu.md
+- [[Module CLIs and worker spawn import relocated packages]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Package ROOT preserves repository-relative configuration and artifact paths]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Preserved baseline, versioned merged source and complete active artifacts]] - rationale - README.md
+- [[Relocated Dockerfiles preserve packageconfig layout from repository root]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Reorganization preserves data bytes and requires no migration]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Retained historical NLP snapshots and changed-corpus score limits]] - concept - README.md
+- [[Runtime manifests live under requirements with relative includes]] - rationale - docs/PROJECT_STRUCTURE.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,23 +30,27 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_5]]
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
-- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate_1]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 2 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
+- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
+- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 - 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
 - 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_2]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_6]]
+- 1 edge to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
 
 ## Top bridge nodes
-- [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - degree 10, connects to 5 communities
-- [[Active20-topic Instagram-inclusive model configuration]] - degree 14, connects to 4 communities
-- [[All20 actual contextual Gemini narratives validated]] - degree 8, connects to 3 communities
-- [[Root streamlit_apps.py delegates to Dashboard.app]] - degree 4, connects to 3 communities
-- [[Active20-topic Instagram-inclusive model configuration_1]] - degree 6, connects to 2 communities
+- [[BeeSense project and dashboard runbook]] - degree 20, connects to 13 communities
+- [[Component-oriented repository layout after SocialCrawler integration]] - degree 10, connects to 4 communities
+- [[Module CLIs and worker spawn import relocated packages]] - degree 4, connects to 3 communities
+- [[Package ROOT preserves repository-relative configuration and artifact paths]] - degree 3, connects to 2 communities
+- [[Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries]] - degree 2, connects to 1 community

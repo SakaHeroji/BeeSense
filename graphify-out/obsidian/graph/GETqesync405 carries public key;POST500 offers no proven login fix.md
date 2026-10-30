@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[CAAHTTP200 without session;legacyHTTP400 needs_upgrade]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Live persistence pattern fails after successful settings restore in27.15seconds]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

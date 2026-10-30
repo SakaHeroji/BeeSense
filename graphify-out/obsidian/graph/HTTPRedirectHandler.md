@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Validasi Redirect dan Kesalahan"
+community: "Parser dan Runner Reddit"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Redirect_dan_Kesalahan
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # HTTPRedirectHandler
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RestrictedRedirect]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

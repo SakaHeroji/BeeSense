@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akses dan Parsing HTML"
+community: "Bundle Excel dan Provenans"
 location: "## Kontrak output Excel"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # Verified Reddit native identity and parent/root relationships
@@ -18,4 +18,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/rationale #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

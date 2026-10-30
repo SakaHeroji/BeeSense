@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Akuisisi Reddit Reddrix"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Clock
@@ -24,4 +24,4 @@ tags:
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

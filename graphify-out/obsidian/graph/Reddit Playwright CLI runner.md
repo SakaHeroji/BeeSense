@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_playwright.md"
 type: "document"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Konfigurasi SocialCrawler"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Reddit Playwright CLI runner
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/document #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

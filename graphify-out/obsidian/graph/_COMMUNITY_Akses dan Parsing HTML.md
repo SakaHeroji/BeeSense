@@ -1,16 +1,15 @@
 ---
 type: community
-cohesion: 0.19
-members: 27
+cohesion: 0.24
+members: 23
 ---
 
 # Akses dan Parsing HTML
 
-**Cohesion:** 0.19 - loosely connected
-**Members:** 27 nodes
+**Cohesion:** 0.24 - loosely connected
+**Members:** 23 nodes
 
 ## Members
-- [[.__init__()_11]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.own_body()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.parent()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -27,11 +26,8 @@ members: 27
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[RedditAdapter]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[RedditRecordFactory]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Verified Reddit native identity and parentroot relationships]] - rationale - docs/crawler/REDDIT_CRAWLER.md
 - [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[fixture_page()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[native_fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -46,18 +42,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 13 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
-- 10 edges to [[_COMMUNITY_Parser DOM Terbatas]]
-- 6 edges to [[_COMMUNITY_Validasi Redirect dan Kesalahan]]
+- 21 edges to [[_COMMUNITY_Parser dan Runner Reddit]]
+- 8 edges to [[_COMMUNITY_Identitas dan Kontrak Data]]
+- 8 edges to [[_COMMUNITY_Parser DOM Terbatas]]
+- 6 edges to [[_COMMUNITY_Identitas dan Kontrak Data_1]]
 - 5 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 2 edges to [[_COMMUNITY_Identitas dan Kontrak Data_1]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 4 edges to [[_COMMUNITY_Parser dan Runner Reddit_1]]
 
 ## Top bridge nodes
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
 - [[.thread()]] - degree 22, connects to 3 communities
 - [[RedditTests]] - degree 20, connects to 3 communities
-- [[fixture_page()]] - degree 15, connects to 3 communities
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 3 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 3 communities
+- [[source_time()]] - degree 5, connects to 3 communities

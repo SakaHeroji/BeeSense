@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Active20-topic Instagram-inclusive model configuration_1]] - `references` [EXTRACTED]
 - [[Fiveintegrationtests plus76NLP andoneisolateddashboardtestpassed]] - `references` [EXTRACTED]
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - `references` [EXTRACTED]
 

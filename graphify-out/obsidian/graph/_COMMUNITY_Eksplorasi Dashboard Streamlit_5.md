@@ -1,20 +1,27 @@
 ---
 type: community
-cohesion: 0.40
-members: 5
+cohesion: 0.17
+members: 12
 ---
 
 # Eksplorasi Dashboard Streamlit
 
-**Cohesion:** 0.40 - moderately connected
-**Members:** 5 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[.test_topic_graph_is_bounded_and_noise_is_not_a_topic()]] - code - tests/nlp/test_social_nlp.py
-- [[.topic_figure()]] - code - Dashboard/app.py
-- [[Bounded topic graph volume from filtered rows, semantic edges from the full mod]] - rationale - Dashboard/app.py
-- [[Keep the full-model layout stable while volume and edge filters change.]] - rationale - Dashboard/app.py
-- [[_graph_positions()]] - code - Dashboard/app.py
+- [[.setUp()_9]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_instagram_is_included_in_coverage_ranking_months_and_graph_hover()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_months_use_root_dates_and_zero_fill_without_losing_microseconds()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_network_positions_stable_and_platform_ratio_is_numeric()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_platform_coverage_includes_noise_and_preserves_zero_platforms()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_topic_counts_keep_occurrences_unique_sentences_and_comments_separate()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_topic_evidence_profile_deduplicates_units_and_matches_whole_terms()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[AnalysisTests]] - code - tests/nlp/test_dashboard_analysis.py
+- [[test_dashboard_analysis.py]] - code - tests/nlp/test_dashboard_analysis.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,12 +31,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
 - 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
 
 ## Top bridge nodes
-- [[.topic_figure()]] - degree 6, connects to 2 communities
-- [[_graph_positions()]] - degree 3, connects to 1 community
-- [[.test_topic_graph_is_bounded_and_noise_is_not_a_topic()]] - degree 2, connects to 1 community
+- [[AnalysisTests]] - degree 12, connects to 1 community
+- [[test_dashboard_analysis.py]] - degree 2, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # Current Instagram bounded retry configuration; historical execution chronology
 
 ## Connections
+- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - `conceptually_related_to` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
-- [[Instagram1.5.1 bounded HTTP429 recovery]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

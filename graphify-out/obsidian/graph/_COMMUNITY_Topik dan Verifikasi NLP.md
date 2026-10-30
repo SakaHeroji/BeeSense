@@ -60,11 +60,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_3]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
 - 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
 - 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_2]]
-- 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
 
 ## Top bridge nodes
 - [[identity()]] - degree 10, connects to 2 communities

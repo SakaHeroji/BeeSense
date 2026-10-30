@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp.json"
 type: "document"
-community: "Snapshot NLP dan Arsip"
+community: "Akuisisi Instagram Terintegrasi"
 location: "$.input_file; $.output_dir; $.target_topics; $.coherence; $.gemini"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Active20-topic Instagram-inclusive model configuration
@@ -27,4 +27,4 @@ tags:
 - [[Root Docker context allowlist for relocated dashboard runtime]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/document #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

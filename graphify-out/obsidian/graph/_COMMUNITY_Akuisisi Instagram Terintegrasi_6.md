@@ -1,27 +1,33 @@
 ---
 type: community
-cohesion: 0.18
-members: 12
+cohesion: 0.14
+members: 18
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 18 nodes
 
 ## Members
-- [[Browser response429 and private-header boundary]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Chrome remains available for operator inspection]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Current Instagram bounded retry configuration; historical execution chronology]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical Instagram run01248 posts and2128 comments]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Historical Instagram-only campaign start and unchanged three-hour targets]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical6065-second870-root Instagram resume preset]] - concept - config/social_crawler_instagram_resume_20261030.json
-- [[Instagram-only10800-second browser preset; bounded429 retry]] - concept - config/social_crawler_instagram_3h.json
-- [[Instagram1.5.1 bounded HTTP429 recovery]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Read-onlyhistoricalbaselineandbothInstagramtrialexclusions]] - rationale - config/social_crawler_instagram_3h.json
-- [[Retain Chrome for manual inspection on barriers]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Verified response429, not generic navigation failure]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[.check_session()]] - code - Crawler/Backend/instagram_crawler.py
+- [[.plan()_2]] - code - Crawler/Backend/instagram_crawler.py
+- [[.test_browser_429_passes_retry_after_and_keeps_chrome_open()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_browser_is_real_backend_but_injected_workers_remain_synthetic()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_cli_error_never_exposes_auth_redirect_or_input()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_configuration_rejects_secrets_and_invalid_limits()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_document_parser_rejects_unrelated_posts_and_preserves_reply_parent()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_navigation_observes_429_even_when_chrome_throws_before_response()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_repeated_cli_error_preserves_browser_without_claiming_access_barrier()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_timeout_preserves_browser_for_manual_inspection()]] - code - tests/crawler/test_instagram_browser.py
+- [[InstagramBrowserTests]] - code - tests/crawler/test_instagram_browser.py
+- [[InstagramCrawler]] - code - Crawler/Backend/instagram_crawler.py
+- [[Offline checks for the Chrome boundary, native identity, and provenance.]] - rationale - tests/crawler/test_instagram_browser.py
+- [[Standalone trial. The production SocialCrawler backend stays unchanged.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[main()_4]] - code - Crawler/Backend/instagram_crawler.py
+- [[run_instagram_worker()]] - code - Crawler/Backend/instagram_crawler.py
+- [[test_instagram_browser.py]] - code - tests/crawler/test_instagram_browser.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,18 +37,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 6 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
 - 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
 - 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
 
 ## Top bridge nodes
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - degree 10, connects to 5 communities
-- [[Instagram1.5.1 bounded HTTP429 recovery]] - degree 7, connects to 3 communities
-- [[Historical Instagram-only campaign start and unchanged three-hour targets]] - degree 3, connects to 1 community
-- [[Verified response429, not generic navigation failure]] - degree 3, connects to 1 community
-- [[Historical6065-second870-root Instagram resume preset]] - degree 2, connects to 1 community
+- [[InstagramCrawler]] - degree 17, connects to 7 communities
+- [[test_instagram_browser.py]] - degree 6, connects to 3 communities
+- [[main()_4]] - degree 8, connects to 2 communities
+- [[run_instagram_worker()]] - degree 3, connects to 2 communities
+- [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - degree 3, connects to 1 community

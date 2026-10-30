@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp_instagram_20261030.json"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Akuisisi Instagram Terintegrasi"
 location: "$.model; $.umap; $.dbscan; $.evaluation; $.explanation"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # RetainedSBERTrevision,UMAP/DBSCANbudget andexplanationgates
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Active20-topic Instagram-inclusive model configuration_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

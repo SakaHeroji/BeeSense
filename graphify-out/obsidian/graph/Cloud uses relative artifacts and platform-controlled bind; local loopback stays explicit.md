@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Akuisisi Instagram Terintegrasi"
 location: "## Deploy ke Streamlit Community Cloud"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Cloud uses relative artifacts and platform-controlled bind; local loopback stays explicit
@@ -17,4 +17,4 @@ tags:
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
 - [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

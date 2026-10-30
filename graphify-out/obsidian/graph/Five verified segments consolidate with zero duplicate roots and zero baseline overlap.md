@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Topik dan Verifikasi NLP"
 location: "### Hasil akhir campaign 29 Oktober 2026"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Five verified segments consolidate with zero duplicate roots and zero baseline overlap
@@ -18,4 +18,4 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

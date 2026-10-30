@@ -1,23 +1,25 @@
 ---
 type: community
-cohesion: 0.32
-members: 8
+cohesion: 0.27
+members: 10
 ---
 
 # Akuisisi Reddit Reddrix
 
-**Cohesion:** 0.32 - loosely connected
-**Members:** 8 nodes
+**Cohesion:** 0.27 - loosely connected
+**Members:** 10 nodes
 
 ## Members
-- [[Actual macOS lifecycle test versus mocked Linux display matrix]] - rationale - docs/crawler/REDDIT_CRAWLER.md
-- [[CI discovers shared-core Reddrix integration regressions]] - concept - .github/workflows/ci.yml
-- [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - rationale - graphify-out/obsidian/RedditCrawler Reddrix.md
-- [[Historical 16 adapterexportdisplay tests; current crawler suite 72 pass and 1 skip]] - concept - graphify-out/obsidian/RedditCrawler Reddrix.md
-- [[Integrated offline tests and macOS lifecycle scope]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Reddrix Docker image unbuilt local daemon unavailable]] - rationale - docs/crawler/REDDIT_CRAWLER.md
-- [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - rationale - graphify-out/obsidian/Struktur Proyek.md
-- [[Seven regression cases verify shared default backend contracts]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Configured 360-second policy and three HTTP 429 retries]] - rationale - config/reddit_crawler.json
+- [[Configured rootcommentcandidatetime budgets]] - rationale - config/reddit_crawler.json
+- [[Original date boundary and university-topic query scope]] - rationale - config/reddit_crawler.json
+- [[Original historical date window, keywords and read-only baseline]] - rationale - docs/crawler/REDDIT_CRAWLER.md
+- [[Read-only historical baseline exclusion]] - rationale - config/reddit_crawler.json
+- [[Thin Reddit-only wrapper selects shared Reddrix explicitly]] - rationale - docs/crawler/REDDIT_CRAWLER.md
+- [[Thirty-minute bounded trial with non-guaranteed target]] - rationale - docs/crawler/REDDIT_CRAWLER.md
+- [[Tracked Reddit trial configuration]] - concept - config/reddit_crawler.json
+- [[Tracked reddrix.display_mode=auto]] - concept - config/reddit_crawler.json
+- [[Trial config now explicitly selects Reddrix; wrapper preserves legacy compatibility]] - rationale - config/reddit_crawler.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,16 +29,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_3]]
-- 1 edge to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
+- 5 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_1]]
+- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_6]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
 
 ## Top bridge nodes
-- [[Reddrix Docker image unbuilt local daemon unavailable]] - degree 5, connects to 2 communities
-- [[Actual macOS lifecycle test versus mocked Linux display matrix]] - degree 4, connects to 2 communities
-- [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - degree 4, connects to 1 community
-- [[Seven regression cases verify shared default backend contracts]] - degree 3, connects to 1 community
-- [[CI discovers shared-core Reddrix integration regressions]] - degree 2, connects to 1 community
+- [[Tracked Reddit trial configuration]] - degree 10, connects to 2 communities
+- [[Thin Reddit-only wrapper selects shared Reddrix explicitly]] - degree 3, connects to 2 communities
+- [[Original historical date window, keywords and read-only baseline]] - degree 4, connects to 1 community
+- [[Thirty-minute bounded trial with non-guaranteed target]] - degree 3, connects to 1 community
+- [[Configured 360-second policy and three HTTP 429 retries]] - degree 2, connects to 1 community

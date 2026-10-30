@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L701"
+community: "Akuisisi Instagram Terintegrasi"
+location: "L731"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # SocialCrawler
@@ -40,9 +40,13 @@ tags:
 - [[.test_dry_run_uses_same_config_and_excel_contract_without_browser()]] - `calls` [EXTRACTED]
 - [[.test_expanded_youtube_search_budget_reaches_worker_without_old_cli_cap()]] - `calls` [EXTRACTED]
 - [[.test_instagram_429_honors_server_wait_and_retries_same_post()]] - `calls` [EXTRACTED]
+- [[.test_instagram_batch_pause_is_bounded_by_global_deadline()]] - `calls` [EXTRACTED]
 - [[.test_instagram_default_cooldown_matches_reddit_policy()]] - `calls` [EXTRACTED]
+- [[.test_instagram_exponential_backoff_is_capped_and_retry_count_is_bounded()]] - `calls` [EXTRACTED]
 - [[.test_instagram_only_never_calls_youtube_or_reddit_and_matches_excel_contract()]] - `calls` [EXTRACTED]
+- [[.test_instagram_pacing_rejects_unknown_or_unsafe_values()]] - `calls` [EXTRACTED]
 - [[.test_instagram_retry_cap_and_global_deadline_stop_additional_requests()]] - `calls` [EXTRACTED]
+- [[.test_instagram_server_wait_is_not_shortened_by_backoff_cap()]] - `calls` [EXTRACTED]
 - [[.test_invalid_config_is_rejected_before_output_or_requests()]] - `calls` [EXTRACTED]
 - [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - `calls` [EXTRACTED]
 - [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - `indirect_call` [INFERRED]
@@ -69,7 +73,7 @@ tags:
 - [[Five verified segments consolidate with zero duplicate roots and zero baseline overlap]] - `references` [EXTRACTED]
 - [[FixtureReddrix]] - `uses` [INFERRED]
 - [[Historical Reddit pause after HTTP 429, superseded by user-authorized resume]] - `references` [EXTRACTED]
-- [[Instagram1.5.1 bounded HTTP429 recovery]] - `references` [EXTRACTED]
+- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - `references` [EXTRACTED]
 - [[InstagramAdapter]] - `uses` [INFERRED]
 - [[InstagramBrowserWorker]] - `uses` [INFERRED]
 - [[InstagramCrawlerTests]] - `uses` [INFERRED]
@@ -79,6 +83,7 @@ tags:
 - [[JSONL audit, dataset.xlsx and checksum manifest]] - `shares_data_with` [EXTRACTED]
 - [[Module CLIs and worker spawn import relocated packages]] - `references` [EXTRACTED]
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
+- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - `references` [EXTRACTED]
 - [[Original deadline stopped acquisition; no operation started afterward]] - `references` [EXTRACTED]
 - [[Package module CLIs retain repository-root path semantics]] - `references` [EXTRACTED]
 - [[Per-platform qualifying-root targets and shortfalls]] - `references` [EXTRACTED]
@@ -93,7 +98,7 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[SeleniumDOMTests]] - `uses` [INFERRED]
 - [[SocialCrawler1.4 default Reddit Reddrix plus YouTube yt-dlp]] - `references` [EXTRACTED]
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 - [[SocialCrawlerReddrixTests]] - `uses` [INFERRED]
 - [[SocialCrawlerSelenium]] - `uses` [INFERRED]
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
@@ -117,4 +122,4 @@ tags:
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

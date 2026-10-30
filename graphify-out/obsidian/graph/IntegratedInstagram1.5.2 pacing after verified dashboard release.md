@@ -9,7 +9,7 @@ tags:
   - community/Akuisisi_Instagram_Terintegrasi
 ---
 
-# IntegratedInstagram1.5.1 withhistoricalprivate-API/Chrome trials
+# IntegratedInstagram1.5.2 pacing after verified dashboard release
 
 ## Connections
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
@@ -19,12 +19,13 @@ tags:
 - [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - `references` [EXTRACTED]
 - [[Documented public hashtag probe fails upstream AttributeError withzero data]] - `references` [EXTRACTED]
 - [[Explicit autopasswordsessionid login selection]] - `references` [EXTRACTED]
+- [[Exponential localcooldown never shortens serverRetry-After]] - `references` [EXTRACTED]
 - [[GETqesync405 carries public key;POST500 offers no proven login fix]] - `references` [EXTRACTED]
 - [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - `references` [EXTRACTED]
 - [[Historical interruptedChrome trial before1.5integration]] - `references` [EXTRACTED]
 - [[Historical real-cookie header-patch validation fails SDKAttributeError]] - `references` [EXTRACTED]
 - [[Historical trial gate superseded by explicitintegrationauthorization]] - `references` [EXTRACTED]
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[InstagramAdapter]] - `references` [EXTRACTED]
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `references` [EXTRACTED]
@@ -33,6 +34,8 @@ tags:
 - [[One LoginRequired recovery with verification-code preservation]] - `references` [EXTRACTED]
 - [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - `references` [EXTRACTED]
 - [[Optional Instaloader4.16 access experiment dependency]] - `references` [EXTRACTED]
+- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - `references` [EXTRACTED]
+- [[Release194e0b1 live with exact20-row200-sentence CSV]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
 - [[SocialExportMixin]] - `references` [EXTRACTED]
 - [[User-provided instagrapi scraper guidance]] - `references` [EXTRACTED]

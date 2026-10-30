@@ -9,7 +9,7 @@ tags:
   - community/Snapshot_NLP_dan_Arsip
 ---
 
-# Qualifiedmodel→contextualGemini2→CSV→read-onlyDashboard
+# Contextual Gemini2 CSV is verified in the live dashboard
 
 ## Connections
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
@@ -19,6 +19,7 @@ tags:
 - [[Ignoredlocalcredentialsprofiles;explicitnewmodelandGemininoteallowlist]] - `references` [EXTRACTED]
 - [[Nine Gemini offline tests and all20 actual contextual CSV rows validated]] - `references` [EXTRACTED]
 - [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - `references` [EXTRACTED]
+- [[Release194e0b1 live with exact20-row200-sentence CSV]] - `references` [EXTRACTED]
 - [[Verified current model and20context-grounded narratives]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

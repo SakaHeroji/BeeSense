@@ -17,6 +17,6 @@ tags:
 - [[All20 actual contextual Gemini narratives validated]] - `references` [EXTRACTED]
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
-- [[Qualifiedmodel→contextualGemini2→CSV→read-onlyDashboard]] - `references` [EXTRACTED]
+- [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

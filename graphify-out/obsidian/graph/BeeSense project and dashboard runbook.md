@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Snapshot NLP dan Arsip"
 location: "# BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # BeeSense project and dashboard runbook
@@ -23,7 +23,7 @@ tags:
 - [[Five artifact-backed Streamlit analysis views]] - `references` [INFERRED]
 - [[Historical Python 3.14.10 Cloud install failureONNX cp314 wheels and Numba support]] - `references` [EXTRACTED]
 - [[Historical non-rootread-only dashboard runtime; reorganized image unbuilt]] - `references` [EXTRACTED]
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 - [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - `references` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[SocialCrawler default Reddrix plus thin Reddit-only compatibility entry]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

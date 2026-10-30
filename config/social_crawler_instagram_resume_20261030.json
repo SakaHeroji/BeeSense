@@ -53,8 +53,9 @@
   ],
   "include_mode": "any",
   "delay": {
-    "mode": "fixed",
-    "seconds": 2
+    "mode": "random",
+    "min_seconds": 5,
+    "max_seconds": 10
   },
   "timeout_seconds": 90,
   "total_seconds": 6065,
@@ -111,7 +112,14 @@
     "profile_dir": "output/instagram_browser/chrome_profile",
     "session": "beesense-instagram",
     "headed": true,
-    "max_scrolls": 30,
-    "scroll_delay_seconds": 2
+    "max_scrolls": 8,
+    "scroll_delay_seconds": 5
+  },
+  "instagram_pacing": {
+    "enabled": true,
+    "batch_size": 20,
+    "batch_pause_seconds": 120,
+    "rate_limit_backoff_multiplier": 2,
+    "max_cooldown_seconds": 3600
   }
 }

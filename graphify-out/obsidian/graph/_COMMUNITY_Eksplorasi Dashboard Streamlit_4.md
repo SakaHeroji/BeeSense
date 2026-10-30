@@ -1,22 +1,28 @@
 ---
 type: community
-cohesion: 0.29
-members: 7
+cohesion: 0.17
+members: 13
 ---
 
 # Eksplorasi Dashboard Streamlit
 
-**Cohesion:** 0.29 - loosely connected
-**Members:** 7 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 13 nodes
 
 ## Members
-- [[Active Instagram-inclusive 20-topic snapshot macro c_v 0.4315219014]] - concept - README.md
-- [[BeeSense project and dashboard runbook]] - document - README.md
-- [[Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries]] - concept - README.md
-- [[Historical Graphify memory of the native SBERTUMAPDBSCAN migration]] - document - graphify-out/memory/query_20261028_153533_update_social_nlp_py_ke_embedding_sbert__umap_sesu.md
-- [[Historical combined20 UIruntime verification retained after relocation]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Preserved baseline, versioned merged source and complete active artifacts]] - rationale - README.md
-- [[Retained historical NLP snapshots and changed-corpus score limits]] - concept - README.md
+- [[._explanation_index()]] - code - Dashboard/app.py
+- [[._explanations_view()]] - code - Dashboard/app.py
+- [[._network()]] - code - Dashboard/app.py
+- [[._topic_option()]] - code - Dashboard/app.py
+- [[._topic_selector()]] - code - Dashboard/app.py
+- [[.test_topic_graph_is_bounded_and_noise_is_not_a_topic()]] - code - tests/nlp/test_social_nlp.py
+- [[.topic_figure()]] - code - Dashboard/app.py
+- [[.topic_summary()]] - code - Dashboard/app.py
+- [[Bounded topic graph volume from filtered rows, semantic edges from the full mod]] - rationale - Dashboard/app.py
+- [[Count sentence occurrences; never confuse them with distinct comments.]] - rationale - Dashboard/app.py
+- [[Keep the full-model layout stable while volume and edge filters change.]] - rationale - Dashboard/app.py
+- [[Keyboard dropdown and URL-bound topicexplanation navigation]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[_graph_positions()]] - code - Dashboard/app.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,26 +32,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
-- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate_2]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_5]]
-- 1 edge to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
+- 7 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
+- 6 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 4 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_2]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
-- 1 edge to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
-- 1 edge to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
 
 ## Top bridge nodes
-- [[BeeSense project and dashboard runbook]] - degree 20, connects to 15 communities
-- [[Historical combined20 UIruntime verification retained after relocation]] - degree 4, connects to 2 communities
-- [[Active Instagram-inclusive 20-topic snapshot macro c_v 0.4315219014]] - degree 4, connects to 2 communities
-- [[Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries]] - degree 2, connects to 1 community
+- [[._network()]] - degree 6, connects to 3 communities
+- [[._explanations_view()]] - degree 4, connects to 3 communities
+- [[.topic_figure()]] - degree 6, connects to 2 communities
+- [[._topic_option()]] - degree 6, connects to 2 communities
+- [[._topic_selector()]] - degree 5, connects to 2 communities

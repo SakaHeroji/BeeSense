@@ -15,7 +15,7 @@ tags:
 - [[CAAHTTP200 without session;legacyHTTP400 needs_upgrade]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[One LoginRequired recovery with verification-code preservation]] - `references` [EXTRACTED]
 - [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - `references` [EXTRACTED]
 - [[User-provided instagrapi scraper guidance]] - `cites` [EXTRACTED]

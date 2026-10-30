@@ -1,20 +1,20 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Kalimat topik Gemini"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # DashboardreadsverifiedCSVwithnoAPIortrainingonrerun
 
 ## Connections
 - [[Active20-topicc_v0.4315 artifact andGemini display contract]] - `references` [EXTRACTED]
+- [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - `references` [EXTRACTED]
-- [[Qualifiedmodel→contextualGemini2→CSV→read-onlyDashboard]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

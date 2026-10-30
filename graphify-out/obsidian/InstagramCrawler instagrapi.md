@@ -154,3 +154,48 @@ memerlukan daemon tersedia. No migration required.
 ## Pemulihan 429 terkini
 
 SocialCrawler 1.5.1 menambahkan jeda Instagram360 detik/maksimum3 retry, mengikuti Retry-After yang lebih lama dan deadline awal16.28WIB. Status main-document/GraphQL429 dipantau tanpa menyimpan cookie/header otentikasi; generic navigation failure tidak diasumsikan429. Chrome dipertahankan ketika429/error/timeout/challenge. Penutupan sebelumnya berasal dari finally crawler, bukan macOS. Run01 menghasilkan248 post/2.128 komentar setelah49 menit, run02kosong. Run03 dimulai setelah cooldown14.47WIB; target 1.000/durasi3 jam belum tercapai. Training sementara ditunda hingga akuisisi selesai.17tes terfokus lulus.
+
+## Pembaruan pacing setelah deployment 30 Oktober
+
+Dashboard pada commit `194e0b1` sudah terverifikasi live di
+https://beesense.streamlit.app: 20 topik, c_v 0,4315219014, dan CSV unduhan
+identik dengan berkas lokal. Narasi Gemini memakai 10 keyword dan 10 kalimat
+representatif per topik. Perbaikan crawler berikut dilakukan setelah verifikasi
+tersebut; crawling tetap berhenti dan tidak ada uji jaringan Instagram baru.
+
+`SocialCrawler` 1.5.2 menambahkan `instagram_pacing`. Preset
+`config/social_crawler_instagram_3h.json` dan preset pemulihan kini memakai:
+
+- Jeda antaroperasi acak 5–10 detik.
+- Istirahat 120 detik setiap 20 operasi Instagram, hanya bila masih ada pekerjaan.
+- Cooldown 429 bertahap 360, 720, 1.440, lalu maksimal 3.600 detik. Batas ini
+  berlaku pada perhitungan lokal; `Retry-After` yang lebih lama tetap dihormati.
+- Maksimum tiga retry dan batas waktu total tetap berlaku. Scheduler memberi
+  kesempatan platform lain berjalan selama jeda Instagram pada mode round robin.
+- Maksimal delapan scroll per halaman dengan jeda lima detik. Data yang belum
+  terkumpul tetap ditandai parsial; target 1.000 post bukan jaminan throughput.
+
+```json
+"instagram_pacing": {
+  "enabled": true,
+  "batch_size": 20,
+  "batch_pause_seconds": 120,
+  "rate_limit_backoff_multiplier": 2,
+  "max_cooldown_seconds": 3600
+}
+```
+
+Konfigurasi lama yang tidak mengaktifkan blok ini mempertahankan cooldown tetap.
+Hitungan `operations_completed` dan `batch_pauses` masuk ringkasan/progress.
+Satu operasi browser dapat menghasilkan beberapa request HTTP; angka 20 di atas
+merupakan batas batch lokal, bukan kuota resmi Instagram. Sesi Chrome persisten,
+penghentian saat challenge/429, dan pengecualian ID post lama tetap dipakai.
+
+Pola jeda acak, istirahat batch dan exponential backoff diadaptasi dari
+[referensi DataDwip yang diberikan pengguna](https://www.datadwip.com/blog/how-to-scrape-instagram/).
+Klaim kuota dalam artikel bukan jaminan platform. Makna HTTP 429 dan petunjuk
+waktu tunggu mengacu pada [RFC 6585 bagian 4](https://www.rfc-editor.org/rfc/rfc6585#section-4)
+dan [Retry-After pada RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#section-10.2.3).
+Pengaturan ini mengurangi laju akses; tidak menjamin HTTP 429 hilang. Uji jam
+simulasi mencakup pertumbuhan/cap backoff, waktu tunggu server yang lebih lama,
+jeda batch, dan penghentian pada deadline, tanpa membuka Instagram.

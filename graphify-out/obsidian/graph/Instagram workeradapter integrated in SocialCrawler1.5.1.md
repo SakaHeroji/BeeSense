@@ -27,7 +27,7 @@ tags:
 - [[Instagram-only configured1800-second acquisition budget]] - `references` [EXTRACTED]
 - [[InstagramCrawler]] - `references` [EXTRACTED]
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Offline testscontext checks do not establish live Instagram trial success]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
 - [[Spawned operations,global deadline and bounded retry policy]] - `references` [EXTRACTED]

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Cookie login briefly accepted; private acquisitionreuse still rejected]] - `references` [EXTRACTED]
 - [[Historical real-cookie header-patch validation fails SDKAttributeError]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

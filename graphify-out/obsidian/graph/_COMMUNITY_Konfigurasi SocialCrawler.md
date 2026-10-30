@@ -1,30 +1,34 @@
 ---
 type: community
-cohesion: 0.15
-members: 16
+cohesion: 0.16
+members: 20
 ---
 
 # Konfigurasi SocialCrawler
 
-**Cohesion:** 0.15 - loosely connected
-**Members:** 16 nodes
+**Cohesion:** 0.16 - loosely connected
+**Members:** 20 nodes
 
 ## Members
-- [[._event()]] - code - Crawler/Backend/social_crawler.py
-- [[._wait_for_captcha()]] - code - Crawler/Backend/social_crawler.py
 - [[1000 qualified-root targets per platform within shared three-hour budget]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
-- [[Atomic sibling .progress.json snapshots during acquisition]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Configured 1000 new posts per platform, shared three-hour campaign]] - rationale - README.md
 - [[Configured Reddit policy cooldown360seconds]] - concept - config/social_crawler.json
 - [[Configured Reddit retry capthreeperrun]] - concept - config/social_crawler.json
 - [[Configured global acquisition budget 10800 seconds]] - concept - config/social_crawler.json
+- [[Configured per-platform min_posts=1000 and min_comments_per_post=10]] - rationale - config/social_crawler.json
 - [[Configured platform_execution=round_robin]] - concept - config/social_crawler.json
-- [[Coordinator waits for manual CAPTCHA without automated clicks]] - rationale - Crawler/Backend/Reddit/README_playwright.md
-- [[Historical or explicitly selected Playwright CAPTCHA wait]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Current main configuration platforms.reddit.enabled=true]] - concept - config/social_crawler.json
+- [[Explicit partial export and qualified-post shortfall after acquisition]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Historical Reddit pause after HTTP 429, superseded by user-authorized resume]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Historical Reddit pause ten qualified and seventeen exported evidence posts]] - rationale - graphify-out/obsidian/Crawling 1000 Post Baru.md
+- [[Historical platforms.reddit.enabled=false during requested pause]] - concept - graphify-out/obsidian/Crawling 1000 Post Baru.md
 - [[Main config now selects Reddit backend=reddrix]] - concept - config/social_crawler.json
-- [[Main root reddrix.display_mode=auto]] - concept - config/social_crawler.json
 - [[Original deadline stopped acquisition; no operation started afterward]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - rationale - config/social_crawler.json
+- [[Per-platform bounds max_posts 4000, max_candidates 6000]] - rationale - config/social_crawler.json
+- [[Per-platform qualifying-root targets and shortfalls]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[Retained defaulthistorical round-robin deadline;newInstagram-onlyrun separate]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[configsocial_crawler.json]] - document - config/social_crawler.json
 
 ## Live Query (requires Dataview plugin)
@@ -35,19 +39,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
-- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 4 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
-- 4 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_5]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_5]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
+- 9 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
+- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 4 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 3 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
+- 3 edges to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_6]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_3]]
 
 ## Top bridge nodes
-- [[configsocial_crawler.json]] - degree 14, connects to 4 communities
+- [[configsocial_crawler.json]] - degree 14, connects to 5 communities
 - [[Retained defaulthistorical round-robin deadline;newInstagram-onlyrun separate]] - degree 10, connects to 3 communities
-- [[._event()]] - degree 4, connects to 2 communities
-- [[Original deadline stopped acquisition; no operation started afterward]] - degree 3, connects to 2 communities
-- [[._wait_for_captcha()]] - degree 4, connects to 1 community
+- [[Explicit partial export and qualified-post shortfall after acquisition]] - degree 7, connects to 3 communities
+- [[Per-platform qualifying-root targets and shortfalls]] - degree 6, connects to 3 communities
+- [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - degree 9, connects to 2 communities

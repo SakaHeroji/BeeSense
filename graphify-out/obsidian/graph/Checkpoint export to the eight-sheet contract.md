@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_browser_campaign.md"
 type: "concept"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Konfigurasi SocialCrawler"
 location: "# Helper campaign Reddit"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Checkpoint export to the eight-sheet contract
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Advanced connected-browser Reddit campaign helpers]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

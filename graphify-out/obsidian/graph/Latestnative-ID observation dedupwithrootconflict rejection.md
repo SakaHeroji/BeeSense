@@ -12,7 +12,7 @@ tags:
 # Latestnative-ID observation dedupwithrootconflict rejection
 
 ## Connections
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Versionedmergepublishesrecordlineageduplicateauditandchecksums]] - `references` [EXTRACTED]
 - [[merge_social_datasets.py]] - `references` [EXTRACTED]
 

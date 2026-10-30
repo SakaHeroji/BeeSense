@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Browser response429 and private-header boundary]] - `conceptually_related_to` [EXTRACTED]
 - [[InstagramBrowserWorker]] - `references` [EXTRACTED]
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

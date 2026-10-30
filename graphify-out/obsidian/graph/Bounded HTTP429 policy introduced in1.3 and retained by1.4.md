@@ -19,7 +19,7 @@ tags:
 - [[Documented coordinator 1.3 cooldown 360 seconds with at most 3 retries]] - `references` [EXTRACTED]
 - [[Explicit partial export and qualified-post shortfall after acquisition]] - `references` [EXTRACTED]
 - [[Historical continuation 04 applied 1.3 cooldown after explicit user instruction]] - `references` [EXTRACTED]
-- [[Instagram1.5.1 bounded HTTP429 recovery]] - `conceptually_related_to` [EXTRACTED]
+- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - `conceptually_related_to` [EXTRACTED]
 - [[Observed recovery-notice interval≈331.315 seconds is not a server minimum]] - `references` [EXTRACTED]
 - [[Obsidian records bounded retry policy and chronological authorization]] - `semantically_similar_to` [INFERRED]
 - [[Omitted retry config defaults to zero retries for existing callers]] - `references` [EXTRACTED]

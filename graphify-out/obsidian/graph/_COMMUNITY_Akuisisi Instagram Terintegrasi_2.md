@@ -1,35 +1,42 @@
 ---
 type: community
-cohesion: 0.22
-members: 20
+cohesion: 0.15
+members: 27
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 20 nodes
+**Cohesion:** 0.15 - loosely connected
+**Members:** 27 nodes
 
 ## Members
-- [[CAAHTTP200 without session;legacyHTTP400 needs_upgrade]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Documented public hashtag probe fails upstream AttributeError withzero data]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Explicit autopasswordsessionid login selection]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Future Instaloader worker must retain one run-wide contextrate controller]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[GETqesync405 carries public key;POST500 offers no proven login fix]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical real-cookie header-patch validation fails SDKAttributeError]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical trial gate superseded by explicitintegrationauthorization]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instaloader preflight fails before discovery;zero acquired data]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - document - graphify-out/obsidian/InstagramCrawler instagrapi.md
-- [[Live persistence pattern fails after successful settings restore in27.15seconds]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Local restoration verified; server reason remains unknown]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[One LoginRequired recovery with verification-code preservation]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Optional Instaloader4.16 access experiment dependency]] - concept - requirements/instaloader.txt
-- [[Saved-device explicit login and bounded serial acquisition lifecycle]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[User-provided instagrapi scraper guidance]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[User-provided instagrapi session-persistence guidance]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[curl andrequests accountreads both403login_required]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[._browser_call()]] - code - Crawler/Backend/social_crawler.py
+- [[._delay()]] - code - Crawler/Backend/social_crawler.py
+- [[._dom_events()]] - code - Crawler/Backend/social_crawler.py
+- [[._execute()_1]] - code - Crawler/Backend/social_crawler.py
+- [[._legacy_settings()_1]] - code - Crawler/Backend/social_crawler.py
+- [[._pace()]] - code - Crawler/Backend/social_crawler.py
+- [[.clock()_1]] - code - tests/crawler/test_instagram_crawler.py
+- [[.setUp()_7]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_discovery_retains_bounded_cursor()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_429_honors_server_wait_and_retries_same_post()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_batch_pause_is_bounded_by_global_deadline()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_default_cooldown_matches_reddit_policy()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_exponential_backoff_is_capped_and_retry_count_is_bounded()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_only_never_calls_youtube_or_reddit_and_matches_excel_contract()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_pacing_rejects_unknown_or_unsafe_values()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_retry_cap_and_global_deadline_stop_additional_requests()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instagram_server_wait_is_not_shortened_by_backoff_cap()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_mixed_export_keeps_native_platform_provenance()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_native_baseline_skips_instagram_before_worker()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_unused_instagram_settings_cannot_leak_credentials_in_other_platform_runs()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.worker()_2]] - code - tests/crawler/test_instagram_crawler.py
+- [[Clock_1]] - code - tests/crawler/test_instagram_crawler.py
+- [[Compose platform workers with one configuration, scheduler and export bundle.]] - rationale - Crawler/Backend/social_crawler.py
+- [[InstagramIntegrationTests]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[Root-publication date and literal keyword selection]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[SocialCrawler_1]] - code - Crawler/Backend/social_crawler.py
+- [[YouTube date hint aids discovery; exact coordinator timestamp filter decides eligibility]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,20 +46,38 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 1 edge to [[_COMMUNITY_Bundle Excel dan Provenans]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 14 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
+- 11 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 8 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 8 edges to [[_COMMUNITY_Konfigurasi SocialCrawler]]
+- 6 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
+- 5 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
+- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 5 edges to [[_COMMUNITY_Konfigurasi SocialCrawler_1]]
+- 5 edges to [[_COMMUNITY_Topik dan Verifikasi NLP_1]]
+- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
+- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
+- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
+- 2 edges to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
+- 2 edges to [[_COMMUNITY_Bundle Excel dan Provenans]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
+- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_3]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_1]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
 
 ## Top bridge nodes
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - degree 26, connects to 7 communities
-- [[Historical trial gate superseded by explicitintegrationauthorization]] - degree 10, connects to 3 communities
-- [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - degree 6, connects to 2 communities
-- [[Saved-device explicit login and bounded serial acquisition lifecycle]] - degree 9, connects to 1 community
-- [[Instaloader preflight fails before discovery;zero acquired data]] - degree 6, connects to 1 community
+- [[SocialCrawler_1]] - degree 109, connects to 25 communities
+- [[InstagramIntegrationTests]] - degree 17, connects to 2 communities
+- [[.worker()_2]] - degree 13, connects to 2 communities
+- [[Clock_1]] - degree 10, connects to 1 community
+- [[._browser_call()]] - degree 4, connects to 1 community

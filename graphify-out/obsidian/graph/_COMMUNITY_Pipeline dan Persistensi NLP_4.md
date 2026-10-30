@@ -27,12 +27,13 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 5 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
+- 4 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
 - 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
 
 ## Top bridge nodes
+- [[.score_coherence()]] - degree 7, connects to 3 communities
 - [[.describe_topics()]] - degree 6, connects to 3 communities
-- [[.score_coherence()]] - degree 7, connects to 2 communities
 - [[._ctfidf_terms()]] - degree 5, connects to 2 communities
 - [[._topic_vectorizer()]] - degree 3, connects to 1 community
 - [[.build_topic_graph()]] - degree 2, connects to 1 community

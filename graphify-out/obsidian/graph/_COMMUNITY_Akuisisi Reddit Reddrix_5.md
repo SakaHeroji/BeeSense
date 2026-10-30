@@ -1,22 +1,24 @@
 ---
 type: community
-cohesion: 0.43
-members: 7
+cohesion: 0.36
+members: 9
 ---
 
 # Akuisisi Reddit Reddrix
 
-**Cohesion:** 0.43 - moderately connected
-**Members:** 7 nodes
+**Cohesion:** 0.36 - loosely connected
+**Members:** 9 nodes
 
 ## Members
-- [[Crawler root-context allowlist preserves packageconfigdependency layout]] - rationale - deployment/docker/Dockerfile.crawler.dockerignore
-- [[Isolated Reddrix 1.2.14 crawler dependency pins]] - concept - requirements/reddrix.txt
-- [[Isolated local environment and separately downloaded browser]] - rationale - docs/crawler/REDDIT_CRAWLER.md
-- [[Relocated Selenium image preserves included requirements and package modules]] - rationale - deployment/docker/Dockerfile.selenium
-- [[Relocated combined crawler image runs package module as UID10001]] - rationale - deployment/docker/Dockerfile.crawler
-- [[Selenium build context allows the newly included dependency manifest]] - rationale - deployment/docker/Dockerfile.selenium.dockerignore
-- [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - document - requirements/crawler.txt
+- [[.crawler()_1]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_default_config_selects_reddrix_without_loading_browser()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_mixed_baseline_skips_both_platforms_before_worker_requests()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_reddrix_retry_uses_coordinator_cooldown_and_same_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[SocialCrawlerReddrixTests]] - code - tests/crawler/test_social_crawler_reddrix.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,19 +28,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 6 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 5 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 3 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
 - 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_4]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
-- 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_8]]
 
 ## Top bridge nodes
-- [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - degree 6, connects to 3 communities
-- [[Relocated combined crawler image runs package module as UID10001]] - degree 5, connects to 3 communities
-- [[Isolated Reddrix 1.2.14 crawler dependency pins]] - degree 6, connects to 1 community
-- [[Relocated Selenium image preserves included requirements and package modules]] - degree 4, connects to 1 community
-- [[Crawler root-context allowlist preserves packageconfigdependency layout]] - degree 3, connects to 1 community
+- [[SocialCrawlerReddrixTests]] - degree 16, connects to 5 communities
+- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - degree 4, connects to 2 communities
+- [[.test_default_config_selects_reddrix_without_loading_browser()]] - degree 3, connects to 2 communities
+- [[.crawler()_1]] - degree 7, connects to 1 community
+- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - degree 3, connects to 1 community

@@ -1,28 +1,37 @@
 ---
 type: community
-cohesion: 0.18
-members: 13
+cohesion: 0.14
+members: 22
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 22 nodes
 
 ## Members
-- [[Bounded hashtag discovery with authoritative local root filters]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Cookie login briefly accepted; private acquisitionreuse still rejected]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Explicit local login and session reuse with no automatic password replay]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Ignoredlocalcredentialsprofiles;explicitnewmodelandGemininoteallowlist]] - rationale - .gitignore
-- [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instagram-only configured1800-second acquisition budget]] - concept - config/instagram_crawler.json
-- [[Local session path and explicit360-second3-retry policy]] - rationale - config/instagram_crawler.json
-- [[Offline testscontext checks do not establish live Instagram trial success]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Spawned operations,global deadline and bounded retry policy]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Standalone Instagram uses existing auditcompact Excel contract]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Upgradeloginchallenge barriers are distinct from verified429]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[instagrapi upstream private API and login-migration guidance]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Browser response429 and private-header boundary]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Chrome remains available for operator inspection]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Current Instagram bounded retry configuration; historical execution chronology]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Eightfive-second scrolls and offline pacing evidence]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Enabled5–10secondjitter,batch20rest120 andexponentialbackoff]] - concept - config/social_crawler_instagram_3h.json
+- [[Enabled5–10secondjitter,batch20rest120 andexponentialbackoff_1]] - concept - config/social_crawler_instagram_resume_20261030.json
+- [[Exponential localcooldown never shortens serverRetry-After]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Historical Instagram run01248 posts and2128 comments]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Historical Instagram-only campaign start and unchanged three-hour targets]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Instagrambrowserpreset withoptional1.5.2 pacing]] - concept - config/social_crawler_instagram_3h.json
+- [[Instagrambrowserpreset withoptional1.5.2 pacing_1]] - concept - config/social_crawler_instagram_resume_20261030.json
+- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[RFC6585 section4HTTP429]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[RFC9110 section10.2.3Retry-After]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[Read-onlyhistoricalbaselineandbothInstagramtrialexclusions]] - rationale - config/social_crawler_instagram_3h.json
+- [[Release194e0b1 live with exact20-row200-sentence CSV]] - concept - graphify-out/obsidian/Topik Gemini.md
+- [[Retain Chrome for manual inspection on barriers]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[User-providedDataDwipInstagram scraping reference]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[Verified response429, not generic navigation failure]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Verifieddashboard publication precedes offlinecrawlerpacing]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,21 +41,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 4 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_5]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
 
 ## Top bridge nodes
-- [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - degree 21, connects to 6 communities
-- [[Ignoredlocalcredentialsprofiles;explicitnewmodelandGemininoteallowlist]] - degree 3, connects to 2 communities
-- [[Offline testscontext checks do not establish live Instagram trial success]] - degree 3, connects to 2 communities
-- [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - degree 3, connects to 2 communities
-- [[Explicit local login and session reuse with no automatic password replay]] - degree 7, connects to 1 community
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - degree 14, connects to 5 communities
+- [[Release194e0b1 live with exact20-row200-sentence CSV]] - degree 6, connects to 4 communities
+- [[OptionalInstagram1.5.2 jitter,batch rest and scheduler readiness]] - degree 10, connects to 3 communities
+- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - degree 8, connects to 3 communities
+- [[Exponential localcooldown never shortens serverRetry-After]] - degree 9, connects to 1 community

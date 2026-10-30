@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Akuisisi Instagram Terintegrasi"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # test_social_crawler_instagram.py
@@ -20,4 +20,4 @@ tags:
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

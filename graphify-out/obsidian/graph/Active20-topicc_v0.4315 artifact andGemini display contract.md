@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Active20-topic/c_v0.4315 artifact andGemini display contract
@@ -15,4 +15,4 @@ tags:
 - [[DashboardreadsverifiedCSVwithnoAPIortrainingonrerun]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

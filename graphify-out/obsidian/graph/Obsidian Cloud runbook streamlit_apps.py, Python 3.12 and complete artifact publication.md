@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "document"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L19-L23"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Obsidian Cloud runbook: streamlit_apps.py, Python 3.12 and complete artifact publication
@@ -18,4 +18,4 @@ tags:
 - [[Root streamlit_apps.py delegates to Dashboard.app_1]] - `conceptually_related_to` [INFERRED]
 - [[app.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

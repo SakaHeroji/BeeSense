@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Final audited33034-record Instagram-inclusive corpus]] - `references` [EXTRACTED]
-- [[Historical6065-second870-root Instagram resume preset]] - `references` [EXTRACTED]
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
+- [[Instagrambrowserpreset withoptional1.5.2 pacing_1]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

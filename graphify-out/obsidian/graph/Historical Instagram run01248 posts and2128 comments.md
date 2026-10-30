@@ -12,6 +12,6 @@ tags:
 # Historical Instagram run01:248 posts and2128 comments
 
 ## Connections
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.19
-members: 15
+cohesion: 0.21
+members: 14
 ---
 
 # Ringkasan Topik Gemini
 
-**Cohesion:** 0.19 - loosely connected
-**Members:** 15 nodes
+**Cohesion:** 0.21 - loosely connected
+**Members:** 14 nodes
 
 ## Members
 - [[Atomic20-row contextual CSV with per-topic provenance]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
@@ -24,7 +24,6 @@ members: 15
 - [[Prompt2 natural Indonesian synthesis with evidence-bound claims]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Prompt2CSV2 with preserved keyword-only version1]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 - [[Receipts bind source,model,prompt,keywords and representative sentences]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Verified model configuration enables contextual Gemini CSV]] - concept - config/social_nlp_instagram_20261030.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,16 +33,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
 - 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 3 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
 - 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
-- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_1]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
 
 ## Top bridge nodes
-- [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - degree 17, connects to 4 communities
+- [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - degree 17, connects to 3 communities
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - degree 6, connects to 2 communities
+- [[One request per topictop10weights plus10 fitted original sentences]] - degree 4, connects to 2 communities
 - [[Deterministic fitted-sentence context ranking]] - degree 5, connects to 1 community
-- [[One request per topictop10weights plus10 fitted original sentences]] - degree 4, connects to 1 community
-- [[Verified model configuration enables contextual Gemini CSV]] - degree 2, connects to 1 community
+- [[Complete contextual20-row Gemini CSV passes bundle gate]] - degree 4, connects to 1 community

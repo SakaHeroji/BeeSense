@@ -17,7 +17,7 @@ tags:
 - [[.accept()_4]] - `method` [EXTRACTED]
 - [[.run()_1]] - `calls` [EXTRACTED]
 - [[InstagramBrowserWorker]] - `uses` [INFERRED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[SocialExportMixin]] - `uses` [INFERRED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]

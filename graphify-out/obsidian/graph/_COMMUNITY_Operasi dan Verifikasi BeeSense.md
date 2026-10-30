@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.28
-members: 9
+cohesion: 0.22
+members: 11
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 0.28 - loosely connected
-**Members:** 9 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 11 nodes
 
 ## Members
 - [[._calendar_date()]] - code - Crawler/Backend/social_export.py
@@ -18,6 +18,8 @@ members: 9
 - [[Return a local date for display; relative source dates stay estimates.]] - rationale - Crawler/Backend/social_export.py
 - [[Shared root selection and formula-safe Excel projection for social crawlers.]] - rationale - Crawler/Backend/social_export.py
 - [[SocialExportMixin]] - code - Crawler/Backend/social_export.py
+- [[Standalone Instagram uses existing auditcompact Excel contract]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
 - [[social_export.py]] - code - Crawler/Backend/social_export.py
 
 ## Live Query (requires Dataview plugin)
@@ -28,19 +30,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
+- 3 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
 - 1 edge to [[_COMMUNITY_Parser dan Runner Reddit]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
 - 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 - 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
 
 ## Top bridge nodes
-- [[SocialExportMixin]] - degree 16, connects to 9 communities
+- [[SocialExportMixin]] - degree 16, connects to 8 communities
 - [[social_export.py]] - degree 5, connects to 3 communities
 - [[._write_compact()]] - degree 5, connects to 1 community
+- [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - degree 3, connects to 1 community
+- [[Standalone Instagram uses existing auditcompact Excel contract]] - degree 2, connects to 1 community

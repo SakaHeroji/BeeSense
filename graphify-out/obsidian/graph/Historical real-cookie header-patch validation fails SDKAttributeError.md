@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Historical trial gate superseded by explicitintegrationauthorization]] - `rationale_for` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Offline testscontext checks do not establish live Instagram trial success]] - `references` [EXTRACTED]
 - [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - `references` [EXTRACTED]
 

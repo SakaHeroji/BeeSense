@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

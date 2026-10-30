@@ -10,8 +10,8 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
+- [[CI discovers shared-core Reddrix integration regressions]] - concept - .github/workflows/ci.yml
 - [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - document - .github/workflows/ci.yml
-- [[Declared Reddrix lintformat and offline contract test step]] - concept - .github/workflows/ci.yml
 - [[Frozen full NLP and offline development environment]] - document - requirements/nlp.lock
 - [[Frozen macOS Intel native SBERT training environment]] - document - requirements/sbert-macos-intel.lock
 - [[Full Python3.12 tooling uses requirementsdev.txt and relocated package paths]] - concept - .github/workflows/ci.yml
@@ -32,17 +32,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Coherence dan Quality Gate_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_1]]
+- 3 edges to [[_COMMUNITY_Coherence dan Quality Gate_3]]
 - 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
 - 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_4]]
+- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
 - 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_8]]
 - 1 edge to [[_COMMUNITY_Arsitektur Crawler dan Dependensi]]
 - 1 edge to [[_COMMUNITY_Coherence dan Quality Gate]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
 
 ## Top bridge nodes
 - [[CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.123.14 matrix]] - degree 5, connects to 3 communities

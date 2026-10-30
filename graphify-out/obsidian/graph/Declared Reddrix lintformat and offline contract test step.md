@@ -1,12 +1,12 @@
 ---
 source_file: ".github/workflows/ci.yml"
 type: "concept"
-community: "Runbook dan Verifikasi Lokal"
+community: "Akuisisi Reddit Reddrix"
 location: "jobs.test.steps: RedditCrawler Reddrix contract tests"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Declared Reddrix lint/format and offline contract test step
@@ -16,4 +16,4 @@ tags:
 - [[RedditCrawler]] - `references` [INFERRED]
 - [[RedditCrawlerTests]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

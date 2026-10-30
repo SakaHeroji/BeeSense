@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Explicit autopasswordsessionid login selection]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Live persistence pattern fails after successful settings restore in27.15seconds]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
 

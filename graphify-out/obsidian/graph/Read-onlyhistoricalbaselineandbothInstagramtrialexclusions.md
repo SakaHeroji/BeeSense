@@ -12,6 +12,6 @@ tags:
 # Read-onlyhistoricalbaselineandbothInstagramtrialexclusions
 
 ## Connections
-- [[Instagram-only10800-second browser preset; bounded429 retry]] - `references` [EXTRACTED]
+- [[Instagrambrowserpreset withoptional1.5.2 pacing]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

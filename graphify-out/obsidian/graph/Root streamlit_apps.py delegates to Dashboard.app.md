@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Import Python dan path"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Root streamlit_apps.py delegates to Dashboard.app
@@ -17,4 +17,4 @@ tags:
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

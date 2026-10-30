@@ -19,6 +19,7 @@ tags:
 - [[.close()_1]] - `method` [EXTRACTED]
 - [[Browserworker context permitscodeconfig whileexcludingauthprofiles]] - `references` [INFERRED]
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
+- [[Eightfive-second scrolls and offline pacing evidence]] - `references` [EXTRACTED]
 - [[Historical interruptedChrome trial before1.5integration]] - `references` [EXTRACTED]
 - [[InstagramAdapter]] - `uses` [INFERRED]
 - [[InstagramCrawler]] - `uses` [INFERRED]

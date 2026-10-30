@@ -12,6 +12,6 @@ tags:
 # 27–30October inclusiverefers tosourceacquisitiondate,notpostdate
 
 ## Connections
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

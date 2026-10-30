@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Topik dan Verifikasi NLP"
+community: "Akuisisi Instagram Terintegrasi"
 location: "## Jeda dan kelanjutan Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # YouTube date hint aids discovery; exact coordinator timestamp filter decides eligibility
@@ -16,4 +16,4 @@ tags:
 - [[Root-publication date and literal keyword selection]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Operasi dan Verifikasi BeeSense"
 location: "## Menjalankan percobaan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Three unchanged SocialCrawler methods moved to SocialExportMixin
@@ -16,4 +16,4 @@ tags:
 - [[SocialExportMixin]] - `references` [EXTRACTED]
 - [[Standalone Instagram uses existing auditcompact Excel contract]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

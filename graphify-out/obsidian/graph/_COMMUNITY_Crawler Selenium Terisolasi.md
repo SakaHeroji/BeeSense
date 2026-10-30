@@ -78,12 +78,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
 - 2 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
-- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_3]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 2 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
 
 ## Top bridge nodes
 - [[SocialCrawlerSelenium]] - degree 25, connects to 2 communities

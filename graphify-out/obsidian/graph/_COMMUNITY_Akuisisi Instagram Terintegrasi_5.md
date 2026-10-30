@@ -1,27 +1,33 @@
 ---
 type: community
-cohesion: 0.21
-members: 12
+cohesion: 0.22
+members: 18
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.21 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 18 nodes
 
 ## Members
-- [[Bind document-script comments by native DOM permalink andsame shortcode]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Browser discovery follows InstagramUI order withlocaleligibilitychecks]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[BrowserPythondependencies separatefrom dashboard andprivateAPI]] - concept - requirements/instagram-browser.txt
-- [[Browserworker context permitscodeconfig whileexcludingauthprofiles]] - rationale - deployment/docker/Dockerfile.instagram-browser.dockerignore
-- [[Chrome backend selected by same standalone InstagramCrawler class]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Declared NodeChromePython browserworker atUID10001]] - rationale - deployment/docker/Dockerfile.instagram-browser
-- [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Historical interruptedChrome trial before1.5integration]] - concept - graphify-out/obsidian/InstagramCrawler instagrapi.md
-- [[One dedicated persistentprofile andpinnedCLIsession perrun]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Standalone browser1800-second preset, updated bounded retry]] - concept - config/instagram_browser_crawler.json
-- [[instagramDocumentPayload()]] - code - Crawler/Backend/instagram_browser_capture.mjs
-- [[macOS headed trial andLinuxprepared-profile requirements]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
+- [[Atomic owner-only settings; passwords are never part of this file.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[Bounded Instagram acquisition through instagrapi, with the shared Excel contract]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[Classify by exception typestatus; never write exception text or sessions.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[Interactive credentials stay in the user's terminal, never CLI arguments.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[SessionInvalid]] - code - Crawler/Backend/instagram_crawler.py
+- [[The supplied settings do not contain an authenticated mobile session.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[Validate restored state; allow one explicit LoginRequired recovery only.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[_manual_verification_required()]] - code - Crawler/Backend/instagram_crawler.py
+- [[_raise_exception()]] - code - Crawler/Backend/instagram_crawler.py
+- [[create_client()]] - code - Crawler/Backend/instagram_crawler.py
+- [[error_receipt()]] - code - Crawler/Backend/instagram_crawler.py
+- [[instagram_crawler.py]] - code - Crawler/Backend/instagram_crawler.py
+- [[instagram_worker()]] - code - Crawler/Backend/instagram_crawler.py
+- [[load_client()]] - code - Crawler/Backend/instagram_crawler.py
+- [[login_from_file()]] - code - Crawler/Backend/instagram_crawler.py
+- [[login_local()]] - code - Crawler/Backend/instagram_crawler.py
+- [[login_with_saved_password()]] - code - Crawler/Backend/instagram_crawler.py
+- [[save_session()]] - code - Crawler/Backend/instagram_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,16 +37,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_7]]
-- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_10]]
+- 13 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
+- 8 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
+- 6 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
+- 3 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 2 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 1 edge to [[_COMMUNITY_Parser dan Runner Reddit]]
 - 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_11]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_4]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
+- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_1]]
 
 ## Top bridge nodes
-- [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 3 communities
-- [[Historical interruptedChrome trial before1.5integration]] - degree 5, connects to 2 communities
-- [[Declared NodeChromePython browserworker atUID10001]] - degree 4, connects to 1 community
-- [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - degree 3, connects to 1 community
-- [[instagramDocumentPayload()]] - degree 2, connects to 1 community
+- [[instagram_crawler.py]] - degree 36, connects to 7 communities
+- [[error_receipt()]] - degree 8, connects to 4 communities
+- [[SessionInvalid]] - degree 10, connects to 3 communities
+- [[login_from_file()]] - degree 8, connects to 2 communities
+- [[login_local()]] - degree 8, connects to 1 community

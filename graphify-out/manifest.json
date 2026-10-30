@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "Crawler/Backend/social_crawler.py": {
-    "mtime": 1793346108.8528564,
-    "ast_hash": "088c959963d60244e07f70daef9ca3fb",
+    "mtime": 1793350372.924468,
+    "ast_hash": "0de636386ebbd839f8bf805c1808d565",
     "semantic_hash": ""
   },
   "Crawler/Backend/social_crawler_selenium.py": {
@@ -495,9 +495,9 @@
     "semantic_hash": "e50ea573b875b2d1298415fa61941627"
   },
   "docs/crawler/SOCIAL_CRAWLER.md": {
-    "mtime": 1793348370.8607106,
+    "mtime": 1793350455.5149574,
     "ast_hash": "",
-    "semantic_hash": "7caf9cb66992ba2399101adae0395529"
+    "semantic_hash": "071fe41430e3d437d32109ad9739a258"
   },
   "docs/dashboard/DASHBOARD_DESIGN.md": {
     "mtime": 1793349226.939002,
@@ -620,9 +620,9 @@
     "semantic_hash": "17be076b3122a35e428bb61f00180787"
   },
   "graphify-out/obsidian/InstagramCrawler instagrapi.md": {
-    "mtime": 1793348370.8660772,
+    "mtime": 1793350455.5179665,
     "ast_hash": "",
-    "semantic_hash": "4d6f25cebbd001512843d297bfeb2056"
+    "semantic_hash": "968fc0382533528e399789721162a822"
   },
   "config/instagram_crawler.json": {
     "mtime": 1793346060.0727403,
@@ -645,9 +645,9 @@
     "semantic_hash": "78be82316d3c52c8d0c1df3740211c09"
   },
   ".gitignore": {
-    "mtime": 1793349398.8549218,
+    "mtime": 1793350303.2036843,
     "ast_hash": "",
-    "semantic_hash": "f9a429e10e89a7130757e542d56c2b1d"
+    "semantic_hash": "6cdad72561663eb0f5b66f602fa9d9ef"
   },
   "graphify-out/memory/query_20261030_041128_bagaimana_instagramcrawler_dapat_memakai_kontrak_e.md": {
     "mtime": 1793333488.9628031,
@@ -675,8 +675,8 @@
     "semantic_hash": ""
   },
   "tests/crawler/test_social_crawler_instagram.py": {
-    "mtime": 1793346158.8532808,
-    "ast_hash": "aa34964c20dfc1aea6d1606e3ee41ee9",
+    "mtime": 1793350372.9201415,
+    "ast_hash": "2e6d2c6fbecec95a8a8b694fe61e8c09",
     "semantic_hash": ""
   },
   "MachineLearning/topic_narratives.py": {
@@ -710,14 +710,14 @@
     "semantic_hash": "6efcff44464bc5429d63fbd4aafbd0f6"
   },
   "docs/crawler/INSTAGRAM_PIPELINE_20261030.md": {
-    "mtime": 1793349226.9377377,
+    "mtime": 1793350455.5162156,
     "ast_hash": "",
-    "semantic_hash": "80c17c0764cfaee1187dced8305eadef"
+    "semantic_hash": "4d4bc9bcc478fcfc6a727da56854f036"
   },
   "config/social_crawler_instagram_3h.json": {
-    "mtime": 1793346060.0649893,
+    "mtime": 1793350304.2239127,
     "ast_hash": "",
-    "semantic_hash": "e1241b5ebf0215ca65f17d0ff1124561"
+    "semantic_hash": "f9f0eec75709d8b8bcf309b8a9b481a9"
   },
   "config/social_nlp_instagram_20261030.json": {
     "mtime": 1793348292.3707306,
@@ -730,9 +730,9 @@
     "semantic_hash": "d4c02064193f1b20c07be3845ca5d62a"
   },
   "graphify-out/obsidian/Topik Gemini.md": {
-    "mtime": 1793349226.9414053,
+    "mtime": 1793350455.5191557,
     "ast_hash": "",
-    "semantic_hash": "f8861696736fa75af1637fa811dd26ab"
+    "semantic_hash": "9e937cef6d2bb4a5c8865ab214b8724e"
   },
   "config/social_nlp_instagram_20261030_final.json": {
     "mtime": 1793345168.6178155,
@@ -740,8 +740,8 @@
     "semantic_hash": "3b3236bafa8238fad96c7001242b03d6"
   },
   "config/social_crawler_instagram_resume_20261030.json": {
-    "mtime": 1793346420.093657,
+    "mtime": 1793350304.2277935,
     "ast_hash": "",
-    "semantic_hash": "905757e086213a5a51c14f1f0d95e924"
+    "semantic_hash": "3333e9e31ed04db72b790a23bfceb9a3"
   }
 }

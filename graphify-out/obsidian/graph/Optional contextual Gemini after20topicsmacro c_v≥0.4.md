@@ -17,6 +17,7 @@ tags:
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Boundedtransientretryandfail-closedpublication]] - `references` [EXTRACTED]
 - [[Complete contextual20-row Gemini CSV passes bundle gate]] - `references` [EXTRACTED]
+- [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - `references` [EXTRACTED]
 - [[Deterministic fitted-sentence context ranking]] - `references` [EXTRACTED]
 - [[Gemini GenerateContent APIreference]] - `cites` [EXTRACTED]
@@ -26,7 +27,6 @@ tags:
 - [[One request per topictop10weights plus10 fitted original sentences]] - `references` [EXTRACTED]
 - [[Producer2.4 contextual Gemini stage after verified model gate]] - `references` [EXTRACTED]
 - [[Prompt2 natural Indonesian synthesis with evidence-bound claims]] - `references` [EXTRACTED]
-- [[Qualifiedmodel→contextualGemini2→CSV→read-onlyDashboard]] - `references` [EXTRACTED]
 - [[Receipts bind source,model,prompt,keywords and representative sentences]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 

@@ -16,6 +16,6 @@ tags:
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
 - [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - `references` [EXTRACTED]
 - [[InstagramBrowserWorker]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

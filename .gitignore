@@ -14,6 +14,7 @@ htmlcov/
 .idea/
 .vscode/
 node_modules/
+.playwright-cli/
 .env
 .env.*
 !.env.example

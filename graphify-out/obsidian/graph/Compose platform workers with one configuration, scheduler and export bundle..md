@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L702"
+community: "Akuisisi Instagram Terintegrasi"
+location: "L732"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Compose platform workers with one configuration, scheduler and export bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawler_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

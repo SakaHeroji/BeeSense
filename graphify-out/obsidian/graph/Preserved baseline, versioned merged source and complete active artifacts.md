@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Snapshot NLP dan Arsip"
 location: "## Dataset yang disertakan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Preserved baseline, versioned merged source and complete active artifacts
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

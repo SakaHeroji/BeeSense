@@ -55,34 +55,33 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 29 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
-- 12 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
-- 9 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 22 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_1]]
+- 14 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_2]]
+- 10 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_3]]
 - 7 edges to [[_COMMUNITY_Ringkasan Topik Gemini_1]]
+- 6 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
 - 5 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_4]]
-- 4 edges to [[_COMMUNITY_Coherence dan Quality Gate]]
 - 4 edges to [[_COMMUNITY_Pengujian Penjelasan Topik]]
 - 4 edges to [[_COMMUNITY_Pengujian UI Streamlit]]
-- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
+- 3 edges to [[_COMMUNITY_Coherence dan Quality Gate]]
+- 3 edges to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
 - 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
-- 2 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP_3]]
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate_3]]
 - 2 edges to [[_COMMUNITY_Coherence dan Quality Gate_1]]
-- 2 edges to [[_COMMUNITY_Coherence dan Quality Gate_2]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_3]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
+- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
 - 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_3]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_5]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_8]]
-- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_2]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
+- 1 edge to [[_COMMUNITY_Coherence dan Quality Gate_4]]
 - 1 edge to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
+- 1 edge to [[_COMMUNITY_Ringkasan Topik Gemini_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
 - 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_5]]
 
 ## Top bridge nodes
-- [[SocialNLPClusterer]] - degree 98, connects to 22 communities
+- [[SocialNLPClusterer]] - degree 98, connects to 21 communities
 - [[social_nlp.py]] - degree 12, connects to 6 communities
 - [[NLPTests]] - degree 27, connects to 2 communities
 - [[.select_candidate()]] - degree 5, connects to 2 communities

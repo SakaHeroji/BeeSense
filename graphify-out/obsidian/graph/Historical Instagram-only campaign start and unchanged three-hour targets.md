@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
-- [[Instagram-only10800-second browser preset; bounded429 retry]] - `references` [EXTRACTED]
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[Instagrambrowserpreset withoptional1.5.2 pacing]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

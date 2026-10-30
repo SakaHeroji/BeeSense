@@ -18,8 +18,8 @@ tags:
 - [[Active33034-record three-platform corpus]] - `shares_data_with` [EXTRACTED]
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
+- [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
 - [[Producer2.4 contextual Gemini stage after verified model gate]] - `references` [EXTRACTED]
-- [[Qualifiedmodel→contextualGemini2→CSV→read-onlyDashboard]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

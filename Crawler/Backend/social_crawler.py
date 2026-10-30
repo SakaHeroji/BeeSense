@@ -40,10 +40,17 @@ from Crawler.Backend.social_export import (
 )
 from Crawler.Backend.Youtube import crawl_youtube as youtube
 
-VERSION = "1.5.1"
+VERSION = "1.5.2"
 INSTAGRAM_RATE_LIMIT_DEFAULTS = {
     "rate_limit_cooldown_seconds": 360,
     "rate_limit_max_retries": 3,
+}
+INSTAGRAM_PACING_DEFAULTS = {
+    "enabled": False,
+    "batch_size": 20,
+    "batch_pause_seconds": 120,
+    "rate_limit_backoff_multiplier": 2,
+    "max_cooldown_seconds": 3600,
 }
 REDDRIX_ADAPTER_VERSION = "1.1.0"
 REDDRIX_METHOD = "reddrix_unofficial_web"
@@ -84,6 +91,7 @@ DEFAULT_CONFIG = dict(
     reddrix={"display_mode": "auto"},
     instagrapi={},
     instagram_browser={},
+    instagram_pacing=deepcopy(INSTAGRAM_PACING_DEFAULTS),
     since=None,
     until=None,
     include_keywords=[],
@@ -432,6 +440,20 @@ def _config(value):
     if not isinstance(value, dict) or set(value) - set(DEFAULT_CONFIG):
         raise ValueError("config must be an object with known SocialCrawler fields")
     cfg.update(deepcopy(value))
+    pacing = cfg["instagram_pacing"]
+    if not isinstance(pacing, dict) or set(pacing) - set(INSTAGRAM_PACING_DEFAULTS):
+        raise ValueError("instagram_pacing must contain known pacing settings")
+    pacing = {**INSTAGRAM_PACING_DEFAULTS, **pacing}
+    if type(pacing["enabled"]) is not bool:
+        raise ValueError("instagram_pacing.enabled must be boolean")
+    for name, low, high, integer in (
+        ("batch_size", 1, 1000, True),
+        ("batch_pause_seconds", 1, 10800, True),
+        ("rate_limit_backoff_multiplier", 1, 8, False),
+        ("max_cooldown_seconds", 1, 86400, True),
+    ):
+        _number(pacing[name], "instagram_pacing." + name, low, high, integer)
+    cfg["instagram_pacing"] = pacing
     if not isinstance(cfg["instagrapi"], dict) or set(cfg["instagrapi"]) - {
         "session_file",
         "request_delay_seconds",
@@ -567,6 +589,14 @@ def _config(value):
                 "enabled": enabled,
                 "backend": backend,
             }
+            if (
+                pacing["enabled"]
+                and pacing["max_cooldown_seconds"]
+                < result[name]["rate_limit_cooldown_seconds"]
+            ):
+                raise ValueError(
+                    "Instagram max cooldown must not shorten its base cooldown"
+                )
             continue
         if not isinstance(settings, dict) or set(settings) - (
             set(DEFAULT_PLATFORM) | extra[name]
@@ -1551,6 +1581,8 @@ class SocialCrawler(SocialExportMixin):
                     return
                 if name in {"reddit", "instagram"}:
                     summary.update(rate_limit_events=0, rate_limit_retries=0)
+                if name == "instagram":
+                    summary.update(operations_completed=0, batch_pauses=0)
                 settings = self._legacy_settings(name, p)
                 queue = deque()
                 pending_operation = None
@@ -1673,6 +1705,8 @@ class SocialCrawler(SocialExportMixin):
                     events, result = self._execute(
                         name, operation, target, settings, p, deadline, cached
                     )
+                    if name == "instagram":
+                        summary["operations_completed"] += 1
                     if result.get("source_version"):
                         versions.add(result["source_version"])
                     source_errors = (
@@ -1820,7 +1854,16 @@ class SocialCrawler(SocialExportMixin):
                             server_wait = max(0, math.ceil(server_wait))
                         else:
                             server_wait = 0
-                        wait = max(p["rate_limit_cooldown_seconds"], server_wait)
+                        policy = self.config["instagram_pacing"]
+                        base_wait = p["rate_limit_cooldown_seconds"]
+                        if name == "instagram" and policy["enabled"]:
+                            base_wait = min(
+                                policy["max_cooldown_seconds"],
+                                base_wait
+                                * policy["rate_limit_backoff_multiplier"]
+                                ** (summary["rate_limit_events"] - 1),
+                            )
+                        wait = max(math.ceil(base_wait), server_wait)
                         summary["last_rate_limited_at"] = finished
                         summary["rate_limit_cooldown_seconds"] = wait
                         try:
@@ -1872,6 +1915,19 @@ class SocialCrawler(SocialExportMixin):
                     if source_errors >= 3:
                         summary["stop_reason"] = "CONSECUTIVE_SOURCE_ERRORS"
                         break
+                    policy = self.config["instagram_pacing"]
+                    if (
+                        name == "instagram"
+                        and policy["enabled"]
+                        and summary["operations_completed"] % policy["batch_size"] == 0
+                        and summary["qualified_posts"] < p["min_posts"]
+                        and (queue or searches)
+                        and self.clock() < deadline
+                    ):
+                        pause = policy["batch_pause_seconds"]
+                        ready_at[name] = self.clock() + pause
+                        summary["batch_pauses"] += 1
+                        self._event("batch_pause", platform=name, pause_seconds=pause)
                     yield
                 summary["filtered_roots"] = dict(filtered)
                 summary["target_met"] = summary["qualified_posts"] >= p["min_posts"]

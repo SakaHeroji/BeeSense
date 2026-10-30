@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
-location: "L691"
+community: "Alur Akuisisi Sosial Terpadu"
+location: "L721"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # _url()
@@ -18,4 +18,4 @@ tags:
 - [[media_url()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

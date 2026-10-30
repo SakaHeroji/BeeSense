@@ -19,8 +19,8 @@ tags:
 - [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - `rationale_for` [EXTRACTED]
 - [[Historical real-cookie header-patch validation fails SDKAttributeError]] - `rationale_for` [EXTRACTED]
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `rationale_for` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Live persistence pattern fails after successful settings restore in27.15seconds]] - `rationale_for` [EXTRACTED]
-- [[SocialCrawler1.5.1 integrates Instagram shared worker and bounded recovery]] - `references` [EXTRACTED]
+- [[SocialCrawler1.5.2 integrated Instagram with optional pacing]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

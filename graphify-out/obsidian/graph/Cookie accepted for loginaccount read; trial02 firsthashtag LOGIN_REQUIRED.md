@@ -16,7 +16,7 @@ tags:
 - [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - `references` [EXTRACTED]
 - [[Historical trial gate superseded by explicitintegrationauthorization]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Local restoration verified; server reason remains unknown]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

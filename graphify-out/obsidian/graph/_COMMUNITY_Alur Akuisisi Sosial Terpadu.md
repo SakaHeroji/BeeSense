@@ -1,17 +1,21 @@
 ---
 type: community
-cohesion: 0.14
-members: 42
+cohesion: 0.10
+members: 51
 ---
 
 # Alur Akuisisi Sosial Terpadu
 
-**Cohesion:** 0.14 - loosely connected
-**Members:** 42 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 51 nodes
 
 ## Members
+- [[.__init__()_23]] - code - tests/crawler/test_social_crawler.py
 - [[.crawler()]] - code - tests/crawler/test_social_crawler.py
 - [[.read()]] - code - tests/crawler/test_social_crawler.py
+- [[.setUp()_4]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.setUp()_3]] - code - tests/crawler/test_social_crawler.py
+- [[.sleep()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_calendar_month_boundary_date_only_and_unrecognized_dates()]] - code - tests/crawler/test_social_crawler.py
@@ -22,11 +26,14 @@ members: 42
 - [[.test_compact_long_unicode_text_is_marked_and_formula_text_stays_literal()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_compact_reexport_refilters_saved_data_and_keeps_source_unchanged()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_date_window_is_inclusive_start_exclusive_end_and_unknown_is_excluded()]] - code - tests/crawler/test_social_crawler.py
+- [[.test_default_uses_one_json_and_plan_does_not_access_sources()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_delay_cannot_start_another_request_after_global_budget()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_discovery_refills_after_a_filtered_candidate_without_repeating_urls()]] - code - tests/crawler/test_social_crawler.py
+- [[.test_expanded_youtube_search_budget_reaches_worker_without_old_cli_cap()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_historical_posts_are_skipped_before_requests_and_ids_are_canonical()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_include_all_across_title_and_description_and_exclude_wins()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_interrupt_during_delay_publishes_already_captured_evidence()]] - code - tests/crawler/test_social_crawler.py
+- [[.test_invalid_config_is_rejected_before_output_or_requests()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_invalid_native_identity_does_not_become_a_success()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_manual_captcha_wait_only_observes_and_obeys_global_deadline()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_minimum_counts_only_roots_with_enough_unique_comments()]] - code - tests/crawler/test_social_crawler.py
@@ -37,6 +44,7 @@ members: 42
 - [[.test_reddit_cooldown_honors_longer_server_wait_and_retry_cap()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_reddit_cooldown_leaves_youtube_runnable_and_retries_same_thread()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_reddit_cooldown_never_waits_or_retries_beyond_global_deadline()]] - code - tests/crawler/test_social_crawler.py
+- [[.test_reddit_cooldown_rejects_invalid_config_values()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_reddit_cooldown_retries_failed_search_without_losing_query()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_redirect_to_historical_root_is_not_exported()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_relative_calendar_dates_use_source_capture_timezone_and_edit_suffix()]] - code - tests/crawler/test_social_crawler.py
@@ -46,6 +54,7 @@ members: 42
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - code - tests/crawler/test_social_crawler.py
 - [[.youtube_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[Clock]] - code - tests/crawler/test_social_crawler.py
 - [[SocialCrawlerTests]] - code - tests/crawler/test_social_crawler.py
 - [[rd_events()]] - code - tests/crawler/test_social_crawler.py
 - [[receipt()]] - code - tests/crawler/test_social_crawler.py
@@ -61,16 +70,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 4 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
-- 4 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_3]]
-- 2 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_1]]
+- 11 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 6 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
+- 2 edges to [[_COMMUNITY_Crawler Selenium Terisolasi]]
 - 1 edge to [[_COMMUNITY_Ekspor Campaign dan Resume]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium Terisolasi]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi]]
 
 ## Top bridge nodes
+- [[Clock]] - degree 11, connects to 4 communities
+- [[receipt()]] - degree 23, connects to 3 communities
 - [[test_social_crawler.py]] - degree 10, connects to 3 communities
-- [[SocialCrawlerTests]] - degree 42, connects to 2 communities
 - [[.crawler()]] - degree 32, connects to 2 communities
-- [[receipt()]] - degree 23, connects to 2 communities
-- [[yt_events()]] - degree 17, connects to 1 community
+- [[SocialCrawlerTests]] - degree 42, connects to 1 community

@@ -1,27 +1,32 @@
 ---
 type: community
-cohesion: 0.18
-members: 12
+cohesion: 0.23
+members: 17
 ---
 
 # Akuisisi Instagram Terintegrasi
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.23 - loosely connected
+**Members:** 17 nodes
 
 ## Members
-- [[20-topiccoherence gate passed; active configuration switched]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[27–30October inclusiverefers tosourceacquisitiondate,notpostdate]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Bounded Instagram recovery does not override user stop]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Final audited33034-record Instagram-inclusive corpus]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Fiveintegrationtests plus76NLP andoneisolateddashboardtestpassed]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Historical30658-record preflight superseded by33034-record final corpus]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - document - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Instagram1.5.1 rate-limit recovery andstagedrun chronology]] - rationale - graphify-out/obsidian/InstagramCrawler instagrapi.md
-- [[Latestnative-ID observation dedupwithrootconflict rejection]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[User stopped Instagram acquisition; no subsequent crawl]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Versionedmergepublishesrecordlineageduplicateauditandchecksums]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[.__init__()_24]] - code - Crawler/Backend/instagram_crawler.py
+- [[._baseline()]] - code - Crawler/Backend/instagram_crawler.py
+- [[._existing_posts()]] - code - Crawler/Backend/social_crawler.py
+- [[.accept()_4]] - code - Crawler/Backend/instagram_crawler.py
+- [[.run()_1]] - code - Crawler/Backend/instagram_crawler.py
+- [[Accept only Instagram postreel permalinks; strip tracking parameters.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[InstagramAdapter]] - code - Crawler/Backend/instagram_crawler.py
+- [[Map explicit native IDstimestamps; do not infer authors or text coverage.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[Read root identities only; never alter the historical workbooks.]] - rationale - Crawler/Backend/social_crawler.py
+- [[_timestamp()_1]] - code - Crawler/Backend/instagram_crawler.py
+- [[_value()]] - code - Crawler/Backend/instagram_crawler.py
+- [[collect()]] - code - Crawler/Backend/instagram_crawler.py
+- [[media_pk_from_url()]] - code - Crawler/Backend/instagram_crawler.py
+- [[media_url()]] - code - Crawler/Backend/instagram_crawler.py
+- [[native_pk()]] - code - Crawler/Backend/instagram_crawler.py
+- [[normalize_item()]] - code - Crawler/Backend/instagram_crawler.py
+- [[object_key()_1]] - code - Crawler/Backend/instagram_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,20 +36,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
+- 13 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_5]]
+- 7 edges to [[_COMMUNITY_Ringkasan Topik Gemini]]
+- 6 edges to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 5 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_9]]
 - 3 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_6]]
-- 2 edges to [[_COMMUNITY_Topik dan Verifikasi NLP]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_5]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
-- 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
-- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
-- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip]]
+- 2 edges to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_3]]
+- 1 edge to [[_COMMUNITY_Akuisisi Instagram Terintegrasi_1]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_4]]
+- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_2]]
 
 ## Top bridge nodes
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - degree 14, connects to 6 communities
-- [[20-topiccoherence gate passed; active configuration switched]] - degree 5, connects to 2 communities
-- [[Final audited33034-record Instagram-inclusive corpus]] - degree 4, connects to 2 communities
-- [[User stopped Instagram acquisition; no subsequent crawl]] - degree 3, connects to 1 community
-- [[Bounded Instagram recovery does not override user stop]] - degree 3, connects to 1 community
+- [[InstagramAdapter]] - degree 10, connects to 7 communities
+- [[._existing_posts()]] - degree 8, connects to 5 communities
+- [[media_url()]] - degree 11, connects to 4 communities
+- [[normalize_item()]] - degree 12, connects to 3 communities
+- [[collect()]] - degree 10, connects to 3 communities

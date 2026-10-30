@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[Module CLIs and worker spawn import relocated packages]] - `references` [EXTRACTED]
 - [[Package ROOT preserves repository-relative configuration and artifact paths]] - `references` [EXTRACTED]

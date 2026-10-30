@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Akuisisi Instagram Terintegrasi"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Akuisisi_Instagram_Terintegrasi
 ---
 
 # Exercise Instagram through the combined coordinator, without network access.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_social_crawler_instagram.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

@@ -28,17 +28,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_1]]
+- 4 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_3]]
 - 2 edges to [[_COMMUNITY_Runbook dan Verifikasi Lokal]]
-- 2 edges to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
+- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_2]]
 - 1 edge to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
-- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_5]]
-- 1 edge to [[_COMMUNITY_Eksplorasi Dashboard Streamlit_4]]
+- 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi Reddit Reddrix_7]]
 - 1 edge to [[_COMMUNITY_Snapshot NLP dan Arsip_2]]
 
 ## Top bridge nodes
-- [[Dashboard-only artifactexplanationUI dependency boundary]] - degree 9, connects to 3 communities
+- [[Dashboard-only artifactexplanationUI dependency boundary]] - degree 9, connects to 2 communities
 - [[Historical Python 3.14.10 Cloud install failureONNX cp314 wheels and Numba support]] - degree 5, connects to 2 communities
 - [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - degree 4, connects to 2 communities
 - [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - degree 4, connects to 1 community

@@ -12,8 +12,8 @@ tags:
 # Bounded Instagram recovery does not override user stop
 
 ## Connections
-- [[Instagram acquisition stopped; audited modelGemini complete; publication pending]] - `references` [EXTRACTED]
-- [[Instagram1.5.1 bounded HTTP429 recovery]] - `conceptually_related_to` [EXTRACTED]
+- [[Historical1.5.1 fixed Instagram cooldown; compatible1.5.2 option]] - `conceptually_related_to` [EXTRACTED]
+- [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Instagram1.5.1 rate-limit recovery andstagedrun chronology]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi

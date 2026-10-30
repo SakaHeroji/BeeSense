@@ -22,7 +22,7 @@ tags:
 - [[Async Reddrix to validated records to existing Excel pipeline]] - `references` [EXTRACTED]
 - [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - `rationale_for` [EXTRACTED]
 - [[Integrated SocialCrawler owns Reddrix acquisition and shared export]] - `references` [EXTRACTED]
-- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Preserved eight-sheet audit and checksummed full-text bundle]] - `conceptually_related_to` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
