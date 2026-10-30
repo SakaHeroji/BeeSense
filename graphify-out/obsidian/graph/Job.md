@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Monitor Job dan Dataset"
 location: "L130"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Monitor_Job_dan_Dataset
 ---
 
 # Job
@@ -18,4 +18,4 @@ tags:
 - [[demo.ts]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset

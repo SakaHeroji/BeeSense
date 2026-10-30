@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "document"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # InstaloaderCrawler guide and evidence
@@ -19,7 +19,7 @@ tags:
 - [[InstaloaderCrawler_1]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[SocialCrawler 1.6.0 default Instaloader integration]] - `references` [EXTRACTED]
-- [[SocialCrawler guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
 - [[Trial06 verified capped live outcome]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.dashboard.dockerignore"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Struktur Runtime Dashboard"
 location: "L1-L18"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # Dashboard build context includes root shim and artifact-reader packages
@@ -16,4 +16,4 @@ tags:
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 - [[topic_narratives.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

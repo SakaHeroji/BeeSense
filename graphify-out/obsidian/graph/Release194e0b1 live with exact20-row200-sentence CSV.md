@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Topik Gemini.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Pacing Instagram"
 location: "## Verifikasi publikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Pacing_Instagram
 ---
 
 # Release194e0b1 live with exact20-row/200-sentence CSV
@@ -19,4 +19,4 @@ tags:
 - [[Published194e0b1 dashboard and byte-identical contextual CSV]] - `references` [EXTRACTED]
 - [[Verifieddashboard publication precedes offlinecrawlerpacing]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Pacing_Instagram

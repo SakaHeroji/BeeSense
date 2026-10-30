@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Penjelasan Topik Dashboard"
 location: "## Interaksi dan aksesibilitas"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Keyboard dropdown and URL-bound topic/explanation navigation
@@ -16,4 +16,4 @@ tags:
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Selected-topic explanation panel links cards, frequency graphs, time shares and source evidence]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/INFERRED #community/Penjelasan_Topik_Dashboard

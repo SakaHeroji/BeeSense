@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Workspace React Crawler"
+community: "Tipe Parser CSV"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Tipe_Parser_CSV
 ---
 
 # @types/papaparse
@@ -15,4 +15,4 @@ tags:
 - [[@typespapaparse_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Tipe_Parser_CSV

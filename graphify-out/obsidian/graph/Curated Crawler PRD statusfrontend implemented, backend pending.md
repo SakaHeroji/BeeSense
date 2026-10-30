@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/PRD Frontend Crawler.md"
 type: "document"
-community: "PRD Workspace Crawler"
+community: "Rencana Produk dan Survei"
 location: "# PRD Frontend Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Curated Crawler PRD status:frontend implemented, backend pending
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
-- [[Crawler frontend PRD v1.1 with implemented seven-source UI and pending backend]] - `references` [EXTRACTED]
+- [[Crawler frontend product requirements]] - `references` [EXTRACTED]
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - `references` [EXTRACTED]
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 - [[Curated immutable dataset selection does not train or change Dashboard]] - `references` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
 - [[New survey schema must preserve role, question, response, version and permission]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/README.md"
 type: "concept"
-community: "PRD Workspace Crawler"
+community: "Rencana Produk dan Survei"
 location: "# PRD BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # React/demo implementation exists while web acquisition backend is still required
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

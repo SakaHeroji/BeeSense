@@ -1,14 +1,14 @@
 ---
 source_file: "Crawler/Frontend/src/test/setup.ts"
 type: "code"
-community: "Workspace React Crawler"
+community: "Setup Pengujian Frontend"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Setup_Pengujian_Frontend
 ---
 
 # setup.ts
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Setup_Pengujian_Frontend

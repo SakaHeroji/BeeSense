@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L1321"
+community: "Bukti Ekstraktif Topik"
+location: "L1323"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Bukti_Ekstraktif_Topik
 ---
 
 # Identify the parent thread, not the individual comment URL.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.parent_post_key()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Bukti_Ekstraktif_Topik

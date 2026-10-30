@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/export_browser_campaign.py"
 type: "code"
-community: "Ekspor Campaign dan Resume"
+community: "Validasi Record Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_Campaign_dan_Resume
+  - community/Validasi_Record_Reddit
 ---
 
 # export_browser_campaign.py
@@ -17,4 +17,4 @@ tags:
 - [[load_campaign()]] - `contains` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume
+#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit

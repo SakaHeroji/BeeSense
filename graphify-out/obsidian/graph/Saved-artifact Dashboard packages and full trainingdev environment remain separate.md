@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Arsitektur BeeSense.md"
 type: "concept"
-community: "Snapshot NLP dan Arsip"
+community: "Arsitektur Model dan Dashboard"
 location: "# Arsitektur BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Arsitektur_Model_dan_Dashboard
 ---
 
 # Saved-artifact Dashboard packages and full training/dev environment remain separate
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Model_dan_Dashboard

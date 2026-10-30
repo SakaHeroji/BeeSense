@@ -1,5 +1,10 @@
 # Pipeline Instagram, dataset tiga hari dan Streamlit
 
+## Snapshot terbaru
+
+Konfigurasi aktif kini memakai `outputs/nlp_20261030_instagram_500_topics20_01` dari `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`: 20 topik, rata-rata c_v 0,4386500025. Excel snapshot lengkap berisi 45.556 pasangan topik–kalimat asli unik; label run ini c-TF-IDF lokal. Lihat [README](../../README.md) dan metode Social NLP untuk data serta batas interpretasi. Catatan hasil/narasi Gemini berikut merupakan riwayat snapshot sebelumnya.
+
+
 Instruksi pengguna 30 Oktober 2026: gabungkan InstagramCrawler ke SocialCrawler,
 ambil **hanya Instagram** selama maksimum **3 jam** dengan target **1.000 post**,
 gabungkan hasil crawling 27–30 Oktober menjadi dataset versi baru tanpa ID ganda,
@@ -112,7 +117,7 @@ Pengguna menghentikan crawling setelah429 dan meminta proses dataset/training/de
 
 Input `outputs/social_20261030_combined_3days_02/social_data.xlsx` memuat **33.034 record unik**, **1.859 root**, dan **31.175 komentar/balasan** dari hasil akuisisi 27–30 Oktober. Sebanyak 49.952 pengulangan antarberkas disisihkan; pemeriksaan menemukan 0 ID native ganda. Total Instagram 324 post/3.038 komentar mencakup batch terbaru 248 post/2.128 komentar dan trial sebelumnya 76 post/910 komentar. Pengguna menghentikan crawling setelah HTTP 429; target 1.000 post dan durasi 3 jam belum tercapai.
 
-Run aktif `outputs/nlp_20261030_instagram_topics20_02` menghasilkan **20 topik**, rata-rata **c_v 0,4315219014**, coverage **94,67%**, silhouette cosine **-0,057864**, dan ARI dua seed **0,820417**. DBSCAN eps=0,25/min_samples=10 menghasilkan 165 kelompok primer, lalu Ward berbobot menggabungkannya menjadi 20 topik. Noise terdiri atas 2.751 kalimat unik. Persiapan menghasilkan 52.451 kemunculan/51.612 kalimat unik, 839 pengulangan dan 5.516 segmen dilewati; 28.758 komentar/balasan terwakili. Fitting inti berlangsung 1.195,5 detik sebelum tahap Gemini.
+Run sesi sebelumnya `outputs/nlp_20261030_instagram_topics20_02` menghasilkan **20 topik**, rata-rata **c_v 0,4315219014**, coverage **94,67%**, silhouette cosine **-0,057864**, dan ARI dua seed **0,820417**. DBSCAN eps=0,25/min_samples=10 menghasilkan 165 kelompok primer, lalu Ward berbobot menggabungkannya menjadi 20 topik. Noise terdiri atas 2.751 kalimat unik. Persiapan menghasilkan 52.451 kemunculan/51.612 kalimat unik, 839 pengulangan dan 5.516 segmen dilewati; 28.758 komentar/balasan terwakili. Fitting inti berlangsung 1.195,5 detik sebelum tahap Gemini.
 
 Gemini `gemini-3.5-flash-lite` menghasilkan **20 kalimat topik dan deskripsi bahasa Indonesia**, masing-masing dari 10 keyword c-TF-IDF berbobot tertinggi dan 10 kalimat terdekat dengan pusat topik. `topic_narratives.csv` beserta provenance/checksum masuk bundle model. UI membaca CSV tanpa API atau training saat rerun. Sebanyak 8 dari 20 topik masih memiliki c_v individual <0,4; ambang berlaku pada rata-rata. Evaluasi ini in-sample, bukan akurasi berlabel atau holdout. Skor dari korpus berbeda tidak menjadi perbandingan kualitas langsung.
 

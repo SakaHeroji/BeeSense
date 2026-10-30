@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/test/domain.test.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Validasi Konfigurasi Frontend"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Validasi_Konfigurasi_Frontend
 ---
 
 # response()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[domain.test.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend

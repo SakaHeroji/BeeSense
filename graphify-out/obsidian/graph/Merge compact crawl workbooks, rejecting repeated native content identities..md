@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "rationale"
-community: "Topik dan Verifikasi NLP"
+community: "Penggabungan Dataset"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penggabungan_Dataset
 ---
 
 # Merge compact crawl workbooks, rejecting repeated native content identities.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[merge_social_datasets.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Penggabungan_Dataset

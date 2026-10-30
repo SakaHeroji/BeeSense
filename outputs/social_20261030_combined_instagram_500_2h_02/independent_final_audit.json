@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-30T15:12:25.412046+00:00",
+  "baseline_rows_preserved_exactly": 33034,
+  "new_unique_posts": 301,
+  "new_counts": {
+    "post": 301,
+    "comment": 622,
+    "reply": 138
+  },
+  "qualified_posts": 16,
+  "merged_rows": 34095,
+  "all_cell_values_preserved": true,
+  "duplicate_native_ids": 0,
+  "new_post_overlap_with_baseline": 0,
+  "baseline_checksum_unchanged": true,
+  "new_post_date_min_wib": "2026-08-10T16:47:33+07:00",
+  "new_post_date_max_wib": "2026-10-30T21:48:32+07:00",
+  "acquisition_segments": [
+    "/Users/sakaheroji/Documents/BeeSense/outputs/social_instagram_20261030_500_2h_04",
+    "/Users/sakaheroji/Documents/BeeSense/outputs/social_instagram_20261030_500_2h_05"
+  ]
+}

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Workspace React Crawler"
+community: "Testing Library React"
 location: "L34"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Testing_Library_React
 ---
 
 # @testing-library/react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@testing-libraryreact]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Testing_Library_React

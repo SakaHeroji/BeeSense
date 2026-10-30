@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/app/Shell.tsx"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Monitor Job dan Dataset"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Monitor_Job_dan_Dataset
 ---
 
 # Shell.tsx
@@ -28,4 +28,4 @@ tags:
 - [[useMediaQuery()]] - `imports` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset

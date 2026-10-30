@@ -1,14 +1,14 @@
 ---
 source_file: "Crawler/Frontend/vite.config.ts"
 type: "code"
-community: "Workspace React Crawler"
+community: "Konfigurasi Build Vite"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Konfigurasi_Build_Vite
 ---
 
 # vite.config.ts
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Build_Vite

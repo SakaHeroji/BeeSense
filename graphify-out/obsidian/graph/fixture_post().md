@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instaloader_crawler.py"
 type: "code"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Pengujian Worker Instaloader"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Pengujian_Worker_Instaloader
 ---
 
 # fixture_post()
@@ -18,4 +18,4 @@ tags:
 - [[.test_web_comments_pagination_ids_and_previews_do_not_use_mobile()]] - `calls` [EXTRACTED]
 - [[test_instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Worker_Instaloader

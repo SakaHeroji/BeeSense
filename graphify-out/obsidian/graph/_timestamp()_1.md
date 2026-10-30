@@ -1,18 +1,23 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
-location: "L339"
+community: "Crawler Selenium"
+location: "L142"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Crawler_Selenium
 ---
 
 # _timestamp()
 
 ## Connections
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[normalize_item()]] - `calls` [EXTRACTED]
+- [[._normalize()_1]] - `calls` [EXTRACTED]
+- [[.search()]] - `calls` [EXTRACTED]
+- [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - `calls` [EXTRACTED]
+- [[.youtube()]] - `calls` [EXTRACTED]
+- [[_reddit_records()]] - `calls` [EXTRACTED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

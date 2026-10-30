@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Worker Reddrix"
 location: "# SocialCrawler"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Worker_Reddrix
 ---
 
 # Main coordinator owns Reddrix normalization, display and worker
@@ -23,4 +23,4 @@ tags:
 - [[resolve_reddrix_display()]] - `conceptually_related_to` [INFERRED]
 - [[run_reddrix_worker()]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/INFERRED #community/Worker_Reddrix

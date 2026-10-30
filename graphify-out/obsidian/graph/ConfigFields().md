@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/Automatic.tsx"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Form Akuisisi dan Survei"
 location: "L37"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Form_Akuisisi_dan_Survei
 ---
 
 # ConfigFields()
@@ -16,4 +16,4 @@ tags:
 - [[Manual.tsx]] - `imports` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei

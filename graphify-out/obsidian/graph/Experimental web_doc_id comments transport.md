@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "concept"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Experimental web_doc_id comments transport
@@ -15,4 +15,4 @@ tags:
 - [[Instaloader issue 2651]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler_1]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

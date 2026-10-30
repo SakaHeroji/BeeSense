@@ -1,24 +1,30 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Worker Reddrix"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Worker_Reddrix
 ---
 
 # social_crawler.py
 
 ## Connections
+- [[InstagramAdapter]] - `imports` [EXTRACTED]
+- [[InstagramBrowserWorker]] - `imports` [EXTRACTED]
+- [[InstagramSettings]] - `imports` [EXTRACTED]
 - [[InstaloaderSettings]] - `imports` [EXTRACTED]
 - [[InstaloaderWorker]] - `imports` [EXTRACTED]
-- [[SocialCrawler_1]] - `contains` [EXTRACTED]
+- [[SocialCrawler]] - `contains` [EXTRACTED]
+- [[SocialExportMixin]] - `imports` [EXTRACTED]
 - [[_config()]] - `contains` [EXTRACTED]
 - [[_keywords()]] - `contains` [EXTRACTED]
 - [[_number()]] - `contains` [EXTRACTED]
 - [[_url()]] - `contains` [EXTRACTED]
+- [[barrier_status()]] - `imports` [EXTRACTED]
+- [[browser_configuration()]] - `imports` [EXTRACTED]
 - [[collect_reddrix()]] - `contains` [EXTRACTED]
 - [[crawl_reddit_playwright.py]] - `imports_from` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `imports_from` [EXTRACTED]
@@ -26,14 +32,19 @@ tags:
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[instaloader_options()]] - `imports` [EXTRACTED]
 - [[load_reddrix()]] - `contains` [EXTRACTED]
-- [[main()_11]] - `contains` [EXTRACTED]
+- [[main()_6]] - `contains` [EXTRACTED]
+- [[media_pk_from_url()]] - `imports` [EXTRACTED]
+- [[media_url()]] - `imports` [EXTRACTED]
+- [[native_pk()]] - `imports` [EXTRACTED]
 - [[normalize_reddrix_item()]] - `contains` [EXTRACTED]
+- [[rate_limit_seconds()]] - `imports` [EXTRACTED]
 - [[reddit_crawler.py]] - `imports_from` [EXTRACTED]
 - [[reddrix_error_receipt()]] - `contains` [EXTRACTED]
 - [[reddrix_receipt()]] - `contains` [EXTRACTED]
 - [[reddrix_version()]] - `contains` [EXTRACTED]
 - [[reddrix_worker()]] - `contains` [EXTRACTED]
 - [[resolve_reddrix_display()]] - `contains` [EXTRACTED]
+- [[run_instagram_worker()]] - `imports` [EXTRACTED]
 - [[run_reddrix_worker()]] - `contains` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `imports_from` [EXTRACTED]
 - [[social_export.py]] - `imports_from` [EXTRACTED]
@@ -44,4 +55,4 @@ tags:
 - [[test_social_crawler_reddrix.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

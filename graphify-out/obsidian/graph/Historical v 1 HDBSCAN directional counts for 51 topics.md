@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Riwayat Evaluasi Coherence"
 location: "## Hasil aktual dan persistensi"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - graphify/EXTRACTED
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Historical v 1 HDBSCAN directional counts for 51 topics
@@ -15,4 +15,4 @@ tags:
 - [[ImmutableolderNLPsnapshots including29Octobercombinedrun]] - `conceptually_related_to` [INFERRED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

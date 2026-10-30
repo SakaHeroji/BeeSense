@@ -1,17 +1,17 @@
 ---
 source_file: "PRD/PRD Frontend/README.md"
 type: "concept"
-community: "PRD Workspace Crawler"
+community: "Persyaratan Produk Crawler"
 location: "# PRD Frontend"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Persyaratan_Produk_Crawler
 ---
 
 # History and dataset detail are supporting views under two menus
 
 ## Connections
-- [[Frontend PRD indexCrawler detailed; NLP and Dashboard PRDs remain future]] - `references` [EXTRACTED]
+- [[Frontend PRD index]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler

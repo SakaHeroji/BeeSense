@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Tipe dan Client API"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Tipe_dan_Client_API
 ---
 
 # types.ts
@@ -18,7 +18,7 @@ tags:
 - [[Capabilities]] - `contains` [EXTRACTED]
 - [[Config]] - `contains` [EXTRACTED]
 - [[Counts]] - `contains` [EXTRACTED]
-- [[Dataset]] - `contains` [EXTRACTED]
+- [[Dataset_2]] - `contains` [EXTRACTED]
 - [[DatasetDetail]] - `contains` [EXTRACTED]
 - [[DatasetFile]] - `contains` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
@@ -55,4 +55,4 @@ tags:
 - [[ui.tsx]] - `imports_from` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Tipe_dan_Client_API

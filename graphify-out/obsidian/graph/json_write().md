@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L66"
+community: "Encoding dan Penyimpanan Model"
+location: "L68"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # json_write()
@@ -16,6 +16,9 @@ tags:
 - [[.encode()]] - `calls` [EXTRACTED]
 - [[.save()]] - `calls` [EXTRACTED]
 - [[.save_explanations()]] - `calls` [EXTRACTED]
+- [[main()_11]] - `calls` [EXTRACTED]
+- [[seal()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[topic_sentence_export.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

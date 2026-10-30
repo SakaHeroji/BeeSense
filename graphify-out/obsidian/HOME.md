@@ -35,3 +35,7 @@ Retrain gabungan aktif: **20 topik**, rata-rata **c_v 0,4720**, ambang rata-rata
 [[Topik Gemini]] menjelaskan sintesis satu kalimat/deskripsi dari 10 keyword c-TF-IDF per topik dan CSV model yang dibaca dashboard tanpa API pada rerun.
 
 Model 30 Oktober sudah terverifikasi:33.034 record unik,20 topik/c_v 0,4315 danCSV 20 narasi [[Topik Gemini]]. [[Dataset Dashboard]] menyimpan perincian dan riwayat.
+
+[[Instagram 500 Post 2 Jam]]: run Instagram 2 jam, target 500 post baru; 324 ID baseline dikecualikan dan hasil akan digabung setelah verifikasi.
+
+- [[Training Instagram 20 Topik]] — model terbaru 20 topik dan Excel seluruh kalimat anggota.

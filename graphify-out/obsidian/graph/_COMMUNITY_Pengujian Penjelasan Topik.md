@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.25
 members: 18
 ---
 
 # Pengujian Penjelasan Topik
 
-**Cohesion:** 0.25 - loosely connected
 **Members:** 18 nodes
 
 ## Members
@@ -37,7 +35,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Pipeline dan Persistensi NLP]]
+- 4 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 
 ## Top bridge nodes
 - [[ExplanationTests]] - degree 16, connects to 1 community

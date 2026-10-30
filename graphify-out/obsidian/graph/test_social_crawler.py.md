@@ -1,19 +1,19 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Pengujian Koordinator Crawler"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Pengujian_Koordinator_Crawler
 ---
 
 # test_social_crawler.py
 
 ## Connections
-- [[Clock]] - `contains` [EXTRACTED]
-- [[SocialCrawler_1]] - `imports` [EXTRACTED]
+- [[Clock_1]] - `contains` [EXTRACTED]
+- [[SocialCrawler]] - `imports` [EXTRACTED]
 - [[SocialCrawlerTests]] - `contains` [EXTRACTED]
 - [[rd_events()]] - `contains` [EXTRACTED]
 - [[receipt()]] - `contains` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[test_social_crawler_reddrix.py]] - `imports_from` [EXTRACTED]
 - [[yt_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Worker Instaloader"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Worker_Instaloader
 ---
 
 # instaloader_crawler.py
@@ -26,7 +26,7 @@ tags:
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[instaloader_options()]] - `contains` [EXTRACTED]
 - [[instaloader_worker()]] - `contains` [EXTRACTED]
-- [[main()_9]] - `contains` [EXTRACTED]
+- [[main()_4]] - `contains` [EXTRACTED]
 - [[observe_requests()]] - `contains` [EXTRACTED]
 - [[retry_after_seconds()]] - `contains` [EXTRACTED]
 - [[save_session()_1]] - `contains` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[test_social_crawler_instagram.py]] - `imports_from` [EXTRACTED]
 - [[upstream_version()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

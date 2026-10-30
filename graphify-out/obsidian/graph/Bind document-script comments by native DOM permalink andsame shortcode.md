@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Worker Chrome Instagram"
 location: "## Jalur Chrome yang sedang diuji"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Worker_Chrome_Instagram
 ---
 
 # Bind document-script comments by native DOM permalink andsame shortcode
@@ -16,4 +16,4 @@ tags:
 - [[Historical interruptedChrome trial before1.5integration]] - `references` [EXTRACTED]
 - [[instagramDocumentPayload()]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Worker_Chrome_Instagram

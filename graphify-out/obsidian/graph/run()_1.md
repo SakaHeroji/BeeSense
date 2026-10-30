@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Ekspor dan Provenance Reddit"
 location: "L971"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # run()
@@ -21,7 +21,7 @@ tags:
 - [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - `calls` [EXTRACTED]
 - [[.write()_1]] - `calls` [EXTRACTED]
 - [[BundleSink]] - `calls` [EXTRACTED]
-- [[Dataset_1]] - `calls` [EXTRACTED]
+- [[Dataset]] - `calls` [EXTRACTED]
 - [[KeywordMatcher]] - `calls` [EXTRACTED]
 - [[RedditAdapter]] - `calls` [EXTRACTED]
 - [[RedditRecordFactory]] - `calls` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[verify_descriptor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

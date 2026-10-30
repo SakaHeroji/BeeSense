@@ -168,3 +168,30 @@ outputs/nlp_20261030_instagram_topics20_02/*
 !outputs/nlp_20261030_instagram_topics20_02/centroids.npy
 !outputs/nlp_20261030_instagram_topics20_02/umap_embeddings.npz
 !outputs/nlp_20261030_instagram_topics20_02/topic_narratives.csv
+
+# Two-hour Instagram acquisition, refitted model and topic sentence Excel.
+!outputs/social_20261030_combined_instagram_500_2h_02/
+outputs/social_20261030_combined_instagram_500_2h_02/*
+!outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx
+!outputs/social_20261030_combined_instagram_500_2h_02/merge_report.json
+!outputs/social_20261030_combined_instagram_500_2h_02/instagram_acquisition_verification.json
+!outputs/social_20261030_combined_instagram_500_2h_02/independent_final_audit.json
+!outputs/social_20261030_combined_instagram_500_2h_02/artifact_verification.json
+!outputs/social_20261030_combined_instagram_500_2h_02/preview.png
+!outputs/nlp_20261030_instagram_500_topics20_01/
+outputs/nlp_20261030_instagram_500_topics20_01/*
+!outputs/nlp_20261030_instagram_500_topics20_01/manifest.json
+!outputs/nlp_20261030_instagram_500_topics20_01/summary.json
+!outputs/nlp_20261030_instagram_500_topics20_01/topics.json
+!outputs/nlp_20261030_instagram_500_topics20_01/graph.json
+!outputs/nlp_20261030_instagram_500_topics20_01/comparison.json
+!outputs/nlp_20261030_instagram_500_topics20_01/social_data.parquet
+!outputs/nlp_20261030_instagram_500_topics20_01/sentences.parquet
+!outputs/nlp_20261030_instagram_500_topics20_01/occurrences.parquet
+!outputs/nlp_20261030_instagram_500_topics20_01/skipped.parquet
+!outputs/nlp_20261030_instagram_500_topics20_01/embeddings.npy
+!outputs/nlp_20261030_instagram_500_topics20_01/centroids.npy
+!outputs/nlp_20261030_instagram_500_topics20_01/umap_embeddings.npz
+!outputs/nlp_20261030_instagram_500_topics20_01/topic_sentences.xlsx
+!graphify-out/obsidian/Instagram 500 Post 2 Jam.md
+!graphify-out/obsidian/Training Instagram 20 Topik.md

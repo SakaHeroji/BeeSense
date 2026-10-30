@@ -1,18 +1,18 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Render Dashboard Streamlit"
 location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Render_Dashboard_Streamlit
 ---
 
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_28]] - `method` [EXTRACTED]
+- [[.__init__()_30]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -55,7 +55,6 @@ tags:
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
 - [[Active20-topicc_v0.4315 artifact andGemini display contract]] - `references` [EXTRACTED]
-- [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - `conceptually_related_to` [INFERRED]
 - [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - `references` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
 - [[DashboardreadsverifiedCSVwithnoAPIortrainingonrerun]] - `references` [EXTRACTED]
@@ -69,7 +68,7 @@ tags:
 - [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_6]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

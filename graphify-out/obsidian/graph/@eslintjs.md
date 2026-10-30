@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Workspace React Crawler"
+community: "Dependency Pengembangan Frontend"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Dependency_Pengembangan_Frontend
 ---
 
 # @eslint/js
@@ -15,4 +15,4 @@ tags:
 - [[@eslintjs_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend

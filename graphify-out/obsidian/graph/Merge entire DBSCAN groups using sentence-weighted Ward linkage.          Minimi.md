@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L810"
+community: "Encoding dan Penyimpanan Model"
+location: "L812"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._merge_topics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

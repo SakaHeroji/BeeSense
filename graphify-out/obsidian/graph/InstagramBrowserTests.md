@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_browser.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Kontrak Ekspor Instagram"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Kontrak_Ekspor_Instagram
 ---
 
 # InstagramBrowserTests
@@ -24,4 +24,4 @@ tags:
 - [[InstagramCrawler]] - `uses` [INFERRED]
 - [[test_instagram_browser.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Ekspor_Instagram

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
 type: "rationale"
-community: "Ringkasan Topik Gemini"
+community: "Konteks dan Provenance Gemini"
 location: "## CSV dan dashboard"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ringkasan_Topik_Gemini
+  - community/Konteks_dan_Provenance_Gemini
 ---
 
 # Atomic20-row contextual CSV with per-topic provenance
@@ -17,4 +17,4 @@ tags:
 - [[Deterministic fitted-sentence context ranking]] - `references` [EXTRACTED]
 - [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini

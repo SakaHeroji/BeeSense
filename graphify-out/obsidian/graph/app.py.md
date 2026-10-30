@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Struktur Runtime Dashboard"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # app.py
@@ -23,10 +23,10 @@ tags:
 - [[_graph_positions()]] - `contains` [EXTRACTED]
 - [[_load_artifacts()]] - `contains` [EXTRACTED]
 - [[file_hash()]] - `imports` [EXTRACTED]
-- [[main()_6]] - `contains` [EXTRACTED]
+- [[main()_8]] - `contains` [EXTRACTED]
 - [[number()_1]] - `contains` [EXTRACTED]
 - [[percent()]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

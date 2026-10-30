@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "rationale"
-community: "Topik dan Verifikasi NLP"
+community: "Audit Akuisisi Instagram"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # Versionedmergepublishesrecordlineage/duplicateauditandchecksums
@@ -15,4 +15,4 @@ tags:
 - [[Historical30658-record preflight superseded by33034-record final corpus]] - `references` [EXTRACTED]
 - [[Latestnative-ID observation dedupwithrootconflict rejection]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

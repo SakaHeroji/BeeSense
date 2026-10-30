@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Runbook dan Verifikasi Lokal"
+community: "Lingkungan Training SBERT"
 location: "## Riwayat 29 Oktober 2026"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Lingkungan_Training_SBERT
 ---
 
 # Historical29October exact-corpus SBERT/UMAP cache evidence
@@ -16,4 +16,4 @@ tags:
 - [[Encoder cache bound to immutable revision and textchecksums]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/rationale #graphify/EXTRACTED #community/Lingkungan_Training_SBERT

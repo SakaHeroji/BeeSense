@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Worker Chrome Instagram"
 location: "## Jalur Chrome yang sedang diuji"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Worker_Chrome_Instagram
 ---
 
 # Chrome backend selected by same standalone InstagramCrawler class
@@ -23,4 +23,4 @@ tags:
 - [[Standalone browser1800-second preset, updated bounded retry]] - `references` [EXTRACTED]
 - [[macOS headed trial andLinuxprepared-profile requirements]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Worker_Chrome_Instagram

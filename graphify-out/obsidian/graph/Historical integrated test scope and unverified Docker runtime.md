@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
-community: "Akuisisi Reddit Reddrix"
+community: "Runtime Docker dan Display"
 location: "## Verifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Runtime_Docker_dan_Display
 ---
 
 # Historical integrated test scope and unverified Docker runtime
@@ -16,4 +16,4 @@ tags:
 - [[Historical 16 adapterexportdisplay tests; current crawler suite 72 pass and 1 skip]] - `references` [EXTRACTED]
 - [[Reddrix Docker image unbuilt local daemon unavailable]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/concept #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

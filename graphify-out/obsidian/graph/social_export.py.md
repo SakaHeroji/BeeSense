@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "code"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Transport GraphQL Instaloader"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Transport_GraphQL_Instaloader
 ---
 
 # social_export.py
@@ -18,4 +18,4 @@ tags:
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Transport_GraphQL_Instaloader

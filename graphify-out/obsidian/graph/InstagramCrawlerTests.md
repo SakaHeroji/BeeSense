@@ -1,19 +1,19 @@
 ---
 source_file: "tests/crawler/test_instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Pengujian Client Instagram"
 location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Pengujian_Client_Instagram
 ---
 
 # InstagramCrawlerTests
 
 ## Connections
-- [[.crawler()_2]] - `method` [EXTRACTED]
-- [[.setUp()_6]] - `method` [EXTRACTED]
+- [[.crawler()]] - `method` [EXTRACTED]
+- [[.setUp()_2]] - `method` [EXTRACTED]
 - [[.test_actual_instagram_worker_missing_session_stops_without_network()]] - `method` [EXTRACTED]
 - [[.test_auth_file_login_selects_instagram_and_never_exports_credentials()]] - `method` [EXTRACTED]
 - [[.test_authentication_barrier_keeps_partial_records_without_retry()]] - `method` [EXTRACTED]
@@ -41,9 +41,9 @@ tags:
 - [[.test_upgrade_gate_is_distinct_from_throttling_and_unknown_source_errors()]] - `method` [EXTRACTED]
 - [[.test_url_canonicalization_and_identity()]] - `method` [EXTRACTED]
 - [[.test_verified_429_respects_retry_after_and_budget()]] - `method` [EXTRACTED]
-- [[.worker()_2]] - `method` [EXTRACTED]
+- [[.worker()]] - `method` [EXTRACTED]
 - [[Offline testscontext checks do not establish live Instagram trial success]] - `references` [INFERRED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram

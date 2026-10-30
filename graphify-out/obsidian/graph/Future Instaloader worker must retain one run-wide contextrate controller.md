@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Sesi Instagram"
 location: "### Alternatif Instaloader yang diminta pengguna"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # Future Instaloader worker must retain one run-wide context/rate controller
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

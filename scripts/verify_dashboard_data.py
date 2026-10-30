@@ -57,6 +57,14 @@ def published_source_files(source):
             "record_lineage.jsonl",
             "duplicate_records.jsonl",
         }
+        if report.get("schema_version") == "beesense-append-only-merge:1":
+            expected = {
+                "social_data.xlsx",
+                "instagram_acquisition_verification.json",
+                "independent_final_audit.json",
+                "artifact_verification.json",
+                "preview.png",
+            }
         if set(report.get("files_sha256", {})) != expected:
             raise ValueError("Unexpected published merge audit files")
         for name, digest in report["files_sha256"].items():

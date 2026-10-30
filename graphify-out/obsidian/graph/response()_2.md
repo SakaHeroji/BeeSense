@@ -1,19 +1,22 @@
 ---
-source_file: "tests/crawler/test_instaloader_browser_patch.py"
+source_file: "tests/nlp/test_topic_narratives.py"
 type: "code"
-community: "Eksperimen Instaloader dan GraphQL Web"
-location: "L14"
+community: "Pengujian Narasi Gemini"
+location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # response()
 
 ## Connections
-- [[.test_no_retry_and_no_response_body_in_errors()]] - `calls` [EXTRACTED]
-- [[context()]] - `calls` [EXTRACTED]
-- [[test_instaloader_browser_patch.py]] - `contains` [EXTRACTED]
+- [[.setUpClass()_3]] - `calls` [EXTRACTED]
+- [[.test_changed_representative_sentence_invalidates_cache_and_tampering_fails()]] - `calls` [EXTRACTED]
+- [[.test_invalid_generated_text_and_changed_keyword_receipt_are_rejected()]] - `calls` [EXTRACTED]
+- [[.test_prompt_revision_refreshes_cache_and_preserves_legacy_csv()]] - `calls` [EXTRACTED]
+- [[.test_twenty_requests_rank_weights_and_resume_without_repeating_api()]] - `calls` [EXTRACTED]
+- [[test_topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

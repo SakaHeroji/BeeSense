@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/__init__.py"
 type: "rationale"
-community: "Kontrak dan Operasi Crawler"
+community: "Package Dashboard Python"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Kontrak_dan_Operasi_Crawler
+  - community/Package_Dashboard_Python
 ---
 
 # BeeSense application package.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Dashboard__init__.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Kontrak_dan_Operasi_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Package_Dashboard_Python

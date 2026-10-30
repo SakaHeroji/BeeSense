@@ -1,19 +1,19 @@
 ---
 source_file: "tests/crawler/test_instaloader_crawler.py"
 type: "code"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Pengujian Worker Instaloader"
 location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Pengujian_Worker_Instaloader
 ---
 
 # InstaloaderCrawlerTests
 
 ## Connections
 - [[.adapter()]] - `method` [EXTRACTED]
-- [[.setUp()_12]] - `method` [EXTRACTED]
+- [[.setUp()_3]] - `method` [EXTRACTED]
 - [[.settings()]] - `method` [EXTRACTED]
 - [[.test_configuration_rejects_retry_or_unbounded_requests()]] - `method` [EXTRACTED]
 - [[.test_coordinator_stops_at_first_429()]] - `method` [EXTRACTED]
@@ -35,4 +35,4 @@ tags:
 - [[.test_web_graphql_applies_supplied_patch_only_to_owned_context()]] - `method` [EXTRACTED]
 - [[test_instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Worker_Instaloader

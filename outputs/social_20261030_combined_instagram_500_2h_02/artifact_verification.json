@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-30T15:13:18.353755+00:00",
+  "tool": "@oai/artifact-tool",
+  "workbook": "/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx",
+  "workbook_sha256": "ff4555a814e345573225fcce14c33d5fa549ef3800b885659df63998c6cc0a12",
+  "headers_verified": 10,
+  "formula_error_search_matches": 0,
+  "preview": "/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/preview.png",
+  "preview_reviewed": true,
+  "format": "Existing compact dataset contract and baseline layout preserved"
+}

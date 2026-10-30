@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L61"
+community: "Encoding dan Penyimpanan Model"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # file_hash()
@@ -16,6 +16,7 @@ tags:
 - [[._reduce_embeddings()]] - `calls` [EXTRACTED]
 - [[.encode()]] - `calls` [EXTRACTED]
 - [[.explain_topics()]] - `calls` [EXTRACTED]
+- [[.export_compact()]] - `calls` [INFERRED]
 - [[.finish()]] - `calls` [INFERRED]
 - [[.finish()_1]] - `calls` [INFERRED]
 - [[.load_explanations()]] - `calls` [EXTRACTED]
@@ -31,11 +32,14 @@ tags:
 - [[.test_saved_run_coherence_reproduces_the_published_score()]] - `calls` [EXTRACTED]
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `calls` [EXTRACTED]
 - [[app.py]] - `imports` [EXTRACTED]
+- [[main()_11]] - `calls` [EXTRACTED]
 - [[published_source_files()]] - `calls` [EXTRACTED]
+- [[seal()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[test_topic_narratives.py]] - `imports` [EXTRACTED]
+- [[topic_sentence_export.py]] - `imports` [EXTRACTED]
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

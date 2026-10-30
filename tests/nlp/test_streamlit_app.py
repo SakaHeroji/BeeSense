@@ -126,6 +126,22 @@ class StreamlitTests(unittest.TestCase):
         self.assertFalse(app.exception)
         self.assertTrue(any("kalimat unik" in item.value for item in app.markdown))
 
+    def test_complete_excel_download_is_available_without_training(self):
+        data = SocialNLPClusterer.load_run(self.output)
+        data["topic_sentences_xlsx"] = b"test Excel download payload"
+        data["topic_sentences_export"] = {"rows": 35, "topics": 3}
+        with patch("Dashboard.app._load_artifacts", return_value=data):
+            app = self.app()
+            app.radio(key="view").set_value("Kalimat & sumber").run()
+            self.assertFalse(app.exception)
+            self.assertIn(
+                "Unduh Excel topik dan kalimat",
+                [item.label for item in app.get("download_button")],
+            )
+            self.assertTrue(
+                any("35 kalimat asli unik" in item.value for item in app.caption)
+            )
+
     def test_search_empty_state_and_platform_filter(self):
         app = self.app()
         app.radio(key="view").set_value("Kalimat & sumber").run()

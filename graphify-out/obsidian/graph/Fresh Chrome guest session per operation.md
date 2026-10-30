@@ -1,17 +1,17 @@
 ---
 source_file: "docs/crawler/SELENIUM_CRAWLER.md"
 type: "rationale"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Panduan Pipeline BeeSense"
 location: "## Menjalankan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Fresh Chrome guest session per operation
 
 ## Connections
-- [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
+- [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

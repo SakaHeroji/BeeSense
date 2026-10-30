@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Ekspor dan Provenance Reddit"
 location: "L916"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # RedditRecordFactory
@@ -18,6 +18,7 @@ tags:
 - [[RecordFactory]] - `inherits` [EXTRACTED]
 - [[Verified Reddit native identity and parentroot relationships]] - `conceptually_related_to` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

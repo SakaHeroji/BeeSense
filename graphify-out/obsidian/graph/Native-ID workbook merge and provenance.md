@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Native-ID workbook merge and provenance
@@ -13,6 +13,6 @@ tags:
 ## Connections
 - [[Historical29October campaign PARTIAL outcome]] - `conceptually_related_to` [EXTRACTED]
 - [[SocialCrawler Excel and audit bundle]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

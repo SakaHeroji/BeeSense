@@ -1,12 +1,12 @@
 ---
 source_file: "config/instagram_browser_crawler.json"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Worker Chrome Instagram"
 location: "$.backend; $.browser; $.total_seconds; $.platforms.instagram"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Worker_Chrome_Instagram
 ---
 
 # Standalone browser1800-second preset, updated bounded retry
@@ -15,4 +15,4 @@ tags:
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
 - [[One dedicated persistentprofile andpinnedCLIsession perrun]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Worker_Chrome_Instagram

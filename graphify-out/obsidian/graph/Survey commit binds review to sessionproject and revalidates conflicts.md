@@ -1,19 +1,17 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Kontrak API Frontend"
 location: "## Transport"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/PRD_Workspace_Crawler
+  - graphify/EXTRACTED
+  - community/Kontrak_API_Frontend
 ---
 
 # Survey commit binds review to session/project and revalidates conflicts
 
 ## Connections
 - [[Expected typed frontend API contract; backend implementation pending]] - `references` [EXTRACTED]
-- [[Native social IDs and survey keys preserve source provenance]] - `conceptually_related_to` [INFERRED]
-- [[Proposed survey schema preserves declared roles, questions, permission and whole responses]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_API_Frontend

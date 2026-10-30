@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Worker Chrome Instagram"
 location: "## Jalur Chrome yang sedang diuji"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Worker_Chrome_Instagram
 ---
 
 # Historical Chrome trial02 INTERRUPTED76posts/910comments
@@ -16,4 +16,4 @@ tags:
 - [[Historical interruptedChrome trial before1.5integration]] - `references` [EXTRACTED]
 - [[Historical trial gate superseded by explicitintegrationauthorization]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Worker_Chrome_Instagram

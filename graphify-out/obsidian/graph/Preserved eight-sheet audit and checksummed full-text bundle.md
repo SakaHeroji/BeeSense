@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "concept"
-community: "Bundle Excel dan Provenans"
+community: "Batas Akuisisi Reddit"
 location: "## Kontrak output Excel"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Preserved eight-sheet audit and checksummed full-text bundle
@@ -15,4 +15,4 @@ tags:
 - [[BundleSink]] - `conceptually_related_to` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/concept #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

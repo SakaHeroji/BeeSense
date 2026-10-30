@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_playwright.md"
 type: "rationale"
-community: "Konfigurasi SocialCrawler"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Konfigurasi_SocialCrawler
+  - graphify/EXTRACTED
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Coordinator waits for manual CAPTCHA without automated clicks
@@ -15,4 +15,4 @@ tags:
 - [[Historical or explicitly selected Playwright CAPTCHA wait]] - `semantically_similar_to` [INFERRED]
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Konfigurasi_SocialCrawler
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

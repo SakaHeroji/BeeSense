@@ -1,17 +1,17 @@
 ---
 source_file: "docs/crawler/SELENIUM_CRAWLER.md"
 type: "concept"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Panduan Pipeline BeeSense"
 location: "## Docker lokal"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Separate non-root crawler container with Selenium Grid
 
 ## Connections
-- [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
+- [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Ekspor dan Provenance Reddit"
 location: "L114"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # schema_document()
@@ -16,6 +16,7 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
+- [[verify()]] - `calls` [EXTRACTED]
 - [[verify_descriptor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

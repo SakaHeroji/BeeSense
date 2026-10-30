@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L339"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # main()
@@ -18,4 +18,4 @@ tags:
 - [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 - [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

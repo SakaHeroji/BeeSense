@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/browser_campaign.mjs"
 type: "code"
-community: "Helper Campaign Browser"
+community: "Kampanye Browser Reddit"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Helper_Campaign_Browser
+  - community/Kampanye_Browser_Reddit
 ---
 
 # inWindow()
@@ -18,4 +18,4 @@ tags:
 - [[enrichBatch()]] - `calls` [EXTRACTED]
 - [[mergeCandidates()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Helper_Campaign_Browser
+#graphify/code #graphify/EXTRACTED #community/Kampanye_Browser_Reddit

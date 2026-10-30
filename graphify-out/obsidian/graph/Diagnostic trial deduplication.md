@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Diagnostic trial deduplication
@@ -16,4 +16,4 @@ tags:
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[Trial06 verified capped live outcome]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

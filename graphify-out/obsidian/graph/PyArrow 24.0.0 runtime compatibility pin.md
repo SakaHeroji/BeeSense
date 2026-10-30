@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # PyArrow 24.0.0 runtime compatibility pin
@@ -14,4 +14,4 @@ tags:
 - [[BeeSense README]] - `references` [EXTRACTED]
 - [[Dashboardtraining dependency isolation]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

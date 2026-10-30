@@ -1,20 +1,16 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: ""
 type: "code"
-community: "Parser dan Runner Reddit"
-location: "L339"
+community: "Akuisisi YouTube"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # SourceAdapter
 
 ## Connections
-- [[.accept()]] - `method` [EXTRACTED]
-- [[ABC_2]] - `inherits` [EXTRACTED]
-- [[RedditAdapter]] - `inherits` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[YouTubeAdapter]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

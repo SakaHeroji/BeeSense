@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Struktur Runtime Dashboard"
 location: "L11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # Root streamlit_apps.py delegates to Dashboard.app
@@ -17,4 +17,4 @@ tags:
 - [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 - [[app.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

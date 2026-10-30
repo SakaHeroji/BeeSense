@@ -263,8 +263,20 @@
       "ast_tokens": 0,
       "files": 11,
       "scope": "SocialCrawler1.6 default Instaloader integration and verified 20-comment trial"
+    },
+    {
+      "date": "2026-10-30T12:57:15.841709+00:00",
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "files": 141,
+      "token_usage_status": "unavailable_from_host_agent_tools",
+      "tokens_are_placeholders": true,
+      "semantic_files_extracted": 44,
+      "cached_files": 3,
+      "retained_hash_verified_nodes": 474
     }
   ],
   "total_input_tokens": 0,
-  "total_output_tokens": 0
+  "total_output_tokens": 0,
+  "token_usage_note": "Agent extraction token usage was not exposed for runs marked unavailable; zero placeholders are not measured zero usage."
 }

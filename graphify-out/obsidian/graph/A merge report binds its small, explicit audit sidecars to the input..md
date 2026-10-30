@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
+community: "Verifikasi Artefak Dataset"
 location: "L45"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Verifikasi_Artefak_Dataset
 ---
 
 # A merge report binds its small, explicit audit sidecars to the input.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[published_source_files()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset

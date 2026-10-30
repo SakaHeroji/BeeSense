@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Riwayat Evaluasi Coherence"
 location: "L39-L72"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Module API creates source-bound explanation sidecars without retraining
@@ -17,4 +17,4 @@ tags:
 - [[Source-bound beesense-topic-explanations1 sidecar manifest]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

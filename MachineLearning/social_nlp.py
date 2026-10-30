@@ -28,6 +28,8 @@ else:
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = "2.4.0"
+TOPIC_SENTENCES_EXTENSION = "beesense-topic-sentences-excel:1"
+TOPIC_SENTENCES_FILE = "topic_sentences.xlsx"
 DEFAULT_TARGET_TOPICS = 20
 DEFAULT_MIN_COHERENCE_CV = 0.4
 SUPPORTED_PLATFORMS = ("youtube", "reddit", "instagram")
@@ -2359,14 +2361,21 @@ class SocialNLPClusterer:
         if manifest["schema_version"] == SCHEMA_VERSION:
             required.update({"social_data.parquet", "umap_embeddings.npz"})
         extensions = manifest.get("extensions", [])
-        if extensions not in (
+        if not isinstance(extensions, list) or len(extensions) != len(set(extensions)):
+            raise ValueError("Unsupported NLP artifact extension")
+        narrative_extensions = [
+            item for item in extensions if item != TOPIC_SENTENCES_EXTENSION
+        ]
+        if narrative_extensions not in (
             [],
             [topic_narratives.LEGACY_EXTENSION],
             [topic_narratives.EXTENSION],
         ):
             raise ValueError("Unsupported NLP artifact extension")
-        if extensions:
+        if narrative_extensions:
             required.add(topic_narratives.CSV_NAME)
+        if TOPIC_SENTENCES_EXTENSION in extensions:
+            required.add(TOPIC_SENTENCES_FILE)
         if set(manifest["files_sha256"]) != required:
             raise ValueError("Artifact manifest must cover all required files")
         if verify:
@@ -2380,7 +2389,7 @@ class SocialNLPClusterer:
         for name in ["sentences", "occurrences", "skipped"]:
             result[name] = pd.read_parquet(directory / (name + ".parquet"))
         enabled = result["summary"].get("topic_narratives", {}).get("enabled", False)
-        if bool(extensions) != enabled:
+        if bool(narrative_extensions) != enabled:
             raise ValueError("Gemini artifact extension and summary disagree")
         if enabled:
             if (
@@ -2403,7 +2412,7 @@ class SocialNLPClusterer:
                 == "beesense-topic-id:1"
                 else topic_narratives.EXTENSION
             )
-            if extensions != [expected_extension]:
+            if narrative_extensions != [expected_extension]:
                 raise ValueError(
                     "Gemini artifact extension and prompt version disagree"
                 )
@@ -2439,6 +2448,24 @@ class SocialNLPClusterer:
             raise ValueError("Sentence/embedding shape mismatch")
         result["artifact_manifest_sha256"] = sha256(manifest_bytes).hexdigest()
         result["artifact_dir"] = str(directory)
+        if TOPIC_SENTENCES_EXTENSION in extensions:
+            export = result["summary"].get("topic_sentences_export", {})
+            assigned = result["occurrences"].query("cluster_id >= 0")
+            expected_rows = len(assigned.drop_duplicates(["cluster_id", "sentence"]))
+            if (
+                export.get("file") != TOPIC_SENTENCES_FILE
+                or export.get("rows") != expected_rows
+                or export.get("topics") != len(result["topics"])
+                or export.get("source_sha256") != result["summary"]["source_sha256"]
+                or export.get("noise_excluded") is not True
+            ):
+                raise ValueError(
+                    "Topic sentence Excel metadata differs from the fitted run"
+                )
+            result["topic_sentences_export"] = export
+            result["topic_sentences_xlsx"] = (
+                directory / TOPIC_SENTENCES_FILE
+            ).read_bytes()
         return result
 
 

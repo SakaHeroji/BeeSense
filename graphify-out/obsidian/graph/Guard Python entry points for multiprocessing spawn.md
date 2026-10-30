@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Worker Reddrix"
 location: "## Pemakaian"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Worker_Reddrix
 ---
 
 # Guard Python entry points for multiprocessing spawn
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[run_reddrix_worker()]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/INFERRED #community/Worker_Reddrix

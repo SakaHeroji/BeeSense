@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instaloader_browser_patch.py"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Format Grafik Dashboard"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Format_Grafik_Dashboard
 ---
 
 # Verify the supplied browser-style patch without sending network requests.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_instaloader_browser_patch.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Format_Grafik_Dashboard

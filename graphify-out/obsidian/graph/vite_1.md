@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Workspace React Crawler"
+community: "Bundler Vite"
 location: "L46"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Bundler_Vite
 ---
 
 # vite
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vite]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Bundler_Vite

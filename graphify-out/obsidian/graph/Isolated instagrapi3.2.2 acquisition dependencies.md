@@ -1,14 +1,14 @@
 ---
 source_file: "requirements/instagram.txt"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Dependency Backend Instagrapi"
 location: "L1-L3"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Dependency_Backend_Instagrapi
 ---
 
 # Isolated instagrapi3.2.2 acquisition dependencies
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Dependency_Backend_Instagrapi

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Konfigurasi SocialCrawler"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Jeda dan kelanjutan Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konfigurasi_SocialCrawler
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Historical Reddit continuations preserve bundles and original deadline
@@ -19,7 +19,7 @@ tags:
 - [[Historical segment 02 targets 999 YouTube990 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
 - [[Historical segment 03 targets 994 YouTube983 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
 - [[Historical user-requested Reddit pause after 429]] - `references` [EXTRACTED]
-- [[Shared three-hour round-robin deadline; historical segments retain original budget]] - `references` [EXTRACTED]
-- [[SocialCrawler_1]] - `references` [EXTRACTED]
+- [[Round Robin Shared Deadline]] - `references` [EXTRACTED]
+- [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

@@ -1,22 +1,24 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Fixture dan Pengujian Reddit"
 location: "L621"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Fixture_dan_Pengujian_Reddit
 ---
 
 # _configuration()
 
 ## Connections
-- [[.__init__()_25]] - `calls` [EXTRACTED]
+- [[.__init__()_21]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [EXTRACTED]
+- [[_config()]] - `calls` [EXTRACTED]
 - [[_integer()]] - `calls` [EXTRACTED]
 - [[browser_configuration()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[media_url()]] - `calls` [EXTRACTED]
+- [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Fixture_dan_Pengujian_Reddit

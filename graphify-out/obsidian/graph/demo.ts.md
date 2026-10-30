@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Validasi Konfigurasi Frontend"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Validasi_Konfigurasi_Frontend
 ---
 
 # demo.ts
@@ -16,7 +16,7 @@ tags:
 - [[Capabilities]] - `imports` [EXTRACTED]
 - [[Config]] - `imports` [EXTRACTED]
 - [[Counts]] - `imports` [EXTRACTED]
-- [[Dataset]] - `imports` [EXTRACTED]
+- [[Dataset_2]] - `imports` [EXTRACTED]
 - [[Job]] - `imports` [EXTRACTED]
 - [[PreviewRow]] - `imports` [EXTRACTED]
 - [[SeriesPoint]] - `imports` [EXTRACTED]
@@ -53,4 +53,4 @@ tags:
 - [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 - [[zeros]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend

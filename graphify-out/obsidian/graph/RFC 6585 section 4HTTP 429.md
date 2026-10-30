@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Pacing Instagram"
 location: "## Pembaruan pacing setelah deployment 30 Oktober"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Pacing_Instagram
 ---
 
 # RFC 6585 section 4:HTTP 429
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Documented local exponential cooldown respects longer Retry-After]] - `cites` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Pacing_Instagram

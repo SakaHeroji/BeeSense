@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Frontend React Crawler.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Kontrak API Frontend"
 location: "## Alur yang tersedia"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Kontrak_API_Frontend
 ---
 
 # Curated delivery evidence separates UX audit from real backend readiness
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_API_Frontend

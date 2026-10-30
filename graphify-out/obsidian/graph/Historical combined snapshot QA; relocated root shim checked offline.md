@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Riwayat Evaluasi Coherence"
 location: "## Verifikasi dan runtime"
 tags:
   - graphify/concept
-  - graphify/INFERRED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - graphify/EXTRACTED
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Historical combined snapshot QA; relocated root shim checked offline
@@ -17,4 +17,4 @@ tags:
 - [[Historical non-rootread-only dashboard runtime; current crawler images unverified]] - `conceptually_related_to` [INFERRED]
 - [[Historical29October macro c_v0.4720034334]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

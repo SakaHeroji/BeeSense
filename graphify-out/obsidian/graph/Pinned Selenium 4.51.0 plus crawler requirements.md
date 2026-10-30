@@ -1,19 +1,17 @@
 ---
 source_file: "requirements/selenium.txt"
 type: "document"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Panduan Pipeline BeeSense"
 location: "lines 1-2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Pinned Selenium 4.51.0 plus crawler requirements
 
 ## Connections
-- [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
-- [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
-- [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
+- [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

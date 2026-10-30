@@ -1,19 +1,19 @@
 ---
 source_file: "tests/crawler/test_social_crawler_selenium.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Crawler Selenium"
 location: "L109"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Crawler_Selenium
 ---
 
 # SocialCrawlerSeleniumTests
 
 ## Connections
 - [[.rows()]] - `method` [EXTRACTED]
-- [[.setUp()_5]] - `method` [EXTRACTED]
+- [[.setUp()_8]] - `method` [EXTRACTED]
 - [[.test_barrier_stops_after_first_call_and_still_exports_headers()]] - `method` [EXTRACTED]
 - [[.test_both_workbooks_preserve_schema_and_selenium_provenance()]] - `method` [EXTRACTED]
 - [[.test_captcha_quotes_are_ignored_when_content_is_present()]] - `method` [EXTRACTED]
@@ -26,9 +26,9 @@ tags:
 - [[.test_timeout_keeps_streamed_evidence_and_source_version()]] - `method` [EXTRACTED]
 - [[.test_worker_sanitizes_errors_and_closes_browser()]] - `method` [EXTRACTED]
 - [[.test_youtube_acquisition_enforces_total_and_reply_caps()]] - `method` [EXTRACTED]
-- [[.worker()_1]] - `method` [EXTRACTED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[.worker()_2]] - `method` [EXTRACTED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[SocialCrawlerSelenium]] - `uses` [INFERRED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

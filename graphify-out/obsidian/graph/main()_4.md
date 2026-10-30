@@ -1,24 +1,21 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
-location: "L1282"
+community: "InstaloaderCrawler"
+location: "L723"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/InstaloaderCrawler
 ---
 
 # main()
 
 ## Connections
-- [[.check_session()]] - `calls` [EXTRACTED]
-- [[.plan()_2]] - `calls` [EXTRACTED]
+- [[.close()_2]] - `calls` [EXTRACTED]
+- [[.plan()_1]] - `calls` [EXTRACTED]
 - [[.run()_1]] - `calls` [EXTRACTED]
-- [[InstagramCrawler]] - `calls` [EXTRACTED]
-- [[error_receipt()]] - `calls` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[login_local()]] - `calls` [EXTRACTED]
-- [[run_instagram_worker()]] - `calls` [EXTRACTED]
+- [[InstaloaderCrawler]] - `calls` [EXTRACTED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/InstaloaderCrawler

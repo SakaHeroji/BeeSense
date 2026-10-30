@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/app/App.tsx"
 type: "code"
-community: "Workspace React Crawler"
+community: "Router dan Batas Error"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Router_dan_Batas_Error
 ---
 
 # ErrorBoundary
@@ -16,4 +16,4 @@ tags:
 - [[.render()]] - `method` [EXTRACTED]
 - [[App.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Router_dan_Batas_Error

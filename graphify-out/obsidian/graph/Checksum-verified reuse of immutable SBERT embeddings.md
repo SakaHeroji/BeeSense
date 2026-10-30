@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Runbook dan Verifikasi Lokal"
+community: "Lingkungan Training SBERT"
 location: "## Pelatihan dan dashboard"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - graphify/INFERRED
+  - community/Lingkungan_Training_SBERT
 ---
 
 # Checksum-verified reuse of immutable SBERT embeddings
@@ -21,4 +21,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `references` [EXTRACTED]
 - [[Separate SBERT training and artifact-only dashboard environments]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/rationale #graphify/INFERRED #community/Lingkungan_Training_SBERT

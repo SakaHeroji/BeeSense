@@ -1,29 +1,24 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "document"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Panduan Pipeline BeeSense"
+location: "/Users/sakaheroji/Documents/BeeSense/docs/crawler/SOCIAL_CRAWLER.md:29"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Panduan_Pipeline_BeeSense
 ---
 
-# SocialCrawler guide
+# SocialCrawler Guide
 
 ## Connections
-- [[BeeSense README]] - `references` [EXTRACTED]
-- [[Historical Instagram 1.5 recovery and1.5.2 pacing]] - `references` [EXTRACTED]
-- [[Historical29October campaign PARTIAL outcome]] - `references` [EXTRACTED]
-- [[Instagram three-hour target preset]] - `references` [EXTRACTED]
-- [[InstaloaderCrawler guide and evidence]] - `references` [EXTRACTED]
-- [[Native-ID workbook merge and provenance]] - `references` [EXTRACTED]
-- [[Read-only native-ID baseline exclusion]] - `references` [EXTRACTED]
-- [[Reddrix 1.2.14 Reddit backend]] - `references` [EXTRACTED]
-- [[Shared filters and round-robin campaign scheduler]] - `references` [EXTRACTED]
-- [[SocialCrawler 1.6.0 default Instaloader integration]] - `references` [EXTRACTED]
-- [[SocialCrawler Excel and audit bundle]] - `references` [EXTRACTED]
-- [[SocialCrawler historical test and current container guidance]] - `references` [EXTRACTED]
-- [[Trial06 verified capped live outcome]] - `references` [EXTRACTED]
-- [[Verified429 scheduler cooldown and historical evidence]] - `references` [EXTRACTED]
+- [[Combined Crawler Environment]] - `references` [EXTRACTED]
+- [[Instagram Pacing and Backoff]] - `references` [EXTRACTED]
+- [[Instagrapi Acquisition Environment]] - `conceptually_related_to` [INFERRED]
+- [[Instaloader Instagram Backend]] - `references` [EXTRACTED]
+- [[Native ID Workbook Consolidation]] - `references` [EXTRACTED]
+- [[Round Robin Shared Deadline]] - `references` [EXTRACTED]
+- [[Shared SocialExportMixin Contract]] - `references` [EXTRACTED]
+- [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

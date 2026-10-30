@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akses dan Parsing HTML"
+community: "Pengujian Parser Reddit"
 location: "L1198"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akses_dan_Parsing_HTML
+  - community/Pengujian_Parser_Reddit
 ---
 
 # fixture_page()
@@ -28,4 +28,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[digest()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

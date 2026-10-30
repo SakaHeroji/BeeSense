@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "output": "/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx",
+  "rows": 34095,
+  "roots": 2160,
+  "comments": 31935,
+  "duplicate_native_ids": 0,
+  "counts": {
+    "instagram/comment": 3660,
+    "instagram/post": 625,
+    "instagram/reply": 138,
+    "reddit/comment": 2409,
+    "reddit/post": 297,
+    "reddit/reply": 1808,
+    "youtube/comment": 19770,
+    "youtube/reply": 4150,
+    "youtube/video": 1238
+  },
+  "source_workbooks": [
+    {
+      "path": "/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_3days_02/social_data.xlsx",
+      "sha256": "ad3bfce17d8056712b4cd0bd6e673aebdcfbd318f2aab756d459d8d180ebf4e1",
+      "first_excel_row": 2,
+      "last_excel_row": 33035,
+      "rows": 33034,
+      "counts": {
+        "instagram/comment": 3038,
+        "instagram/post": 324,
+        "reddit/comment": 2409,
+        "reddit/post": 297,
+        "reddit/reply": 1808,
+        "youtube/comment": 19770,
+        "youtube/reply": 4150,
+        "youtube/video": 1238
+      }
+    },
+    {
+      "path": "/Users/sakaheroji/Documents/BeeSense/output/instagram_20261030_500_2h_01/new_unique_social_20261030_combined_instagram_500_2h_02/social_data.xlsx",
+      "sha256": "61c7a96b8655ce23f6dba27166a34698a4e6ea590fcfd2f20e96da9ca63902e1",
+      "first_excel_row": 33036,
+      "last_excel_row": 34096,
+      "rows": 1061,
+      "counts": {
+        "instagram/comment": 622,
+        "instagram/post": 301,
+        "instagram/reply": 138
+      }
+    }
+  ],
+  "output_sha256": "ff4555a814e345573225fcce14c33d5fa549ef3800b885659df63998c6cc0a12",
+  "row_order": "source order, then original worksheet order",
+  "source_observations_refreshed": false,
+  "synthetic": false,
+  "schema_version": "beesense-append-only-merge:1",
+  "files_sha256": {
+    "social_data.xlsx": "ff4555a814e345573225fcce14c33d5fa549ef3800b885659df63998c6cc0a12",
+    "instagram_acquisition_verification.json": "4c154825bd1bdeecc61629b9e60093acbc7feb399243966c3a4078a7524c0b4c",
+    "independent_final_audit.json": "786ff630d54c9915b9e669acd86ec4266b41b6f964717b9fbd4380f85801b854",
+    "artifact_verification.json": "46f223e525b2338c4b1e088061c96c7e04b61aee42f69c7d92337c4b8256590c",
+    "preview.png": "3605434a8ffd436da0d27509762a090fee9f3a6d2a2dd74cfc75622035771860"
+  }
+}

@@ -1,19 +1,19 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L99"
+community: "Model dan Pengujian NLP"
+location: "L105"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # NLPTests
 
 ## Connections
-- [[.setUpClass()_2]] - `method` [EXTRACTED]
-- [[.tearDownClass()_2]] - `method` [EXTRACTED]
+- [[.setUpClass()_1]] - `method` [EXTRACTED]
+- [[.tearDownClass()_1]] - `method` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - `method` [EXTRACTED]
@@ -23,6 +23,7 @@ tags:
 - [[.test_cv_distinguishes_coherent_terms_and_rejects_missing_topics()]] - `method` [EXTRACTED]
 - [[.test_dbscan_memory_guard_and_no_eligible_candidate_are_explicit()]] - `method` [EXTRACTED]
 - [[.test_dedup_preserves_both_occurrences_and_original_dates()]] - `method` [EXTRACTED]
+- [[.test_excel_extension_loads_without_gemini_and_binds_membership_and_bytes()]] - `method` [EXTRACTED]
 - [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - `method` [EXTRACTED]
 - [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - `method` [EXTRACTED]
 - [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - `method` [EXTRACTED]
@@ -40,4 +41,4 @@ tags:
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Monitor Job dan Dataset"
 location: "L453"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Monitor_Job_dan_Dataset
 ---
 
 # download()
@@ -18,4 +18,4 @@ tags:
 - [[Survey.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset

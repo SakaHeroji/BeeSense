@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Batas Akuisisi Reddit"
 location: "## Hasil live"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Completed trial 02: PARTIAL with 25 qualified posts
@@ -20,4 +20,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Trial chronology separates v1.0.0 results from post-trial v1.1.0 display]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

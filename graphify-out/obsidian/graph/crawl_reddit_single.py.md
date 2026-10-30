@@ -1,29 +1,29 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Parsing Identitas Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # crawl_reddit_single.py
 
 ## Connections
-- [[ABC_2]] - `imports_from` [EXTRACTED]
+- [[ABC]] - `imports_from` [EXTRACTED]
 - [[BoundedDom]] - `contains` [EXTRACTED]
 - [[BundleSink]] - `contains` [EXTRACTED]
 - [[ContentInput]] - `contains` [EXTRACTED]
 - [[ContractTests]] - `contains` [EXTRACTED]
-- [[Dataset_1]] - `contains` [EXTRACTED]
+- [[Dataset]] - `contains` [EXTRACTED]
 - [[HtmlPage]] - `contains` [EXTRACTED]
 - [[HtmlSource]] - `contains` [EXTRACTED]
 - [[KeywordMatcher]] - `contains` [EXTRACTED]
 - [[LocalHtmlSource]] - `contains` [EXTRACTED]
 - [[MemorySink]] - `contains` [EXTRACTED]
-- [[Node_1]] - `contains` [EXTRACTED]
+- [[Node]] - `contains` [EXTRACTED]
 - [[PublicHtmlSource]] - `contains` [EXTRACTED]
 - [[RecordFactory]] - `contains` [EXTRACTED]
 - [[RedditAdapter]] - `contains` [EXTRACTED]
@@ -32,7 +32,7 @@ tags:
 - [[RedditTests]] - `contains` [EXTRACTED]
 - [[RestrictedRedirect]] - `contains` [EXTRACTED]
 - [[Settings]] - `contains` [EXTRACTED]
-- [[SourceAdapter_1]] - `contains` [EXTRACTED]
+- [[SourceAdapter]] - `contains` [EXTRACTED]
 - [[SourceFailure]] - `contains` [EXTRACTED]
 - [[add_readme()]] - `contains` [EXTRACTED]
 - [[assert_accessible()]] - `contains` [EXTRACTED]
@@ -74,4 +74,4 @@ tags:
 - [[walk()]] - `contains` [EXTRACTED]
 - [[worker()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

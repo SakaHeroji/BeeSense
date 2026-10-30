@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Shared filters and round-robin campaign scheduler
@@ -15,7 +15,7 @@ tags:
 - [[Read-only native-ID baseline exclusion]] - `conceptually_related_to` [EXTRACTED]
 - [[Reddrix 1.2.14 Reddit backend]] - `conceptually_related_to` [EXTRACTED]
 - [[SocialCrawler Excel and audit bundle]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
 - [[Verified429 scheduler cooldown and historical evidence]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

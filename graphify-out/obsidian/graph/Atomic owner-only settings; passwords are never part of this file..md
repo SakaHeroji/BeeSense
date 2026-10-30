@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "CI dan Verifikasi Backend"
 location: "L199"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/CI_dan_Verifikasi_Backend
 ---
 
 # Atomic owner-only settings; passwords are never part of this file.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[save_session()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/CI_dan_Verifikasi_Backend

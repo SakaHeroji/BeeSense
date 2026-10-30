@@ -1,11 +1,11 @@
 ---
 source_file: "graphify-out/obsidian/HOME.md"
 type: "document"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # BeeSense HOME index
@@ -16,4 +16,4 @@ tags:
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[Vault architecture and audit flow]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

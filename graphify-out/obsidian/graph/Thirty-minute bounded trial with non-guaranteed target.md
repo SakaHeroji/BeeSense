@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Konfigurasi Trial Reddit"
 location: "## Konfigurasi percobaan 30 menit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Konfigurasi_Trial_Reddit
 ---
 
 # Thirty-minute bounded trial with non-guaranteed target
@@ -16,4 +16,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Tracked Reddit trial configuration]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit

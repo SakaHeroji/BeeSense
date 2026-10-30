@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Kontrak API Frontend"
 location: "## Kontrak tujuh sumber"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/PRD_Workspace_Crawler
+  - graphify/EXTRACTED
+  - community/Kontrak_API_Frontend
 ---
 
 # locatorKey is normalized permalink identity;nativeId may await backend verification
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Expected typed frontend API contract; backend implementation pending]] - `references` [EXTRACTED]
 - [[Frontend URL review and minat-studi-v1 survey formCSVXLSX workflows]] - `conceptually_related_to` [INFERRED]
-- [[Native social IDs and survey keys preserve source provenance]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_API_Frontend

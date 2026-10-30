@@ -52,7 +52,7 @@ Entry point berada di root repository: **`streamlit_apps.py`**. Setelah perubaha
 
 Pengaturan ini mengikuti [panduan deployment resmi Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy). Cloud memasang dependency dari `requirements.txt` di root, yang hanya menyertakan `requirements/dashboard.txt`; keduanya harus ikut GitHub. Runtime dashboard dipisahkan dari dependency training/crawler dan diuji pada Python 3.12 serta 3.14. Lihat [aturan dependency Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies).
 
-Sertakan `streamlit_apps.py`, package `Dashboard/`, `MachineLearning/__init__.py`, `MachineLearning/social_nlp.py`, `MachineLearning/topic_narratives.py`, `config/social_nlp.json`, `.streamlit/config.toml`, dan **seluruh isi snapshot aktif** `outputs/nlp_20261030_instagram_topics20_02/`, termasuk manifest, Parquet, JSON, dan array NumPy. `.gitignore` sudah mengizinkan file snapshot tersebut. Jalankan `python -m scripts.verify_dashboard_data --check-git` setelah staging untuk memastikan seluruh dataset yang diterbitkan masuk Git dan checksum valid. Workbook baseline/gabungan dan snapshot arsip tetap disertakan untuk audit serta CI.
+Sertakan `streamlit_apps.py`, package `Dashboard/`, `MachineLearning/__init__.py`, `MachineLearning/social_nlp.py`, `MachineLearning/topic_narratives.py`, `config/social_nlp.json`, `.streamlit/config.toml`, dan **seluruh isi snapshot aktif** `outputs/nlp_20261030_instagram_500_topics20_01/`, termasuk manifest, Parquet, JSON, array NumPy, dan `topic_sentences.xlsx`. `.gitignore` sudah mengizinkan file snapshot tersebut. Jalankan `python -m scripts.verify_dashboard_data --check-git` setelah staging untuk memastikan seluruh dataset yang diterbitkan masuk Git dan checksum valid. Workbook baseline/gabungan dan snapshot arsip tetap disertakan untuk audit serta CI.
 
 Cloud memakai `output_dir` relatif pada `config/social_nlp.json`. Biarkan `BEESENSE_NLP_RUN_DIR` tidak diatur agar app memakai snapshot repository; `/data/nlp_run` hanya digunakan oleh container Docker lokal. Dashboard dapat dibuka tanpa secrets, API key, model download, atau training. Dockerfile tidak digunakan oleh Community Cloud.
 
@@ -82,10 +82,12 @@ Workbook gabungan, baseline asli, run 20 topik aktif dan seluruh snapshot sebelu
 
 | Lokasi | Fungsi |
 |---|---|
+| `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx` | Aktif:34.095 record unik; 2.160 post asal dan 31.935 komentar/balasan |
+| `outputs/nlp_20261030_instagram_500_topics20_01/` | Aktif:20 topik, c_v 0,4387; artifact lengkap dan Excel 45.556 kalimat |
 | `outputs/social_20261028_01/dataset.xlsx` | Audit baseline 8 sheet, 8.449 record Contents; checksum asli tetap |
 | `outputs/social_20261028_01/social_data.xlsx` | Baseline 8.449 baris; dipertahankan utuh |
-| `outputs/social_20261030_combined_3days_02/social_data.xlsx` | Aktif:33.034 record unik,1.859 root,31.175 komentar/balasan; audit deduplikasi |
-| `outputs/nlp_20261030_instagram_topics20_02/` | Aktif:20 topik,c_v0.4315; Parquet,CSV Gemini 20 topik dan manifest |
+| `outputs/social_20261030_combined_3days_02/social_data.xlsx` | Arsip:33.034 record unik,1.859 root,31.175 komentar/balasan; audit deduplikasi |
+| `outputs/nlp_20261030_instagram_topics20_02/` | Arsip:20 topik,c_v0.4315; Parquet,CSV Gemini 20 topik dan manifest |
 | `outputs/social_20261029_combined/social_data.xlsx` | **29.099 baris**, **1.517 post**, **27.582 komentar/balasan**, tanpa ID native ganda |
 | `outputs/nlp_20261029_combined_topics20_01/` | Arsip sebelum Instagram: **20 topik**, c_v **0,4720**; empat Parquet dan manifest SHA-256 |
 | `outputs/nlp_20261029_topics20_01/` | Arsip 20 topik pada baseline lama, c_v 0,4143 |
@@ -93,13 +95,13 @@ Workbook gabungan, baseline asli, run 20 topik aktif dan seluruh snapshot sebelu
 | `outputs/nlp_20261028_sbert_dbscan_01/` | Arsip SBERT/UMAP/DBSCAN sebelum evaluasi coherence |
 | `outputs/nlp_20261028_02/` | Arsip ONNX/UMAP/HDBSCAN untuk audit/kompatibilitas |
 
-Snapshot aktif memuat52.451kemunculan/51.612 kalimat unik dan28.758 komentar/balasan terwakili. Coverage94,67%;2.751 kalimat unik tetapnoise. Gemini menghasilkan satu kalimat topik dan deskripsi dari10 keyword berbobot tertinggi per topik. Rata-rata c_v 0,4315 memenuhi≥0,4;8/20 topik masih di bawah0,4 secara individual. Lihat [metode dan batas interpretasi](docs/machine-learning/SOCIAL_NLP.md).
+Snapshot aktif memuat **52.861 kemunculan/51.979 kalimat unik** dan 29.132 komentar/balasan terwakili. Coverage 87,59%; noise 6.449 kalimat unik. Rata-rata c_v **0,4386500025** memenuhi ≥0,4; 9/20 topik berada di bawah 0,4 secara individual. Label c-TF-IDF dihitung lokal. Excel dua kolom tersedia di Kalimat & sumber. Lihat [metode dan batas interpretasi](docs/machine-learning/SOCIAL_NLP.md).
 
 Akuisisi 29 Oktober dibatasi tiga jam: YouTube 1.188 post tersimpan/300 qualified; Reddit 98/58. Qualified memerlukan ≥10 komentar/balasan unik. Target 1.000 qualified per platform belum tercapai. [Bundle audit hari ini](outputs/social_20261029_1000_3h/summary.json) dan segmen mentah disimpan lokal, di luar allowlist dataset dashboard. Data baru tidak bertumpang tindih dengan 50 video +181 thread baseline. [Script merge](scripts/merge_social_datasets.py) mempertahankan baris sumber dan menolak duplikasi ID; provenans lokal tersedia pada `output/combined_dataset_20261029.json`.
 
 Pengambilan parsial dan tanggal komentar YouTube dapat berupa perkiraan. Label topik belum divalidasi manusia dan tidak mewakili seluruh percakapan platform. Skor historis pada korpus lama tidak langsung sebanding dengan skor korpus gabungan. Dua workbook baseline dan empat snapshot lama tetap memakai checksum aslinya. Path absolut pada metadata historis merupakan provenans; konfigurasi aktif memakai path relatif.
 
-Checkpoint, profile Chrome, log dan cache model diabaikan Git. `.gitignore` mengizinkan tiga workbook yang diterbitkan dan lima snapshot NLP, serta mengabaikan file sementara Excel `~$*.xlsx`. Penjelasan topik dihitung saat dibuka; dashboard tidak melakukan training pada rerun.
+Checkpoint, profile Chrome, log dan cache model diabaikan Git. `.gitignore` mengizinkan seluruh sumber/audit dan snapshot model yang diterbitkan pada tabel di atas, termasuk Excel topik–kalimat; file sementara Excel `~$*.xlsx` diabaikan. Dashboard tidak melakukan training pada rerun.
 
 ## Struktur
 
@@ -147,7 +149,7 @@ Model SBERT multilingual diunduh saat encoding baru; bobot pralatih tetap, lalu 
 melakukan fitting pada kalimat dataset. `target_topics: 20` kemudian menggabungkan kelompok melalui Ward berbobot jumlah kalimat; seluruh metrik dan label dihitung ulang. Cache model tidak masuk Git. Empat Parquet:
 `social_data.parquet`, `sentences.parquet`, `occurrences.parquet`, `skipped.parquet`.
 
-Untuk refitting dengan embedding tersimpan, gunakan `--reuse-embeddings-from outputs/nlp_20261029_combined_topics20_01` bersama `--coherence-baseline outputs/nlp_20261029_combined_topics20_01`. Jalur ini memverifikasi checksum, input/model dan urutan kalimat; tidak memerlukan Torch atau download model. Lihat [perintah lengkap](docs/machine-learning/SOCIAL_NLP.md#pelatihan-dan-dashboard).
+Untuk refitting dengan embedding tersimpan, gunakan `--reuse-embeddings-from outputs/nlp_20261030_instagram_500_topics20_01` bersama `--coherence-baseline outputs/nlp_20261030_instagram_500_topics20_01`. Jalur ini memverifikasi checksum, input/model dan urutan kalimat; tidak memerlukan Torch atau download model. Lihat [perintah lengkap](docs/machine-learning/SOCIAL_NLP.md#pelatihan-dan-dashboard).
 
 Backend Reddit default memerlukan dependency `requirements/crawler.txt` dan browser `reddrix install`; Reddrix tidak memakai Chrome/Playwright CLI host. Jika memilih backend Playwright lama secara eksplisit, Chrome dan CLI host tetap diperlukan dan CAPTCHA diselesaikan manual. Checkpoint historis telah dibersihkan; `import_checkpoint_dir` default `null` dan tidak dapat dipadukan dengan Reddrix.
 
@@ -175,10 +177,10 @@ docker build -f deployment/docker/Dockerfile.dashboard -t beesense-nlp .
 # Reproduksi runtime Cloud Python 3.14:
 docker build --build-arg PYTHON_VERSION=3.14 -f deployment/docker/Dockerfile.dashboard -t beesense-nlp:py314 .
 docker run --rm -p 127.0.0.1:8501:8501 \
-  -v "$PWD/outputs/nlp_20261029_combined_topics20_01:/data/nlp_run:ro" beesense-nlp
+  -v "$PWD/outputs/nlp_20261030_instagram_500_topics20_01:/data/nlp_run:ro" beesense-nlp
 ```
 
-Image non-root membaca artifact melalui mount read-only. Docker tidak dipakai untuk mengontrol Chrome host. Build/runtime Docker lokal sudah diverifikasi: image `beesense-nlp:main`, container `beesense-dashboard`, health `healthy`, user 10001, mount artifact read-only, melayani http://127.0.0.1:8501. Tidak ada database atau migrasi.
+Image non-root membaca artifact melalui mount read-only. Docker tidak dipakai untuk mengontrol Chrome host. Build/runtime Docker lokal sudah diverifikasi: image `beesense-nlp:instagram-20261030-20`, container `beesense-dashboard-20261030-20`, health `healthy`, user 10001, mount artifact read-only, melayani http://127.0.0.1:8501. Tidak ada database atau migrasi.
 
 ## Dokumentasi
 
@@ -208,4 +210,4 @@ Status pengujian jarak jauh tersedia pada tab Actions repository. Pemeriksaan lo
 
 Runtime dashboard mem-pin PyArrow 24.0.0, sama dengan guard kompatibilitas Streamlit Cloud. Versi 25/26 dapat terkena crash alokasi mimalloc saat import dilakukan oleh thread skrip yang kemudian berakhir; lihat [laporan upstream Apache Arrow #50471](https://github.com/apache/arrow/issues/50471). Pin ini hanya mengubah pembaca artifact; file Parquet/NumPy dan hasil training tetap utuh.
 
-Ringkasan Gemini terintegrasi setelah gate 20 topik/c_v ≥0,4: setiap topik memakai 10 keyword c-TF-IDF tertinggi, menghasilkan satu kalimat dan deskripsi bahasa Indonesia dalam CSV yang ditampilkan dashboard. API key tetap lokal; UI membaca CSV tanpa request API. Lihat [panduan Gemini](docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md).
+Snapshot aktif memakai label c-TF-IDF lokal dan Excel topik–kalimat. Narasi Gemini adalah fitur opsional; run ini tidak mengirim contoh kalimat ke Gemini karena review persetujuan otomatis menolak egress tanpa izin khusus. CSV dan provenance Gemini pada snapshot arsip tetap dipertahankan. Lihat [panduan Gemini](docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md).

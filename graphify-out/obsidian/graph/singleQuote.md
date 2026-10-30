@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/.prettierrc.json"
 type: "code"
-community: "Workspace React Crawler"
+community: "Format Kode Frontend"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Format_Kode_Frontend
 ---
 
 # singleQuote
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.prettierrc.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Format_Kode_Frontend

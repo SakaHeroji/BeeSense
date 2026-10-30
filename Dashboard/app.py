@@ -1125,7 +1125,7 @@ class SocialNLPStreamlitApp:
                     alt="Peringkat topik dengan batang bertumpuk menurut platform. Panjang batang menunjukkan jumlah kemunculan kalimat.",
                 )
         with right, st.container(key="overview_coverage"):
-            st.header("Dua platform, dua percakapan")
+            st.header("Percakapan menurut platform")
             st.caption(
                 "Bagian berwarna sudah memiliki topik. Abu-abu belum terkelompok."
             )
@@ -1851,6 +1851,20 @@ class SocialNLPStreamlitApp:
         st.caption(
             f"{number(len(table))} kemunculan sesuai filter. Pilih satu baris untuk membaca kalimat lengkap dan sumbernya."
         )
+        if "topic_sentences_xlsx" in data:
+            export = data["topic_sentences_export"]
+            st.download_button(
+                "Unduh Excel topik dan kalimat",
+                data["topic_sentences_xlsx"],
+                file_name="topic_sentences.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                icon=":material/download:",
+            )
+            st.caption(
+                f"Excel snapshot lengkap: {number(export['topics'])} topik dan "
+                f"{number(export['rows'])} kalimat asli unik yang terkelompok. "
+                "Ringkasan Excel memuat coherence setiap topik."
+            )
         with st.container(key="source_panel"):
             preview = table.head(1000)
             event = st.dataframe(

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Ekspor dan Provenance Reddit"
 location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # BundleSink
@@ -25,6 +25,7 @@ tags:
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Preserved eight-sheet audit and checksummed full-text bundle]] - `conceptually_related_to` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

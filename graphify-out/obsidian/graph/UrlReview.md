@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Pengujian Alur Frontend"
 location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Pengujian_Alur_Frontend
 ---
 
 # UrlReview
@@ -17,4 +17,4 @@ tags:
 - [[types.ts]] - `contains` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Alur_Frontend

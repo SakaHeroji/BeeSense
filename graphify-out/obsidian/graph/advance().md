@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Validasi Konfigurasi Frontend"
 location: "L182"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Validasi_Konfigurasi_Frontend
 ---
 
 # advance()
@@ -18,4 +18,4 @@ tags:
 - [[stamp()]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend

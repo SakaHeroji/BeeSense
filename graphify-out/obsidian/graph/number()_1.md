@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Render Dashboard Streamlit"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Render_Dashboard_Streamlit
 ---
 
 # number()
@@ -31,4 +31,4 @@ tags:
 - [[app.py]] - `contains` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

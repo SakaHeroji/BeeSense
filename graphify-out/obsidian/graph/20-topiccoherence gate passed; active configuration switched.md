@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Audit Akuisisi Instagram"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # 20-topic/coherence gate passed; active configuration switched
@@ -18,4 +18,4 @@ tags:
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

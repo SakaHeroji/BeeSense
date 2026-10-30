@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Fixture dan Pengujian Reddit"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Fixture_dan_Pengujian_Reddit
 ---
 
 # Serial Chrome acquisition using a persistent profile and manual login.  The same
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[instagram_browser.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Fixture_dan_Pengujian_Reddit

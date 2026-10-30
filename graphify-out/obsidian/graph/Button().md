@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/ui.tsx"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Monitor Job dan Dataset"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Monitor_Job_dan_Dataset
 ---
 
 # Button()
@@ -20,4 +20,4 @@ tags:
 - [[Survey.tsx]] - `imports` [EXTRACTED]
 - [[ui.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset

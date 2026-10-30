@@ -1,86 +1,86 @@
 {
-  "node_count": 265,
+  "node_count": 1828,
   "unverified_node_count": 0,
-  "raw_edge_count": 699,
+  "raw_edge_count": 4699,
   "non_object_edges": 0,
   "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 196,
+  "dangling_endpoint_edges": 517,
   "self_loop_edges": 0,
-  "valid_candidate_edges": 503,
-  "exact_duplicate_edges": 0,
-  "directed_unique_endpoint_pairs": 503,
-  "directed_same_endpoint_collapsed_edges": 0,
-  "undirected_unique_endpoint_pairs": 503,
-  "undirected_same_endpoint_collapsed_edges": 0,
-  "same_endpoint_group_count": 0,
-  "relation_variant_groups": 0,
+  "valid_candidate_edges": 4182,
+  "exact_duplicate_edges": 2,
+  "directed_unique_endpoint_pairs": 4153,
+  "directed_same_endpoint_collapsed_edges": 29,
+  "undirected_unique_endpoint_pairs": 4146,
+  "undirected_same_endpoint_collapsed_edges": 36,
+  "same_endpoint_group_count": 29,
+  "relation_variant_groups": 7,
   "source_file_variant_groups": 0,
-  "source_location_variant_groups": 0,
+  "source_location_variant_groups": 20,
   "context_variant_groups": 0,
   "post_build_graph_type": "Graph",
-  "post_build_node_count": 265,
-  "post_build_edge_count": 503,
+  "post_build_node_count": 1828,
+  "post_build_edge_count": 4147,
   "post_build_error": "",
   "producer_suppression": {
-    "path": "/Users/socs3/.pyenv/versions/3.12.0/lib/python3.12/site-packages/graphify/extract.py",
+    "path": "/Users/sakaheroji/Library/Python/3.11/lib/python/site-packages/graphify/extract.py",
     "total_sites": 10,
     "sites": [
       {
-        "line": 1047,
+        "line": 1055,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids = {n[\"id\"] for n in nodes}"
       },
       {
-        "line": 1197,
+        "line": 1205,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids = {n[\"id\"] for n in nodes}"
       },
       {
-        "line": 1199,
+        "line": 1207,
         "name": "seen_doc_refs",
         "tuple_arity": 0,
         "sample": "seen_doc_refs: set[str] = set()"
       },
       {
-        "line": 1622,
+        "line": 1630,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids: set[str] = {n[\"id\"] for n in nodes}"
       },
       {
-        "line": 2091,
+        "line": 2099,
         "name": "seen_keys",
         "tuple_arity": 0,
         "sample": "seen_keys: set[tuple] = set()"
       },
       {
-        "line": 3014,
+        "line": 3034,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids: set[str] = set()"
       },
       {
-        "line": 3122,
+        "line": 3142,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids: set[str] = set()"
       },
       {
-        "line": 3201,
+        "line": 3221,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids: set[str] = set()"
       },
       {
-        "line": 3696,
+        "line": 3736,
         "name": "seen_ids",
         "tuple_arity": 0,
         "sample": "seen_ids: set[str] = set()"
       },
       {
-        "line": 3697,
+        "line": 3737,
         "name": "seen_edges",
         "tuple_arity": 4,
         "sample": "seen_edges: set[tuple[str, str, str, str | None]] = set()"
@@ -88,5 +88,100 @@
     ],
     "error": ""
   },
-  "examples": []
+  "examples": [
+    {
+      "source": "crawler_backend_instagram_browser_instagrambrowserworker",
+      "target": "crawler_backend_instagram_browser_instagrambrowserworker_call",
+      "edge_count": 2,
+      "relations": [
+        "method"
+      ],
+      "source_files": [
+        "Crawler/Backend/instagram_browser.py"
+      ],
+      "source_locations": [
+        "L178",
+        "L205"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "crawler_backend_instagram_crawler_instagramcrawler",
+      "target": "crawler_backend_social_export_socialexportmixin",
+      "edge_count": 2,
+      "relations": [
+        "inherits",
+        "uses"
+      ],
+      "source_files": [
+        "Crawler/Backend/instagram_crawler.py"
+      ],
+      "source_locations": [
+        "L31",
+        "L793"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "crawler_backend_reddit_crawler",
+      "target": "crawler_backend_social_crawler",
+      "edge_count": 2,
+      "relations": [
+        "imports",
+        "imports_from"
+      ],
+      "source_files": [
+        "Crawler/Backend/reddit_crawler.py"
+      ],
+      "source_locations": [
+        "L11",
+        "L12"
+      ],
+      "contexts": [
+        "import"
+      ]
+    },
+    {
+      "source": "crawler_backend_reddit_crawler_redditcrawler",
+      "target": "crawler_backend_social_crawler_socialcrawler",
+      "edge_count": 2,
+      "relations": [
+        "inherits",
+        "uses"
+      ],
+      "source_files": [
+        "Crawler/Backend/reddit_crawler.py"
+      ],
+      "source_locations": [
+        "L12",
+        "L42"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "crawler_backend_social_crawler_socialcrawler",
+      "target": "crawler_backend_social_export_socialexportmixin",
+      "edge_count": 2,
+      "relations": [
+        "inherits",
+        "uses"
+      ],
+      "source_files": [
+        "Crawler/Backend/social_crawler.py"
+      ],
+      "source_locations": [
+        "L35",
+        "L745"
+      ],
+      "contexts": [
+        ""
+      ]
+    }
+  ]
 }

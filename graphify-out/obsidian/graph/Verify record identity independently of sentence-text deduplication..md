@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
+community: "Verifikasi Artefak Dataset"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Verifikasi_Artefak_Dataset
 ---
 
 # Verify record identity independently of sentence-text deduplication.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_native_dataset()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset

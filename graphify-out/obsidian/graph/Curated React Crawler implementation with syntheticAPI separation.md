@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Frontend React Crawler.md"
 type: "document"
-community: "Snapshot NLP dan Arsip"
+community: "Kontrak API Frontend"
 location: "# Frontend React Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Kontrak_API_Frontend
 ---
 
 # Curated React Crawler implementation with synthetic/API separation
@@ -23,4 +23,4 @@ tags:
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 - [[React frontend and simulation verified; production acquisition integration unavailable]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/document #graphify/EXTRACTED #community/Kontrak_API_Frontend

@@ -1,17 +1,22 @@
 ---
-source_file: "Crawler/Frontend/package.json"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Workspace React Crawler"
-location: "L7"
+community: "Struktur DOM Reddit"
+location: "L624"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Struktur_DOM_Reddit
 ---
 
-# node
+# Node
 
 ## Connections
-- [[engines]] - `contains` [EXTRACTED]
+- [[.__init__()_9]] - `calls` [EXTRACTED]
+- [[.__init__()_8]] - `method` [EXTRACTED]
+- [[.handle_starttag()]] - `calls` [EXTRACTED]
+- [[.has_class()]] - `method` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[walk()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit

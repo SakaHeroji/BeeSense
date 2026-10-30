@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Ekspor Campaign dan Resume"
+community: "Pengujian Resume Capture"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_Campaign_dan_Resume
+  - community/Pengujian_Resume_Capture
 ---
 
 # ResumeTests
@@ -29,4 +29,4 @@ tags:
 - [[.test_resume_skips_dom_and_prioritizes_missing_before_excerpts()]] - `method` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Resume_Capture

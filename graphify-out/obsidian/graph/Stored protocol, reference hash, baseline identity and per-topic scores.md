@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Coherence dan Quality Gate"
+community: "Pemilihan Topik dan Coherence"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Pemilihan_Topik_dan_Coherence
 ---
 
 # Stored protocol, reference hash, baseline identity and per-topic scores
@@ -16,4 +16,4 @@ tags:
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `references` [EXTRACTED]
 - [[Selected-topic c_v card is separate from the full-model mean]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/concept #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence

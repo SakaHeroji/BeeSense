@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Instagram Client dan Ekspor"
 location: "L464"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Instagram_Client_dan_Ekspor
 ---
 
 # collect()
@@ -23,4 +23,4 @@ tags:
 - [[normalize_item()]] - `calls` [EXTRACTED]
 - [[upstream_version()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Instagram_Client_dan_Ekspor

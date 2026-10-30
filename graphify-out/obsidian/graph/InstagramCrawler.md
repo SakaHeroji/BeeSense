@@ -1,22 +1,22 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Pengambilan HTML Reddit"
 location: "L793"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # InstagramCrawler
 
 ## Connections
-- [[.__init__()_25]] - `method` [EXTRACTED]
+- [[.__init__()_21]] - `method` [EXTRACTED]
 - [[._baseline()]] - `method` [EXTRACTED]
 - [[.check_session()]] - `method` [EXTRACTED]
-- [[.plan()_2]] - `method` [EXTRACTED]
-- [[.run()_1]] - `method` [EXTRACTED]
+- [[.plan()]] - `method` [EXTRACTED]
+- [[.run()]] - `method` [EXTRACTED]
 - [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - `calls` [EXTRACTED]
 - [[.test_browser_is_real_backend_but_injected_workers_remain_synthetic()]] - `calls` [EXTRACTED]
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
@@ -27,7 +27,7 @@ tags:
 - [[SocialExportMixin]] - `uses` [INFERRED]
 - [[Standalone trial. The production SocialCrawler backend stays unchanged.]] - `rationale_for` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[test_instagram_browser.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

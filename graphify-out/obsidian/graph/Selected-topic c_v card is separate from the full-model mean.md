@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Penjelasan Topik Dashboard"
 location: "## Arti angka"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Selected-topic c_v card is separate from the full-model mean
@@ -16,4 +16,4 @@ tags:
 - [[Four selected-topic cards unique comments, share, source roots and topic c_v]] - `references` [EXTRACTED]
 - [[Stored protocol, reference hash, baseline identity and per-topic scores]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/concept #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard

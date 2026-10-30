@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Backend/README.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Rencana Layanan Backend"
 location: "# PRD Backend"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Rencana_Layanan_Backend
 ---
 
 # Proposed server session, role, project isolation and idempotency
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Backend PRD is not written; APIworker services remain proposed]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Rencana_Layanan_Backend

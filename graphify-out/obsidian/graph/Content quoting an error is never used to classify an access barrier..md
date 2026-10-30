@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "rationale"
-community: "Crawler Selenium Terisolasi"
+community: "Crawler Selenium"
 location: "L104"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Crawler_Selenium
 ---
 
 # Content quoting an error is never used to classify an access barrier.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_barrier()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_browser.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Kontrak Ekspor Instagram"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Kontrak_Ekspor_Instagram
 ---
 
 # test_instagram_browser.py
@@ -17,6 +17,6 @@ tags:
 - [[Offline checks for the Chrome boundary, native identity, and provenance.]] - `rationale_for` [EXTRACTED]
 - [[instagram_browser.py]] - `imports_from` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
-- [[records()_1]] - `imports` [EXTRACTED]
+- [[records()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Ekspor_Instagram

@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L883"
+community: "Encoding dan Penyimpanan Model"
+location: "L885"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.compare()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

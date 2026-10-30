@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
 type: "concept"
-community: "Snapshot NLP dan Arsip"
+community: "Arsitektur Model dan Dashboard"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Arsitektur_Model_dan_Dashboard
 ---
 
 # Verified current model and20context-grounded narratives
@@ -18,4 +18,4 @@ tags:
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Model_dan_Dashboard

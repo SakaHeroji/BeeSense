@@ -1,12 +1,12 @@
 ---
 source_file: "tests/cloud/test_dashboard_runtime.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Model dan Pengujian NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # test_dashboard_runtime.py
@@ -18,4 +18,4 @@ tags:
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[topic_narratives.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

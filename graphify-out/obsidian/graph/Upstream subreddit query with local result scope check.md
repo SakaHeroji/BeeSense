@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Batas Akuisisi Reddit"
 location: "## Batas adapter"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Upstream subreddit query with local result scope check
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

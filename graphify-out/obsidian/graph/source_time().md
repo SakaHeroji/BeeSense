@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser dan Runner Reddit"
+community: "Pengujian Parser Reddit"
 location: "L705"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_dan_Runner_Reddit
+  - community/Pengujian_Parser_Reddit
 ---
 
 # source_time()
@@ -18,4 +18,4 @@ tags:
 - [[rendered_text()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

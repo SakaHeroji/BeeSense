@@ -1,14 +1,14 @@
 ---
 source_file: "Crawler/Backend/Reddit/config_reddit.json"
 type: "document"
-community: "Konfigurasi Adapter Reddit"
+community: "Konfigurasi Reddit Legacy"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Konfigurasi_Adapter_Reddit
+  - community/Konfigurasi_Reddit_Legacy
 ---
 
 # Crawler/Backend/Reddit/config_reddit.json
 
-#graphify/document #graphify/EXTRACTED #community/Konfigurasi_Adapter_Reddit
+#graphify/document #graphify/EXTRACTED #community/Konfigurasi_Reddit_Legacy

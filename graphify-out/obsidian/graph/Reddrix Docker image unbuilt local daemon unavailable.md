@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Runtime Docker dan Display"
 location: "## Verifikasi dan deployment"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Runtime_Docker_dan_Display
 ---
 
 # Reddrix Docker image unbuilt: local daemon unavailable
@@ -18,4 +18,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Relocated combined crawler image runs package module as UID10001]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

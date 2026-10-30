@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Form Akuisisi dan Survei"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Form_Akuisisi_dan_Survei
 ---
 
 # initialConfig()
@@ -22,4 +22,4 @@ tags:
 - [[domain.ts]] - `contains` [EXTRACTED]
 - [[seed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei

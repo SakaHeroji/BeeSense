@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Runtime web GraphQL patch
@@ -18,4 +18,4 @@ tags:
 - [[Same-context web tokens and headers]] - `implements` [EXTRACTED]
 - [[Trial06 verified capped live outcome]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

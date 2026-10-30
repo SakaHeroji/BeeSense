@@ -1,19 +1,19 @@
 ---
 source_file: "Crawler/Backend/reddit_crawler.py"
 type: "code"
-community: "Akuisisi Reddit Reddrix"
+community: "Wrapper RedditCrawler"
 location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Wrapper_RedditCrawler
 ---
 
 # RedditCrawler
 
 ## Connections
-- [[.__init__()_19]] - `method` [EXTRACTED]
-- [[.plan()]] - `method` [EXTRACTED]
+- [[.__init__()_26]] - `method` [EXTRACTED]
+- [[.plan()_2]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `calls` [EXTRACTED]
 - [[.test_barrier_exports_partial_without_calling_it_success()]] - `calls` [EXTRACTED]
 - [[.test_baseline_blocks_native_roots_across_runs()]] - `calls` [EXTRACTED]
@@ -23,7 +23,6 @@ tags:
 - [[.test_trial_config_changes_only_duration_and_platform_scope()]] - `calls` [EXTRACTED]
 - [[Adaptive display v1.1.0 auto platform policy]] - `rationale_for` [EXTRACTED]
 - [[CLIclass display overrides and explicit virtual preconditions]] - `references` [EXTRACTED]
-- [[Declared Reddrix lintformat and offline contract test step]] - `references` [INFERRED]
 - [[FakeReddrix]] - `uses` [INFERRED]
 - [[Integrated SocialCrawler Reddrix with thin Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[Module CLIs and worker spawn import relocated packages]] - `references` [EXTRACTED]
@@ -31,11 +30,11 @@ tags:
 - [[RedditCrawlerTests]] - `uses` [INFERRED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Run only Reddit through the shared Reddrix implementation in SocialCrawler.]] - `rationale_for` [EXTRACTED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[SocialCrawler Reddrixyt-dlp defaults and Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[Thin Reddit-only wrapper selects shared Reddrix explicitly]] - `rationale_for` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[reddit_crawler.py]] - `contains` [EXTRACTED]
 - [[test_reddit_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

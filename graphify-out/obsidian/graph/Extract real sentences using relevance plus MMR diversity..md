@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Pipeline dan Persistensi NLP"
-location: "L1360"
+community: "Bukti Ekstraktif Topik"
+location: "L1362"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Bukti_Ekstraktif_Topik
 ---
 
 # Extract real sentences using relevance plus MMR diversity.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._explanation_evidence()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Bukti_Ekstraktif_Topik

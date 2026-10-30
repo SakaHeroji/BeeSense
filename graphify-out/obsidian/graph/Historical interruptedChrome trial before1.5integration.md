@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/InstagramCrawler instagrapi.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Worker Chrome Instagram"
 location: "## Perkembangan terkini: Chrome"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Worker_Chrome_Instagram
 ---
 
 # Historical interruptedChrome trial before1.5integration
@@ -18,4 +18,4 @@ tags:
 - [[InstagramBrowserWorker]] - `references` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Worker_Chrome_Instagram

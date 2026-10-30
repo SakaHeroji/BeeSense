@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Runbook dan Verifikasi Lokal"
+community: "Lingkungan Training SBERT"
 location: "## Encoder SBERT"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - community/Lingkungan_Training_SBERT
 ---
 
 # Pinned multilingual SentenceTransformer safetensors encoder
@@ -18,8 +18,7 @@ tags:
 - [[Frozen macOS Intel native SBERT training environment]] - `references` [EXTRACTED]
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 - [[Overflow-window averaging and L 2-normalized 384 D embeddings]] - `implements` [EXTRACTED]
-- [[Requested SBERT-based embeddings]] - `conceptually_related_to` [INFERRED]
 - [[Sentence-weighted Ward merges complete DBSCAN groups to exactly 20]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/concept #graphify/EXTRACTED #community/Lingkungan_Training_SBERT

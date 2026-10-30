@@ -1,25 +1,25 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Crawler Selenium"
 location: "L620"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Crawler_Selenium
 ---
 
 # SocialCrawlerSelenium
 
 ## Connections
-- [[.__init__()_21]] - `method` [EXTRACTED]
-- [[._checkpoint_items()]] - `method` [EXTRACTED]
-- [[._execute()]] - `method` [EXTRACTED]
-- [[._legacy_settings()]] - `method` [EXTRACTED]
-- [[._normalize()]] - `method` [EXTRACTED]
-- [[._source_metadata()]] - `method` [EXTRACTED]
-- [[.plan()_1]] - `method` [EXTRACTED]
-- [[.run()]] - `method` [EXTRACTED]
+- [[.__init__()_29]] - `method` [EXTRACTED]
+- [[._checkpoint_items()_1]] - `method` [EXTRACTED]
+- [[._execute()_1]] - `method` [EXTRACTED]
+- [[._legacy_settings()_1]] - `method` [EXTRACTED]
+- [[._normalize()_1]] - `method` [EXTRACTED]
+- [[._source_metadata()_1]] - `method` [EXTRACTED]
+- [[.plan()_4]] - `method` [EXTRACTED]
+- [[.run()_3]] - `method` [EXTRACTED]
 - [[.selenium_version()]] - `method` [EXTRACTED]
 - [[.test_barrier_stops_after_first_call_and_still_exports_headers()]] - `calls` [EXTRACTED]
 - [[.test_both_workbooks_preserve_schema_and_selenium_provenance()]] - `calls` [EXTRACTED]
@@ -32,10 +32,10 @@ tags:
 - [[Drop-in SocialCrawler with Selenium for both platforms and shared exports.]] - `rationale_for` [EXTRACTED]
 - [[Relocated Selenium image preserves included requirements and package modules]] - `references` [INFERRED]
 - [[SeleniumDOMTests]] - `uses` [INFERRED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[SocialCrawlerSeleniumTests]] - `uses` [INFERRED]
-- [[main()_3]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

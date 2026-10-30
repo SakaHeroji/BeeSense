@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Dataset Dashboard.md"
 type: "document"
-community: "Snapshot NLP dan Arsip"
+community: "Riwayat Dataset dan Metodologi"
 location: "# Dataset Dashboard"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Riwayat_Dataset_dan_Metodologi
 ---
 
 # Obsidian dashboard dataset provenance
@@ -21,4 +21,4 @@ tags:
 - [[Obsidian Cloud runbook streamlit_apps.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/document #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi

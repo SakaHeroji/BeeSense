@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Monitor Job dan Dataset"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Monitor_Job_dan_Dataset
 ---
 
 # duration()
@@ -17,4 +17,4 @@ tags:
 - [[PlatformCard()]] - `calls` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/README.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Batas Integrasi Produksi"
 location: "## Jalankan lokal"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/PRD_Workspace_Crawler
+  - community/Batas_Integrasi_Produksi
 ---
 
 # Development demo uses synthetic accelerated jobs and separate storage scopes
@@ -15,4 +15,4 @@ tags:
 - [[Demo IDs, baseline data and downloads are synthetic rather than acquisition evidence]] - `conceptually_related_to` [INFERRED]
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/INFERRED #community/Batas_Integrasi_Produksi

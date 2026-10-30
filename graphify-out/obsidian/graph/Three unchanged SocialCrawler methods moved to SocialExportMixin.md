@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Transport GraphQL Instaloader"
 location: "## Menjalankan percobaan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Transport_GraphQL_Instaloader
 ---
 
 # Three unchanged SocialCrawler methods moved to SocialExportMixin
@@ -16,4 +16,4 @@ tags:
 - [[SocialExportMixin]] - `references` [EXTRACTED]
 - [[Standalone Instagram uses existing auditcompact Excel contract]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Transport_GraphQL_Instaloader

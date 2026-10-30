@@ -1,19 +1,19 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Koordinator Backend Sosial"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Koordinator_Backend_Sosial
 ---
 
 # InstagramIntegrationTests
 
 ## Connections
 - [[.ig()]] - `method` [EXTRACTED]
-- [[.setUp()_13]] - `method` [EXTRACTED]
+- [[.setUp()_6]] - `method` [EXTRACTED]
 - [[.test_discovery_retains_bounded_cursor()]] - `method` [EXTRACTED]
 - [[.test_instagram_429_honors_server_wait_and_retries_same_post()]] - `method` [EXTRACTED]
 - [[.test_instagram_batch_pause_is_bounded_by_global_deadline()]] - `method` [EXTRACTED]
@@ -28,9 +28,10 @@ tags:
 - [[.test_native_baseline_skips_instagram_before_worker()]] - `method` [EXTRACTED]
 - [[.test_owned_instaloader_worker_is_closed_when_combined_run_finishes()]] - `method` [EXTRACTED]
 - [[.test_unused_instagram_settings_cannot_leak_credentials_in_other_platform_runs()]] - `method` [EXTRACTED]
+- [[Clock_1]] - `uses` [INFERRED]
 - [[InstaloaderSettings]] - `uses` [INFERRED]
 - [[InstaloaderWorker]] - `uses` [INFERRED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_social_crawler_instagram.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial

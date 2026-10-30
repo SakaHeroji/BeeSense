@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Penjelasan Topik Dashboard"
 location: "## Arti angka"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Platform and top-five source graphs count unique topic comments
@@ -18,4 +18,4 @@ tags:
 - [[SocialNLPStreamlitApp]] - `implements` [INFERRED]
 - [[Text spans, source_row and date certainty survive embedding deduplication]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/INFERRED #community/Penjelasan_Topik_Dashboard

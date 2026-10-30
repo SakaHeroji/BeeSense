@@ -1,23 +1,22 @@
 ---
 source_file: "PRD/PRD Frontend/Rancangan Layar Crawler.md"
 type: "document"
-community: "PRD Workspace Crawler"
+community: "Rencana Produk dan Survei"
 location: "# Rancangan Layar Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Crawler wireframes are illustrative design requirements, not app screenshots
 
 ## Connections
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
-- [[Crawler frontend PRD v1.1 with implemented seven-source UI and pending backend]] - `references` [EXTRACTED]
 - [[Curated Crawler PRD statusfrontend implemented, backend pending]] - `references` [EXTRACTED]
-- [[Frontend PRD indexCrawler detailed; NLP and Dashboard PRDs remain future]] - `references` [EXTRACTED]
+- [[Frontend PRD index]] - `references` [EXTRACTED]
 - [[Monitor prioritizes status, units, barriers and next actions over logs]] - `references` [EXTRACTED]
 - [[Responsive drawertablefocus behavior is a design target]] - `references` [EXTRACTED]
 - [[Worker-session CAPTCHA and429 UI offer observation rather than bypass]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

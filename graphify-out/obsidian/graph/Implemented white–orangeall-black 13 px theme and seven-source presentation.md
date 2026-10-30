@@ -1,18 +1,17 @@
 ---
 source_file: "Crawler/Frontend/README.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Kontrak API Frontend"
 location: "## Tema dan sumber sosial"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Kontrak_API_Frontend
 ---
 
 # Implemented white–orange/all-black 13 px theme and seven-source presentation
 
 ## Connections
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
-- [[Mandatory PRD 1.1 white–orange themeall text000000 and≥13 px]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_API_Frontend

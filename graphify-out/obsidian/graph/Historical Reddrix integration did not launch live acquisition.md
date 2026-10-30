@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Batas Akuisisi Reddit"
 location: "## Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Historical Reddrix integration did not launch live acquisition
@@ -16,4 +16,4 @@ tags:
 - [[Default Reddit Reddrix with YouTube yt-dlp since SocialCrawler 1.4]] - `references` [EXTRACTED]
 - [[Historical trial gate superseded by explicitintegrationauthorization]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

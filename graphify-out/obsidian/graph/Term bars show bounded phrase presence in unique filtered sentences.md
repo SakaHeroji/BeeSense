@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Penjelasan Topik Dashboard"
 location: "## Arti angka"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Term bars show bounded phrase presence in unique filtered sentences
@@ -18,4 +18,4 @@ tags:
 - [[Selected-topic explanation panel links cards, frequency graphs, time shares and source evidence]] - `conceptually_related_to` [INFERRED]
 - [[SocialNLPStreamlitApp]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/INFERRED #community/Penjelasan_Topik_Dashboard

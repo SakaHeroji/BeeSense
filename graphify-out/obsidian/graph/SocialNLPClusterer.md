@@ -1,24 +1,24 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L73"
+community: "Model dan Pengujian NLP"
+location: "L75"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # SocialNLPClusterer
 
 ## Connections
-- [[.__init__()_27]] - `method` [EXTRACTED]
+- [[.__init__()_31]] - `method` [EXTRACTED]
 - [[._cache_dir()]] - `method` [EXTRACTED]
 - [[._clean()]] - `method` [EXTRACTED]
 - [[._ctfidf_terms()]] - `method` [EXTRACTED]
 - [[._encode_sbert()]] - `method` [EXTRACTED]
 - [[._evaluate()]] - `method` [EXTRACTED]
-- [[._event()]] - `method` [EXTRACTED]
+- [[._event()_1]] - `method` [EXTRACTED]
 - [[._explanation_evidence()]] - `method` [EXTRACTED]
 - [[._explanation_term_changes()]] - `method` [EXTRACTED]
 - [[._explanation_trend()]] - `method` [EXTRACTED]
@@ -48,10 +48,10 @@ tags:
 - [[.score_coherence()]] - `method` [EXTRACTED]
 - [[.select_candidate()]] - `method` [EXTRACTED]
 - [[.sentence_spans()]] - `method` [EXTRACTED]
-- [[.setUp()_11]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_2]] - `indirect_call` [INFERRED]
+- [[.setUp()_12]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_1]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_2]] - `calls` [EXTRACTED]
 - [[.setUpClass()_3]] - `calls` [EXTRACTED]
-- [[.setUpClass()_1]] - `calls` [EXTRACTED]
 - [[.stability()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `calls` [EXTRACTED]
 - [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - `calls` [EXTRACTED]
@@ -73,7 +73,6 @@ tags:
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `calls` [EXTRACTED]
 - [[20-topiccoherence gate passed; active configuration switched]] - `references` [EXTRACTED]
 - [[Additive v 2 reduction and coherence metadata with v1v2 loaders]] - `shares_data_with` [EXTRACTED]
-- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete active snapshot]] - `references` [EXTRACTED]
 - [[CloudRuntimeTests]] - `uses` [INFERRED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
@@ -101,7 +100,7 @@ tags:
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[Two UMAP 10 D projections seeded 42 and 43]] - `implements` [EXTRACTED]
 - [[app.py]] - `imports` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[model_from_counts()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports` [EXTRACTED]
@@ -109,6 +108,7 @@ tags:
 - [[test_streamlit_app.py]] - `imports` [EXTRACTED]
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
 - [[test_topic_narratives.py]] - `imports` [EXTRACTED]
+- [[topic_sentence_export.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

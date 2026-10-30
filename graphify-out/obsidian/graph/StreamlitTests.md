@@ -13,12 +13,13 @@ tags:
 
 ## Connections
 - [[.app()]] - `method` [EXTRACTED]
-- [[.setUp()_11]] - `method` [EXTRACTED]
-- [[.setUpClass()_3]] - `method` [EXTRACTED]
-- [[.tearDown()_1]] - `method` [EXTRACTED]
-- [[.tearDownClass()_3]] - `method` [EXTRACTED]
+- [[.setUp()_12]] - `method` [EXTRACTED]
+- [[.setUpClass()_2]] - `method` [EXTRACTED]
+- [[.tearDown()]] - `method` [EXTRACTED]
+- [[.tearDownClass()_2]] - `method` [EXTRACTED]
 - [[.test_all_views_and_noise_only_selection()]] - `method` [EXTRACTED]
 - [[.test_coherence_metric_and_per_topic_scores_are_visible()]] - `method` [EXTRACTED]
+- [[.test_complete_excel_download_is_available_without_training()]] - `method` [EXTRACTED]
 - [[.test_dashboard_renders_and_topic_selection_works_without_training()]] - `method` [EXTRACTED]
 - [[.test_explanation_detail_and_filtered_download_without_training()]] - `method` [EXTRACTED]
 - [[.test_network_limit_tracks_filter_bounds_and_preserves_valid_choices()]] - `method` [EXTRACTED]

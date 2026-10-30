@@ -1,20 +1,20 @@
 ---
 source_file: "tests/nlp/test_topic_narratives.py"
 type: "code"
-community: "Ringkasan Topik Gemini"
+community: "Pengujian Narasi Gemini"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ringkasan_Topik_Gemini
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # GeminiTests
 
 ## Connections
 - [[.generate()]] - `method` [EXTRACTED]
-- [[.setUp()_10]] - `method` [EXTRACTED]
-- [[.tearDown()]] - `method` [EXTRACTED]
+- [[.setUp()_13]] - `method` [EXTRACTED]
+- [[.tearDown()_1]] - `method` [EXTRACTED]
 - [[.test_changed_representative_sentence_invalidates_cache_and_tampering_fails()]] - `method` [EXTRACTED]
 - [[.test_credentials_stay_out_of_configuration_and_gate_precedes_api()]] - `method` [EXTRACTED]
 - [[.test_http_429_is_bounded_and_error_does_not_leak_server_body_or_key()]] - `method` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

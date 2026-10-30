@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Transport GraphQL Instaloader"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Transport_GraphQL_Instaloader
 ---
 
 # Shared root selection and formula-safe Excel projection for social crawlers.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[social_export.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Transport_GraphQL_Instaloader

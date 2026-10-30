@@ -4,7 +4,17 @@
 UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot kalimat → c-TF-IDF → artifact terverifikasi**.
 [SocialNLPStreamlitApp](../../Dashboard/app.py) membaca hasil tersimpan tanpa training pada rerun.
 
-## Data dan hasil aktif 30 Oktober 2026
+## Data dan hasil aktif setelah tambahan Instagram
+
+Input `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx` memuat **34.095 record unik**, **2.160 post asal**, dan **31.935 komentar/balasan**. Input menggabungkan 33.034 record sebelumnya dengan 301 post Instagram, 622 komentar dan 138 balasan baru. Pemeriksaan memastikan 0 duplikasi ID, 0 overlap post baru dengan baseline, dan semua nilai sel baseline tetap utuh.
+
+Run aktif `outputs/nlp_20261030_instagram_500_topics20_01` menghasilkan **20 topik**, rata-rata **c_v 0,4386500025**, coverage **87,59%**, silhouette cosine **-0,018778**, dan ARI dua seed **0,739133**. DBSCAN eps=0,2/min_samples=10 menghasilkan 279 kelompok primer, lalu Ward berbobot menggabungkannya menjadi 20 topik. Encoding SBERT dihitung baru pada 51.979 kalimat unik; bobot encoder pralatih tetap. Persiapan menghasilkan 52.861 kemunculan, 882 pengulangan dan 5.931 segmen dilewati; 29.132 komentar/balasan terwakili. Noise terdiri atas 6.449 kalimat unik/6.523 kemunculan.
+
+Excel `topic_sentences.xlsx` memuat **45.556 pasangan topik–kalimat asli unik**. Sheet Kalimat berisi tepat kolom `topik` dan `kalimat yang berada dalam cluster topik`; sheet Topik mencantumkan c_v dan jumlah kalimat setiap topik. Pengulangan teks yang sama dalam satu cluster disatukan; variasi asli yang berbeda tetap dipertahankan. Kalimat noise tersedia dalam artifact model dan jumlahnya dicatat pada Excel. Dashboard menyediakan unduhan Excel snapshot lengkap pada Kalimat & sumber; unduhan JSONL tetap mengikuti filter.
+
+Ambang ≥0,4 berlaku pada **rata-rata tanpa bobot semua 20 topik**; **9/20 topik** masih di bawah 0,4 secara individual. Referensi coherence mencakup seluruh kalimat unik, termasuk noise, dengan top-10 istilah/window 110. Ini evaluasi in-sample, bukan akurasi berlabel; skor antar-korpus tidak dibandingkan sebagai kenaikan kualitas. Label c-TF-IDF dibuat lokal. Narasi Gemini untuk run ini tidak dipanggil karena review persetujuan otomatis menolak pengiriman contoh kalimat ke layanan eksternal tanpa izin khusus. Narasi Gemini pada snapshot lama tetap dipertahankan.
+
+## Riwayat sesi sebelumnya pada 30 Oktober 2026
 
 Input `outputs/social_20261030_combined_3days_02/social_data.xlsx` memuat **33.034 record unik**, **1.859 root**, dan **31.175 komentar/balasan** dari hasil akuisisi 27–30 Oktober. Sebanyak 49.952 pengulangan antarberkas disisihkan; pemeriksaan menemukan 0 ID native ganda. Total Instagram 324 post/3.038 komentar mencakup batch terbaru 248 post/2.128 komentar dan trial sebelumnya 76 post/910 komentar. Pengguna menghentikan crawling setelah HTTP 429; target 1.000 post dan durasi 3 jam belum tercapai.
 
@@ -78,7 +88,7 @@ selalu dihitung dari keanggotaan topik akhir; UI tidak memotong daftar 52 topik.
 Coherence dihitung dengan Gensim 4.4.0 pada maksimum **10 istilah c-TF-IDF**
 per topik dan sliding window **110 token**. Tokenisasi memakai analyzer
 CountVectorizer yang sama: stopword Indonesia/Inggris dibuang, unigram diikuti
-bigram, dan frasa bigram tetap satu token. Referensi adalah seluruh **46.143 kalimat unik embedding_text**, termasuk noise; kalimat tidak digabung per cluster
+bigram, dan frasa bigram tetap satu token. Referensi adalah seluruh **kalimat unik embedding_text dari input run tersebut**, termasuk noise; kalimat tidak digabung per cluster
 dan pengulangan occurrence tidak menambah bobot. Karena token mencakup frasa,
 angka ini harus dibandingkan dengan evaluasi yang memakai protokol sama.
 

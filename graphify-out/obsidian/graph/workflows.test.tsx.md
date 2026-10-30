@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/test/workflows.test.tsx"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Pengujian Alur Frontend"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Pengujian_Alur_Frontend
 ---
 
 # workflows.test.tsx
@@ -25,4 +25,4 @@ tags:
 - [[mount()]] - `contains` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Alur_Frontend

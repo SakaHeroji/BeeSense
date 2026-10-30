@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "document"
-community: "Topik dan Verifikasi NLP"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Akuisisi selesai dan data gabungan"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Runbook and historical record for finalized partial crawler campaign
@@ -39,7 +39,7 @@ tags:
 - [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - `references` [EXTRACTED]
 - [[New user authorization supersedes historical preparation-only restriction]] - `references` [EXTRACTED]
 - [[Obsidian records bounded retry policy and chronological authorization]] - `references` [EXTRACTED]
-- [[SocialCrawler_1]] - `references` [EXTRACTED]
+- [[SocialCrawler]] - `references` [EXTRACTED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/document #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

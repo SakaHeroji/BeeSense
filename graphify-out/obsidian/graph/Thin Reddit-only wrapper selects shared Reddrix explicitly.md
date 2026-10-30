@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Konfigurasi Trial Reddit"
 location: "## Menjalankan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Konfigurasi_Trial_Reddit
 ---
 
 # Thin Reddit-only wrapper selects shared Reddrix explicitly
@@ -16,4 +16,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Trial config now explicitly selects Reddrix; wrapper preserves legacy compatibility]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit

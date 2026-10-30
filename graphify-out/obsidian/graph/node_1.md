@@ -1,22 +1,17 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Parser DOM Terbatas"
-location: "L624"
+community: "Metadata Package Frontend"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_DOM_Terbatas
+  - community/Metadata_Package_Frontend
 ---
 
-# Node
+# node
 
 ## Connections
-- [[.__init__()_9]] - `calls` [EXTRACTED]
-- [[.__init__()_8]] - `method` [EXTRACTED]
-- [[.handle_starttag()]] - `calls` [EXTRACTED]
-- [[.has_class()]] - `method` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[walk()]] - `indirect_call` [INFERRED]
+- [[engines]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas
+#graphify/code #graphify/EXTRACTED #community/Metadata_Package_Frontend

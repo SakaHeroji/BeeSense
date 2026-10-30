@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_narratives.py"
 type: "code"
-community: "Ringkasan Topik Gemini"
+community: "Pengujian Narasi Gemini"
 location: "L50"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ringkasan_Topik_Gemini
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # topic()
@@ -20,4 +20,4 @@ tags:
 - [[.test_twenty_requests_rank_weights_and_resume_without_repeating_api()]] - `calls` [EXTRACTED]
 - [[test_topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

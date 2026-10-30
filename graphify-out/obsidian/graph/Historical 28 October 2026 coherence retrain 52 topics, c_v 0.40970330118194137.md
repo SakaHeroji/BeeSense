@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md"
 type: "document"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Pemilihan Topik dan Coherence"
 location: "## Answer"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Pemilihan_Topik_dan_Coherence
 ---
 
 # Historical 28 October 2026 coherence retrain: 52 topics, c_v 0.40970330118194137
@@ -16,4 +16,4 @@ tags:
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/tsconfig.json"
 type: "code"
-community: "Workspace React Crawler"
+community: "Konfigurasi TypeScript"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Konfigurasi_TypeScript
 ---
 
 # compilerOptions
@@ -29,4 +29,4 @@ tags:
 - [[tsconfig.json]] - `contains` [EXTRACTED]
 - [[types]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_TypeScript

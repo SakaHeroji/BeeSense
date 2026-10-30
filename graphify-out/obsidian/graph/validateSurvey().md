@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Validasi Konfigurasi Frontend"
 location: "L327"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Validasi_Konfigurasi_Frontend
 ---
 
 # validateSurvey()
@@ -18,4 +18,4 @@ tags:
 - [[responseKey()]] - `calls` [EXTRACTED]
 - [[surveyKey()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend

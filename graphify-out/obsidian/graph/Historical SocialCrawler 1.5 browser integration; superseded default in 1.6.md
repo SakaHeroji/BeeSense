@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Pacing Instagram"
 location: "## Integrasi Instagram 1.5"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Pacing_Instagram
 ---
 
 # Historical SocialCrawler 1.5 browser integration; superseded default in 1.6
@@ -24,6 +24,6 @@ tags:
 - [[InstagramCrawler]] - `references` [EXTRACTED]
 - [[Release194e0b1 live with exact20-row200-sentence CSV]] - `references` [EXTRACTED]
 - [[Retained local jitter, batch rests and scheduler readiness]] - `references` [EXTRACTED]
-- [[SocialCrawler_1]] - `references` [EXTRACTED]
+- [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Pacing_Instagram

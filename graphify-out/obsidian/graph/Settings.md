@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "thread_url"
 location: "L518"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/thread_url
 ---
 
 # Settings
@@ -15,9 +15,9 @@ tags:
 - [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - `calls` [EXTRACTED]
 - [[.test_14_settings_bounds_and_no_zero_fill()]] - `calls` [EXTRACTED]
 - [[.test_16_hard_timeout_keeps_already_received_event()]] - `calls` [EXTRACTED]
-- [[.validate()_1]] - `method` [EXTRACTED]
+- [[.validate()]] - `method` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[load_settings()]] - `calls` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/thread_url

@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/topic_narratives.py"
 type: "code"
-community: "Ringkasan Topik Gemini"
+community: "Generator Narasi Gemini"
 location: "L492"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ringkasan_Topik_Gemini
+  - community/Generator_Narasi_Gemini
 ---
 
 # write_csv()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini
+#graphify/code #graphify/EXTRACTED #community/Generator_Narasi_Gemini

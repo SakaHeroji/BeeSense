@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Riwayat Evaluasi Coherence"
 location: "## Akuisisi selesai dan data gabungan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Combined-corpus training completed:20topics, c_v 0.4720034333858867
@@ -21,4 +21,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

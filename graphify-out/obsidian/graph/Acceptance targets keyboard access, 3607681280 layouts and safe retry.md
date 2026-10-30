@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/Acceptance Criteria Crawler.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Batas Integrasi Produksi"
 location: "## 1. Skenario penerimaan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Batas_Integrasi_Produksi
 ---
 
 # Acceptance targets keyboard access, 360/768/1280 layouts and safe retry
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Browser actual widths400444px;requested360px remains unproven]] - `conceptually_related_to` [INFERRED]
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
-- [[Mandatory PRD 1.1 white–orange themeall text000000 and≥13 px]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Integrasi_Produksi

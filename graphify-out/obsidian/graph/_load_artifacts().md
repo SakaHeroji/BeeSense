@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Struktur Runtime Dashboard"
 location: "L107"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # _load_artifacts()
@@ -16,4 +16,4 @@ tags:
 - [[.render()_1]] - `calls` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

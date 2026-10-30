@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Konfigurasi SocialCrawler"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Konfigurasi_SocialCrawler
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Historical or explicitly selected Playwright CAPTCHA wait
@@ -15,6 +15,6 @@ tags:
 - [[._wait_for_captcha()]] - `implements` [INFERRED]
 - [[Coordinator waits for manual CAPTCHA without automated clicks]] - `semantically_similar_to` [INFERRED]
 - [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - `conceptually_related_to` [INFERRED]
-- [[Shared three-hour round-robin deadline; historical segments retain original budget]] - `references` [EXTRACTED]
+- [[Round Robin Shared Deadline]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Konfigurasi_SocialCrawler
+#graphify/rationale #graphify/INFERRED #community/Penjadwalan_dan_Riwayat_Akuisisi

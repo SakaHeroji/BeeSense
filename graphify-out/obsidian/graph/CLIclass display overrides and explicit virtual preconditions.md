@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Runtime Docker dan Display"
 location: "## Display adaptif macOS dan Linux"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Runtime_Docker_dan_Display
 ---
 
 # CLI/class display overrides and explicit virtual preconditions
@@ -15,4 +15,4 @@ tags:
 - [[Adaptive display v1.1.0 auto platform policy]] - `references` [EXTRACTED]
 - [[RedditCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

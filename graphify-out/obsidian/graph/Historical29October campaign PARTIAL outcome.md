@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Historical29October campaign PARTIAL outcome
@@ -16,6 +16,6 @@ tags:
 - [[Native-ID workbook merge and provenance]] - `conceptually_related_to` [EXTRACTED]
 - [[Read-only native-ID baseline exclusion]] - `conceptually_related_to` [EXTRACTED]
 - [[Shared filters and round-robin campaign scheduler]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

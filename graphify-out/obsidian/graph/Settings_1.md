@@ -1,25 +1,25 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L75"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # Settings
 
 ## Connections
-- [[.validate()_2]] - `method` [EXTRACTED]
+- [[.validate()_1]] - `method` [EXTRACTED]
 - [[BundleSink_1]] - `uses` [INFERRED]
 - [[ContentInput_1]] - `uses` [INFERRED]
-- [[Dataset_2]] - `uses` [INFERRED]
+- [[Dataset_1]] - `uses` [INFERRED]
 - [[KeywordMatcher_1]] - `uses` [INFERRED]
 - [[RecordFactory_1]] - `uses` [INFERRED]
 - [[SourceAdapter_2]] - `uses` [INFERRED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[load_settings()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/INFERRED #community/Akuisisi_YouTube

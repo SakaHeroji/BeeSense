@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Workspace React Crawler"
+community: "Tipe Parser CSV"
 location: "L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Tipe_Parser_CSV
 ---
 
 # @types/papaparse
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@typespapaparse]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Tipe_Parser_CSV

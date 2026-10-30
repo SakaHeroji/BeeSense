@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "code"
-community: "Akuisisi Reddit Reddrix"
+community: "Wrapper RedditCrawler"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Wrapper_RedditCrawler
 ---
 
 # test_reddit_crawler.py
@@ -16,11 +16,11 @@ tags:
 - [[RedditCrawler]] - `imports` [EXTRACTED]
 - [[RedditCrawlerTests]] - `contains` [EXTRACTED]
 - [[Reddrix fieldidentity boundaries and the real, shared Excel exporter.]] - `rationale_for` [EXTRACTED]
-- [[SocialCrawler_1]] - `imports` [EXTRACTED]
+- [[SocialCrawler]] - `imports` [EXTRACTED]
 - [[item()]] - `contains` [EXTRACTED]
-- [[records()]] - `contains` [EXTRACTED]
+- [[records()_1]] - `contains` [EXTRACTED]
 - [[reddit_crawler.py]] - `imports_from` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

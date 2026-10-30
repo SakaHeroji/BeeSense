@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Topik dan Verifikasi NLP"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Cooldown HTTP 429 untuk crawl berikutnya"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Historical user-authorized version-1.3 continuation 04
@@ -15,6 +15,6 @@ tags:
 - [[Historical continuation 04 applied 1.3 cooldown after explicit user instruction]] - `references` [EXTRACTED]
 - [[Historical preparation restriction cooldown implemented without restarting segment 03]] - `references` [EXTRACTED]
 - [[Reddit bounded 429 policy introduced in version 1.3]] - `references` [EXTRACTED]
-- [[SocialCrawler_1]] - `references` [EXTRACTED]
+- [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

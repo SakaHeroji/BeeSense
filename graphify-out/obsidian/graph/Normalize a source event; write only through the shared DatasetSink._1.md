@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L296"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # Normalize a source event; write only through the shared Dataset/Sink.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.accept()_3]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube

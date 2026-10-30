@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
 type: "rationale"
-community: "Ringkasan Topik Gemini"
+community: "Konteks dan Provenance Gemini"
 location: "## Alur dan konfigurasi"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ringkasan_Topik_Gemini
+  - community/Konteks_dan_Provenance_Gemini
 ---
 
 # Deterministic fitted-sentence context ranking
@@ -18,4 +18,4 @@ tags:
 - [[Receipts bind source,model,prompt,keywords and representative sentences]] - `references` [EXTRACTED]
 - [[top_sentences()]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini

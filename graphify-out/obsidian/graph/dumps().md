@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Kontrak Record Reddit"
 location: "L74"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Kontrak_Record_Reddit
 ---
 
 # dumps()
@@ -23,5 +23,6 @@ tags:
 - [[main()]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[validate_row()]] - `calls` [EXTRACTED]
+- [[verify()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

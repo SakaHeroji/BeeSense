@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Pengujian Koordinator Crawler"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Pengujian_Koordinator_Crawler
 ---
 
 # rd_events()
@@ -16,4 +16,4 @@ tags:
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - `calls` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

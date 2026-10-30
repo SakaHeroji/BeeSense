@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Batas Akuisisi Reddit"
 location: "## Hasil live"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Adaptive display implemented after trial with no new crawl
@@ -16,4 +16,4 @@ tags:
 - [[Completed trial 02 PARTIAL with 25 qualified posts]] - `references` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

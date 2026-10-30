@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Audit Akuisisi Instagram"
 location: "## Perintah dari root repository"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # Module CLIs and worker spawn import relocated packages
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 - [[RedditCrawler]] - `references` [EXTRACTED]
-- [[SocialCrawler_1]] - `references` [EXTRACTED]
+- [[SocialCrawler]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Identitas dan Kontrak Data"
+community: "Validasi Record Reddit"
 location: "L170"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Validasi_Record_Reddit
 ---
 
 # Aho-Corasick; offsets refer to Python Unicode code points in source.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[KeywordMatcher]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/rationale #graphify/EXTRACTED #community/Validasi_Record_Reddit

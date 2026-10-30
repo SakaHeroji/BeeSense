@@ -1,27 +1,21 @@
 ---
-source_file: "tests/crawler/test_social_crawler.py"
+source_file: "tests/crawler/test_instagram_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L109"
+community: "Pengujian Client Instagram"
+location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Pengujian_Client_Instagram
 ---
 
 # Clock
 
 ## Connections
-- [[.__init__()_23]] - `method` [EXTRACTED]
 - [[.clock()]] - `method` [EXTRACTED]
-- [[.setUp()_4]] - `calls` [EXTRACTED]
-- [[.setUp()_3]] - `calls` [EXTRACTED]
+- [[.setUp()_2]] - `calls` [EXTRACTED]
 - [[.sleep()]] - `method` [EXTRACTED]
-- [[.test_random_and_fixed_delays_are_between_operations()]] - `calls` [EXTRACTED]
-- [[FixtureReddrix]] - `uses` [INFERRED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
-- [[SocialCrawlerReddrixTests]] - `uses` [INFERRED]
-- [[test_social_crawler.py]] - `contains` [EXTRACTED]
-- [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
+- [[SocialCrawler]] - `uses` [INFERRED]
+- [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram

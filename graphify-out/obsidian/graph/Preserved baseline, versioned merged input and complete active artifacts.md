@@ -1,17 +1,17 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Alur Dataset Model Dashboard"
 location: "## Dataset yang disertakan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Alur_Dataset_Model_Dashboard
 ---
 
 # Preserved baseline, versioned merged input and complete active artifacts
 
 ## Connections
-- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[BeeSense project]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard

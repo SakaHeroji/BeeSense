@@ -1,17 +1,17 @@
 ---
 source_file: "docs/crawler/SELENIUM_CRAWLER.md"
 type: "concept"
-community: "Arsitektur Crawler dan Dependensi"
+community: "Panduan Pipeline BeeSense"
 location: "## Menjalankan"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Arsitektur_Crawler_dan_Dependensi
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Historical Selenium implementation preset:500roots/platform andonehour
 
 ## Connections
-- [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
+- [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi
+#graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

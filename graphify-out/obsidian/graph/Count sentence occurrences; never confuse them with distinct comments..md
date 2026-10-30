@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Render Dashboard Streamlit"
 location: "L383"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Render_Dashboard_Streamlit
 ---
 
 # Count sentence occurrences; never confuse them with distinct comments.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.topic_summary()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

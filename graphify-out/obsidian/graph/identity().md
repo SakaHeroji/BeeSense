@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Topik dan Verifikasi NLP"
+community: "Penggabungan Dataset"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penggabungan_Dataset
 ---
 
 # identity()
@@ -23,4 +23,4 @@ tags:
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 - [[verify_native_dataset()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

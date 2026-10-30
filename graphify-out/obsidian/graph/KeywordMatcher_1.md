@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # KeywordMatcher
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.__init__()_15]] - `method` [EXTRACTED]
 - [[.find()_1]] - `method` [EXTRACTED]
-- [[.validate()_2]] - `calls` [EXTRACTED]
+- [[.validate()_1]] - `calls` [EXTRACTED]
 - [[Aho-Corasick; offsets refer to Python Unicode code points in source._1]] - `rationale_for` [EXTRACTED]
 - [[SafeLogger]] - `uses` [INFERRED]
 - [[Settings_1]] - `uses` [INFERRED]
@@ -24,4 +24,4 @@ tags:
 - [[run()_2]] - `calls` [EXTRACTED]
 - [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

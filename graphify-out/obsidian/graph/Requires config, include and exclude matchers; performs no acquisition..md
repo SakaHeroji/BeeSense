@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Transport GraphQL Instaloader"
 location: "L30"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Transport_GraphQL_Instaloader
 ---
 
 # Requires config, include and exclude matchers; performs no acquisition.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialExportMixin]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Transport_GraphQL_Instaloader

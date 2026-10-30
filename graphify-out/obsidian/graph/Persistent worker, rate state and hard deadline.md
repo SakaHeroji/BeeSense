@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Persistent worker, rate state and hard deadline
@@ -16,4 +16,4 @@ tags:
 - [[InstaloaderCrawler_1]] - `conceptually_related_to` [EXTRACTED]
 - [[SocialCrawler 1.6.0 default Instaloader integration]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

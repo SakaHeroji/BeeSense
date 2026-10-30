@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Sesi Instagram"
 location: "## Integrasi dan run tiga jam"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # Historical trial gate superseded by explicitintegrationauthorization
@@ -23,4 +23,4 @@ tags:
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Live persistence pattern fails after successful settings restore in27.15seconds]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

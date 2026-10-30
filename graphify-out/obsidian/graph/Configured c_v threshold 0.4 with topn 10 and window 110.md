@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp.json"
 type: "concept"
-community: "Coherence dan Quality Gate"
+community: "Pemilihan Topik dan Coherence"
 location: "$.coherence"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Pemilihan_Topik_dan_Coherence
 ---
 
 # Configured c_v threshold 0.4 with topn 10 and window 110
@@ -15,4 +15,4 @@ tags:
 - [[Active20-topic Instagram-inclusive model configuration]] - `references` [EXTRACTED]
 - [[Additional c_v =0.4 gate preserves earlier eligibility rules]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/concept #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence

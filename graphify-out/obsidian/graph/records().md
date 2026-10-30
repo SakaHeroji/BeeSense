@@ -1,21 +1,26 @@
 ---
-source_file: "tests/crawler/test_reddit_crawler.py"
+source_file: "tests/crawler/test_instagram_crawler.py"
 type: "code"
-community: "Akuisisi Reddit Reddrix"
-location: "L59"
+community: "Pengujian Client Instagram"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Pengujian_Client_Instagram
 ---
 
 # records()
 
 ## Connections
-- [[.test_stream_enforces_duplicates_and_reply_budgets()]] - `calls` [EXTRACTED]
+- [[.ig()]] - `calls` [EXTRACTED]
+- [[.test_formula_and_long_unicode_text_remain_safe_and_full_in_jsonl()]] - `calls` [EXTRACTED]
+- [[.test_source_identity_parent_and_unknown_time_are_preserved()]] - `calls` [EXTRACTED]
 - [[.worker()]] - `calls` [EXTRACTED]
-- [[item()]] - `calls` [EXTRACTED]
-- [[test_reddit_crawler.py]] - `contains` [EXTRACTED]
-- [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
+- [[normalize_item()]] - `calls` [EXTRACTED]
+- [[spawn_fixture()]] - `calls` [EXTRACTED]
+- [[spawn_hanging()]] - `calls` [EXTRACTED]
+- [[test_instagram_browser.py]] - `imports` [EXTRACTED]
+- [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
+- [[test_social_crawler_instagram.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instaloader_crawler.py"
 type: "code"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Pengujian Worker Instaloader"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Pengujian_Worker_Instaloader
 ---
 
 # test_instaloader_crawler.py
@@ -19,4 +19,4 @@ tags:
 - [[instaloader_crawler.py]] - `imports_from` [EXTRACTED]
 - [[persistent_fixture()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Worker_Instaloader

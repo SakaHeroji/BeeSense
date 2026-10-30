@@ -103,6 +103,39 @@ class NativeDatasetTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "merge audit checksum"):
                 verifier.published_source_files(root / "merged/social_data.xlsx")
 
+    def test_append_only_merge_sidecars_are_required_and_checksum_bound(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            files = {
+                "social_data.xlsx": b"source workbook",
+                "instagram_acquisition_verification.json": b"{}",
+                "independent_final_audit.json": b"{}",
+                "artifact_verification.json": b"{}",
+                "preview.png": b"preview",
+            }
+            for name, contents in files.items():
+                (root / name).write_bytes(contents)
+            report = {
+                "schema_version": "beesense-append-only-merge:1",
+                "output_sha256": hashlib.sha256(files["social_data.xlsx"]).hexdigest(),
+                "duplicate_native_ids": 0,
+                "files_sha256": {
+                    name: hashlib.sha256(value).hexdigest()
+                    for name, value in files.items()
+                },
+            }
+            (root / "merge_report.json").write_text(json.dumps(report))
+            self.assertEqual(
+                len(verifier.published_source_files(root / "social_data.xlsx")), 6
+            )
+            (root / "independent_final_audit.json").write_text("tampered")
+            with self.assertRaisesRegex(ValueError, "audit checksum"):
+                verifier.published_source_files(root / "social_data.xlsx")
+            report["files_sha256"]["../outside.json"] = "digest"
+            (root / "merge_report.json").write_text(json.dumps(report))
+            with self.assertRaisesRegex(ValueError, "Unexpected published"):
+                verifier.published_source_files(root / "social_data.xlsx")
+
 
 class PublishedDataTests(unittest.TestCase):
     def setUp(self):

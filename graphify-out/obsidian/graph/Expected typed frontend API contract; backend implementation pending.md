@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "document"
-community: "PRD Workspace Crawler"
+community: "Kontrak API Frontend"
 location: "# Kontrak Integrasi Crawler Frontend"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/PRD_Workspace_Crawler
+  - community/Kontrak_API_Frontend
 ---
 
 # Expected typed frontend API contract; backend implementation pending
@@ -27,4 +27,4 @@ tags:
 - [[Versioned datasets provide50-row pages, authorized files and selection-only NLP handoff]] - `references` [EXTRACTED]
 - [[locatorKey is normalized permalink identity;nativeId may await backend verification]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler
+#graphify/document #graphify/EXTRACTED #community/Kontrak_API_Frontend

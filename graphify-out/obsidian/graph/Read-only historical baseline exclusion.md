@@ -1,12 +1,12 @@
 ---
 source_file: "config/reddit_crawler.json"
 type: "rationale"
-community: "Akuisisi Reddit Reddrix"
+community: "Konfigurasi Trial Reddit"
 location: "exclude_existing_datasets"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Konfigurasi_Trial_Reddit
 ---
 
 # Read-only historical baseline exclusion
@@ -15,4 +15,4 @@ tags:
 - [[Original historical date window, keywords and read-only baseline]] - `conceptually_related_to` [EXTRACTED]
 - [[Tracked Reddit trial configuration]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit

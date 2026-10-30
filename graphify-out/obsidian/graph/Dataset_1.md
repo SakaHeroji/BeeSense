@@ -1,26 +1,27 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
-location: "L302"
+community: "Akuisisi YouTube"
+location: "L256"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Akuisisi_YouTube
 ---
 
 # Dataset
 
 ## Connections
-- [[.__init__()_3]] - `method` [EXTRACTED]
-- [[.add_content()]] - `method` [EXTRACTED]
-- [[.finish_relations()]] - `method` [EXTRACTED]
-- [[.setUp()]] - `calls` [EXTRACTED]
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
-- [[.test_13_excel_literal_ids_and_lossless_text()]] - `calls` [EXTRACTED]
-- [[Shared pipeline; adapters cannot choose their own headers or cell formats.]] - `rationale_for` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[.__init__()_17]] - `method` [EXTRACTED]
+- [[.add_content()_1]] - `method` [EXTRACTED]
+- [[.finish_relations()_1]] - `method` [EXTRACTED]
+- [[SafeLogger]] - `uses` [INFERRED]
+- [[Settings_1]] - `uses` [INFERRED]
+- [[Shared pipeline; adapters cannot choose their own headers or cell formats._1]] - `rationale_for` [EXTRACTED]
+- [[YouTubeAdapter]] - `uses` [INFERRED]
+- [[crawl_youtube.py]] - `imports` [EXTRACTED]
+- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

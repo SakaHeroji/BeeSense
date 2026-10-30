@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/browser_campaign.mjs"
 type: "code"
-community: "Helper Campaign Browser"
+community: "Kampanye Browser Reddit"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Helper_Campaign_Browser
+  - community/Kampanye_Browser_Reddit
 ---
 
 # createCollector()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[browser_campaign.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Helper_Campaign_Browser
+#graphify/code #graphify/EXTRACTED #community/Kampanye_Browser_Reddit

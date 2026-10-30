@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Kontrak Record Reddit"
 location: "L1058"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Kontrak_Record_Reddit
 ---
 
 # ContractTests
@@ -27,4 +27,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[run_self_tests()]] - `indirect_call` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

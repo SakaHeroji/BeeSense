@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/InstagramCrawler instagrapi.md"
 type: "document"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Sesi Instagram"
 location: "## Integrasi SocialCrawler dan pipeline tiga jam"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # IntegratedInstagram1.5.2 pacing after verified dashboard release
@@ -32,7 +32,6 @@ tags:
 - [[Local restoration verified; server reason remains unknown]] - `references` [EXTRACTED]
 - [[One LoginRequired recovery with verification-code preservation]] - `references` [EXTRACTED]
 - [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - `references` [EXTRACTED]
-- [[Optional Instaloader4.16 access experiment dependency]] - `references` [EXTRACTED]
 - [[Release194e0b1 live with exact20-row200-sentence CSV]] - `references` [EXTRACTED]
 - [[Retained local jitter, batch rests and scheduler readiness]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
@@ -41,4 +40,4 @@ tags:
 - [[User-provided instagrapi session-persistence guidance]] - `references` [EXTRACTED]
 - [[curl andrequests accountreads both403login_required]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/document #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

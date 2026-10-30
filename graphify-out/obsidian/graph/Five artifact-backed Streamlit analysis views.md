@@ -1,18 +1,18 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Penjelasan Topik Dashboard"
 location: "## Alur eksplorasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Five artifact-backed Streamlit analysis views
 
 ## Connections
-- [[BeeSense project and dashboard runbook]] - `references` [INFERRED]
+- [[BeeSense project]] - `references` [INFERRED]
 - [[Filters retain model membership and do not recompute c_v]] - `references` [EXTRACTED]
 - [[Four selected-topic cards unique comments, share, source roots and topic c_v]] - `references` [EXTRACTED]
 - [[Historical combined snapshot QA; relocated root shim checked offline]] - `references` [EXTRACTED]
@@ -27,4 +27,4 @@ tags:
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/concept #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard

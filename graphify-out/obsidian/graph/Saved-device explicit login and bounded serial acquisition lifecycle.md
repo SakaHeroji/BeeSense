@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Sesi Instagram"
 location: "### Kembali ke instagrapi dan referensi pengguna"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # Saved-device explicit login and bounded serial acquisition lifecycle
@@ -22,4 +22,4 @@ tags:
 - [[User-provided instagrapi session-persistence guidance]] - `cites` [EXTRACTED]
 - [[curl andrequests accountreads both403login_required]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

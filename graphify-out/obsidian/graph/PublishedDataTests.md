@@ -1,18 +1,18 @@
 ---
 source_file: "tests/nlp/test_dashboard_data_verifier.py"
 type: "code"
-community: "Topik dan Verifikasi NLP"
-location: "L107"
+community: "Penggabungan Dataset"
+location: "L140"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penggabungan_Dataset
 ---
 
 # PublishedDataTests
 
 ## Connections
-- [[.setUp()_9]] - `method` [EXTRACTED]
+- [[.setUp()_10]] - `method` [EXTRACTED]
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - `method` [EXTRACTED]
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - `method` [EXTRACTED]
 - [[.test_input_integrity_remains_enforced()]] - `method` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[.test_unexpected_workbook_is_rejected()]] - `method` [EXTRACTED]
 - [[test_dashboard_data_verifier.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

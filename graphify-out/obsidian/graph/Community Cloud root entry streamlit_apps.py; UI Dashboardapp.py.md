@@ -1,18 +1,18 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Konfigurasi Model Aktif"
 location: "## Deploy ke Streamlit Community Cloud"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Konfigurasi_Model_Aktif
 ---
 
 # Community Cloud root entry streamlit_apps.py; UI Dashboard/app.py
 
 ## Connections
-- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[BeeSense project]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete active snapshot]] - `references` [EXTRACTED]
 - [[Cloud root requirements install dashboard-only dependencies]] - `references` [EXTRACTED]
 - [[Cloud uses relative artifact paths and platform-controlled bind]] - `references` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif

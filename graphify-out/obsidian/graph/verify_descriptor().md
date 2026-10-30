@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Ekspor dan Provenance Reddit"
 location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Ekspor_dan_Provenance_Reddit
 ---
 
 # verify_descriptor()
@@ -15,10 +15,11 @@ tags:
 - [[.__init__()_4]] - `calls` [EXTRACTED]
 - [[.test_01_frozen_header_fingerprint()]] - `calls` [EXTRACTED]
 - [[Validate the embedded contract; an external descriptor is optional.]] - `rationale_for` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[main()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 - [[schema_document()]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit

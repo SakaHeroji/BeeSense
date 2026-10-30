@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "rationale"
-community: "Crawler Selenium Terisolasi"
+community: "Crawler Selenium"
 location: "L621"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Crawler_Selenium
 ---
 
 # Drop-in SocialCrawler with Selenium for both platforms and shared exports.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawlerSelenium]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium

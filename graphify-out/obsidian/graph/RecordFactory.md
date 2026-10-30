@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Validasi Record Reddit"
 location: "L239"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Validasi_Record_Reddit
 ---
 
 # RecordFactory
@@ -17,8 +17,8 @@ tags:
 - [[.key()]] - `method` [EXTRACTED]
 - [[.row()]] - `method` [EXTRACTED]
 - [[.setUp()]] - `calls` [EXTRACTED]
-- [[.validate()_1]] - `calls` [EXTRACTED]
+- [[.validate()]] - `calls` [EXTRACTED]
 - [[RedditRecordFactory]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit

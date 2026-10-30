@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Workspace React Crawler"
+community: "Aturan React Hooks"
 location: "L41"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Aturan_React_Hooks
 ---
 
 # eslint-plugin-react-hooks
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint-plugin-react-hooks]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Aturan_React_Hooks

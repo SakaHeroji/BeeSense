@@ -1,18 +1,18 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Pengujian Analisis Dashboard"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Pengujian_Analisis_Dashboard
 ---
 
 # AnalysisTests
 
 ## Connections
-- [[.setUp()_8]] - `method` [EXTRACTED]
+- [[.setUp()_9]] - `method` [EXTRACTED]
 - [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - `method` [EXTRACTED]
 - [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - `method` [EXTRACTED]
 - [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - `method` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - `method` [EXTRACTED]
 - [[test_dashboard_analysis.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Analisis_Dashboard

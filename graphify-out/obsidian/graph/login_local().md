@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "CI dan Verifikasi Backend"
 location: "L230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/CI_dan_Verifikasi_Backend
 ---
 
 # login_local()
@@ -18,7 +18,7 @@ tags:
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[load_client()]] - `calls` [EXTRACTED]
 - [[login_with_saved_password()]] - `calls` [EXTRACTED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[save_session()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/CI_dan_Verifikasi_Backend

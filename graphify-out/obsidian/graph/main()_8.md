@@ -1,18 +1,20 @@
 ---
-source_file: "scripts/verify_dashboard_data.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
-location: "L179"
+community: "Render Dashboard Streamlit"
+location: "L2261"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Render_Dashboard_Streamlit
 ---
 
 # main()
 
 ## Connections
-- [[verify()_1]] - `calls` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

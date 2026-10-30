@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Worker Instaloader"
 location: "L130"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Worker_Instaloader
 ---
 
 # Load JSON cookies only; never unpickle a session or replay a password.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[session_cookies()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader

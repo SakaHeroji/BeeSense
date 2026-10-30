@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Topik dan Verifikasi NLP"
+community: "Penggabungan Dataset"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penggabungan_Dataset
 ---
 
 # merge_social_datasets.py
@@ -16,10 +16,10 @@ tags:
 - [[Latestnative-ID observation dedupwithrootconflict rejection]] - `references` [EXTRACTED]
 - [[Merge compact crawl workbooks, rejecting repeated native content identities.]] - `rationale_for` [EXTRACTED]
 - [[identity()]] - `contains` [EXTRACTED]
-- [[main()_7]] - `contains` [EXTRACTED]
+- [[main()_10]] - `contains` [EXTRACTED]
 - [[merge()]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `contains` [EXTRACTED]
 - [[sha()]] - `contains` [EXTRACTED]
 - [[test_dataset_merge.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

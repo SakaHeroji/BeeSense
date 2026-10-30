@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Form Akuisisi dan Survei"
 location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Form_Akuisisi_dan_Survei
 ---
 
 # platformDescription
@@ -15,4 +15,4 @@ tags:
 - [[Automatic.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei

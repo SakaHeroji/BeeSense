@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Riwayat Sesi Instagram"
 location: "### Uji pola persistensi sesi yang dikirim pengguna"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # Live persistence pattern fails after successful settings restore in27.15seconds
@@ -18,4 +18,4 @@ tags:
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[One LoginRequired recovery with verification-code preservation]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

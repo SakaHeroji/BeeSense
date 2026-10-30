@@ -1,14 +1,14 @@
 ---
 source_file: "Crawler/Frontend/eslint.config.js"
 type: "code"
-community: "Workspace React Crawler"
+community: "Konfigurasi ESLint"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Konfigurasi_ESLint
 ---
 
 # eslint.config.js
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_ESLint

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parser DOM Terbatas"
+community: "Struktur DOM Reddit"
 location: "L1053"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parser_DOM_Terbatas
+  - community/Struktur_DOM_Reddit
 ---
 
 # MemorySink
@@ -19,4 +19,4 @@ tags:
 - [[.write()_1]] - `method` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas
+#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit

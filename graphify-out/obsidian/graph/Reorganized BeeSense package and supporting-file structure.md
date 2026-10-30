@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "document"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Riwayat Dataset dan Metodologi"
 location: "L7-L15"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Riwayat_Dataset_dan_Metodologi
 ---
 
 # Reorganized BeeSense package and supporting-file structure
@@ -20,4 +20,4 @@ tags:
 - [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - `references` [EXTRACTED]
 - [[Root streamlit_apps.py delegates to Dashboard.app_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/document #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi

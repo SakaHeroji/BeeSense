@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Verifikasi Artefak Dataset"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Verifikasi_Artefak_Dataset
 ---
 
 # verify_native_dataset()
@@ -18,4 +18,4 @@ tags:
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset

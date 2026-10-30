@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/DELIVERY.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Batas Integrasi Produksi"
 location: "## Batas integrasi dan pekerjaan berikutnya"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/PRD_Workspace_Crawler
+  - community/Batas_Integrasi_Produksi
 ---
 
 # Production release waits for API/worker/access/export and survey adapter integration
@@ -16,4 +16,4 @@ tags:
 - [[Production release requires real integration evidence and preserved survey schema]] - `conceptually_related_to` [INFERRED]
 - [[React frontend and simulation verified; production acquisition integration unavailable]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/INFERRED #community/Batas_Integrasi_Produksi

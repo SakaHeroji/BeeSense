@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: ".topic_figure"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/topic_figure
 ---
 
 # _graph_positions()
@@ -16,4 +16,4 @@ tags:
 - [[Keep the full-model layout stable while volume and edge filters change.]] - `rationale_for` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/topic_figure

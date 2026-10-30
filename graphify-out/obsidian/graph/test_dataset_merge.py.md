@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dataset_merge.py"
 type: "code"
-community: "Topik dan Verifikasi NLP"
+community: "Penggabungan Dataset"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Topik_dan_Verifikasi_NLP
+  - community/Penggabungan_Dataset
 ---
 
 # test_dataset_merge.py
@@ -17,4 +17,4 @@ tags:
 - [[merge()]] - `imports` [EXTRACTED]
 - [[merge_social_datasets.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP
+#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

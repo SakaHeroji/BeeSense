@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "concept"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Legacy query_hash comment NodeIterator
@@ -16,4 +16,4 @@ tags:
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[Trial06 verified capped live outcome]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

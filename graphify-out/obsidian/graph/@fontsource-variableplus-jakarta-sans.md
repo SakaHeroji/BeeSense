@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Workspace React Crawler"
+community: "Dependency Runtime Frontend"
 location: "L22"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Dependency_Runtime_Frontend
 ---
 
 # @fontsource-variable/plus-jakarta-sans
@@ -15,4 +15,4 @@ tags:
 - [[@fontsource-variableplus-jakarta-sans_1]] - `imports` [EXTRACTED]
 - [[dependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Dependency_Runtime_Frontend

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # SafeLogger
@@ -19,11 +19,11 @@ tags:
 - [[.warning()]] - `method` [EXTRACTED]
 - [[BundleSink_1]] - `uses` [INFERRED]
 - [[ContentInput_1]] - `uses` [INFERRED]
-- [[Dataset_2]] - `uses` [INFERRED]
+- [[Dataset_1]] - `uses` [INFERRED]
 - [[KeywordMatcher_1]] - `uses` [INFERRED]
 - [[RecordFactory_1]] - `uses` [INFERRED]
 - [[SourceAdapter_2]] - `uses` [INFERRED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[worker()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Tipe dan Client API"
 location: "L161"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Tipe_dan_Client_API
 ---
 
 # DatasetFile
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Tipe_dan_Client_API

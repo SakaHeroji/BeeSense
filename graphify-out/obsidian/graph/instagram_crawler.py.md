@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "CI dan Verifikasi Backend"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/CI_dan_Verifikasi_Backend
 ---
 
 # instagram_crawler.py
@@ -23,7 +23,7 @@ tags:
 - [[_integer()]] - `contains` [EXTRACTED]
 - [[_manual_verification_required()]] - `contains` [EXTRACTED]
 - [[_raise_exception()]] - `contains` [EXTRACTED]
-- [[_timestamp()_1]] - `contains` [EXTRACTED]
+- [[_timestamp()]] - `contains` [EXTRACTED]
 - [[_value()]] - `contains` [EXTRACTED]
 - [[browser_configuration()]] - `imports` [EXTRACTED]
 - [[collect()]] - `contains` [EXTRACTED]
@@ -36,7 +36,7 @@ tags:
 - [[login_from_file()]] - `contains` [EXTRACTED]
 - [[login_local()]] - `contains` [EXTRACTED]
 - [[login_with_saved_password()]] - `contains` [EXTRACTED]
-- [[main()_4]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[media_pk_from_url()]] - `contains` [EXTRACTED]
 - [[media_url()]] - `contains` [EXTRACTED]
 - [[native_pk()]] - `contains` [EXTRACTED]
@@ -50,4 +50,4 @@ tags:
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[upstream_version()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/CI_dan_Verifikasi_Backend

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Workspace React Crawler"
+community: "Dependency Runtime Frontend"
 location: "L25"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Dependency_Runtime_Frontend
 ---
 
 # papaparse
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[papaparse]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Dependency_Runtime_Frontend

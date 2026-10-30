@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_browser_patch.py"
 type: "code"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Format Grafik Dashboard"
 location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Format_Grafik_Dashboard
 ---
 
 # apply_browser_patch()
@@ -17,4 +17,4 @@ tags:
 - [[instaloader_browser_patch.py]] - `contains` [EXTRACTED]
 - [[instaloader_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/code #graphify/EXTRACTED #community/Format_Grafik_Dashboard

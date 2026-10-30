@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Validasi Record Reddit"
 location: "L441"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Validasi_Record_Reddit
 ---
 
 # add_readme()
@@ -15,7 +15,8 @@ tags:
 - [[.row()]] - `calls` [EXTRACTED]
 - [[.write()_1]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit

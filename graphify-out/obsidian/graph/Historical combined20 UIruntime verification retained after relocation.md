@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Riwayat Evaluasi Coherence"
 location: "## Verifikasi dan runtime"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - graphify/INFERRED
+  - community/Riwayat_Evaluasi_Coherence
 ---
 
 # Historical combined20 UI/runtime verification retained after relocation
@@ -17,4 +17,4 @@ tags:
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical combined 20-topic local Docker verification; reorganized image unbuilt]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/INFERRED #community/Riwayat_Evaluasi_Coherence

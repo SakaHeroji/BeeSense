@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L249"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # run()
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.accept()_2]] - `calls` [EXTRACTED]
 - [[BundleSink_1]] - `calls` [EXTRACTED]
-- [[Dataset_2]] - `calls` [EXTRACTED]
+- [[Dataset_1]] - `calls` [EXTRACTED]
 - [[KeywordMatcher_1]] - `calls` [EXTRACTED]
 - [[RecordFactory_1]] - `calls` [EXTRACTED]
 - [[YouTubeAdapter]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 - [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

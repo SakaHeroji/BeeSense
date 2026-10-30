@@ -1,18 +1,18 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Cooldown HTTP 429 untuk crawl berikutnya"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Reddit bounded 429 policy introduced in version 1.3
 
 ## Connections
-- [[.run()_3]] - `implements` [INFERRED]
+- [[.run()_2]] - `implements` [INFERRED]
 - [[429 timestamps, cooldown deadline and retry-decision audit]] - `references` [EXTRACTED]
 - [[Configured Reddit policy cooldown360seconds]] - `conceptually_related_to` [INFERRED]
 - [[Configured Reddit retry capthreeperrun]] - `conceptually_related_to` [INFERRED]
@@ -26,9 +26,9 @@ tags:
 - [[Omitted retry setting defaults to zero]] - `references` [EXTRACTED]
 - [[Receipt value 60 may be Chrome parser fallback]] - `references` [EXTRACTED]
 - [[Recovery report interval 331.315 seconds is not a server minimum]] - `references` [EXTRACTED]
+- [[Round Robin Shared Deadline]] - `references` [EXTRACTED]
 - [[Round robin lets YouTube run while Reddit cools down]] - `references` [EXTRACTED]
-- [[Shared three-hour round-robin deadline; historical segments retain original budget]] - `references` [EXTRACTED]
 - [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 - [[Unrepresentable or deadline-exceeding source wait forbids retry and preserves partial data]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

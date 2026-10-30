@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/Survey.tsx"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Form Akuisisi dan Survei"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Form_Akuisisi_dan_Survei
 ---
 
 # Survey.tsx
@@ -39,4 +39,4 @@ tags:
 - [[useApp()]] - `imports` [EXTRACTED]
 - [[useClock()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei

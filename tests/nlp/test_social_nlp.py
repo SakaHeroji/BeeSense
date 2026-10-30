@@ -11,7 +11,13 @@ from unittest.mock import patch
 import numpy as np
 from openpyxl import Workbook
 
-from MachineLearning.social_nlp import REQUIRED_COLUMNS, SocialNLPClusterer, file_hash
+from MachineLearning.social_nlp import (
+    REQUIRED_COLUMNS,
+    TOPIC_SENTENCES_EXTENSION,
+    TOPIC_SENTENCES_FILE,
+    SocialNLPClusterer,
+    file_hash,
+)
 
 
 def fixture(path, duplicate=False, truncated=False):
@@ -406,6 +412,46 @@ class NLPTests(unittest.TestCase):
         p.sentences = p.sentences.iloc[::-1]
         with self.assertRaisesRegex(ValueError, "Prepared sentences differ"):
             p.encode(reuse_run=self.output)
+
+    def test_excel_extension_loads_without_gemini_and_binds_membership_and_bytes(self):
+        with tempfile.TemporaryDirectory() as directory:
+            copied = Path(directory) / "run"
+            shutil.copytree(self.output, copied)
+            summary_path = copied / "summary.json"
+            summary = json.loads(summary_path.read_text())
+            assigned = self.pipeline.occurrences.query("cluster_id >= 0")
+            summary["topic_sentences_export"] = {
+                "file": TOPIC_SENTENCES_FILE,
+                "rows": len(assigned.drop_duplicates(["cluster_id", "sentence"])),
+                "topics": len(self.pipeline.topics),
+                "source_sha256": summary["source_sha256"],
+                "noise_excluded": True,
+            }
+            workbook = copied / TOPIC_SENTENCES_FILE
+            workbook.write_bytes(b"test Excel download payload")
+            manifest_path = copied / "manifest.json"
+            manifest = json.loads(manifest_path.read_text())
+            manifest["extensions"] = [TOPIC_SENTENCES_EXTENSION]
+
+            def refresh():
+                summary_path.write_text(json.dumps(summary))
+                manifest["files_sha256"]["summary.json"] = file_hash(summary_path)
+                manifest["files_sha256"][TOPIC_SENTENCES_FILE] = file_hash(workbook)
+                manifest_path.write_text(json.dumps(manifest))
+
+            refresh()
+            data = SocialNLPClusterer.load_run(copied)
+            self.assertEqual(data["topic_sentences_xlsx"], workbook.read_bytes())
+            self.assertNotIn("topic_narratives", data)
+            summary["topic_sentences_export"]["rows"] += 1
+            refresh()
+            with self.assertRaisesRegex(ValueError, "Excel metadata differs"):
+                SocialNLPClusterer.load_run(copied)
+            summary["topic_sentences_export"]["rows"] -= 1
+            refresh()
+            workbook.write_bytes(b"tampered")
+            with self.assertRaisesRegex(ValueError, "checksum mismatch"):
+                SocialNLPClusterer.load_run(copied)
 
     def test_real_umap_projections_and_cache_are_validated(self):
         with tempfile.TemporaryDirectory() as directory:

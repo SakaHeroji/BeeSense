@@ -1,18 +1,18 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "code"
-community: "Akuisisi Reddit Reddrix"
+community: "Wrapper RedditCrawler"
 location: "L81"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Wrapper_RedditCrawler
 ---
 
 # RedditCrawlerTests
 
 ## Connections
-- [[.setUp()_2]] - `method` [EXTRACTED]
+- [[.setUp()_4]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `method` [EXTRACTED]
 - [[.test_adaptive_display_matrix()]] - `method` [EXTRACTED]
 - [[.test_barrier_exports_partial_without_calling_it_success()]] - `method` [EXTRACTED]
@@ -29,10 +29,9 @@ tags:
 - [[.test_stream_enforces_duplicates_and_reply_budgets()]] - `method` [EXTRACTED]
 - [[.test_trial_config_changes_only_duration_and_platform_scope()]] - `method` [EXTRACTED]
 - [[.test_unknown_antibot_status_is_not_guessed_as_http429()]] - `method` [EXTRACTED]
-- [[.worker()]] - `method` [EXTRACTED]
-- [[Declared Reddrix lintformat and offline contract test step]] - `references` [EXTRACTED]
+- [[.worker()_1]] - `method` [EXTRACTED]
 - [[RedditCrawler]] - `uses` [INFERRED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_reddit_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

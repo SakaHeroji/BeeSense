@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/main.tsx"
 type: "code"
-community: "Workspace React Crawler"
+community: "Router dan Batas Error"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Router_dan_Batas_Error
 ---
 
 # main.tsx
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[App.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Router_dan_Batas_Error

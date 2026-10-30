@@ -1,21 +1,18 @@
 ---
-source_file: "Crawler/Backend/social_crawler_selenium.py"
+source_file: "Crawler/Backend/instaloader_browser_patch.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
-location: "L838"
+community: "Format Grafik Dashboard"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Format_Grafik_Dashboard
 ---
 
 # main()
 
 ## Connections
-- [[.error()]] - `indirect_call` [INFERRED]
-- [[.plan()_1]] - `calls` [EXTRACTED]
-- [[.run()]] - `calls` [EXTRACTED]
-- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
-- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[browser_graphql_query()]] - `indirect_call` [INFERRED]
+- [[instaloader_browser_patch.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Format_Grafik_Dashboard

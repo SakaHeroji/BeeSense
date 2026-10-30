@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Arsitektur BeeSense.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Arsitektur Model dan Dashboard"
 location: "# Arsitektur BeeSense"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Arsitektur_Model_dan_Dashboard
 ---
 
 # Existing Python data/model pipeline and new React workspace remain separate
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Prior Graphify memory Selenium crawler preserves Excel contract]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/INFERRED #community/Arsitektur_Model_dan_Dashboard

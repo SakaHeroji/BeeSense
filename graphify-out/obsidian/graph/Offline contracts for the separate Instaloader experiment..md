@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instaloader_crawler.py"
 type: "rationale"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Pengujian Worker Instaloader"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Pengujian_Worker_Instaloader
 ---
 
 # Offline contracts for the separate Instaloader experiment.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_instaloader_crawler.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Worker_Instaloader

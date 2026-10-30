@@ -1,12 +1,12 @@
 ---
 source_file: "config/reddit_crawler.json"
 type: "concept"
-community: "Akuisisi Reddit Reddrix"
+community: "Konfigurasi Trial Reddit"
 location: "$"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Konfigurasi_Trial_Reddit
 ---
 
 # Tracked Reddit trial configuration
@@ -23,4 +23,4 @@ tags:
 - [[Tracked reddrix.display_mode=auto]] - `references` [EXTRACTED]
 - [[Trial config now explicitly selects Reddrix; wrapper preserves legacy compatibility]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit

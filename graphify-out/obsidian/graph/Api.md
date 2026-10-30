@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Workspace React Crawler"
+community: "Interface Layanan Frontend"
 location: "L218"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Interface_Layanan_Frontend
 ---
 
 # Api
@@ -23,11 +23,11 @@ tags:
 - [[.session()]] - `method` [EXTRACTED]
 - [[.start()]] - `method` [EXTRACTED]
 - [[.stop()]] - `method` [EXTRACTED]
-- [[.validate()]] - `method` [EXTRACTED]
+- [[.validate()_2]] - `method` [EXTRACTED]
 - [[.validateSurvey()]] - `method` [EXTRACTED]
 - [[.verification()]] - `method` [EXTRACTED]
 - [[api.ts]] - `imports` [EXTRACTED]
 - [[demo.ts]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Interface_Layanan_Frontend

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Audit Akuisisi Instagram"
 location: "# Dashboard BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # Three-platformUIcapabilitywithold-snapshotcompatibility
@@ -15,4 +15,4 @@ tags:
 - [[20-topiccoherence gate passed; active configuration switched]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

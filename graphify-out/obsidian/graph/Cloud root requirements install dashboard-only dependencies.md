@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Snapshot NLP dan Arsip"
+community: "Struktur Runtime Dashboard"
 location: "## Deploy ke Streamlit Community Cloud"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Snapshot_NLP_dan_Arsip
+  - community/Struktur_Runtime_Dashboard
 ---
 
 # Cloud root requirements install dashboard-only dependencies
@@ -17,4 +17,4 @@ tags:
 - [[PyArrow 24.0.0 matches Cloud threaded-import compatibility guard]] - `references` [EXTRACTED]
 - [[Root Cloud requirements include relocated dashboard-only runtime]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip
+#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard

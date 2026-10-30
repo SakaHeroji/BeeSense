@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "concept"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Instaloader Docker artifact awaiting runtime verification
@@ -14,4 +14,4 @@ tags:
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler guide and evidence]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

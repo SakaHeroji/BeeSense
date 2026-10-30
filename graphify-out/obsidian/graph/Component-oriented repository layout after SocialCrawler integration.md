@@ -1,18 +1,18 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "document"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Audit Akuisisi Instagram"
 location: "# Struktur proyek BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # Component-oriented repository layout after SocialCrawler integration
 
 ## Connections
-- [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[BeeSense project]] - `references` [EXTRACTED]
 - [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[Module CLIs and worker spawn import relocated packages]] - `references` [EXTRACTED]
@@ -23,4 +23,4 @@ tags:
 - [[Runtime manifests live under requirements with relative includes]] - `references` [EXTRACTED]
 - [[topic_narratives.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/document #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

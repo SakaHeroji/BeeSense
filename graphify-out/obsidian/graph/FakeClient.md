@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_crawler.py"
 type: "code"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Pengujian Client Instagram"
 location: "L78"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Pengujian_Client_Instagram
 ---
 
 # FakeClient
@@ -19,7 +19,7 @@ tags:
 - [[.media_pk_from_code()]] - `method` [EXTRACTED]
 - [[.test_real_collector_deduplicates_and_bounds_pages_and_replies()]] - `calls` [EXTRACTED]
 - [[.test_search_uses_explicit_hashtag_cursor()]] - `calls` [EXTRACTED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram

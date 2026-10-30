@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Penjelasan Topik Dashboard"
 location: "## Alur eksplorasi"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Penjelasan_Topik_Dashboard
 ---
 
 # Four selected-topic cards: unique comments, share, source roots and topic c_v
@@ -19,4 +19,4 @@ tags:
 - [[Selected-topic c_v card is separate from the full-model mean]] - `references` [EXTRACTED]
 - [[Selected-topic explanation panel links cards, frequency graphs, time shares and source evidence]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/INFERRED #community/Penjelasan_Topik_Dashboard

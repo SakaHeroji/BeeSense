@@ -1,21 +1,21 @@
 ---
 source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Akuisisi YouTube"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Akuisisi_YouTube
 ---
 
 # social_common.py
 
 ## Connections
-- [[ABC_3]] - `imports_from` [EXTRACTED]
+- [[ABC_1]] - `imports_from` [EXTRACTED]
 - [[BundleSink_1]] - `contains` [EXTRACTED]
 - [[ContentInput_1]] - `contains` [EXTRACTED]
-- [[Dataset_2]] - `contains` [EXTRACTED]
+- [[Dataset_1]] - `contains` [EXTRACTED]
 - [[KeywordMatcher_1]] - `contains` [EXTRACTED]
 - [[RecordFactory_1]] - `contains` [EXTRACTED]
 - [[Shared export contract for every source script. Python 3.12+.  This is a tabular]] - `rationale_for` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[validate_row()_1]] - `contains` [EXTRACTED]
 - [[verify_descriptor()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

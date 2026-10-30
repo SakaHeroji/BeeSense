@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/README.md"
 type: "rationale"
-community: "PRD Workspace Crawler"
+community: "Kontrak API Frontend"
 location: "## Fitur"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/PRD_Workspace_Crawler
+  - community/Kontrak_API_Frontend
 ---
 
 # Survey answers avoid URL/localStorage;safe text and CSV formula handling
@@ -15,4 +15,4 @@ tags:
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 - [[Project-prefixed cookie-session API requires server CORSCSRFaccess controls]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler
+#graphify/rationale #graphify/INFERRED #community/Kontrak_API_Frontend

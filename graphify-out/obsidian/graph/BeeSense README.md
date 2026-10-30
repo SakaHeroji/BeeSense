@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Eksperimen Instaloader dan GraphQL Web"
+community: "Integrasi Default Instaloader"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Eksperimen_Instaloader_dan_GraphQL_Web
+  - community/Integrasi_Default_Instaloader
 ---
 
 # BeeSense README
@@ -24,7 +24,7 @@ tags:
 - [[SBERTUMAPDBSCAN training and verified embedding reuse]] - `references` [EXTRACTED]
 - [[Separated crawler, NLP and dashboard architecture]] - `references` [EXTRACTED]
 - [[SocialCrawler 1.6.0 default Instaloader integration]] - `references` [EXTRACTED]
-- [[SocialCrawler guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
 - [[Streamlit Community Cloud deployment contract]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Eksperimen_Instaloader_dan_GraphQL_Web
+#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

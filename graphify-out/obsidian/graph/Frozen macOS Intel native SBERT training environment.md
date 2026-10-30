@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/sbert-macos-intel.lock"
 type: "document"
-community: "Runbook dan Verifikasi Lokal"
+community: "Lingkungan Training SBERT"
 location: "L1-L73"
 tags:
   - graphify/document
-  - graphify/EXTRACTED
-  - community/Runbook_dan_Verifikasi_Lokal
+  - graphify/INFERRED
+  - community/Lingkungan_Training_SBERT
 ---
 
 # Frozen macOS Intel native SBERT training environment
@@ -17,4 +17,4 @@ tags:
 - [[Platform-specific macOS Intel Torch and numerical compatibility]] - `conceptually_related_to` [INFERRED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal
+#graphify/document #graphify/INFERRED #community/Lingkungan_Training_SBERT

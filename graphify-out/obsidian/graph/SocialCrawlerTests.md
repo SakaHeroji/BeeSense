@@ -1,20 +1,20 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Pengujian Koordinator Crawler"
 location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Pengujian_Koordinator_Crawler
 ---
 
 # SocialCrawlerTests
 
 ## Connections
-- [[.crawler()]] - `method` [EXTRACTED]
+- [[.crawler()_1]] - `method` [EXTRACTED]
 - [[.read()]] - `method` [EXTRACTED]
-- [[.setUp()_3]] - `method` [EXTRACTED]
+- [[.setUp()_5]] - `method` [EXTRACTED]
 - [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - `method` [EXTRACTED]
 - [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - `method` [EXTRACTED]
 - [[.test_calendar_month_boundary_date_only_and_unrecognized_dates()]] - `method` [EXTRACTED]
@@ -52,7 +52,7 @@ tags:
 - [[.test_source_exception_is_sanitized_and_stops_after_three_calls()]] - `method` [EXTRACTED]
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - `method` [EXTRACTED]
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - `method` [EXTRACTED]
-- [[SocialCrawler_1]] - `uses` [INFERRED]
+- [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

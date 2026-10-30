@@ -1,18 +1,19 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Worker Reddrix"
 location: "L369"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Worker_Reddrix
 ---
 
 # reddrix_worker()
 
 ## Connections
-- [[.run()_3]] - `calls` [EXTRACTED]
+- [[.error()]] - `indirect_call` [INFERRED]
+- [[.run()_2]] - `calls` [EXTRACTED]
 - [[.runner()]] - `indirect_call` [INFERRED]
 - [[Hard-deadline subprocess retains streamed records]] - `conceptually_related_to` [INFERRED]
 - [[Main coordinator owns Reddrix normalization, display and worker]] - `conceptually_related_to` [INFERRED]
@@ -24,4 +25,4 @@ tags:
 - [[spawn_reddrix_fixture()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

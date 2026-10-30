@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Akuisisi Instagram Terintegrasi"
+community: "Konfigurasi Model Aktif"
 location: "## Deploy ke Streamlit Community Cloud"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_Instagram_Terintegrasi
+  - community/Konfigurasi_Model_Aktif
 ---
 
 # Cloud publication includes model code, config and complete active snapshot
@@ -18,4 +18,4 @@ tags:
 - [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Instagram_Terintegrasi
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif

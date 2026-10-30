@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Pengujian Koordinator Crawler"
 location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Pengujian_Koordinator_Crawler
 ---
 
 # yt_events()
@@ -28,6 +28,7 @@ tags:
 - [[.youtube_worker()]] - `calls` [EXTRACTED]
 - [[spawn_youtube_fixture()]] - `calls` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
+- [[test_social_crawler_instagram.py]] - `imports` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

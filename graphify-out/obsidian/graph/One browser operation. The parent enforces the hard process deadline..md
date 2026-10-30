@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "rationale"
-community: "Crawler Selenium Terisolasi"
+community: "Crawler Selenium"
 location: "L247"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Crawler_Selenium
 ---
 
 # One browser operation. The parent enforces the hard process deadline.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_SeleniumSource]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium

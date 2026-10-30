@@ -1,14 +1,14 @@
 ---
 source_file: "Crawler/Backend/Youtube/contract.json"
 type: "document"
-community: "Kontrak Tabel YouTube"
+community: "Kontrak YouTube Legacy"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Kontrak_Tabel_YouTube
+  - community/Kontrak_YouTube_Legacy
 ---
 
 # Crawler/Backend/Youtube/contract.json
 
-#graphify/document #graphify/EXTRACTED #community/Kontrak_Tabel_YouTube
+#graphify/document #graphify/EXTRACTED #community/Kontrak_YouTube_Legacy

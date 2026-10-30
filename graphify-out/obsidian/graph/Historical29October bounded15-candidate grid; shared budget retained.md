@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Coherence dan Quality Gate"
+community: "Pemilihan Topik dan Coherence"
 location: "## DBSCAN dan quality gate"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Coherence_dan_Quality_Gate
+  - community/Pemilihan_Topik_dan_Coherence
 ---
 
 # Historical29October bounded15-candidate grid; shared budget retained
@@ -16,4 +16,4 @@ tags:
 - [[Fixed coverage, dominance and composite-score eligibility]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `implements` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate
+#graphify/rationale #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence
