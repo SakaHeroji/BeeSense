@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # test_social_crawler.py
@@ -19,7 +19,8 @@ tags:
 - [[receipt()]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[spawn_youtube_fixture()]] - `contains` [EXTRACTED]
+- [[test_social_crawler_instagram.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports_from` [EXTRACTED]
 - [[yt_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

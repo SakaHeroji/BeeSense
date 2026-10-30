@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community None"
+community: "Parser dan Runner Reddit"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # ABC
@@ -15,4 +15,4 @@ tags:
 - [[SourceAdapter_1]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

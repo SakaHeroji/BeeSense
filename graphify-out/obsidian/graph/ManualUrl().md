@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/Manual.tsx"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # ManualUrl()
@@ -19,4 +19,4 @@ tags:
 - [[useClock()]] - `calls` [EXTRACTED]
 - [[validateConfig()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

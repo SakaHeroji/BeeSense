@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/PRD Frontend Crawler.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "### 14.1 Tema putih oranye dan tipografi wajib"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Mandatory PRD 1.1 white–orange theme:all text#000000 and≥13 px
@@ -17,4 +17,4 @@ tags:
 - [[Final style samples96desktop78narrow444px elements,all black and≥13 px]] - `conceptually_related_to` [INFERRED]
 - [[Implemented white–orangeall-black 13 px theme and seven-source presentation]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler

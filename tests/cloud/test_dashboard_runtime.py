@@ -11,6 +11,7 @@ from unittest.mock import patch
 
 from streamlit.testing.v1 import AppTest
 
+from MachineLearning import topic_narratives
 from MachineLearning.social_nlp import ROOT, SocialNLPClusterer
 
 TRAINING_MODULES = (
@@ -39,17 +40,31 @@ class CloudRuntimeTests(unittest.TestCase):
             saved["summary"]["coherence"]["macro_mean"],
             config["coherence"]["min_score"],
         )
-        with patch.object(
-            SocialNLPClusterer,
-            "fit_excel",
-            side_effect=AssertionError("Cloud dashboard must not train"),
+        if config.get("gemini", {}).get("enabled"):
+            self.assertEqual(len(saved["topic_narratives"]), 20)
+        with (
+            patch.object(
+                topic_narratives,
+                "request_topic",
+                side_effect=AssertionError("Cloud dashboard must not call Gemini"),
+            ),
+            patch.object(
+                SocialNLPClusterer,
+                "fit_excel",
+                side_effect=AssertionError("Cloud dashboard must not train"),
+            ),
         ):
             app = AppTest.from_file(
                 str(ROOT / "streamlit_apps.py"), default_timeout=120
             ).run()
             self.assertFalse(app.exception)
             self.assertFalse(app.error)
-            self.assertEqual(app.title[0].value, "Percakapan YouTube & Reddit")
+            expected_title = (
+                "Percakapan YouTube, Reddit & Instagram"
+                if "instagram" in set(saved["occurrences"].platform)
+                else "Percakapan YouTube & Reddit"
+            )
+            self.assertEqual(app.title[0].value, expected_title)
             topic = next(
                 x
                 for x in app.selectbox(key="topic_select").options

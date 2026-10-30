@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/coherence.txt"
 type: "document"
-community: "Community None"
+community: "Runbook dan Verifikasi Lokal"
 location: "comment and dependency declarations"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Training/evaluation-only Gensim coherence requirements
@@ -19,4 +19,4 @@ tags:
 - [[New-corpus native SBERT encoding or exact verified cache reuse]] - `references` [EXTRACTED]
 - [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

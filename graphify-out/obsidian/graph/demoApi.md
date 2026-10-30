@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L269"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # demoApi
@@ -17,4 +17,4 @@ tags:
 - [[domain.test.ts]] - `imports` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

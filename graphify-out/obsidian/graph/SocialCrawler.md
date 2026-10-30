@@ -1,13 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # SocialCrawler
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

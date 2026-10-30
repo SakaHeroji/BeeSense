@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawler Selenium.md"
 type: "concept"
-community: "Community None"
+community: "Arsitektur Crawler dan Dependensi"
 location: "Alur / hook paragraphs"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # Shared BundleSink and dual-workbook export path
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

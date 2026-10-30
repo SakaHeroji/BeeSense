@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "## Repository GitHub"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # PyArrow 24.0.0 matches Cloud guard for Arrow/mimalloc threaded-import compatibility
@@ -16,4 +16,4 @@ tags:
 - [[Dashboard-only artifactexplanationUI dependency boundary]] - `references` [EXTRACTED]
 - [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

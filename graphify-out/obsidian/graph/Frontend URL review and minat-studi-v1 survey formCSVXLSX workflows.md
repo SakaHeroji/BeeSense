@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/README.md"
 type: "concept"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Fitur"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Frontend URL review and minat-studi-v1 survey form/CSV/XLSX workflows
@@ -17,4 +17,4 @@ tags:
 - [[Proposed survey schema preserves declared roles, questions, permission and whole responses]] - `conceptually_related_to` [INFERRED]
 - [[locatorKey is normalized permalink identity;nativeId may await backend verification]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/PRD_Workspace_Crawler

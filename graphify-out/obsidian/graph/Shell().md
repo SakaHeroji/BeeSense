@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/app/Shell.tsx"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L23"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # Shell()
@@ -16,4 +16,4 @@ tags:
 - [[safeExternal()]] - `calls` [EXTRACTED]
 - [[useMediaQuery()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

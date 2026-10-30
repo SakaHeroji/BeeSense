@@ -1,12 +1,12 @@
 ---
 source_file: "output/campaign_20261029_1000_3h.json"
 type: "document"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "$.status"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Campaign FINISHED_PARTIAL, no active PID and exact stop timestamp
@@ -17,4 +17,4 @@ tags:
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
 - [[Original deadline stopped acquisition; no operation started afterward]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

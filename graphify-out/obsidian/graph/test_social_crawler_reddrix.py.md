@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # test_social_crawler_reddrix.py
@@ -30,4 +30,4 @@ tags:
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[yt_events()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

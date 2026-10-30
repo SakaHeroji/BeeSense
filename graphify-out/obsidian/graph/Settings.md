@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Parser dan Runner Reddit"
 location: "L518"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # Settings
@@ -20,4 +20,4 @@ tags:
 - [[load_settings()]] - `calls` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

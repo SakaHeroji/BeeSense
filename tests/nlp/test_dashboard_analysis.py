@@ -44,6 +44,24 @@ class AnalysisTests(unittest.TestCase):
         self.assertEqual(int(table.total.sum()), 4)
         self.assertNotIn(-1, table.cluster_id.tolist())
 
+    def test_instagram_is_included_in_coverage_ranking_months_and_graph_hover(self):
+        frame = self.frame.copy()
+        frame.loc[frame.platform == "youtube", "platform"] = "instagram"
+        table = App.topic_summary(self.topics, frame)
+        self.assertEqual(int(table.instagram.sum()), 2)
+        coverage = App.platform_summary(frame).set_index("platform")
+        self.assertEqual(coverage.loc["instagram", "total"], 3)
+        months = App.monthly_summary(frame)
+        self.assertEqual(
+            int(months[["youtube", "reddit", "instagram"]].to_numpy().sum()), len(frame)
+        )
+        graph, _ = App.topic_figure(self.topics, {"edges": []}, frame, 0.6)
+        self.assertIn("Instagram 2", graph.data[-1].hovertext[0])
+        self.assertEqual(graph.data[-1].marker.color[0], 2)
+        self.assertEqual(
+            graph.data[-1].marker.colorbar.title.text, "Platform terbanyak"
+        )
+
     def test_platform_coverage_includes_noise_and_preserves_zero_platforms(self):
         table = App.platform_summary(self.frame).set_index("platform")
         self.assertEqual(int(table.total.sum()), len(self.frame))

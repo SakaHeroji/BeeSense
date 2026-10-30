@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Community None"
+community: "Identitas dan Kontrak Data"
 location: "L303"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # Shared pipeline; adapters cannot choose their own headers or cell formats.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Dataset_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

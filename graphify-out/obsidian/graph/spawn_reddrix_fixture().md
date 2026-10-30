@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # spawn_reddrix_fixture()
@@ -17,4 +17,4 @@ tags:
 - [[reddrix_worker()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "## Verifikasi"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Trial chronology separates v1.0.0 results from post-trial v1.1.0 display
@@ -16,4 +16,4 @@ tags:
 - [[Final trial bundle passes identity, baseline and Excel integrity checks]] - `references` [EXTRACTED]
 - [[Integrated SocialCrawler Reddrix with thin Reddit-only wrapper]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

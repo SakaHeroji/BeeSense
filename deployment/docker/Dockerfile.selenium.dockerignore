@@ -7,6 +7,10 @@
 !Crawler/Backend/
 !Crawler/Backend/__init__.py
 !Crawler/Backend/social_crawler.py
+!Crawler/Backend/social_export.py
+!Crawler/Backend/instagram_crawler.py
+!Crawler/Backend/instagram_browser.py
+!Crawler/Backend/instagram_browser_capture.mjs
 !Crawler/Backend/reddit_crawler.py
 !Crawler/Backend/Youtube/
 !Crawler/Backend/Youtube/__init__.py
@@ -26,3 +30,12 @@
 !deployment/docker/Dockerfile.selenium
 !requirements/selenium.txt
 !Crawler/Backend/social_crawler_selenium.py
+
+# Local credentials and sessions never enter any image build context.
+config/auth.json
+.streamlit/secrets.toml
+**/.env
+**/.env.*
+**/*session*.json
+**/__pycache__/
+Crawler/Frontend/

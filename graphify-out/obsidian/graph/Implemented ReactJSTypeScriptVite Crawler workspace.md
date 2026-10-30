@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/README.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# BeeSense Crawler Frontend"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Implemented ReactJS/TypeScript/Vite Crawler workspace
@@ -27,4 +27,4 @@ tags:
 - [[Separate Nginx UID 101 container with SPA fallback and unavailable-API503]] - `references` [EXTRACTED]
 - [[Survey answers avoid URLlocalStorage;safe text and CSV formula handling]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

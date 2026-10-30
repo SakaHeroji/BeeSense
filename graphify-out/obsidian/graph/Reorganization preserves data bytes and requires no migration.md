@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "# Struktur proyek BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Reorganization preserves data bytes and requires no migration
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

@@ -1,25 +1,25 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Community None"
+community: "Crawler Selenium Terisolasi"
 location: "L620"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # SocialCrawlerSelenium
 
 ## Connections
-- [[.__init__()_22]] - `method` [EXTRACTED]
-- [[._checkpoint_items()_1]] - `method` [EXTRACTED]
-- [[._execute()_1]] - `method` [EXTRACTED]
-- [[._legacy_settings()_1]] - `method` [EXTRACTED]
-- [[._normalize()_1]] - `method` [EXTRACTED]
-- [[._source_metadata()_1]] - `method` [EXTRACTED]
-- [[.plan()_2]] - `method` [EXTRACTED]
-- [[.run()_1]] - `method` [EXTRACTED]
+- [[.__init__()_21]] - `method` [EXTRACTED]
+- [[._checkpoint_items()]] - `method` [EXTRACTED]
+- [[._execute()]] - `method` [EXTRACTED]
+- [[._legacy_settings()]] - `method` [EXTRACTED]
+- [[._normalize()]] - `method` [EXTRACTED]
+- [[._source_metadata()]] - `method` [EXTRACTED]
+- [[.plan()_1]] - `method` [EXTRACTED]
+- [[.run()]] - `method` [EXTRACTED]
 - [[.selenium_version()]] - `method` [EXTRACTED]
 - [[.test_barrier_stops_after_first_call_and_still_exports_headers()]] - `calls` [EXTRACTED]
 - [[.test_both_workbooks_preserve_schema_and_selenium_provenance()]] - `calls` [EXTRACTED]
@@ -34,8 +34,8 @@ tags:
 - [[SeleniumDOMTests]] - `uses` [INFERRED]
 - [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[SocialCrawlerSeleniumTests]] - `uses` [INFERRED]
-- [[main()_4]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

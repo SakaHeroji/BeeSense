@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Community None"
+community: "Adapter Akuisisi YouTube"
 location: "L300"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # Atomic new directory; streaming JSONL + streaming, formula-safe Excel.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BundleSink_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

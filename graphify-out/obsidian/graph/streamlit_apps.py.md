@@ -1,12 +1,12 @@
 ---
 source_file: "streamlit_apps.py"
 type: "code"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # streamlit_apps.py
@@ -20,9 +20,9 @@ tags:
 - [[SocialNLPStreamlitApp]] - `imports` [EXTRACTED]
 - [[Streamlit Community Cloud entry point; UI implementation lives in Dashboard.]] - `rationale_for` [EXTRACTED]
 - [[app.py]] - `imports_from` [EXTRACTED]
-- [[main()_5]] - `imports` [EXTRACTED]
+- [[main()_7]] - `imports` [EXTRACTED]
 - [[number()_1]] - `imports` [EXTRACTED]
 - [[percent()]] - `imports` [EXTRACTED]
 - [[test_dashboard_analysis.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

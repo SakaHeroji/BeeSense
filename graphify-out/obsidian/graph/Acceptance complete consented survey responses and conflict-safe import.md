@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/Acceptance Criteria Crawler.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## 1. Skenario penerimaan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Acceptance: complete consented survey responses and conflict-safe import
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler

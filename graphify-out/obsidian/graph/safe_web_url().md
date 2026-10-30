@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Validasi Redirect dan Kesalahan"
 location: "L487"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Validasi_Redirect_dan_Kesalahan
 ---
 
 # safe_web_url()
@@ -19,4 +19,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[thread_id()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan

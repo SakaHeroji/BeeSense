@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Bundle Excel dan Provenans"
 location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # BundleSink
@@ -22,8 +22,9 @@ tags:
 - [[Async Reddrix to validated records to existing Excel pipeline]] - `references` [EXTRACTED]
 - [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - `rationale_for` [EXTRACTED]
 - [[Integrated SocialCrawler owns Reddrix acquisition and shared export]] - `references` [EXTRACTED]
+- [[IntegratedInstagram1.5.1 withhistoricalprivate-APIChrome trials]] - `references` [EXTRACTED]
 - [[Preserved eight-sheet audit and checksummed full-text bundle]] - `conceptually_related_to` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

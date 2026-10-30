@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Community None"
+community: "Runbook dan Verifikasi Lokal"
 location: "## Crawling atau training baru"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Separate SBERT training and artifact-only dashboard environments
@@ -18,4 +18,4 @@ tags:
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 - [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

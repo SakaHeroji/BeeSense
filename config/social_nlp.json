@@ -1,6 +1,6 @@
 {
-  "input_file": "outputs/social_20261029_combined/social_data.xlsx",
-  "output_dir": "outputs/nlp_20261029_combined_topics20_01",
+  "input_file": "outputs/social_20261030_combined_3days_02/social_data.xlsx",
+  "output_dir": "outputs/nlp_20261030_instagram_topics20_02",
   "target_topics": 20,
   "cache_dir": ".cache/social_nlp",
   "seed": 42,
@@ -76,5 +76,13 @@
     "topn": 10,
     "window_size": 110,
     "min_score": 0.4
+  },
+  "gemini": {
+    "enabled": true,
+    "model": "gemini-3.5-flash-lite",
+    "auth_file": "config/auth.json",
+    "timeout_seconds": 60,
+    "max_attempts": 3,
+    "request_interval_seconds": 5
   }
 }

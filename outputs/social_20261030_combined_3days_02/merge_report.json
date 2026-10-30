@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "output": "/Users/socs3/Documents/BeeSense/outputs/social_20261030_combined_3days_02/social_data.xlsx",
+  "rows": 33034,
+  "roots": 1859,
+  "comments": 31175,
+  "duplicate_native_ids": 0,
+  "duplicates_removed": 49952,
+  "duplicate_policy": "prefer_latest_supplied_observation",
+  "counts": {
+    "instagram/comment": 3038,
+    "instagram/post": 324,
+    "reddit/comment": 2409,
+    "reddit/post": 297,
+    "reddit/reply": 1808,
+    "youtube/comment": 19770,
+    "youtube/reply": 4150,
+    "youtube/video": 1238
+  },
+  "source_workbooks": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261028_01/social_data.xlsx",
+      "sha256": "939f5869ffdfc2ca14c98e8f39cffa7e15292fdb5ea7faaf27c043670fea56e2",
+      "input_rows": 8449,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_1000_3h_01/social_data.xlsx",
+      "sha256": "8c06a70f185946ba1d6c95d523380cf96fe31ae739660881d9a07ce8dbf84c60",
+      "input_rows": 356,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_1000_3h_02/social_data.xlsx",
+      "sha256": "eeafe79dd7e55e31ca0554f9c8529715908a1a2ef3dee86d195e0e5440944f08",
+      "input_rows": 622,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_1000_3h_03/social_data.xlsx",
+      "sha256": "6c27060f36815b32051d6a84143d98e00a08aa7c0d5971e3a3734d8015843e14",
+      "input_rows": 4684,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_1000_3h_04/social_data.xlsx",
+      "sha256": "4da34ba3fd2d095b2320fc509d2db4fe730c91aef57a7bb9a0c568203aa702ea",
+      "input_rows": 6571,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_1000_3h_05/social_data.xlsx",
+      "sha256": "6b7c44f19476df292aec342de1c5685803698bc17d78d025f14c964ef721e890",
+      "input_rows": 8417,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_1000_3h/social_data.xlsx",
+      "sha256": "2d4ab54ce8f925c8c7c547353025da9c91c166d53c95c23982e5a74a3de9efe9",
+      "input_rows": 20650,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261029_combined/social_data.xlsx",
+      "sha256": "7711aae01ca6b700b9842bddcd8c9c597e054947d4c5c1680cc9f61f9723aff9",
+      "input_rows": 29099,
+      "retained_rows": 28903
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/reddit_reddrix_20261030_30m_01/social_data.xlsx",
+      "sha256": "53500ea85adef9372117261c562f2afa06c15ef2dbea293f667cc0dd3fac2775",
+      "input_rows": 0,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/reddit_reddrix_20261030_30m_02/social_data.xlsx",
+      "sha256": "29eca30b4037c0b9c3f38258b1065172c6eae2aa0e1b5ea75ddc05e4d7dcd73f",
+      "input_rows": 769,
+      "retained_rows": 769
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/instagram_instagrapi_20261030_30m_01/social_data.xlsx",
+      "sha256": "a0eadad587f47097bafb161170dfe4e4c775e5c6df88ca5f6767441c4d0e8dcc",
+      "input_rows": 0,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/instagram_instagrapi_20261030_30m_02/social_data.xlsx",
+      "sha256": "61d9602c11504bb3f33bd2edd0aca276cf56ea6f78f3f86350b8d9201e17277b",
+      "input_rows": 0,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/instagram_browser_20261030_30m_01/social_data.xlsx",
+      "sha256": "d3b7dbf6c80c278fcc1d80814c1da429d8a04ef941144d713bcd47f6d3d20dfd",
+      "input_rows": 7,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/instagram_browser_20261030_30m_02/social_data.xlsx",
+      "sha256": "ece49b6d80f5b6d2d9cbccf5ae9f5fc5ca511602172c72bc1299122997c7b296",
+      "input_rows": 986,
+      "retained_rows": 986
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_instagram_20261030_1000_3h_01/social_data.xlsx",
+      "sha256": "b1c4c86d2bfaacb5a38b21b0311da60dc654ba6be8036b2ad79dac2fdefbe7a1",
+      "input_rows": 2376,
+      "retained_rows": 2376
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_instagram_20261030_1000_3h_02/social_data.xlsx",
+      "sha256": "070d62797dcf4d370adcbb83f890cee045c08bc5e28a98d220b7888b9b7d4a99",
+      "input_rows": 0,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_instagram_20261030_1000_3h_03/social_data.xlsx",
+      "sha256": "cb0ecd3024ba1513a0d052ae3eaf33ffc743ba5290cd629ab2dc66ecb622d8b9",
+      "input_rows": 0,
+      "retained_rows": 0
+    }
+  ],
+  "output_sha256": "ad3bfce17d8056712b4cd0bd6e673aebdcfbd318f2aab756d459d8d180ebf4e1",
+  "row_order": "first native appearance; latest supplied record retained",
+  "source_observations_refreshed": false,
+  "synthetic": false,
+  "files_sha256": {
+    "record_lineage.jsonl": "b1aaf08ce7600a636d0ba94893edf4e91eda80553591a46978ce82c2d906b7d8",
+    "social_data.xlsx": "ad3bfce17d8056712b4cd0bd6e673aebdcfbd318f2aab756d459d8d180ebf4e1",
+    "duplicate_records.jsonl": "ca806a70d52615abd8a69232da136494123e75afce648ac451f784a263139190"
+  }
+}

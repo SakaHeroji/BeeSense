@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Akuisisi Reddit Reddrix"
+community: "Adapter Akuisisi YouTube"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_Reddit_Reddrix
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # SourceAdapter
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[YouTubeAdapter]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

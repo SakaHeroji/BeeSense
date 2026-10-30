@@ -1,0 +1,2 @@
+# Optional access experiment; not activated in the production crawler.
+instaloader==4.16

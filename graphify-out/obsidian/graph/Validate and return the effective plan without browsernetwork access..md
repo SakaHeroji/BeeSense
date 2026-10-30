@@ -1,17 +1,17 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Community None"
-location: "L806"
+community: "Alur Akuisisi Sosial Terpadu"
+location: "L898"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Validate and return the effective plan without browser/network access.
 
 ## Connections
-- [[.plan()_1]] - `rationale_for` [EXTRACTED]
+- [[.plan()_3]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

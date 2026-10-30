@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/reddrix.txt"
 type: "concept"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L1-L6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Isolated Reddrix 1.2.14 crawler dependency pins
@@ -19,4 +19,4 @@ tags:
 - [[Separate SBERT training and artifact-only dashboard environments]] - `semantically_similar_to` [INFERRED]
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

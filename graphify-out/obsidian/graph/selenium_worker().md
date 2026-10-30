@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Community None"
+community: "Crawler Selenium Terisolasi"
 location: "L569"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # selenium_worker()
 
 ## Connections
-- [[.__init__()_22]] - `indirect_call` [INFERRED]
+- [[.__init__()_21]] - `indirect_call` [INFERRED]
 - [[.error()]] - `indirect_call` [INFERRED]
 - [[.reddit()]] - `calls` [EXTRACTED]
 - [[.search()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

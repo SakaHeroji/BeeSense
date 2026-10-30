@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_explanations.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Pengujian Penjelasan Topik"
 location: "L85"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Pengujian_Penjelasan_Topik
 ---
 
 # profile()
@@ -24,4 +24,4 @@ tags:
 - [[model_from_counts()]] - `calls` [EXTRACTED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Penjelasan_Topik

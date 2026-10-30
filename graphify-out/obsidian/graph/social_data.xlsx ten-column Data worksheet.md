@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
-community: "Community None"
+community: "Arsitektur Crawler dan Dependensi"
 location: "## Output"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # social_data.xlsx ten-column Data worksheet
@@ -17,4 +17,4 @@ tags:
 - [[Inherited SocialCrawler filters and Excel exporters]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

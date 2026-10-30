@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Aturan server"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Community_None
+  - graphify/EXTRACTED
+  - community/PRD_Workspace_Crawler
 ---
 
 # Increasing snapshotVersion and server-owned actions drive reconciliation
@@ -15,4 +15,4 @@ tags:
 - [[Expected typed frontend API contract; backend implementation pending]] - `references` [EXTRACTED]
 - [[Proposed worker survives tab close; reconnect reconciles snapshots]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Community None"
+community: "Coherence dan Quality Gate"
 location: "## Kontrak Parquet dan artifact"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Additive v 2 reduction and coherence metadata with v1/v2 loaders
@@ -17,4 +17,4 @@ tags:
 - [[SocialNLPClusterer]] - `shares_data_with` [EXTRACTED]
 - [[Stored protocol, reference hash, baseline identity and per-topic scores]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

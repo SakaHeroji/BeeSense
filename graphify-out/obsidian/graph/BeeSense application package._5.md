@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/__init__.py"
 type: "rationale"
-community: "Community None"
+community: "Kontrak dan Operasi Crawler"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Kontrak_dan_Operasi_Crawler
 ---
 
 # BeeSense application package.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[MachineLearning__init__.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_dan_Operasi_Crawler

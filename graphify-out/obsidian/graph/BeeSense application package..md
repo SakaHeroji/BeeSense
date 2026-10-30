@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/__init__.py"
 type: "rationale"
-community: "Community None"
+community: "Ekspor Campaign dan Resume"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Ekspor_Campaign_dan_Resume
 ---
 
 # BeeSense application package.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Reddit__init__.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume

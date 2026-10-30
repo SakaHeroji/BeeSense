@@ -35,8 +35,8 @@ jobs:
         run: python -m scripts.verify_dashboard_data --check-git
       - name: Check NLP and dashboard code
         run: |
-          python -m ruff check --isolated --select E4,E7,E9,F,I MachineLearning/social_nlp.py streamlit_apps.py Dashboard/app.py scripts tests/nlp tests/cloud
-          python -m ruff format --isolated --check MachineLearning/social_nlp.py streamlit_apps.py Dashboard/app.py scripts tests/nlp tests/cloud
+          python -m ruff check --isolated --select E4,E7,E9,F,I MachineLearning streamlit_apps.py Dashboard/app.py scripts tests/nlp tests/cloud
+          python -m ruff format --isolated --check MachineLearning streamlit_apps.py Dashboard/app.py scripts tests/nlp tests/cloud
       - name: NLP and Streamlit regression tests
         run: python -m unittest discover -s tests/nlp -v
       - name: SocialCrawler offline tests
@@ -46,6 +46,11 @@ jobs:
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
           python -m ruff format --isolated --check Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
           python -m unittest discover -s tests/crawler -p test_reddit_crawler.py -v
+      - name: InstagramCrawler offline contract tests
+        run: |
+          python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/instagram_crawler.py Crawler/Backend/instagram_browser.py Crawler/Backend/social_export.py tests/crawler/test_instagram_crawler.py tests/crawler/test_instagram_browser.py
+          python -m ruff format --isolated --check Crawler/Backend/instagram_crawler.py Crawler/Backend/instagram_browser.py Crawler/Backend/social_export.py tests/crawler/test_instagram_crawler.py tests/crawler/test_instagram_browser.py
+          python -m unittest discover -s tests/crawler -p 'test_instagram*.py' -v
       - name: Selenium crawler lint
         run: |
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/social_crawler_selenium.py tests/crawler/test_social_crawler_selenium.py

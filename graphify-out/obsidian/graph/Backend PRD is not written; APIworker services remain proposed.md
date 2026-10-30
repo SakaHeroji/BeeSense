@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Backend/README.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# PRD Backend"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Backend PRD is not written; API/worker services remain proposed
@@ -19,4 +19,4 @@ tags:
 - [[Proposed server session, role, project isolation and idempotency]] - `references` [EXTRACTED]
 - [[Proposed survey transactions, immutable datasets and operational audit]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

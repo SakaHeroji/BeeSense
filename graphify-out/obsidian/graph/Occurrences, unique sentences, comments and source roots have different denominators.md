@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Arti angka"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Occurrences, unique sentences, comments and source roots have different denominators
@@ -16,4 +16,4 @@ tags:
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Four selected-topic cards unique comments, share, source roots and topic c_v]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

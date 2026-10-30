@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Community None"
+community: "Ekspor Campaign dan Resume"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Ekspor_Campaign_dan_Resume
 ---
 
 # crawl_reddit_playwright.py
@@ -30,4 +30,4 @@ tags:
 - [[valid_candidate()]] - `contains` [EXTRACTED]
 - [[validate_capture()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume

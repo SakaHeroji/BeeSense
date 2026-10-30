@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Alur eksplorasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Five artifact-backed Streamlit analysis views
@@ -27,4 +27,4 @@ tags:
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

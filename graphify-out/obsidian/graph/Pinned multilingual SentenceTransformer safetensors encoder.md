@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Community None"
+community: "Coherence dan Quality Gate"
 location: "## Encoder SBERT"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Pinned multilingual SentenceTransformer safetensors encoder
@@ -22,4 +22,4 @@ tags:
 - [[Sentence-weighted Ward merges complete DBSCAN groups to exactly 20]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

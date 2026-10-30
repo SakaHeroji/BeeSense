@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.dashboard"
 type: "rationale"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L1-L23"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Relocated dashboard image uses root Streamlit shim and runtime-only wheels
@@ -18,4 +18,4 @@ tags:
 - [[app.py]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

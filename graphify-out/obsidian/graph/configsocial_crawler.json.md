@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_crawler.json"
 type: "document"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # config/social_crawler.json
@@ -27,4 +27,4 @@ tags:
 - [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

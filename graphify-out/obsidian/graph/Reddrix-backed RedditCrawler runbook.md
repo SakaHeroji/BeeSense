@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "document"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "# RedditCrawler dengan Reddrix"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Reddrix-backed RedditCrawler runbook
@@ -45,4 +45,4 @@ tags:
 - [[Upstream subreddit query with local result scope check]] - `references` [EXTRACTED]
 - [[Verified Reddit native identity and parentroot relationships]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

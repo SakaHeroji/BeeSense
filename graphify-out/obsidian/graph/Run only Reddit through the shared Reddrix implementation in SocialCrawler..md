@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/reddit_crawler.py"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L43"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Run only Reddit through the shared Reddrix implementation in SocialCrawler.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[RedditCrawler]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

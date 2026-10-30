@@ -1,25 +1,25 @@
 ---
 source_file: "graphify-out/obsidian/Dataset Dashboard.md"
 type: "document"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "# Dataset Dashboard"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Obsidian dashboard dataset provenance
 
 ## Connections
-- [[Active combined 20-topic run with eleven artifacts and manifest]] - `references` [EXTRACTED]
+- [[Active30October20-topicc_v0.4315219014 snapshot]] - `references` [EXTRACTED]
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
-- [[Four immutable older NLP snapshots including baseline 20-topic run]] - `references` [EXTRACTED]
+- [[FinalnativeIDauditwithpreservedhistoricalchecksums]] - `references` [EXTRACTED]
 - [[Historical audit workbook 50 YouTube and 181 Reddit root identities]] - `references` [EXTRACTED]
-- [[Historical scores are not directly comparable with combined-corpus c_v]] - `references` [EXTRACTED]
+- [[Historicalcorporaandscoresarenotcurrentqualitycomparators]] - `references` [EXTRACTED]
+- [[ImmutableolderNLPsnapshots including29Octobercombinedrun]] - `references` [EXTRACTED]
 - [[Obsidian Cloud runbook streamlit_apps.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
-- [[Source workbook and multi-snapshot integrity verification]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

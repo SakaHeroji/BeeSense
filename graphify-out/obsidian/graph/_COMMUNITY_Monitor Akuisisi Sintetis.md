@@ -1,32 +1,53 @@
 ---
 type: community
-cohesion: 0.26
-members: 17
+cohesion: 0.10
+members: 38
 ---
 
 # Monitor Akuisisi Sintetis
 
-**Cohesion:** 0.26 - loosely connected
-**Members:** 17 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 38 nodes
 
 ## Members
-- [[.explain()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_extractive_evidence_preserves_source_and_diversifies_roots()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_known_increasing_and_decreasing_shares()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_missing_month_is_unknown_not_zero_and_calendar_gap_is_preserved()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_parent_keys_separate_native_threads_from_comments()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_partial_edge_month_does_not_drive_slope()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_platform_composition_can_reverse_pooled_direction()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_saved_artifact_explanations_never_encode_or_train()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_sentence_repetition_does_not_inflate_comment_trend()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_sidecar_roundtrip_checksum_and_source_binding()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_stable_and_episodic_patterns()]] - code - tests/nlp/test_topic_explanations.py
-- [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - code - tests/nlp/test_topic_explanations.py
-- [[ExplanationTests]] - code - tests/nlp/test_topic_explanations.py
-- [[model_from_counts()]] - code - tests/nlp/test_topic_explanations.py
-- [[profile()]] - code - tests/nlp/test_topic_explanations.py
-- [[test_topic_explanations.py]] - code - tests/nlp/test_topic_explanations.py
+- [[Capabilities]] - code - Crawler/Frontend/src/shared/types.ts
+- [[ConfigReview()]] - code - Crawler/Frontend/src/features/Automatic.tsx
+- [[PreviewRow]] - code - Crawler/Frontend/src/shared/types.ts
+- [[SeriesPoint]] - code - Crawler/Frontend/src/shared/types.ts
+- [[SurveyAnswer]] - code - Crawler/Frontend/src/shared/types.ts
+- [[advance()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[cap]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[committed]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[csvCell()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[dataset()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[demo.ts]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[domain.test.ts]] - code - Crawler/Frontend/src/test/domain.test.ts
+- [[domain.ts]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[emptyCounts()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[get()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[isoWib()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[lines()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[load()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[plans]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[platformChartColors]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[platformLabels]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[platforms]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[queryLines()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[requireOperator()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[response()]] - code - Crawler/Frontend/src/test/domain.test.ts
+- [[responseKey()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[reviewUrls()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[reviews]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[save()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[seed()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[stamp()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[surveyDatasets]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[surveyKey()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[surveyKnown]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[update()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[validateConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[validateSurvey()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[zeros]] - code - Crawler/Frontend/src/shared/demo.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,3 +55,17 @@ members: 17
 TABLE source_file, type FROM #community/Monitor_Akuisisi_Sintetis
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 26 edges to [[_COMMUNITY_Monitor Akuisisi Sintetis_1]]
+- 24 edges to [[_COMMUNITY_Monitor Akuisisi Sintetis_2]]
+- 18 edges to [[_COMMUNITY_Monitor Akuisisi Sintetis_3]]
+- 4 edges to [[_COMMUNITY_Monitor Akuisisi Sintetis_4]]
+- 1 edge to [[_COMMUNITY_Workspace React Crawler_3]]
+
+## Top bridge nodes
+- [[demo.ts]] - degree 40, connects to 5 communities
+- [[domain.ts]] - degree 40, connects to 4 communities
+- [[domain.test.ts]] - degree 15, connects to 4 communities
+- [[validateConfig()]] - degree 12, connects to 2 communities
+- [[ConfigReview()]] - degree 9, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Community None"
+community: "Workspace React Crawler"
 location: "L39"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Workspace_React_Crawler
 ---
 
 # @vitejs/plugin-react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@vitejsplugin-react]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Workspace_React_Crawler

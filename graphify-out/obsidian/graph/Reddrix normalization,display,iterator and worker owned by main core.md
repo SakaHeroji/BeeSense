@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "# SocialCrawler"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Reddrix normalization,display,iterator and worker owned by main core
@@ -15,6 +15,7 @@ tags:
 - [[Integrated SocialCrawler owns Reddrix acquisition and shared export]] - `references` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[SocialCrawler1.4 default Reddit Reddrix plus YouTube yt-dlp]] - `references` [EXTRACTED]
+- [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - `references` [EXTRACTED]
 - [[collect_reddrix()]] - `conceptually_related_to` [INFERRED]
 - [[load_reddrix()]] - `conceptually_related_to` [INFERRED]
 - [[normalize_reddrix_item()]] - `conceptually_related_to` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[resolve_reddrix_display()]] - `conceptually_related_to` [INFERRED]
 - [[run_reddrix_worker()]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Alur_Akuisisi_Sosial_Terpadu

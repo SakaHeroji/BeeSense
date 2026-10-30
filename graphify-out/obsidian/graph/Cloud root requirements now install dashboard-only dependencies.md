@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "## Deploy ke Streamlit Community Cloud"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Cloud root requirements now install dashboard-only dependencies
@@ -17,4 +17,4 @@ tags:
 - [[PyArrow 24.0.0 matches Cloud guard for Arrowmimalloc threaded-import compatibility]] - `references` [EXTRACTED]
 - [[Root Cloud requirements include relocated dashboard-only runtime]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

@@ -1,13 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Parser dan Runner Reddit"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # ABC
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

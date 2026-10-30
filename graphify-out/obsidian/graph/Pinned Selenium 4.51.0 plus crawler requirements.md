@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/selenium.txt"
 type: "document"
-community: "Community None"
+community: "Arsitektur Crawler dan Dependensi"
 location: "lines 1-2"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # Pinned Selenium 4.51.0 plus crawler requirements
@@ -16,4 +16,4 @@ tags:
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

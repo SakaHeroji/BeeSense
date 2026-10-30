@@ -1,22 +1,22 @@
 ---
 source_file: "tests/nlp/test_streamlit_app.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Pengujian UI Streamlit"
 location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Pengujian_UI_Streamlit
 ---
 
 # StreamlitTests
 
 ## Connections
 - [[.app()]] - `method` [EXTRACTED]
-- [[.setUp()_9]] - `method` [EXTRACTED]
-- [[.setUpClass()_2]] - `method` [EXTRACTED]
-- [[.tearDown()]] - `method` [EXTRACTED]
-- [[.tearDownClass()_2]] - `method` [EXTRACTED]
+- [[.setUp()_12]] - `method` [EXTRACTED]
+- [[.setUpClass()_3]] - `method` [EXTRACTED]
+- [[.tearDown()_1]] - `method` [EXTRACTED]
+- [[.tearDownClass()_3]] - `method` [EXTRACTED]
 - [[.test_all_views_and_noise_only_selection()]] - `method` [EXTRACTED]
 - [[.test_coherence_metric_and_per_topic_scores_are_visible()]] - `method` [EXTRACTED]
 - [[.test_dashboard_renders_and_topic_selection_works_without_training()]] - `method` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_streamlit_app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Pengujian_UI_Streamlit

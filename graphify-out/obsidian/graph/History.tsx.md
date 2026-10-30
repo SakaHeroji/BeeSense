@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/History.tsx"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # History.tsx
@@ -30,4 +30,4 @@ tags:
 - [[ui.tsx]] - `imports_from` [EXTRACTED]
 - [[useUrlState()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

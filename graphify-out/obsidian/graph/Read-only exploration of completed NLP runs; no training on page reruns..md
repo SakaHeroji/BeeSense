@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: "Community None"
-location: "L120"
+community: "Eksplorasi Dashboard Streamlit"
+location: "L121"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Read-only exploration of completed NLP runs; no training on page reruns.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialNLPStreamlitApp]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

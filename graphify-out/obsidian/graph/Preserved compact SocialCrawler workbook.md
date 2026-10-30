@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "concept"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "## Kontrak output Excel"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Preserved compact SocialCrawler workbook
@@ -15,4 +15,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

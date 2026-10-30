@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Community None"
+community: "Adapter Akuisisi YouTube"
 location: "L187"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_None
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # YouTubeAdapter
@@ -19,9 +19,9 @@ tags:
 - [[Dataset_2]] - `uses` [INFERRED]
 - [[KeywordMatcher_1]] - `uses` [INFERRED]
 - [[RecordFactory_1]] - `uses` [INFERRED]
-- [[SourceAdapter]] - `inherits` [EXTRACTED]
 - [[SourceAdapter_2]] - `uses` [INFERRED]
+- [[SourceAdapter]] - `inherits` [EXTRACTED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[run()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_None
+#graphify/code #graphify/INFERRED #community/Adapter_Akuisisi_YouTube

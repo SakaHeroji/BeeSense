@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/Rancangan Layar Crawler.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## 8. Pola responsif dan aksesibilitas"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Responsive drawer/table/focus behavior is a design target
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler

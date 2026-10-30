@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Akses dan Parsing HTML"
 location: "L646"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akses_dan_Parsing_HTML
 ---
 
 # first()
@@ -18,4 +18,4 @@ tags:
 - [[source_time()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Akses_dan_Parsing_HTML

@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "document"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "L7-L15"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Reorganized BeeSense package and supporting-file structure
@@ -21,4 +21,4 @@ tags:
 - [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - `references` [EXTRACTED]
 - [[Root streamlit_apps.py delegates to Dashboard.app_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

@@ -18,6 +18,7 @@ node_modules/
 .env.*
 !.env.example
 .streamlit/secrets.toml
+config/auth.json
 *.pem
 *.key
 *.log
@@ -138,5 +139,30 @@ graphify-out/obsidian/*
 !graphify-out/obsidian/PRD Frontend Crawler.md
 !graphify-out/obsidian/Frontend React Crawler.md
 !graphify-out/obsidian/RedditCrawler Reddrix.md
+!graphify-out/obsidian/InstagramCrawler instagrapi.md
+!graphify-out/obsidian/Topik Gemini.md
 !graphify-out/obsidian/Struktur Proyek.md
 !graphify-out/obsidian/graph/
+
+# Instagram three-day merged source and Gemini topic snapshot.
+!outputs/social_20261030_combined_3days_02/
+outputs/social_20261030_combined_3days_02/*
+!outputs/social_20261030_combined_3days_02/social_data.xlsx
+!outputs/social_20261030_combined_3days_02/merge_report.json
+!outputs/social_20261030_combined_3days_02/record_lineage.jsonl
+!outputs/social_20261030_combined_3days_02/duplicate_records.jsonl
+!outputs/nlp_20261030_instagram_topics20_02/
+outputs/nlp_20261030_instagram_topics20_02/*
+!outputs/nlp_20261030_instagram_topics20_02/manifest.json
+!outputs/nlp_20261030_instagram_topics20_02/summary.json
+!outputs/nlp_20261030_instagram_topics20_02/topics.json
+!outputs/nlp_20261030_instagram_topics20_02/graph.json
+!outputs/nlp_20261030_instagram_topics20_02/comparison.json
+!outputs/nlp_20261030_instagram_topics20_02/social_data.parquet
+!outputs/nlp_20261030_instagram_topics20_02/sentences.parquet
+!outputs/nlp_20261030_instagram_topics20_02/occurrences.parquet
+!outputs/nlp_20261030_instagram_topics20_02/skipped.parquet
+!outputs/nlp_20261030_instagram_topics20_02/embeddings.npy
+!outputs/nlp_20261030_instagram_topics20_02/centroids.npy
+!outputs/nlp_20261030_instagram_topics20_02/umap_embeddings.npz
+!outputs/nlp_20261030_instagram_topics20_02/topic_narratives.csv

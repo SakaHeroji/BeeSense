@@ -1,20 +1,20 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
-community: "Community None"
+community: "Coherence dan Quality Gate"
 location: "## Verifikasi dan runtime"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Community_None
+  - graphify/INFERRED
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Historical combined snapshot QA; relocated root shim checked offline
 
 ## Connections
-- [[Combined-corpus mean c_v 0.4720034333858867 meets 0.4]] - `conceptually_related_to` [INFERRED]
 - [[Combined-corpus training completed20topics, c_v 0.4720034333858867]] - `references` [EXTRACTED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical non-rootread-only dashboard runtime; reorganized image unbuilt]] - `conceptually_related_to` [INFERRED]
+- [[Historical29October macro c_v0.4720034334]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/Coherence_dan_Quality_Gate

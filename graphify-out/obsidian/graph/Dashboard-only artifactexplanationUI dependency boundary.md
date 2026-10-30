@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/dashboard.txt"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "L1-L14"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Dashboard-only artifact/explanation/UI dependency boundary
@@ -22,4 +22,4 @@ tags:
 - [[Root streamlit_apps.py delegates to Dashboard.app_1]] - `references` [EXTRACTED]
 - [[Saved-model dashboard uses a separate runtime;full refitting stays Python 3.12]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

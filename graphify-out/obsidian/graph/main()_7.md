@@ -1,18 +1,20 @@
 ---
-source_file: "scripts/merge_social_datasets.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Community None"
-location: "L174"
+community: "Eksplorasi Dashboard Streamlit"
+location: "L2247"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # main()
 
 ## Connections
-- [[merge()]] - `calls` [EXTRACTED]
-- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

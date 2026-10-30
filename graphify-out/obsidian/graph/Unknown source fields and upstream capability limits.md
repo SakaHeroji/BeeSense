@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "## Batas sumber"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Unknown source fields and upstream capability limits
@@ -17,4 +17,4 @@ tags:
 - [[Unknown anti-bot exception maps to ACCESS_BLOCKED]] - `conceptually_related_to` [EXTRACTED]
 - [[Unknown dates, metrics and actors remain unknown]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

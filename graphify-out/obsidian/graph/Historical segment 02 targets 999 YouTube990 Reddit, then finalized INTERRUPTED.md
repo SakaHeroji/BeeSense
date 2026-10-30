@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "concept"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "## Dilanjutkan setelah refresh pengguna"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Historical segment 02: targets 999 YouTube/990 Reddit, then finalized INTERRUPTED
@@ -20,4 +20,4 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

@@ -1,0 +1,24 @@
+---
+source_file: "graphify-out/obsidian/Topik Gemini.md"
+type: "document"
+community: "Snapshot NLP dan Arsip"
+location: "# Topik Gemini"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Snapshot_NLP_dan_Arsip
+---
+
+# Qualifiedmodel→contextualGemini2→CSV→read-onlyDashboard
+
+## Connections
+- [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
+- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
+- [[Current20-topic macro c_v0.4315219014 model]] - `references` [EXTRACTED]
+- [[DashboardreadsverifiedCSVwithnoAPIortrainingonrerun]] - `references` [EXTRACTED]
+- [[Ignoredlocalcredentialsprofiles;explicitnewmodelandGemininoteallowlist]] - `references` [EXTRACTED]
+- [[Nine Gemini offline tests and all20 actual contextual CSV rows validated]] - `references` [EXTRACTED]
+- [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - `references` [EXTRACTED]
+- [[Verified current model and20context-grounded narratives]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

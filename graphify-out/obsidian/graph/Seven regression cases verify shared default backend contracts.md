@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "## Verifikasi"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Seven regression cases verify shared default backend contracts
@@ -16,4 +16,4 @@ tags:
 - [[Integrated offline tests and macOS lifecycle scope]] - `references` [EXTRACTED]
 - [[SocialCrawlerReddrixTests]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Akuisisi_Reddit_Reddrix

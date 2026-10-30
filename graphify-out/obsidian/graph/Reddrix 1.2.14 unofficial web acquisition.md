@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "concept"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "# RedditCrawler dengan Reddrix"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Reddrix 1.2.14 unofficial web acquisition
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

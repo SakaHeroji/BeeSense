@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/PRD Frontend Crawler.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "### 6.4 Tujuh sumber media sosial"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Seven implemented UI/demo sources;only two Python adapters exist
@@ -17,4 +17,4 @@ tags:
 - [[Delivery records 50 passing tests, lintformat and production API build]] - `conceptually_related_to` [INFERRED]
 - [[Proposed persistent Python worker and authorized CAPTCHA browser bridge]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Snapshot_NLP_dan_Arsip

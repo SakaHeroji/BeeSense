@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Frontend React Crawler.md"
 type: "concept"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Alur yang tersedia"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Curated available UI flows retain worker authority and survey metadata
@@ -15,4 +15,4 @@ tags:
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 - [[Dataset.nlpSupported requires tested schema and every included source adapter]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/PRD_Workspace_Crawler

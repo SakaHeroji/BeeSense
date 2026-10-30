@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Community None"
-location: "L1019"
+community: "Pipeline dan Persistensi NLP"
+location: "L1032"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # Use the same class TF-IDF vocabulary for selection and publication.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._ctfidf_terms()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

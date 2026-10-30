@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "code"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # item()
@@ -19,4 +19,4 @@ tags:
 - [[records()]] - `calls` [EXTRACTED]
 - [[test_reddit_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

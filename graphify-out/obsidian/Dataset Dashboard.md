@@ -5,6 +5,17 @@ tags: [beesense, provenance, sbert, dbscan, merged]
 
 # Dataset Dashboard
 
+## Snapshot aktif 30 Oktober 2026
+
+Input `outputs/social_20261030_combined_3days_02/social_data.xlsx` memuat **33.034 record unik**, **1.859 root**, dan **31.175 komentar/balasan** dari hasil akuisisi 27–30 Oktober. Sebanyak 49.952 pengulangan antarberkas disisihkan; pemeriksaan menemukan 0 ID native ganda. Total Instagram 324 post/3.038 komentar mencakup batch terbaru 248 post/2.128 komentar dan trial sebelumnya 76 post/910 komentar. Pengguna menghentikan crawling setelah HTTP 429; target 1.000 post dan durasi 3 jam belum tercapai.
+
+Run aktif `outputs/nlp_20261030_instagram_topics20_02` menghasilkan **20 topik**, rata-rata **c_v 0,4315219014**, coverage **94,67%**, silhouette cosine **-0,057864**, dan ARI dua seed **0,820417**. DBSCAN eps=0,25/min_samples=10 menghasilkan 165 kelompok primer, lalu Ward berbobot menggabungkannya menjadi 20 topik. Noise terdiri atas 2.751 kalimat unik. Persiapan menghasilkan 52.451 kemunculan/51.612 kalimat unik, 839 pengulangan dan 5.516 segmen dilewati; 28.758 komentar/balasan terwakili. Fitting inti berlangsung 1.195,5 detik sebelum tahap Gemini.
+
+Gemini `gemini-3.5-flash-lite` menghasilkan **20 kalimat topik dan deskripsi bahasa Indonesia**, masing-masing dari 10 keyword c-TF-IDF berbobot tertinggi dan 10 kalimat terdekat dengan pusat topik. `topic_narratives.csv` beserta provenance/checksum masuk bundle model. UI membaca CSV tanpa API atau training saat rerun. Sebanyak 8 dari 20 topik masih memiliki c_v individual <0,4; ambang berlaku pada rata-rata. Evaluasi ini in-sample, bukan akurasi berlabel atau holdout. Skor dari korpus berbeda tidak menjadi perbandingan kualitas langsung.
+
+## Riwayat29 Oktober 2026
+
+
 Input `outputs/social_20261029_combined/social_data.xlsx` menggabungkan baseline 8.449 baris dan akuisisi baru 20.650 baris: **29.099 baris**, **1.517 post asal**, dan **27.582 komentar/balasan**. Persiapan menghasilkan 46.916 kemunculan, 46.143 kalimat unik, 773 pengulangan dan 4.741 potongan dilewati; 25.739 komentar/balasan terwakili.
 
 Run aktif: `outputs/nlp_20261029_combined_topics20_01`, dengan `target_topics: 20`. Empat Parquet dan manifest disimpan pada direktori versi baru; dua workbook baseline dan seluruh snapshot NLP sebelumnya dipertahankan. Tidak ada ID native ganda dalam workbook gabungan.

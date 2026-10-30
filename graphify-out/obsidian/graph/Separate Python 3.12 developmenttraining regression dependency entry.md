@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/dev.txt"
 type: "rationale"
-community: "Community None"
+community: "Runbook dan Verifikasi Lokal"
 location: "L1-L5"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Separate Python 3.12 development/training regression dependency entry
@@ -22,4 +22,4 @@ tags:
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Community None"
+community: "Parser DOM Terbatas"
 location: "L669"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Parser_DOM_Terbatas
 ---
 
 # Small serialised-DOM reader, not a browser or full HTML5 repair engine.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BoundedDom]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Parser_DOM_Terbatas

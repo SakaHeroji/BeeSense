@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "document"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "# Menjalankan BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # BeeSense startup, verification and coherence training runbook
@@ -23,4 +23,4 @@ tags:
 - [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

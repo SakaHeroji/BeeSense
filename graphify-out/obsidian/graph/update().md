@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L178"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # update()
@@ -18,4 +18,4 @@ tags:
 - [[load()]] - `calls` [EXTRACTED]
 - [[save()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

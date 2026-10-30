@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_explanations.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Pengujian Penjelasan Topik"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Pengujian_Penjelasan_Topik
 ---
 
 # ExplanationTests
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.explain()]] - `method` [EXTRACTED]
 - [[.test_extractive_evidence_preserves_source_and_diversifies_roots()]] - `method` [EXTRACTED]
+- [[.test_instagram_parent_identity_and_explanation_counts()]] - `method` [EXTRACTED]
 - [[.test_known_increasing_and_decreasing_shares()]] - `method` [EXTRACTED]
 - [[.test_missing_month_is_unknown_not_zero_and_calendar_gap_is_preserved()]] - `method` [EXTRACTED]
 - [[.test_parent_keys_separate_native_threads_from_comments()]] - `method` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Penjelasan_Topik

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "## Cooldown HTTP 429 untuk crawl berikutnya"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Bounded 1.3 cooldown applied to user-authorized continuation 04
@@ -17,4 +17,4 @@ tags:
 - [[Historical preparation restriction cooldown implemented without restarting segment 03]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

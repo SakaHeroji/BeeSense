@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Community None"
+community: "Crawler Selenium Terisolasi"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # social_crawler_selenium.py
@@ -20,9 +20,9 @@ tags:
 - [[_receipt()]] - `contains` [EXTRACTED]
 - [[_reddit_records()]] - `contains` [EXTRACTED]
 - [[_timestamp()]] - `contains` [EXTRACTED]
-- [[main()_4]] - `contains` [EXTRACTED]
+- [[main()_3]] - `contains` [EXTRACTED]
 - [[selenium_worker()]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

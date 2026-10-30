@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SELENIUM_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Arsitektur Crawler dan Dependensi"
 location: "## Kontrak Excel"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # Inherited SocialCrawler filters and Excel exporters
@@ -16,4 +16,4 @@ tags:
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 - [[social_data.xlsx ten-column Data worksheet]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

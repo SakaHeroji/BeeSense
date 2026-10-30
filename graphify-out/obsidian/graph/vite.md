@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Community None"
+community: "Workspace React Crawler"
 location: "L46"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Workspace_React_Crawler
 ---
 
 # vite
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies]] - `contains` [EXTRACTED]
 - [[vite_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler

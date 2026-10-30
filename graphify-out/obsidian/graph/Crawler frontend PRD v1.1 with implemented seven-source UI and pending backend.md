@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/PRD Frontend Crawler.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# PRD Frontend Crawler BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Crawler frontend PRD v1.1 with implemented seven-source UI and pending backend
@@ -35,4 +35,4 @@ tags:
 - [[Versionchecksum handoff requires partial acceptance and supported schema]] - `references` [EXTRACTED]
 - [[Worker-confirmed CAPTCHA and bounded429 cooldown without bypass]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

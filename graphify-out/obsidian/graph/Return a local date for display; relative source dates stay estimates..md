@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/social_crawler.py"
+source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Community None"
-location: "L845"
+community: "Operasi dan Verifikasi BeeSense"
+location: "L34"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Return a local date for display; relative source dates stay estimates.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._calendar_date()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

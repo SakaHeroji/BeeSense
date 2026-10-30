@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "rationale"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "## Kelanjutan atas instruksi baru sekitar 11.00 WIB"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Each continuation excludes original dataset and every prior campaign segment
@@ -19,4 +19,4 @@ tags:
 - [[Read-only canonicalnative identity index excludes 50 old YouTube and 181 Reddit roots]] - `conceptually_related_to` [INFERRED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

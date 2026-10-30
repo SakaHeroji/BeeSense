@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Kontrak tujuh sumber"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Dataset.nlpSupported requires tested schema and every included source adapter
@@ -17,4 +17,4 @@ tags:
 - [[Expected typed frontend API contract; backend implementation pending]] - `references` [EXTRACTED]
 - [[NLP adapters for five new social sources must be validated before handoff]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler

@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "rationale"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "## Kelanjutan atas instruksi baru sekitar 11.00 WIB"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # New user authorization supersedes historical preparation-only restriction
@@ -16,4 +16,4 @@ tags:
 - [[Historical preparation restriction cooldown implemented without restarting segment 03]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/JobDetail.tsx"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # JobDetail.tsx
@@ -48,4 +48,4 @@ tags:
 - [[useUrlState()]] - `imports` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

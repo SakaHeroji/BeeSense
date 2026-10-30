@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/public_web_post.test.mjs"
 type: "code"
-community: "Community None"
+community: "Ekstraksi Cuplikan Publik"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Ekstraksi_Cuplikan_Publik
 ---
 
 # candidate
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[public_web_post.test.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Ekstraksi_Cuplikan_Publik

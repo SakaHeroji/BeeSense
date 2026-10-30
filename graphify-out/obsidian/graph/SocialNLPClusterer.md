@@ -1,18 +1,18 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Community None"
-location: "L65"
+community: "Pipeline dan Persistensi NLP"
+location: "L73"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # SocialNLPClusterer
 
 ## Connections
-- [[.__init__()_24]] - `method` [EXTRACTED]
+- [[.__init__()_28]] - `method` [EXTRACTED]
 - [[._cache_dir()]] - `method` [EXTRACTED]
 - [[._clean()]] - `method` [EXTRACTED]
 - [[._ctfidf_terms()]] - `method` [EXTRACTED]
@@ -38,6 +38,7 @@ tags:
 - [[.explain_artifacts()]] - `method` [EXTRACTED]
 - [[.explain_topics()]] - `method` [EXTRACTED]
 - [[.fit_excel()]] - `method` [EXTRACTED]
+- [[.generate_topic_narratives()]] - `method` [EXTRACTED]
 - [[.load_explanations()]] - `method` [EXTRACTED]
 - [[.load_run()]] - `method` [EXTRACTED]
 - [[.parent_post_key()]] - `method` [EXTRACTED]
@@ -47,15 +48,18 @@ tags:
 - [[.score_coherence()]] - `method` [EXTRACTED]
 - [[.select_candidate()]] - `method` [EXTRACTED]
 - [[.sentence_spans()]] - `method` [EXTRACTED]
-- [[.setUp()_9]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_1]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_2]] - `calls` [EXTRACTED]
+- [[.setUp()_12]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_2]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_3]] - `calls` [EXTRACTED]
+- [[.setUpClass()_1]] - `calls` [EXTRACTED]
 - [[.stability()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `calls` [EXTRACTED]
 - [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - `calls` [EXTRACTED]
 - [[.test_coherence_search_evaluates_all_near_ties_and_skips_lower_scores()]] - `calls` [EXTRACTED]
+- [[.test_credentials_stay_out_of_configuration_and_gate_precedes_api()]] - `calls` [EXTRACTED]
 - [[.test_ctfidf_never_pads_short_topics_with_zero_weight_terms()]] - `calls` [EXTRACTED]
 - [[.test_cv_distinguishes_coherent_terms_and_rejects_missing_topics()]] - `calls` [EXTRACTED]
+- [[.test_dashboard_displays_generated_sentence_without_network_or_training()]] - `indirect_call` [INFERRED]
 - [[.test_dbscan_memory_guard_and_no_eligible_candidate_are_explicit()]] - `calls` [EXTRACTED]
 - [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - `calls` [EXTRACTED]
 - [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - `calls` [EXTRACTED]
@@ -67,25 +71,30 @@ tags:
 - [[.test_shipped_dashboard_and_explanations_need_no_training_environment()]] - `indirect_call` [INFERRED]
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `calls` [EXTRACTED]
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `calls` [EXTRACTED]
+- [[20-topiccoherence gate passed; active configuration switched]] - `references` [EXTRACTED]
 - [[Additive v 2 reduction and coherence metadata with v1v2 loaders]] - `shares_data_with` [EXTRACTED]
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
 - [[CloudRuntimeTests]] - `uses` [INFERRED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
+- [[Current20-topic macro c_v0.4315219014 model]] - `references` [EXTRACTED]
 - [[DashboardTests]] - `uses` [INFERRED]
 - [[Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.]] - `rationale_for` [EXTRACTED]
 - [[ExplanationTests]] - `uses` [INFERRED]
+- [[GeminiArtifactTests]] - `uses` [INFERRED]
+- [[GeminiTests]] - `uses` [INFERRED]
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `implements` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
+- [[Historical29October bounded15-candidate grid; shared budget retained]] - `implements` [INFERRED]
+- [[Historical29October exact-corpus SBERTUMAP cache evidence]] - `implements` [INFERRED]
 - [[Module API creates source-bound explanation sidecars without retraining]] - `references` [EXTRACTED]
 - [[Module CLIs and worker spawn import relocated packages]] - `references` [EXTRACTED]
 - [[NLPTests]] - `uses` [INFERRED]
-- [[New combined-corpus SBERT and dual-UMAP features reused only through exact verified caches]] - `implements` [INFERRED]
 - [[Non-noise c-TF-IDF unigrambigram labels]] - `implements` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
+- [[Optional contextual Gemini after20topicsmacro c_v≥0.4]] - `references` [EXTRACTED]
 - [[Package module CLIs retain repository-root path semantics]] - `references` [EXTRACTED]
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
-- [[Published 15-candidate DBSCAN grid preserves 8 million-edge guard]] - `implements` [INFERRED]
 - [[Saved-model dashboard uses a separate runtime;full refitting stays Python 3.12]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `uses` [INFERRED]
 - [[StreamlitTests]] - `uses` [INFERRED]
@@ -99,6 +108,7 @@ tags:
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports` [EXTRACTED]
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
+- [[test_topic_narratives.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "## Jeda dan kelanjutan Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # User-authorized Reddit continuations preserve prior bundles and original deadline
@@ -19,7 +19,7 @@ tags:
 - [[Historical continuation 04 applied 1.3 cooldown after explicit user instruction]] - `references` [EXTRACTED]
 - [[Historical segment 02 targets 999 YouTube990 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
 - [[Historical segment 03 targets 994 YouTube983 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
-- [[One-operation round-robin scheduler with shared 10800-second deadline]] - `references` [EXTRACTED]
+- [[Retained defaulthistorical round-robin deadline;newInstagram-onlyrun separate]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

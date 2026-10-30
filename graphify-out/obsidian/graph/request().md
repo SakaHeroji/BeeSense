@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/api.ts"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # request()
@@ -15,4 +15,4 @@ tags:
 - [[api.ts]] - `contains` [EXTRACTED]
 - [[post()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

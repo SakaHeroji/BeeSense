@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/sbert.txt"
 type: "document"
-community: "Community None"
+community: "Runbook dan Verifikasi Lokal"
 location: "requirements includes and dependency declarations"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # Native SBERT training requirements include coherence evaluation
@@ -19,4 +19,4 @@ tags:
 - [[Separate SBERT training and artifact-only dashboard environments]] - `references` [EXTRACTED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

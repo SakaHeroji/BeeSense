@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/Acceptance Criteria Crawler.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# Acceptance Criteria Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Draft acceptance criteria are release requirements, not a React test report
@@ -22,4 +22,4 @@ tags:
 - [[Frontend PRD indexCrawler detailed; NLP and Dashboard PRDs remain future]] - `references` [EXTRACTED]
 - [[Production release requires real integration evidence and preserved survey schema]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

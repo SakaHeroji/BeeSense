@@ -8,6 +8,7 @@
 !MachineLearning/
 !MachineLearning/__init__.py
 !MachineLearning/social_nlp.py
+!MachineLearning/topic_narratives.py
 !Dashboard/
 !Dashboard/__init__.py
 !Dashboard/app.py
@@ -16,3 +17,12 @@
 !config/social_nlp.json
 !.streamlit/
 !.streamlit/config.toml
+
+# Local credentials and sessions never enter any image build context.
+config/auth.json
+.streamlit/secrets.toml
+**/.env
+**/.env.*
+**/*session*.json
+**/__pycache__/
+Crawler/Frontend/

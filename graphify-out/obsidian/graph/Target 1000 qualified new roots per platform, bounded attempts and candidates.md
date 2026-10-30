@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Target 1000 qualified new roots per platform, bounded attempts and candidates
@@ -19,4 +19,4 @@ tags:
 - [[Root-publication date and literal keyword selection]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

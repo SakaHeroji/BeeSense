@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/DELIVERY.md"
 type: "concept"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Hasil implementasi"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Implemented UI flows:automatic/manual, monitor, survey and dataset review
@@ -16,4 +16,4 @@ tags:
 - [[Proposed server-owned monitor separates units and finalization states]] - `conceptually_related_to` [INFERRED]
 - [[React frontend and simulation verified; production acquisition integration unavailable]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/INFERRED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/PRD_Workspace_Crawler

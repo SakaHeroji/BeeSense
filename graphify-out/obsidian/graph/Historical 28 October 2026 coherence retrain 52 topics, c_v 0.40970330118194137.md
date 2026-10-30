@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md"
 type: "document"
-community: "Community None"
+community: "Coherence dan Quality Gate"
 location: "## Answer"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Historical 28 October 2026 coherence retrain: 52 topics, c_v 0.40970330118194137
@@ -16,4 +16,4 @@ tags:
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Identitas dan Kontrak Data"
 location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Identitas_dan_Kontrak_Data
 ---
 
 # digest()
@@ -22,4 +22,4 @@ tags:
 - [[schema_fingerprint()]] - `calls` [EXTRACTED]
 - [[validate_row()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data

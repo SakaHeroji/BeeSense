@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
-community: "Community None"
+community: "Coherence dan Quality Gate"
 location: "## Penjelasan, sumber dan batas interpretasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Non-noise c-TF-IDF unigram/bigram labels
@@ -16,4 +16,4 @@ tags:
 - [[SocialNLPClusterer]] - `implements` [EXTRACTED]
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

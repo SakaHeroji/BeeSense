@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "document"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "## Akuisisi selesai dan data gabungan"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Runbook and historical record for finalized partial crawler campaign
@@ -43,4 +43,4 @@ tags:
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

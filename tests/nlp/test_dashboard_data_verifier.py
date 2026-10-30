@@ -8,6 +8,102 @@ from unittest.mock import patch
 from scripts import verify_dashboard_data as verifier
 
 
+class NativeDatasetTests(unittest.TestCase):
+    def test_native_uniqueness_is_independent_of_equal_text_and_kind(self):
+        from openpyxl import Workbook
+
+        from scripts.merge_social_datasets import COLUMNS
+
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "social_data.xlsx"
+            book = Workbook()
+            sheet = book.active
+            sheet.title = "Data"
+            sheet.append(COLUMNS)
+            for kind, url, text in [
+                ("post", "https://www.instagram.com/p/B/", "Kuliah"),
+                ("comment", "https://www.instagram.com/p/B/?comment_id=21", "Sama"),
+                ("comment", "https://www.instagram.com/p/B/?comment_id=22", "Sama"),
+            ]:
+                sheet.append(
+                    [
+                        "instagram",
+                        kind,
+                        "Kuliah",
+                        None,
+                        "unknown",
+                        None,
+                        "unknown",
+                        text,
+                        url,
+                        False,
+                    ]
+                )
+            book.save(path)
+            self.assertEqual(
+                verifier.verify_native_dataset(path),
+                {"rows": 3, "roots": 1, "duplicate_native_ids": 0},
+            )
+            sheet.append(
+                [
+                    "instagram",
+                    "reply",
+                    "Kuliah",
+                    None,
+                    "unknown",
+                    None,
+                    "unknown",
+                    "Berbeda",
+                    "https://www.instagram.com/p/B/?comment_id=21",
+                    False,
+                ]
+            )
+            book.save(path)
+            book.close()
+            with self.assertRaisesRegex(ValueError, "Duplicate native record"):
+                verifier.verify_native_dataset(path)
+
+    def test_published_merge_audit_is_bound_to_its_file_checksums(self):
+        from openpyxl import Workbook
+
+        from scripts.merge_social_datasets import COLUMNS, merge
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "source.xlsx"
+            book = Workbook()
+            sheet = book.active
+            sheet.title = "Data"
+            sheet.append(COLUMNS)
+            sheet.append(
+                [
+                    "instagram",
+                    "post",
+                    "Kuliah",
+                    None,
+                    "unknown",
+                    None,
+                    "unknown",
+                    "Kuliah",
+                    "https://www.instagram.com/p/B/",
+                    False,
+                ]
+            )
+            book.save(source)
+            book.close()
+            merge(
+                [source],
+                root / "merged",
+                root / "provenance.json",
+                duplicate_policy="prefer_latest",
+            )
+            files = verifier.published_source_files(root / "merged/social_data.xlsx")
+            self.assertEqual(len(files), 4)
+            (root / "merged/record_lineage.jsonl").write_text("tampered")
+            with self.assertRaisesRegex(ValueError, "merge audit checksum"):
+                verifier.published_source_files(root / "merged/social_data.xlsx")
+
+
 class PublishedDataTests(unittest.TestCase):
     def setUp(self):
         workspace = tempfile.TemporaryDirectory()
@@ -46,6 +142,13 @@ class PublishedDataTests(unittest.TestCase):
         patch.object(verifier, "ROOT", self.root).start()
         patch.object(
             verifier.SocialNLPClusterer, "load_run", return_value=snapshot
+        ).start()
+        # The workbook boundary has separate tests; these cases isolate the
+        # publication/manifest rules with small byte fixtures.
+        patch.object(
+            verifier,
+            "verify_native_dataset",
+            return_value={"rows": 2, "roots": 1, "duplicate_native_ids": 0},
         ).start()
 
     def test_preserved_audit_and_excel_owner_files_are_supported(self):

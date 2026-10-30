@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/app/App.tsx"
 type: "code"
-community: "Community None"
+community: "Workspace React Crawler"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Workspace_React_Crawler
 ---
 
 # App.tsx
@@ -23,4 +23,4 @@ tags:
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 - [[router]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler

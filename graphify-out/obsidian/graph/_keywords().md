@@ -1,18 +1,19 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Community None"
-location: "L405"
+community: "Alur Akuisisi Sosial Terpadu"
+location: "L406"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # _keywords()
 
 ## Connections
+- [[ValueError]] - `calls` [INFERRED]
 - [[_config()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

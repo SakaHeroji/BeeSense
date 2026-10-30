@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "document"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L7-L11"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Integrated SocialCrawler Reddrix with thin Reddit-only wrapper
@@ -25,4 +25,4 @@ tags:
 - [[Trial chronology separates v1.0.0 results from post-trial v1.1.0 display]] - `references` [EXTRACTED]
 - [[Unknown source fields and upstream capability limits]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

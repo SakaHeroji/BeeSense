@@ -1,12 +1,12 @@
 ---
 source_file: ".github/workflows/ci.yml"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "jobs.dashboard-runtime.steps"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Cloud AppTest regression opens all five views/T04 without installed or imported training libraries
@@ -17,4 +17,4 @@ tags:
 - [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - `conceptually_related_to` [INFERRED]
 - [[SocialNLPStreamlitApp]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Snapshot_NLP_dan_Arsip

@@ -11,6 +11,10 @@ BeeSense/
 │   └── Backend/
 │       ├── social_crawler.py     # YouTube yt-dlp + Reddit Reddrix
 │       ├── reddit_crawler.py     # Pembungkus Reddit-only
+│       ├── instagram_crawler.py  # Scheduler/filter/Excel Instagram, instagrapi atau Chrome
+│       ├── instagram_browser.py  # Worker profil Chrome persisten, login manual
+│       ├── instagram_browser_capture.mjs  # Parser ID/komentar dokumen post
+│       ├── social_export.py      # Seleksi dan proyeksi Excel bersama
 │       ├── social_crawler_selenium.py
 │       ├── Reddit/               # Kontrak, parser, helper, resource legacy
 │       └── Youtube/              # Adapter yt-dlp dan kontrak
@@ -70,3 +74,18 @@ docker build -f deployment/docker/Dockerfile.selenium -t beesense-selenium:local
 ```
 
 Tidak ada perubahan schema database atau kontrak data: **No migration required**. Docker build/runtime setelah reorganisasi belum diverifikasi bila daemon lokal tidak tersedia; pemeriksaan path/COPY tidak menggantikan build image.
+
+Percobaan instagrapi memakai `config/instagram_crawler.json`, `requirements/instagram.txt`
+dan `deployment/docker/Dockerfile.instagram`. Jalur Chrome memakai
+`config/instagram_browser_crawler.json`, `requirements/instagram-browser.txt` dan
+`deployment/docker/Dockerfile.instagram-browser`, dengan Node/CLI/Chrome tersendiri. Lihat
+[panduan Instagram](crawler/INSTAGRAM_CRAWLER.md). `config/auth.json` berisi rahasia
+lokal dan diabaikan Git; sesi di `output/instagram/session.json` baru dibuat setelah
+login berhasil. Profil browser khusus berada di `output/instagram_browser/chrome_profile`.
+Trial Chrome lama mengambil 76 post/910 komentar sebelum dihentikan pengguna.
+Integrasi Instagram dalam SocialCrawler 1.5 kini tersedia; preset Instagram-only
+`config/social_crawler_instagram_3h.json` menjalankan target 1.000 post dalam tiga jam.
+Model/dashboard tiga platform sedang disiapkan; konfigurasi aktif baru diganti setelah gate model lolos. Pemindahan tiga metode seleksi/Excel ke SocialExportMixin mempertahankan
+perilaku exporter YouTube/Reddit.
+
+`MachineLearning/topic_narratives.py` menangani transport/validasi Gemini untuk tahap `SocialNLPClusterer.generate_topic_narratives()`. CSV masuk direktori model versi baru; dashboard membaca hasil tanpa key. Panduan operasional: `docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md`.

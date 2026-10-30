@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/.prettierrc.json"
 type: "code"
-community: "Community None"
+community: "Workspace React Crawler"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Workspace_React_Crawler
 ---
 
 # trailingComma
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.prettierrc.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler

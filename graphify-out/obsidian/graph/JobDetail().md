@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/JobDetail.tsx"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # JobDetail()
@@ -21,4 +21,4 @@ tags:
 - [[useApp()]] - `calls` [EXTRACTED]
 - [[useUrlState()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

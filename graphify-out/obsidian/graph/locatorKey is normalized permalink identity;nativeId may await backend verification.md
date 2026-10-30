@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Kontrak tujuh sumber"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # locatorKey is normalized permalink identity;nativeId may await backend verification
@@ -16,4 +16,4 @@ tags:
 - [[Frontend URL review and minat-studi-v1 survey formCSVXLSX workflows]] - `conceptually_related_to` [INFERRED]
 - [[Native social IDs and survey keys preserve source provenance]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/PRD_Workspace_Crawler

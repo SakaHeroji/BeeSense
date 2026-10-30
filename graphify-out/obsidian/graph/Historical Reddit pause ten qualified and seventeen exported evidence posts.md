@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "rationale"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "## Jeda Reddit setelah HTTP 429"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Historical Reddit pause: ten qualified and seventeen exported evidence posts
@@ -19,4 +19,4 @@ tags:
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 - [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

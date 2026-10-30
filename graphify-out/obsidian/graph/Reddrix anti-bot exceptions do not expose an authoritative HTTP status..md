@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Community None"
-location: "L198"
+community: "Alur Akuisisi Sosial Terpadu"
+location: "L199"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Reddrix anti-bot exceptions do not expose an authoritative HTTP status.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[reddrix_error_receipt()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

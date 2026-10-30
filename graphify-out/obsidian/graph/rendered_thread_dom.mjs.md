@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/rendered_thread_dom.mjs"
 type: "code"
-community: "Community None"
+community: "Ekstraksi DOM Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Ekstraksi_DOM_Reddit
 ---
 
 # rendered_thread_dom.mjs
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[captureRenderedThread()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Ekstraksi_DOM_Reddit

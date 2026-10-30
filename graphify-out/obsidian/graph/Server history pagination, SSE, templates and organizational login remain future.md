@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/API_CONTRACT.md"
 type: "concept"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Aturan server"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Server history pagination, SSE, templates and organizational login remain future
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Expected typed frontend API contract; backend implementation pending]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/PRD_Workspace_Crawler

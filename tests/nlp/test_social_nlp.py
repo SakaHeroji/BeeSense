@@ -104,6 +104,7 @@ class NLPTests(unittest.TestCase):
         cls.input = cls.root / "source.xlsx"
         fixture(cls.input, duplicate=True)
         cls.config = {
+            "gemini": {"enabled": False},
             "target_topics": None,
             "cache_dir": str(cls.root / "cache"),
             "dbscan": {"eps": [0.05, 0.1, 0.2], "min_samples": [3]},

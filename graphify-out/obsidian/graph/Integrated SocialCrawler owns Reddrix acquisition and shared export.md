@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Arsitektur BeeSense.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "# Arsitektur BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Integrated SocialCrawler owns Reddrix acquisition and shared export
@@ -19,4 +19,4 @@ tags:
 - [[Reddrix normalization,display,iterator and worker owned by main core]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

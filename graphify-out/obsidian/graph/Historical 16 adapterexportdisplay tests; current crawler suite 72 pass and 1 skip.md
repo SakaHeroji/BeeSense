@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "concept"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L33-L35"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Historical 16 adapter/export/display tests; current crawler suite 72 pass and 1 skip
@@ -16,4 +16,4 @@ tags:
 - [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - `references` [EXTRACTED]
 - [[Integrated offline tests and macOS lifecycle scope]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

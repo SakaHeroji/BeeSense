@@ -1,0 +1,97 @@
+{
+  "project_id": "university-intelligence",
+  "since": "2025-10-27T10:17:00+07:00",
+  "until": "2026-10-27T10:17:00+07:00",
+  "include_keywords": [
+    "kuliah",
+    "kampus",
+    "universitas",
+    "beasiswa",
+    "jurusan"
+  ],
+  "exclude_keywords": [
+    "judi",
+    "slot gacor",
+    "politik",
+    "politikus",
+    "politik indonesia",
+    "politik luar negeri",
+    "politik internasional",
+    "politik nasional",
+    "politik lokal",
+    "politik global",
+    "politik dunia",
+    "politik regional",
+    "politik partai",
+    "politik pemerintahan",
+    "politik presiden",
+    "politik menteri",
+    "politik kabinet",
+    "politik legislatif",
+    "politik eksekutif",
+    "politik yudikatif",
+    "mbg",
+    "makan bergizi gratis",
+    "makan bergizi",
+    "makan siang gratis",
+    "kopdes",
+    "koperasi desa merah putih",
+    "koperasi kelurahan merah putih",
+    "koperasi desa/kelurahan merah putih",
+    "koperasi merah putih",
+    "kdmp",
+    "kkmp",
+    "ijazah jokowi",
+    "ijazah palsu jokowi",
+    "ijazah joko widodo",
+    "ijazah palsu joko widodo",
+    "ijazah gibran",
+    "ijazah palsu gibran",
+    "dpr",
+    "dprd",
+    "dewan perwakilan rakyat"
+  ],
+  "include_mode": "any",
+  "delay": {
+    "mode": "fixed",
+    "seconds": 2
+  },
+  "timeout_seconds": 90,
+  "total_seconds": 1800,
+  "platforms": {
+    "instagram": {
+      "enabled": true,
+      "urls": [],
+      "hashtags": [
+        "kuliah",
+        "kampus",
+        "universitas",
+        "beasiswa",
+        "jurusan"
+      ],
+      "min_posts": 1000,
+      "min_comments_per_post": 10,
+      "max_posts": 4000,
+      "max_candidates": 6000,
+      "max_comments": 100,
+      "max_replies": 30,
+      "max_replies_per_thread": 10,
+      "search_results": 50,
+      "max_search_pages": 150,
+      "search_tab": "recent",
+      "rate_limit_cooldown_seconds": 360,
+      "rate_limit_max_retries": 3
+    }
+  },
+  "exclude_existing_datasets": [
+    "outputs/social_20261028_01"
+  ],
+  "backend": "browser",
+  "browser": {
+    "profile_dir": "output/instagram_browser/chrome_profile",
+    "session": "beesense-instagram",
+    "headed": true,
+    "max_scrolls": 12,
+    "scroll_delay_seconds": 2
+  }
+}

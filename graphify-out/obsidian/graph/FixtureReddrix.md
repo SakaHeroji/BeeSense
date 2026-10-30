@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L27"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # FixtureReddrix
@@ -19,4 +19,4 @@ tags:
 - [[spawn_reddrix_fixture()]] - `indirect_call` [INFERRED]
 - [[test_social_crawler_reddrix.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_None
+#graphify/code #graphify/INFERRED #community/Alur_Akuisisi_Sosial_Terpadu

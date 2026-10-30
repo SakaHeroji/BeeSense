@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Community None"
-location: "L797"
+community: "Ringkasan Topik Gemini"
+location: "L810"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Ringkasan_Topik_Gemini
 ---
 
 # Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._merge_topics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Ringkasan_Topik_Gemini

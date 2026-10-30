@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/DELIVERY.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# Delivery dan Audit UI UX"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # React frontend and simulation verified; production acquisition integration unavailable
@@ -24,4 +24,4 @@ tags:
 - [[Late plan, URL and survey validation is ignored after input changes]] - `references` [EXTRACTED]
 - [[Production release waits for APIworkeraccessexport and survey adapter integration]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

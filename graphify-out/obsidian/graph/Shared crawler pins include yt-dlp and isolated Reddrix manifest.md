@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/crawler.txt"
 type: "document"
-community: "Crawler Selenium Terisolasi"
+community: "Akuisisi Reddit Reddrix"
 location: "L1-L3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Shared crawler pins include yt-dlp and isolated Reddrix manifest
@@ -19,4 +19,4 @@ tags:
 - [[Relocated combined crawler image runs package module as UID10001]] - `references` [EXTRACTED]
 - [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/document #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Community None"
+community: "Adapter Akuisisi YouTube"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # social_common.py
@@ -33,4 +33,4 @@ tags:
 - [[validate_row()_1]] - `contains` [EXTRACTED]
 - [[verify_descriptor()_1]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

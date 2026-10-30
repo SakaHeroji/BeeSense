@@ -1,5 +1,32 @@
 # SocialCrawler
 
+## Integrasi Instagram 1.5
+
+Instagram sekarang memakai scheduler, filter root, deduplikasi native ID, audit dan
+ekspor Excel SocialCrawler yang sama. Worker/adapter bersumber dari
+`instagram_crawler.py`; backend `browser` memakai profil Chrome persisten yang
+sudah login manual. Backend `instagrapi` tetap opsional, dengan sesi lokal eksplisit.
+Konfigurasi default YouTube/Reddit tetap tersedia. Run yang hanya mengambil Instagram:
+
+```sh
+python -m Crawler.Backend.social_crawler \
+  --config config/social_crawler_instagram_3h.json \
+  --output-dir outputs/social_instagram_run_baru
+```
+
+Preset ini **hanya mengaktifkan Instagram**, 10.800 detik, target 1.000 root dengan
+minimum 10 komentar unik. Hashtag discovery diperluas tanpa mengubah filter include/
+exclude, batas tanggal root atau kontrak output. Post lama dari baseline dan dua
+percobaan Instagram dikecualikan sebelum request. Target tidak menjamin hasil atau
+kelengkapan komentar. `instagram_browser` mengatur profil, nama sesi CLI, mode headed,
+batas scroll dan jeda. CLI @playwright/cli 0.1.22 serta Chrome diperlukan; lihat
+[panduan Instagram](INSTAGRAM_CRAWLER.md). Image Instagram browser memakai entry
+SocialCrawler, sedangkan image crawler lama mempertahankan runtime YouTube/Reddit.
+
+Lima uji integrasi offline mencakup Instagram-only tanpa memanggil sumber lain,
+baseline skip sebelum worker, cursor discovery, dan provenance gabungan dengan
+YouTube. Semua fixture tetap synthetic. Tidak ada perubahan skema database.
+
 [SocialCrawler](../../Crawler/Backend/social_crawler.py) menggabungkan YouTube melalui yt-dlp dan Reddit melalui **Reddrix 1.2.14**. Normalisasi, factory browser adaptif, worker Reddrix dan coordinator berada di `Crawler/Backend/social_crawler.py`; kontrak serta exporter audit tetap memakai [modul Reddit](../../Crawler/Backend/Reddit/crawl_reddit_single.py). Konfigurasi gabungannya berada dalam satu [social_crawler.json](../../config/social_crawler.json). Tidak memerlukan peta Obsidian untuk mengeksekusi crawler.
 
 ## Pemakaian
@@ -98,6 +125,11 @@ Target, kekurangan minimum dan alasan berhenti tersedia dalam summary.json. TARG
 
 ## Reddit
 
+Percobaan Instagram berada pada [InstagramCrawler standalone](INSTAGRAM_CRAWLER.md).
+Backend tersebut belum diaktifkan pada SocialCrawler karena login live ditolak.
+Seleksi root dan proyeksi Excel sekarang dibagi melalui `SocialExportMixin` di
+`Crawler/Backend/social_export.py`; kontrak dan perilaku ekspor tetap sama.
+
 Mulai SocialCrawler **1.4.0**, backend default dan konfigurasi utama memakai **Reddrix**. `RedditCrawler` di `Crawler/Backend/reddit_crawler.py` menjadi pembungkus Reddit-only yang memakai implementasi sama, tanpa duplikasi worker. YouTube tetap yt-dlp; kedua platform berbagi batas waktu, scheduler, filter, indeks baseline, dan satu bundle Excel/JSONL. `config/social_crawler.json` tetap 10800 detik untuk kedua platform, sedangkan `config/reddit_crawler.json` tetap 1800 detik untuk percobaan Reddit saja. Integrasi ini tidak memulai crawling baru atau mengubah hasil percobaan sebelumnya.
 
 `reddrix.display_mode: auto` memilih native headless di macOS meskipun ada XQuartz, virtual display pada Linux dengan Xvfb di PATH, dan native headless pada Linux tanpa Xvfb/Windows. Mode `headless` selalu native; `virtual` memerlukan Linux+Xvfb dan ditolak sebelum crawling bila tidak didukung. Factory Camoufox khusus modul Reddrix berlaku pada sesi awal/refresh. Plan menampilkan backend efektif dan mode display, sementara Sources/Contents mencatat provenance yang berbeda untuk yt-dlp dan Reddrix.
@@ -106,7 +138,7 @@ Mulai SocialCrawler **1.4.0**, backend default dan konfigurasi utama memakai **R
 python -m Crawler.Backend.social_crawler --display-mode headless --dry-run
 ```
 
-Reddrix memakai akses web tanpa Data API/OAuth, `stealth=False`, tanpa solver CAPTCHA atau proxy berbayar. Pencarian Reddrix memakai relevance meskipun `search_sort` disetel new; sort komentar tidak diekspos. Jeda BeeSense berlaku antaroperasi, retry internal library tetap terikat hard deadline subprocess. Exception anti-bot tanpa status tepercaya dicatat `ACCESS_BLOCKED`, bukan diasumsikan HTTP429/CAPTCHA. Hanya 429 yang terverifikasi memicu cooldown/Retry-After coordinator. Tidak ada fallback otomatis ke backend lama. `captcha_wait_seconds`/profil Chrome adalah opsi khusus backend Playwright, bukan mekanisme interaksi CAPTCHA Reddrix. Lihat [panduan Reddrix](REDDIT_CRAWLER.md).
+Reddrix memakai akses web tanpa Data API/OAuth, `stealth=False`, tanpa solver CAPTCHA atau proxy berbayar. Pencarian Reddrix memakai relevance meskipun `search_sort` disetel new; sort komentar tidak diekspos. Jeda BeeSense berlaku antaroperasi, retry internal library tetap terikat hard deadline subprocess. Exception anti-bot tanpa status tepercaya dicatat `ACCESS_BLOCKED`, bukan diasumsikan HTTP 429/CAPTCHA. Hanya 429 yang terverifikasi memicu cooldown/Retry-After coordinator. Tidak ada fallback otomatis ke backend lama. `captcha_wait_seconds`/profil Chrome adalah opsi khusus backend Playwright, bukan mekanisme interaksi CAPTCHA Reddrix. Lihat [panduan Reddrix](REDDIT_CRAWLER.md).
 
 Backend lama tetap dapat dipilih eksplisit untuk kompatibilitas: html memakai halaman publik, playwright memakai Chrome host/Playwright CLI, checkpoint memerlukan capture pengguna sendiri. `import_checkpoint_dir` default null dan ditolak bila dipadukan dengan backend Reddrix. CAPTCHA pada backend Playwright ditampilkan di Chrome headed dan ditunggu sesuai opsi manualnya. Profil/capture lokal berada di output/ dan diabaikan Git.
 
@@ -230,3 +262,31 @@ Pengambilan dimulai 09:59:53 WIB dan menerima sinyal berhenti pada 12:59:53 WIB.
 Status campaign **PARTIAL**: target 1.000 post memenuhi syarat per platform belum tercapai. Reddit menghabiskan kandidat dari kueri segmen terakhir. Seluruh lima segmen dipertahankan, termasuk root parsial; penggabungan tidak menghitung root tersebut sebagai qualified. Total terdapat 1.286 post baru dan 19.364 komentar/balasan, dengan pemeriksaan ID agar terpisah dari baseline 50 video +181 thread. Pada dua segmen versi 1.3 tercatat 7 event HTTP 429 dan 6 retry otomatis; batas retry diterapkan per run dan seluruh kelanjutan tetap memakai deadline awal.
 
 Bundle konsolidasi berada di `outputs/social_20261029_1000_3h/`; workbook untuk analisis gabungan berada di `outputs/social_20261029_combined/social_data.xlsx`. Provenans penggabungan dicatat dalam `output/combined_dataset_20261029.json`. Perintah dan ringkasan audit lokal ini tidak mengubah workbook baseline.
+
+## Pemulihan HTTP 429 dan Chrome (30 Oktober)
+
+Run pertama berhenti PARTIAL/CONSECUTIVE_SOURCE_ERRORS setelah 2.940 detik: 248 post,
+2.128 komentar, 130 root dengan ≥10 komentar. Batas tiga jam dan target 1.000 belum
+tercapai. Percobaan pemulihan kedua 25 detik menghasilkan0 record. Pengguna kemudian
+mengonfirmasi HTTP 429 pada Chrome; error CLI sebelumnya hanya merekam kegagalan
+navigasi, sehingga tidak boleh diklaim sebagai status429 terukur oleh crawler lama.
+
+SocialCrawler 1.5.1 kini menetapkan jeda Instagram360 detik dan maksimum3 retry,
+seperti preset Reddit. Waktu tunggu memakai nilai terbesar antara konfigurasi dan
+Retry-After. Retry mempertahankan operasi/URL yang sama dan tidak melampaui deadline
+global awal16.28WIB. Konfigurasi resume mengecualikan seluruh post tersimpan dan
+memakai sisa anggaran; preset utama tetap10.800 detik/target 1.000. Tidak ada crawling
+YouTube/Reddit baru, solver, rotasi identitas atau password login ulang.
+
+Browser mengamati status429 dari respons Instagram, termasuk respons main-document
+CDP ketika Chrome melempar ERR_HTTP_RESPONSE_CODE_FAILURE sebelum mengembalikan
+Response. Hanya status dan Retry-After dipilih; cookie/header otentikasi tidak dicatat.
+Respons429 GraphQL yang diminta halaman Instagram juga menghentikan operasi sebelum
+scroll berikutnya. Error navigasi umum tetap SOURCE_ERROR, bukan diasumsikan429.
+
+Pada429, challenge, timeout atau errorCLI, Chrome dibiarkan terbuka untuk pemeriksaan.
+Penutupan sebelumnya berasal dari finally crawler, bukan pembersihan macOS. Tujuh
+belas tes terfokus memeriksa parsing/status/header, kode browser hasil generator,
+privasi header, batasretry, Retry-After lebih lama, deadline dan pencegahan duplikasi.
+Run03 dijadwalkan setelah cooldown awal berakhir14.47WIB. Hasil final masih menunggu;
+training sementara ditunda, lalu pipeline akan menggabungkan ke direktori versi02.

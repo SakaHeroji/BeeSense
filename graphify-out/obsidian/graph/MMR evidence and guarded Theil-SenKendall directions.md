@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Mengukur pola waktu"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # MMR evidence and guarded Theil-Sen/Kendall directions
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

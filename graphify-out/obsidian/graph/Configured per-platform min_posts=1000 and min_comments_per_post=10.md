@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_crawler.json"
 type: "rationale"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "$.platforms"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Configured per-platform min_posts=1000 and min_comments_per_post=10
@@ -16,4 +16,4 @@ tags:
 - [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - `conceptually_related_to` [INFERRED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

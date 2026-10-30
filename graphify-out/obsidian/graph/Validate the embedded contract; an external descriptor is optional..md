@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Community None"
+community: "Bundle Excel dan Provenans"
 location: "L127"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Bundle_Excel_dan_Provenans
 ---
 
 # Validate the embedded contract; an external descriptor is optional.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_descriptor()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans

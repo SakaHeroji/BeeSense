@@ -1,0 +1,26 @@
+*
+!deployment/
+!deployment/docker/
+!deployment/docker/Dockerfile.instagram
+!requirements/
+!requirements/instagram.txt
+!Crawler/
+!Crawler/__init__.py
+!Crawler/Backend/
+!Crawler/Backend/__init__.py
+!Crawler/Backend/instagram_crawler.py
+!Crawler/Backend/social_export.py
+!Crawler/Backend/Reddit/
+!Crawler/Backend/Reddit/__init__.py
+!Crawler/Backend/Reddit/crawl_reddit_single.py
+!config/
+!config/instagram_crawler.json
+
+# Local credentials and sessions never enter any image build context.
+config/auth.json
+.streamlit/secrets.toml
+**/.env
+**/.env.*
+**/*session*.json
+**/__pycache__/
+Crawler/Frontend/

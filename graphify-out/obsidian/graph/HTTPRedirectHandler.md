@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Validasi Redirect dan Kesalahan"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Validasi_Redirect_dan_Kesalahan
 ---
 
 # HTTPRedirectHandler
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RestrictedRedirect]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan

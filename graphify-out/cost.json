@@ -173,6 +173,69 @@
       "ast_tokens": 0,
       "files": 80,
       "scope": "Project folder reorganization, package paths, streamlit_apps.py entrypoint and Obsidian"
+    },
+    {
+      "date": "2026-10-30T04:17:55.644415+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 21,
+      "scope": "InstagramCrawler standalone trial, shared Excel export, local auth exclusions and Obsidian"
+    },
+    {
+      "date": "2026-10-30T04:35:26.943984+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 22,
+      "scope": "InstagramCrawler standalone trial, shared Excel export, local auth exclusions and Obsidian"
+    },
+    {
+      "date": "2026-10-30T04:52:07.813610+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 22,
+      "scope": "InstagramCrawler standalone trial, shared Excel export, local auth exclusions and Obsidian"
+    },
+    {
+      "date": "2026-10-30T04:53:09.066341+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 22,
+      "scope": "InstagramCrawler standalone trial, shared Excel export, local auth exclusions and Obsidian"
+    },
+    {
+      "date": "2026-10-30T05:21:47.463943+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 22,
+      "scope": "InstagramCrawler standalone trial, shared Excel export, local auth exclusions and Obsidian"
+    },
+    {
+      "date": "2026-10-30T07:20:16.021700+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 50,
+      "scope": "Instagram integration, native dataset dedup, three-platform dashboard and Gemini topic CSV; crawl still running"
+    },
+    {
+      "date": "2026-10-30T08:45:54.981647+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 55,
+      "scope": "Final merged model and context-grounded Gemini narratives; deployment pending validated CSV"
     }
   ],
   "total_input_tokens": 0,

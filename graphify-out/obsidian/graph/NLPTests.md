@@ -12,8 +12,8 @@ tags:
 # NLPTests
 
 ## Connections
-- [[.setUpClass()_1]] - `method` [EXTRACTED]
-- [[.tearDownClass()_1]] - `method` [EXTRACTED]
+- [[.setUpClass()_2]] - `method` [EXTRACTED]
+- [[.tearDownClass()_2]] - `method` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - `method` [EXTRACTED]

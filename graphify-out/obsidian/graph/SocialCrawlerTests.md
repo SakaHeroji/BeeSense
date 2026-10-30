@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # SocialCrawlerTests
@@ -55,4 +55,4 @@ tags:
 - [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

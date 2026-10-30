@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Validasi Redirect dan Kesalahan"
 location: "L572"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Validasi_Redirect_dan_Kesalahan
 ---
 
 # RestrictedRedirect
@@ -18,4 +18,4 @@ tags:
 - [[HTTPRedirectHandler]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Validasi_Redirect_dan_Kesalahan

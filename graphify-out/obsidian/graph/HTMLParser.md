@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Parser DOM Terbatas"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Parser_DOM_Terbatas
 ---
 
 # HTMLParser
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BoundedDom]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Parser_DOM_Terbatas

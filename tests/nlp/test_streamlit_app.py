@@ -22,7 +22,11 @@ class StreamlitTests(unittest.TestCase):
         fixture(source, duplicate=True)
         pipeline = (
             SocialNLPClusterer(
-                {"cache_dir": str(root / "cache"), "target_topics": None},
+                {
+                    "cache_dir": str(root / "cache"),
+                    "target_topics": None,
+                    "gemini": {"enabled": False},
+                },
                 encoder=encoder,
             )
             .prepare_excel(source)

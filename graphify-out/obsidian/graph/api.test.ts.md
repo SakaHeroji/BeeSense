@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/test/api.test.ts"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # api.test.ts
@@ -19,4 +19,4 @@ tags:
 - [[initialConfig()]] - `imports` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

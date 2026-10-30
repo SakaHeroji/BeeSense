@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "rationale"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Panel topik terpilih"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Selected-topic explanation panel links cards, frequency graphs, time shares and source evidence
@@ -18,4 +18,4 @@ tags:
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `conceptually_related_to` [INFERRED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit

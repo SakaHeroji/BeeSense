@@ -7,6 +7,13 @@ tags: [beesense, crawler, nlp, streamlit]
 
 SocialCrawler → Excel → SocialNLPClusterer → artifact terverifikasi → SocialNLPStreamlitApp.
 
+[[InstagramCrawler instagrapi]] kini terintegrasi ke SocialCrawler 1.5 melalui worker
+Chrome/login manual atau instagrapi opsional. InstagramAdapter memakai kontrak bersama;
+SocialExportMixin menyediakan seleksi root/Excel. Preset tiga jam hanya mengambil
+Instagram, kemudian dataset 27–30 Oktober dideduplikasi berdasarkan ID native dan
+model 20 topik/c_v ≥0,4 dilatih ulang. Statistik/penjelasan/dashboard mendukung tiga
+platform. Snapshot aktif sudah beralih ke model 30 Oktober yang lolos gate; frontend REST masih simulasi.
+
 [[Frontend React Crawler]] menambahkan workspace React terpisah di `Crawler/Frontend`, berdasarkan [[PRD Frontend Crawler]]. Typed adapter memisahkan demo sintetis dari API/worker yang masih perlu diimplementasikan; aplikasi React tidak menjalankan crawler dari tab. UI mencakup tujuh sumber (YouTube, Reddit, Instagram, TikTok, Threads, Facebook, X/Twitter), dengan capability gating untuk lima adapter baru yang belum diimplementasikan. Survei memakai kontrak baru, sementara alur workbook sosial dan Dashboard Streamlit tetap terpisah.
 
 [[Crawler Selenium|SocialCrawlerSelenium]] menyediakan pengambilan Chrome melalui Selenium untuk kedua platform, dengan filter dan exporter SocialCrawler yang sama.
@@ -23,7 +30,7 @@ Kutipan sumber EXTRACTED; interpretasi pola dan edge cosine INFERRED. Lihat [met
 
 Metodologi lengkap, parameter dan pemilihan algoritma: [[Metodologi Machine Learning Social NLP]].
 
-Run aktif `outputs/nlp_20261029_combined_topics20_01`: 20 topik, rata-rata c_v 0,4720. Workbook gabungan baseline + akuisisi baru diperiksa ID/checksum melalui scripts/merge_social_datasets.py. Embedding baru dihitung untuk seluruh korpus, diikuti fitting UMAP/DBSCAN dan Ward; dbscan_cluster_id dan mapping tetap disimpan.
+Run aktif `outputs/nlp_20261030_instagram_topics20_02`: 20 topik, c_v 0,4315, dataset 33.034 record unik danCSV Gemini 20 topik. Source/nativeID/checksum sudah diverifikasi. Snapshot29 Oktober tetap dipertahankan sebagai arsip.
 
 [[Crawling 1000 Post Baru]] memakai scheduler round robin dengan satu deadline, indeks ID post historis read-only dan penantian CAPTCHA manual. Ekspor baru tetap memakai kontrak delapan sheet serta workbook ringkas; crawler host tidak mengubah artifact dashboard aktif.
 
@@ -34,3 +41,5 @@ Runtime deployment dipisahkan: `requirements.txt` → `requirements/dashboard.tx
 [[RedditCrawler Reddrix]] kini terintegrasi dalam SocialCrawler: iterator async Reddrix dalam subprocess dengan hard deadline, kemudian seleksi, deduplikasi baseline dan BundleSink yang sama dengan YouTube. Konfigurasi display auto memilih native headless di macOS atau Linux tanpa Xvfb, serta virtual display di Linux dengan Xvfb. API platform resmi tidak dipakai. Selenium tetap entry point terpisah; backend Playwright/HTML/checkpoint lama tersedia eksplisit. Integrasi belum terhubung ke frontend web dan tidak mengubah artifact dashboard.
 
 [[Struktur Proyek]] menjelaskan lokasi package, config, dependency, dokumentasi dan Docker setelah reorganisasi. Entry point Cloud tetap streamlit_apps.py di root. Verifikasi Docker yang disebut pada catatan lama bersifat historis; image dengan struktur baru belum dibangun karena daemon lokal tidak aktif.
+
+[[Topik Gemini]] melengkapi pipeline NLP: setelah gate 20 topik/c_v ≥0,4, Gemini menghasilkan satu kalimat dan deskripsi dari 10 keyword berbobot tertinggi per topik. CSV beserta provenance/checksum masuk bundle; dashboard hanya membacanya. Key tetap di auth.json lokal, tidak dipublikasikan.

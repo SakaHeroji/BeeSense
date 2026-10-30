@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/DELIVERY.md"
 type: "rationale"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "## Bukti verifikasi"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
-  - community/Community_None
+  - graphify/EXTRACTED
+  - community/PRD_Workspace_Crawler
 ---
 
 # Browser actual widths400/444px;requested360px remains unproven
@@ -15,4 +15,4 @@ tags:
 - [[Acceptance targets keyboard access, 3607681280 layouts and safe retry]] - `conceptually_related_to` [INFERRED]
 - [[React frontend and simulation verified; production acquisition integration unavailable]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/PRD_Workspace_Crawler

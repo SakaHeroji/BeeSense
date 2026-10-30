@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Machine Learning/README.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# PRD Machine Learning"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Machine Learning PRD remains unwritten; Crawler handoff dependencies listed
@@ -18,4 +18,4 @@ tags:
 - [[NLP adapters for five new social sources must be validated before handoff]] - `references` [EXTRACTED]
 - [[Survey NLP requires an explicit schema adapter preserving questionrolepermission]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

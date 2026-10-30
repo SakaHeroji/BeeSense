@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/README.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# PRD Frontend"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Frontend PRD index:Crawler detailed; NLP and Dashboard PRDs remain future
@@ -19,4 +19,4 @@ tags:
 - [[History and dataset detail are supporting views under two menus]] - `references` [EXTRACTED]
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

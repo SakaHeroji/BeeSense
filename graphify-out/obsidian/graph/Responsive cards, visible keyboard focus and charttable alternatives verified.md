@@ -1,12 +1,12 @@
 ---
 source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "rationale"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Interaksi dan aksesibilitas"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Responsive cards, visible keyboard focus and chart/table alternatives verified
@@ -15,4 +15,4 @@ tags:
 - [[._css()]] - `implements` [INFERRED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Eksplorasi_Dashboard_Streamlit

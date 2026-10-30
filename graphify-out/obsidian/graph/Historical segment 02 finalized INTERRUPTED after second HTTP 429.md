@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "concept"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "## Kelanjutan kedua dan pemantauan berkala"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Historical segment 02 finalized INTERRUPTED after second HTTP 429
@@ -16,4 +16,4 @@ tags:
 - [[Historical segment 03 targets 994 YouTube983 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

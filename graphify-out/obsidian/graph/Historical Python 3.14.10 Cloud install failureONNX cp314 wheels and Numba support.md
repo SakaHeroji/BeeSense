@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "### Error instalasi pada Python 3.14"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Historical Python 3.14.10 Cloud install failure:ONNX cp314 wheels and Numba support
@@ -18,4 +18,4 @@ tags:
 - [[Root Cloud requirements include relocated dashboard-only runtime]] - `references` [EXTRACTED]
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

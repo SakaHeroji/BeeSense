@@ -1,17 +1,17 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Community None"
+community: "Coherence dan Quality Gate"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Coherence_dan_Quality_Gate
 ---
 
 # Historical old-corpus baselines retained; no cross-corpus quality comparison
 
 ## Connections
-- [[Combined-corpus mean c_v 0.4720034333858867 meets 0.4]] - `references` [EXTRACTED]
+- [[Historical29October macro c_v0.4720034334]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Coherence_dan_Quality_Gate

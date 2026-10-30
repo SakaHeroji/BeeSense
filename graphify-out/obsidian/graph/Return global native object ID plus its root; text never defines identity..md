@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "rationale"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "L39"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Return global native object ID plus its root; text never defines identity.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[identity()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Topik_dan_Verifikasi_NLP

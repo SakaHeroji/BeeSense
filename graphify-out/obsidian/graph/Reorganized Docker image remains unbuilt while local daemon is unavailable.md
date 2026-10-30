@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L13"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Reorganized Docker image remains unbuilt while local daemon is unavailable
@@ -15,4 +15,4 @@ tags:
 - [[Current offline tests pass; actual Linux and reorganized Docker image unverified]] - `semantically_similar_to` [INFERRED]
 - [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Akuisisi_Reddit_Reddrix

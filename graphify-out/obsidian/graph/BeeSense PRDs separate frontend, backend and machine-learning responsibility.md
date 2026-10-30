@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/README.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# PRD BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # BeeSense PRDs separate frontend, backend and machine-learning responsibility
@@ -24,4 +24,4 @@ tags:
 - [[Reactdemo implementation exists while web acquisition backend is still required]] - `references` [EXTRACTED]
 - [[Three planned frontend experiences; shared versus separate deployment undecided]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

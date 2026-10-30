@@ -21,8 +21,16 @@ from urllib.parse import parse_qs, urlparse
 import numpy as np
 import pandas as pd
 
+if __package__:
+    from . import topic_narratives
+else:
+    import topic_narratives
+
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "2.2.0"
+VERSION = "2.4.0"
+DEFAULT_TARGET_TOPICS = 20
+DEFAULT_MIN_COHERENCE_CV = 0.4
+SUPPORTED_PLATFORMS = ("youtube", "reddit", "instagram")
 ENCODER_CACHE_VERSION = "2.0.0"  # Coherence changes do not change SBERT encoding.
 SCHEMA_VERSION = "beesense-sentence-clusters:2"
 LEGACY_SCHEMA_VERSION = "beesense-sentence-clusters:1"
@@ -72,6 +80,10 @@ class SocialNLPClusterer:
 
     def __init__(self, config=None, *, encoder=None, progress=None):
         base = json.loads((ROOT / "config/social_nlp.json").read_text())
+        base.setdefault("target_topics", DEFAULT_TARGET_TOPICS)
+        base.setdefault("coherence", {"metric": "c_v", "topn": 10, "window_size": 110})
+        base["coherence"].setdefault("min_score", DEFAULT_MIN_COHERENCE_CV)
+        base.setdefault("gemini", deepcopy(topic_narratives.DEFAULTS))
         if isinstance(config, (str, Path)):
             config = json.loads(Path(config).read_text())
         if config:
@@ -184,6 +196,7 @@ class SocialNLPClusterer:
         ):
             raise ValueError("Invalid graph bounds")
         self._validate_explanation_options(c["explanation"])
+        topic_narratives.validate_options(c["gemini"])
         target = c["target_topics"]
         if target is not None and (type(target) is not int or not 2 <= target <= 500):
             raise ValueError("target_topics must be null or an integer in 2..500")
@@ -1043,7 +1056,7 @@ class SocialNLPClusterer:
             average_length / np.maximum(np.asarray(counts.sum(axis=0)).ravel(), 1)
         )
         ctfidf = normalize(counts, norm="l1", axis=1).multiply(idf).tocsr()
-        result = {}
+        result, weighted = {}, {}
         for cid in ids:
             scores = ctfidf[mapping[cid]].toarray().ravel()
             ranked = np.argsort(scores)[::-1]
@@ -1051,6 +1064,14 @@ class SocialNLPClusterer:
             result[int(cid)] = self._term_vocabulary[
                 ranked[scores[ranked] > 0][:12]
             ].tolist()
+            weighted[int(cid)] = [
+                {
+                    "term": str(self._term_vocabulary[index]),
+                    "weight": float(scores[index]),
+                }
+                for index in ranked[scores[ranked] > 0][:12]
+            ]
+        self._topic_term_weights = weighted
         return result
 
     def score_coherence(self, topic_terms):
@@ -1188,6 +1209,7 @@ class SocialNLPClusterer:
                     "cluster_id": int(cid),
                     "label": " / ".join(chosen) or f"Topik {cid}",
                     "terms": top,
+                    "term_weights": self._topic_term_weights[cid],
                     "coherence_cv": scores_by_id[cid],
                     "unique_sentences": len(indices),
                     "occurrences": int(occurrence_counts.get(cid, 0)),
@@ -1314,6 +1336,21 @@ class SocialNLPClusterer:
             found = re.search(r"/comments/([A-Za-z0-9]+)/", parsed.path + "/")
             if found:
                 return "reddit:" + found[1], "native_url"
+        if platform == "instagram" and host in {"instagram.com", "www.instagram.com"}:
+            found = re.fullmatch(
+                r"/(?:[\w.]+/)?(?:p|reel|tv)/([A-Za-z0-9_-]{1,40})/(?:c/[1-9][0-9]*/?)?",
+                parsed.path,
+            )
+            if found:
+                code = found[1]
+                number = 0
+                alphabet = (
+                    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_"
+                )
+                for char in code:
+                    number = number * 64 + alphabet.index(char)
+                if number > 0:
+                    return "instagram:" + str(number), "native_url"
         context = f"{platform}|{row.get('post_title', '')}|{row.get('post_date', '')}"
         return "context:" + sha256(context.encode()).hexdigest()[
             :20
@@ -1493,12 +1530,14 @@ class SocialNLPClusterer:
                 denominator = sum(row["all_comments"] for row in rows)
                 numerator = sum(row["topic_comments"] for row in rows)
                 platforms = {}
-                for platform in ["youtube", "reddit"]:
+                for platform in SUPPORTED_PLATFORMS:
                     total = sum(
-                        row["platforms"][platform]["all_comments"] for row in rows
+                        row["platforms"].get(platform, {}).get("all_comments", 0)
+                        for row in rows
                     )
                     hits = sum(
-                        row["platforms"][platform]["topic_comments"] for row in rows
+                        row["platforms"].get(platform, {}).get("topic_comments", 0)
+                        for row in rows
                     )
                     platforms[platform] = {
                         "all_comments": total,
@@ -1526,7 +1565,7 @@ class SocialNLPClusterer:
             )
             active = [
                 p
-                for p in ["youtube", "reddit"]
+                for p in SUPPORTED_PLATFORMS
                 if previous["platforms"][p]["all_comments"]
                 or recent["platforms"][p]["all_comments"]
             ]
@@ -1789,7 +1828,7 @@ class SocialNLPClusterer:
             or not (frame.sentence_id.map(known) == frame.cluster_id).all()
         ):
             raise ValueError("Occurrence/topic membership mismatch")
-        if not set(frame.platform) <= {"youtube", "reddit"}:
+        if not set(frame.platform) <= set(SUPPORTED_PLATFORMS):
             raise ValueError("Unsupported explanation platform")
         frame["_comment"] = frame.platform + ":" + frame.source_row.astype(str)
         root_keys = [
@@ -1872,7 +1911,7 @@ class SocialNLPClusterer:
                 hits = topic_comments[topic_comments._month == key]
                 count, total = len(hits), len(all_rows)
                 platform_rows = {}
-                for platform in ["youtube", "reddit"]:
+                for platform in SUPPORTED_PLATFORMS:
                     n = int((all_rows.platform == platform).sum())
                     k = int((hits.platform == platform).sum())
                     platform_rows[platform] = {
@@ -1974,7 +2013,7 @@ class SocialNLPClusterer:
                     "dated_comments": len(topic_comments),
                     "platform_comments": {
                         p: int((comments_all_dates.platform == p).sum())
-                        for p in ["youtube", "reddit"]
+                        for p in SUPPORTED_PLATFORMS
                     },
                     "trend": trend,
                     "trend_explanation": narrative,
@@ -2141,6 +2180,32 @@ class SocialNLPClusterer:
         self.fit_seconds = time.monotonic() - started
         return self
 
+    def generate_topic_narratives(self):
+        """Derive Indonesian Gemini labels after topic count and coherence pass."""
+        if not self.config["gemini"]["enabled"]:
+            return self
+        if (
+            len(self.topics) != DEFAULT_TARGET_TOPICS
+            or not self.coherence["target_met"]
+            or self.coherence["macro_mean"] < DEFAULT_MIN_COHERENCE_CV
+        ):
+            raise ValueError(
+                "Gemini requires exactly 20 topics and coherence c_v >= 0.4"
+            )
+        cache = Path(self.config["cache_dir"])
+        if not cache.is_absolute():
+            cache = ROOT / cache
+        self.topic_narratives = topic_narratives.generate(
+            self.topics,
+            self.input_sha256,
+            self.config["gemini"],
+            sentences=self.sentences,
+            root=ROOT,
+            cache_dir=cache,
+            progress=self._event,
+        )
+        return self
+
     def save(self, output_dir=None):
         if not self.topics or "cluster_id" not in self.sentences:
             raise ValueError("Fit and describe clusters before saving")
@@ -2162,6 +2227,16 @@ class SocialNLPClusterer:
             output = ROOT / output
         if output.exists():
             raise FileExistsError("Use a new NLP output directory")
+        if self.config["gemini"]["enabled"]:
+            if not hasattr(self, "topic_narratives"):
+                self.generate_topic_narratives()
+            topic_narratives.validate_rows(
+                self.topic_narratives,
+                self.topics,
+                self.input_sha256,
+                self.config["gemini"]["model"],
+                sentences=self.sentences,
+            )
         output.parent.mkdir(parents=True, exist_ok=True)
         stage = Path(tempfile.mkdtemp(prefix=".nlp-run-", dir=output.parent))
         try:
@@ -2179,6 +2254,10 @@ class SocialNLPClusterer:
             json_write(stage / "topics.json", self.topics)
             json_write(stage / "graph.json", self.graph)
             json_write(stage / "comparison.json", self.comparisons)
+            if self.config["gemini"]["enabled"]:
+                topic_narratives.write_csv(
+                    stage / topic_narratives.CSV_NAME, self.topic_narratives
+                )
             versions = {}
             for name in [
                 "numpy",
@@ -2223,6 +2302,16 @@ class SocialNLPClusterer:
                 "reduction": self.reduction_info,
                 "topic_reduction": getattr(self, "topic_reduction", None),
                 "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
+                "topic_narratives": {
+                    "enabled": self.config["gemini"]["enabled"],
+                    "model": self.config["gemini"]["model"],
+                    "prompt_version": topic_narratives.PROMPT_VERSION,
+                    "input_scope": "Top 10 positive c-TF-IDF keyword weights and up to 10 fitted sentences ranked by centroid cosine similarity per topic",
+                    "interpretation": "AI-generated synthesis of keywords and representative sentences; not a quotation, population estimate or an additional coherence measurement",
+                    "csv": topic_narratives.CSV_NAME
+                    if self.config["gemini"]["enabled"]
+                    else None,
+                },
                 "synthetic": self.model_info.get("test_encoder", False),
             }
             json_write(stage / "summary.json", summary)
@@ -2230,6 +2319,9 @@ class SocialNLPClusterer:
                 stage / "manifest.json",
                 {
                     "schema_version": SCHEMA_VERSION,
+                    "extensions": [topic_narratives.EXTENSION]
+                    if self.config["gemini"]["enabled"]
+                    else [],
                     "files_sha256": {
                         p.name: file_hash(p) for p in stage.iterdir() if p.is_file()
                     },
@@ -2266,6 +2358,15 @@ class SocialNLPClusterer:
         }
         if manifest["schema_version"] == SCHEMA_VERSION:
             required.update({"social_data.parquet", "umap_embeddings.npz"})
+        extensions = manifest.get("extensions", [])
+        if extensions not in (
+            [],
+            [topic_narratives.LEGACY_EXTENSION],
+            [topic_narratives.EXTENSION],
+        ):
+            raise ValueError("Unsupported NLP artifact extension")
+        if extensions:
+            required.add(topic_narratives.CSV_NAME)
         if set(manifest["files_sha256"]) != required:
             raise ValueError("Artifact manifest must cover all required files")
         if verify:
@@ -2278,6 +2379,37 @@ class SocialNLPClusterer:
         }
         for name in ["sentences", "occurrences", "skipped"]:
             result[name] = pd.read_parquet(directory / (name + ".parquet"))
+        enabled = result["summary"].get("topic_narratives", {}).get("enabled", False)
+        if bool(extensions) != enabled:
+            raise ValueError("Gemini artifact extension and summary disagree")
+        if enabled:
+            if (
+                len(result["topics"]) != DEFAULT_TARGET_TOPICS
+                or result["summary"]["coherence"]["macro_mean"]
+                < DEFAULT_MIN_COHERENCE_CV
+            ):
+                raise ValueError(
+                    "Gemini artifact requires 20 topics and coherence >= 0.4"
+                )
+            result["topic_narratives"] = topic_narratives.read_csv(
+                directory / topic_narratives.CSV_NAME,
+                result["topics"],
+                result["summary"],
+                sentences=result["sentences"],
+            )
+            expected_extension = (
+                topic_narratives.LEGACY_EXTENSION
+                if result["topic_narratives"][0]["prompt_version"]
+                == "beesense-topic-id:1"
+                else topic_narratives.EXTENSION
+            )
+            if extensions != [expected_extension]:
+                raise ValueError(
+                    "Gemini artifact extension and prompt version disagree"
+                )
+            result["topic_narratives_csv"] = (
+                directory / topic_narratives.CSV_NAME
+            ).read_bytes()
         if manifest["schema_version"] == SCHEMA_VERSION:
             result["social_data"] = pd.read_parquet(directory / "social_data.parquet")
             with np.load(

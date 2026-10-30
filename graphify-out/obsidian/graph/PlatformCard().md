@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/JobDetail.tsx"
 type: "code"
-community: "Community None"
+community: "Monitor Akuisisi Sintetis"
 location: "L413"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # PlatformCard()
@@ -18,4 +18,4 @@ tags:
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[useApp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

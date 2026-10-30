@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "## Verifikasi dan deployment"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # No database/model/persistent-contract migration
@@ -15,4 +15,4 @@ tags:
 - [[Reddrix trial preserves existing model and frontend boundaries]] - `conceptually_related_to` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

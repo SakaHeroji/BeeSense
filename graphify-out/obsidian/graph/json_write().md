@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Community None"
-location: "L58"
+community: "Pipeline dan Persistensi NLP"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # json_write()
@@ -18,4 +18,4 @@ tags:
 - [[.save_explanations()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

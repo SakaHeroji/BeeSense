@@ -1,18 +1,18 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Community None"
-location: "L119"
+community: "Eksplorasi Dashboard Streamlit"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_23]] - `method` [EXTRACTED]
+- [[.__init__()_29]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -21,6 +21,8 @@ tags:
 - [[._explanation_index()]] - `method` [EXTRACTED]
 - [[._explanation_row_selection()]] - `method` [EXTRACTED]
 - [[._explanations_view()]] - `method` [EXTRACTED]
+- [[._gemini_inputs()]] - `method` [EXTRACTED]
+- [[._gemini_overview()]] - `method` [EXTRACTED]
 - [[._go_to_explanations()]] - `method` [EXTRACTED]
 - [[._go_to_sentences()]] - `method` [EXTRACTED]
 - [[._human_date()]] - `method` [EXTRACTED]
@@ -52,9 +54,11 @@ tags:
 - [[.topic_profile()]] - `method` [EXTRACTED]
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
+- [[Active20-topicc_v0.4315 artifact andGemini display contract]] - `references` [EXTRACTED]
 - [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - `conceptually_related_to` [INFERRED]
 - [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - `references` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
+- [[DashboardreadsverifiedCSVwithnoAPIortrainingonrerun]] - `references` [EXTRACTED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
 - [[Platform and top-five source graphs count unique topic comments]] - `implements` [INFERRED]
@@ -62,9 +66,10 @@ tags:
 - [[Root streamlit_apps.py delegates to Dashboard.app]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `implements` [INFERRED]
+- [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

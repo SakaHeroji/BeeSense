@@ -31,6 +31,7 @@ PALETTE = {
     "teal": "#116D78",
     "youtube": "#C64D36",
     "reddit": "#3568B3",
+    "instagram": "#A93A82",
     "paper": "#FFFFFF",
     "line": "#DCE5EE",
     "muted": "#52657B",
@@ -43,7 +44,7 @@ VIEWS = [
     "Kalimat & sumber",
     "Metode & data",
 ]
-PLATFORM_LABELS = {"youtube": "YouTube", "reddit": "Reddit"}
+PLATFORM_LABELS = {"youtube": "YouTube", "reddit": "Reddit", "instagram": "Instagram"}
 
 
 def number(value):
@@ -195,17 +196,26 @@ class SocialNLPStreamlitApp:
         platform_counts = (
             occurrences.groupby(["cluster_id", "platform"]).size().to_dict()
         )
+        three_platforms = bool((occurrences.platform == "instagram").any())
         largest = max(counts.values(), default=1)
         for cid in visible:
             youtube = platform_counts.get((cid, "youtube"), 0)
             reddit = platform_counts.get((cid, "reddit"), 0)
-            colors.append(youtube / max(1, youtube + reddit))
+            instagram = platform_counts.get((cid, "instagram"), 0)
+            dominant = max(
+                PLATFORM_LABELS, key=lambda p: platform_counts.get((cid, p), 0)
+            )
+            colors.append(
+                {"reddit": 0, "youtube": 1, "instagram": 2}[dominant]
+                if three_platforms
+                else youtube / max(1, youtube + reddit)
+            )
             sizes.append(22 + 32 * np.sqrt(counts[cid] / largest))
             label = by_id[cid]["label"]
             labels.append(f"T{cid + 1:02d}")
             hover.append(
                 f"<b>T{cid + 1:02d} · {html.escape(label)}</b><br>{number(counts[cid])} kemunculan kalimat<br>"
-                f"YouTube {number(youtube)} / Reddit {number(reddit)}<br>Klik untuk menelusuri topik"
+                f"YouTube {number(youtube)} / Reddit {number(reddit)} / Instagram {number(instagram)}<br>Klik untuk menelusuri topik"
             )
         traces.append(
             go.Scatter(
@@ -218,20 +228,44 @@ class SocialNLPStreamlitApp:
                 marker={
                     "size": sizes,
                     "color": colors,
-                    "cmin": 0,
-                    "cmax": 1,
-                    "colorscale": [
-                        [0, PALETTE["reddit"]],
-                        [0.5, PALETTE["teal"]],
-                        [1, PALETTE["youtube"]],
-                    ],
-                    "colorbar": {
-                        "title": {"text": "Asal kalimat"},
-                        "tickvals": [0, 0.5, 1],
-                        "ticktext": ["Reddit", "Seimbang", "YouTube"],
-                        "len": 0.55,
-                        "thickness": 10,
-                    },
+                    **(
+                        {
+                            "cmin": -0.5,
+                            "cmax": 2.5,
+                            "colorscale": [
+                                [0, PALETTE["reddit"]],
+                                [1 / 3, PALETTE["reddit"]],
+                                [1 / 3, PALETTE["youtube"]],
+                                [2 / 3, PALETTE["youtube"]],
+                                [2 / 3, PALETTE["instagram"]],
+                                [1, PALETTE["instagram"]],
+                            ],
+                            "colorbar": {
+                                "title": {"text": "Platform terbanyak"},
+                                "tickvals": [0, 1, 2],
+                                "ticktext": ["Reddit", "YouTube", "Instagram"],
+                                "len": 0.55,
+                                "thickness": 10,
+                            },
+                        }
+                        if three_platforms
+                        else {
+                            "cmin": 0,
+                            "cmax": 1,
+                            "colorscale": [
+                                [0, PALETTE["reddit"]],
+                                [0.5, PALETTE["teal"]],
+                                [1, PALETTE["youtube"]],
+                            ],
+                            "colorbar": {
+                                "title": {"text": "Asal kalimat"},
+                                "tickvals": [0, 0.5, 1],
+                                "ticktext": ["Reddit", "Seimbang", "YouTube"],
+                                "len": 0.55,
+                                "thickness": 10,
+                            },
+                        }
+                    ),
                     "line": {
                         "color": [
                             PALETTE["ink"] if cid == selected else "white"
@@ -362,6 +396,7 @@ class SocialNLPStreamlitApp:
                     "comments": group.source_row.nunique(),
                     "youtube": int((group.platform == "youtube").sum()),
                     "reddit": int((group.platform == "reddit").sum()),
+                    "instagram": int((group.platform == "instagram").sum()),
                     "share": len(group) / len(occurrences),
                 }
             )
@@ -377,6 +412,7 @@ class SocialNLPStreamlitApp:
                     "comments",
                     "youtube",
                     "reddit",
+                    "instagram",
                     "share",
                 ],
             )
@@ -387,7 +423,7 @@ class SocialNLPStreamlitApp:
     @staticmethod
     def platform_summary(occurrences):
         rows = []
-        for platform in ["youtube", "reddit"]:
+        for platform in PLATFORM_LABELS:
             group = occurrences[occurrences.platform == platform]
             assigned = int((group.cluster_id >= 0).sum())
             rows.append(
@@ -408,14 +444,14 @@ class SocialNLPStreamlitApp:
         frame = occurrences.loc[dates.notna(), ["platform"]].copy()
         frame["month"] = dates[dates.notna()].dt.to_period("M").dt.to_timestamp()
         if frame.empty:
-            return pd.DataFrame(columns=["month", "youtube", "reddit"])
+            return pd.DataFrame(columns=["month", *PLATFORM_LABELS])
         grouped = frame.groupby(["month", "platform"]).size().unstack(fill_value=0)
         grouped = grouped.reindex(
             pd.date_range(grouped.index.min(), grouped.index.max(), freq="MS"),
             fill_value=0,
         )
         return (
-            grouped.reindex(columns=["youtube", "reddit"], fill_value=0)
+            grouped.reindex(columns=list(PLATFORM_LABELS), fill_value=0)
             .rename_axis("month")
             .reset_index()
         )
@@ -484,7 +520,9 @@ class SocialNLPStreamlitApp:
             if len(comments)
             else 0,
             "platforms": {
-                p: int((comments.platform == p).sum()) for p in PLATFORM_LABELS
+                p: int((comments.platform == p).sum())
+                for p in PLATFORM_LABELS
+                if p != "instagram" or bool((frame.platform == "instagram").any())
             },
             "sources": sources,
             "terms": pd.DataFrame(mentions, columns=["term", "sentences", "share"]),
@@ -519,11 +557,11 @@ class SocialNLPStreamlitApp:
         platforms = list(PLATFORM_LABELS)
         figure = go.Figure(
             go.Bar(
-                x=[counts[p] for p in platforms],
+                x=[counts.get(p, 0) for p in platforms],
                 y=[PLATFORM_LABELS[p] for p in platforms],
                 orientation="h",
                 marker_color=[PALETTE[p] for p in platforms],
-                text=[number(counts[p]) for p in platforms],
+                text=[number(counts.get(p, 0)) for p in platforms],
                 textposition="outside",
                 cliponaxis=False,
                 hovertemplate="%{y}: %{x} komentar/balasan<extra></extra>",
@@ -600,7 +638,7 @@ class SocialNLPStreamlitApp:
     def ranking_figure(table, selected=None, limit=12):
         table = table.head(limit).iloc[::-1]
         figure = go.Figure()
-        for platform in ["youtube", "reddit"]:
+        for platform in PLATFORM_LABELS:
             figure.add_bar(
                 name=PLATFORM_LABELS[platform],
                 orientation="h",
@@ -691,7 +729,7 @@ class SocialNLPStreamlitApp:
                 hovertemplate="%{y}: %{x} belum terkelompok<extra></extra>",
             )
         figure.update_layout(barmode="stack", bargap=0.5, showlegend=False)
-        SocialNLPStreamlitApp._chart_style(figure, 165)
+        SocialNLPStreamlitApp._chart_style(figure, max(165, 60 * len(platforms) + 45))
         maximum = max(platforms.total.max(), 1)
         ticks = np.linspace(0, maximum, 3).astype(int)
         figure.update_xaxes(tickvals=ticks, ticktext=[number(n) for n in ticks])
@@ -704,7 +742,7 @@ class SocialNLPStreamlitApp:
         labels = [
             format_date(value, "MMM yy", locale="id_ID") for value in months.month
         ]
-        for platform in ["youtube", "reddit"]:
+        for platform in PLATFORM_LABELS:
             figure.add_bar(
                 x=labels,
                 y=months[platform],
@@ -743,8 +781,8 @@ class SocialNLPStreamlitApp:
             st.session_state["topic_select"] = options[cid]
 
     @staticmethod
-    def _reset_filters(start, end):
-        st.session_state["platforms"] = ["YouTube", "Reddit"]
+    def _reset_filters(start, end, platforms=None):
+        st.session_state["platforms"] = platforms or ["YouTube", "Reddit"]
         st.session_state["post_dates"] = (start, end)
         st.session_state["query"] = ""
         st.session_state["topic_select"] = "Semua topik"
@@ -773,6 +811,22 @@ class SocialNLPStreamlitApp:
             left, right = st.columns([4, 1.4], vertical_alignment="center")
             with left:
                 st.markdown("**" + html.escape(label) + "**")
+                narrative = next(
+                    (
+                        row
+                        for row in data.get("topic_narratives", [])
+                        if row["cluster_id"] == selected
+                    ),
+                    None,
+                )
+                if narrative:
+                    st.subheader(narrative["topic_sentence"])
+                    st.write(narrative["topic_description"])
+                    st.caption(
+                        "Ringkasan Gemini dari "
+                        + self._gemini_inputs(narrative)
+                        + " model penuh."
+                    )
                 st.caption(
                     f"{number(len(subset))} kemunculan dari {number(subset.sentence_id.nunique())} kalimat unik pada filter ini."
                 )
@@ -853,6 +907,11 @@ class SocialNLPStreamlitApp:
         )
 
     def _sidebar(self, occurrences):
+        available_platforms = [
+            label
+            for key, label in PLATFORM_LABELS.items()
+            if key in set(occurrences.platform)
+        ]
         dates = (
             pd.to_datetime(occurrences.post_date, errors="coerce", format="mixed")
             .dropna()
@@ -871,8 +930,8 @@ class SocialNLPStreamlitApp:
                     st.session_state["platforms"] = migrated
             platform_labels = st.multiselect(
                 "Platform",
-                ["YouTube", "Reddit"],
-                default=["YouTube", "Reddit"],
+                available_platforms,
+                default=available_platforms,
                 key="platforms",
                 bind="query-params",
             )
@@ -906,7 +965,7 @@ class SocialNLPStreamlitApp:
             st.button(
                 "Hapus semua filter",
                 on_click=self._reset_filters,
-                args=bounds,
+                args=(*bounds, available_platforms),
                 width="stretch",
             )
             st.caption(
@@ -985,6 +1044,54 @@ class SocialNLPStreamlitApp:
             )
         return choices[value]
 
+    @staticmethod
+    def _gemini_inputs(row):
+        basis = "10 keyword c-TF-IDF"
+        if row.get("representative_sentences_json"):
+            count = len(json.loads(row["representative_sentences_json"]))
+            basis += f" dan {count} kalimat representatif"
+        return basis
+
+    @staticmethod
+    def _gemini_overview(data):
+        rows = data.get("topic_narratives", [])
+        if not rows:
+            return
+        with st.expander("Kalimat dan deskripsi 20 topik · Gemini"):
+            st.caption(
+                "Ringkasan AI dari "
+                + SocialNLPStreamlitApp._gemini_inputs(rows[0])
+                + " pada setiap topik. "
+                "Deskripsi berlaku untuk model penuh dan tetap sama saat filter berubah. "
+                "Gunakan kutipan sumber untuk meninjau bukti percakapan."
+            )
+            st.dataframe(
+                pd.DataFrame(
+                    [
+                        {
+                            "Topik": f"T{row['cluster_id'] + 1:02d}",
+                            "Kalimat topik": row["topic_sentence"],
+                            "Deskripsi": row["topic_description"],
+                        }
+                        for row in rows
+                    ]
+                ),
+                hide_index=True,
+                width="stretch",
+            )
+            st.download_button(
+                "Unduh CSV topik Gemini",
+                data["topic_narratives_csv"],
+                file_name="topic_narratives.csv",
+                mime="text/csv",
+                key="gemini_topics_download",
+            )
+            st.caption(
+                "Model: "
+                + data["summary"]["topic_narratives"]["model"]
+                + " · CSV memuat keyword, bobot, dan metadata pembentukan ringkasan."
+            )
+
     def _overview(self, data, frame, selected):
         topics = self.topic_summary(data["topics"], frame)
         platforms = self.platform_summary(frame)
@@ -1015,7 +1122,7 @@ class SocialNLPStreamlitApp:
                     ),
                     selection_mode="points",
                     config={"displaylogo": False, "scrollZoom": False},
-                    alt="Peringkat topik dengan batang bertumpuk YouTube dan Reddit. Panjang batang menunjukkan jumlah kemunculan kalimat.",
+                    alt="Peringkat topik dengan batang bertumpuk menurut platform. Panjang batang menunjukkan jumlah kemunculan kalimat.",
                 )
         with right, st.container(key="overview_coverage"):
             st.header("Dua platform, dua percakapan")
@@ -1056,7 +1163,7 @@ class SocialNLPStreamlitApp:
                     width="stretch",
                     key="monthly_chart",
                     config={"displaylogo": False},
-                    alt="Distribusi jumlah kalimat menurut bulan publikasi video atau post induk, dibagi YouTube dan Reddit.",
+                    alt="Distribusi jumlah kalimat menurut bulan publikasi video atau post induk, dibagi menurut platform.",
                 )
             else:
                 st.info("Tidak ada tanggal post asal yang dapat ditampilkan.")
@@ -1096,7 +1203,7 @@ class SocialNLPStreamlitApp:
     def _network(self, data, frame, selected):
         st.header("Peta hubungan antar topik")
         st.caption(
-            "Ukuran node mengikuti jumlah kalimat; warna menunjukkan proporsi YouTube–Reddit. Kode T menghubungkan node dengan daftar topik."
+            "Ukuran node mengikuti jumlah kalimat; legenda warna menunjukkan asal platform, atau platform terbanyak ketika Instagram disertakan. Kode T menghubungkan node dengan daftar topik."
         )
         count = int(frame.loc[frame.cluster_id >= 0, "cluster_id"].nunique())
         if not count:
@@ -1162,7 +1269,7 @@ class SocialNLPStreamlitApp:
                 ),
                 selection_mode="points",
                 config={"displaylogo": False, "scrollZoom": False},
-                alt="Jaringan topik berlabel kode T. Ukuran adalah volume; warna adalah proporsi platform; garis adalah kemiripan makna yang disimpulkan model.",
+                alt="Jaringan topik berlabel kode T. Ukuran adalah volume; legenda warna menjelaskan asal platform; garis adalah kemiripan makna yang disimpulkan model.",
             )
             st.caption(
                 f"{number(stats['nodes'])} dari {number(stats['available_topics'])} topik; {number(stats['edges'])} hubungan kemiripan. Garis adalah inferensi isi, bukan hubungan antar akun. Topik tanpa garis tetap ditampilkan."
@@ -1177,6 +1284,7 @@ class SocialNLPStreamlitApp:
                 "comments": "Komentar",
                 "youtube": "YouTube",
                 "reddit": "Reddit",
+                "instagram": "Instagram",
             }
         )
         st.dataframe(
@@ -1189,6 +1297,7 @@ class SocialNLPStreamlitApp:
                     "Komentar",
                     "YouTube",
                     "Reddit",
+                    "Instagram",
                 ]
             ],
             hide_index=True,
@@ -1227,10 +1336,17 @@ class SocialNLPStreamlitApp:
             ("combined", "Gabungan", PALETTE["ink"]),
             ("youtube", "YouTube", PALETTE["youtube"]),
             ("reddit", "Reddit", PALETTE["reddit"]),
+            ("instagram", "Instagram", PALETTE["instagram"]),
         ]:
             shares, details = [], []
             for row in rows:
-                counts = row if key == "combined" else row["platforms"][key]
+                counts = (
+                    row
+                    if key == "combined"
+                    else row["platforms"].get(
+                        key, {"all_comments": 0, "topic_comments": 0, "share": None}
+                    )
+                )
                 valid = (
                     row["eligible_for_trend"]
                     and counts["all_comments"] >= explanation["min_monthly_comments"]
@@ -1412,7 +1528,7 @@ class SocialNLPStreamlitApp:
                 width="stretch",
                 key=f"trend_topic_{selected}",
                 config={"displaylogo": False},
-                alt="Perubahan porsi komentar yang memuat topik, untuk gabungan, YouTube dan Reddit. Bulan tanpa dukungan cukup menjadi celah.",
+                alt="Perubahan porsi komentar yang memuat topik, untuk gabungan dan setiap platform. Bulan tanpa dukungan cukup menjadi celah.",
             )
         st.caption(
             "Bulan parsial, bulan tanpa komentar, atau dukungan platform terlalu kecil menjadi celah pada grafik. Contoh kalimat merangkum seluruh filter; penentuan arah memakai bulan kalender lengkap."
@@ -1504,6 +1620,54 @@ class SocialNLPStreamlitApp:
             profile = self.topic_profile(frame, selected, topic["terms"])
             with st.container(key="topic_focus"):
                 st.header(f"T{selected + 1:02d} · {topic['label']}")
+                narrative = next(
+                    (
+                        row
+                        for row in data.get("topic_narratives", [])
+                        if row["cluster_id"] == selected
+                    ),
+                    None,
+                )
+                if narrative:
+                    st.subheader(narrative["topic_sentence"])
+                    st.write(narrative["topic_description"])
+                    st.caption(
+                        "Ringkasan Gemini berdasarkan "
+                        + self._gemini_inputs(narrative)
+                        + " model penuh. Ringkasan AI ini perlu ditinjau bersama kutipan sumber."
+                    )
+                    with st.expander("10 keyword yang dikirim ke Gemini"):
+                        st.dataframe(
+                            pd.DataFrame(json.loads(narrative["keywords_json"])).rename(
+                                columns={"term": "Keyword", "weight": "Bobot c-TF-IDF"}
+                            ),
+                            hide_index=True,
+                            width="stretch",
+                        )
+                    if narrative.get("representative_sentences_json"):
+                        representatives = json.loads(
+                            narrative["representative_sentences_json"]
+                        )
+                        with st.expander(
+                            f"{len(representatives)} kalimat yang dikirim ke Gemini"
+                        ):
+                            st.caption(
+                                "Diurutkan dari kedekatan tertinggi dengan pusat topik. "
+                                "Contoh ini berasal dari model penuh dan tetap sama saat filter berubah. "
+                                "Skor kedekatan bukan ukuran kebenaran atau persetujuan."
+                            )
+                            st.dataframe(
+                                pd.DataFrame(representatives)[
+                                    ["sentence", "centroid_similarity"]
+                                ].rename(
+                                    columns={
+                                        "sentence": "Kalimat",
+                                        "centroid_similarity": "Kedekatan dengan pusat topik",
+                                    }
+                                ),
+                                hide_index=True,
+                                width="stretch",
+                            )
                 if item:
                     st.write(item["description"])
                 coherence = topic.get("coherence_cv")
@@ -1577,7 +1741,7 @@ class SocialNLPStreamlitApp:
                     width="stretch",
                     key=f"topic_platforms_{selected}",
                     config={"displayModeBar": False},
-                    alt="Jumlah komentar dan balasan topik terpilih pada YouTube dan Reddit.",
+                    alt="Jumlah komentar dan balasan topik terpilih pada setiap platform.",
                 )
                 st.caption(
                     f"{number(profile['unique_sentences'])} kalimat unik dari {number(profile['comments'])} komentar. Hitungan mengikuti filter aktif."
@@ -1937,12 +2101,13 @@ class SocialNLPStreamlitApp:
             initial_sidebar_state="expanded",
         )
         self._css()
-        st.title("Percakapan YouTube & Reddit")
+        title_slot = st.empty()
         st.write(
             "Lihat topik yang muncul, bandingkan platform, lalu telusuri kalimat aslinya."
         )
         manifest = self.run_dir / "manifest.json"
         if not manifest.exists():
+            title_slot.title("Percakapan sosial")
             st.info(
                 "Hasil clustering belum tersedia. Jalankan pemrosesan NLP terlebih dahulu."
             )
@@ -1953,11 +2118,23 @@ class SocialNLPStreamlitApp:
         try:
             data = _load_artifacts(str(self.run_dir), manifest.stat().st_mtime_ns)
         except (ValueError, OSError, KeyError) as error:
+            title_slot.title("Percakapan sosial")
             st.error(
                 "Hasil tidak dapat dibaca atau checksum berubah. Pulihkan artifact dari run yang valid, lalu muat ulang. Detail: "
                 + str(error)
             )
             return
+        labels = [
+            label
+            for key, label in PLATFORM_LABELS.items()
+            if key in set(data["occurrences"].platform)
+        ]
+        title = (
+            " & ".join(labels)
+            if len(labels) < 3
+            else ", ".join(labels[:-1]) + " & " + labels[-1]
+        )
+        title_slot.title("Percakapan " + title)
         pipeline_note = None
         if (
             data["summary"]["selected"].get("parameters", {}).get("algorithm")
@@ -1999,6 +2176,7 @@ class SocialNLPStreamlitApp:
                 + " · Tanggal post asal, WIB · Snapshot percakapan parsial"
             )
         selected = self._topic_selector(frame, data["topics"])
+        self._gemini_overview(data)
         view = st.radio(
             "Tampilan analisis",
             VIEWS,

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Explicit partial export and qualified-post shortfall after acquisition
@@ -20,4 +20,4 @@ tags:
 - [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `references` [EXTRACTED]
 - [[social_data.xlsx ten-column Data worksheet]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
-community: "Community None"
+community: "Eksplorasi Dashboard Streamlit"
 location: "## Isi penjelasan"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # Traceable extractive topic explanations
@@ -23,4 +23,4 @@ tags:
 - [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 - [[Source-bound beesense-topic-explanations1 sidecar manifest]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

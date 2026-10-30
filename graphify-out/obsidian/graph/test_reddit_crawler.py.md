@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "code"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # test_reddit_crawler.py
@@ -23,4 +23,4 @@ tags:
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

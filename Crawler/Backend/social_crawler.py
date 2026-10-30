@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SocialCrawler: bounded YouTube/Reddit acquisition with one export contract.
+"""SocialCrawler: bounded YouTube/Reddit/Instagram acquisition with one export contract.
 
 Publication dates and include keywords select root posts/videos. Exclude keywords
 also remove comments. A minimum counts qualifying roots with enough unique
@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import calendar
 import importlib.metadata
 import json
 import math
@@ -25,35 +24,30 @@ import uuid
 from collections import Counter, deque
 from copy import deepcopy
 from dataclasses import replace
-from datetime import date, datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone
 from functools import partial
 from hashlib import file_digest
 from pathlib import Path
 from types import SimpleNamespace
 from urllib.parse import parse_qs, urlencode, urlsplit
-from zoneinfo import ZoneInfo
 
 from Crawler.Backend.Reddit import crawl_reddit_single as reddit
+from Crawler.Backend.social_export import (
+    COMPACT_COLUMNS,
+    COMPACT_FILE,
+    COMPACT_TIMEZONE,
+    SocialExportMixin,
+)
 from Crawler.Backend.Youtube import crawl_youtube as youtube
 
-VERSION = "1.4.0"
+VERSION = "1.5.1"
+INSTAGRAM_RATE_LIMIT_DEFAULTS = {
+    "rate_limit_cooldown_seconds": 360,
+    "rate_limit_max_retries": 3,
+}
 REDDRIX_ADAPTER_VERSION = "1.1.0"
 REDDRIX_METHOD = "reddrix_unofficial_web"
 ROOT = Path(__file__).resolve().parents[2]
-COMPACT_FILE = "social_data.xlsx"
-COMPACT_TIMEZONE = ZoneInfo("Asia/Jakarta")
-COMPACT_COLUMNS = (
-    "platform",
-    "jenis",
-    "judul_post",
-    "tanggal_post_wib",
-    "akurasi_tanggal_post",
-    "tanggal_konten_wib",
-    "akurasi_tanggal_konten",
-    "teks",
-    "url",
-    "teks_dipotong",
-)
 BARRIERS = {
     "CAPTCHA_REQUIRED",
     "CHALLENGE_REQUIRED",
@@ -65,7 +59,12 @@ BARRIERS = {
     "RATE_LIMITED",
     "TLS_ERROR",
 }
-STOP_STATUSES = BARRIERS | {"DEPENDENCY_MISSING", "INTERRUPTED"}
+STOP_STATUSES = BARRIERS | {
+    "DEPENDENCY_MISSING",
+    "INTERRUPTED",
+    "SESSION_INVALID",
+    "CLIENT_UPGRADE_REQUIRED",
+}
 DEFAULT_PLATFORM = dict(
     enabled=True,
     urls=[],
@@ -83,6 +82,8 @@ DEFAULT_PLATFORM = dict(
 DEFAULT_CONFIG = dict(
     project_id="social-intelligence",
     reddrix={"display_mode": "auto"},
+    instagrapi={},
+    instagram_browser={},
     since=None,
     until=None,
     include_keywords=[],
@@ -431,6 +432,19 @@ def _config(value):
     if not isinstance(value, dict) or set(value) - set(DEFAULT_CONFIG):
         raise ValueError("config must be an object with known SocialCrawler fields")
     cfg.update(deepcopy(value))
+    if not isinstance(cfg["instagrapi"], dict) or set(cfg["instagrapi"]) - {
+        "session_file",
+        "request_delay_seconds",
+    }:
+        raise ValueError(
+            "instagrapi accepts session paths and pacing, never credentials"
+        )
+    if cfg["instagram_browser"]:
+        from Crawler.Backend.instagram_browser import browser_configuration
+
+        browser_configuration(cfg["instagram_browser"])
+    elif not isinstance(cfg["instagram_browser"], dict):
+        raise ValueError("instagram_browser must be an object")
     options = cfg["reddrix"]
     if not isinstance(options, dict) or set(options) - {"display_mode"}:
         raise ValueError("reddrix options only support display_mode")
@@ -489,9 +503,9 @@ def _config(value):
     if (
         not isinstance(platforms, dict)
         or not platforms
-        or set(platforms) - {"youtube", "reddit"}
+        or set(platforms) - {"youtube", "reddit", "instagram"}
     ):
-        raise ValueError("platforms must contain youtube and/or reddit")
+        raise ValueError("platforms must contain youtube, reddit and/or instagram")
     result = {}
     extra = {
         "youtube": {"cert_store"},
@@ -510,6 +524,50 @@ def _config(value):
         },
     }
     for name, settings in platforms.items():
+        if name == "instagram":
+            from Crawler.Backend import instagram_crawler as instagram
+
+            if not isinstance(settings, dict):
+                raise ValueError("instagram settings must be an object")
+            supplied = deepcopy(settings)
+            enabled = supplied.get("enabled", True)
+            if type(enabled) is not bool:
+                raise ValueError("instagram.enabled must be boolean")
+            backend = supplied.pop("backend", "browser")
+            supplied["enabled"] = True
+            for key, value in INSTAGRAM_RATE_LIMIT_DEFAULTS.items():
+                supplied.setdefault(key, value)
+            common = {
+                key: deepcopy(cfg[key])
+                for key in (
+                    "project_id",
+                    "since",
+                    "until",
+                    "include_keywords",
+                    "exclude_keywords",
+                    "include_mode",
+                    "timeout_seconds",
+                    "total_seconds",
+                    "exclude_existing_datasets",
+                )
+            }
+            common.update(
+                backend=backend,
+                platforms={"instagram": supplied},
+                instagrapi=cfg["instagrapi"],
+            )
+            if backend == "browser":
+                common["browser"] = cfg["instagram_browser"]
+            checked = instagram._configuration(common)
+            cfg["instagrapi"] = checked["instagrapi"]
+            if backend == "browser":
+                cfg["instagram_browser"] = checked["browser"]
+            result[name] = {
+                **checked["platforms"][name],
+                "enabled": enabled,
+                "backend": backend,
+            }
+            continue
         if not isinstance(settings, dict) or set(settings) - (
             set(DEFAULT_PLATFORM) | extra[name]
         ):
@@ -631,13 +689,17 @@ def _config(value):
 
 
 def _url(platform, value):
+    if platform == "instagram":
+        from Crawler.Backend.instagram_crawler import media_url
+
+        return media_url(value)
     return (
         youtube.video_url(value) if platform == "youtube" else reddit.thread_url(value)
     )
 
 
-class SocialCrawler:
-    """Compose YouTube and Reddrix Reddit workers with one configuration and bundle.
+class SocialCrawler(SocialExportMixin):
+    """Compose platform workers with one configuration, scheduler and export bundle.
 
     Worker injection is intended for deterministic offline verification. A worker
     has the same interface as the existing run_worker functions. Date boundaries
@@ -678,6 +740,22 @@ class SocialCrawler:
             else reddit.run_worker,
             **(workers or {}),
         }
+        self._instagram_worker = None
+        options = self.config["platforms"].get("instagram", {})
+        if options.get("enabled"):
+            from Crawler.Backend.instagram_crawler import run_instagram_worker
+
+            if options["backend"] == "browser" and "instagram" not in (workers or {}):
+                from Crawler.Backend.instagram_browser import InstagramBrowserWorker
+
+                self._instagram_worker = InstagramBrowserWorker(
+                    self.config["instagram_browser"]
+                )
+            self.workers["instagram"] = (
+                (workers or {}).get("instagram")
+                or self._instagram_worker
+                or run_instagram_worker
+            )
         self.sleep, self.clock, self.rng = sleep, monotonic, rng or random.Random()
         self.include = reddit.KeywordMatcher(self.config["include_keywords"])
         self.exclude = reddit.KeywordMatcher(self.config["exclude_keywords"])
@@ -692,7 +770,7 @@ class SocialCrawler:
         """Read root identities only; never alter the historical workbooks."""
         from openpyxl import load_workbook
 
-        excluded = {"youtube": set(), "reddit": set()}
+        excluded = {name: set() for name in self.config["platforms"]}
         sources = []
         for value in self.config["exclude_existing_datasets"]:
             path = Path(value)
@@ -723,16 +801,30 @@ class SocialCrawler:
                     if name not in excluded or row.get("object_type") != "post":
                         continue
                     url = _url(name, row.get("canonical_url"))
-                    native = (
-                        youtube.video_url("https://youtu.be/" + str(row["native_id"]))
-                        if name == "youtube"
-                        else reddit.thread_url(
-                            reddit.BASE
-                            + "/comments/"
-                            + str(row["native_id"]).removeprefix("t3_")
-                            + "/"
+                    if name == "instagram":
+                        from Crawler.Backend.instagram_crawler import (
+                            media_pk_from_url,
+                            native_pk,
                         )
-                    )
+
+                        if native_pk(row["native_id"]) != media_pk_from_url(url):
+                            raise ValueError(
+                                "Historical Instagram native ID and URL disagree"
+                            )
+                        native = url
+                    else:
+                        native = (
+                            youtube.video_url(
+                                "https://youtu.be/" + str(row["native_id"])
+                            )
+                            if name == "youtube"
+                            else reddit.thread_url(
+                                reddit.BASE
+                                + "/comments/"
+                                + str(row["native_id"]).removeprefix("t3_")
+                                + "/"
+                            )
+                        )
                     if url != native:
                         raise ValueError(
                             "Historical native ID and canonical URL disagree"
@@ -840,217 +932,6 @@ class SocialCrawler:
             ),
         }
 
-    @staticmethod
-    def _calendar_date(row):
-        """Return a local date for display; relative source dates stay estimates."""
-        quality = row.get("timestamp_quality")
-        if isinstance(row.get("published_at"), str) and row["published_at"]:
-            try:
-                stamp = reddit.utc_datetime(row["published_at"]).astimezone(
-                    COMPACT_TIMEZONE
-                )
-                if quality == "exact":
-                    return stamp.replace(tzinfo=None), "pasti"
-                return (
-                    stamp.date(),
-                    "perkiraan" if quality == "relative" else "tanggal_saja",
-                )
-            except (TypeError, ValueError, OverflowError):
-                pass
-        display = str(row.get("published_at_display") or "").strip()
-        if quality == "date_only":
-            for fmt in ("%Y%m%d", "%Y-%m-%d"):
-                try:
-                    return datetime.strptime(display, fmt).date(), "tanggal_saja"
-                except ValueError:
-                    pass
-        text = (
-            re.sub(r"\s*\((?:edited|diedit)\)\s*$", "", display, flags=re.I)
-            .casefold()
-            .strip()
-        )
-        match = re.fullmatch(
-            r"(\d+)\s+(seconds?|minutes?|hours?|days?|weeks?|months?|years?|"
-            r"detik|menit|jam|hari|minggu|bulan|tahun)\s+(?:ago|(?:yang\s+)?lalu)",
-            text,
-        )
-        relative = {
-            "today": 0,
-            "hari ini": 0,
-            "just now": 0,
-            "baru saja": 0,
-            "yesterday": 1,
-            "kemarin": 1,
-        }
-        if not match and text not in relative:
-            return None, "tidak_diketahui"
-        if not isinstance(row.get("observed_at"), str):
-            return None, "tidak_diketahui"
-        try:
-            anchor = reddit.utc_datetime(row["observed_at"]).astimezone(
-                COMPACT_TIMEZONE
-            )
-            if not match:
-                return (anchor - timedelta(days=relative[text])).date(), "perkiraan"
-            count = int(match[1])
-            unit = match[2].rstrip("s")
-            seconds = {
-                "second": 1,
-                "detik": 1,
-                "minute": 60,
-                "menit": 60,
-                "hour": 3600,
-                "jam": 3600,
-                "day": 86400,
-                "hari": 86400,
-                "week": 604800,
-                "minggu": 604800,
-            }
-            if unit in seconds:
-                return (
-                    anchor - timedelta(seconds=count * seconds[unit])
-                ).date(), "perkiraan"
-            months = count * (12 if unit in {"year", "tahun"} else 1)
-            index = anchor.year * 12 + anchor.month - 1 - months
-            year, month = divmod(index, 12)
-            month += 1
-            return date(
-                year, month, min(anchor.day, calendar.monthrange(year, month)[1])
-            ), "perkiraan"
-        except (KeyError, TypeError, ValueError, OverflowError):
-            return None, "tidak_diketahui"
-
-    def _write_compact(self, directory, output):
-        """Project the full audit rows into one sheet, applying current filters."""
-        from openpyxl import Workbook
-        from openpyxl.cell import WriteOnlyCell
-        from openpyxl.styles import Alignment, Font, PatternFill
-        from openpyxl.utils import get_column_letter
-
-        contents = Path(directory) / "Contents.jsonl"
-        roots = {}
-        all_roots = 0
-
-        def records():
-            with contents.open(encoding="utf-8") as stream:
-                for line in stream:
-                    row = json.loads(line)
-                    reddit.validate_row("Contents", row)
-                    yield row
-
-        for row in records():
-            if row["object_type"] != "post":
-                continue
-            all_roots += 1
-            if not self.config["platforms"].get(row["platform"], {}).get("enabled"):
-                continue
-            selected, _ = self._select({"Contents": [row]})
-            if selected:
-                roots[row["object_key"]] = {
-                    "title": row["title"],
-                    "date": self._calendar_date(row),
-                }
-        book = Workbook(write_only=True)
-        sheet = book.create_sheet("Data")
-        sheet.freeze_panes = "D2"
-        sheet.sheet_view.showGridLines = False
-        sheet.sheet_format.defaultRowHeight = 45
-        sheet.row_dimensions[1].height = 28
-        for i, name in enumerate(COMPACT_COLUMNS, 1):
-            sheet.column_dimensions[get_column_letter(i)].width = (
-                70 if name == "teks" else 48 if name in {"judul_post", "url"} else 24
-            )
-        font = Font(name="Calibri", size=11)
-        header_font = Font(name="Calibri", size=11, bold=True, color="FFFFFF")
-        fill = PatternFill("solid", fgColor="163C52")
-        alignment = Alignment(wrap_text=True, vertical="top")
-
-        def cells(values, header=False):
-            result = []
-            for value in values:
-                if isinstance(value, str) and reddit.INVALID_XML.search(value):
-                    value = json.dumps(value, ensure_ascii=True)
-                cell = WriteOnlyCell(sheet, value=value)
-                if isinstance(value, str):
-                    cell.data_type = "s"
-                cell.font = header_font if header else font
-                cell.alignment = alignment
-                if header:
-                    cell.fill = fill
-                elif isinstance(value, datetime):
-                    cell.number_format = "yyyy-mm-dd hh:mm:ss"
-                elif isinstance(value, date):
-                    cell.number_format = "yyyy-mm-dd"
-                result.append(cell)
-            return result
-
-        sheet.append(cells(COMPACT_COLUMNS, True))
-        counts = Counter()
-        dates = Counter()
-        written = skipped_comments = truncated = 0
-        for row in records():
-            root = roots.get(row["thread_root_key"])
-            if not root:
-                continue
-            if row["object_type"] != "post" and any(
-                self.exclude.find(row["text_source"])
-            ):
-                skipped_comments += 1
-                continue
-            stamp, accuracy = self._calendar_date(row)
-            text = row["text_source"]
-            if reddit.INVALID_XML.search(text):
-                text = json.dumps(text, ensure_ascii=True)
-            first = next(reddit.BundleSink.chunks(text))
-            cut = first != text
-            if cut:
-                first += (
-                    "\n[Teks lengkap tersedia di Contents.jsonl pada bundle sumber.]"
-                )
-            kind = (
-                "video"
-                if row["platform"] == "youtube" and row["object_type"] == "post"
-                else row["object_type"]
-            )
-            sheet.append(
-                cells(
-                    [
-                        row["platform"],
-                        kind,
-                        root["title"],
-                        root["date"][0],
-                        root["date"][1],
-                        stamp,
-                        accuracy,
-                        first,
-                        row["canonical_url"],
-                        cut,
-                    ]
-                )
-            )
-            written += 1
-            truncated += cut
-            dates[accuracy] += 1
-            counts[row["platform"] + ":" + kind] += 1
-        sheet.auto_filter.ref = (
-            f"A1:{get_column_letter(len(COMPACT_COLUMNS))}{written + 1}"
-        )
-        book.save(output)
-        return dict(
-            file=COMPACT_FILE,
-            sheets=["Data"],
-            columns=list(COMPACT_COLUMNS),
-            timezone=str(COMPACT_TIMEZONE),
-            rows=written,
-            counts=dict(counts),
-            date_accuracy_counts=dict(dates),
-            truncated_texts=truncated,
-            filtered_roots=all_roots - len(roots),
-            filtered_comments=skipped_comments,
-            date_estimate_anchor="source_observed_at",
-            relative_date_precision="calendar_date_not_exact_timestamp",
-        )
-
     def export_compact(self, bundle_dir, output_dir):
         """Re-export saved Contents without network or modifying the source bundle."""
         source = Path(bundle_dir).resolve()
@@ -1139,6 +1020,23 @@ class SocialCrawler:
         return self.clock() < deadline
 
     def _legacy_settings(self, name, p):
+        if name == "instagram":
+            from Crawler.Backend.instagram_crawler import InstagramSettings
+
+            return InstagramSettings(
+                **self.config["instagrapi"],
+                timeout_seconds=self.config["timeout_seconds"],
+                **{
+                    key: p[key]
+                    for key in (
+                        "search_results",
+                        "max_comments",
+                        "max_replies",
+                        "max_replies_per_thread",
+                        "search_tab",
+                    )
+                },
+            )
         shared = dict(
             project_id=self.config["project_id"],
             keywords=tuple(self.config["include_keywords"]),
@@ -1519,15 +1417,27 @@ class SocialCrawler:
         rows = {key: [] for key in reddit.TABLES}
         sink = SimpleNamespace(write=lambda table, row: rows[table].append(row))
         dataset = reddit.Dataset(factory, sink)
-        adapter = (
-            youtube.YouTubeAdapter(factory, dataset, version or "unknown")
-            if name == "youtube"
-            else reddit.RedditAdapter(factory, dataset)
-        )
+        if name == "instagram":
+            from Crawler.Backend.instagram_crawler import InstagramAdapter
+
+            adapter = InstagramAdapter(
+                factory,
+                dataset,
+                version,
+                method=self._source_metadata(name, self.config["platforms"][name])[
+                    "extraction_method"
+                ],
+            )
+        else:
+            adapter = (
+                youtube.YouTubeAdapter(factory, dataset, version or "unknown")
+                if name == "youtube"
+                else reddit.RedditAdapter(factory, dataset)
+            )
         invalid = 0
         for kind, payload in events:
             if (
-                name == "reddit"
+                name in {"reddit", "instagram"}
                 and kind != "record"
                 or name == "youtube"
                 and kind not in {"video", "comment"}
@@ -1545,51 +1455,21 @@ class SocialCrawler:
                 )
         return rows, invalid
 
-    def _select(self, rows):
-        roots = [row for row in rows["Contents"] if row["object_type"] == "post"]
-        if len(roots) != 1:
-            return [], "root_not_verified"
-        root = roots[0]
-        if self.config["since"] or self.config["until"]:
-            if not root["published_at"]:
-                return [], "root_publication_date_unknown"
-            stamp = reddit.utc_datetime(root["published_at"])
-            if (
-                self.config["since"]
-                and stamp < reddit.utc_datetime(self.config["since"])
-                or self.config["until"]
-                and stamp >= reddit.utc_datetime(self.config["until"])
-            ):
-                return [], "root_outside_date_window"
-        fields = [root.get("title") or "", root["text_source"]]
-        if any(any(self.exclude.find(text)) for text in fields):
-            return [], "root_excluded_keyword"
-        matched = {hit["keyword"] for text in fields for hit in self.include.find(text)}
-        keywords = set(self.config["include_keywords"])
-        if keywords and (
-            not matched
-            if self.config["include_mode"] == "any"
-            else not keywords <= matched
-        ):
-            return [], "root_missing_include_keyword"
-        selected = [root]
-        seen = {root["object_key"]}
-        for row in rows["Contents"]:
-            if (
-                row is root
-                or row["object_key"] in seen
-                or row["thread_root_key"] != root["object_key"]
-                or not row["text_source"].strip()
-            ):
-                continue
-            if any(self.exclude.find(row["text_source"])):
-                continue
-            selected.append(row)
-            seen.add(row["object_key"])
-        return selected, "root_selected"
-
     def _source_metadata(self, name, settings):
         """Describe the acquisition backend independently of the shared export."""
+        if name == "instagram":
+            from Crawler.Backend.instagram_browser import BROWSER_METHOD
+            from Crawler.Backend.instagram_crawler import METHOD
+
+            return dict(
+                producer_version="social-crawler:" + VERSION,
+                extraction_method=BROWSER_METHOD
+                if settings["backend"] == "browser"
+                else METHOD,
+                access_mode="manual_login_persistent_chrome;read_only_acquisition"
+                if settings["backend"] == "browser"
+                else "saved_authenticated_mobile_session;read_only_acquisition",
+            )
         if name == "reddit" and settings["backend"] == "reddrix":
             return dict(
                 producer_version="social-crawler:" + VERSION,
@@ -1640,7 +1520,7 @@ class SocialCrawler:
         self._run_deadline = deadline
         self._run_summaries = summaries
         self._progress_path = output.parent / (output.name + ".progress.json")
-        exported_roots = {"youtube": set(), "reddit": set()}
+        exported_roots = {name: set() for name in self.config["platforms"]}
         self._event(
             "started",
             output_dir=str(output),
@@ -1669,7 +1549,7 @@ class SocialCrawler:
                 summaries[name] = summary
                 if not p["enabled"]:
                     return
-                if name == "reddit":
+                if name in {"reddit", "instagram"}:
                     summary.update(rate_limit_events=0, rate_limit_retries=0)
                 settings = self._legacy_settings(name, p)
                 queue = deque()
@@ -1698,8 +1578,13 @@ class SocialCrawler:
                         enqueue(url, origin, cached)
                 for url in p["urls"]:
                     enqueue(url)
-                searches = (
-                    (("search", query) for query in p["queries"])
+                searches = deque(
+                    (
+                        ("search", json.dumps({"hashtag": tag, "cursor": None}))
+                        for tag in p["hashtags"]
+                    )
+                    if name == "instagram"
+                    else (("search", query) for query in p["queries"])
                     if name == "youtube"
                     else (
                         (
@@ -1722,6 +1607,8 @@ class SocialCrawler:
                         for sub in p["subreddits"]
                     )
                 )
+                search_cursors = set()
+                search_pages = 0
                 summary["stop_reason"] = "CANDIDATES_EXHAUSTED"
                 source_errors = 0
                 versions = set()
@@ -1754,17 +1641,26 @@ class SocialCrawler:
                             name == "reddit"
                             and p["backend"] == "checkpoint"
                             or len(known) >= p["max_candidates"]
+                            or name == "instagram"
+                            and search_pages >= p["max_search_pages"]
                         ):
                             break
                         try:
-                            operation, target = next(searches)
-                        except StopIteration:
+                            operation, target = searches.popleft()
+                            search_pages += 1
+                        except IndexError:
                             break
                         origin, cached = None, None
                     else:
                         search = False
                         target, origin, cached = queue.popleft()
-                        operation = "video" if name == "youtube" else "thread"
+                        operation = (
+                            "video"
+                            if name == "youtube"
+                            else "media"
+                            if name == "instagram"
+                            else "thread"
+                        )
                     if not search:
                         summary["posts_attempted"] += 1
                         if (
@@ -1780,7 +1676,10 @@ class SocialCrawler:
                     if result.get("source_version"):
                         versions.add(result["source_version"])
                     source_errors = (
-                        source_errors + 1 if result["status"] == "SOURCE_ERROR" else 0
+                        source_errors + 1
+                        if result["status"]
+                        in {"SOURCE_ERROR", "TIMEOUT", "WORKER_FAILED"}
+                        else 0
                     )
                     written = comments = replies = invalid = seen_comments = (
                         seen_replies
@@ -1791,6 +1690,19 @@ class SocialCrawler:
                                 enqueue(
                                     payload.get("url", ""),
                                     payload.get("discovered_from"),
+                                )
+                        if name == "instagram" and result.get("next_cursor"):
+                            query = json.loads(target)
+                            cursor = (query["hashtag"], result["next_cursor"])
+                            if cursor not in search_cursors:
+                                search_cursors.add(cursor)
+                                searches.append(
+                                    (
+                                        "search",
+                                        json.dumps(
+                                            {"hashtag": cursor[0], "cursor": cursor[1]}
+                                        ),
+                                    )
                                 )
                     else:
                         rows, invalid = self._normalize(
@@ -1896,7 +1808,10 @@ class SocialCrawler:
                             finished_at=finished,
                         ),
                     )
-                    if name == "reddit" and result["status"] == "RATE_LIMITED":
+                    if (
+                        name in {"reddit", "instagram"}
+                        and result["status"] == "RATE_LIMITED"
+                    ):
                         summary["rate_limit_events"] += 1
                         server_wait = result.get("retry_after_seconds")
                         if type(server_wait) is int:
@@ -2050,7 +1965,8 @@ class SocialCrawler:
                 [
                     (
                         "SocialCrawler",
-                        "YouTube dan Reddit dalam satu kontrak delapan sheet.",
+                        "Platform yang diaktifkan dalam satu kontrak delapan sheet: "
+                        + ", ".join(self.config["platforms"]),
                     ),
                     (
                         "Minimum",
@@ -2103,6 +2019,9 @@ class SocialCrawler:
             if not sink.closed:
                 sink.abort()
             raise
+        finally:
+            if self._instagram_worker is not None:
+                self._instagram_worker.close()
 
 
 def main():

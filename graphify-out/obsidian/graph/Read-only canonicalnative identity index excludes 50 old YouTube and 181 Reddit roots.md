@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Read-only canonical/native identity index excludes 50 old YouTube and 181 Reddit roots
@@ -20,4 +20,4 @@ tags:
 - [[Historical root skip before request and returned-identity check before export]] - `references` [EXTRACTED]
 - [[JSONL audit, dataset.xlsx and checksum manifest]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Alur_Akuisisi_Sosial_Terpadu

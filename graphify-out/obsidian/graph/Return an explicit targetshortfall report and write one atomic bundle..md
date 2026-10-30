@@ -1,17 +1,17 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Community None"
-location: "L1609"
+community: "Alur Akuisisi Sosial Terpadu"
+location: "L1489"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Return an explicit target/shortfall report and write one atomic bundle.
 
 ## Connections
-- [[.run()]] - `rationale_for` [EXTRACTED]
+- [[.run()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

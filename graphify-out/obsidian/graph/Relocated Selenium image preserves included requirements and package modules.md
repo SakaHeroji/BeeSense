@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.selenium"
 type: "rationale"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L7-L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Relocated Selenium image preserves included requirements and package modules
@@ -17,4 +17,4 @@ tags:
 - [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

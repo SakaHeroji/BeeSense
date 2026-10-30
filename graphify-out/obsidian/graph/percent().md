@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Community None"
-location: "L53"
+community: "Eksplorasi Dashboard Streamlit"
+location: "L54"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # percent()
@@ -22,4 +22,4 @@ tags:
 - [[app.py]] - `contains` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

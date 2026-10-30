@@ -89,6 +89,15 @@
       "y": 800,
       "width": 420,
       "height": 300
+    },
+    {
+      "id": "instagram-instagrapi-trial",
+      "type": "file",
+      "file": "InstagramCrawler instagrapi.md",
+      "x": 1950,
+      "y": 800,
+      "width": 400,
+      "height": 350
     }
   ],
   "edges": [
@@ -193,6 +202,14 @@
       "toNode": "project-structure",
       "toSide": "top",
       "label": "Lokasi package dan deployment"
+    },
+    {
+      "id": "instagram-shared-export",
+      "fromNode": "reddrix-crawler",
+      "fromSide": "right",
+      "toNode": "instagram-instagrapi-trial",
+      "toSide": "left",
+      "label": "kontrak Excel bersama; live belum lolos"
     }
   ]
 }

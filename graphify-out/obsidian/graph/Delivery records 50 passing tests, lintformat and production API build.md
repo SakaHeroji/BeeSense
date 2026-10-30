@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/docs/DELIVERY.md"
 type: "concept"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "## Bukti verifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Delivery records 50 passing tests, lint/format and production API build
@@ -15,4 +15,4 @@ tags:
 - [[React frontend and simulation verified; production acquisition integration unavailable]] - `references` [EXTRACTED]
 - [[Seven implemented UIdemo sources;only two Python adapters exist]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

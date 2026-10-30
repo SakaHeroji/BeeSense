@@ -2,7 +2,7 @@
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
 community: "Pipeline dan Persistensi NLP"
-location: "L609"
+location: "L610"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Community None"
+community: "Workspace React Crawler"
 location: "L218"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Workspace_React_Crawler
 ---
 
 # Api
@@ -30,4 +30,4 @@ tags:
 - [[demo.ts]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler

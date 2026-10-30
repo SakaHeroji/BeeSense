@@ -1,18 +1,18 @@
 ---
 source_file: "config/social_crawler.json"
 type: "concept"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "$.platform_execution"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
-  - community/Community_None
+  - graphify/INFERRED
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Configured platform_execution=round_robin
 
 ## Connections
-- [[One-operation round-robin scheduler with shared 10800-second deadline]] - `conceptually_related_to` [INFERRED]
+- [[Retained defaulthistorical round-robin deadline;newInstagram-onlyrun separate]] - `conceptually_related_to` [INFERRED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/Konfigurasi_SocialCrawler

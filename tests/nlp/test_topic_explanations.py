@@ -89,6 +89,36 @@ def profile(values):
 
 
 class ExplanationTests(unittest.TestCase):
+    def test_instagram_parent_identity_and_explanation_counts(self):
+        first = Model.parent_post_key(
+            {
+                "platform": "instagram",
+                "url": "https://www.instagram.com/p/B/?comment_id=21",
+            }
+        )
+        second = Model.parent_post_key(
+            {"platform": "instagram", "url": "https://www.instagram.com/reel/B/c/22/"}
+        )
+        self.assertEqual(first, ("instagram:1", "native_url"))
+        self.assertEqual(first, second)
+        self.assertEqual(
+            Model.parent_post_key(
+                {"platform": "instagram", "url": "https://instagram.com.evil/p/B/"}
+            )[1],
+            "context_fallback",
+        )
+        model = model_from_counts([{"instagram": 30}] * 6, [{"instagram": 10}] * 6)
+        model.occurrences["url"] = [
+            f"https://www.instagram.com/p/{'BCD'[index % 3]}/?comment_id={index + 1}"
+            for index in range(len(model.occurrences))
+        ]
+        result = model.explain_topics()
+        topic = result["topics"][0]
+        self.assertEqual(topic["platform_comments"]["instagram"], 60)
+        self.assertEqual(
+            topic["monthly"][0]["platforms"]["instagram"]["all_comments"], 30
+        )
+
     def explain(self, model, **kwargs):
         return model.explain_topics(
             date_start="2026-01-01", date_end="2026-06-30", **kwargs

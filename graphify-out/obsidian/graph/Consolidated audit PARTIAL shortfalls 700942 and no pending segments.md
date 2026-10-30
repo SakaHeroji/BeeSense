@@ -1,12 +1,12 @@
 ---
 source_file: "outputs/social_20261029_1000_3h/summary.json"
 type: "document"
-community: "Community None"
+community: "Topik dan Verifikasi NLP"
 location: "$"
 tags:
   - graphify/document
   - graphify/INFERRED
-  - community/Community_None
+  - community/Topik_dan_Verifikasi_NLP
 ---
 
 # Consolidated audit PARTIAL: shortfalls 700/942 and no pending segments
@@ -16,4 +16,4 @@ tags:
 - [[Final campaign consolidation and explicit partial target shortfalls]] - `references` [EXTRACTED]
 - [[Five verified segments consolidate with zero duplicate roots and zero baseline overlap]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_None
+#graphify/document #graphify/INFERRED #community/Topik_dan_Verifikasi_NLP

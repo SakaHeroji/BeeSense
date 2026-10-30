@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/HOME.md"
 type: "concept"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "# BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # Index links default integrated Reddrix and retained historical trial
@@ -16,4 +16,4 @@ tags:
 - [[Integrated SocialCrawler Reddrix with thin Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[SocialCrawler1.4 default Reddit Reddrix plus YouTube yt-dlp]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

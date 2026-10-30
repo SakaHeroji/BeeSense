@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/reddit_crawler.py"
 type: "code"
-community: "Community None"
+community: "Akuisisi Reddit Reddrix"
 location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # main()
@@ -16,4 +16,4 @@ tags:
 - [[RedditCrawler]] - `calls` [EXTRACTED]
 - [[reddit_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

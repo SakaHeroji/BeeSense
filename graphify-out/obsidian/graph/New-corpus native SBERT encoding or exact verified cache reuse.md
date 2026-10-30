@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "concept"
-community: "Community None"
+community: "Runbook dan Verifikasi Lokal"
 location: "# Menjalankan BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Runbook_dan_Verifikasi_Lokal
 ---
 
 # New-corpus native SBERT encoding or exact verified cache reuse
@@ -18,4 +18,4 @@ tags:
 - [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Runbook_dan_Verifikasi_Lokal

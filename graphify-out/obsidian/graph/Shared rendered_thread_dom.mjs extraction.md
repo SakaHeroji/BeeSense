@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_playwright.md"
 type: "concept"
-community: "Community None"
+community: "Arsitektur Crawler dan Dependensi"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Arsitektur_Crawler_dan_Dependensi
 ---
 
 # Shared rendered_thread_dom.mjs extraction
@@ -15,4 +15,4 @@ tags:
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Arsitektur_Crawler_dan_Dependensi

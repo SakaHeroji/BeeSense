@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Community None"
+community: "Adapter Akuisisi YouTube"
 location: "L75"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Community_None
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # Settings
@@ -22,4 +22,4 @@ tags:
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[load_settings()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Community_None
+#graphify/code #graphify/INFERRED #community/Adapter_Akuisisi_YouTube

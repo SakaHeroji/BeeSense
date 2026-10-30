@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Community None"
-location: "L1057"
+community: "Pipeline dan Persistensi NLP"
+location: "L1078"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.score_coherence()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

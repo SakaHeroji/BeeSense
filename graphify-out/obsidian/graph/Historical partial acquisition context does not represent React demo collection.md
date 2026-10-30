@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/HOME.md"
 type: "rationale"
-community: "Community None"
+community: "Snapshot NLP dan Arsip"
 location: "# BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Snapshot_NLP_dan_Arsip
 ---
 
 # Historical partial acquisition context does not represent React demo collection
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BeeSense Obsidian architecture and dataset index]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

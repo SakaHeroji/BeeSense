@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Community None"
+community: "Parser dan Runner Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Parser_dan_Runner_Reddit
 ---
 
 # crawl_reddit_single.py
@@ -46,6 +46,7 @@ tags:
 - [[first()]] - `contains` [EXTRACTED]
 - [[fixture_page()]] - `contains` [EXTRACTED]
 - [[import_public_web_sections.py]] - `imports_from` [EXTRACTED]
+- [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[load_settings()]] - `contains` [EXTRACTED]
 - [[main()]] - `contains` [EXTRACTED]
 - [[native_fullname()]] - `contains` [EXTRACTED]
@@ -61,6 +62,7 @@ tags:
 - [[schema_document()]] - `contains` [EXTRACTED]
 - [[schema_fingerprint()]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
+- [[social_export.py]] - `imports_from` [EXTRACTED]
 - [[source_time()]] - `contains` [EXTRACTED]
 - [[thread_id()]] - `contains` [EXTRACTED]
 - [[thread_url()]] - `contains` [EXTRACTED]
@@ -72,4 +74,4 @@ tags:
 - [[walk()]] - `contains` [EXTRACTED]
 - [[worker()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Parser_dan_Runner_Reddit

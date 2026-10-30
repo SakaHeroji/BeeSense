@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/PRD Frontend Crawler.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# PRD Frontend Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Curated Crawler PRD status:frontend implemented, backend pending
@@ -23,4 +23,4 @@ tags:
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
 - [[New survey schema must preserve role, question, response, version and permission]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

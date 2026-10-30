@@ -1,0 +1,17 @@
+---
+source_file: "config/social_nlp_instagram_20261030.json"
+type: "rationale"
+community: "Snapshot NLP dan Arsip"
+location: "$.model; $.umap; $.dbscan; $.evaluation; $.explanation"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/Snapshot_NLP_dan_Arsip
+---
+
+# RetainedSBERTrevision,UMAP/DBSCANbudget andexplanationgates
+
+## Connections
+- [[Active20-topic Instagram-inclusive model configuration_1]] - `references` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/Snapshot_NLP_dan_Arsip

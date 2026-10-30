@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/social_crawler.py"
+source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Community None"
-location: "L924"
+community: "Operasi dan Verifikasi BeeSense"
+location: "L113"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Project the full audit rows into one sheet, applying current filters.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._write_compact()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

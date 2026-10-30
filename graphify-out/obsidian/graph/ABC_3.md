@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Community None"
+community: "Adapter Akuisisi YouTube"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Adapter_Akuisisi_YouTube
 ---
 
 # ABC
@@ -14,4 +14,4 @@ tags:
 - [[SourceAdapter_2]] - `inherits` [EXTRACTED]
 - [[social_common.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube

@@ -140,6 +140,144 @@ class MergeTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Orphan comments"):
             self.run_merge([a])
 
+    def test_instagram_latest_record_wins_without_removing_equal_text_distinct_ids(
+        self,
+    ):
+        import json
+
+        old = self.source(
+            "old",
+            [
+                ("instagram", "post", "https://www.instagram.com/p/B/", "Kuliah"),
+                (
+                    "instagram",
+                    "comment",
+                    "https://www.instagram.com/p/B/?comment_id=21",
+                    "lama",
+                ),
+            ],
+        )
+        new = self.source(
+            "new",
+            [
+                (
+                    "instagram",
+                    "post",
+                    "https://www.instagram.com/reel/B/",
+                    "Kuliah baru",
+                ),
+                (
+                    "instagram",
+                    "comment",
+                    "https://www.instagram.com/p/B/c/21/",
+                    "teks sama",
+                ),
+                (
+                    "instagram",
+                    "comment",
+                    "https://www.instagram.com/p/B/?comment_id=22",
+                    "teks sama",
+                ),
+            ],
+        )
+        result = merge(
+            [old, new],
+            self.root / "combined",
+            self.root / "provenance.json",
+            duplicate_policy="prefer_latest",
+        )
+        self.assertEqual(result["rows"], 3)
+        self.assertEqual(result["duplicates_removed"], 2)
+        self.assertEqual(result["duplicate_native_ids"], 0)
+        book = load_workbook(result["output"], read_only=True)
+        rows = list(book["Data"].values)
+        book.close()
+        self.assertEqual(
+            [row[7] for row in rows[1:]], ["Kuliah baru", "teks sama", "teks sama"]
+        )
+        lineage = [
+            json.loads(row)
+            for row in (self.root / "combined/record_lineage.jsonl")
+            .read_text()
+            .splitlines()
+        ]
+        self.assertEqual(len(lineage), 3)
+        self.assertTrue(all(row["source"] == str(new.resolve()) for row in lineage))
+
+    def test_instagram_comment_identity_conflict_and_fake_host_are_rejected(self):
+        from scripts.merge_social_datasets import identity
+
+        for url in [
+            "https://www.instagram.com/p/B/c/21/?comment_id=22",
+            "https://www.instagram.com.evil/p/B/?comment_id=21",
+        ]:
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                identity({"platform": "instagram", "jenis": "comment", "url": url})
+
+    def test_latest_policy_still_rejects_comment_attached_to_different_root(self):
+        old = self.source(
+            "old",
+            [
+                ("instagram", "post", "https://www.instagram.com/p/B/", "Kuliah"),
+                (
+                    "instagram",
+                    "comment",
+                    "https://www.instagram.com/p/B/?comment_id=21",
+                    "Isi",
+                ),
+            ],
+        )
+        new = self.source(
+            "new",
+            [
+                ("instagram", "post", "https://www.instagram.com/p/C/", "Kampus"),
+                (
+                    "instagram",
+                    "comment",
+                    "https://www.instagram.com/p/C/?comment_id=21",
+                    "Isi",
+                ),
+            ],
+        )
+        with self.assertRaisesRegex(ValueError, "Conflicting native root"):
+            merge(
+                [old, new],
+                self.root / "combined",
+                self.root / "provenance.json",
+                duplicate_policy="prefer_latest",
+            )
+        self.assertFalse((self.root / "combined").exists())
+
+    def test_latest_policy_audits_updated_comment_reply_classification(self):
+        import json
+
+        old = self.source(
+            "old",
+            [
+                ("reddit", "post", "https://www.reddit.com/comments/abc/", "Root"),
+                (
+                    "reddit",
+                    "comment",
+                    "https://www.reddit.com/comments/abc/_/c1/",
+                    "Isi",
+                ),
+            ],
+        )
+        new = self.source(
+            "new",
+            [("reddit", "reply", "https://www.reddit.com/comments/abc/_/c1/", "Isi")],
+        )
+        result = merge(
+            [old, new],
+            self.root / "combined",
+            self.root / "provenance.json",
+            duplicate_policy="prefer_latest",
+        )
+        self.assertEqual(result["rows"], 2)
+        self.assertEqual(result["counts"]["reddit/reply"], 1)
+        audit = json.loads((self.root / "combined/duplicate_records.jsonl").read_text())
+        self.assertTrue(audit["kind_changed"])
+
 
 if __name__ == "__main__":
     unittest.main()

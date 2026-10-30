@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_browser_campaign.md"
 type: "document"
-community: "Community None"
+community: "Alur Akuisisi Sosial Terpadu"
 location: "# Helper campaign Reddit"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Advanced connected-browser Reddit campaign helpers
@@ -17,4 +17,4 @@ tags:
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

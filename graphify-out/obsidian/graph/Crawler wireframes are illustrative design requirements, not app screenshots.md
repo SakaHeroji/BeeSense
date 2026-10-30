@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/Rancangan Layar Crawler.md"
 type: "document"
-community: "Community None"
+community: "PRD Workspace Crawler"
 location: "# Rancangan Layar Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/PRD_Workspace_Crawler
 ---
 
 # Crawler wireframes are illustrative design requirements, not app screenshots
@@ -20,4 +20,4 @@ tags:
 - [[Responsive drawertablefocus behavior is a design target]] - `references` [EXTRACTED]
 - [[Worker-session CAPTCHA and429 UI offer observation rather than bypass]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_None
+#graphify/document #graphify/EXTRACTED #community/PRD_Workspace_Crawler

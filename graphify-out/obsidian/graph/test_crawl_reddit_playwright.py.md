@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Community None"
+community: "Ekspor Campaign dan Resume"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Ekspor_Campaign_dan_Resume
 ---
 
 # test_crawl_reddit_playwright.py
@@ -17,4 +17,4 @@ tags:
 - [[export_browser_campaign.py]] - `imports_from` [EXTRACTED]
 - [[verify_browser_campaign.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_None
+#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume

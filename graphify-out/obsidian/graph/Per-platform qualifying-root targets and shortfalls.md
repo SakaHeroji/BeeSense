@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "## Output"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Per-platform qualifying-root targets and shortfalls
@@ -19,4 +19,4 @@ tags:
 - [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - `references` [EXTRACTED]
 - [[Worker hard deadline preserves streamed partial events]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler

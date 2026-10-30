@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "concept"
-community: "Community None"
+community: "Konfigurasi SocialCrawler"
 location: "## Jeda Reddit setelah HTTP 429"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Community_None
+  - community/Konfigurasi_SocialCrawler
 ---
 
 # Historical platforms.reddit.enabled=false during requested pause
@@ -18,4 +18,4 @@ tags:
 - [[Historical Reddit pause ten qualified and seventeen exported evidence posts]] - `references` [EXTRACTED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_SocialCrawler
