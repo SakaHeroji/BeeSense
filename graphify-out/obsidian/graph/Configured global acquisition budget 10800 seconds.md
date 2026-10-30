@@ -1,5 +1,5 @@
 ---
-source_file: "social_crawler.json"
+source_file: "config/social_crawler.json"
 type: "concept"
 community: "Community None"
 location: "$.total_seconds"
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[One-operation round-robin scheduler with shared 10800-second deadline]] - `conceptually_related_to` [INFERRED]
-- [[social_crawler.json]] - `references` [EXTRACTED]
+- [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

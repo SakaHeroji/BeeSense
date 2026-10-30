@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_explanations.py"
 type: "code"
-community: "Workspace React Crawler"
+community: "Monitor Akuisisi Sintetis"
 location: "L91"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Monitor_Akuisisi_Sintetis
 ---
 
 # ExplanationTests
@@ -28,4 +28,4 @@ tags:
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis

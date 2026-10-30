@@ -1,5 +1,5 @@
 ---
-source_file: "social_crawler_selenium.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
 community: "Community None"
 location: "L569"
@@ -12,7 +12,7 @@ tags:
 # selenium_worker()
 
 ## Connections
-- [[.__init__()_19]] - `indirect_call` [INFERRED]
+- [[.__init__()_22]] - `indirect_call` [INFERRED]
 - [[.error()]] - `indirect_call` [INFERRED]
 - [[.reddit()]] - `calls` [EXTRACTED]
 - [[.search()]] - `calls` [EXTRACTED]

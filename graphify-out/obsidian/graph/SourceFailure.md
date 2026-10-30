@@ -1,18 +1,18 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
+community: "Community None"
 location: "L482"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
 # SourceFailure
 
 ## Connections
-- [[.__init__()_4]] - `method` [EXTRACTED]
+- [[.__init__()_5]] - `method` [EXTRACTED]
 - [[.fetch()_2]] - `calls` [EXTRACTED]
 - [[.fetch()_1]] - `calls` [EXTRACTED]
 - [[.handle_starttag()]] - `calls` [EXTRACTED]
@@ -26,4 +26,4 @@ tags:
 - [[assert_accessible()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Community_None

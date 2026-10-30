@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
 community: "Community None"
 location: "## Cooldown HTTP 429 untuk crawl berikutnya"
@@ -12,7 +12,7 @@ tags:
 # Omitted retry config defaults to zero retries for existing callers
 
 ## Connections
-- [[SocialCrawler 1.3 bounded HTTP 429 cooldown policy]] - `references` [EXTRACTED]
+- [[Bounded HTTP429 policy introduced in1.3 and retained by1.4]] - `references` [EXTRACTED]
 - [[_config()]] - `implements` [INFERRED]
 
 #graphify/rationale #graphify/INFERRED #community/Community_None

@@ -1,5 +1,5 @@
 ---
-source_file: "note.md"
+source_file: "docs/notes/note.md"
 type: "concept"
 community: "Community None"
 location: "line 2"

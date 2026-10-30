@@ -40,7 +40,7 @@ tags:
 - [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - `references` [EXTRACTED]
 - [[New user authorization supersedes historical preparation-only restriction]] - `references` [EXTRACTED]
 - [[Obsidian records bounded retry policy and chronological authorization]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
-- [[social_crawler.json]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
+- [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Community_None

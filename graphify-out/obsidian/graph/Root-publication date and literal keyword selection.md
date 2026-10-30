@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
 community: "Community None"
 location: "## Pengaturan utama"
@@ -12,7 +12,7 @@ tags:
 # Root-publication date and literal keyword selection
 
 ## Connections
-- [[SocialCrawler]] - `implements` [EXTRACTED]
+- [[SocialCrawler_1]] - `implements` [EXTRACTED]
 - [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - `references` [EXTRACTED]
 - [[YouTube date hint aids discovery; exact coordinator timestamp filter decides eligibility]] - `references` [EXTRACTED]
 

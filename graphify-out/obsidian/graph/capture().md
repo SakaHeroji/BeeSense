@@ -1,5 +1,5 @@
 ---
-source_file: "tests/test_social_crawler_selenium.py"
+source_file: "tests/crawler/test_social_crawler_selenium.py"
 type: "code"
 community: "Community None"
 location: "L82"
@@ -12,6 +12,7 @@ tags:
 # capture()
 
 ## Connections
+- [[.crawler()]] - `indirect_call` [INFERRED]
 - [[.test_reddit_identity_and_subreddit_checks()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 

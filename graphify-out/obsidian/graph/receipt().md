@@ -1,17 +1,18 @@
 ---
-source_file: "tests/test_social_crawler.py"
+source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
-location: "L24"
+community: "Community None"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # receipt()
 
 ## Connections
+- [[.test_barrier_exports_partial_without_calling_it_success()]] - `calls` [INFERRED]
 - [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - `calls` [EXTRACTED]
 - [[.test_candidate_cap_and_post_cap_are_independent_when_minimum_fits()]] - `calls` [EXTRACTED]
 - [[.test_combined_bundle_uses_original_contract_and_separate_platform_minimums()]] - `calls` [EXTRACTED]
@@ -29,7 +30,10 @@ tags:
 - [[.test_redirect_to_historical_root_is_not_exported()]] - `calls` [EXTRACTED]
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - `calls` [EXTRACTED]
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - `calls` [EXTRACTED]
+- [[.worker()]] - `calls` [INFERRED]
+- [[.youtube_worker()]] - `calls` [EXTRACTED]
 - [[spawn_youtube_fixture()]] - `calls` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
+- [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

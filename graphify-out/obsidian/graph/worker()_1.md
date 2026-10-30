@@ -1,12 +1,12 @@
 ---
-source_file: "Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
 location: "L103"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # worker()
@@ -16,4 +16,4 @@ tags:
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[error_code()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Community_None

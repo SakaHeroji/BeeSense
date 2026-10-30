@@ -2,7 +2,7 @@
 source_file: "README.md"
 type: "rationale"
 community: "Community None"
-location: "L186"
+location: "## Repository GitHub"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

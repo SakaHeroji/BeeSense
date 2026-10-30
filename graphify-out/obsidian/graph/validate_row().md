@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Community None"
 location: "L133"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # validate_row()
@@ -22,4 +22,4 @@ tags:
 - [[dumps()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

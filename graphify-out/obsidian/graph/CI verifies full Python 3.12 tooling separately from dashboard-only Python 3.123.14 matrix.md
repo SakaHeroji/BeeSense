@@ -1,19 +1,21 @@
 ---
 source_file: ".github/workflows/ci.yml"
 type: "document"
-community: "Adapter Akuisisi YouTube"
+community: "Crawler Selenium Terisolasi"
 location: "jobs"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Crawler_Selenium_Terisolasi
 ---
 
 # CI verifies full Python 3.12 tooling separately from dashboard-only Python 3.12/3.14 matrix
 
 ## Connections
 - [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
-- [[Full Python 3.12 NLPUIcrawler regressions use requirements-dev.txt]] - `implements` [EXTRACTED]
+- [[CI discovers shared-core Reddrix integration regressions]] - `references` [EXTRACTED]
+- [[Declared Reddrix lintformat and offline contract test step]] - `references` [EXTRACTED]
+- [[Full Python3.12 tooling uses requirementsdev.txt and relocated package paths]] - `implements` [EXTRACTED]
 - [[Isolated dashboard-runtime matrix for Python 3.12 and3.14]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/document #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi

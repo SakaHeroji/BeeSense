@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
 community: "Community None"
 location: "## Jeda dan kelanjutan Reddit"
@@ -20,6 +20,6 @@ tags:
 - [[Historical segment 02 targets 999 YouTube990 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
 - [[Historical segment 03 targets 994 YouTube983 Reddit, then finalized INTERRUPTED]] - `references` [EXTRACTED]
 - [[One-operation round-robin scheduler with shared 10800-second deadline]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

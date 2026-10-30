@@ -1,5 +1,5 @@
 ---
-source_file: "main.py"
+source_file: "Dashboard/app.py"
 type: "code"
 community: "Community None"
 location: "L113"
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.explain_artifacts()]] - `calls` [EXTRACTED]
-- [[.render()]] - `calls` [EXTRACTED]
-- [[main.py]] - `contains` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

@@ -1,12 +1,12 @@
 ---
-source_file: "tests/test_social_crawler.py"
+source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
-location: "L117"
+community: "Community None"
+location: "L122"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # SocialCrawlerTests
@@ -52,6 +52,7 @@ tags:
 - [[.test_source_exception_is_sanitized_and_stops_after_three_calls()]] - `method` [EXTRACTED]
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - `method` [EXTRACTED]
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - `method` [EXTRACTED]
+- [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

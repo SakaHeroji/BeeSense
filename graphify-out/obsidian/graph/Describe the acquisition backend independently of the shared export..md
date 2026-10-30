@@ -1,8 +1,8 @@
 ---
-source_file: "social_crawler.py"
+source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Community None"
-location: "L1231"
+location: "L1592"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # Describe the acquisition backend independently of the shared export.
 
 ## Connections
-- [[._source_metadata()_1]] - `rationale_for` [EXTRACTED]
+- [[._source_metadata()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

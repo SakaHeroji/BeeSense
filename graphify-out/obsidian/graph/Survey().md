@@ -15,7 +15,7 @@ tags:
 - [[Survey.tsx]] - `contains` [EXTRACTED]
 - [[download()]] - `calls` [EXTRACTED]
 - [[isoWib()]] - `calls` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[useApp()]] - `calls` [EXTRACTED]
 - [[useClock()]] - `calls` [EXTRACTED]
 

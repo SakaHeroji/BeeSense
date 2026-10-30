@@ -15,7 +15,7 @@ tags:
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Dashboard-only artifactexplanationUI dependency boundary]] - `references` [EXTRACTED]
 - [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - `references` [EXTRACTED]
-- [[Pinned openpyxl and yt-dlp crawler dependencies]] - `references` [INFERRED]
-- [[Root Community Cloud requirements include only dashboard runtime]] - `references` [EXTRACTED]
+- [[Root Cloud requirements include relocated dashboard-only runtime]] - `references` [EXTRACTED]
+- [[Shared crawler pins include yt-dlp and isolated Reddrix manifest]] - `references` [INFERRED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

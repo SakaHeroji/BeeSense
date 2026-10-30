@@ -1,0 +1,15 @@
+# syntax=docker/dockerfile:1
+# Local crawler image. Chrome runs in a separate Selenium Grid service.
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY requirements /app/requirements
+RUN pip install --no-cache-dir -r requirements/selenium.txt \
+    && useradd --create-home --uid 10001 beesense \
+    && chown beesense:beesense /app
+COPY --chown=beesense:beesense Crawler /app/Crawler
+COPY --chown=beesense:beesense config /app/config
+USER beesense
+ENTRYPOINT ["python", "-m", "Crawler.Backend.social_crawler_selenium"]
+CMD ["--dry-run"]

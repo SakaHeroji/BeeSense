@@ -1,18 +1,18 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
+community: "Community None"
 location: "L723"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
 # RedditHtmlParser
 
 ## Connections
-- [[.__init__()_9]] - `method` [EXTRACTED]
+- [[.__init__()_10]] - `method` [EXTRACTED]
 - [[.discover()]] - `method` [EXTRACTED]
 - [[.fullname()]] - `method` [EXTRACTED]
 - [[.own_body()]] - `method` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Community_None

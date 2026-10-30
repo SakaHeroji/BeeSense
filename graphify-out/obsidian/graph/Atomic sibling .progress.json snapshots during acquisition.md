@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
 community: "Community None"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
@@ -12,7 +12,7 @@ tags:
 # Atomic sibling .progress.json snapshots during acquisition
 
 ## Connections
-- [[._event()_1]] - `implements` [INFERRED]
+- [[._event()]] - `implements` [INFERRED]
 - [[Final campaign consolidation and explicit partial target shortfalls]] - `semantically_similar_to` [INFERRED]
 - [[One-operation round-robin scheduler with shared 10800-second deadline]] - `references` [EXTRACTED]
 

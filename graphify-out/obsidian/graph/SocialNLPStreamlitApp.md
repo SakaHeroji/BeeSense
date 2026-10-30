@@ -1,5 +1,5 @@
 ---
-source_file: "main.py"
+source_file: "Dashboard/app.py"
 type: "code"
 community: "Community None"
 location: "L119"
@@ -12,7 +12,7 @@ tags:
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_24]] - `method` [EXTRACTED]
+- [[.__init__()_23]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -42,7 +42,7 @@ tags:
 - [[.monthly_summary()]] - `method` [EXTRACTED]
 - [[.platform_summary()]] - `method` [EXTRACTED]
 - [[.ranking_figure()]] - `method` [EXTRACTED]
-- [[.render()]] - `method` [EXTRACTED]
+- [[.render()_1]] - `method` [EXTRACTED]
 - [[.selected_cluster()]] - `method` [EXTRACTED]
 - [[.sentence_figure()]] - `method` [EXTRACTED]
 - [[.source_figure()]] - `method` [EXTRACTED]
@@ -53,16 +53,18 @@ tags:
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
 - [[Cloud AppTest regression opens all five viewsT04 without installed or imported training libraries]] - `conceptually_related_to` [INFERRED]
-- [[Community Cloud entry pointroot main.py, repo SakaHerojiBeeSense, branch main, Python 3.12]] - `references` [EXTRACTED]
+- [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - `references` [EXTRACTED]
+- [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
 - [[Platform and top-five source graphs count unique topic comments]] - `implements` [INFERRED]
 - [[Read-only exploration of completed NLP runs; no training on page reruns.]] - `rationale_for` [EXTRACTED]
+- [[Root streamlit_apps.py delegates to Dashboard.app]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `implements` [INFERRED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]
-- [[main.py]] - `contains` [EXTRACTED]
-- [[test_dashboard_analysis.py]] - `imports` [EXTRACTED]
-- [[test_social_nlp.py]] - `imports` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

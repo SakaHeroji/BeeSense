@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
 community: "Community None"
 location: "## Output"
@@ -15,6 +15,6 @@ tags:
 - [[Atomic baseline-then-new workbook merge preserves native identity and provenance]] - `shares_data_with` [EXTRACTED]
 - [[Explicit partial export and qualified-post shortfall after acquisition]] - `shares_data_with` [EXTRACTED]
 - [[Inherited SocialCrawler filters and Excel exporters]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `shares_data_with` [EXTRACTED]
+- [[SocialCrawler_1]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

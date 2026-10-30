@@ -2,7 +2,7 @@
 source_file: "graphify-out/obsidian/Arsitektur BeeSense.md"
 type: "concept"
 community: "Community None"
-location: "# Arsitektur BeeSense"
+location: "L32-L36"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

@@ -1,17 +1,13 @@
 ---
 source_file: ""
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Akuisisi Reddit Reddrix"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # ABC
 
-## Connections
-- [[SourceAdapter_2]] - `inherits` [EXTRACTED]
-- [[social_common.py]] - `imports_from` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

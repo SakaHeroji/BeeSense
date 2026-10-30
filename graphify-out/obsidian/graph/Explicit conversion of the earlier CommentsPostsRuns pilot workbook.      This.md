@@ -1,12 +1,12 @@
 ---
-source_file: "Youtube/social_common.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
 location: "L411"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # Explicit conversion of the earlier Comments/Posts/Runs pilot workbook.      This
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_pilot()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

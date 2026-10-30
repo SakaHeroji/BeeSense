@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/browser_campaign.mjs"
+source_file: "Crawler/Backend/Reddit/browser_campaign.mjs"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Community None"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Community_None
 ---
 
 # createCollector()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[browser_campaign.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Community_None

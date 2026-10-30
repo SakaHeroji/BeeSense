@@ -21,7 +21,7 @@ tags:
 - [[domain.ts]] - `contains` [EXTRACTED]
 - [[isoWib()]] - `calls` [EXTRACTED]
 - [[lines()]] - `calls` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[queryLines()]] - `calls` [EXTRACTED]
 

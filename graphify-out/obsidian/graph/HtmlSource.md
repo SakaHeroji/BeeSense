@@ -1,21 +1,21 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
+community: "Community None"
 location: "L568"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
 # HtmlSource
 
 ## Connections
 - [[.fetch()]] - `method` [EXTRACTED]
-- [[ABC]] - `inherits` [EXTRACTED]
+- [[ABC_2]] - `inherits` [EXTRACTED]
 - [[LocalHtmlSource]] - `inherits` [EXTRACTED]
 - [[PublicHtmlSource]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Community_None

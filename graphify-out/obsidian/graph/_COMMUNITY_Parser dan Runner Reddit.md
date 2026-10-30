@@ -1,12 +1,12 @@
 ---
 type: community
-cohesion: 0.29
+cohesion: 0.20
 members: 0
 ---
 
 # Parser dan Runner Reddit
 
-**Cohesion:** 0.29 - loosely connected
+**Cohesion:** 0.20 - loosely connected
 **Members:** 0 nodes
 
 ## Members

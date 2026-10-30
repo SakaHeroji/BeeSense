@@ -1,12 +1,12 @@
 ---
-source_file: "Youtube/social_common.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
 location: "L79"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # schema_fingerprint()
@@ -19,8 +19,8 @@ tags:
 - [[dumps()_1]] - `calls` [EXTRACTED]
 - [[import_pilot()]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
 - [[schema_document()_1]] - `calls` [EXTRACTED]
 - [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Community_None

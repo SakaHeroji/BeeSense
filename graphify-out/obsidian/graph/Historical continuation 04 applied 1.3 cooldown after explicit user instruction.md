@@ -14,13 +14,13 @@ tags:
 ## Connections
 - [[Before 04 cumulative qualified YouTube77Reddit26; evidence32547]] - `references` [EXTRACTED]
 - [[Bounded 1.3 cooldown applied to user-authorized continuation 04]] - `references` [EXTRACTED]
+- [[Bounded HTTP429 policy introduced in1.3 and retained by1.4]] - `references` [EXTRACTED]
 - [[Campaign descriptor records finalized PARTIAL status and five-segment accounting]] - `references` [EXTRACTED]
 - [[Each continuation excludes original dataset and every prior campaign segment]] - `references` [EXTRACTED]
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
 - [[Historical segment 03 safely finalized INTERRUPTED before continuation 04]] - `references` [EXTRACTED]
 - [[New user authorization supersedes historical preparation-only restriction]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
-- [[SocialCrawler 1.3 bounded HTTP 429 cooldown policy]] - `references` [EXTRACTED]
 - [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

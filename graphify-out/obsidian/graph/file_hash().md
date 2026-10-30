@@ -1,12 +1,12 @@
 ---
-source_file: "social_nlp.py"
+source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Community None"
 location: "L53"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # file_hash()
@@ -22,7 +22,7 @@ tags:
 - [[.load_explanations()]] - `calls` [EXTRACTED]
 - [[.load_run()]] - `calls` [EXTRACTED]
 - [[.prepare_excel()]] - `calls` [EXTRACTED]
-- [[.render()]] - `calls` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
 - [[.save()]] - `calls` [EXTRACTED]
 - [[.save_explanations()]] - `calls` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `calls` [EXTRACTED]
@@ -30,10 +30,10 @@ tags:
 - [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - `calls` [EXTRACTED]
 - [[.test_saved_run_coherence_reproduces_the_published_score()]] - `calls` [EXTRACTED]
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `calls` [EXTRACTED]
-- [[main.py]] - `imports` [EXTRACTED]
+- [[app.py]] - `imports` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Community_None

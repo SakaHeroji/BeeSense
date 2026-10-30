@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/public_web_post.test.mjs"
+source_file: "Crawler/Backend/Reddit/public_web_post.test.mjs"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Community None"
 location: "L5"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Community_None
 ---
 
 # candidate
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[public_web_post.test.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Community_None

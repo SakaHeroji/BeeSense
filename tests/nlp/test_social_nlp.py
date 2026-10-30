@@ -11,7 +11,7 @@ from unittest.mock import patch
 import numpy as np
 from openpyxl import Workbook
 
-from social_nlp import REQUIRED_COLUMNS, SocialNLPClusterer, file_hash
+from MachineLearning.social_nlp import REQUIRED_COLUMNS, SocialNLPClusterer, file_hash
 
 
 def fixture(path, duplicate=False, truncated=False):
@@ -610,7 +610,7 @@ class DashboardTests(unittest.TestCase):
     def test_filters_are_literal_and_respect_platform_dates(self):
         import pandas as pd
 
-        from main import SocialNLPStreamlitApp
+        from streamlit_apps import SocialNLPStreamlitApp
 
         frame = pd.DataFrame(
             [
@@ -645,7 +645,7 @@ class DashboardTests(unittest.TestCase):
     def test_topic_graph_is_bounded_and_noise_is_not_a_topic(self):
         import pandas as pd
 
-        from main import SocialNLPStreamlitApp
+        from streamlit_apps import SocialNLPStreamlitApp
 
         topics = [{"cluster_id": i, "label": f"Topik {i}"} for i in range(30)]
         occurrences = pd.DataFrame(

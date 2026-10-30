@@ -1,12 +1,12 @@
 ---
-source_file: "tests/test_social_crawler.py"
+source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
-location: "L97"
+community: "Community None"
+location: "L102"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # spawn_youtube_fixture()
@@ -17,4 +17,4 @@ tags:
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
 - [[yt_events()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

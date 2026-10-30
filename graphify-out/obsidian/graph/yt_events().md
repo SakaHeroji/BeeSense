@@ -1,12 +1,12 @@
 ---
-source_file: "tests/test_social_crawler.py"
+source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
-location: "L33"
+community: "Community None"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # yt_events()
@@ -25,7 +25,9 @@ tags:
 - [[.test_random_and_fixed_delays_are_between_operations()]] - `calls` [EXTRACTED]
 - [[.test_redirect_to_historical_root_is_not_exported()]] - `calls` [EXTRACTED]
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - `calls` [EXTRACTED]
+- [[.youtube_worker()]] - `calls` [EXTRACTED]
 - [[spawn_youtube_fixture()]] - `calls` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
+- [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

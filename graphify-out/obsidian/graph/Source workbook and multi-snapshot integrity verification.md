@@ -5,7 +5,7 @@ community: "Community None"
 location: "# Dataset Dashboard"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Community_None
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
 - [[Text spans, source_row and date certainty survive embedding deduplication]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

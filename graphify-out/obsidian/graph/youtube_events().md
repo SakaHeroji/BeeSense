@@ -1,5 +1,5 @@
 ---
-source_file: "tests/test_social_crawler_selenium.py"
+source_file: "tests/crawler/test_social_crawler_selenium.py"
 type: "code"
 community: "Community None"
 location: "L47"
@@ -12,7 +12,7 @@ tags:
 # youtube_events()
 
 ## Connections
-- [[.worker()]] - `calls` [EXTRACTED]
+- [[.worker()_1]] - `calls` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

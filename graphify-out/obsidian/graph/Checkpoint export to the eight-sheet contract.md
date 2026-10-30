@@ -1,8 +1,8 @@
 ---
-source_file: "Reddit/README_browser_campaign.md"
+source_file: "Crawler/Backend/Reddit/README_browser_campaign.md"
 type: "concept"
 community: "Community None"
-location: "export_browser_campaign.py / verify_browser_campaign.py"
+location: "# Helper campaign Reddit"
 tags:
   - graphify/concept
   - graphify/EXTRACTED

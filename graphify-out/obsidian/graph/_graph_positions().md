@@ -1,5 +1,5 @@
 ---
-source_file: "main.py"
+source_file: "Dashboard/app.py"
 type: "code"
 community: "Community None"
 location: "L58"
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[.topic_figure()]] - `calls` [EXTRACTED]
 - [[Keep the full-model layout stable while volume and edge filters change.]] - `rationale_for` [EXTRACTED]
-- [[main.py]] - `contains` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

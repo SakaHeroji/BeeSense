@@ -1,0 +1,5 @@
+# Python 3.12: full offline regression suite and crawler tooling.
+-r nlp.lock
+-r crawler.txt
+-r selenium.txt
+-r coherence.txt

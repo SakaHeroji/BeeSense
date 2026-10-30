@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/import_public_web_sections.py"
+source_file: "Crawler/Backend/Reddit/import_public_web_sections.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Community None"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # import_sections()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[import_public_web_sections.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

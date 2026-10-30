@@ -1,8 +1,8 @@
 ---
-source_file: "social_crawler_selenium.py"
+source_file: "Crawler/Backend/reddit_crawler.py"
 type: "code"
 community: "Community None"
-location: "L838"
+location: "L84"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,8 @@ tags:
 # main()
 
 ## Connections
-- [[.error()]] - `indirect_call` [INFERRED]
 - [[.plan()]] - `calls` [EXTRACTED]
-- [[.run()]] - `calls` [EXTRACTED]
-- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
-- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[RedditCrawler]] - `calls` [EXTRACTED]
+- [[reddit_crawler.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

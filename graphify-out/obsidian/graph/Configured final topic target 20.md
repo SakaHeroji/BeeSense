@@ -1,5 +1,5 @@
 ---
-source_file: "social_nlp.json"
+source_file: "config/social_nlp.json"
 type: "concept"
 community: "Community None"
 location: "$.target_topics"
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Sentence-weighted Ward merges complete DBSCAN groups to exactly 20]] - `conceptually_related_to` [INFERRED]
-- [[social_nlp.json]] - `references` [EXTRACTED]
+- [[configsocial_nlp.json]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

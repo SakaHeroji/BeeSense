@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
 community: "Community None"
 location: "## Output"
@@ -16,6 +16,6 @@ tags:
 - [[Five verified segments consolidate with zero duplicate roots and zero baseline overlap]] - `shares_data_with` [EXTRACTED]
 - [[Inherited SocialCrawler filters and Excel exporters]] - `references` [EXTRACTED]
 - [[Read-only canonicalnative identity index excludes 50 old YouTube and 181 Reddit roots]] - `shares_data_with` [EXTRACTED]
-- [[SocialCrawler]] - `shares_data_with` [EXTRACTED]
+- [[SocialCrawler_1]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

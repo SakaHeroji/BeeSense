@@ -1,19 +1,15 @@
 ---
 type: community
-cohesion: 0.67
-members: 4
+cohesion: 0.18
+members: 0
 ---
 
 # Identitas dan Kontrak Data
 
-**Cohesion:** 0.67 - moderately connected
-**Members:** 4 nodes
+**Cohesion:** 0.18 - loosely connected
+**Members:** 0 nodes
 
 ## Members
-- [[candidate]] - code - Reddit/public_web_post.test.mjs
-- [[parsePublicPost()]] - code - Reddit/public_web_post.mjs
-- [[public_web_post.mjs]] - code - Reddit/public_web_post.mjs
-- [[public_web_post.test.mjs]] - code - Reddit/public_web_post.test.mjs
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,12 +1,12 @@
 ---
-source_file: "Youtube/social_common.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
 location: "L124"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # Aho-Corasick; offsets refer to Python Unicode code points in source.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[KeywordMatcher_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

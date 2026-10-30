@@ -1,20 +1,16 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: ""
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
-location: "L339"
+community: "Akuisisi Reddit Reddrix"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Akuisisi_Reddit_Reddrix
 ---
 
 # SourceAdapter
 
 ## Connections
-- [[.accept()]] - `method` [EXTRACTED]
-- [[ABC]] - `inherits` [EXTRACTED]
-- [[RedditAdapter]] - `inherits` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[YouTubeAdapter]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_Reddit_Reddrix

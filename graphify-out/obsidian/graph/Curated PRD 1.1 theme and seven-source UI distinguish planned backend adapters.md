@@ -5,7 +5,7 @@ community: "Community None"
 location: "## Tema dan tujuh sumber"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_None
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 - [[Seven implemented UIdemo sources;only two Python adapters exist]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_None
+#graphify/rationale #graphify/INFERRED #community/Community_None

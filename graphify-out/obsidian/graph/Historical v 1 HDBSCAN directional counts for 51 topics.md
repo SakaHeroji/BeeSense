@@ -1,11 +1,11 @@
 ---
-source_file: "EXPLAINABLE_TOPICS.md"
+source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
 community: "Community None"
 location: "## Hasil aktual dan persistensi"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_None
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Four immutable older NLP snapshots including baseline 20-topic run]] - `conceptually_related_to` [INFERRED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/Community_None

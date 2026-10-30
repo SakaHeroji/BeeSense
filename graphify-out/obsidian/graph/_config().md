@@ -1,22 +1,22 @@
 ---
-source_file: "social_crawler.py"
+source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
-location: "L122"
+community: "Community None"
+location: "L424"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # _config()
 
 ## Connections
-- [[.__init__()_21]] - `calls` [EXTRACTED]
+- [[.__init__()_20]] - `calls` [EXTRACTED]
 - [[Omitted retry config defaults to zero retries for existing callers]] - `implements` [INFERRED]
 - [[_keywords()]] - `calls` [EXTRACTED]
 - [[_number()]] - `calls` [EXTRACTED]
 - [[_url()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

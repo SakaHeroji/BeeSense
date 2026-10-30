@@ -1,5 +1,5 @@
 ---
-source_file: "social_crawler.json"
+source_file: "config/social_crawler.json"
 type: "concept"
 community: "Community None"
 location: "$.platforms.reddit.enabled"
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `references` [EXTRACTED]
 - [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `conceptually_related_to` [INFERRED]
-- [[social_crawler.json]] - `references` [EXTRACTED]
+- [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

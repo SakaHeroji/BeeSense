@@ -1,5 +1,5 @@
 ---
-source_file: "EXPLAINABLE_TOPICS.md"
+source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
 community: "Community None"
 location: "## Konfigurasi dan API"
@@ -12,7 +12,7 @@ tags:
 # On-demand explanations from active combined 20-topic artifacts
 
 ## Connections
-- [[Healthy combined 20 local Docker runtime serves the new model]] - `references` [EXTRACTED]
+- [[Historical combined 20-topic local Docker verification; reorganized image unbuilt]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

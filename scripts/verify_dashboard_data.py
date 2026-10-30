@@ -8,11 +8,11 @@ import math
 import subprocess
 from pathlib import Path
 
-from social_nlp import ROOT, SocialNLPClusterer, file_hash
+from MachineLearning.social_nlp import ROOT, SocialNLPClusterer, file_hash
 
 
 def verify(check_git=False):
-    config = json.loads((ROOT / "social_nlp.json").read_text())
+    config = json.loads((ROOT / "config/social_nlp.json").read_text())
     run = ROOT / config["output_dir"]
     source = ROOT / config["input_file"]
     audit = ROOT / "outputs/social_20261028_01/dataset.xlsx"

@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/public_web_post.mjs"
+source_file: "Crawler/Backend/Reddit/public_web_post.mjs"
 type: "code"
-community: "Identitas dan Kontrak Data"
+community: "Community None"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Identitas_dan_Kontrak_Data
+  - community/Community_None
 ---
 
 # public_web_post.mjs
@@ -15,4 +15,4 @@ tags:
 - [[parsePublicPost()]] - `contains` [EXTRACTED]
 - [[public_web_post.test.mjs]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Identitas_dan_Kontrak_Data
+#graphify/code #graphify/EXTRACTED #community/Community_None

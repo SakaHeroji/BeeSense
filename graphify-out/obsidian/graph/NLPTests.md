@@ -1,19 +1,19 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Pipeline dan Persistensi NLP"
 location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Pipeline_dan_Persistensi_NLP
 ---
 
 # NLPTests
 
 ## Connections
-- [[.setUpClass()_2]] - `method` [EXTRACTED]
-- [[.tearDownClass()_2]] - `method` [EXTRACTED]
+- [[.setUpClass()_1]] - `method` [EXTRACTED]
+- [[.tearDownClass()_1]] - `method` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - `method` [EXTRACTED]
@@ -37,6 +37,7 @@ tags:
 - [[.test_span_offsets_and_abbreviations_are_source_faithful()]] - `method` [EXTRACTED]
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `method` [EXTRACTED]
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `method` [EXTRACTED]
+- [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP

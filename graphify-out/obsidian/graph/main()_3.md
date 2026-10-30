@@ -1,26 +1,22 @@
 ---
-source_file: "social_nlp.py"
+source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
-location: "L2311"
+community: "Community None"
+location: "L2108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # main()
 
 ## Connections
-- [[._event()]] - `calls` [EXTRACTED]
-- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
-- [[.explain_artifacts()]] - `calls` [EXTRACTED]
-- [[.fit_excel()]] - `calls` [EXTRACTED]
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[.prepare_excel()]] - `calls` [EXTRACTED]
-- [[.save()]] - `calls` [EXTRACTED]
-- [[.save_explanations()]] - `calls` [EXTRACTED]
-- [[SocialNLPClusterer]] - `calls` [EXTRACTED]
-- [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[.error()]] - `indirect_call` [INFERRED]
+- [[.export_compact()]] - `calls` [EXTRACTED]
+- [[.plan()_1]] - `calls` [EXTRACTED]
+- [[.run()]] - `calls` [EXTRACTED]
+- [[SocialCrawler_1]] - `calls` [EXTRACTED]
+- [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Community_None

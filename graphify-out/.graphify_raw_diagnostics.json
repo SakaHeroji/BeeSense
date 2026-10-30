@@ -1,25 +1,25 @@
 {
-  "node_count": 345,
+  "node_count": 979,
   "unverified_node_count": 0,
-  "raw_edge_count": 781,
+  "raw_edge_count": 2619,
   "non_object_edges": 0,
   "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 80,
+  "dangling_endpoint_edges": 316,
   "self_loop_edges": 0,
-  "valid_candidate_edges": 701,
-  "exact_duplicate_edges": 0,
-  "directed_unique_endpoint_pairs": 701,
-  "directed_same_endpoint_collapsed_edges": 0,
-  "undirected_unique_endpoint_pairs": 687,
-  "undirected_same_endpoint_collapsed_edges": 14,
-  "same_endpoint_group_count": 0,
-  "relation_variant_groups": 0,
+  "valid_candidate_edges": 2303,
+  "exact_duplicate_edges": 19,
+  "directed_unique_endpoint_pairs": 2267,
+  "directed_same_endpoint_collapsed_edges": 36,
+  "undirected_unique_endpoint_pairs": 2259,
+  "undirected_same_endpoint_collapsed_edges": 44,
+  "same_endpoint_group_count": 36,
+  "relation_variant_groups": 5,
   "source_file_variant_groups": 0,
-  "source_location_variant_groups": 0,
+  "source_location_variant_groups": 21,
   "context_variant_groups": 0,
   "post_build_graph_type": "Graph",
-  "post_build_node_count": 345,
-  "post_build_edge_count": 687,
+  "post_build_node_count": 979,
+  "post_build_edge_count": 2262,
   "post_build_error": "",
   "producer_suppression": {
     "path": "/Users/socs3/.pyenv/versions/3.12.0/lib/python3.12/site-packages/graphify/extract.py",
@@ -88,5 +88,100 @@
     ],
     "error": ""
   },
-  "examples": []
+  "examples": [
+    {
+      "source": "crawler_backend_reddit_crawler",
+      "target": "crawler_backend_social_crawler",
+      "edge_count": 2,
+      "relations": [
+        "imports",
+        "imports_from"
+      ],
+      "source_files": [
+        "Crawler/Backend/reddit_crawler.py"
+      ],
+      "source_locations": [
+        "L11",
+        "L12"
+      ],
+      "contexts": [
+        "import"
+      ]
+    },
+    {
+      "source": "crawler_backend_reddit_crawler_redditcrawler",
+      "target": "crawler_backend_social_crawler_socialcrawler",
+      "edge_count": 2,
+      "relations": [
+        "inherits",
+        "uses"
+      ],
+      "source_files": [
+        "Crawler/Backend/reddit_crawler.py"
+      ],
+      "source_locations": [
+        "L12",
+        "L42"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "crawler_backend_social_crawler_selenium_socialcrawlerselenium",
+      "target": "crawler_backend_social_crawler_socialcrawler",
+      "edge_count": 2,
+      "relations": [
+        "inherits",
+        "uses"
+      ],
+      "source_files": [
+        "Crawler/Backend/social_crawler_selenium.py"
+      ],
+      "source_locations": [
+        "L25",
+        "L620"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "tests_crawler_test_social_crawler_reddrix_fixturereddrix",
+      "target": "tests_crawler_test_reddit_crawler_fakereddrix",
+      "edge_count": 2,
+      "relations": [
+        "inherits",
+        "uses"
+      ],
+      "source_files": [
+        "tests/crawler/test_social_crawler_reddrix.py"
+      ],
+      "source_locations": [
+        "L13",
+        "L27"
+      ],
+      "contexts": [
+        ""
+      ]
+    },
+    {
+      "source": "tests_nlp_test_dashboard_analysis",
+      "target": "streamlit_apps",
+      "edge_count": 2,
+      "relations": [
+        "imports_from"
+      ],
+      "source_files": [
+        "tests/nlp/test_dashboard_analysis.py"
+      ],
+      "source_locations": [
+        "L8",
+        "L9"
+      ],
+      "contexts": [
+        "import"
+      ]
+    }
+  ]
 }

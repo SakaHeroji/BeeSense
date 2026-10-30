@@ -5,7 +5,7 @@ tags: [beesense, crawler, deduplication, captcha]
 
 # Crawling 1000 Post Baru
 
-[SocialCrawler](../../social_crawler.py), producer 1.3.0, membaca [konfigurasi tunggal](../../social_crawler.json). Segmen `_01`–`_03` memakai 1.2.0; kelanjutan sejak `_04` memakai 1.3.0.
+[SocialCrawler](../../Crawler/Backend/social_crawler.py), producer 1.3.0, membaca [konfigurasi tunggal](../../config/social_crawler.json). Segmen `_01`–`_03` memakai 1.2.0; kelanjutan sejak `_04` memakai 1.3.0.
 Target: **1.000 post baru yang memenuhi filter per platform**; batas pengambilan
 **10.800 detik (3 jam)**. Rentang publikasi dan keyword yang sudah ada dipertahankan.
 
@@ -43,7 +43,7 @@ dashboard yang sudah berjalan.
 Tes baru mencakup pengecualian post historis, pemeriksaan identitas hasil, pembagian
 giliran/deadline bersama dan penantian CAPTCHA tanpa klik otomatis.
 
-[Runbook teknis](../../SOCIAL_CRAWLER.md) · [[Arsitektur BeeSense]] · [[Menjalankan BeeSense]] · [[HOME]]
+[Runbook teknis](../../docs/crawler/SOCIAL_CRAWLER.md) · [[Arsitektur BeeSense]] · [[Menjalankan BeeSense]] · [[HOME]]
 
 ## Jeda Reddit setelah HTTP 429
 
@@ -97,7 +97,7 @@ direfresh sekitar **10.42.11 WIB**, selisih **331,315 detik (sekitar 332 detik)*
 Ini batas waktu observasi sampai laporan pemulihan, bukan waktu minimum server.
 Receipt menyebut 60 detik, yang dapat berasal dari fallback parser halaman Chrome.
 
-Atas pilihan pengguna, kebijakan ditempatkan di `social_crawler.py` dan JSON,
+Atas pilihan pengguna, kebijakan ditempatkan di `Crawler/Backend/social_crawler.py` dan JSON,
 bukan pipeline NLP. Versi 1.3.0: `rate_limit_cooldown_seconds:360`,
 `rate_limit_max_retries:3`; default retry 0 jika tidak dikonfigurasi. Retry menunggu
 nilai terbesar antara kebijakan dan Retry-After, dibatasi deadline serta anggaran

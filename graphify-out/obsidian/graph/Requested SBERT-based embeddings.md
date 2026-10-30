@@ -1,11 +1,11 @@
 ---
-source_file: "note.md"
+source_file: "docs/notes/note.md"
 type: "concept"
 community: "Community None"
 location: "line 1"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_None
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `conceptually_related_to` [INFERRED]
 - [[Requested DBSCAN clustering]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/Community_None

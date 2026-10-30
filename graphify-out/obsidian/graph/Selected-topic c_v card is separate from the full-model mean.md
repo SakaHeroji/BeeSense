@@ -1,5 +1,5 @@
 ---
-source_file: "DASHBOARD_DESIGN.md"
+source_file: "docs/dashboard/DASHBOARD_DESIGN.md"
 type: "concept"
 community: "Community None"
 location: "## Arti angka"

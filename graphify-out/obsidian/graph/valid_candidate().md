@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/crawl_reddit_playwright.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_playwright.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Community None"
 location: "L58"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # valid_candidate()
@@ -15,4 +15,4 @@ tags:
 - [[campaign_plan()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Community_None

@@ -1,18 +1,18 @@
 ---
-source_file: "Reddit/test_crawl_reddit_playwright.py"
+source_file: "Crawler/Backend/Reddit/test_crawl_reddit_playwright.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Community None"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # ResumeTests
 
 ## Connections
-- [[.capture()]] - `method` [EXTRACTED]
+- [[.capture()_1]] - `method` [EXTRACTED]
 - [[.save_raw()]] - `method` [EXTRACTED]
 - [[.setUp()_1]] - `method` [EXTRACTED]
 - [[.test_candidate_rejects_wrong_host_identity_and_window()]] - `method` [EXTRACTED]
@@ -29,4 +29,4 @@ tags:
 - [[.test_resume_skips_dom_and_prioritizes_missing_before_excerpts()]] - `method` [EXTRACTED]
 - [[test_crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Community_None

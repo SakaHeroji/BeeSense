@@ -1,22 +1,17 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
-location: "L624"
+community: "Community None"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
-# Node
+# node
 
 ## Connections
-- [[.__init__()_8]] - `calls` [EXTRACTED]
-- [[.__init__()_7]] - `method` [EXTRACTED]
-- [[.handle_starttag()]] - `calls` [EXTRACTED]
-- [[.has_class()]] - `method` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[walk()]] - `indirect_call` [INFERRED]
+- [[engines]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Community_None

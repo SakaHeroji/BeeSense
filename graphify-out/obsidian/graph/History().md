@@ -16,7 +16,7 @@ tags:
 - [[History.tsx]] - `contains` [EXTRACTED]
 - [[Manual.tsx]] - `imports` [EXTRACTED]
 - [[dateTime()]] - `calls` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[useUrlState()]] - `calls` [EXTRACTED]
 

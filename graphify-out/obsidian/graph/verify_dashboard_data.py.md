@@ -15,7 +15,7 @@ tags:
 - [[SocialNLPClusterer]] - `imports` [EXTRACTED]
 - [[Verify published source workbooks and the dashboard artifact bundle.]] - `rationale_for` [EXTRACTED]
 - [[file_hash()]] - `imports` [EXTRACTED]
-- [[main()_7]] - `contains` [EXTRACTED]
+- [[main()_8]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[verify()_1]] - `contains` [EXTRACTED]
 

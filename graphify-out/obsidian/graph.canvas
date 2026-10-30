@@ -71,6 +71,24 @@
       "y": 800,
       "width": 420,
       "height": 300
+    },
+    {
+      "id": "reddrix-crawler",
+      "type": "file",
+      "file": "RedditCrawler Reddrix.md",
+      "x": 1500,
+      "y": 800,
+      "width": 420,
+      "height": 300
+    },
+    {
+      "id": "project-structure",
+      "type": "file",
+      "file": "Struktur Proyek.md",
+      "x": 2000,
+      "y": 800,
+      "width": 420,
+      "height": 300
     }
   ],
   "edges": [
@@ -159,6 +177,22 @@
       "toNode": "0",
       "toSide": "bottom",
       "label": "API / lima adapter masih direncanakan"
+    },
+    {
+      "id": "architecture-reddrix",
+      "fromNode": "0",
+      "fromSide": "right",
+      "toNode": "reddrix-crawler",
+      "toSide": "top",
+      "label": "Backend default SocialCrawler"
+    },
+    {
+      "id": "architecture-structure",
+      "fromNode": "0",
+      "fromSide": "right",
+      "toNode": "project-structure",
+      "toSide": "top",
+      "label": "Lokasi package dan deployment"
     }
   ]
 }

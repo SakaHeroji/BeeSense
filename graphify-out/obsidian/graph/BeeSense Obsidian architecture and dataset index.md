@@ -2,7 +2,7 @@
 source_file: "graphify-out/obsidian/HOME.md"
 type: "document"
 community: "Community None"
-location: "# BeeSense"
+location: "L6-L28"
 tags:
   - graphify/document
   - graphify/EXTRACTED
@@ -19,8 +19,10 @@ tags:
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 - [[Existing combined20-topic Dashboard context remains separate from React acquisition]] - `references` [EXTRACTED]
 - [[Historical partial acquisition context does not represent React demo collection]] - `references` [EXTRACTED]
+- [[Index links default integrated Reddrix and retained historical trial]] - `references` [EXTRACTED]
 - [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
+- [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Community_None

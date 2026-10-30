@@ -2,7 +2,7 @@
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "rationale"
 community: "Community None"
-location: "# Menjalankan BeeSense"
+location: "L8-L17; L33; L47"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

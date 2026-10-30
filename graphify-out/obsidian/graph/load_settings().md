@@ -1,21 +1,21 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Community None"
 location: "L951"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # load_settings()
 
 ## Connections
-- [[.validate()]] - `calls` [EXTRACTED]
+- [[.validate()_1]] - `calls` [EXTRACTED]
 - [[Settings]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[run()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 - [[thread_url()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

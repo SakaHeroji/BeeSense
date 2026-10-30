@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[JobDetail.tsx]] - `contains` [EXTRACTED]
 - [[duration()]] - `calls` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[useApp()]] - `calls` [EXTRACTED]
 

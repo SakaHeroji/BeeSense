@@ -1,19 +1,19 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
+community: "Community None"
 location: "L668"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
 # BoundedDom
 
 ## Connections
-- [[.__init__()_8]] - `method` [EXTRACTED]
-- [[.__init__()_9]] - `calls` [EXTRACTED]
+- [[.__init__()_9]] - `method` [EXTRACTED]
+- [[.__init__()_10]] - `calls` [EXTRACTED]
 - [[.handle_data()]] - `method` [EXTRACTED]
 - [[.handle_endtag()]] - `method` [EXTRACTED]
 - [[.handle_startendtag()]] - `method` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[Small serialised-DOM reader, not a browser or full HTML5 repair engine.]] - `rationale_for` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Community_None

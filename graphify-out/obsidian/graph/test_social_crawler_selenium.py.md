@@ -1,5 +1,5 @@
 ---
-source_file: "tests/test_social_crawler_selenium.py"
+source_file: "tests/crawler/test_social_crawler_selenium.py"
 type: "code"
 community: "Community None"
 location: "L1"
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Offline exportworker tests, plus opt-in real Chrome DOM fixtures.]] - `rationale_for` [EXTRACTED]
 - [[SeleniumDOMTests]] - `contains` [EXTRACTED]
-- [[SocialCrawler]] - `imports` [EXTRACTED]
+- [[SocialCrawler_1]] - `imports` [EXTRACTED]
 - [[SocialCrawlerSelenium]] - `imports` [EXTRACTED]
 - [[SocialCrawlerSeleniumTests]] - `contains` [EXTRACTED]
 - [[_SeleniumSource]] - `imports` [EXTRACTED]

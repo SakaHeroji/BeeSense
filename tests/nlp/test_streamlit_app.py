@@ -10,7 +10,7 @@ import numpy as np
 from streamlit.testing.v1 import AppTest
 from test_social_nlp import encoder, fixture
 
-from social_nlp import ROOT, SocialNLPClusterer
+from MachineLearning.social_nlp import ROOT, SocialNLPClusterer
 
 
 class StreamlitTests(unittest.TestCase):
@@ -87,7 +87,7 @@ class StreamlitTests(unittest.TestCase):
         self.environment.stop()
 
     def app(self, query=None):
-        app = AppTest.from_file(str(ROOT / "main.py"), default_timeout=30)
+        app = AppTest.from_file(str(ROOT / "streamlit_apps.py"), default_timeout=30)
         if query:
             app.query_params.update(query)
         return app.run()

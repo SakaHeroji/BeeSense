@@ -5,7 +5,7 @@ community: "Community None"
 location: "## Alur yang tersedia"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Community_None
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 - [[Dataset.nlpSupported requires tested schema and every included source adapter]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Community_None
+#graphify/concept #graphify/INFERRED #community/Community_None

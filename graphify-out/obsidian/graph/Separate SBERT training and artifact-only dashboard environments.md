@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Checksum-verified reuse of immutable SBERT embeddings]] - `references` [EXTRACTED]
+- [[Isolated Reddrix 1.2.14 crawler dependency pins]] - `semantically_similar_to` [INFERRED]
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 - [[Separate Python 3.12 developmenttraining regression dependency entry]] - `references` [EXTRACTED]
 

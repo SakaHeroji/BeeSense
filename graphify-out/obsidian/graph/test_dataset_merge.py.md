@@ -13,7 +13,5 @@ tags:
 
 ## Connections
 - [[MergeTests]] - `contains` [EXTRACTED]
-- [[merge()]] - `imports` [EXTRACTED]
-- [[merge_social_datasets.py]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

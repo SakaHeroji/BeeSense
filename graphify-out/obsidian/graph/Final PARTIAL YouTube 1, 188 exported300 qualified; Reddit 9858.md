@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
 community: "Community None"
 location: "### Hasil akhir campaign 29 Oktober 2026"
@@ -16,6 +16,6 @@ tags:
 - [[Consolidated audit PARTIAL shortfalls 700942 and no pending segments]] - `conceptually_related_to` [INFERRED]
 - [[Per-platform qualifying-root targets and shortfalls]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

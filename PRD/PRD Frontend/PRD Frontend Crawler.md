@@ -76,14 +76,14 @@ Penjadwalan rutin, ekspansi otomatis akun/proxy, penyelesaian CAPTCHA otomatis, 
 
 | Area | Kondisi kode saat penyusunan | Kebutuhan pengembangan |
 | --- | --- | --- |
-| Akuisisi sosial | YouTube dan Reddit; konfigurasi JSON; `plan()`/dry-run dan `run()` pada [social_crawler.py](../../social_crawler.py). | API dan worker persisten yang membungkus kapabilitas tersebut. |
+| Akuisisi sosial | YouTube dan Reddit; konfigurasi JSON; `plan()`/dry-run dan `run()` pada [social_crawler.py](../../Crawler/Backend/social_crawler.py). | API dan worker persisten yang membungkus kapabilitas tersebut. |
 | Eksekusi | Batas waktu global, round robin, deduplikasi historis, event progres, CAPTCHA manual, cooldown 429. | Pemetaan status/progres menjadi kontrak UI dan pengendalian pekerjaan yang aman. |
 | Ekspor | Bundle audit, workbook sosial, summary, dan manifest. | Katalog dataset, kontrol akses, preview, dan unduh sesudah finalisasi. |
 | Input URL | Crawler menerima URL di konfigurasi. | Mode URL saja yang menjamin tidak memicu discovery query sebagai fallback. |
 | Survei | Belum ada jalur survei yang memenuhi spesifikasi dokumen ini. | Validasi/import/form dan skema survei berversi. |
-| Frontend | Dashboard saat ini menggunakan [main.py](../../main.py), Streamlit. | Frontend Crawler ReactJS baru; tidak mengganti Dashboard dalam pekerjaan PRD ini. |
+| Frontend | Dashboard saat ini menggunakan [main.py](../../Dashboard/app.py), Streamlit. | Frontend Crawler ReactJS baru; tidak mengganti Dashboard dalam pekerjaan PRD ini. |
 
-Rujukan perilaku crawler: [SOCIAL_CRAWLER.md](../../SOCIAL_CRAWLER.md) dan [social_crawler.json](../../social_crawler.json). Angka bawaan di bawah diambil dari konfigurasi proyek saat ini atau ditandai sebagai usulan produk.
+Rujukan perilaku crawler: [SOCIAL_CRAWLER.md](../../docs/crawler/SOCIAL_CRAWLER.md) dan [social_crawler.json](../../config/social_crawler.json). Angka bawaan di bawah diambil dari konfigurasi proyek saat ini atau ditandai sebagai usulan produk.
 
 ## 5. Struktur informasi dan navigasi
 

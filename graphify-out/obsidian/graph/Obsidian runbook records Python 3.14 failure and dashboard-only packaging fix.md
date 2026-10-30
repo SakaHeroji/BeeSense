@@ -2,7 +2,7 @@
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "document"
 community: "Community None"
-location: "## Kegagalan deployment Python 3.14"
+location: "L39-L47"
 tags:
   - graphify/document
   - graphify/EXTRACTED

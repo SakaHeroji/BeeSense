@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
-- [[SocialCrawler 1.3 bounded HTTP 429 cooldown policy]] - `references` [EXTRACTED]
+- [[Bounded HTTP429 policy introduced in1.3 and retained by1.4]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

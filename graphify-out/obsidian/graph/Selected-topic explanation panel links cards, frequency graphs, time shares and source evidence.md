@@ -1,5 +1,5 @@
 ---
-source_file: "EXPLAINABLE_TOPICS.md"
+source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "rationale"
 community: "Community None"
 location: "## Panel topik terpilih"

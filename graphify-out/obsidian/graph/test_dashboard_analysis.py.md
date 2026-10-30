@@ -1,21 +1,18 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Ekspor Campaign dan Resume"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Ekspor_Campaign_dan_Resume
 ---
 
 # test_dashboard_analysis.py
 
 ## Connections
 - [[AnalysisTests]] - `contains` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `imports` [EXTRACTED]
-- [[main.py]] - `imports_from` [EXTRACTED]
-- [[number()]] - `imports` [EXTRACTED]
-- [[percent()]] - `imports` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume

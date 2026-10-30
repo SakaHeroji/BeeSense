@@ -1,0 +1,2 @@
+-r crawler.txt
+selenium==4.51.0

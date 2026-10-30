@@ -1,12 +1,12 @@
 ---
-source_file: "Youtube/social_common.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
 location: "L72"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # schema_document()
@@ -17,4 +17,4 @@ tags:
 - [[social_common.py]] - `contains` [EXTRACTED]
 - [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Community_None

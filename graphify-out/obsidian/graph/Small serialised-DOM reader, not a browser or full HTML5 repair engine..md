@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Konfigurasi Tujuh Sumber"
+community: "Community None"
 location: "L669"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
 # Small serialised-DOM reader, not a browser or full HTML5 repair engine.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BoundedDom]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

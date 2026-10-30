@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
+- [[Historical combined20 UIruntime verification retained after relocation]] - `conceptually_related_to` [INFERRED]
 - [[Historical preparation restriction cooldown implemented without restarting segment 03]] - `references` [EXTRACTED]
-- [[Verified local runtime now reads combined 20-topic artifacts]] - `conceptually_related_to` [INFERRED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

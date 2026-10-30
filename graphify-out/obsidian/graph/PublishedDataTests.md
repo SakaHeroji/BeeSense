@@ -1,18 +1,18 @@
 ---
 source_file: "tests/nlp/test_dashboard_data_verifier.py"
 type: "code"
-community: "Workspace React Crawler"
+community: "Eksplorasi Dashboard Streamlit"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Workspace_React_Crawler
+  - community/Eksplorasi_Dashboard_Streamlit
 ---
 
 # PublishedDataTests
 
 ## Connections
-- [[.setUp()_5]] - `method` [EXTRACTED]
+- [[.setUp()_7]] - `method` [EXTRACTED]
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - `method` [EXTRACTED]
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - `method` [EXTRACTED]
 - [[.test_input_integrity_remains_enforced()]] - `method` [EXTRACTED]
@@ -25,4 +25,4 @@ tags:
 - [[.test_unexpected_workbook_is_rejected()]] - `method` [EXTRACTED]
 - [[test_dashboard_data_verifier.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Workspace_React_Crawler
+#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit

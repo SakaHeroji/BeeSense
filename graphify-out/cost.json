@@ -128,6 +128,51 @@
       "ast_tokens": 0,
       "files": 40,
       "scope": "Crawler React frontend, PRD and Obsidian"
+    },
+    {
+      "date": "2026-10-30T02:33:08.635720+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 12,
+      "scope": "RedditCrawler Reddrix adapter, 30-minute config, Excel contract and Obsidian"
+    },
+    {
+      "date": "2026-10-30T02:56:25.171848+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 19,
+      "scope": "SocialCrawler Reddrix default integration, shared workers/provenance/configuration/Docker/Obsidian"
+    },
+    {
+      "date": "2026-10-30T03:19:44.918202+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 78,
+      "scope": "Project folder reorganization, package paths, streamlit_apps.py entrypoint and Obsidian"
+    },
+    {
+      "date": "2026-10-30T03:22:08.809291+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 80,
+      "scope": "Project folder reorganization, package paths, streamlit_apps.py entrypoint and Obsidian"
+    },
+    {
+      "date": "2026-10-30T03:23:36.153853+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 80,
+      "scope": "Project folder reorganization, package paths, streamlit_apps.py entrypoint and Obsidian"
     }
   ],
   "total_input_tokens": 0,

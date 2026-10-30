@@ -1,12 +1,12 @@
 ---
 type: community
-cohesion: 0.25
+cohesion: 0.67
 members: 0
 ---
 
 # Topik dan Verifikasi NLP
 
-**Cohesion:** 0.25 - loosely connected
+**Cohesion:** 0.67 - moderately connected
 **Members:** 0 nodes
 
 ## Members

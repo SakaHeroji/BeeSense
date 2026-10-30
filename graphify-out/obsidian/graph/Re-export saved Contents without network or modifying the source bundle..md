@@ -1,8 +1,8 @@
 ---
-source_file: "social_crawler.py"
+source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Community None"
-location: "L707"
+location: "L1055"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/README_playwright.md"
+source_file: "Crawler/Backend/Reddit/README_playwright.md"
 type: "document"
-community: "Ekspor Campaign dan Resume"
+community: "Community None"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Ekspor_Campaign_dan_Resume
+  - community/Community_None
 ---
 
 # Reddit Playwright CLI runner
@@ -16,7 +16,7 @@ tags:
 - [[Coordinator waits for manual CAPTCHA without automated clicks]] - `references` [EXTRACTED]
 - [[Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops]] - `references` [EXTRACTED]
 - [[Shared rendered_thread_dom.mjs extraction]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume
+#graphify/document #graphify/EXTRACTED #community/Community_None

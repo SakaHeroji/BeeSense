@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/browser_campaign_detail.mjs"
+source_file: "Crawler/Backend/Reddit/browser_campaign_detail.mjs"
 type: "code"
-community: "Bundle Excel dan Provenans"
+community: "Community None"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bundle_Excel_dan_Provenans
+  - community/Community_None
 ---
 
 # rateLimitSeconds()
@@ -16,4 +16,4 @@ tags:
 - [[browser_campaign_detail.test.mjs]] - `imports` [EXTRACTED]
 - [[enrichBatch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bundle_Excel_dan_Provenans
+#graphify/code #graphify/EXTRACTED #community/Community_None

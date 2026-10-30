@@ -1,17 +1,17 @@
 ---
-source_file: "Youtube/social_common.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
 location: "L257"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # Shared pipeline; adapters cannot choose their own headers or cell formats.
 
 ## Connections
-- [[Dataset_1]] - `rationale_for` [EXTRACTED]
+- [[Dataset_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

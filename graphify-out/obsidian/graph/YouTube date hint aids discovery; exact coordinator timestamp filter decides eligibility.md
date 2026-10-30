@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
 community: "Community None"
 location: "## Jeda dan kelanjutan Reddit"
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Historical segment 03 targets 994 YouTube983 Reddit, then finalized INTERRUPTED]] - `conceptually_related_to` [INFERRED]
 - [[Root-publication date and literal keyword selection]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

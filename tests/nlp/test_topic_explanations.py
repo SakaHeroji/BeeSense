@@ -9,7 +9,7 @@ from unittest.mock import patch
 import numpy as np
 import pandas as pd
 
-from social_nlp import SocialNLPClusterer as Model
+from MachineLearning.social_nlp import SocialNLPClusterer as Model
 
 
 def model_from_counts(totals, hits, *, fixed_topic_root=False):

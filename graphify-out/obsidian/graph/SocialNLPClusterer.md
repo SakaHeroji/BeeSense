@@ -1,24 +1,24 @@
 ---
-source_file: "social_nlp.py"
+source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Alur Akuisisi Sosial Terpadu"
+community: "Community None"
 location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Alur_Akuisisi_Sosial_Terpadu
+  - community/Community_None
 ---
 
 # SocialNLPClusterer
 
 ## Connections
-- [[.__init__()_20]] - `method` [EXTRACTED]
+- [[.__init__()_24]] - `method` [EXTRACTED]
 - [[._cache_dir()]] - `method` [EXTRACTED]
 - [[._clean()]] - `method` [EXTRACTED]
 - [[._ctfidf_terms()]] - `method` [EXTRACTED]
 - [[._encode_sbert()]] - `method` [EXTRACTED]
 - [[._evaluate()]] - `method` [EXTRACTED]
-- [[._event()]] - `method` [EXTRACTED]
+- [[._event()_1]] - `method` [EXTRACTED]
 - [[._explanation_evidence()]] - `method` [EXTRACTED]
 - [[._explanation_term_changes()]] - `method` [EXTRACTED]
 - [[._explanation_trend()]] - `method` [EXTRACTED]
@@ -47,9 +47,9 @@ tags:
 - [[.score_coherence()]] - `method` [EXTRACTED]
 - [[.select_candidate()]] - `method` [EXTRACTED]
 - [[.sentence_spans()]] - `method` [EXTRACTED]
-- [[.setUp()_7]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_2]] - `indirect_call` [INFERRED]
-- [[.setUpClass()_1]] - `calls` [EXTRACTED]
+- [[.setUp()_9]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_1]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_2]] - `calls` [EXTRACTED]
 - [[.stability()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `calls` [EXTRACTED]
 - [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - `calls` [EXTRACTED]
@@ -71,19 +71,28 @@ tags:
 - [[BeeSense project and dashboard runbook]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
 - [[CloudRuntimeTests]] - `uses` [INFERRED]
+- [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
+- [[DashboardTests]] - `uses` [INFERRED]
 - [[Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.]] - `rationale_for` [EXTRACTED]
 - [[ExplanationTests]] - `uses` [INFERRED]
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `implements` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
+- [[Module API creates source-bound explanation sidecars without retraining]] - `references` [EXTRACTED]
+- [[Module CLIs and worker spawn import relocated packages]] - `references` [EXTRACTED]
+- [[NLPTests]] - `uses` [INFERRED]
 - [[New combined-corpus SBERT and dual-UMAP features reused only through exact verified caches]] - `implements` [INFERRED]
 - [[Non-noise c-TF-IDF unigrambigram labels]] - `implements` [EXTRACTED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
+- [[Package module CLIs retain repository-root path semantics]] - `references` [EXTRACTED]
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `implements` [EXTRACTED]
 - [[Published 15-candidate DBSCAN grid preserves 8 million-edge guard]] - `implements` [INFERRED]
 - [[Saved-model dashboard uses a separate runtime;full refitting stays Python 3.12]] - `references` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `uses` [INFERRED]
+- [[StreamlitTests]] - `uses` [INFERRED]
+- [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[Two UMAP 10 D projections seeded 42 and 43]] - `implements` [EXTRACTED]
-- [[main()_3]] - `calls` [EXTRACTED]
-- [[main.py]] - `imports` [EXTRACTED]
+- [[app.py]] - `imports` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[model_from_counts()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports` [EXTRACTED]
@@ -92,4 +101,4 @@ tags:
 - [[test_topic_explanations.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu
+#graphify/code #graphify/EXTRACTED #community/Community_None

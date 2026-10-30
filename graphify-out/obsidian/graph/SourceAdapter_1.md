@@ -1,16 +1,20 @@
 ---
-source_file: ""
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Monitor Akuisisi Sintetis"
+community: "Community None"
+location: "L339"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Akuisisi_Sintetis
+  - community/Community_None
 ---
 
 # SourceAdapter
 
 ## Connections
-- [[YouTubeAdapter]] - `inherits` [EXTRACTED]
+- [[.accept()]] - `method` [EXTRACTED]
+- [[ABC_2]] - `inherits` [EXTRACTED]
+- [[RedditAdapter]] - `inherits` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Akuisisi_Sintetis
+#graphify/code #graphify/EXTRACTED #community/Community_None

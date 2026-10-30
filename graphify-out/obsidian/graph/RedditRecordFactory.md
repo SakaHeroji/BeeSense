@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Community None"
 location: "L916"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # RedditRecordFactory
@@ -16,7 +16,8 @@ tags:
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
 - [[RecordFactory]] - `inherits` [EXTRACTED]
+- [[Verified Reddit native identity and parentroot relationships]] - `conceptually_related_to` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[run()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Community_None

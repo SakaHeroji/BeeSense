@@ -1,12 +1,12 @@
 ---
 type: community
-cohesion: 0.67
+cohesion: 1.00
 members: 0
 ---
 
 # Konfigurasi SocialCrawler
 
-**Cohesion:** 0.67 - moderately connected
+**Cohesion:** 1.00 - tightly connected
 **Members:** 0 nodes
 
 ## Members

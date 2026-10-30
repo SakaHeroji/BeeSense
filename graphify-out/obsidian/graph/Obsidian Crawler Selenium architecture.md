@@ -16,7 +16,7 @@ tags:
 - [[Bounded native-ID evidence and explicit uncertainty]] - `references` [EXTRACTED]
 - [[Shared BundleSink and dual-workbook export path]] - `references` [EXTRACTED]
 - [[Shared rendered_thread_dom.mjs extraction]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium class]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Community_None

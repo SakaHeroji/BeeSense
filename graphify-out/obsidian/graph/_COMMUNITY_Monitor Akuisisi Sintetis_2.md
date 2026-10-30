@@ -18,9 +18,3 @@ members: 1
 TABLE source_file, type FROM #community/Monitor_Akuisisi_Sintetis
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-
-## Top bridge nodes
-- [[BeeSense project and dashboard runbook]] - degree 14, connects to 1 community

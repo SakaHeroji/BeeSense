@@ -1,5 +1,5 @@
 ---
-source_file: "social_nlp.json"
+source_file: "config/social_nlp.json"
 type: "concept"
 community: "Community None"
 location: "$.input_file"
@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Active artifact directory outputsnlp_20261029_combined_topics20_01]] - `conceptually_related_to` [INFERRED]
-- [[social_nlp.json]] - `references` [EXTRACTED]
+- [[configsocial_nlp.json]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

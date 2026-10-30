@@ -1,5 +1,5 @@
 ---
-source_file: "social_nlp.json"
+source_file: "config/social_nlp.json"
 type: "concept"
 community: "Community None"
 location: "$.output_dir"
@@ -15,6 +15,6 @@ tags:
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
 - [[Cloud uses relative artifacts and platform-controlled bind; local loopback stays explicit]] - `references` [EXTRACTED]
 - [[Configured merged workbook identity and SHA-256]] - `conceptually_related_to` [INFERRED]
-- [[social_nlp.json]] - `references` [EXTRACTED]
+- [[configsocial_nlp.json]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Community_None

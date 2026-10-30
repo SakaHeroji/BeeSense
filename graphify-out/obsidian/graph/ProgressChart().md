@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[JobDetail.tsx]] - `contains` [EXTRACTED]
 - [[dateTime()]] - `calls` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

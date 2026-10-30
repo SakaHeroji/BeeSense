@@ -1,24 +1,25 @@
 ---
-source_file: "tests/test_social_crawler.py"
+source_file: "tests/crawler/test_social_crawler.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
+community: "Community None"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # test_social_crawler.py
 
 ## Connections
 - [[Clock]] - `contains` [EXTRACTED]
-- [[SocialCrawler]] - `imports` [EXTRACTED]
+- [[SocialCrawler_1]] - `imports` [EXTRACTED]
 - [[SocialCrawlerTests]] - `contains` [EXTRACTED]
 - [[rd_events()]] - `contains` [EXTRACTED]
 - [[receipt()]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[spawn_youtube_fixture()]] - `contains` [EXTRACTED]
+- [[test_social_crawler_reddrix.py]] - `imports_from` [EXTRACTED]
 - [[yt_events()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

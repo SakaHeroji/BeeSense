@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.run_merge()]] - `method` [EXTRACTED]
-- [[.setUp()_4]] - `method` [EXTRACTED]
+- [[.setUp()_8]] - `method` [EXTRACTED]
 - [[.source()]] - `method` [EXTRACTED]
 - [[.test_merge_preserves_identical_text_distinct_ids_and_formula_like_text()]] - `method` [EXTRACTED]
 - [[.test_orphan_comment_is_rejected()]] - `method` [EXTRACTED]

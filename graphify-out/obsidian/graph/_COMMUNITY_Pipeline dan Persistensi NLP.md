@@ -1,37 +1,38 @@
 ---
 type: community
-cohesion: 0.13
-members: 22
+cohesion: 0.07
+members: 23
 ---
 
 # Pipeline dan Persistensi NLP
 
-**Cohesion:** 0.13 - loosely connected
-**Members:** 22 nodes
+**Cohesion:** 0.07 - loosely connected
+**Members:** 23 nodes
 
 ## Members
-- [[.capture()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.save_raw()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.setUp()_1]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_candidate_rejects_wrong_host_identity_and_window()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_captcha_detected_but_user_post_discussing_captcha_is_not_a_barrier()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_chrome_http_429_error_page_is_a_rate_limit()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_cli_nested_json_and_error_are_not_mistaken_for_page_data()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_dom_export_uses_playwright_source_and_existing_eight_sheet_contract()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_dom_only_export_does_not_count_public_excerpts()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_dry_run_cannot_clear_a_persisted_cooldown()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_parent_must_belong_to_same_thread_and_native_comments_deduplicate()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_preserve_excerpt_when_replacing_with_dom_and_resume_after_atomic_write()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_rate_limit_honors_longest_header_or_visible_wait()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_reject_source_mismatch_before_overwriting_evidence()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[.test_resume_skips_dom_and_prioritizes_missing_before_excerpts()]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[ResumeTests]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[export_browser_campaign.py]] - code - Reddit/export_browser_campaign.py
-- [[export_campaign()]] - code - Reddit/export_browser_campaign.py
-- [[load_campaign()]] - code - Reddit/export_browser_campaign.py
-- [[test_crawl_reddit_playwright.py]] - code - Reddit/test_crawl_reddit_playwright.py
-- [[verify()]] - code - Reddit/verify_browser_campaign.py
-- [[verify_browser_campaign.py]] - code - Reddit/verify_browser_campaign.py
+- [[.setUpClass()_1]] - code - tests/nlp/test_social_nlp.py
+- [[.setUpClass()_2]] - code - tests/nlp/test_streamlit_app.py
+- [[.tearDownClass()_1]] - code - tests/nlp/test_social_nlp.py
+- [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_bad_input_and_configuration_are_rejected()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_dedup_preserves_both_occurrences_and_original_dates()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_long_segments_cover_text_without_silent_truncation()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_span_offsets_and_abbreviations_are_source_faithful()]] - code - tests/nlp/test_social_nlp.py
+- [[DashboardTests]] - code - tests/nlp/test_social_nlp.py
+- [[NLPTests]] - code - tests/nlp/test_social_nlp.py
+- [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
+- [[encoder()]] - code - tests/nlp/test_social_nlp.py
+- [[fixture()]] - code - tests/nlp/test_social_nlp.py
+- [[main()_8]] - code - scripts/verify_dashboard_data.py
+- [[test_social_nlp.py]] - code - tests/nlp/test_social_nlp.py
+- [[test_streamlit_app.py]] - code - tests/nlp/test_streamlit_app.py
+- [[verify()_1]] - code - scripts/verify_dashboard_data.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,10 +42,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Eksplorasi Dashboard Streamlit]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu_1]]
+- 2 edges to [[_COMMUNITY_Ekspor Campaign dan Resume]]
+- 2 edges to [[_COMMUNITY_Monitor Akuisisi Sintetis_1]]
 
 ## Top bridge nodes
-- [[export_browser_campaign.py]] - degree 4, connects to 1 community
-- [[test_crawl_reddit_playwright.py]] - degree 4, connects to 1 community
-- [[verify_browser_campaign.py]] - degree 3, connects to 1 community
+- [[test_streamlit_app.py]] - degree 6, connects to 1 community
+- [[DashboardTests]] - degree 4, connects to 1 community
+- [[.setUpClass()_2]] - degree 4, connects to 1 community

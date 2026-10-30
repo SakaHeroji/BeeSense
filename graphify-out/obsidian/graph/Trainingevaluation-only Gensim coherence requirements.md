@@ -1,5 +1,5 @@
 ---
-source_file: "requirements-coherence.txt"
+source_file: "requirements/coherence.txt"
 type: "document"
 community: "Community None"
 location: "comment and dependency declarations"
@@ -12,7 +12,8 @@ tags:
 # Training/evaluation-only Gensim coherence requirements
 
 ## Connections
-- [[Full Python 3.12 NLPUIcrawler regressions use requirements-dev.txt]] - `references` [EXTRACTED]
+- [[Frozen macOS Intel native SBERT training environment]] - `conceptually_related_to` [INFERRED]
+- [[Full Python3.12 tooling uses requirementsdev.txt and relocated package paths]] - `references` [EXTRACTED]
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `references` [EXTRACTED]
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 - [[New-corpus native SBERT encoding or exact verified cache reuse]] - `references` [EXTRACTED]

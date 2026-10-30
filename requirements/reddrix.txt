@@ -1,0 +1,6 @@
+# Isolated crawler dependencies; do not add to the dashboard runtime.
+openpyxl==3.1.5
+reddrix==1.2.14
+camoufox[geoip]==0.5.8
+wreq==0.13.0
+whiskeysour==0.1.6

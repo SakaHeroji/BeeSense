@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Eksplorasi Dashboard Streamlit"
+community: "Community None"
 location: "L346"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksplorasi_Dashboard_Streamlit
+  - community/Community_None
 ---
 
 # Atomic new directory; streaming JSONL + streaming, formula-safe Excel.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BundleSink]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksplorasi_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

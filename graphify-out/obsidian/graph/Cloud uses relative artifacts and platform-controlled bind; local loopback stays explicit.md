@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Active artifact directory outputsnlp_20261029_combined_topics20_01]] - `references` [EXTRACTED]
 - [[Cloud publication includes model code, config and complete checksummed active snapshot]] - `references` [EXTRACTED]
-- [[Community Cloud entry pointroot main.py, repo SakaHerojiBeeSense, branch main, Python 3.12]] - `references` [EXTRACTED]
-- [[social_nlp.json]] - `references` [EXTRACTED]
+- [[Community Cloud root entry streamlit_apps.py; implementation Dashboardapp.py]] - `references` [EXTRACTED]
+- [[configsocial_nlp.json]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

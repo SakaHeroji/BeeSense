@@ -5,9 +5,9 @@ tags: [beesense, sbert, umap, dbscan, coherence, ward]
 
 # Metodologi Machine Learning Social NLP
 
-[SocialNLPClusterer](../../social_nlp.py) memakai **SBERT multilingual → normalisasi L2 →
+[SocialNLPClusterer](../../MachineLearning/social_nlp.py) memakai **SBERT multilingual → normalisasi L2 →
 UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot kalimat → c-TF-IDF → artifact terverifikasi**.
-[SocialNLPStreamlitApp](../../main.py) membaca hasil tersimpan tanpa training pada rerun.
+[SocialNLPStreamlitApp](../../Dashboard/app.py) membaca hasil tersimpan tanpa training pada rerun.
 
 ## Data dan hasil aktif
 
@@ -35,7 +35,7 @@ seluruh embedding_text, beserta checksum matriks dan jumlah window.
 Fitting memakai UMAP 10 dimensi (n_neighbors=15, min_dist=0, metric=cosine),
 dua seed 42/43, lalu memilih parameter DBSCAN Euclidean pada hasil UMAP.
 Embedding SBERT asli tetap menjadi ruang evaluasi. Tidak ada fallback HDBSCAN/KMeans. DBSCAN menemukan kelompok dari kepadatan data, kemudian penggabungan berikut menentukan jumlah topik akhir. Radius graph Euclidean pada UMAP
-dihitung per batch dan dipakai ulang pada grid eps/min_samples dalam social_nlp.json.
+dihitung per batch dan dipakai ulang pada grid eps/min_samples dalam config/social_nlp.json.
 Zero-distance edges dipertahankan. Batas max_neighbor_edges mencegah alokasi
 tetangga tak terkendali. Core point disimpan sebagai dbscan_core_point; label -1
 adalah noise. membership_strength kosong karena DBSCAN tidak memberi probabilitas.

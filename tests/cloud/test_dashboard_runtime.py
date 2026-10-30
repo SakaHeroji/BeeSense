@@ -11,7 +11,7 @@ from unittest.mock import patch
 
 from streamlit.testing.v1 import AppTest
 
-from social_nlp import ROOT, SocialNLPClusterer
+from MachineLearning.social_nlp import ROOT, SocialNLPClusterer
 
 TRAINING_MODULES = (
     "onnxruntime",
@@ -29,7 +29,7 @@ class CloudRuntimeTests(unittest.TestCase):
     def test_shipped_dashboard_and_explanations_need_no_training_environment(self):
         for name in TRAINING_MODULES:
             self.assertIsNone(importlib.util.find_spec(name), name + " installed")
-        config = json.loads((ROOT / "social_nlp.json").read_text())
+        config = json.loads((ROOT / "config/social_nlp.json").read_text())
         directory = (
             os.environ.get("BEESENSE_NLP_RUN_DIR") or ROOT / config["output_dir"]
         )
@@ -44,7 +44,9 @@ class CloudRuntimeTests(unittest.TestCase):
             "fit_excel",
             side_effect=AssertionError("Cloud dashboard must not train"),
         ):
-            app = AppTest.from_file(str(ROOT / "main.py"), default_timeout=120).run()
+            app = AppTest.from_file(
+                str(ROOT / "streamlit_apps.py"), default_timeout=120
+            ).run()
             self.assertFalse(app.exception)
             self.assertFalse(app.error)
             self.assertEqual(app.title[0].value, "Percakapan YouTube & Reddit")

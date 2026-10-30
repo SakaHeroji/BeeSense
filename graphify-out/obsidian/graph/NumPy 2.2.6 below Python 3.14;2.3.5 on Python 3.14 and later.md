@@ -1,5 +1,5 @@
 ---
-source_file: "requirements-dashboard.txt"
+source_file: "requirements/dashboard.txt"
 type: "rationale"
 community: "Community None"
 location: "L3-L4"

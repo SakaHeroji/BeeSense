@@ -13,6 +13,6 @@ Dependensi dari Crawler yang perlu disepakati:
 - Permintaan sebelumnya mengenai **20 topik** dan **coherence minimal 0,4** perlu dirinci sebagai kriteria model di PRD ini, termasuk definisi agregasi metriknya. Keduanya bukan kriteria keberhasilan akuisisi Crawler.
 - Training menghasilkan snapshot baru. Akuisisi data tidak otomatis melatih model atau mengganti snapshot Dashboard.
 
-Rujukan: [PRD Frontend Crawler](<../PRD Frontend/PRD Frontend Crawler.md>), [metodologi NLP saat ini](../../SOCIAL_NLP.md), dan [catatan Obsidian](<../../graphify-out/obsidian/Metodologi Machine Learning Social NLP.md>).
+Rujukan: [PRD Frontend Crawler](<../PRD Frontend/PRD Frontend Crawler.md>), [metodologi NLP saat ini](../../docs/machine-learning/SOCIAL_NLP.md), dan [catatan Obsidian](<../../graphify-out/obsidian/Metodologi Machine Learning Social NLP.md>).
 
 [Kembali ke indeks PRD](../README.md)

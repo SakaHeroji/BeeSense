@@ -1,5 +1,0 @@
-# Python 3.12: full offline regression suite and crawler tooling.
--r requirements-nlp.lock
--r requirements-crawler.txt
--r requirements-selenium.txt
--r requirements-coherence.txt

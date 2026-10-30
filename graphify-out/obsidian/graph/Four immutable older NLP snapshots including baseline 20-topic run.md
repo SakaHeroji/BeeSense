@@ -5,7 +5,7 @@ community: "Community None"
 location: "# Dataset Dashboard"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Community_None
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Historical v 1 HDBSCAN directional counts for 51 topics]] - `conceptually_related_to` [INFERRED]
 - [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_None
+#graphify/rationale #graphify/EXTRACTED #community/Community_None

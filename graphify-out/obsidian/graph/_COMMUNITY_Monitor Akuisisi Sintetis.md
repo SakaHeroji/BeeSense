@@ -1,76 +1,32 @@
 ---
 type: community
-cohesion: 0.09
-members: 61
+cohesion: 0.26
+members: 17
 ---
 
 # Monitor Akuisisi Sintetis
 
-**Cohesion:** 0.09 - loosely connected
-**Members:** 61 nodes
+**Cohesion:** 0.26 - loosely connected
+**Members:** 17 nodes
 
 ## Members
-- [[.__init__()_12]] - code - Youtube/crawl_youtube.py
-- [[.__init__()_13]] - code - Youtube/crawl_youtube.py
-- [[.__init__()_17]] - code - Youtube/social_common.py
-- [[.__init__()_16]] - code - Youtube/social_common.py
-- [[.__init__()_14]] - code - Youtube/social_common.py
-- [[.__init__()_15]] - code - Youtube/social_common.py
-- [[._cells()_1]] - code - Youtube/social_common.py
-- [[.abort()_1]] - code - Youtube/social_common.py
-- [[.accept()_2]] - code - Youtube/crawl_youtube.py
-- [[.accept()_3]] - code - Youtube/social_common.py
-- [[.add_content()_1]] - code - Youtube/social_common.py
-- [[.chunks()_1]] - code - Youtube/social_common.py
-- [[.content()_2]] - code - Youtube/social_common.py
-- [[.debug()]] - code - Youtube/crawl_youtube.py
-- [[.find()_1]] - code - Youtube/social_common.py
-- [[.finish()_1]] - code - Youtube/social_common.py
-- [[.finish_relations()_1]] - code - Youtube/social_common.py
-- [[.info()]] - code - Youtube/crawl_youtube.py
-- [[.key()_1]] - code - Youtube/social_common.py
-- [[.row()_1]] - code - Youtube/social_common.py
-- [[.validate()_1]] - code - Youtube/crawl_youtube.py
-- [[.warning()]] - code - Youtube/crawl_youtube.py
-- [[.write()_2]] - code - Youtube/social_common.py
-- [[ABC_1]] - code
-- [[Aho-Corasick; offsets refer to Python Unicode code points in source._1]] - rationale - Youtube/social_common.py
-- [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel._1]] - rationale - Youtube/social_common.py
-- [[BundleSink_1]] - code - Youtube/social_common.py
-- [[ContentInput_1]] - code - Youtube/social_common.py
-- [[Dataset_1]] - code - Youtube/social_common.py
-- [[Explicit conversion of the earlier CommentsPostsRuns pilot workbook.      This]] - rationale - Youtube/social_common.py
-- [[KeywordMatcher_1]] - code - Youtube/social_common.py
-- [[Normalize a source event; write only through the shared DatasetSink._1]] - rationale - Youtube/social_common.py
-- [[RecordFactory_1]] - code - Youtube/social_common.py
-- [[SafeLogger]] - code - Youtube/crawl_youtube.py
-- [[Settings_1]] - code - Youtube/crawl_youtube.py
-- [[Shared export contract for every source script. Python 3.12+.  This is a tabular]] - rationale - Youtube/social_common.py
-- [[Shared pipeline; adapters cannot choose their own headers or cell formats._1]] - rationale - Youtube/social_common.py
-- [[SourceAdapter_1]] - code
-- [[SourceAdapter_2]] - code - Youtube/social_common.py
-- [[YouTubeAdapter]] - code - Youtube/crawl_youtube.py
-- [[add_readme()_1]] - code - Youtube/social_common.py
-- [[crawl_youtube.py]] - code - Youtube/crawl_youtube.py
-- [[digest()_1]] - code - Youtube/social_common.py
-- [[dumps()_1]] - code - Youtube/social_common.py
-- [[error_code()]] - code - Youtube/crawl_youtube.py
-- [[fields()_1]] - code - Youtube/social_common.py
-- [[import_pilot()]] - code - Youtube/social_common.py
-- [[load_settings()_1]] - code - Youtube/crawl_youtube.py
-- [[main()_1]] - code - Youtube/crawl_youtube.py
-- [[now_iso()_1]] - code - Youtube/social_common.py
-- [[parser()_1]] - code - Youtube/crawl_youtube.py
-- [[run()_1]] - code - Youtube/crawl_youtube.py
-- [[run_worker()_1]] - code - Youtube/crawl_youtube.py
-- [[schema_document()_1]] - code - Youtube/social_common.py
-- [[schema_fingerprint()_1]] - code - Youtube/social_common.py
-- [[social_common.py]] - code - Youtube/social_common.py
-- [[utc_datetime()_1]] - code - Youtube/social_common.py
-- [[validate_row()_1]] - code - Youtube/social_common.py
-- [[verify_descriptor()_1]] - code - Youtube/social_common.py
-- [[video_url()]] - code - Youtube/crawl_youtube.py
-- [[worker()_1]] - code - Youtube/crawl_youtube.py
+- [[.explain()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_extractive_evidence_preserves_source_and_diversifies_roots()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_known_increasing_and_decreasing_shares()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_missing_month_is_unknown_not_zero_and_calendar_gap_is_preserved()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_parent_keys_separate_native_threads_from_comments()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_partial_edge_month_does_not_drive_slope()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_platform_composition_can_reverse_pooled_direction()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_saved_artifact_explanations_never_encode_or_train()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_sentence_repetition_does_not_inflate_comment_trend()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_sidecar_roundtrip_checksum_and_source_binding()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_stable_and_episodic_patterns()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - code - tests/nlp/test_topic_explanations.py
+- [[ExplanationTests]] - code - tests/nlp/test_topic_explanations.py
+- [[model_from_counts()]] - code - tests/nlp/test_topic_explanations.py
+- [[profile()]] - code - tests/nlp/test_topic_explanations.py
+- [[test_topic_explanations.py]] - code - tests/nlp/test_topic_explanations.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -78,12 +34,3 @@ members: 61
 TABLE source_file, type FROM #community/Monitor_Akuisisi_Sintetis
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 2 edges to [[_COMMUNITY_Adapter Akuisisi YouTube]]
-- 1 edge to [[_COMMUNITY_Alur Akuisisi Sosial Terpadu]]
-
-## Top bridge nodes
-- [[SafeLogger]] - degree 13, connects to 1 community
-- [[.finish()_1]] - degree 7, connects to 1 community
-- [[.warning()]] - degree 3, connects to 1 community

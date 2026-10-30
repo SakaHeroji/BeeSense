@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
 community: "Community None"
 location: "## Campaign 1.000 post baru per platform, 3 jam"

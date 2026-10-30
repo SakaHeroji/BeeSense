@@ -1,5 +1,5 @@
 ---
-source_file: "social_crawler.json"
+source_file: "config/social_crawler.json"
 type: "rationale"
 community: "Community None"
 location: "$.platforms"
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `references` [EXTRACTED]
 - [[Target 1000 qualified new roots per platform, bounded attempts and candidates]] - `conceptually_related_to` [INFERRED]
-- [[social_crawler.json]] - `references` [EXTRACTED]
+- [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

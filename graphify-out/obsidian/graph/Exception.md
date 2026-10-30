@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
+community: "Alur Akuisisi Sosial Terpadu"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Alur_Akuisisi_Sosial_Terpadu
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SourceFailure]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Alur_Akuisisi_Sosial_Terpadu

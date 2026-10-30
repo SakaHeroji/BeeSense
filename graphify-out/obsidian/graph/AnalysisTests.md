@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_dashboard_analysis.py"
 type: "code"
-community: "Crawler Selenium Terisolasi"
+community: "Ekspor Campaign dan Resume"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium_Terisolasi
+  - community/Ekspor_Campaign_dan_Resume
 ---
 
 # AnalysisTests
@@ -24,4 +24,4 @@ tags:
 - [[.test_topic_profile_marks_context_fallback_without_inventing_native_ids()]] - `method` [EXTRACTED]
 - [[test_dashboard_analysis.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium_Terisolasi
+#graphify/code #graphify/EXTRACTED #community/Ekspor_Campaign_dan_Resume

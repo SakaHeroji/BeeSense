@@ -1,21 +1,21 @@
 ---
-source_file: "social_crawler.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Adapter Akuisisi YouTube"
-location: "L1740"
+community: "Community None"
+location: "L838"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Adapter_Akuisisi_YouTube
+  - community/Community_None
 ---
 
 # main()
 
 ## Connections
-- [[.export_compact()]] - `calls` [EXTRACTED]
-- [[.plan()_1]] - `calls` [EXTRACTED]
+- [[.error()]] - `indirect_call` [INFERRED]
+- [[.plan()_2]] - `calls` [EXTRACTED]
 - [[.run()_1]] - `calls` [EXTRACTED]
-- [[SocialCrawler]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `contains` [EXTRACTED]
+- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Adapter_Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Community_None

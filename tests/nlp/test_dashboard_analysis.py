@@ -5,8 +5,8 @@ import unittest
 import numpy as np
 import pandas as pd
 
-from main import SocialNLPStreamlitApp as App
-from main import number, percent
+from streamlit_apps import SocialNLPStreamlitApp as App
+from streamlit_apps import number, percent
 
 
 class AnalysisTests(unittest.TestCase):

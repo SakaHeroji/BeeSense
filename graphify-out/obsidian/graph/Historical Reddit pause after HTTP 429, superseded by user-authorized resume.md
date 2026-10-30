@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_CRAWLER.md"
+source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
 community: "Community None"
 location: "## Jeda dan kelanjutan Reddit"
@@ -16,7 +16,7 @@ tags:
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `conceptually_related_to` [INFERRED]
 - [[One-operation round-robin scheduler with shared 10800-second deadline]] - `references` [EXTRACTED]
 - [[Per-platform qualifying-root targets and shortfalls]] - `references` [EXTRACTED]
-- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[User-authorized Reddit continuations preserve prior bundles and original deadline]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_None

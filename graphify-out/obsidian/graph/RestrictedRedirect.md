@@ -1,21 +1,21 @@
 ---
-source_file: "Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Konfigurasi Tujuh Sumber"
+community: "Community None"
 location: "L572"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Tujuh_Sumber
+  - community/Community_None
 ---
 
 # RestrictedRedirect
 
 ## Connections
-- [[.__init__()_5]] - `calls` [EXTRACTED]
+- [[.__init__()_6]] - `calls` [EXTRACTED]
 - [[.redirect_request()]] - `method` [EXTRACTED]
 - [[.test_15_redirect_checks_before_following()]] - `calls` [EXTRACTED]
 - [[HTTPRedirectHandler]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Tujuh_Sumber
+#graphify/code #graphify/EXTRACTED #community/Community_None

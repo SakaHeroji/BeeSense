@@ -1,5 +1,5 @@
 ---
-source_file: "SOCIAL_NLP.md"
+source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "concept"
 community: "Community None"
 location: "## Penjelasan, sumber dan batas interpretasi"

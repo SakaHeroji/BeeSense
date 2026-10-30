@@ -1,2 +1,2 @@
 # Streamlit Community Cloud installs this file. Training has a separate environment.
--r requirements-dashboard.txt
+-r requirements/dashboard.txt

@@ -1,12 +1,12 @@
 ---
-source_file: "Reddit/export_browser_campaign.py"
+source_file: "Crawler/Backend/Reddit/export_browser_campaign.py"
 type: "code"
-community: "Pipeline dan Persistensi NLP"
+community: "Community None"
 location: "L59"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pipeline_dan_Persistensi_NLP
+  - community/Community_None
 ---
 
 # export_campaign()
@@ -15,4 +15,4 @@ tags:
 - [[export_browser_campaign.py]] - `contains` [EXTRACTED]
 - [[load_campaign()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pipeline_dan_Persistensi_NLP
+#graphify/code #graphify/EXTRACTED #community/Community_None

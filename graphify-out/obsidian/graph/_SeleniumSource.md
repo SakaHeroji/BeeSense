@@ -1,5 +1,5 @@
 ---
-source_file: "social_crawler_selenium.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
 community: "Community None"
 location: "L246"
@@ -12,7 +12,7 @@ tags:
 # _SeleniumSource
 
 ## Connections
-- [[.__init__()_18]] - `method` [EXTRACTED]
+- [[.__init__()_21]] - `method` [EXTRACTED]
 - [[._youtube_reply()]] - `method` [EXTRACTED]
 - [[._youtube_sort()]] - `method` [EXTRACTED]
 - [[.navigate()]] - `method` [EXTRACTED]
@@ -26,7 +26,7 @@ tags:
 - [[.test_youtube_acquisition_enforces_total_and_reply_caps()]] - `calls` [EXTRACTED]
 - [[.youtube()]] - `method` [EXTRACTED]
 - [[One browser operation. The parent enforces the hard process deadline.]] - `rationale_for` [EXTRACTED]
-- [[SocialCrawler]] - `uses` [INFERRED]
+- [[SocialCrawler_1]] - `uses` [INFERRED]
 - [[selenium_worker()]] - `calls` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]

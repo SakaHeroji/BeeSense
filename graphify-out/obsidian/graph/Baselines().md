@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Automatic.tsx]] - `contains` [EXTRACTED]
 - [[Manual.tsx]] - `imports` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[useApp()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None

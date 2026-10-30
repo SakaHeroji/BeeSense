@@ -1,0 +1,14 @@
+# Training environment; dashboard-only inference still uses requirements.txt.
+-r nlp.txt
+-r coherence.txt
+sentence-transformers==3.4.1
+transformers==4.49.0
+huggingface-hub==0.36.0
+tokenizers==0.21.4
+safetensors==0.7.0
+# PyTorch 2.2 is the final official macOS Intel wheel series.
+numpy==1.26.4; sys_platform == "darwin" and platform_machine == "x86_64"
+scipy==1.15.3; sys_platform == "darwin" and platform_machine == "x86_64"
+pyarrow==19.0.1; sys_platform == "darwin" and platform_machine == "x86_64"
+torch==2.2.2; sys_platform == "darwin" and platform_machine == "x86_64"
+torch>=2.6,<3; sys_platform != "darwin" or platform_machine != "x86_64"

@@ -13,6 +13,7 @@ class PublishedDataTests(unittest.TestCase):
         workspace = tempfile.TemporaryDirectory()
         self.addCleanup(workspace.cleanup)
         self.root = Path(workspace.name)
+        (self.root / "config").mkdir()
         self.source = self.root / "outputs/social_20261028_01/social_data.xlsx"
         self.source.parent.mkdir(parents=True)
         self.source.write_bytes(b"dashboard input")
@@ -24,7 +25,7 @@ class PublishedDataTests(unittest.TestCase):
         (run / "manifest.json").write_text(
             json.dumps({"files_sha256": {"summary.json": "verified by load_run"}})
         )
-        (self.root / "social_nlp.json").write_text(
+        (self.root / "config/social_nlp.json").write_text(
             json.dumps(
                 {
                     "input_file": str(self.source.relative_to(self.root)),
@@ -76,7 +77,7 @@ class PublishedDataTests(unittest.TestCase):
         merged = self.root / "outputs/social_combined/social_data.xlsx"
         merged.parent.mkdir()
         merged.write_bytes(b"merged dashboard input")
-        path = self.root / "social_nlp.json"
+        path = self.root / "config/social_nlp.json"
         config = json.loads(path.read_text())
         config["input_file"] = str(merged.relative_to(self.root))
         path.write_text(json.dumps(config))
@@ -93,7 +94,7 @@ class PublishedDataTests(unittest.TestCase):
         merged = self.root / "outputs/social_combined/social_data.xlsx"
         merged.parent.mkdir()
         merged.write_bytes(self.source.read_bytes())
-        path = self.root / "social_nlp.json"
+        path = self.root / "config/social_nlp.json"
         config = json.loads(path.read_text())
         config["input_file"] = str(merged.relative_to(self.root))
         path.write_text(json.dumps(config))
@@ -102,7 +103,7 @@ class PublishedDataTests(unittest.TestCase):
             verifier.verify()
 
     def test_active_topic_count_and_coherence_threshold_are_enforced(self):
-        path = self.root / "social_nlp.json"
+        path = self.root / "config/social_nlp.json"
         config = json.loads(path.read_text())
         config.update(target_topics=20, coherence={"min_score": 0.4})
         path.write_text(json.dumps(config))
@@ -143,7 +144,7 @@ class PublishedDataTests(unittest.TestCase):
         merged = self.root / "outputs/social_combined/social_data.xlsx"
         merged.parent.mkdir()
         merged.write_bytes(self.source.read_bytes())
-        path = self.root / "social_nlp.json"
+        path = self.root / "config/social_nlp.json"
         config = json.loads(path.read_text())
         config["input_file"] = str(merged.relative_to(self.root))
         path.write_text(json.dumps(config))

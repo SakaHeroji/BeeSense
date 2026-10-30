@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[JobDetail.tsx]] - `contains` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_None
