@@ -1,16 +1,16 @@
 ---
 type: community
-members: 37
+cohesion: 0.14
+members: 29
 ---
 
 # Worker Reddrix
 
-**Members:** 37 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 29 nodes
 
 ## Members
-- [[.__init__()_19]] - code - Crawler/Backend/instagram_browser.py
 - [[.__init__()_27]] - code - Crawler/Backend/social_crawler.py
-- [[._checkpoint_items()]] - code - Crawler/Backend/social_crawler.py
 - [[.runner()]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[.test_08_urls_reject_credentials_api_and_external_hosts()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[Configure initial and refreshed sessions inside an isolated worker module.]] - rationale - Crawler/Backend/social_crawler.py
@@ -22,17 +22,11 @@ members: 37
 - [[Omitted retry setting defaults to zero]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[Reddrix anti-bot exceptions do not expose an authoritative HTTP status.]] - rationale - Crawler/Backend/social_crawler.py
 - [[Spawn boundary retains streamed records when the hard deadline expires.]] - rationale - Crawler/Backend/social_crawler.py
-- [[Validate shared Instaloader settings without loading credentials or networking.]] - rationale - Crawler/Backend/instaloader_crawler.py
 - [[Virtual displays require Linux and Xvfb; other environments use headless.]] - rationale - Crawler/Backend/social_crawler.py
 - [[_config()]] - code - Crawler/Backend/social_crawler.py
-- [[_configuration()]] - code - Crawler/Backend/instagram_crawler.py
-- [[_integer()]] - code - Crawler/Backend/instagram_crawler.py
 - [[_keywords()]] - code - Crawler/Backend/social_crawler.py
 - [[_number()]] - code - Crawler/Backend/social_crawler.py
-- [[_url()]] - code - Crawler/Backend/social_crawler.py
-- [[browser_configuration()]] - code - Crawler/Backend/instagram_browser.py
 - [[collect_reddrix()]] - code - Crawler/Backend/social_crawler.py
-- [[instaloader_options()]] - code - Crawler/Backend/instaloader_crawler.py
 - [[load_reddrix()]] - code - Crawler/Backend/social_crawler.py
 - [[normalize_reddrix_item()]] - code - Crawler/Backend/social_crawler.py
 - [[reddrix_error_receipt()]] - code - Crawler/Backend/social_crawler.py
@@ -54,37 +48,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 11 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 6 edges to [[_COMMUNITY_Instagram Client dan Ekspor]]
-- 6 edges to [[_COMMUNITY_Worker Instaloader]]
+- 17 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 7 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 6 edges to [[_COMMUNITY_InstaloaderCrawler]]
+- 5 edges to [[_COMMUNITY_Koordinator Backend Sosial_1]]
 - 4 edges to [[_COMMUNITY_Capture Reddit Playwright]]
-- 4 edges to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
-- 4 edges to [[_COMMUNITY_CI dan Verifikasi Backend]]
+- 4 edges to [[_COMMUNITY_Worker Instaloader]]
 - 4 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 - 3 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
 - 3 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
-- 3 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
-- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 3 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
-- 3 edges to [[_COMMUNITY_Transport GraphQL Instaloader]]
-- 3 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 2 edges to [[_COMMUNITY_Validasi Record Reddit]]
 - 2 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
-- 2 edges to [[_COMMUNITY_Akuisisi YouTube]]
 - 2 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 2 edges to [[_COMMUNITY_Crawler Selenium]]
 - 2 edges to [[_COMMUNITY_Runtime Docker dan Display]]
-- 2 edges to [[_COMMUNITY_.score_coherence]]
-- 1 edge to [[_COMMUNITY_Validasi Record Reddit]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 2 edges to [[_COMMUNITY_Default Backend Reddit]]
+- 1 edge to [[_COMMUNITY_Validasi Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
-- 1 edge to [[_COMMUNITY_Kontrak Ekspor Instagram]]
+- 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
-- 1 edge to [[_COMMUNITY_Default Backend Reddit]]
 
 ## Top bridge nodes
-- [[social_crawler.py]] - degree 42, connects to 16 communities
-- [[_configuration()]] - degree 8, connects to 5 communities
+- [[social_crawler.py]] - degree 42, connects to 12 communities
+- [[thread_url()]] - degree 8, connects to 5 communities
+- [[test_social_crawler_reddrix.py]] - degree 17, connects to 4 communities
+- [[_config()]] - degree 11, connects to 4 communities
 - [[Main coordinator owns Reddrix normalization, display and worker]] - degree 10, connects to 4 communities
-- [[normalize_reddrix_item()]] - degree 9, connects to 4 communities
-- [[thread_url()]] - degree 8, connects to 4 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "code"
-community: "Transport GraphQL Instaloader"
+community: "Pengambilan HTML Reddit"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Transport_GraphQL_Instaloader
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # SocialExportMixin
@@ -19,6 +19,7 @@ tags:
 - [[InstagramCrawler]] - `uses` [INFERRED]
 - [[InstagramSettings]] - `uses` [INFERRED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
+- [[RecordFactory Dataset BundleSink SocialExportMixin]] - `references` [EXTRACTED]
 - [[Requires config, include and exclude matchers; performs no acquisition.]] - `rationale_for` [EXTRACTED]
 - [[SessionInvalid]] - `uses` [INFERRED]
 - [[SocialCrawler]] - `uses` [INFERRED]
@@ -27,4 +28,4 @@ tags:
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[social_export.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Transport_GraphQL_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

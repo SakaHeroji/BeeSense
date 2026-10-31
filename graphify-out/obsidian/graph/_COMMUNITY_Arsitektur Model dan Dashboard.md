@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.17
 members: 15
 ---
 
 # Arsitektur Model dan Dashboard
 
+**Cohesion:** 0.17 - loosely connected
 **Members:** 15 nodes
 
 ## Members
@@ -35,8 +37,8 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Konteks dan Provenance Gemini]]
 - 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Riwayat Dataset dan Metodologi]]
-- 2 edges to [[_COMMUNITY_Audit Akuisisi Instagram]]
-- 1 edge to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 2 edges to [[_COMMUNITY_Riwayat Pacing Instagram]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 1 edge to [[_COMMUNITY_Runtime Docker dan Display]]
@@ -44,11 +46,11 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Struktur Runtime Dashboard]]
 - 1 edge to [[_COMMUNITY_Rencana Produk dan Survei]]
 - 1 edge to [[_COMMUNITY_Kontrak API Frontend]]
-- 1 edge to [[_COMMUNITY_Riwayat Pacing Instagram]]
 - 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 1 edge to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_thread_url]]
-- 1 edge to [[_COMMUNITY_Penjelasan Topik Dashboard]]
+- 1 edge to [[_COMMUNITY_Penjelasan Topik Dashboard_1]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Model Aktif]]
 
 ## Top bridge nodes
 - [[BeeSense crawler, NLP and dashboard class architecture]] - degree 13, connects to 5 communities

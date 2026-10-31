@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.18
 members: 23
 ---
 
 # Persyaratan Produk Crawler
 
+**Cohesion:** 0.18 - loosely connected
 **Members:** 23 nodes
 
 ## Members
@@ -41,11 +43,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Rencana Produk dan Survei]]
-- 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard]]
 - 2 edges to [[_COMMUNITY_Kontrak API Frontend]]
 - 2 edges to [[_COMMUNITY_Batas Integrasi Produksi]]
 - 1 edge to [[_COMMUNITY_CI Container Frontend]]
+- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard]]
 - 1 edge to [[_COMMUNITY_Rencana Layanan Backend]]
+- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard_1]]
 - 1 edge to [[_COMMUNITY_BeeSense project]]
 
 ## Top bridge nodes

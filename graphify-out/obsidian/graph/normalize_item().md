@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Instagram Client dan Ekspor"
+community: "Pengambilan HTML Reddit"
 location: "L352"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Instagram_Client_dan_Ekspor
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # normalize_item()
@@ -30,4 +30,4 @@ tags:
 - [[object_key()_1]] - `calls` [EXTRACTED]
 - [[records()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Instagram_Client_dan_Ekspor
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

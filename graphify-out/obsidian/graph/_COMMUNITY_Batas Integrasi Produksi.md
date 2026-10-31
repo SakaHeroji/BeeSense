@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.13
 members: 17
 ---
 
 # Batas Integrasi Produksi
 
+**Cohesion:** 0.13 - loosely connected
 **Members:** 17 nodes
 
 ## Members
@@ -41,5 +43,5 @@ SORT file.name ASC
 ## Top bridge nodes
 - [[Draft acceptance criteria are release requirements, not a React test report]] - degree 9, connects to 2 communities
 - [[React frontend and simulation verified; production acquisition integration unavailable]] - degree 11, connects to 1 community
-- [[Development demo uses synthetic accelerated jobs and separate storage scopes]] - degree 2, connects to 1 community
 - [[Production build defaults API mode;missing backend fails explicitly]] - degree 2, connects to 1 community
+- [[Development demo uses synthetic accelerated jobs and separate storage scopes]] - degree 2, connects to 1 community

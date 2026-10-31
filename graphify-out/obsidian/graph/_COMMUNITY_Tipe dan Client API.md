@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.10
 members: 25
 ---
 
 # Tipe dan Client API
 
+**Cohesion:** 0.10 - loosely connected
 **Members:** 25 nodes
 
 ## Members

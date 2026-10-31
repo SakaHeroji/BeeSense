@@ -5,7 +5,7 @@ community: "Penjelasan Topik Dashboard"
 location: "## Verifikasi dan runtime"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Penjelasan_Topik_Dashboard
 ---
 
@@ -17,4 +17,4 @@ tags:
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical combined 20-topic local Docker verification; reorganized image unbuilt]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Penjelasan_Topik_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard

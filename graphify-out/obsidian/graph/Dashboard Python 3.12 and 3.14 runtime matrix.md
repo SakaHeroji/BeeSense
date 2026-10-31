@@ -5,7 +5,7 @@ community: "Alur Dataset Model Dashboard"
 location: "line 68"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Alur_Dataset_Model_Dashboard
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Artifact-only Streamlit dashboard]] - `conceptually_related_to` [INFERRED]
 - [[Verify BeeSense CI]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/concept #graphify/INFERRED #community/Alur_Dataset_Model_Dashboard

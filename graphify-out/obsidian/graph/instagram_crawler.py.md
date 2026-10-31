@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "CI dan Verifikasi Backend"
+community: "Pengambilan HTML Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CI_dan_Verifikasi_Backend
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # instagram_crawler.py
@@ -50,4 +50,4 @@ tags:
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[upstream_version()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CI_dan_Verifikasi_Backend
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

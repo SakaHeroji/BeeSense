@@ -5,7 +5,7 @@ community: "Batas Integrasi Produksi"
 location: "## 1. Skenario penerimaan"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Batas_Integrasi_Produksi
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Browser actual widths400444px;requested360px remains unproven]] - `conceptually_related_to` [INFERRED]
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Batas_Integrasi_Produksi
+#graphify/rationale #graphify/INFERRED #community/Batas_Integrasi_Produksi

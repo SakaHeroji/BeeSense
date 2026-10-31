@@ -5,7 +5,7 @@ community: "Riwayat Evaluasi Coherence"
 location: "## Pelatihan dan dashboard"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Riwayat_Evaluasi_Coherence
 ---
 
@@ -21,4 +21,4 @@ tags:
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - `references` [EXTRACTED]
 - [[Separate SBERT training and artifact-only dashboard environments]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Riwayat_Evaluasi_Coherence
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence

@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.13
 members: 27
 ---
 
 # Pengujian Worker Instaloader
 
+**Cohesion:** 0.13 - loosely connected
 **Members:** 27 nodes
 
 ## Members

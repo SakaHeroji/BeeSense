@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.25
 members: 18
 ---
 
 # Pengujian Penjelasan Topik
 
+**Cohesion:** 0.25 - loosely connected
 **Members:** 18 nodes
 
 ## Members

@@ -11,14 +11,14 @@ tags:
 # ValueError
 
 ## Connections
+- [[.__init__()_25]] - `calls` [INFERRED]
 - [[.__init__()_1]] - `calls` [INFERRED]
 - [[.__init__()_2]] - `calls` [INFERRED]
-- [[.__init__()_15]] - `calls` [INFERRED]
-- [[.__init__()_16]] - `calls` [INFERRED]
-- [[.__init__()_25]] - `calls` [INFERRED]
 - [[.__init__()_26]] - `calls` [INFERRED]
 - [[.__init__()_29]] - `calls` [INFERRED]
 - [[.__init__()_27]] - `calls` [INFERRED]
+- [[.__init__()_15]] - `calls` [INFERRED]
+- [[.__init__()_16]] - `calls` [INFERRED]
 - [[.__init__()_31]] - `calls` [INFERRED]
 - [[._baseline()]] - `calls` [EXTRACTED]
 - [[._dom_events()]] - `calls` [INFERRED]
@@ -31,9 +31,9 @@ tags:
 - [[._reuse_embeddings()]] - `calls` [INFERRED]
 - [[._validate_config()]] - `calls` [INFERRED]
 - [[._validate_explanation_options()]] - `calls` [INFERRED]
+- [[.accept()_4]] - `calls` [EXTRACTED]
 - [[.accept()_1]] - `calls` [INFERRED]
 - [[.accept()_2]] - `calls` [INFERRED]
-- [[.accept()_4]] - `calls` [EXTRACTED]
 - [[.collect()]] - `calls` [INFERRED]
 - [[.describe_topics()]] - `calls` [INFERRED]
 - [[.encode()]] - `calls` [INFERRED]

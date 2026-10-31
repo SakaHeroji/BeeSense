@@ -1,19 +1,21 @@
 ---
 type: community
+cohesion: 0.09
 members: 61
 ---
 
 # Akuisisi YouTube
 
+**Cohesion:** 0.09 - loosely connected
 **Members:** 61 nodes
 
 ## Members
 - [[.__init__()_13]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[.__init__()_14]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.__init__()_18]] - code - Crawler/Backend/Youtube/social_common.py
+- [[.__init__()_17]] - code - Crawler/Backend/Youtube/social_common.py
 - [[.__init__()_15]] - code - Crawler/Backend/Youtube/social_common.py
 - [[.__init__()_16]] - code - Crawler/Backend/Youtube/social_common.py
-- [[.__init__()_17]] - code - Crawler/Backend/Youtube/social_common.py
-- [[.__init__()_18]] - code - Crawler/Backend/Youtube/social_common.py
 - [[._cells()_1]] - code - Crawler/Backend/Youtube/social_common.py
 - [[.abort()_1]] - code - Crawler/Backend/Youtube/social_common.py
 - [[.accept()_2]] - code - Crawler/Backend/Youtube/crawl_youtube.py
@@ -45,8 +47,8 @@ members: 61
 - [[Settings_1]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[Shared export contract for every source script. Python 3.12+.  This is a tabular]] - rationale - Crawler/Backend/Youtube/social_common.py
 - [[Shared pipeline; adapters cannot choose their own headers or cell formats._1]] - rationale - Crawler/Backend/Youtube/social_common.py
-- [[SourceAdapter_1]] - code
 - [[SourceAdapter_2]] - code - Crawler/Backend/Youtube/social_common.py
+- [[SourceAdapter_1]] - code
 - [[YouTubeAdapter]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[add_readme()_1]] - code - Crawler/Backend/Youtube/social_common.py
 - [[crawl_youtube.py]] - code - Crawler/Backend/Youtube/crawl_youtube.py
@@ -79,10 +81,10 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Worker Reddrix]]
+- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
-- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
-- 1 edge to [[_COMMUNITY_Verifikasi Artefak Dataset]]
+- 1 edge to [[_COMMUNITY_Worker Reddrix]]
+- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 
 ## Top bridge nodes
 - [[video_url()]] - degree 4, connects to 2 communities

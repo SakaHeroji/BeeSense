@@ -1,0 +1,82 @@
+{
+  "status": "PARTIAL",
+  "stop_reason": "TIME_BUDGET_EXHAUSTED",
+  "producer_version": "1.0.1",
+  "upstream_version": "5.8.2",
+  "acquisition_backend": "scweet_saved_web_session",
+  "live_access_verified": true,
+  "trial_passed": true,
+  "synthetic": false,
+  "interrupted": false,
+  "integrated_into_social_crawler": false,
+  "run_id": "1d27b3b6-0348-4f53-acb4-078afc198a19",
+  "output_dir": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_02",
+  "primary_file": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_02/social_data.xlsx",
+  "elapsed_seconds": 755.01,
+  "configured_seconds": 755,
+  "comments_complete": false,
+  "filtered_roots": {
+    "search_reply_or_repost": 18,
+    "unselected_reply_context": 2,
+    "root_excluded_keyword": 1,
+    "root_missing_include_keyword": 1
+  },
+  "receipt_status_counts": {
+    "FINISHED_BEST_EFFORT": 44
+  },
+  "network": {
+    "requests": 59,
+    "http_status_counts": {
+      "200": 59
+    }
+  },
+  "deduplication_sources": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_01/Contents.jsonl",
+      "sha256": "f237c514d03e45e93bfe98d4ed2233cb91ac65ae2d3284974724147ef222d0ba"
+    }
+  ],
+  "posts_shortfall": 986,
+  "posts_exported": 14,
+  "comments": 1,
+  "replies": 0,
+  "duplicates_skipped": 0,
+  "existing_records_skipped": 6,
+  "invalid_rows": 1,
+  "search_calls": 43,
+  "operations": 44,
+  "cooldown_waits": 0,
+  "cooldown_seconds": 0,
+  "compact": {
+    "file": "social_data.xlsx",
+    "sheets": [
+      "Data"
+    ],
+    "columns": [
+      "platform",
+      "jenis",
+      "judul_post",
+      "tanggal_post_wib",
+      "akurasi_tanggal_post",
+      "tanggal_konten_wib",
+      "akurasi_tanggal_konten",
+      "teks",
+      "url",
+      "teks_dipotong"
+    ],
+    "timezone": "Asia/Jakarta",
+    "rows": 15,
+    "counts": {
+      "twitter:post": 14,
+      "twitter:comment": 1
+    },
+    "date_accuracy_counts": {
+      "pasti": 15
+    },
+    "truncated_texts": 0,
+    "filtered_roots": 0,
+    "filtered_comments": 0,
+    "date_estimate_anchor": "source_observed_at",
+    "relative_date_precision": "calendar_date_not_exact_timestamp"
+  }
+}

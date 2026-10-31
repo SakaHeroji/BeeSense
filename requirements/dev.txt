@@ -4,3 +4,4 @@
 -r selenium.txt
 -r coherence.txt
 -r instaloader.txt
+-r twitter.txt

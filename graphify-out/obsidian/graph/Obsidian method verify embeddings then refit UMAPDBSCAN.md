@@ -5,7 +5,7 @@ community: "Riwayat Dataset dan Metodologi"
 location: "## Pelatihan dan dashboard"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Riwayat_Dataset_dan_Metodologi
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Checksum-verified reuse of immutable SBERT embeddings]] - `semantically_similar_to` [INFERRED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/rationale #graphify/INFERRED #community/Riwayat_Dataset_dan_Metodologi

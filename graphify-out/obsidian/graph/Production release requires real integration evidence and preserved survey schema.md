@@ -5,7 +5,7 @@ community: "Batas Integrasi Produksi"
 location: "## 3. Syarat siap rilis"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Batas_Integrasi_Produksi
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
 - [[Production release waits for APIworkeraccessexport and survey adapter integration]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Batas_Integrasi_Produksi
+#graphify/rationale #graphify/INFERRED #community/Batas_Integrasi_Produksi

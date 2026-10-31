@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "config/social_crawler.json"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Jeda dan kelanjutan Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/config/social_crawlerjson
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # YouTube date hint aids discovery; timestamp filter decides eligibility
@@ -16,4 +16,4 @@ tags:
 - [[Root publication dates and literal keyword selection]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/config/social_crawlerjson
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.15
 members: 40
 ---
 
 # Pengujian Koordinator Crawler
 
+**Cohesion:** 0.15 - loosely connected
 **Members:** 40 nodes
 
 ## Members
@@ -57,18 +59,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 18 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 4 edges to [[_COMMUNITY_Worker Reddrix]]
-- 3 edges to [[_COMMUNITY_Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
 - 1 edge to [[_COMMUNITY_InstaloaderCrawler]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial_1]]
 
 ## Top bridge nodes
 - [[receipt()]] - degree 25, connects to 5 communities
-- [[test_social_crawler.py]] - degree 10, connects to 3 communities
 - [[.crawler()_1]] - degree 32, connects to 2 communities
 - [[yt_events()]] - degree 18, connects to 2 communities
+- [[test_social_crawler.py]] - degree 10, connects to 2 communities
 - [[SocialCrawlerTests]] - degree 42, connects to 1 community

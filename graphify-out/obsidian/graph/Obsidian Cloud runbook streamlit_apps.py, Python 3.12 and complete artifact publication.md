@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "document"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "L19-L23"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # Obsidian Cloud runbook: streamlit_apps.py, Python 3.12 and complete artifact publication
@@ -18,4 +18,4 @@ tags:
 - [[Root streamlit_apps.py delegates to Dashboard.app_1]] - `conceptually_related_to` [INFERRED]
 - [[app.py]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/document #graphify/EXTRACTED #community/apppy

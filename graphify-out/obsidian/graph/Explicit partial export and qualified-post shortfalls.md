@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Read-only native/canonical index excludes 50 YouTube and 181 Reddit roots"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Campaign 1.000 post baru per platform, 3 jam"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Explicit partial export and qualified-post shortfalls
@@ -20,4 +20,4 @@ tags:
 - [[SocialCrawler]] - `implements` [EXTRACTED]
 - [[social_data.xlsx ten-column Data worksheet]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

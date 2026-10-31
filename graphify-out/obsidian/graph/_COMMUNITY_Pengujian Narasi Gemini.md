@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.19
 members: 19
 ---
 
 # Pengujian Narasi Gemini
 
+**Cohesion:** 0.19 - loosely connected
 **Members:** 19 nodes
 
 ## Members
@@ -37,7 +39,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 3 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
+- 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 - 2 edges to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
 - 1 edge to [[_COMMUNITY_Generator Narasi Gemini]]
 
@@ -45,5 +47,5 @@ SORT file.name ASC
 - [[test_topic_narratives.py]] - degree 8, connects to 3 communities
 - [[GeminiTests]] - degree 13, connects to 2 communities
 - [[GeminiArtifactTests]] - degree 7, connects to 2 communities
-- [[.test_credentials_stay_out_of_configuration_and_gate_precedes_api()]] - degree 3, connects to 1 community
 - [[.setUpClass()_3]] - degree 3, connects to 1 community
+- [[.test_csv_manifest_and_roundtrip_bind_every_topic_and_keyword_weight()]] - degree 3, connects to 1 community

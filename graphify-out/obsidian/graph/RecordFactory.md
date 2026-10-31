@@ -18,6 +18,7 @@ tags:
 - [[.row()]] - `method` [EXTRACTED]
 - [[.setUp()]] - `calls` [EXTRACTED]
 - [[.validate()]] - `calls` [EXTRACTED]
+- [[RecordFactory Dataset BundleSink SocialExportMixin]] - `references` [EXTRACTED]
 - [[RedditRecordFactory]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Pemilihan Topik dan Coherence"
+community: "Encoding dan Penyimpanan Model"
 location: "L812"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pemilihan_Topik_dan_Coherence
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._merge_topics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

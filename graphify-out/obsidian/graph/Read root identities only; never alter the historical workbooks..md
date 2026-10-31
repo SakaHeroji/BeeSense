@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Instagram Client dan Ekspor"
+community: "Pengambilan HTML Reddit"
 location: "L820"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Instagram_Client_dan_Ekspor
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # Read root identities only; never alter the historical workbooks.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._existing_posts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Instagram_Client_dan_Ekspor
+#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

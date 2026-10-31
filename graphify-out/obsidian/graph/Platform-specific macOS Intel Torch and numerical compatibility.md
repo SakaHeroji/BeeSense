@@ -5,7 +5,7 @@ community: "Lingkungan Training SBERT"
 location: "platform-specific dependency markers"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Lingkungan_Training_SBERT
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Frozen macOS Intel native SBERT training environment]] - `conceptually_related_to` [INFERRED]
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Lingkungan_Training_SBERT
+#graphify/rationale #graphify/INFERRED #community/Lingkungan_Training_SBERT

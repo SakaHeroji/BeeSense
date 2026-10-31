@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "code"
-community: "Worker Instaloader"
+community: "Koordinator Backend Sosial"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Koordinator_Backend_Sosial
 ---
 
 # test_social_crawler_instagram.py
@@ -26,4 +26,4 @@ tags:
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[yt_events()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial

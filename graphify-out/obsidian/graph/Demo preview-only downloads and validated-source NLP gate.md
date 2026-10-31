@@ -5,7 +5,7 @@ community: "Kontrak API Frontend"
 location: "## Fitur"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Kontrak_API_Frontend
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Dataset.nlpSupported requires tested schema and every included source adapter]] - `conceptually_related_to` [INFERRED]
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Kontrak_API_Frontend
+#graphify/rationale #graphify/INFERRED #community/Kontrak_API_Frontend

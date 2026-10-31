@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Historical Instagram Export Query Memory]] - `references` [INFERRED]
 - [[Sentence Cluster Artifact Contract V2]] - `conceptually_related_to` [INFERRED]
-- [[SocialCrawler Guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium Guide]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

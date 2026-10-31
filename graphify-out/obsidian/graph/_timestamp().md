@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Instagram Client dan Ekspor"
+community: "Validasi Record Reddit"
 location: "L339"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Instagram_Client_dan_Ekspor
+  - community/Validasi_Record_Reddit
 ---
 
 # _timestamp()
@@ -16,4 +16,4 @@ tags:
 - [[normalize_item()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Instagram_Client_dan_Ekspor
+#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit

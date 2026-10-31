@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Round Robin Shared Deadline"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "/Users/sakaheroji/Documents/BeeSense/docs/crawler/SOCIAL_CRAWLER.md:75"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Round_Robin_Shared_Deadline
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Round Robin Shared Deadline
@@ -21,6 +21,6 @@ tags:
 - [[Historical user-requested Reddit pause after 429]] - `references` [EXTRACTED]
 - [[Original deadline ends acquisition before final workbook publication]] - `references` [EXTRACTED]
 - [[Reddit bounded 429 policy introduced in version 1.3]] - `references` [EXTRACTED]
-- [[SocialCrawler Guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Round_Robin_Shared_Deadline
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

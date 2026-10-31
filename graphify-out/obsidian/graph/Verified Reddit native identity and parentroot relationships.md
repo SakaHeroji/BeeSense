@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Ekspor dan Provenance Reddit"
+community: "Validasi Record Reddit"
 location: "## Kontrak output Excel"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ekspor_dan_Provenance_Reddit
+  - community/Validasi_Record_Reddit
 ---
 
 # Verified Reddit native identity and parent/root relationships
@@ -18,4 +18,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Validasi_Record_Reddit

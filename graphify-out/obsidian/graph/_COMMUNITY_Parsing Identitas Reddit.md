@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.17
 members: 21
 ---
 
 # Parsing Identitas Reddit
 
+**Cohesion:** 0.17 - loosely connected
 **Members:** 21 nodes
 
 ## Members
@@ -38,22 +40,22 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 17 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
+- 12 edges to [[_COMMUNITY_Validasi Record Reddit]]
 - 11 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
-- 7 edges to [[_COMMUNITY_Validasi Record Reddit]]
-- 6 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
-- 5 edges to [[_COMMUNITY_Struktur DOM Reddit]]
+- 9 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 6 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 4 edges to [[_COMMUNITY_Struktur DOM Reddit]]
+- 4 edges to [[_COMMUNITY_Validasi Record Reddit_1]]
+- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 3 edges to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_CI dan Verifikasi Backend]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Transport GraphQL Instaloader]]
+- 1 edge to [[_COMMUNITY_Akuisisi X dan Ekspor Scweet]]
 - 1 edge to [[_COMMUNITY_Generator Narasi Gemini]]
 
 ## Top bridge nodes
-- [[crawl_reddit_single.py]] - degree 61, connects to 11 communities
+- [[crawl_reddit_single.py]] - degree 62, connects to 11 communities
 - [[native_fullname()]] - degree 6, connects to 3 communities
 - [[Node]] - degree 6, connects to 2 communities
 - [[LocalHtmlSource]] - degree 5, connects to 2 communities
-- [[source_time()]] - degree 5, connects to 2 communities
+- [[.__init__()_10]] - degree 5, connects to 2 communities

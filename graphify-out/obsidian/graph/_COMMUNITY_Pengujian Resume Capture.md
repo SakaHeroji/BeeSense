@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.20
 members: 16
 ---
 
 # Pengujian Resume Capture
 
+**Cohesion:** 0.20 - loosely connected
 **Members:** 16 nodes
 
 ## Members
@@ -33,7 +35,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 1 edge to [[_COMMUNITY_Validasi Record Reddit]]
 
 ## Top bridge nodes
 - [[ResumeTests]] - degree 16, connects to 1 community

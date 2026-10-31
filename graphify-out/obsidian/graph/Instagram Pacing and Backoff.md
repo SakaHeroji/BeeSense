@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Gemini Topic Narratives Guide]] - `semantically_similar_to` [INFERRED]
-- [[SocialCrawler Guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

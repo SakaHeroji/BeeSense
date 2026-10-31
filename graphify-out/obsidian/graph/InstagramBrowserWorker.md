@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "code"
-community: "Fixture dan Pengujian Reddit"
+community: "Pengambilan HTML Reddit"
 location: "L166"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Fixture_dan_Pengujian_Reddit
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # InstagramBrowserWorker
@@ -30,4 +30,4 @@ tags:
 - [[instagram_crawler.py]] - `imports` [EXTRACTED]
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Fixture_dan_Pengujian_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

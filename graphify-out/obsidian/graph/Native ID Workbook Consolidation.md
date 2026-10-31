@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Social NLP Methodology]] - `shares_data_with` [EXTRACTED]
-- [[SocialCrawler Guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

@@ -1,11 +1,13 @@
 ---
 type: community
-members: 9
+cohesion: 0.20
+members: 14
 ---
 
 # Worker Chrome Instagram
 
-**Members:** 9 nodes
+**Cohesion:** 0.20 - loosely connected
+**Members:** 14 nodes
 
 ## Members
 - [[Bind document-script comments by native DOM permalink andsame shortcode]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
@@ -15,7 +17,12 @@ members: 9
 - [[Historical interruptedChrome trial before1.5integration]] - concept - graphify-out/obsidian/InstagramCrawler instagrapi.md
 - [[One dedicated persistentprofile andpinnedCLIsession perrun]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
 - [[Standalone browser1800-second preset, updated bounded retry]] - concept - config/instagram_browser_crawler.json
+- [[instagramBarrier()]] - code - Crawler/Backend/instagram_browser_capture.mjs
 - [[instagramDocumentPayload()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramNavigate()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramRetryAfter()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagramSourceRateLimit()]] - code - Crawler/Backend/instagram_browser_capture.mjs
+- [[instagram_browser_capture.mjs]] - code - Crawler/Backend/instagram_browser_capture.mjs
 - [[macOS headed trial andLinuxprepared-profile requirements]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
@@ -26,14 +33,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
-- 2 edges to [[_COMMUNITY_Riwayat Sesi Instagram]]
-- 1 edge to [[_COMMUNITY_instagram_browser_capture.mjs]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Kontrak Ekspor Instagram]]
+- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 3 edges to [[_COMMUNITY_Riwayat Sesi Instagram]]
 
 ## Top bridge nodes
-- [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 3 communities
+- [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 2 communities
 - [[Historical interruptedChrome trial before1.5integration]] - degree 5, connects to 2 communities
 - [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - degree 3, connects to 1 community
-- [[instagramDocumentPayload()]] - degree 2, connects to 1 community

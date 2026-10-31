@@ -274,6 +274,15 @@
       "semantic_files_extracted": 44,
       "cached_files": 3,
       "retained_hash_verified_nodes": 474
+    },
+    {
+      "date": "2026-10-31T04:13:51.446997+00:00",
+      "input_tokens": null,
+      "output_tokens": null,
+      "token_usage_available": false,
+      "ast_tokens": 0,
+      "files": 8,
+      "scope": "Standalone TwitterCrawler Scweet trial"
     }
   ],
   "total_input_tokens": 0,

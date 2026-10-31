@@ -5,6 +5,8 @@ tags: [beesense, dashboard]
 
 # BeeSense
 
+[[TwitterCrawler Scweet]] menambahkan class X/Twitter mandiri dengan konfigurasi percobaan 30 menit dan kontrak Excel yang sama. Hasil uji live dicatat pada catatan tersebut; belum menjadi backend `SocialCrawler`.
+
 Snapshot aktif: **34.095 record, 20 topik, rata-rata c_v 0,43865**, dilengkapi 20 terjemahan/deskripsi [[Topik Gemini]] dan Excel 45.556 pasangan topik–kalimat. Lihat [[Training Instagram 20 Topik]] serta [[Dataset Dashboard]]. Catatan angka lain di bawah merupakan riwayat.
 
 [[InstaloaderCrawler]] menjadi backend Instagram default SocialCrawler 1.6.0; catatannya memuat patch GraphQL web pengguna,

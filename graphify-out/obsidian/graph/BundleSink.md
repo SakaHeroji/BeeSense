@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Ekspor dan Provenance Reddit"
+community: "Kontrak Record Reddit"
 location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_dan_Provenance_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # BundleSink
@@ -24,8 +24,9 @@ tags:
 - [[Integrated SocialCrawler owns Reddrix acquisition and shared export]] - `references` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 - [[Preserved eight-sheet audit and checksummed full-text bundle]] - `conceptually_related_to` [EXTRACTED]
+- [[RecordFactory Dataset BundleSink SocialExportMixin]] - `references` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

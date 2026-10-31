@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Ekspor dan Provenance Reddit"
+community: "Validasi Record Reddit"
 location: "L916"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Ekspor_dan_Provenance_Reddit
+  - community/Validasi_Record_Reddit
 ---
 
 # RedditRecordFactory
@@ -21,4 +21,4 @@ tags:
 - [[export_campaign()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit
+#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit

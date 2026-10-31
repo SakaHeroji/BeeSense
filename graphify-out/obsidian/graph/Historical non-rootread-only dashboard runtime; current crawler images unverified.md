@@ -5,7 +5,7 @@ community: "Riwayat Evaluasi Coherence"
 location: "## Docker"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Riwayat_Evaluasi_Coherence
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense project]] - `references` [EXTRACTED]
 - [[Historical combined snapshot QA; relocated root shim checked offline]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence
+#graphify/rationale #graphify/INFERRED #community/Riwayat_Evaluasi_Coherence

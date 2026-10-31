@@ -1,12 +1,12 @@
 ---
 source_file: "docs/PROJECT_STRUCTURE.md"
 type: "rationale"
-community: "config/social_crawler.json"
+community: "Audit Akuisisi Instagram"
 location: "## Import Python dan path"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/config/social_crawlerjson
+  - community/Audit_Akuisisi_Instagram
 ---
 
 # Package ROOT preserves repository-relative configuration and artifact paths
@@ -16,4 +16,4 @@ tags:
 - [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/config/social_crawlerjson
+#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram

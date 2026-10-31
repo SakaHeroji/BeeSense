@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.21
 members: 20
 ---
 
 # Capture Reddit Playwright
 
+**Cohesion:** 0.21 - loosely connected
 **Members:** 20 nodes
 
 ## Members
@@ -37,12 +39,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
-- 4 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 4 edges to [[_COMMUNITY_Validasi Record Reddit]]
 - 4 edges to [[_COMMUNITY_Worker Reddrix]]
 - 2 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 1 edge to [[_COMMUNITY_Round Robin Shared Deadline]]
+- 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 - 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 

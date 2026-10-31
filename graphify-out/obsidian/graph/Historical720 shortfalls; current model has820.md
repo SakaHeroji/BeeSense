@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/SOCIAL_NLP.md"
 type: "rationale"
-community: "Riwayat Dataset dan Metodologi"
+community: "Pemilihan Topik dan Coherence"
 location: "## Data dan hasil aktif 30 Oktober 2026"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Dataset_dan_Metodologi
+  - community/Pemilihan_Topik_dan_Coherence
 ---
 
 # Historical7/20 shortfalls; current model has8/20
@@ -16,4 +16,4 @@ tags:
 - [[Historical29October macro c_v0.4720034334]] - `references` [EXTRACTED]
 - [[Training-corpus coherence is not holdout or labeled accuracy]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/rationale #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence

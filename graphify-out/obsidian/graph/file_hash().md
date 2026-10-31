@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Verifikasi Artefak Dataset"
+community: "Encoding dan Penyimpanan Model"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Verifikasi_Artefak_Dataset
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # file_hash()
@@ -42,4 +42,4 @@ tags:
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

@@ -23,6 +23,8 @@ Lihat [peta lokasi dan perintah](docs/PROJECT_STRUCTURE.md). Jalankan perintah d
 
 Clustering dan penelusuran percakapan YouTube/Reddit/Instagram melalui dashboard Streamlit. SocialCrawler, class NLP, dan class UI terpisah. Dashboard membaca hasil clustering tersimpan sehingga dapat dibuka tanpa crawling, login Reddit, download model, atau training ulang.
 
+`TwitterCrawler` berbasis **Scweet 5.8.2** tersedia sebagai percobaan terpisah untuk X/Twitter, dengan [konfigurasi 30 menit](config/twitter_crawler.json), auth lokal, deduplikasi native ID, dan format Excel BeeSense yang sama. Lihat [panduan TwitterCrawler](docs/crawler/TWITTER_CRAWLER.md). Belum diintegrasikan ke `SocialCrawler` atau dashboard.
+
 ## Menjalankan dashboard
 
 Python **3.12** direkomendasikan; runtime dashboard juga mendukung **3.14**. Dari root proyek:

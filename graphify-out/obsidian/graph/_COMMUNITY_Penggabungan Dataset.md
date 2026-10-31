@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.08
 members: 39
 ---
 
 # Penggabungan Dataset
 
+**Cohesion:** 0.08 - loosely connected
 **Members:** 39 nodes
 
 ## Members
@@ -60,7 +62,7 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Audit Akuisisi Instagram]]
 - 2 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
 - 1 edge to [[_COMMUNITY_Riwayat Evaluasi Coherence]]
-- 1 edge to [[_COMMUNITY_Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]]
+- 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
 
 ## Top bridge nodes
 - [[identity()]] - degree 10, connects to 2 communities

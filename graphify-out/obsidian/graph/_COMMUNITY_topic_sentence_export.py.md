@@ -1,11 +1,13 @@
 ---
 type: community
-members: 13
+cohesion: 0.29
+members: 12
 ---
 
 # topic_sentence_export.py
 
-**Members:** 13 nodes
+**Cohesion:** 0.29 - loosely connected
+**Members:** 12 nodes
 
 ## Members
 - [[.data()]] - code - tests/nlp/test_topic_sentence_export.py
@@ -16,7 +18,6 @@ members: 13
 - [[TopicSentenceExportTests]] - code - tests/nlp/test_topic_sentence_export.py
 - [[Verify every Excel membership before publishing the complete snapshot.]] - rationale - scripts/topic_sentence_export.py
 - [[export_payload()]] - code - scripts/topic_sentence_export.py
-- [[json_write()]] - code - MachineLearning/social_nlp.py
 - [[main()_11]] - code - scripts/topic_sentence_export.py
 - [[seal()]] - code - scripts/topic_sentence_export.py
 - [[test_topic_sentence_export.py]] - code - tests/nlp/test_topic_sentence_export.py
@@ -30,14 +31,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
-- 4 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 8 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 - 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 3 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 
 ## Top bridge nodes
 - [[topic_sentence_export.py]] - degree 9, connects to 2 communities
-- [[json_write()]] - degree 8, connects to 2 communities
 - [[seal()]] - degree 8, connects to 2 communities
 - [[main()_11]] - degree 7, connects to 2 communities
 - [[export_payload()]] - degree 8, connects to 1 community

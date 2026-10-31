@@ -1,756 +1,826 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "query": "tag:#community/Pengambilan_HTML_Reddit",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Adapter_Akuisisi_YouTube",
+      "query": "tag:#community/Penjadwalan_dan_Riwayat_Akuisisi",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Crawler_Selenium_Terisolasi",
+      "query": "tag:#community/Akuisisi_X_dan_Ekspor_Scweet",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Eksperimen_Instaloader_dan_GraphQL_Web",
+      "query": "tag:#community/Akuisisi_YouTube",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "query": "tag:#community/Crawler_Selenium",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Eksperimen_Instaloader_dan_GraphQL_Web",
+      "query": "tag:#community/Pengujian_Client_Instagram",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Worker_Instaloader",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Topik_dan_Verifikasi_NLP",
+      "query": "tag:#community/Pengujian_Koordinator_Crawler",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Penggabungan_Dataset",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "query": "tag:#community/Model_dan_Pengujian_NLP",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Identitas_dan_Kontrak_Data",
+      "query": "tag:#community/Validasi_Konfigurasi_Frontend",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "query": "tag:#community/Koordinator_Backend_Sosial",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "query": "tag:#community/Form_Akuisisi_dan_Survei",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "query": "tag:#community/Riwayat_Sesi_Instagram",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "query": "tag:#community/Worker_Reddrix",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Monitor_Job_dan_Dataset",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "query": "tag:#community/Validasi_Record_Reddit",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "query": "tag:#community/Konfigurasi_TypeScript",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Pengujian_Worker_Instaloader",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Eksperimen_Instaloader_dan_GraphQL_Web",
+      "query": "tag:#community/Tipe_dan_Client_API",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Generator_Narasi_Gemini",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "query": "tag:#community/Kontrak_API_Frontend",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Topik_dan_Verifikasi_NLP",
+      "query": "tag:#community/Akuisisi_X_dan_Ekspor_Scweet",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Ringkasan_Topik_Gemini",
+      "query": "tag:#community/Batas_Akuisisi_Reddit",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Bundle_Excel_dan_Provenans",
+      "query": "tag:#community/Persyaratan_Produk_Crawler",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "query": "tag:#community/thread_url",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Ekspor_Campaign_dan_Resume",
+      "query": "tag:#community/Integrasi_Default_Instaloader",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_SocialCrawler",
+      "query": "tag:#community/Pengujian_Parser_Reddit",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/app.py",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Akses_dan_Parsing_HTML",
+      "query": "tag:#community/Parsing_Identitas_Reddit",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Kontrak_Record_Reddit",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Dependency_Pengembangan_Frontend",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Ringkasan_Topik_Gemini",
+      "query": "tag:#community/Encoding_dan_Penyimpanan_Model",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Format_Grafik_Dashboard",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Capture_Reddit_Playwright",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Kontrak_Record_Reddit",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
+      "query": "tag:#community/Wrapper_RedditCrawler",
       "color": {
         "a": 1,
         "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Render_Dashboard_Streamlit",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Penjelasan_Topik_Dashboard",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Narasi_Gemini",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Integrasi_Reddrix",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Audit_Akuisisi_Instagram",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Pengujian_Penjelasan_Topik",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/PRD_Workspace_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Workspace_React_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
-      "color": {
-        "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Alur_Dataset_Model_Dashboard",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Ringkasan_Topik_Gemini",
+      "query": "tag:#community/Batas_Integrasi_Produksi",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "query": "tag:#community/Dependency_Runtime_Frontend",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/PRD_Workspace_Crawler",
+      "query": "tag:#community/Pengujian_Resume_Capture",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Eksekusi_dan_Ekspor_Crawler",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "query": "tag:#community/Bukti_Ekstraktif_Topik",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Riwayat_Pacing_Instagram",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/PRD_Workspace_Crawler",
+      "query": "tag:#community/Interface_Layanan_Frontend",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/PRD_Workspace_Crawler",
+      "query": "tag:#community/BeeSense_project",
       "color": {
         "a": 1,
         "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Pemilihan_Topik_dan_Coherence",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Arsitektur_Model_dan_Dashboard",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/InstaloaderCrawler",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Pengujian_UI_Streamlit",
       "color": {
         "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Runbook_dan_Verifikasi_Lokal",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Helper_Campaign_Browser",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Parser_DOM_Terbatas",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
-      "color": {
-        "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "query": "tag:#community/Worker_Chrome_Instagram",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_SocialCrawler",
+      "query": "tag:#community/Konfigurasi_Model_Aktif",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_SocialCrawler",
+      "query": "tag:#community/Konteks_dan_Provenance_Gemini",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
+      "query": "tag:#community/Runtime_Docker_dan_Display",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Encoding_dan_Penyimpanan_Model",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Kampanye_Browser_Reddit",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Arsitektur_Crawler_dan_Dependensi",
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Pemilihan_Topik_dan_Coherence",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Integrasi_Default_Instaloader",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Identitas_dan_Kontrak_Data",
+      "query": "tag:#community/Riwayat_Dataset_dan_Metodologi",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/PRD_Workspace_Crawler",
+      "query": "tag:#community/topic_sentence_export.py",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "query": "tag:#community/Pengujian_Analisis_Dashboard",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
+      "query": "tag:#community/Skrip_Build_Frontend",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Alur_Akuisisi_Sosial_Terpadu",
+      "query": "tag:#community/Lingkungan_Training_SBERT",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "query": "tag:#community/Riwayat_Evaluasi_Coherence",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Rencana_Produk_dan_Survei",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Integrasi_Default_Instaloader",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Pipeline_dan_Persistensi_NLP",
+      "query": "tag:#community/Default_Backend_Reddit",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "query": "tag:#community/Struktur_DOM_Reddit",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Snapshot_NLP_dan_Arsip",
+      "query": "tag:#community/Penjelasan_Topik_Dashboard",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Konfigurasi_Trial_Reddit",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
+      "query": "tag:#community/build_topic_sentences.mjs",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Runbook_dan_Verifikasi_Lokal",
+      "query": "tag:#community/Koordinator_Backend_Sosial",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Coherence_dan_Quality_Gate",
+      "query": "tag:#community/Router_dan_Batas_Error",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Monitor_Akuisisi_Sintetis",
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Eksplorasi_Dashboard_Streamlit",
+      "query": "tag:#community/Verifikasi_Artefak_Dataset",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Ekstraksi_Cuplikan_Publik",
+      "query": "tag:#community/Validasi_Record_Reddit",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Metadata_Package_Frontend",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Pengujian_Alur_Frontend",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Ekstraksi_DOM_Reddit",
+      "query": "tag:#community/.topic_figure",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Q:_ok_sekarang_training_ulang_menggunakan_/Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx,_clustering._Buat_20_topik_dengan_coherence_minimal_0.4._Lalu_buat_excel_baru_dengan_tabel_dengan_kolom:_topik,_kalimat_yang_berada_dalam_cluster_topik._lalu_model_digunakan_kembali_di_dashboard_streamlit_yang_di_rebuild_ulang,_dan_di_commit_dan_dipush_semuanya_ke_githubnya_untuk_di_deploy_ulang",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Parser_Public_Post",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Format_Kode_Frontend",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Alur_Dataset_Model_Dashboard",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Integrasi_Default_Instaloader",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Rencana_Layanan_Backend",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/CI_Container_Frontend",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Struktur_Runtime_Dashboard",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Package_Backend_Python",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Kontrak_dan_Operasi_Crawler",
+      "query": "tag:#community/Capture_DOM_Reddit",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_Campaign_Reddit",
+      "query": "tag:#community/Package_YouTube_Python",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_Adapter_Reddit",
+      "query": "tag:#community/Aturan_React_Hooks",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Konfigurasi_Adapter_YouTube",
+      "query": "tag:#community/Matcher_DOM_Pengujian",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Kontrak_Tabel_YouTube",
+      "query": "tag:#community/Testing_Library_React",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Tipe_Parser_CSV",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Compiler_TypeScript",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Bundler_Vite",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Identitas_Visual_BeeSense",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Package_Crawler_Python",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Workspace_React_Crawler",
+      "query": "tag:#community/Package_Dashboard_Python",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Preset_Reddit_Seribu_Post",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_Reddit_Legacy",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_YouTube_Legacy",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_YouTube_Legacy",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_ESLint",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Setup_Pengujian_Frontend",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Mock_Penutupan_Dialog",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Mock_Pembukaan_Dialog",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_Build_Vite",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_Vitest",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -764,31 +834,10 @@
       }
     },
     {
-      "query": "tag:#community/Parser_dan_Runner_Reddit",
+      "query": "tag:#community/Dependency_Backend_Instagrapi",
       "color": {
         "a": 1,
         "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Instagram_Terintegrasi",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Akuisisi_Reddit_Reddrix",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Adapter_Akuisisi_YouTube",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
       }
     }
   ]

@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.07
 members: 58
 ---
 
 # Crawler Selenium
 
+**Cohesion:** 0.07 - loosely connected
 **Members:** 58 nodes
 
 ## Members
@@ -79,7 +81,7 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 - 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 1 edge to [[_COMMUNITY_Lingkungan Training SBERT]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 

@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[Pacing source references and protocol rationale]] - `cites` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 - [[Verified429 scheduler cooldown and historical evidence]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -1,0 +1,42 @@
+{
+  "mode": "compact_projection_of_two_verified_audit_bundles",
+  "files_sha256": {
+    "merge_report.json": "fdd49baa03edab0521d36048d764000ab843ef3b91aea40a1867d9bff1c053f5",
+    "social_data.xlsx": "5c364d96b859e30a1fd8bbe2612bcc076cad9f3273c0a88547812576275f2a64",
+    "Contents.jsonl": "64f61b9f1adffd0eb42e2b583dff342e46c5384fe2150fceffb80a761c6a9834"
+  },
+  "source_runs": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_01",
+      "manifest_sha256": "7dbb33266ad108602155552bf57bdd50764aab876de6e383e6dff796605a4577",
+      "records": 30,
+      "status": "PARTIAL",
+      "stop_reason": "ACCOUNT_UNAVAILABLE",
+      "elapsed_seconds": 864.74,
+      "configured_seconds": 1800,
+      "live_access_verified": true,
+      "network": {
+        "requests": 65,
+        "http_status_counts": {
+          "200": 65
+        }
+      }
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_02",
+      "manifest_sha256": "164a27a20f04e418e8bf2782b413c72dc4700c4cca7e5212d86441d5098f986c",
+      "records": 15,
+      "status": "PARTIAL",
+      "stop_reason": "TIME_BUDGET_EXHAUSTED",
+      "elapsed_seconds": 755.01,
+      "configured_seconds": 755,
+      "live_access_verified": true,
+      "network": {
+        "requests": 59,
+        "http_status_counts": {
+          "200": 59
+        }
+      }
+    }
+  ]
+}

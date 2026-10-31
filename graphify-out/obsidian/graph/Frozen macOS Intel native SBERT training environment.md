@@ -5,7 +5,7 @@ community: "Lingkungan Training SBERT"
 location: "L1-L73"
 tags:
   - graphify/document
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Lingkungan_Training_SBERT
 ---
 
@@ -17,4 +17,4 @@ tags:
 - [[Platform-specific macOS Intel Torch and numerical compatibility]] - `conceptually_related_to` [INFERRED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Lingkungan_Training_SBERT
+#graphify/document #graphify/EXTRACTED #community/Lingkungan_Training_SBERT

@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.10
 members: 24
 ---
 
 # Kontrak API Frontend
 
+**Cohesion:** 0.10 - loosely connected
 **Members:** 24 nodes
 
 ## Members

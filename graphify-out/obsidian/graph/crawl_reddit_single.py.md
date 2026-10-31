@@ -67,6 +67,7 @@ tags:
 - [[thread_id()]] - `contains` [EXTRACTED]
 - [[thread_url()]] - `contains` [EXTRACTED]
 - [[timeout_fixture()]] - `contains` [EXTRACTED]
+- [[twitter_crawler.py]] - `imports_from` [EXTRACTED]
 - [[utc_datetime()]] - `contains` [EXTRACTED]
 - [[validate_row()]] - `contains` [EXTRACTED]
 - [[verify_browser_campaign.py]] - `imports_from` [EXTRACTED]

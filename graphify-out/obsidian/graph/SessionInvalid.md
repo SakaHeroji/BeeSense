@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "CI dan Verifikasi Backend"
+community: "Pengambilan HTML Reddit"
 location: "L148"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/CI_dan_Verifikasi_Backend
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # SessionInvalid
@@ -25,4 +25,4 @@ tags:
 - [[login_with_saved_password()]] - `calls` [EXTRACTED]
 - [[session_cookies()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CI_dan_Verifikasi_Backend
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

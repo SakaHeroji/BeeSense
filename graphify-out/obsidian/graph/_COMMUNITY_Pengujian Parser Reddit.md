@@ -1,11 +1,13 @@
 ---
 type: community
-members: 24
+cohesion: 0.25
+members: 22
 ---
 
 # Pengujian Parser Reddit
 
-**Members:** 24 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 22 nodes
 
 ## Members
 - [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -23,8 +25,6 @@ members: 24
 - [[.test_09_search_uses_recognized_cards_not_sidebar_links()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_11_missing_parent_remains_unknown()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -42,16 +42,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 17 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 12 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 9 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
-- 7 edges to [[_COMMUNITY_Validasi Record Reddit]]
+- 8 edges to [[_COMMUNITY_Validasi Record Reddit]]
+- 5 edges to [[_COMMUNITY_Validasi Record Reddit_1]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 2 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
-- 2 edges to [[_COMMUNITY_Struktur DOM Reddit]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
 
 ## Top bridge nodes
-- [[RedditTests]] - degree 20, connects to 5 communities
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
-- [[.thread()]] - degree 22, connects to 3 communities
-- [[fixture_page()]] - degree 15, connects to 3 communities
+- [[RedditTests]] - degree 20, connects to 6 communities
+- [[.thread()]] - degree 22, connects to 4 communities
+- [[fixture_page()]] - degree 15, connects to 4 communities
+- [[worker()]] - degree 10, connects to 3 communities
+- [[RedditHtmlParser]] - degree 20, connects to 2 communities

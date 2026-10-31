@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.20
 members: 14
 ---
 
 # Konteks dan Provenance Gemini
 
+**Cohesion:** 0.20 - loosely connected
 **Members:** 14 nodes
 
 ## Members
@@ -35,7 +37,7 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
 - 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 1 edge to [[_COMMUNITY_BeeSense project]]
-- 1 edge to [[_COMMUNITY_Audit Akuisisi Instagram]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Model Aktif]]
 - 1 edge to [[_COMMUNITY_thread_url]]
 
 ## Top bridge nodes

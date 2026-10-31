@@ -1,0 +1,795 @@
+{
+  "contract_version": "1.0.0",
+  "prd_acquisition_reference": "2.1",
+  "profile": "tabular_projection_not_full_production_contract",
+  "sheet_order": [
+    "Contents",
+    "Relations",
+    "KeywordHits",
+    "Metrics",
+    "Runs",
+    "Sources",
+    "TextChunks",
+    "Readme"
+  ],
+  "tables": {
+    "Contents": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "observation_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "platform",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "source_namespace",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "object_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "native_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "identity_quality",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "object_type",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "canonical_url",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "page_url",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "discovered_from",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "title",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "text_source",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "text_normalized",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "normalizer_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "text_hash",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "text_complete",
+        "type": "bool",
+        "nullable": false
+      },
+      {
+        "name": "content_revision",
+        "type": "int",
+        "nullable": true
+      },
+      {
+        "name": "author_ref",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "publisher_ref",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "published_at",
+        "type": "datetime",
+        "nullable": true
+      },
+      {
+        "name": "published_at_display",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "timestamp_quality",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "published_interval_start",
+        "type": "datetime",
+        "nullable": true
+      },
+      {
+        "name": "published_interval_end",
+        "type": "datetime",
+        "nullable": true
+      },
+      {
+        "name": "observed_at",
+        "type": "datetime",
+        "nullable": false
+      },
+      {
+        "name": "parent_key",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "thread_root_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "relation_evidence",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "selection_status",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "context_only",
+        "type": "bool",
+        "nullable": false
+      },
+      {
+        "name": "actor_type",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "actor_evidence",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "extraction_method",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "adapter_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "quality_flags",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "missing_fields",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "Relations": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "relation_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "subject_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "predicate",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "object_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "subject_observation_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "relation_evidence",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "resolution_status",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "observed_at",
+        "type": "datetime",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "KeywordHits": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "hit_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "subject_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "observation_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "evidence_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "field_name",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "keyword",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "matched_variant",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "span_start",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "span_end",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "match_type",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "matcher_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "catalog_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "Metrics": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "metric_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "observation_id",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "platform",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "source_namespace",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "object_key",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "series_key",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "metric_name",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "value",
+        "type": "float",
+        "nullable": true
+      },
+      {
+        "name": "value_display",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "unit",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "scale_min",
+        "type": "float",
+        "nullable": true
+      },
+      {
+        "name": "scale_max",
+        "type": "float",
+        "nullable": true
+      },
+      {
+        "name": "period_start",
+        "type": "datetime",
+        "nullable": true
+      },
+      {
+        "name": "period_end",
+        "type": "datetime",
+        "nullable": true
+      },
+      {
+        "name": "dimensions",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "precision",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "observed_at",
+        "type": "datetime",
+        "nullable": false
+      },
+      {
+        "name": "source_url",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "quality_flags",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "Runs": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "unit_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "source",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "operation",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "target",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "status",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "reason",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "coverage",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "contents_written",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "comments_seen",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "replies_seen",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "duplicates_skipped",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "invalid_rows",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "max_comments",
+        "type": "int",
+        "nullable": true
+      },
+      {
+        "name": "max_replies",
+        "type": "int",
+        "nullable": true
+      },
+      {
+        "name": "timeout_seconds",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "keywords",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "source_version",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "warning_codes",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "started_at",
+        "type": "datetime",
+        "nullable": false
+      },
+      {
+        "name": "finished_at",
+        "type": "datetime",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "Sources": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "source",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "producer_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "upstream_version",
+        "type": "str",
+        "nullable": true
+      },
+      {
+        "name": "extraction_method",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "access_mode",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "config",
+        "type": "json",
+        "nullable": false
+      },
+      {
+        "name": "schema_fingerprint",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "observed_at",
+        "type": "datetime",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "TextChunks": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "record_key",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "table_name",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "field_name",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "part_index",
+        "type": "int",
+        "nullable": false
+      },
+      {
+        "name": "text_part",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "encoding",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ],
+    "Readme": [
+      {
+        "name": "contract_version",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "project_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "run_id",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "item",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "value",
+        "type": "str",
+        "nullable": false
+      },
+      {
+        "name": "excel_notes",
+        "type": "json",
+        "nullable": false
+      }
+    ]
+  },
+  "enums": {
+    "Contents.object_type": [
+      "post",
+      "comment",
+      "reply"
+    ],
+    "Contents.identity_quality": [
+      "native_id",
+      "canonical_permalink",
+      "weak_synthetic"
+    ],
+    "Contents.timestamp_quality": [
+      "exact",
+      "relative",
+      "date_only",
+      "unknown"
+    ],
+    "Contents.selection_status": [
+      "matched",
+      "not_matched",
+      "context_only",
+      "review",
+      "excluded"
+    ],
+    "Contents.actor_type": [
+      "unknown",
+      "prospective_student",
+      "parent",
+      "student",
+      "alumni",
+      "other"
+    ],
+    "Relations.resolution_status": [
+      "resolved_in_export",
+      "unresolved_reference"
+    ],
+    "Metrics.precision": [
+      "exact",
+      "rounded",
+      "unknown"
+    ]
+  },
+  "time_storage": {
+    "jsonl": "ISO8601 timezone-aware UTC",
+    "xlsx": "native Excel datetime UTC without tzinfo"
+  },
+  "revision_policy": "content_revision=null until a persistent repository assigns it; observation_id and text_hash bind snapshot evidence"
+}

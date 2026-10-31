@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "rationale"
-community: ".score_coherence"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Pengamatan cooldown untuk run berikutnya"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/score_coherence
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Unrepresentable or deadline-exceeding source wait forbids retry and preserves partial data
@@ -16,4 +16,4 @@ tags:
 - [[Keep the same failed operation through cooldown]] - `conceptually_related_to` [INFERRED]
 - [[Reddit bounded 429 policy introduced in version 1.3]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/score_coherence
+#graphify/rationale #graphify/INFERRED #community/Penjadwalan_dan_Riwayat_Akuisisi

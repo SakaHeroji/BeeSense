@@ -15,7 +15,7 @@ tags:
 - [[Read-only native-ID baseline exclusion]] - `conceptually_related_to` [EXTRACTED]
 - [[Reddrix 1.2.14 Reddit backend]] - `conceptually_related_to` [EXTRACTED]
 - [[SocialCrawler Excel and audit bundle]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 - [[Verified429 scheduler cooldown and historical evidence]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

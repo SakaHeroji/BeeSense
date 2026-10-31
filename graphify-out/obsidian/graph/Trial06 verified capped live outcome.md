@@ -16,7 +16,7 @@ tags:
 - [[InstaloaderCrawler guide and evidence]] - `references` [EXTRACTED]
 - [[Legacy query_hash comment NodeIterator]] - `conceptually_related_to` [EXTRACTED]
 - [[Runtime web GraphQL patch]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 - [[Standalone experiment caps]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
-community: "CI dan Verifikasi Backend"
+community: "Pengambilan HTML Reddit"
 location: "L231"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/CI_dan_Verifikasi_Backend
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # Interactive credentials stay in the user's terminal, never CLI arguments.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[login_local()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CI_dan_Verifikasi_Backend
+#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

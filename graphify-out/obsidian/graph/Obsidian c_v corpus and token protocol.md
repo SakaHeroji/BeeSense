@@ -5,7 +5,7 @@ community: "Pemilihan Topik dan Coherence"
 location: "## Coherence c_v dan ambang training"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Pemilihan_Topik_dan_Coherence
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Gensim c_v protocol top 10 terms, window 110, phrase tokens]] - `semantically_similar_to` [INFERRED]
 - [[Obsidian methodology SBERT, UMAP, DBSCAN and coherence]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Pemilihan_Topik_dan_Coherence
+#graphify/concept #graphify/INFERRED #community/Pemilihan_Topik_dan_Coherence

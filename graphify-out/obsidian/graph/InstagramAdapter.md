@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Transport GraphQL Instaloader"
+community: "Pengambilan HTML Reddit"
 location: "L416"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Transport_GraphQL_Instaloader
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # InstagramAdapter
@@ -23,4 +23,4 @@ tags:
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Transport_GraphQL_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

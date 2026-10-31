@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.15
 members: 16
 ---
 
 # Eksekusi dan Ekspor Crawler
 
+**Cohesion:** 0.15 - loosely connected
 **Members:** 16 nodes
 
 ## Members
@@ -34,26 +36,23 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 5 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 3 edges to [[_COMMUNITY_Worker Reddrix]]
 - 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Akuisisi YouTube]]
 - 2 edges to [[_COMMUNITY_Crawler Selenium]]
-- 2 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
+- 2 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_CI dan Verifikasi Backend]]
 - 1 edge to [[_COMMUNITY_Worker Instaloader]]
-- 1 edge to [[_COMMUNITY_.render]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Transport GraphQL Instaloader]]
-- 1 edge to [[_COMMUNITY_Round Robin Shared Deadline]]
-- 1 edge to [[_COMMUNITY_.score_coherence]]
+- 1 edge to [[_COMMUNITY_Render Dashboard Streamlit]]
+- 1 edge to [[_COMMUNITY_Verifikasi Artefak Dataset]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Default Backend Reddit]]
 
 ## Top bridge nodes
-- [[.error()]] - degree 18, connects to 10 communities
+- [[.error()]] - degree 18, connects to 9 communities
 - [[main()_6]] - degree 7, connects to 4 communities
 - [[.export_compact()]] - degree 5, connects to 3 communities
-- [[.plan()_3]] - degree 5, connects to 2 communities
 - [[._browser_call()]] - degree 5, connects to 2 communities
+- [[.plan()_3]] - degree 5, connects to 2 communities

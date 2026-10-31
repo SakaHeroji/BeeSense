@@ -1,0 +1,38 @@
+{
+  "contract_version": "1.0.0",
+  "prd_reference": "2.1",
+  "schema_fingerprint": "c6dcff73113f3aba31c2329296cd72b1c24ce6e15db29e22a9e35fa662fc74de",
+  "project_id": "university-intelligence",
+  "run_id": "1d27b3b6-0348-4f53-acb4-078afc198a19",
+  "created_at": "2026-10-31T04:09:35.770178+00:00",
+  "row_counts": {
+    "Contents": 15,
+    "Relations": 2,
+    "KeywordHits": 40,
+    "Metrics": 90,
+    "Runs": 44,
+    "Sources": 1,
+    "TextChunks": 0,
+    "Readme": 18
+  },
+  "files_sha256": {
+    "summary.json": "483e77755219b84b03530ccaf41850cf24f437b507959dd24727f7384c6e119e",
+    "dataset.xlsx": "4f7fe42ab5338b335c96edd38cb71da5b6647407a118cbd590b113da1535b998",
+    "Runs.jsonl": "68644fbdc15087f52d485033984defe028db7ceffbdaf7d3d083117346f1451a",
+    "Sources.jsonl": "cb5bedb0d5241340795893c4a805c9bea05c457466e29f70b5a69d224ae82a6e",
+    "social_data.xlsx": "f1724caaeb6c91a27bb59e173cb0d0cc141c0e0317ede6f1130089a9fc4c5077",
+    "Contents.jsonl": "9114876532f37476997d0bda6189dcbcf85754a0aeff742d0c76af7af3d7b66f",
+    "TextChunks.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "KeywordHits.jsonl": "f99f773fa81aaa5e383e2e076affcfcedfa3add0d69497cb7248f64a720cc0c1",
+    "Readme.jsonl": "f243495eb608952a461dea92a4fc8f39efe3e133809571e4f33f32f95f40aeb0",
+    "Relations.jsonl": "9b87140983f15e13f8ed0f38cc61f68aaf18b8c875edd605b35ee68b3eef5a96",
+    "Metrics.jsonl": "28cd532ec4985297b8b25160f9d5ab31523ce72dd1f132820cf3346303184651",
+    "contract.json": "f7f32fb795c1e5ef785ee8f619c6c321d1b52a7fd7b98a0211c811a8a0c01b10"
+  },
+  "source": "twitter",
+  "mode": "twitter_crawler",
+  "producer_version": "1.0.1",
+  "synthetic": false,
+  "primary_file": "social_data.xlsx",
+  "trial_passed": true
+}

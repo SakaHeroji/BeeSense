@@ -1,11 +1,13 @@
 ---
 type: community
-members: 13
+cohesion: 0.25
+members: 11
 ---
 
 # Riwayat Evaluasi Coherence
 
-**Members:** 13 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 11 nodes
 
 ## Members
 - [[Checksum-verified reuse of immutable SBERT embeddings]] - rationale - docs/machine-learning/SOCIAL_NLP.md
@@ -16,11 +18,9 @@ members: 13
 - [[Historical old-corpus baselines retained; no cross-corpus quality comparison]] - rationale - docs/machine-learning/SOCIAL_NLP.md
 - [[Historical29October exact-corpus SBERTUMAP cache evidence]] - rationale - docs/machine-learning/SOCIAL_NLP.md
 - [[Historical29October macro c_v0.4720034334]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Invalid or nonfinite topic coherence cancels the aggregate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
 - [[Merged corpus 29, 099 rows, 1, 517 roots and 27, 582 commentsreplies]] - concept - graphify-out/obsidian/Crawling 1000 Post Baru.md
 - [[Overflow-window averaging and L 2-normalized 384 D embeddings]] - rationale - docs/machine-learning/SOCIAL_NLP.md
 - [[Pinned multilingual SentenceTransformer safetensors encoder]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Unweighted mean across all 20 final non-noise topics]] - concept - docs/machine-learning/SOCIAL_NLP.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,15 +30,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Pemilihan Topik dan Coherence]]
 - 3 edges to [[_COMMUNITY_Lingkungan Training SBERT]]
-- 3 edges to [[_COMMUNITY_Penjelasan Topik Dashboard]]
+- 3 edges to [[_COMMUNITY_Pemilihan Topik dan Coherence]]
 - 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
-- 2 edges to [[_COMMUNITY_Riwayat Dataset dan Metodologi]]
+- 2 edges to [[_COMMUNITY_Penjelasan Topik Dashboard_1]]
+- 2 edges to [[_COMMUNITY_Pemilihan Topik dan Coherence_1]]
 - 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 - 1 edge to [[_COMMUNITY_BeeSense project]]
 - 1 edge to [[_COMMUNITY_Penggabungan Dataset]]
+- 1 edge to [[_COMMUNITY_Penjelasan Topik Dashboard]]
+- 1 edge to [[_COMMUNITY_Riwayat Dataset dan Metodologi]]
 
 ## Top bridge nodes
 - [[Checksum-verified reuse of immutable SBERT embeddings]] - degree 8, connects to 4 communities

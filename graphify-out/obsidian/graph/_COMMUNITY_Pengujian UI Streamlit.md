@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.23
 members: 15
 ---
 
 # Pengujian UI Streamlit
 
+**Cohesion:** 0.23 - loosely connected
 **Members:** 15 nodes
 
 ## Members
@@ -33,7 +35,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Verifikasi Artefak Dataset]]
+- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 
 ## Top bridge nodes
 - [[StreamlitTests]] - degree 17, connects to 1 community

@@ -5,7 +5,7 @@ community: "Konfigurasi Model Aktif"
 location: "$.input_file"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Konfigurasi_Model_Aktif
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Active artifacts outputsnlp_20261030_instagram_topics20_02]] - `conceptually_related_to` [INFERRED]
 - [[Active20-topic Instagram-inclusive model configuration]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Model_Aktif
+#graphify/concept #graphify/INFERRED #community/Konfigurasi_Model_Aktif

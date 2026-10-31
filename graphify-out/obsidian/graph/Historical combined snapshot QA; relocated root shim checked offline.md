@@ -5,7 +5,7 @@ community: "Riwayat Evaluasi Coherence"
 location: "## Verifikasi dan runtime"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Riwayat_Evaluasi_Coherence
 ---
 
@@ -17,4 +17,4 @@ tags:
 - [[Historical non-rootread-only dashboard runtime; current crawler images unverified]] - `conceptually_related_to` [INFERRED]
 - [[Historical29October macro c_v0.4720034334]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riwayat_Evaluasi_Coherence
+#graphify/concept #graphify/INFERRED #community/Riwayat_Evaluasi_Coherence

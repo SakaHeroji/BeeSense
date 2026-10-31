@@ -1,11 +1,13 @@
 ---
 type: community
-members: 44
+cohesion: 0.08
+members: 43
 ---
 
 # Pengujian Client Instagram
 
-**Members:** 44 nodes
+**Cohesion:** 0.08 - loosely connected
+**Members:** 43 nodes
 
 ## Members
 - [[.clock()]] - code - tests/crawler/test_instagram_crawler.py
@@ -30,7 +32,6 @@ members: 44
 - [[.test_global_deadline_prevents_late_requests_and_keeps_partial()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_invalid_input_fails_before_any_worker()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_local_session_cookie_is_used_without_password_login()]] - code - tests/crawler/test_instagram_crawler.py
-- [[.test_missing_login_is_reported_without_credentials_or_exception_message()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_password_mode_restores_settings_and_ignores_browser_cookie()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_password_recovery_is_one_relogin_and_propagates_failure()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_password_recovery_retains_explicit_verification_code()]] - code - tests/crawler/test_instagram_crawler.py
@@ -61,20 +62,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 3 edges to [[_COMMUNITY_Worker Instaloader]]
-- 1 edge to [[_COMMUNITY_CI dan Verifikasi Backend]]
-- 1 edge to [[_COMMUNITY_Instagram Client dan Ekspor]]
-- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
+- 13 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 1 edge to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Kontrak Ekspor Instagram]]
+- 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[test_instagram_crawler.py]] - degree 11, connects to 4 communities
-- [[records()]] - degree 10, connects to 4 communities
-- [[InstagramCrawlerTests]] - degree 33, connects to 3 communities
-- [[.ig()]] - degree 9, connects to 3 communities
+- [[InstagramCrawlerTests]] - degree 33, connects to 4 communities
+- [[test_instagram_crawler.py]] - degree 11, connects to 3 communities
+- [[records()]] - degree 10, connects to 2 communities
+- [[.ig()]] - degree 9, connects to 2 communities
 - [[FakeClient]] - degree 9, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Ekspor dan Provenance Reddit"
+community: "Kontrak Record Reddit"
 location: "L346"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Ekspor_dan_Provenance_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # Atomic new directory; streaming JSONL + streaming, formula-safe Excel.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BundleSink]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Ekspor_dan_Provenance_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit

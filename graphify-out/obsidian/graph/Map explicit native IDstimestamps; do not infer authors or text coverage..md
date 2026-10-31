@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
-community: "Instagram Client dan Ekspor"
+community: "Pengambilan HTML Reddit"
 location: "L353"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Instagram_Client_dan_Ekspor
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # Map explicit native IDs/timestamps; do not infer authors or text coverage.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[normalize_item()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Instagram_Client_dan_Ekspor
+#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

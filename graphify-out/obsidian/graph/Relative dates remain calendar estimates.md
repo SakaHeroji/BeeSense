@@ -5,7 +5,7 @@ community: "Panduan Pipeline BeeSense"
 location: "## Kontrak Excel"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Panduan_Pipeline_BeeSense
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Bounded native-ID evidence and explicit uncertainty]] - `semantically_similar_to` [INFERRED]
 - [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/rationale #graphify/INFERRED #community/Panduan_Pipeline_BeeSense

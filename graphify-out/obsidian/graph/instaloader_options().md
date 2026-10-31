@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Worker Reddrix"
+community: "Worker Instaloader"
 location: "L593"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Worker_Instaloader
 ---
 
 # instaloader_options()
@@ -19,4 +19,4 @@ tags:
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

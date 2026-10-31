@@ -19,7 +19,7 @@ tags:
 - [[InstaloaderCrawler_1]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[SocialCrawler 1.6.0 default Instaloader integration]] - `references` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 - [[Trial06 verified capped live outcome]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[Shared filters and round-robin campaign scheduler]] - `conceptually_related_to` [EXTRACTED]
 - [[SocialCrawler Excel and audit bundle]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 - [[SocialCrawler historical test and current container guidance]] - `conceptually_related_to` [EXTRACTED]
 - [[Verified429 scheduler cooldown and historical evidence]] - `conceptually_related_to` [EXTRACTED]
 

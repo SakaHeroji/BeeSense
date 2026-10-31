@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Kontrak Ekspor Instagram"
+community: "Riwayat Pacing Instagram"
 location: "## Pemulihan HTTP 429 dan Chrome (30 Oktober)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Kontrak_Ekspor_Instagram
+  - community/Riwayat_Pacing_Instagram
 ---
 
 # Historical browser observed-response 429 evidence
@@ -16,4 +16,4 @@ tags:
 - [[Historical SocialCrawler 1.5 browser integration; superseded default in 1.6]] - `references` [EXTRACTED]
 - [[InstagramBrowserWorker]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Ekspor_Instagram
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Pacing_Instagram

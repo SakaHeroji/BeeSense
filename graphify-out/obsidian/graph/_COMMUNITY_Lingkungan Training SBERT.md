@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.24
 members: 11
 ---
 
 # Lingkungan Training SBERT
 
+**Cohesion:** 0.24 - loosely connected
 **Members:** 11 nodes
 
 ## Members
@@ -33,11 +35,11 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_BeeSense project]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
 - 1 edge to [[_COMMUNITY_Pemilihan Topik dan Coherence]]
-- 1 edge to [[_COMMUNITY_Struktur Runtime Dashboard]]
+- 1 edge to [[_COMMUNITY_Riwayat Dataset dan Metodologi]]
 
 ## Top bridge nodes
 - [[Separate SBERT training and artifact-only dashboard environments]] - degree 4, connects to 2 communities
 - [[Native SBERT training requirements include coherence evaluation]] - degree 6, connects to 1 community
-- [[Trainingevaluation-only Gensim coherence requirements]] - degree 4, connects to 1 community
 - [[New-corpus native SBERT encoding or exact verified cache reuse]] - degree 4, connects to 1 community
+- [[Trainingevaluation-only Gensim coherence requirements]] - degree 4, connects to 1 community
 - [[Frozen macOS Intel native SBERT training environment]] - degree 4, connects to 1 community

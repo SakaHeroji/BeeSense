@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.12
 members: 35
 ---
 
 # Form Akuisisi dan Survei
 
+**Cohesion:** 0.12 - loosely connected
 **Members:** 35 nodes
 
 ## Members

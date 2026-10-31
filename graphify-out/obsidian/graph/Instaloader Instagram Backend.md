@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[Instaloader 4.16 Environment]] - `references` [EXTRACTED]
-- [[SocialCrawler Guide]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

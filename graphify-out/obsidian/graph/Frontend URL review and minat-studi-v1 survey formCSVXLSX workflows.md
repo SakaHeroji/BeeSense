@@ -5,7 +5,7 @@ community: "Kontrak API Frontend"
 location: "## Fitur"
 tags:
   - graphify/concept
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Kontrak_API_Frontend
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 - [[locatorKey is normalized permalink identity;nativeId may await backend verification]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Kontrak_API_Frontend
+#graphify/concept #graphify/INFERRED #community/Kontrak_API_Frontend

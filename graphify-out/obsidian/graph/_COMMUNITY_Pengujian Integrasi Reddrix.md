@@ -1,16 +1,18 @@
 ---
 type: community
-members: 17
+cohesion: 0.17
+members: 18
 ---
 
 # Pengujian Integrasi Reddrix
 
-**Members:** 17 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 18 nodes
 
 ## Members
 - [[.__init__()_6]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.fetch()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fetch()_2]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.fetch()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.redirect_request()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_15_redirect_checks_before_following()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[Exception]] - code
@@ -25,6 +27,7 @@ members: 17
 - [[now_iso()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[safe_web_url()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[thread_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[verify()]] - code - Crawler/Backend/Reddit/verify_browser_campaign.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,16 +39,17 @@ SORT file.name ASC
 ## Connections to other communities
 - 11 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
 - 9 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
-- 5 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 4 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
+- 6 edges to [[_COMMUNITY_Validasi Record Reddit]]
+- 4 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 3 edges to [[_COMMUNITY_Worker Reddrix]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Struktur DOM Reddit]]
-- 1 edge to [[_COMMUNITY_Instagram Client dan Ekspor]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
 
 ## Top bridge nodes
 - [[thread_id()]] - degree 10, connects to 6 communities
 - [[now_iso()]] - degree 8, connects to 5 communities
 - [[SourceFailure]] - degree 13, connects to 3 communities
-- [[safe_web_url()]] - degree 9, connects to 3 communities
+- [[verify()]] - degree 8, connects to 3 communities
 - [[.fetch()_2]] - degree 7, connects to 3 communities

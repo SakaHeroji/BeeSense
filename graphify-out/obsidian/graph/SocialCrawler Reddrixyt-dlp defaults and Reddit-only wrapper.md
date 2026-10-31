@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Konfigurasi Trial Reddit"
+community: "Runtime Docker dan Display"
 location: "# BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Konfigurasi_Trial_Reddit
+  - community/Runtime_Docker_dan_Display
 ---
 
 # SocialCrawler Reddrix/yt-dlp defaults and Reddit-only wrapper
@@ -19,4 +19,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Tracked Reddit trial configuration]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit
+#graphify/concept #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

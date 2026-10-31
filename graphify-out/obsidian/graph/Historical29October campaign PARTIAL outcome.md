@@ -16,6 +16,6 @@ tags:
 - [[Native-ID workbook merge and provenance]] - `conceptually_related_to` [EXTRACTED]
 - [[Read-only native-ID baseline exclusion]] - `conceptually_related_to` [EXTRACTED]
 - [[Shared filters and round-robin campaign scheduler]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

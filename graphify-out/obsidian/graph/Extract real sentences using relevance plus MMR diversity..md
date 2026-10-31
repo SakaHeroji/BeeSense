@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Encoding dan Penyimpanan Model"
+community: "Bukti Ekstraktif Topik"
 location: "L1362"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Bukti_Ekstraktif_Topik
 ---
 
 # Extract real sentences using relevance plus MMR diversity.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._explanation_evidence()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/rationale #graphify/EXTRACTED #community/Bukti_Ekstraktif_Topik

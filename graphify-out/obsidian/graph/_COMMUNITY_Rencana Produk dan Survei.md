@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.20
 members: 11
 ---
 
 # Rencana Produk dan Survei
 
+**Cohesion:** 0.20 - loosely connected
 **Members:** 11 nodes
 
 ## Members
@@ -35,6 +37,6 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
 
 ## Top bridge nodes
-- [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - degree 9, connects to 4 communities
 - [[Curated Crawler PRD statusfrontend implemented, backend pending]] - degree 9, connects to 4 communities
+- [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - degree 9, connects to 4 communities
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - degree 6, connects to 1 community

@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.07
 members: 27
 ---
 
 # Konfigurasi TypeScript
 
+**Cohesion:** 0.07 - loosely connected
 **Members:** 27 nodes
 
 ## Members

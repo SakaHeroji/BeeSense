@@ -1,0 +1,91 @@
+{
+  "mode": "compact_projection_of_two_verified_audit_bundles",
+  "records": 45,
+  "unique_native_ids": 45,
+  "duplicate_native_ids": 0,
+  "counts": {
+    "post": 33,
+    "comment": 11,
+    "reply": 1
+  },
+  "unresolved_native_parents": 0,
+  "sources": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_01",
+      "manifest_sha256": "7dbb33266ad108602155552bf57bdd50764aab876de6e383e6dff796605a4577",
+      "records": 30,
+      "status": "PARTIAL",
+      "stop_reason": "ACCOUNT_UNAVAILABLE",
+      "elapsed_seconds": 864.74,
+      "configured_seconds": 1800,
+      "live_access_verified": true,
+      "network": {
+        "requests": 65,
+        "http_status_counts": {
+          "200": 65
+        }
+      }
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_02",
+      "manifest_sha256": "164a27a20f04e418e8bf2782b413c72dc4700c4cca7e5212d86441d5098f986c",
+      "records": 15,
+      "status": "PARTIAL",
+      "stop_reason": "TIME_BUDGET_EXHAUSTED",
+      "elapsed_seconds": 755.01,
+      "configured_seconds": 755,
+      "live_access_verified": true,
+      "network": {
+        "requests": 59,
+        "http_status_counts": {
+          "200": 59
+        }
+      }
+    }
+  ],
+  "compact": {
+    "file": "social_data.xlsx",
+    "sheets": [
+      "Data"
+    ],
+    "columns": [
+      "platform",
+      "jenis",
+      "judul_post",
+      "tanggal_post_wib",
+      "akurasi_tanggal_post",
+      "tanggal_konten_wib",
+      "akurasi_tanggal_konten",
+      "teks",
+      "url",
+      "teks_dipotong"
+    ],
+    "timezone": "Asia/Jakarta",
+    "rows": 45,
+    "counts": {
+      "twitter:post": 33,
+      "twitter:comment": 11,
+      "twitter:reply": 1
+    },
+    "date_accuracy_counts": {
+      "pasti": 45
+    },
+    "truncated_texts": 0,
+    "filtered_roots": 0,
+    "filtered_comments": 0,
+    "date_estimate_anchor": "source_observed_at",
+    "relative_date_precision": "calendar_date_not_exact_timestamp"
+  },
+  "full_audit_location": "dataset.xlsx and all eight JSONL tables remain in each source run",
+  "target_posts": 1000,
+  "target_met": false,
+  "configured_trial_window_seconds": 1800,
+  "database_migration_required": false,
+  "docker_build_verified": false,
+  "offline_tests_passed": 17,
+  "social_regression_tests": 71,
+  "social_regression_skipped": 1,
+  "trial_wall_seconds": 1803.57,
+  "acquisition_run_seconds": 1619.75,
+  "trial_note": "30-minute wall-clock trial including one library cooldown and adapter update/resume; acquisition runs total fewer active seconds. Actual HTTP429 responses were not observed."
+}

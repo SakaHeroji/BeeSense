@@ -11,6 +11,7 @@ BeeSense/
 │   └── Backend/
 │       ├── social_crawler.py     # YouTube yt-dlp + Reddit Reddrix
 │       ├── reddit_crawler.py     # Pembungkus Reddit-only
+│       ├── twitter_crawler.py    # Percobaan X/Twitter mandiri, Scweet dan Excel bersama
 │       ├── instagram_crawler.py  # Scheduler/filter/Excel Instagram, instagrapi atau Chrome
 │       ├── instagram_browser.py  # Worker profil Chrome persisten, login manual
 │       ├── instagram_browser_capture.mjs  # Parser ID/komentar dokumen post

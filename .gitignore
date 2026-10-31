@@ -142,6 +142,7 @@ graphify-out/obsidian/*
 !graphify-out/obsidian/RedditCrawler Reddrix.md
 !graphify-out/obsidian/InstagramCrawler instagrapi.md
 !graphify-out/obsidian/InstaloaderCrawler.md
+!graphify-out/obsidian/TwitterCrawler Scweet.md
 !graphify-out/obsidian/Topik Gemini.md
 !graphify-out/obsidian/Struktur Proyek.md
 !graphify-out/obsidian/graph/
@@ -213,3 +214,41 @@ outputs/nlp_20261030_instagram_500_topics20_gemini_02/*
 !outputs/nlp_20261030_instagram_500_topics20_gemini_02/topic_sentences.xlsx
 !outputs/nlp_20261030_instagram_500_topics20_gemini_02/topics.json
 !outputs/nlp_20261030_instagram_500_topics20_gemini_02/umap_embeddings.npz
+
+# Publish the verified Twitter trial; authentication and runtime state stay local.
+!outputs/twitter_scweet_20261031_30m_01/
+outputs/twitter_scweet_20261031_30m_01/*
+!outputs/twitter_scweet_20261031_30m_01/Contents.jsonl
+!outputs/twitter_scweet_20261031_30m_01/Relations.jsonl
+!outputs/twitter_scweet_20261031_30m_01/KeywordHits.jsonl
+!outputs/twitter_scweet_20261031_30m_01/Metrics.jsonl
+!outputs/twitter_scweet_20261031_30m_01/Runs.jsonl
+!outputs/twitter_scweet_20261031_30m_01/Sources.jsonl
+!outputs/twitter_scweet_20261031_30m_01/TextChunks.jsonl
+!outputs/twitter_scweet_20261031_30m_01/Readme.jsonl
+!outputs/twitter_scweet_20261031_30m_01/contract.json
+!outputs/twitter_scweet_20261031_30m_01/dataset.xlsx
+!outputs/twitter_scweet_20261031_30m_01/manifest.json
+!outputs/twitter_scweet_20261031_30m_01/social_data.xlsx
+!outputs/twitter_scweet_20261031_30m_01/summary.json
+!outputs/twitter_scweet_20261031_30m_02/
+outputs/twitter_scweet_20261031_30m_02/*
+!outputs/twitter_scweet_20261031_30m_02/Contents.jsonl
+!outputs/twitter_scweet_20261031_30m_02/Relations.jsonl
+!outputs/twitter_scweet_20261031_30m_02/KeywordHits.jsonl
+!outputs/twitter_scweet_20261031_30m_02/Metrics.jsonl
+!outputs/twitter_scweet_20261031_30m_02/Runs.jsonl
+!outputs/twitter_scweet_20261031_30m_02/Sources.jsonl
+!outputs/twitter_scweet_20261031_30m_02/TextChunks.jsonl
+!outputs/twitter_scweet_20261031_30m_02/Readme.jsonl
+!outputs/twitter_scweet_20261031_30m_02/contract.json
+!outputs/twitter_scweet_20261031_30m_02/dataset.xlsx
+!outputs/twitter_scweet_20261031_30m_02/manifest.json
+!outputs/twitter_scweet_20261031_30m_02/social_data.xlsx
+!outputs/twitter_scweet_20261031_30m_02/summary.json
+!outputs/twitter_scweet_20261031_30m_combined/
+outputs/twitter_scweet_20261031_30m_combined/*
+!outputs/twitter_scweet_20261031_30m_combined/Contents.jsonl
+!outputs/twitter_scweet_20261031_30m_combined/manifest.json
+!outputs/twitter_scweet_20261031_30m_combined/merge_report.json
+!outputs/twitter_scweet_20261031_30m_combined/social_data.xlsx

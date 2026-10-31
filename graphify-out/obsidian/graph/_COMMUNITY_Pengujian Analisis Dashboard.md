@@ -1,16 +1,19 @@
 ---
 type: community
-members: 11
+cohesion: 0.17
+members: 12
 ---
 
 # Pengujian Analisis Dashboard
 
-**Members:** 11 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 12 nodes
 
 ## Members
 - [[.setUp()_9]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_instagram_is_included_in_coverage_ranking_months_and_graph_hover()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_months_use_root_dates_and_zero_fill_without_losing_microseconds()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_network_positions_stable_and_platform_ratio_is_numeric()]] - code - tests/nlp/test_dashboard_analysis.py
@@ -28,8 +31,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_Render Dashboard Streamlit]]
+- 1 edge to [[_COMMUNITY_Penjelasan Topik Dashboard]]
+- 1 edge to [[_COMMUNITY_app.py]]
 
 ## Top bridge nodes
-- [[AnalysisTests]] - degree 12, connects to 2 communities
+- [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - degree 3, connects to 2 communities
+- [[AnalysisTests]] - degree 12, connects to 1 community

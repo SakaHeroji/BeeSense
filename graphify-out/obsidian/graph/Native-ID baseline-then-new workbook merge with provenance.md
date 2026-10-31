@@ -5,7 +5,7 @@ community: "Penggabungan Dataset"
 location: "## Menggabungkan workbook untuk NLP"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Penggabungan_Dataset
 ---
 
@@ -17,4 +17,4 @@ tags:
 - [[merge()]] - `implements` [INFERRED]
 - [[social_data.xlsx ten-column Data worksheet]] - `shares_data_with` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Penggabungan_Dataset
+#graphify/rationale #graphify/EXTRACTED #community/Penggabungan_Dataset

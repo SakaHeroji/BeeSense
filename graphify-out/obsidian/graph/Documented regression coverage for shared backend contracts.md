@@ -5,7 +5,7 @@ community: "Runtime Docker dan Display"
 location: "## Verifikasi"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Runtime_Docker_dan_Display
 ---
 
@@ -15,4 +15,4 @@ tags:
 - [[Historical integrated test scope and unverified Docker runtime]] - `references` [EXTRACTED]
 - [[SocialCrawlerReddrixTests]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Runtime_Docker_dan_Display
+#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "concept"
-community: "Read-only native/canonical index excludes 50 YouTube and 181 Reddit roots"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Output"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # social_data.xlsx ten-column Data worksheet
@@ -17,4 +17,4 @@ tags:
 - [[Native-ID baseline-then-new workbook merge with provenance]] - `shares_data_with` [EXTRACTED]
 - [[SocialCrawler]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
+#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

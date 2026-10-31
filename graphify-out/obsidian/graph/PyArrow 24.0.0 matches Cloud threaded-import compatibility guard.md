@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Struktur Runtime Dashboard"
+community: "app.py"
 location: "## Repository GitHub"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Struktur_Runtime_Dashboard
+  - community/apppy
 ---
 
 # PyArrow 24.0.0 matches Cloud threaded-import compatibility guard
@@ -16,4 +16,4 @@ tags:
 - [[Dashboard-only artifactexplanationUI dependency boundary]] - `references` [EXTRACTED]
 - [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Struktur_Runtime_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/apppy

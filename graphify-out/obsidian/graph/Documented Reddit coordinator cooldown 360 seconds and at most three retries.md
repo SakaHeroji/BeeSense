@@ -1,12 +1,12 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: ".score_coherence"
+community: "BeeSense project"
 location: "## Crawling atau training baru"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/score_coherence
+  - community/BeeSense_project
 ---
 
 # Documented Reddit coordinator cooldown: 360 seconds and at most three retries
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense project]] - `references` [EXTRACTED]
 - [[Reddit bounded 429 policy introduced in version 1.3]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/score_coherence
+#graphify/concept #graphify/EXTRACTED #community/BeeSense_project

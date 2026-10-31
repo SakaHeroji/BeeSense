@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.40
 members: 5
 ---
 
 # Q: ok sekarang training ulang menggunakan /Users/sakaheroji/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx, clustering. Buat 20 topik dengan coherence minimal 0.4. Lalu buat excel baru dengan tabel dengan kolom: topik, kalimat yang berada dalam cluster topik. lalu model digunakan kembali di dashboard streamlit yang di rebuild ulang, dan di commit dan dipush semuanya ke githubnya untuk di deploy ulang
 
+**Cohesion:** 0.40 - moderately connected
 **Members:** 5 nodes
 
 ## Members

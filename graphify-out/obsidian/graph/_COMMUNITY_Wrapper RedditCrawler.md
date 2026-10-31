@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.16
 members: 19
 ---
 
 # Wrapper RedditCrawler
 
+**Cohesion:** 0.16 - loosely connected
 **Members:** 19 nodes
 
 ## Members
@@ -38,14 +40,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_InstaloaderCrawler]]
 - 5 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 3 edges to [[_COMMUNITY_Runtime Docker dan Display]]
 - 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 2 edges to [[_COMMUNITY_Runtime Docker dan Display]]
-- 2 edges to [[_COMMUNITY_Konfigurasi Trial Reddit]]
 - 2 edges to [[_COMMUNITY_Default Backend Reddit]]
 - 1 edge to [[_COMMUNITY_Generator Narasi Gemini]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Trial Reddit]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Model Aktif]]
-- 1 edge to [[_COMMUNITY_Fixture dan Pengujian Reddit]]
+- 1 edge to [[_COMMUNITY_Audit Akuisisi Instagram]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
@@ -53,4 +55,4 @@ SORT file.name ASC
 - [[RedditCrawlerTests]] - degree 21, connects to 3 communities
 - [[reddit_crawler.py]] - degree 6, connects to 3 communities
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - degree 3, connects to 1 community
-- [[.test_trial_config_changes_only_duration_and_platform_scope()]] - degree 3, connects to 1 community
+- [[.test_barrier_exports_partial_without_calling_it_success()]] - degree 3, connects to 1 community

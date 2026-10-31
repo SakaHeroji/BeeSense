@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/README_playwright.md"
 type: "rationale"
-community: "Round Robin Shared Deadline"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "# Runner Reddit Playwright"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
-  - community/Round_Robin_Shared_Deadline
+  - graphify/INFERRED
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Coordinator waits for manual CAPTCHA without automated clicks
@@ -15,4 +15,4 @@ tags:
 - [[Historical or explicitly selected Playwright CAPTCHA wait]] - `semantically_similar_to` [INFERRED]
 - [[Reddit Playwright CLI runner]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Round_Robin_Shared_Deadline
+#graphify/rationale #graphify/INFERRED #community/Penjadwalan_dan_Riwayat_Akuisisi

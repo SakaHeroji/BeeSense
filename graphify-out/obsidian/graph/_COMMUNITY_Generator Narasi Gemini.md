@@ -1,17 +1,20 @@
 ---
 type: community
-members: 24
+cohesion: 0.19
+members: 25
 ---
 
 # Generator Narasi Gemini
 
-**Members:** 24 nodes
+**Cohesion:** 0.19 - loosely connected
+**Members:** 25 nodes
 
 ## Members
 - [[.__init__()_31]] - code - MachineLearning/social_nlp.py
 - [[._validate_config()]] - code - MachineLearning/social_nlp.py
 - [[._validate_explanation_options()]] - code - MachineLearning/social_nlp.py
 - [[.generate_topic_narratives()]] - code - MachineLearning/social_nlp.py
+- [[.load_explanations()]] - code - MachineLearning/social_nlp.py
 - [[Derive Indonesian Gemini labels after topic count and coherence pass.]] - rationale - MachineLearning/social_nlp.py
 - [[Gemini narratives grounded in ranked topic keywords and representative sentences]] - rationale - MachineLearning/topic_narratives.py
 - [[One request per topictop10weights plus10 fitted original sentences]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
@@ -41,30 +44,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 12 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 11 edges to [[_COMMUNITY_Akuisisi YouTube]]
-- 11 edges to [[_COMMUNITY_Worker Reddrix]]
-- 11 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 7 edges to [[_COMMUNITY_Instagram Client dan Ekspor]]
-- 7 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 10 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 8 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 7 edges to [[_COMMUNITY_Worker Reddrix]]
 - 5 edges to [[_COMMUNITY_Crawler Selenium]]
-- 5 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
-- 4 edges to [[_COMMUNITY_Ekspor dan Provenance Reddit]]
 - 4 edges to [[_COMMUNITY_Validasi Record Reddit]]
+- 4 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 4 edges to [[_COMMUNITY_Konteks dan Provenance Gemini]]
-- 3 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 3 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader]]
 - 3 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
+- 3 edges to [[_COMMUNITY_Bukti Ekstraktif Topik]]
 - 3 edges to [[_COMMUNITY_Penggabungan Dataset]]
 - 3 edges to [[_COMMUNITY_topic_sentence_export.py]]
+- 3 edges to [[_COMMUNITY_Verifikasi Artefak Dataset]]
 - 2 edges to [[_COMMUNITY_Capture Reddit Playwright]]
-- 2 edges to [[_COMMUNITY_CI dan Verifikasi Backend]]
-- 2 edges to [[_COMMUNITY_Worker Instaloader]]
-- 2 edges to [[_COMMUNITY_Bukti Ekstraktif Topik]]
+- 2 edges to [[_COMMUNITY_Validasi Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 1 edge to [[_COMMUNITY_Pemilihan Topik dan Coherence]]
 - 1 edge to [[_COMMUNITY_app.py]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Model Aktif]]
+- 1 edge to [[_COMMUNITY_Audit Akuisisi Instagram]]
 - 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
 
 ## Top bridge nodes
@@ -72,4 +75,4 @@ SORT file.name ASC
 - [[topic_narratives.py]] - degree 20, connects to 4 communities
 - [[.generate_topic_narratives()]] - degree 5, connects to 2 communities
 - [[._validate_explanation_options()]] - degree 4, connects to 2 communities
-- [[validate_rows()]] - degree 11, connects to 1 community
+- [[.load_explanations()]] - degree 3, connects to 2 communities

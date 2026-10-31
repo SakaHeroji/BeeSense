@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.20
 members: 29
 ---
 
 # Monitor Job dan Dataset
 
+**Cohesion:** 0.20 - loosely connected
 **Members:** 29 nodes
 
 ## Members
@@ -57,4 +59,4 @@ SORT file.name ASC
 - [[Shell.tsx]] - degree 15, connects to 5 communities
 - [[DatasetView.tsx]] - degree 26, connects to 3 communities
 - [[History.tsx]] - degree 17, connects to 3 communities
-- [[platformName()]] - degree 16, connects to 2 communities
+- [[number()]] - degree 16, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SELENIUM_CRAWLER.md"
 type: "rationale"
-community: "Read-only native/canonical index excludes 50 YouTube and 181 Reddit roots"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Kontrak Excel"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Inherited SocialCrawler filters and Excel exporters
@@ -16,4 +16,4 @@ tags:
 - [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
 - [[social_data.xlsx ten-column Data worksheet]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Read-only_native/canonical_index_excludes_50_YouTube_and_181_Reddit_roots
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

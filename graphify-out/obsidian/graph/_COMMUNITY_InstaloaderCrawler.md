@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.17
 members: 15
 ---
 
 # InstaloaderCrawler
 
+**Cohesion:** 0.17 - loosely connected
 **Members:** 15 nodes
 
 ## Members
@@ -34,13 +36,14 @@ SORT file.name ASC
 ## Connections to other communities
 - 10 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 6 edges to [[_COMMUNITY_Worker Reddrix]]
-- 3 edges to [[_COMMUNITY_Instagram Client dan Ekspor]]
-- 3 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[FakeReddrix]] - degree 13, connects to 3 communities
+- [[FakeReddrix]] - degree 13, connects to 4 communities
 - [[test_reddit_crawler.py]] - degree 10, connects to 3 communities
 - [[.worker()_1]] - degree 4, connects to 3 communities
+- [[.test_browser_factory_overrides_initial_and_refreshed_sessions()]] - degree 3, connects to 2 communities
 - [[.test_missing_parent_and_timezone_are_preserved_as_unknown()]] - degree 3, connects to 2 communities
-- [[.test_rejects_cross_thread_and_inconsistent_ids()]] - degree 3, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_crawler.json"
 type: "document"
-community: "config/social_crawler.json"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "$"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/config/social_crawlerjson
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # config/social_crawler.json
@@ -27,4 +27,4 @@ tags:
 - [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/config/social_crawlerjson
+#graphify/document #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

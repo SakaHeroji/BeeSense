@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "rationale"
-community: "Historical Reddit continuations preserve bundles and original deadline"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Jeda dan kelanjutan Reddit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Historical_Reddit_continuations_preserve_bundles_and_original_deadline
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Historical Reddit continuations preserve bundles and original deadline
@@ -22,4 +22,4 @@ tags:
 - [[Round Robin Shared Deadline]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Historical_Reddit_continuations_preserve_bundles_and_original_deadline
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

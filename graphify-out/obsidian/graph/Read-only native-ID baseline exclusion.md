@@ -13,6 +13,6 @@ tags:
 ## Connections
 - [[Historical29October campaign PARTIAL outcome]] - `conceptually_related_to` [EXTRACTED]
 - [[Shared filters and round-robin campaign scheduler]] - `conceptually_related_to` [EXTRACTED]
-- [[SocialCrawler guide_1]] - `references` [EXTRACTED]
+- [[SocialCrawler guide]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "concept"
-community: "Kontrak Ekspor Instagram"
+community: "Riwayat Sesi Instagram"
 location: "## Integrasi dan run tiga jam"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Kontrak_Ekspor_Instagram
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # Instagram worker/adapter integrated in SocialCrawler1.5.1
@@ -33,4 +33,4 @@ tags:
 - [[Standalone Instagram uses existing auditcompact Excel contract]] - `references` [EXTRACTED]
 - [[instagrapi upstream private API and login-migration guidance]] - `cites` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Kontrak_Ekspor_Instagram
+#graphify/concept #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

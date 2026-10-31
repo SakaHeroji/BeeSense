@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.10
 members: 38
 ---
 
 # Validasi Konfigurasi Frontend
 
+**Cohesion:** 0.10 - loosely connected
 **Members:** 38 nodes
 
 ## Members
