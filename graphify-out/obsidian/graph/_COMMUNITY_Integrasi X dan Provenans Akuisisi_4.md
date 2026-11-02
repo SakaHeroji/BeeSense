@@ -32,9 +32,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_4]]
 
 ## Top bridge nodes
 - [[SocialNLPClusterer_1]] - degree 10, connects to 3 communities

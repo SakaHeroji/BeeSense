@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.06
-members: 62
+members: 64
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
 **Cohesion:** 0.06 - loosely connected
-**Members:** 62 nodes
+**Members:** 64 nodes
 
 ## Members
 - [[.__call__()_2]] - code - Crawler/Backend/twitter_crawler.py
@@ -35,6 +35,7 @@ members: 62
 - [[Child-only guard pace curl requests and prohibit network after a barrier.]] - rationale - Crawler/Backend/twitter_crawler.py
 - [[Expose only wait duration; never return account records or cookies.]] - rationale - Crawler/Backend/twitter_crawler.py
 - [[Keep native parent IDs; never infer a reply parent from screen position.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Map Reddrix 1.2.14 dictionaries without inventing identity or dates.]] - rationale - Crawler/Backend/social_crawler.py
 - [[One isolated process owns Scweet state and transport for the whole trial.]] - rationale - Crawler/Backend/twitter_crawler.py
 - [[Scweet-only trial; uses the existing shared sink, filters and Excel format.]] - rationale - Crawler/Backend/twitter_crawler.py
 - [[ScweetWorker]] - code - Crawler/Backend/twitter_crawler.py
@@ -60,6 +61,7 @@ members: 62
 - [[main()_9]] - code - Crawler/Backend/twitter_crawler.py
 - [[native_id()]] - code - Crawler/Backend/twitter_crawler.py
 - [[normalize_item()_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[normalize_reddrix_item()]] - code - Crawler/Backend/social_crawler.py
 - [[object_key()_2]] - code - Crawler/Backend/twitter_crawler.py
 - [[post_url()]] - code - Crawler/Backend/twitter_crawler.py
 - [[private_json()]] - code - Crawler/Backend/twitter_crawler.py
@@ -81,12 +83,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 9 edges to [[_COMMUNITY_Worker Reddrix]]
+- 5 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 3 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
 - 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 3 edges to [[_COMMUNITY_Crawler Selenium]]
-- 3 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 3 edges to [[_COMMUNITY_Koordinator Backend Sosial_1]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit_3]]
 - 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
 - 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
@@ -95,10 +98,12 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
+- 1 edge to [[_COMMUNITY_Worker Instaloader]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
 
 ## Top bridge nodes
-- [[social_crawler.py]] - degree 34, connects to 13 communities
+- [[social_crawler.py]] - degree 34, connects to 15 communities
 - [[twitter_crawler.py]] - degree 27, connects to 2 communities
 - [[TwitterCoordinatorWorker]] - degree 11, connects to 2 communities
+- [[TwitterAdapter]] - degree 7, connects to 2 communities
 - [[social_export.py]] - degree 6, connects to 2 communities
-- [[.__init__()_31]] - degree 5, connects to 2 communities

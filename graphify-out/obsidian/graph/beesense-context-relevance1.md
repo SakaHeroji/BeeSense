@@ -11,7 +11,8 @@ tags:
 # beesense-context-relevance:1
 
 ## Connections
+- [[Explicit relevance_artifact opt-in]] - `rationale_for` [EXTRACTED]
 - [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
-- [[outputsrelevance_20261102_01]] - `shares_data_with` [EXTRACTED]
+- [[Relevant-only clustering and complete occurrence audit]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

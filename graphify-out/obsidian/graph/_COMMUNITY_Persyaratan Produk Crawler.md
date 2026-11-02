@@ -45,9 +45,9 @@ SORT file.name ASC
 - 5 edges to [[_COMMUNITY_Rencana Produk dan Survei]]
 - 2 edges to [[_COMMUNITY_Kontrak API Frontend]]
 - 2 edges to [[_COMMUNITY_Batas Integrasi Produksi]]
-- 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard_1]]
+- 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard]]
 - 1 edge to [[_COMMUNITY_CI Container Frontend]]
-- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard]]
+- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard_2]]
 
 ## Top bridge nodes
 - [[Crawler frontend product requirements]] - degree 17, connects to 4 communities

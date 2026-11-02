@@ -1,57 +1,42 @@
 ---
 type: community
-cohesion: 0.11
-members: 42
+cohesion: 0.16
+members: 27
 ---
 
 # Kontrak Record Reddit
 
-**Cohesion:** 0.11 - loosely connected
-**Members:** 42 nodes
+**Cohesion:** 0.16 - loosely connected
+**Members:** 27 nodes
 
 ## Members
-- [[.__init__()_4]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.__init__()_3]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.__init__()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[._cells()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.abort()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.add_content()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.chunks()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.content()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.finish()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.finish_relations()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_01_frozen_header_fingerprint()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_02_cross_source_identical_columns_and_types()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_03_unknown_columns_rejected()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_05_identical_text_different_ids_is_not_dedup()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_06_changed_text_keeps_distinct_observation()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_07_child_before_parent_and_unresolved()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_09_no_zero_fill_missing_metrics()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_10_exact_time_normalized_utc_and_role_evidence()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_13_excel_literal_ids_and_lossless_text()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_16_trend_index_uses_metrics_without_fake_comment()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.write()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.write()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[BundleSink]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[ContractTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Dataset]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Shared pipeline; adapters cannot choose their own headers or cell formats.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Validate the embedded contract; an external descriptor is optional.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[add_readme()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[digest()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[dumps()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[main()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[parser()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[run()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[run_self_tests()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[schema_document()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[schema_fingerprint()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[validate_row()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[verify()]] - code - Crawler/Backend/Reddit/verify_browser_campaign.py
-- [[verify_descriptor()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.__init__()_2]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.accept()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.content()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.find()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.key()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.row()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.setUp()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.test_04_unicode_offsets_boundary_and_casefold()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.validate()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Aho-Corasick; offsets refer to Python Unicode code points in source.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[ContentInput]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[KeywordMatcher]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Only public HTML pages on the canonical host; never authAPI routes.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[RecordFactory]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[ValueError]] - code
+- [[_configuration()]] - code - Crawler/Backend/instagram_crawler.py
+- [[_integer()]] - code - Crawler/Backend/instagram_crawler.py
+- [[export_browser_campaign.py]] - code - Crawler/Backend/Reddit/export_browser_campaign.py
+- [[export_campaign()]] - code - Crawler/Backend/Reddit/export_browser_campaign.py
+- [[import_public_web_sections.py]] - code - Crawler/Backend/Reddit/import_public_web_sections.py
+- [[import_sections()]] - code - Crawler/Backend/Reddit/import_public_web_sections.py
+- [[load_campaign()]] - code - Crawler/Backend/Reddit/export_browser_campaign.py
+- [[native_fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[object_key()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[safe_web_url()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[thread_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[utc_datetime()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -61,18 +46,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 25 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 19 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 9 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
-- 6 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
-- 4 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 21 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 19 edges to [[_COMMUNITY_Kontrak Record Reddit_2]]
+- 16 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 14 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 11 edges to [[_COMMUNITY_Akuisisi YouTube]]
+- 10 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 7 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
+- 5 edges to [[_COMMUNITY_Capture Reddit Playwright]]
+- 5 edges to [[_COMMUNITY_Crawler Selenium]]
+- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader]]
+- 3 edges to [[_COMMUNITY_topic_sentence_export.py]]
+- 2 edges to [[_COMMUNITY_Struktur DOM Reddit]]
+- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
 
 ## Top bridge nodes
-- [[BundleSink]] - degree 14, connects to 4 communities
-- [[digest()]] - degree 9, connects to 4 communities
-- [[run()_1]] - degree 21, connects to 3 communities
-- [[dumps()]] - degree 12, connects to 3 communities
-- [[Dataset]] - degree 11, connects to 3 communities
+- [[ValueError]] - degree 61, connects to 11 communities
+- [[utc_datetime()]] - degree 19, connects to 6 communities
+- [[.accept()_1]] - degree 14, connects to 4 communities
+- [[.row()]] - degree 12, connects to 4 communities
+- [[export_campaign()]] - degree 12, connects to 4 communities

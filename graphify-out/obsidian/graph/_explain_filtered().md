@@ -12,7 +12,6 @@ tags:
 # _explain_filtered()
 
 ## Connections
-- [[.explain_artifacts()]] - `calls` [EXTRACTED]
 - [[.render()_1]] - `calls` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
 

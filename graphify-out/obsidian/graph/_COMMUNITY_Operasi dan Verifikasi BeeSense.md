@@ -1,42 +1,27 @@
 ---
 type: community
-cohesion: 0.13
-members: 27
+cohesion: 0.17
+members: 12
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 0.13 - loosely connected
-**Members:** 27 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[Acquisition → IDchecksum audit → merged workbook → training → dashboard]] - rationale - graphify-out/obsidian/HOME.md
-- [[Apache Arrow issue 50471]] - document - README.md
-- [[BeeSense_1]] - document - graphify-out/obsidian/HOME.md
-- [[BeeSense]] - document - README.md
-- [[CrawlerBackendsocial_crawler_selenium.py]] - code - README.md
-- [[Dashboard runtime separated from training and crawling]] - rationale - README.md
-- [[Frontend React Crawler]] - concept - graphify-out/obsidian/HOME.md
-- [[Graphify report]] - document - graphify-out/obsidian/HOME.md
-- [[InstagramCrawler_1]] - code - README.md
-- [[InstaloaderCrawler (CrawlerBackendinstaloader_crawler.py)]] - code - README.md
-- [[Local Docker artifact mount]] - rationale - README.md
-- [[Prefilter Twitter archive 20 topics, mean c_v 0.424321]] - concept - graphify-out/obsidian/HOME.md
-- [[Publication allowlist, checksums, and Git index]] - rationale - README.md
-- [[PyArrow 24.0.0 runtime pin]] - rationale - README.md
-- [[Raw inputs and archives preserved]] - rationale - README.md
-- [[RedditCrawler (CrawlerBackendreddit_crawler.py)]] - code - README.md
-- [[Reddrix subprocess lifecycle]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Shared deadline round robin scheduling]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - code - README.md
-- [[Streamlit Community Cloud release target]] - concept - README.md
-- [[Streamlit dependency documentation]] - document - README.md
-- [[Streamlit deployment documentation]] - document - README.md
-- [[TwitterCoordinatorWorker_2]] - code - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[TwitterCrawler (Scweet 5.8.2)]] - code - README.md
-- [[dashboard-runtime CI]] - concept - README.md
-- [[scriptsmerge_social_datasets.py]] - code - README.md
-- [[scriptsverify_dashboard_data.py]] - code - README.md
+- [[BeeSense project structure]] - document - docs/PROJECT_STRUCTURE.md
+- [[Ignored local authentication and browser state]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Legacy Instagram browser isolation]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Multilingual SBERT]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Narrative request receipt cache]] - rationale - graphify-out/obsidian/Topik Gemini.md
+- [[Overflow window sentence encoding]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Package rooted path consistency]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Separate training and test environments]] - concept - docs/PROJECT_STRUCTURE.md
+- [[Social NLP methodology note]] - document - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[SocialExportMixin_5]] - code - docs/PROJECT_STRUCTURE.md
+- [[Verified embedding cache]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[topic_narratives.py_1]] - code - docs/PROJECT_STRUCTURE.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -46,17 +31,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
-- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
 
 ## Top bridge nodes
-- [[BeeSense]] - degree 28, connects to 4 communities
-- [[scriptsverify_dashboard_data.py]] - degree 5, connects to 3 communities
-- [[BeeSense_1]] - degree 15, connects to 2 communities
-- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - degree 8, connects to 1 community
-- [[Raw inputs and archives preserved]] - degree 6, connects to 1 community
+- [[Multilingual SBERT]] - degree 4, connects to 1 community
+- [[topic_narratives.py_1]] - degree 3, connects to 1 community
+- [[Package rooted path consistency]] - degree 2, connects to 1 community
+- [[SocialExportMixin_5]] - degree 2, connects to 1 community
+- [[Social NLP methodology note]] - degree 2, connects to 1 community

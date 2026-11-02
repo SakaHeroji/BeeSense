@@ -59,8 +59,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 15 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 4 edges to [[_COMMUNITY_Worker Reddrix]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
@@ -70,7 +71,7 @@ SORT file.name ASC
 
 ## Top bridge nodes
 - [[receipt()]] - degree 25, connects to 5 communities
-- [[test_social_crawler.py]] - degree 10, connects to 3 communities
+- [[test_social_crawler.py]] - degree 10, connects to 4 communities
 - [[.crawler()_1]] - degree 32, connects to 2 communities
 - [[yt_events()]] - degree 18, connects to 2 communities
 - [[SocialCrawlerTests]] - degree 42, connects to 1 community

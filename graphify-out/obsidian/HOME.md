@@ -5,6 +5,10 @@ tags: [beesense, dashboard]
 
 # BeeSense
 
+## Peta cara kerja
+
+[[Peta Cara Kerja BeeSense]] menjelaskan alur pengambilan, penyaringan, pembentukan topik, Gemini, dan dashboard dengan bahasa sehari-hari. [Floor plan interaktif lokal](http://127.0.0.1:4378) memuat 139 berkas dan tiga alur kerja. Layar crawler masih simulasi; proses pengambilan nyata berjalan melalui perintah Python.
+
 [[TwitterCrawler Scweet]] menambahkan class X/Twitter mandiri dengan konfigurasi percobaan 30 menit dan kontrak Excel yang sama. Kini terhubung ke SocialCrawler 1.7.0 dengan preset Twitter-only 3 jam/1.000 post, penggabungan native ID, NLP dan dashboard. Hasil uji live dicatat pada catatan tersebut.
 
 Eksperimen lokal baru: [[Relevansi Konteks 20261102]] menyaring 10.496/53.332 kemunculan kalimat, lalu membentuk 20 topik dengan mean c_v 0,473339 dan 20 deskripsi Gemini dari keyword serta kalimat representatif. [Dashboard eksperimen](http://localhost:8502) menyediakan pembandingan sebelum/sesudah. Snapshot tersaring ber-Gemini kini menjadi default repository untuk publikasi; snapshot sebelum penyaringan tetap dipertahankan untuk pembandingan dan rollback.

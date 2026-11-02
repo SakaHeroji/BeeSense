@@ -1,19 +1,18 @@
 ---
-source_file: "scripts/generate_topic_narratives.py"
+source_file: "scripts/relevance_dashboard.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
-location: "L95"
+community: "topic_sentence_export.py"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/topic_sentence_exportpy
 ---
 
 # main()
 
 ## Connections
-- [[SocialNLPClusterer_2]] - `calls` [EXTRACTED]
-- [[enrich_run()]] - `calls` [EXTRACTED]
-- [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy

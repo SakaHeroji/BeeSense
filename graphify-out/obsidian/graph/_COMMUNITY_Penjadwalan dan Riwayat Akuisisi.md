@@ -68,7 +68,7 @@ SORT file.name ASC
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard]]
+- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard_1]]
 - 1 edge to [[_COMMUNITY_thread_url]]
 - 1 edge to [[_COMMUNITY_Penggabungan Dataset]]
 

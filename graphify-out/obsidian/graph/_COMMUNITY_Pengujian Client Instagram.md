@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.08
-members: 43
+cohesion: 0.07
+members: 44
 ---
 
 # Pengujian Client Instagram
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 43 nodes
+**Cohesion:** 0.07 - loosely connected
+**Members:** 44 nodes
 
 ## Members
 - [[.clock()]] - code - tests/crawler/test_instagram_crawler.py
@@ -35,6 +35,7 @@ members: 43
 - [[.test_password_mode_restores_settings_and_ignores_browser_cookie()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_password_recovery_is_one_relogin_and_propagates_failure()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_password_recovery_retains_explicit_verification_code()]] - code - tests/crawler/test_instagram_crawler.py
+- [[.test_password_upgrade_challenge_and_rate_limit_are_not_retried()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_real_collector_deduplicates_and_bounds_pages_and_replies()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_repeated_source_errors_stop_after_three_operations()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_saved_settings_are_atomic_owner_only_and_retry_settings_are_reset()]] - code - tests/crawler/test_instagram_crawler.py
@@ -62,17 +63,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 12 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 10 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[InstagramCrawlerTests]] - degree 33, connects to 4 communities
-- [[test_instagram_crawler.py]] - degree 11, connects to 3 communities
+- [[test_instagram_crawler.py]] - degree 11, connects to 4 communities
+- [[InstagramCrawlerTests]] - degree 33, connects to 3 communities
+- [[records()]] - degree 10, connects to 3 communities
 - [[.ig()]] - degree 9, connects to 3 communities
-- [[records()]] - degree 10, connects to 2 communities
 - [[FakeClient]] - degree 9, connects to 1 community

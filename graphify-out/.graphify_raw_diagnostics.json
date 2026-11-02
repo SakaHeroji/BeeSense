@@ -1,25 +1,25 @@
 {
-  "node_count": 328,
+  "node_count": 134,
   "unverified_node_count": 0,
-  "raw_edge_count": 860,
+  "raw_edge_count": 305,
   "non_object_edges": 0,
   "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 115,
+  "dangling_endpoint_edges": 38,
   "self_loop_edges": 0,
-  "valid_candidate_edges": 745,
+  "valid_candidate_edges": 267,
   "exact_duplicate_edges": 0,
-  "directed_unique_endpoint_pairs": 744,
-  "directed_same_endpoint_collapsed_edges": 1,
-  "undirected_unique_endpoint_pairs": 740,
-  "undirected_same_endpoint_collapsed_edges": 5,
-  "same_endpoint_group_count": 1,
-  "relation_variant_groups": 1,
+  "directed_unique_endpoint_pairs": 267,
+  "directed_same_endpoint_collapsed_edges": 0,
+  "undirected_unique_endpoint_pairs": 266,
+  "undirected_same_endpoint_collapsed_edges": 1,
+  "same_endpoint_group_count": 0,
+  "relation_variant_groups": 0,
   "source_file_variant_groups": 0,
   "source_location_variant_groups": 0,
   "context_variant_groups": 0,
   "post_build_graph_type": "Graph",
-  "post_build_node_count": 328,
-  "post_build_edge_count": 740,
+  "post_build_node_count": 134,
+  "post_build_edge_count": 266,
   "post_build_error": "",
   "producer_suppression": {
     "path": "/Users/socs3/.pyenv/versions/3.12.0/lib/python3.12/site-packages/graphify/extract.py",
@@ -88,26 +88,5 @@
     ],
     "error": ""
   },
-  "examples": [
-    {
-      "source": "tests_nlp_test_context_relevance_relevancetests_test_training_consumes_mask_without_modifying_source_text",
-      "target": "machinelearning_social_nlp_socialnlpclusterer",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "indirect_call"
-      ],
-      "source_files": [
-        "tests/nlp/test_context_relevance.py"
-      ],
-      "source_locations": [
-        "L253",
-        "L271"
-      ],
-      "contexts": [
-        "argument",
-        "call"
-      ]
-    }
-  ]
+  "examples": []
 }

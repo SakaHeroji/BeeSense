@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.06
-members: 62
+members: 64
 ---
 
 # Worker Instaloader
 
 **Cohesion:** 0.06 - loosely connected
-**Members:** 62 nodes
+**Members:** 64 nodes
 
 ## Members
 - [[.__call__()]] - code - Crawler/Backend/instaloader_crawler.py
@@ -32,6 +32,7 @@ members: 62
 - [[Apply the supplied runtime patch to this worker's context only.]] - rationale - Crawler/Backend/instaloader_crawler.py
 - [[Bounded web comments through Instaloader's patched context.          Query shape]] - rationale - Crawler/Backend/instaloader_crawler.py
 - [[BrowserPatchTests]] - code - tests/crawler/test_instaloader_browser_patch.py
+- [[Exercise Instagram through the combined coordinator, without network access.]] - rationale - tests/crawler/test_social_crawler_instagram.py
 - [[InstaloaderAdapter]] - code - Crawler/Backend/instaloader_crawler.py
 - [[InstaloaderCrawler]] - code - Crawler/Backend/instaloader_crawler.py
 - [[InstaloaderSettings]] - code - Crawler/Backend/instaloader_crawler.py
@@ -71,6 +72,7 @@ members: 62
 - [[save_session()_1]] - code - Crawler/Backend/instaloader_crawler.py
 - [[session_cookies()]] - code - Crawler/Backend/instaloader_crawler.py
 - [[test_instaloader_browser_patch.py]] - code - tests/crawler/test_instaloader_browser_patch.py
+- [[test_social_crawler_instagram.py]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[upstream_version()_1]] - code - Crawler/Backend/instaloader_crawler.py
 
 ## Live Query (requires Dataview plugin)
@@ -83,14 +85,16 @@ SORT file.name ASC
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 3 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 3 edges to [[_COMMUNITY_Pengujian Client Instagram]]
+- 3 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 - 1 edge to [[_COMMUNITY_Pengujian Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
-- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 
 ## Top bridge nodes
-- [[instaloader_crawler.py]] - degree 22, connects to 3 communities
+- [[test_social_crawler_instagram.py]] - degree 13, connects to 4 communities
+- [[instaloader_crawler.py]] - degree 22, connects to 2 communities
 - [[InstaloaderSettings]] - degree 7, connects to 2 communities
 - [[InstaloaderWorker]] - degree 9, connects to 1 community
 - [[instaloader_worker()]] - degree 8, connects to 1 community
-- [[.collect()]] - degree 8, connects to 1 community

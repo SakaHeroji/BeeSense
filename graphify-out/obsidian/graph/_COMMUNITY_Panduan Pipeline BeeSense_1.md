@@ -1,32 +1,28 @@
 ---
 type: community
-cohesion: 0.21
-members: 17
+cohesion: 0.17
+members: 13
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.21 - loosely connected
-**Members:** 17 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 13 nodes
 
 ## Members
-- [[AI synthesis interpretation]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Explicit Gemini and publication authorization]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
-- [[Fingerprinted receipt cache]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Gemini generateContent transport]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Gemini model documentation]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Gemini structured output]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Gemini topic narratives]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[GenerateContent API]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Kalimat dan deskripsi topik melalui Gemini]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[MachineLearningtopic_narratives.py]] - code - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Offline narrative validation]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Publication failure and retry policy]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[SocialNLPClusterer.generate_topic_narratives()]] - code - docs/machine-learning/SOCIAL_NLP.md
-- [[SocialNLPClusterer.save()]] - code - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Top keywords and representative sentences]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[beesense-topic-id2_1]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[gemini-topic-narratives2]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Bounded native-ID evidence and explicit uncertainty]] - rationale - graphify-out/obsidian/Crawler Selenium.md
+- [[Fresh Chrome guest session per operation]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[Historical Selenium implementation preset500rootsplatform andonehour]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[Obsidian Crawler Selenium architecture]] - document - graphify-out/obsidian/Crawler Selenium.md
+- [[Official Selenium Manager ChromeDriver selection]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
+- [[Relative dates remain calendar estimates]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[Separate non-root crawler container with Selenium Grid]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Shared BundleSink and dual-workbook export path]] - concept - graphify-out/obsidian/Crawler Selenium.md
+- [[Shared rendered_thread_dom.mjs extraction]] - concept - Crawler/Backend/Reddit/README_playwright.md
+- [[SocialCrawlerSelenium Guide]] - document - docs/crawler/SELENIUM_CRAWLER.md
+- [[Worker hard deadline preserves streamed partial events]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,14 +32,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
-- 5 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-- 3 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_5]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
 
 ## Top bridge nodes
-- [[Kalimat dan deskripsi topik melalui Gemini]] - degree 23, connects to 4 communities
-- [[Gemini topic narratives]] - degree 9, connects to 2 communities
-- [[SocialNLPClusterer.generate_topic_narratives()]] - degree 6, connects to 2 communities
-- [[Explicit Gemini and publication authorization]] - degree 4, connects to 1 community
-- [[gemini-topic-narratives2]] - degree 4, connects to 1 community
+- [[SocialCrawlerSelenium Guide]] - degree 11, connects to 2 communities
+- [[Obsidian Crawler Selenium architecture]] - degree 5, connects to 1 community
+- [[Shared rendered_thread_dom.mjs extraction]] - degree 2, connects to 1 community

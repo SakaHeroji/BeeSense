@@ -1,28 +1,28 @@
 ---
 type: community
-cohesion: 0.22
+cohesion: 0.19
 members: 13
 ---
 
 # Alur Dataset Model Dashboard
 
-**Cohesion:** 0.22 - loosely connected
+**Cohesion:** 0.19 - loosely connected
 **Members:** 13 nodes
 
 ## Members
-- [[Context-scoped Instaloader web GraphQL patch]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
-- [[Explicit instagrapi backend]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instagram acquisition, dataset and training pipeline]] - document - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[InstagramCrawler browser and instagrapi history]] - document - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instaloader trial06 1 post and 20 comments]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
-- [[InstaloaderCrawler default Instagram backend]] - document - docs/crawler/INSTALOADER_CRAWLER.md
-- [[Native-ID deduplication and latest-observation lineage]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[NodeIterator query_hash comment transport]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
-- [[Persistent Chrome worker with manual login]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Random pacing, batch pauses and exponential 429 backoff]] - rationale - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Shared compact and eight-sheet social export contract]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Stored Indonesian Gemini topic narratives]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Verified 30 October 20-topic model]] - concept - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
+- [[Artifact-only dashboard without GensimTorch imports]] - rationale - graphify-out/obsidian/Menjalankan BeeSense.md
+- [[BeeSense startup, verification and coherence training runbook]] - document - graphify-out/obsidian/Menjalankan BeeSense.md
+- [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - rationale - graphify-out/obsidian/Struktur Proyek.md
+- [[Frozen full NLP and offline development environment]] - document - requirements/nlp.lock
+- [[Frozen macOS Intel native SBERT training environment]] - document - requirements/sbert-macos-intel.lock
+- [[NLP, Streamlit and Plotly dependency ranges]] - document - requirements/nlp.txt
+- [[Native SBERT training requirements include coherence evaluation]] - document - requirements/sbert.txt
+- [[New-corpus native SBERT encoding or exact verified cache reuse]] - concept - graphify-out/obsidian/Menjalankan BeeSense.md
+- [[Obsidian runbook records Python 3.14 failure and dashboard-only packaging fix]] - document - graphify-out/obsidian/Menjalankan BeeSense.md
+- [[Package module CLIs retain repository-root path semantics]] - rationale - graphify-out/obsidian/Struktur Proyek.md
+- [[Platform-specific macOS Intel Torch and numerical compatibility]] - rationale - requirements/sbert.txt
+- [[Reorganized BeeSense package and supporting-file structure]] - document - graphify-out/obsidian/Struktur Proyek.md
+- [[Trainingevaluation-only Gensim coherence requirements]] - document - requirements/coherence.txt
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,10 +32,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard]]
-- 2 edges to [[_COMMUNITY_Persyaratan Produk Crawler]]
+- 2 edges to [[_COMMUNITY_app.py]]
+- 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard_2]]
+- 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 1 edge to [[_COMMUNITY_thread_url]]
 
 ## Top bridge nodes
-- [[Shared compact and eight-sheet social export contract]] - degree 6, connects to 2 communities
-- [[InstaloaderCrawler default Instagram backend]] - degree 5, connects to 1 community
-- [[Native-ID deduplication and latest-observation lineage]] - degree 2, connects to 1 community
+- [[BeeSense startup, verification and coherence training runbook]] - degree 7, connects to 3 communities
+- [[Reorganized BeeSense package and supporting-file structure]] - degree 6, connects to 3 communities
+- [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - degree 4, connects to 3 communities
+- [[Package module CLIs retain repository-root path semantics]] - degree 3, connects to 2 communities

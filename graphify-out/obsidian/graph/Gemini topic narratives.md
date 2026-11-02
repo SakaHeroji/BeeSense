@@ -13,9 +13,7 @@ tags:
 ## Connections
 - [[AI synthesis interpretation]] - `rationale_for` [EXTRACTED]
 - [[Dashboard BeeSense]] - `references` [EXTRACTED]
-- [[Explicit Gemini and publication authorization]] - `rationale_for` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
-- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer.generate_topic_narratives()]] - `implements` [EXTRACTED]
 - [[Top keywords and representative sentences]] - `references` [EXTRACTED]
 - [[beesense-topic-id2_1]] - `references` [EXTRACTED]

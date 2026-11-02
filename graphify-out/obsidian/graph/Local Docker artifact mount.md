@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Local Docker artifact mount
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[BeeSense]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

@@ -1,59 +1,75 @@
 ---
 type: community
-cohesion: 0.08
-members: 44
+cohesion: 0.07
+members: 60
 ---
 
 # Penyaringan Relevansi dan Narasi Topik
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 44 nodes
+**Cohesion:** 0.07 - loosely connected
+**Members:** 60 nodes
 
 ## Members
-- [[.__call__()_3]] - code - MachineLearning/relevance_semantic.py
-- [[.__init__()_38]] - code - MachineLearning/context_relevance.py
-- [[.__init__()_39]] - code - MachineLearning/relevance_semantic.py
-- [[._scores()]] - code - MachineLearning/context_relevance.py
-- [[._validate()]] - code - MachineLearning/context_relevance.py
-- [[.build_units()]] - code - MachineLearning/context_relevance.py
-- [[.classify_many()]] - code - MachineLearning/context_relevance.py
-- [[.close()_7]] - code - MachineLearning/context_relevance.py
-- [[.encode()]] - code - MachineLearning/relevance_semantic.py
-- [[.filter_snapshot()]] - code - MachineLearning/context_relevance.py
-- [[.load_decisions()]] - code - MachineLearning/context_relevance.py
-- [[.make()]] - code - tests/nlp/test_context_relevance.py
-- [[.predictor()]] - code - tests/nlp/test_context_relevance.py
-- [[.setUp()_13]] - code - tests/nlp/test_context_relevance.py
-- [[.snapshot()]] - code - tests/nlp/test_context_relevance.py
-- [[.tearDown()_1]] - code - tests/nlp/test_context_relevance.py
-- [[.test_cache_resumes_and_configuration_changes_invalidate_it()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_checksum_tampering_is_rejected()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_direct_relevance_and_unrelated_target_never_inherit_root()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_explicit_configuration_does_not_inherit_another_corpus_mask()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_filter_dataset_is_immutable_and_bound_to_entire_source()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_invalid_configuration_and_scores_fail_closed()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_same_ambiguous_sentence_can_have_different_context_decisions()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_training_consumes_mask_without_modifying_source_text()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_weak_short_match_requires_context()]] - code - tests/nlp/test_context_relevance.py
-- [[Classify target sentences; parent context may rescue only ambiguous text.      U]] - rationale - MachineLearning/context_relevance.py
-- [[ContextRelevanceFilter]] - code - MachineLearning/context_relevance.py
-- [[Filter a verified existing corpus into a new auditable relevance dataset.]] - rationale - scripts/filter_context_relevance.py
-- [[Local, auditable zero-shot relevance decisions before topic clustering.  Model s]] - rationale - MachineLearning/context_relevance.py
-- [[LocalSemanticBackend]] - code - MachineLearning/relevance_semantic.py
-- [[No modelnetwork calls policy, provenance and integration regressions.]] - rationale - tests/nlp/test_context_relevance.py
-- [[Reference profile and lazy local SBERT backend for relevance filtering.]] - rationale - MachineLearning/relevance_semantic.py
-- [[RelevanceTests]] - code - tests/nlp/test_context_relevance.py
-- [[Resolve roots from native URLs; never match conversations by title.]] - rationale - MachineLearning/context_relevance.py
-- [[SBERT prototypes; scores are cosine similarities, never probabilities.]] - rationale - MachineLearning/relevance_semantic.py
-- [[Units contain target ``sentence`` and optional audited parentpost text.]] - rationale - MachineLearning/context_relevance.py
-- [[Write a new, checksum-bound decision dataset; never overwrite input.]] - rationale - MachineLearning/context_relevance.py
-- [[checksum()_1]] - code - MachineLearning/context_relevance.py
-- [[context_relevance.py]] - code - MachineLearning/context_relevance.py
-- [[digest()_3]] - code - MachineLearning/context_relevance.py
-- [[filter_context_relevance.py]] - code - scripts/filter_context_relevance.py
-- [[main()_13]] - code - scripts/filter_context_relevance.py
-- [[relevance_semantic.py]] - code - MachineLearning/relevance_semantic.py
-- [[test_context_relevance.py]] - code - tests/nlp/test_context_relevance.py
+- [[Acquisition → IDchecksum checks → merged workbook → training → dashboard]] - rationale - graphify-out/obsidian/HOME.md
+- [[Arsitektur BeeSense]] - document - graphify-out/obsidian/HOME.md
+- [[BeeSense_1]] - document - graphify-out/obsidian/HOME.md
+- [[Cara kerja BeeSense]] - document - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Commit 3987e04 Cloud comparison radio fix]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Commit 778cb81 code and filtered results]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)]] - code - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Cosine thresholds and context gates]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Crawler frontend simulation]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerBackendsocial_crawler.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerBackendsocial_export.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerFrontendsrcsharedapi.ts]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Dashboardapp.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Education keyword profile kuliah, kampus, universitas, beasiswa, jurusan]] - concept - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Excel and source-identity audit]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Explicit Gemini authorization]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Explicit relevance_artifact opt-in]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Filtered Gemini repository default and rollback]] - rationale - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Filtered clustering 20 topics, mean c_v 0.4733391691]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Floorplan health review no high-severity findings, six medium large-file notes]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Frontend React Crawler]] - concept - graphify-out/obsidian/HOME.md
+- [[Frontend request receiver not implemented in repository]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Gemini describes existing topics]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Immutable narrative enrichment]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Laporan Graphify]] - document - graphify-out/obsidian/HOME.md
+- [[Local interactive floorplan 139 files, 3 workflows, 7 introduction stops]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Local runtime and storage limits]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)]] - code - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[MachineLearningsocial_nlp.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[MachineLearningtopic_narratives.py_1]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Map relationship evidence]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Metodologi Machine Learning Social NLP]] - document - graphify-out/obsidian/HOME.md
+- [[Operator-run artifact workflow]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Penyaringan relevansi konteks sebelum clustering]] - document - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Prefilter Twitter archive 20 topics, mean c_v 0.424321]] - concept - graphify-out/obsidian/HOME.md
+- [[Relevance and coherence interpretation]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Relevansi Konteks 20261102]] - document - graphify-out/obsidian/HOME.md
+- [[Relevansi Konteks — 2 November 2026]] - document - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Relevant-only clustering and complete occurrence audit]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Rollback and release verification]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[SBERT semantic similarity]] - document - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Semantic-reference relevance classification]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Snapshot comparison and audit UI]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Source dataset 34,764 unique records across four platforms]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Stored-artifact dashboard runtime]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Verified Streamlit release and comparison radio]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Verified embedding reuse and refit]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Verified native conversation context]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[YouTube yt-dlp, Reddit Reddrix, Instagram Instaloader, X Scweet]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[beesense-context-relevance1]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[configcontext_relevance.json]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[configdashboard.json]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[outputsnlp_20261102_relevance_topics20_01]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[outputsnlp_20261102_relevance_topics20_gemini_02]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[outputsnlp_20261102_twitter_topics20_gemini_01]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[scriptsfilter_context_relevance.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[scriptsgenerate_topic_narratives.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[scriptsmerge_social_datasets.py_1]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[semantic_scores_v1.sqlite3]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[streamlit_apps.py_2]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -63,14 +79,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 6 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_app.py]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 8 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
 
 ## Top bridge nodes
-- [[test_context_relevance.py]] - degree 9, connects to 3 communities
-- [[ContextRelevanceFilter]] - degree 20, connects to 2 communities
-- [[RelevanceTests]] - degree 18, connects to 2 communities
-- [[filter_context_relevance.py]] - degree 8, connects to 2 communities
-- [[.load_decisions()]] - degree 4, connects to 2 communities
+- [[Penyaringan relevansi konteks sebelum clustering]] - degree 26, connects to 1 community
+- [[outputsnlp_20261102_twitter_topics20_gemini_01]] - degree 9, connects to 1 community
+- [[Relevansi Konteks — 2 November 2026]] - degree 9, connects to 1 community
+- [[Filtered Gemini repository default and rollback]] - degree 3, connects to 1 community

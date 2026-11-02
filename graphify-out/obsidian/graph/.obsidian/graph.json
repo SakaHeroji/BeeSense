@@ -1,56 +1,56 @@
 {
   "colorGroups": [
     {
-      "query": "tag:#community/Pengambilan_HTML_Reddit",
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Worker_Instaloader",
+      "query": "tag:#community/Pengambilan_HTML_Reddit",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "query": "tag:#community/Worker_Instaloader",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Crawler_Selenium",
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Akuisisi_YouTube",
+      "query": "tag:#community/Crawler_Selenium",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Penggabungan_Dataset",
+      "query": "tag:#community/Akuisisi_YouTube",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Koordinator_Backend_Sosial",
+      "query": "tag:#community/Penyaringan_Relevansi_dan_Narasi_Topik",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Model_dan_Pengujian_NLP",
+      "query": "tag:#community/Penggabungan_Dataset",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -85,112 +85,112 @@
       }
     },
     {
-      "query": "tag:#community/Parsing_Identitas_Reddit",
+      "query": "tag:#community/Pengujian_Koordinator_Crawler",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Kontrak_Record_Reddit",
+      "query": "tag:#community/Koordinator_Backend_Sosial",
       "color": {
         "a": 1,
         "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Pengujian_Koordinator_Crawler",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Validasi_Konfigurasi_Frontend",
       "color": {
         "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Pengujian_Narasi_Gemini",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Form_Akuisisi_dan_Survei",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Encoding_dan_Penyimpanan_Model",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Monitor_Job_dan_Dataset",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Konfigurasi_TypeScript",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Penyaringan_Relevansi_dan_Narasi_Topik",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Pengujian_Worker_Instaloader",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Worker_Reddrix",
-      "color": {
-        "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Pengujian_Parser_Reddit",
+      "query": "tag:#community/Model_dan_Pengujian_NLP",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Monitor_Job_dan_Dataset",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Parser_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_Record_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Parsing_Identitas_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Konfigurasi_TypeScript",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Worker_Instaloader",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
       "query": "tag:#community/Tipe_dan_Client_API",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Encoding_dan_Penyimpanan_Model",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Kontrak_Record_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Worker_Reddrix",
       "color": {
         "a": 1,
         "rgb": 16752039
@@ -211,7 +211,7 @@
       }
     },
     {
-      "query": "tag:#community/thread_url",
+      "query": "tag:#community/Pengujian_Narasi_Gemini",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -225,21 +225,21 @@
       }
     },
     {
-      "query": "tag:#community/Dependency_Pengembangan_Frontend",
+      "query": "tag:#community/Kontrak_Record_Reddit",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Penggabungan_Dataset",
+      "query": "tag:#community/Dependency_Pengembangan_Frontend",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/app.py",
+      "query": "tag:#community/Batas_Akuisisi_Reddit",
       "color": {
         "a": 1,
         "rgb": 5873999
@@ -253,35 +253,35 @@
       }
     },
     {
-      "query": "tag:#community/Capture_Reddit_Playwright",
+      "query": "tag:#community/Penggabungan_Dataset",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Kontrak_Record_Reddit",
+      "query": "tag:#community/Capture_Reddit_Playwright",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "query": "tag:#community/Struktur_DOM_Reddit",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Batas_Akuisisi_Reddit",
+      "query": "tag:#community/Wrapper_RedditCrawler",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Wrapper_RedditCrawler",
+      "query": "tag:#community/Render_Dashboard_Streamlit",
       "color": {
         "a": 1,
         "rgb": 5142951
@@ -309,35 +309,35 @@
       }
     },
     {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "query": "tag:#community/thread_url",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Batas_Akuisisi_Reddit",
+      "query": "tag:#community/topic_sentence_export.py",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Pengujian_Resume_Capture",
+      "query": "tag:#community/app.py",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/app.py",
+      "query": "tag:#community/Batas_Akuisisi_Reddit",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Alur_Dataset_Model_Dashboard",
+      "query": "tag:#community/Pengujian_Resume_Capture",
       "color": {
         "a": 1,
         "rgb": 10253663
@@ -351,238 +351,238 @@
       }
     },
     {
-      "query": "tag:#community/Render_Dashboard_Streamlit",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
       "query": "tag:#community/Rencana_Produk_dan_Survei",
       "color": {
         "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/topic_sentence_export.py",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Pengujian_UI_Streamlit",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Wrapper_RedditCrawler",
       "color": {
         "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Kampanye_Browser_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Alur_Dataset_Model_Dashboard",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Pengujian_Narasi_Gemini",
       "color": {
         "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Batas_Akuisisi_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
-      "color": {
-        "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
+      "query": "tag:#community/Kampanye_Browser_Reddit",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Pengujian_Analisis_Dashboard",
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
         "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Skrip_Build_Frontend",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Struktur_DOM_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
-      }
-    },
-    {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
-      "color": {
-        "a": 1,
-        "rgb": 5142951
-      }
-    },
-    {
-      "query": "tag:#community/Parsing_Identitas_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 15896107
-      }
-    },
-    {
-      "query": "tag:#community/Batas_Akuisisi_Reddit",
-      "color": {
-        "a": 1,
-        "rgb": 14767961
-      }
-    },
-    {
-      "query": "tag:#community/build_topic_sentences.mjs",
-      "color": {
-        "a": 1,
-        "rgb": 7780274
-      }
-    },
-    {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
-      "color": {
-        "a": 1,
-        "rgb": 5873999
-      }
-    },
-    {
-      "query": "tag:#community/Router_dan_Batas_Error",
-      "color": {
-        "a": 1,
-        "rgb": 15583560
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 11565729
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Metadata_Package_Frontend",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/Alur_Dataset_Model_Dashboard",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
       "color": {
         "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Alur_Dataset_Model_Dashboard",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Model_dan_Pengujian_NLP",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Analisis_Dashboard",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Alur_Dataset_Model_Dashboard",
+      "color": {
+        "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Pengujian_Alur_Frontend",
+      "query": "tag:#community/Koordinator_Backend_Sosial",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
+      "query": "tag:#community/app.py",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Narasi_Gemini",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Skrip_Build_Frontend",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Batas_Akuisisi_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/thread_url",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
       "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "color": {
+        "a": 1,
+        "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/build_topic_sentences.mjs",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
+      }
+    },
+    {
+      "query": "tag:#community/Router_dan_Batas_Error",
+      "color": {
+        "a": 1,
+        "rgb": 11565729
+      }
+    },
+    {
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Encoding_dan_Penyimpanan_Model",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
+      }
+    },
+    {
+      "query": "tag:#community/Metadata_Package_Frontend",
+      "color": {
+        "a": 1,
+        "rgb": 5142951
+      }
+    },
+    {
+      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
+      "color": {
+        "a": 1,
+        "rgb": 15896107
+      }
+    },
+    {
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "color": {
+        "a": 1,
+        "rgb": 14767961
+      }
+    },
+    {
+      "query": "tag:#community/Pengujian_Alur_Frontend",
       "color": {
         "a": 1,
         "rgb": 7780274
@@ -610,35 +610,35 @@
       }
     },
     {
-      "query": "tag:#community/Parser_Public_Post",
+      "query": "tag:#community/Parsing_Identitas_Reddit",
       "color": {
         "a": 1,
         "rgb": 16752039
       }
     },
     {
-      "query": "tag:#community/Format_Kode_Frontend",
+      "query": "tag:#community/Parser_Public_Post",
       "color": {
         "a": 1,
         "rgb": 10253663
       }
     },
     {
-      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
+      "query": "tag:#community/Format_Kode_Frontend",
       "color": {
         "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Model_dan_Pengujian_NLP",
+      "query": "tag:#community/Operasi_dan_Verifikasi_BeeSense",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/Penyaringan_Relevansi_dan_Narasi_Topik",
+      "query": "tag:#community/Model_dan_Pengujian_NLP",
       "color": {
         "a": 1,
         "rgb": 15896107
@@ -652,248 +652,262 @@
       }
     },
     {
-      "query": "tag:#community/Package_Backend_Python",
+      "query": "tag:#community/Batas_Akuisisi_Reddit",
       "color": {
         "a": 1,
         "rgb": 7780274
+      }
+    },
+    {
+      "query": "tag:#community/Batas_Akuisisi_Reddit",
+      "color": {
+        "a": 1,
+        "rgb": 5873999
+      }
+    },
+    {
+      "query": "tag:#community/Package_Backend_Python",
+      "color": {
+        "a": 1,
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Capture_DOM_Reddit",
       "color": {
         "a": 1,
-        "rgb": 5873999
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Package_YouTube_Python",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Aturan_React_Hooks",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Matcher_DOM_Pengujian",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/Testing_Library_React",
       "color": {
         "a": 1,
-        "rgb": 10253663
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Tipe_Parser_CSV",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Compiler_TypeScript",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Bundler_Vite",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Identitas_Visual_BeeSense",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Package_Crawler_Python",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Package_Dashboard_Python",
       "color": {
         "a": 1,
-        "rgb": 5873999
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Model_dan_Pengujian_NLP",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
-        "rgb": 16752039
+        "rgb": 12234924
       }
     },
     {
       "query": "tag:#community/Preset_Reddit_Seribu_Post",
       "color": {
         "a": 1,
-        "rgb": 10253663
+        "rgb": 5142951
       }
     },
     {
       "query": "tag:#community/Konfigurasi_Reddit_Legacy",
       "color": {
         "a": 1,
-        "rgb": 12234924
+        "rgb": 15896107
       }
     },
     {
       "query": "tag:#community/Konfigurasi_YouTube_Legacy",
       "color": {
         "a": 1,
-        "rgb": 5142951
+        "rgb": 14767961
       }
     },
     {
       "query": "tag:#community/Kontrak_YouTube_Legacy",
       "color": {
         "a": 1,
-        "rgb": 15896107
+        "rgb": 7780274
       }
     },
     {
       "query": "tag:#community/Konfigurasi_ESLint",
       "color": {
         "a": 1,
-        "rgb": 14767961
+        "rgb": 5873999
       }
     },
     {
       "query": "tag:#community/Setup_Pengujian_Frontend",
       "color": {
         "a": 1,
-        "rgb": 7780274
+        "rgb": 15583560
       }
     },
     {
       "query": "tag:#community/Mock_Penutupan_Dialog",
       "color": {
         "a": 1,
-        "rgb": 5873999
+        "rgb": 11565729
       }
     },
     {
       "query": "tag:#community/Mock_Pembukaan_Dialog",
       "color": {
         "a": 1,
-        "rgb": 15583560
+        "rgb": 16752039
       }
     },
     {
       "query": "tag:#community/Konfigurasi_Build_Vite",
       "color": {
         "a": 1,
-        "rgb": 11565729
+        "rgb": 10253663
       }
     },
     {
       "query": "tag:#community/Konfigurasi_Vitest",
       "color": {
         "a": 1,
-        "rgb": 16752039
-      }
-    },
-    {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
-      "color": {
-        "a": 1,
-        "rgb": 10253663
-      }
-    },
-    {
-      "query": "tag:#community/Memori_Startup_Dashboard",
-      "color": {
-        "a": 1,
         "rgb": 12234924
       }
     },
     {
-      "query": "tag:#community/Arsitektur_Model_dan_Dashboard",
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
         "rgb": 5142951
       }
     },
     {
-      "query": "tag:#community/BeeSense_project",
+      "query": "tag:#community/Memori_Startup_Dashboard",
       "color": {
         "a": 1,
         "rgb": 15896107
       }
     },
     {
-      "query": "tag:#community/Panduan_Pipeline_BeeSense",
+      "query": "tag:#community/Arsitektur_Model_dan_Dashboard",
       "color": {
         "a": 1,
         "rgb": 14767961
       }
     },
     {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "query": "tag:#community/BeeSense_project",
       "color": {
         "a": 1,
         "rgb": 7780274
       }
     },
     {
-      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
+      "query": "tag:#community/Panduan_Pipeline_BeeSense",
       "color": {
         "a": 1,
         "rgb": 5873999
       }
     },
     {
-      "query": "tag:#community/Dependency_Backend_Instagrapi",
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
       "color": {
         "a": 1,
         "rgb": 15583560
       }
     },
     {
-      "query": "tag:#community/Integrasi_Default_Instaloader",
+      "query": "tag:#community/Integrasi_X_dan_Provenans_Akuisisi",
       "color": {
         "a": 1,
         "rgb": 11565729
       }
     },
     {
-      "query": "tag:#community/Akuisisi_X_dan_Ekspor_Scweet",
+      "query": "tag:#community/Dependency_Backend_Instagrapi",
       "color": {
         "a": 1,
         "rgb": 16752039
+      }
+    },
+    {
+      "query": "tag:#community/Integrasi_Default_Instaloader",
+      "color": {
+        "a": 1,
+        "rgb": 10253663
+      }
+    },
+    {
+      "query": "tag:#community/Akuisisi_X_dan_Ekspor_Scweet",
+      "color": {
+        "a": 1,
+        "rgb": 12234924
       }
     }
   ]

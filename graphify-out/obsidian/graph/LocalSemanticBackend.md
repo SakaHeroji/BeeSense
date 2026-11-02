@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.__call__()_3]] - `method` [EXTRACTED]
-- [[.__init__()_39]] - `method` [EXTRACTED]
+- [[.__init__()_38]] - `method` [EXTRACTED]
 - [[._scores()]] - `calls` [EXTRACTED]
 - [[.encode()]] - `method` [EXTRACTED]
 - [[ContextRelevanceFilter]] - `uses` [INFERRED]
@@ -21,7 +21,7 @@ tags:
 - [[SocialNLPClusterer_2]] - `uses` [INFERRED]
 - [[context_relevance.py]] - `imports` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports` [EXTRACTED]
-- [[main()_13]] - `calls` [EXTRACTED]
+- [[main()_12]] - `calls` [EXTRACTED]
 - [[relevance_semantic.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

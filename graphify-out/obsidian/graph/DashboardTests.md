@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Model dan Pengujian NLP"
+community: "thread_url"
 location: "L685"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/thread_url
 ---
 
 # DashboardTests
@@ -17,4 +17,4 @@ tags:
 - [[SocialNLPClusterer_2]] - `uses` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/code #graphify/EXTRACTED #community/thread_url

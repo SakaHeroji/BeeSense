@@ -25,7 +25,6 @@ tags:
 - [[GenerateContent API]] - `cites` [EXTRACTED]
 - [[MachineLearningtopic_narratives.py]] - `references` [EXTRACTED]
 - [[Offline narrative validation]] - `references` [EXTRACTED]
-- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 - [[Publication failure and retry policy]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer.generate_topic_narratives()]] - `references` [EXTRACTED]

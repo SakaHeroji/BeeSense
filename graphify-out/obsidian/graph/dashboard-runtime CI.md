@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "concept"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # dashboard-runtime CI
@@ -14,4 +14,4 @@ tags:
 - [[BeeSense]] - `references` [EXTRACTED]
 - [[Dashboard runtime separated from training and crawling]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

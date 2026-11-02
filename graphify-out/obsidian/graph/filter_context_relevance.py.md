@@ -17,7 +17,7 @@ tags:
 - [[LocalSemanticBackend]] - `imports` [EXTRACTED]
 - [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
 - [[context_relevance.py]] - `imports_from` [EXTRACTED]
-- [[main()_13]] - `contains` [EXTRACTED]
+- [[main()_12]] - `contains` [EXTRACTED]
 - [[relevance_semantic.py]] - `imports_from` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 

@@ -1,18 +1,20 @@
 ---
-source_file: "scripts/verify_dashboard_data.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
-location: "L274"
+community: "app.py"
+location: "L2409"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/apppy
 ---
 
 # main()
 
 ## Connections
-- [[verify()_1]] - `calls` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/apppy

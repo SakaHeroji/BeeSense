@@ -69,7 +69,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Penggabungan Dataset]]
 

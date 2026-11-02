@@ -1,27 +1,25 @@
 ---
 type: community
 cohesion: 0.29
-members: 12
+members: 10
 ---
 
 # Panduan Pipeline BeeSense
 
 **Cohesion:** 0.29 - loosely connected
-**Members:** 12 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[Accessible dashboard interactions]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Counting units and topic share]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Dashboard BeeSense]] - document - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Dashboard validation]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Explicit relevance_artifact opt-in]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
-- [[Filters preserve full-model memberships and scores]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Five dashboard views]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
-- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - code - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Temporal support and source audit]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Web Interface Guidelines]] - document - docs/dashboard/DASHBOARD_DESIGN.md
-- [[configsocial_nlp.json]] - concept - README.md
-- [[streamlit_apps.py_1]] - code - README.md
+- [[BeeSense audit bundle]] - concept - docs/crawler/TWITTER_CRAWLER.md
+- [[Historical Instagram Export Query Memory]] - document - graphify-out/memory/query_20261030_041128_bagaimana_instagramcrawler_dapat_memakai_kontrak_e.md
+- [[Instaloader 4.16]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[Platform rate limit policies]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Reddrix 1.2.14]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[Round robin deadline scheduler]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Shared root and comment filters]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[SocialCrawler_1]] - code - docs/crawler/SOCIAL_CRAWLER.md
+- [[SocialExportMixin_4]] - code - docs/crawler/SOCIAL_CRAWLER.md
+- [[Twitter three hour preset]] - concept - docs/crawler/TWITTER_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,16 +29,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
-- 4 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_8]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
 
 ## Top bridge nodes
-- [[streamlit_apps.py_1]] - degree 7, connects to 4 communities
-- [[Dashboard BeeSense]] - degree 16, connects to 3 communities
-- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - degree 10, connects to 3 communities
-- [[configsocial_nlp.json]] - degree 7, connects to 3 communities
-- [[Explicit relevance_artifact opt-in]] - degree 3, connects to 2 communities
+- [[SocialCrawler_1]] - degree 12, connects to 3 communities
+- [[Platform rate limit policies]] - degree 5, connects to 2 communities
+- [[SocialExportMixin_4]] - degree 4, connects to 1 community
+- [[BeeSense audit bundle]] - degree 3, connects to 1 community

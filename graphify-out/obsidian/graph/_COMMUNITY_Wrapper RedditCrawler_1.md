@@ -38,7 +38,7 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_3]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes

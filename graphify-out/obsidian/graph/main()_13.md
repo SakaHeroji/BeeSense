@@ -1,20 +1,19 @@
 ---
-source_file: "scripts/filter_context_relevance.py"
+source_file: "scripts/generate_topic_narratives.py"
 type: "code"
-community: "Penyaringan Relevansi dan Narasi Topik"
-location: "L12"
+community: "Pengujian Narasi Gemini"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[ContextRelevanceFilter]] - `calls` [EXTRACTED]
-- [[LocalSemanticBackend]] - `calls` [EXTRACTED]
-- [[filter_context_relevance.py]] - `contains` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `calls` [EXTRACTED]
+- [[enrich_run()]] - `calls` [EXTRACTED]
+- [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

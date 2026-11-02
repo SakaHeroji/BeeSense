@@ -14,7 +14,6 @@ tags:
 - [[Candidate quality gate]] - `implements` [EXTRACTED]
 - [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
 - [[DBSCAN Euclidean density clustering]] - `implements` [EXTRACTED]
-- [[Explicit relevance_artifact opt-in]] - `rationale_for` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 - [[Multilingual SBERT encoder]] - `implements` [EXTRACTED]
 - [[UMAP projection]] - `implements` [EXTRACTED]

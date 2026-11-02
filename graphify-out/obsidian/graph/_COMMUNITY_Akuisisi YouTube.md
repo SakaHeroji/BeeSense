@@ -80,7 +80,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 11 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]

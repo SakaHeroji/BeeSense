@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
+community: "topic_sentence_export.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/topic_sentence_exportpy
 ---
 
 # social_nlp.py
@@ -19,7 +19,7 @@ tags:
 - [[filter_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[json_write()]] - `contains` [EXTRACTED]
-- [[main()_12]] - `contains` [EXTRACTED]
+- [[main()_11]] - `contains` [EXTRACTED]
 - [[relevance_dashboard.py]] - `imports_from` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports_from` [EXTRACTED]
@@ -33,4 +33,4 @@ tags:
 - [[topic_sentence_export.py]] - `imports_from` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy

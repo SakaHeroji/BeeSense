@@ -1,25 +1,23 @@
 ---
 type: community
-cohesion: 0.24
-members: 10
+cohesion: 0.25
+members: 8
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.24 - loosely connected
-**Members:** 10 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 8 nodes
 
 ## Members
-- [[Combined Crawler Environment]] - document - requirements/crawler.txt
-- [[General NLP Environment]] - document - requirements/nlp.txt
-- [[Gensim Coherence Environment]] - document - requirements/coherence.txt
-- [[Instagram Chrome Worker Environment]] - document - requirements/instagram-browser.txt
-- [[Instaloader 4.16 Environment]] - document - requirements/instaloader.txt
-- [[Isolated Reddrix Environment]] - document - requirements/reddrix.txt
-- [[Native SBERT Training Environment]] - document - requirements/sbert.txt
-- [[Offline Regression and Crawler Environment]] - document - requirements/dev.txt
-- [[Selenium 4.51.0 Environment]] - document - requirements/selenium.txt
-- [[Selenium Rendered DOM]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Baseline identity exclusion]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
+- [[Native X identity]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Social campaign 29 October 2026]] - concept - docs/crawler/SOCIAL_CRAWLER.md
+- [[Social crawler guide]] - document - docs/crawler/SOCIAL_CRAWLER.md
+- [[Twitter crawler guide]] - document - docs/crawler/TWITTER_CRAWLER.md
+- [[Verified conversation root provenance]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[merge_social_datasets]] - code - docs/crawler/TWITTER_CRAWLER.md
+- [[native_roots.json]] - document - docs/crawler/TWITTER_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,7 +27,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
 
 ## Top bridge nodes
-- [[Selenium Rendered DOM]] - degree 2, connects to 1 community
+- [[Social campaign 29 October 2026]] - degree 3, connects to 1 community
+- [[Social crawler guide]] - degree 3, connects to 1 community
+- [[Native X identity]] - degree 3, connects to 1 community
+- [[Twitter crawler guide]] - degree 3, connects to 1 community
+- [[Baseline identity exclusion]] - degree 2, connects to 1 community

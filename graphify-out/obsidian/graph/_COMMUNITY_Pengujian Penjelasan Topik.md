@@ -38,7 +38,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 1 edge to [[_COMMUNITY_topic_sentence_export.py]]
 
 ## Top bridge nodes
 - [[test_topic_explanations.py]] - degree 5, connects to 2 communities

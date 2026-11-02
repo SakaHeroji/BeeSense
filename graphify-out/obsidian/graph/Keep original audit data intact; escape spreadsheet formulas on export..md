@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: "app.py"
+community: "Penyaringan Relevansi dan Narasi Topik"
 location: "L65"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/apppy
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # Keep original audit data intact; escape spreadsheet formulas on export.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[relevance_csv()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/apppy
+#graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

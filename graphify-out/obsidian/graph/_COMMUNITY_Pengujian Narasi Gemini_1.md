@@ -1,17 +1,18 @@
 ---
 type: community
-cohesion: 0.31
-members: 13
+cohesion: 0.27
+members: 14
 ---
 
 # Pengujian Narasi Gemini
 
-**Cohesion:** 0.31 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 0.27 - loosely connected
+**Members:** 14 nodes
 
 ## Members
 - [[.generate()]] - code - tests/nlp/test_topic_narratives.py
-- [[.setUp()_16]] - code - tests/nlp/test_topic_narratives.py
+- [[.setUp()_15]] - code - tests/nlp/test_topic_narratives.py
+- [[.setUpClass()_3]] - code - tests/nlp/test_topic_narratives.py
 - [[.tearDown()_2]] - code - tests/nlp/test_topic_narratives.py
 - [[.test_changed_representative_sentence_invalidates_cache_and_tampering_fails()]] - code - tests/nlp/test_topic_narratives.py
 - [[.test_credentials_stay_out_of_configuration_and_gate_precedes_api()]] - code - tests/nlp/test_topic_narratives.py
@@ -33,10 +34,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 3 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 
 ## Top bridge nodes
 - [[GeminiTests]] - degree 12, connects to 2 communities
+- [[.setUpClass()_3]] - degree 3, connects to 2 communities
 - [[topic()]] - degree 7, connects to 1 community
 - [[response()_2]] - degree 6, connects to 1 community
 - [[.test_credentials_stay_out_of_configuration_and_gate_precedes_api()]] - degree 3, connects to 1 community

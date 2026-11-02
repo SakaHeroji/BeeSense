@@ -15,8 +15,6 @@ tags:
 - [[BeeSense]] - `references` [EXTRACTED]
 - [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
 - [[Dashboard BeeSense]] - `references` [EXTRACTED]
-- [[Explicit relevance_artifact opt-in]] - `conceptually_related_to` [EXTRACTED]
-- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp (Dashboardapp.py)]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

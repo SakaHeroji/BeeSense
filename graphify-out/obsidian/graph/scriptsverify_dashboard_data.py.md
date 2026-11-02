@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "code"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # scripts/verify_dashboard_data.py
@@ -13,8 +13,7 @@ tags:
 ## Connections
 - [[BeeSense]] - `references` [EXTRACTED]
 - [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
-- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 - [[Publication allowlist, checksums, and Git index]] - `rationale_for` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

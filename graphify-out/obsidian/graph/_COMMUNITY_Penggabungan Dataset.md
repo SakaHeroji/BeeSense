@@ -11,7 +11,7 @@ members: 57
 
 ## Members
 - [[.run_merge()]] - code - tests/nlp/test_dataset_merge.py
-- [[.setUp()_12]] - code - tests/nlp/test_dataset_merge.py
+- [[.setUp()_11]] - code - tests/nlp/test_dataset_merge.py
 - [[.source()]] - code - tests/nlp/test_dataset_merge.py
 - [[.test_instagram_comment_identity_conflict_and_fake_host_are_rejected()]] - code - tests/nlp/test_dataset_merge.py
 - [[.test_instagram_latest_record_wins_without_removing_equal_text_distinct_ids()]] - code - tests/nlp/test_dataset_merge.py
@@ -76,11 +76,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 5 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
 - 1 edge to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 1 edge to [[_COMMUNITY_topic_sentence_export.py]]
+- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
 
 ## Top bridge nodes
 - [[Active20-topic Instagram-inclusive model configuration]] - degree 11, connects to 2 communities

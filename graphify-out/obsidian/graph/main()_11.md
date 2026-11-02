@@ -1,20 +1,26 @@
 ---
-source_file: "Dashboard/app.py"
+source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "app.py"
-location: "L2401"
+community: "Encoding dan Penyimpanan Model"
+location: "L2596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apppy
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # main()
 
 ## Connections
-- [[.render()_1]] - `calls` [EXTRACTED]
-- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
-- [[app.py]] - `contains` [EXTRACTED]
-- [[streamlit_apps.py]] - `imports` [EXTRACTED]
+- [[._event()_1]] - `calls` [EXTRACTED]
+- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
+- [[.explain_artifacts()]] - `calls` [EXTRACTED]
+- [[.fit_excel()]] - `calls` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[.prepare_excel()]] - `calls` [EXTRACTED]
+- [[.save()]] - `calls` [EXTRACTED]
+- [[.save_explanations()]] - `calls` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `calls` [EXTRACTED]
+- [[social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apppy
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

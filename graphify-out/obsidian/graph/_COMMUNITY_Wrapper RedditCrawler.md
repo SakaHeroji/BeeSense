@@ -39,18 +39,18 @@ SORT file.name ASC
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
 - 5 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 3 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_1]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_3]]
 - 1 edge to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[RedditCrawler]] - degree 21, connects to 6 communities
+- [[RedditCrawler]] - degree 21, connects to 5 communities
 - [[RedditCrawlerTests]] - degree 21, connects to 5 communities
 - [[reddit_crawler.py]] - degree 6, connects to 3 communities
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - degree 3, connects to 1 community

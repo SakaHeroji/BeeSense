@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.make()]] - `method` [EXTRACTED]
 - [[.predictor()]] - `method` [EXTRACTED]
-- [[.setUp()_13]] - `method` [EXTRACTED]
+- [[.setUp()_12]] - `method` [EXTRACTED]
 - [[.snapshot()]] - `method` [EXTRACTED]
 - [[.tearDown()_1]] - `method` [EXTRACTED]
 - [[.test_audit_csv_escapes_formulas_without_changing_stored_text()]] - `method` [EXTRACTED]

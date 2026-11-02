@@ -12,7 +12,7 @@ tags:
 # ContextRelevanceFilter
 
 ## Connections
-- [[.__init__()_38]] - `method` [EXTRACTED]
+- [[.__init__()_37]] - `method` [EXTRACTED]
 - [[._scores()]] - `method` [EXTRACTED]
 - [[._validate()]] - `method` [EXTRACTED]
 - [[.build_units()]] - `method` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[SocialNLPClusterer_2]] - `uses` [INFERRED]
 - [[context_relevance.py]] - `contains` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports` [EXTRACTED]
-- [[main()_13]] - `calls` [EXTRACTED]
+- [[main()_12]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `imports` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]

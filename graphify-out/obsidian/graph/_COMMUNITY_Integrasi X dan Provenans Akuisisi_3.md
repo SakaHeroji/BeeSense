@@ -31,8 +31,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_6]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_5]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
 - 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 
 ## Top bridge nodes

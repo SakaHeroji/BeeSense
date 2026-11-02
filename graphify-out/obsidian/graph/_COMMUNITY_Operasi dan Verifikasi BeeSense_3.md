@@ -10,11 +10,11 @@ members: 5
 **Members:** 5 nodes
 
 ## Members
-- [[Gemini 3.5 Flash Lite]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Narrative CSV schema compatibility]] - rationale - graphify-out/obsidian/Topik Gemini.md
-- [[Narrative evidence validation]] - rationale - graphify-out/obsidian/Topik Gemini.md
-- [[beesense-topic-id2]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[topic_narratives.csv]] - document - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Candidate scoring and selection]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Coherence c_v evaluation protocol]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Gensim CoherenceModel reference]] - document - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Historical baseline coherence snapshots]] - concept - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Twenty topic mean coherence publication gate]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -24,11 +24,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 
 ## Top bridge nodes
-- [[Gemini 3.5 Flash Lite]] - degree 5, connects to 3 communities
-- [[topic_narratives.csv]] - degree 5, connects to 1 community
+- [[Coherence c_v evaluation protocol]] - degree 5, connects to 1 community
+- [[Twenty topic mean coherence publication gate]] - degree 3, connects to 1 community

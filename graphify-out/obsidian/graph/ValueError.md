@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Akuisisi YouTube"
+community: "Kontrak Record Reddit"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # ValueError
@@ -73,4 +73,4 @@ tags:
 - [[verify_descriptor()_1]] - `calls` [INFERRED]
 - [[video_url()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Akuisisi_YouTube
+#graphify/code #graphify/INFERRED #community/Kontrak_Record_Reddit

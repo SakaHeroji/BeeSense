@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
-- [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)]] - `references` [EXTRACTED]
 - [[Overflow-window sentence encoding]] - `implements` [EXTRACTED]
 - [[Relevansi Konteks — 2 November 2026]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - `implements` [EXTRACTED]

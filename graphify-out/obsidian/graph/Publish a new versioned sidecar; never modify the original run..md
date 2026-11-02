@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "topic_sentence_export.py"
+community: "Encoding dan Penyimpanan Model"
 location: "L2185"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Publish a new versioned sidecar; never modify the original run.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.save_explanations()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

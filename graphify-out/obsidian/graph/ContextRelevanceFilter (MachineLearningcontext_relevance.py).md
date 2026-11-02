@@ -11,11 +11,11 @@ tags:
 # ContextRelevanceFilter (MachineLearning/context_relevance.py)
 
 ## Connections
+- [[Cara kerja BeeSense]] - `references` [EXTRACTED]
 - [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)]] - `references` [EXTRACTED]
-- [[Only relevant decisions enter clustering]] - `rationale_for` [EXTRACTED]
 - [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 - [[Relevansi Konteks — 2 November 2026]] - `references` [EXTRACTED]
-- [[Verified native root and parent context]] - `rationale_for` [EXTRACTED]
-- [[outputsrelevance_20261102_01]] - `shares_data_with` [EXTRACTED]
+- [[Verified native conversation context]] - `rationale_for` [EXTRACTED]
+- [[scriptsfilter_context_relevance.py]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

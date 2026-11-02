@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.07
-members: 54
+cohesion: 0.10
+members: 39
 ---
 
 # Koordinator Backend Sosial
 
-**Cohesion:** 0.07 - loosely connected
-**Members:** 54 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 39 nodes
 
 ## Members
 - [[.__init__()_30]] - code - tests/crawler/test_social_crawler.py
@@ -16,18 +16,11 @@ members: 54
 - [[._dom_events()]] - code - Crawler/Backend/social_crawler.py
 - [[._event()]] - code - Crawler/Backend/social_crawler.py
 - [[._execute()_1]] - code - Crawler/Backend/social_crawler.py
-- [[._existing_posts()]] - code - Crawler/Backend/social_crawler.py
 - [[._legacy_settings()_1]] - code - Crawler/Backend/social_crawler.py
-- [[._normalize()_1]] - code - Crawler/Backend/social_crawler.py
 - [[._pace()]] - code - Crawler/Backend/social_crawler.py
-- [[._source_metadata()_1]] - code - Crawler/Backend/social_crawler.py
 - [[._wait_for_captcha()]] - code - Crawler/Backend/social_crawler.py
 - [[.clock()_1]] - code - tests/crawler/test_social_crawler.py
-- [[.export_compact()]] - code - Crawler/Backend/social_crawler.py
-- [[.plan()_4]] - code - Crawler/Backend/social_crawler.py
-- [[.run()_3]] - code - Crawler/Backend/social_crawler.py
 - [[.setUp()_6]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[.setUp()_7]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[.setUp()_5]] - code - tests/crawler/test_social_crawler.py
 - [[.sleep()_1]] - code - tests/crawler/test_social_crawler.py
 - [[.test_calendar_month_boundary_date_only_and_unrecognized_dates()]] - code - tests/crawler/test_social_crawler.py
@@ -53,17 +46,9 @@ members: 54
 - [[.worker()]] - code - tests/crawler/test_instagram_crawler.py
 - [[Clock_1]] - code - tests/crawler/test_social_crawler.py
 - [[Compose platform workers with one configuration, scheduler and export bundle.]] - rationale - Crawler/Backend/social_crawler.py
-- [[Describe the acquisition backend independently of the shared export.]] - rationale - Crawler/Backend/social_crawler.py
-- [[Exercise Instagram through the combined coordinator, without network access.]] - rationale - tests/crawler/test_social_crawler_instagram.py
 - [[InstagramIntegrationTests]] - code - tests/crawler/test_social_crawler_instagram.py
-- [[Re-export saved Contents without network or modifying the source bundle.]] - rationale - Crawler/Backend/social_crawler.py
-- [[Read roots and all global X IDs; never alter historical workbooks.]] - rationale - Crawler/Backend/social_crawler.py
-- [[Return an explicit targetshortfall report and write one atomic bundle.]] - rationale - Crawler/Backend/social_crawler.py
 - [[SocialCrawler]] - code - Crawler/Backend/social_crawler.py
 - [[SocialExportMixin_2]] - code
-- [[Validate and return the effective plan without browsernetwork access.]] - rationale - Crawler/Backend/social_crawler.py
-- [[main()_8]] - code - Crawler/Backend/social_crawler.py
-- [[test_social_crawler_instagram.py]] - code - tests/crawler/test_social_crawler_instagram.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -73,28 +58,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 14 edges to [[_COMMUNITY_Worker Reddrix]]
-- 12 edges to [[_COMMUNITY_Pengujian Client Instagram]]
+- 15 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
+- 12 edges to [[_COMMUNITY_Worker Reddrix]]
+- 10 edges to [[_COMMUNITY_Pengujian Client Instagram]]
 - 9 edges to [[_COMMUNITY_Crawler Selenium]]
-- 9 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 8 edges to [[_COMMUNITY_Koordinator Backend Sosial_1]]
 - 8 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
 - 7 edges to [[_COMMUNITY_Worker Instaloader]]
 - 5 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
+- 5 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 2 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
-- 2 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit_3]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_7]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
-- 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard_1]]
 - 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_5]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
+- 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
 
 ## Top bridge nodes
-- [[SocialCrawler]] - degree 97, connects to 16 communities
-- [[test_social_crawler_instagram.py]] - degree 13, connects to 4 communities
+- [[SocialCrawler]] - degree 97, connects to 18 communities
+- [[Clock_1]] - degree 18, connects to 3 communities
 - [[InstagramIntegrationTests]] - degree 21, connects to 2 communities
-- [[Clock_1]] - degree 18, connects to 2 communities
 - [[.worker()]] - degree 11, connects to 1 community
+- [[.test_instaloader_is_default_and_owns_one_persistent_worker()]] - degree 4, connects to 1 community

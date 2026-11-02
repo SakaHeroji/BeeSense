@@ -1,18 +1,17 @@
 ---
 source_file: "docs/machine-learning/CONTEXT_RELEVANCE.md"
 type: "rationale"
-community: "Panduan Pipeline BeeSense"
+community: "Penyaringan Relevansi dan Narasi Topik"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # Explicit relevance_artifact opt-in
 
 ## Connections
 - [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - `rationale_for` [EXTRACTED]
-- [[configsocial_nlp.json]] - `conceptually_related_to` [EXTRACTED]
+- [[beesense-context-relevance1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

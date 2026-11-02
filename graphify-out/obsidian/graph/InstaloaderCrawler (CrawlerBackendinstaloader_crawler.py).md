@@ -1,19 +1,18 @@
 ---
 source_file: "README.md"
 type: "code"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # InstaloaderCrawler (Crawler/Backend/instaloader_crawler.py)
 
 ## Connections
-- [[BeeSense_1]] - `references` [EXTRACTED]
 - [[BeeSense]] - `references` [EXTRACTED]
 - [[InstagramCrawler_1]] - `conceptually_related_to` [EXTRACTED]
 - [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

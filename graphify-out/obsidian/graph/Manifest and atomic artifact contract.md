@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
-- [[Immutable narrative enrichment]] - `semantically_similar_to` [INFERRED]
 - [[beesense-sentence-clusters2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

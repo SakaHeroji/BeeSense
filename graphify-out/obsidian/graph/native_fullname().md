@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parsing Identitas Reddit"
+community: "Kontrak Record Reddit"
 location: "L507"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # native_fullname()
@@ -18,4 +18,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[object_key()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

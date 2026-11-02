@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.17
-members: 16
+cohesion: 0.24
+members: 12
 ---
 
 # app.py
 
-**Cohesion:** 0.17 - loosely connected
-**Members:** 16 nodes
+**Cohesion:** 0.24 - loosely connected
+**Members:** 12 nodes
 
 ## Members
 - [[._css()]] - code - Dashboard/app.py
@@ -20,12 +20,8 @@ members: 16
 - [[._topic_option()]] - code - Dashboard/app.py
 - [[._topic_selector()]] - code - Dashboard/app.py
 - [[.render()_1]] - code - Dashboard/app.py
-- [[.topic_figure()]] - code - Dashboard/app.py
 - [[.topic_summary()]] - code - Dashboard/app.py
-- [[Bounded topic graph volume from filtered rows, semantic edges from the full mod]] - rationale - Dashboard/app.py
 - [[Count sentence occurrences; never confuse them with distinct comments.]] - rationale - Dashboard/app.py
-- [[Keep the full-model layout stable while volume and edge filters change.]] - rationale - Dashboard/app.py
-- [[_graph_positions()]] - code - Dashboard/app.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -35,15 +31,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_thread_url]]
+- 12 edges to [[_COMMUNITY_thread_url]]
 - 10 edges to [[_COMMUNITY_Render Dashboard Streamlit]]
-- 5 edges to [[_COMMUNITY_app.py]]
-- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 3 edges to [[_COMMUNITY_app.py]]
+- 2 edges to [[_COMMUNITY_thread_url_1]]
 
 ## Top bridge nodes
-- [[.render()_1]] - degree 17, connects to 4 communities
-- [[.topic_figure()]] - degree 6, connects to 3 communities
-- [[._network()]] - degree 6, connects to 2 communities
+- [[.render()_1]] - degree 16, connects to 4 communities
+- [[._network()]] - degree 6, connects to 3 communities
 - [[._topic_option()]] - degree 6, connects to 2 communities
 - [[._selected_context()]] - degree 5, connects to 2 communities
+- [[.topic_summary()]] - degree 5, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/import_public_web_sections.py"
 type: "code"
-community: "Parsing Identitas Reddit"
+community: "Kontrak Record Reddit"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # import_sections()
@@ -18,4 +18,4 @@ tags:
 - [[thread_id()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

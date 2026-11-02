@@ -1,8 +1,8 @@
 ---
-source_file: "scripts/relevance_dashboard.py"
+source_file: "scripts/verify_dashboard_data.py"
 type: "code"
 community: "Pengujian Narasi Gemini"
-location: "L12"
+location: "L274"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
+- [[verify()_1]] - `calls` [EXTRACTED]
+- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

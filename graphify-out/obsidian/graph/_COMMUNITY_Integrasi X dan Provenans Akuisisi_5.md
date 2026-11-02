@@ -30,7 +30,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense]]
 
 ## Top bridge nodes
 - [[Verified Twitter acquisition 2 November 2026]] - degree 8, connects to 1 community

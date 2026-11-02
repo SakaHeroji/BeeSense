@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # BeeSense
@@ -13,7 +13,6 @@ tags:
 ## Connections
 - [[Active outputsnlp_20261102_relevance_topics20_gemini_02]] - `references` [EXTRACTED]
 - [[Apache Arrow issue 50471]] - `cites` [EXTRACTED]
-- [[BeeSense_1]] - `references` [EXTRACTED]
 - [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
 - [[CrawlerBackendsocial_crawler_selenium.py]] - `references` [EXTRACTED]
 - [[Dashboard BeeSense]] - `references` [EXTRACTED]
@@ -40,4 +39,4 @@ tags:
 - [[scriptsverify_dashboard_data.py]] - `references` [EXTRACTED]
 - [[streamlit_apps.py_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

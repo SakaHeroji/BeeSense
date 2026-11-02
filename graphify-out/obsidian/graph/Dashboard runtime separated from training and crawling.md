@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "rationale"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Dashboard runtime separated from training and crawling
@@ -17,4 +17,4 @@ tags:
 - [[Streamlit Community Cloud release target]] - `rationale_for` [EXTRACTED]
 - [[dashboard-runtime CI]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

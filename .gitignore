@@ -397,3 +397,5 @@ outputs/nlp_20261102_relevance_topics20_gemini_02/*
 !outputs/nlp_20261102_relevance_topics20_gemini_02/topic_narratives.csv
 !outputs/nlp_20261102_relevance_topics20_gemini_02/topics.json
 !outputs/nlp_20261102_relevance_topics20_gemini_02/umap_embeddings.npz
+
+!graphify-out/obsidian/Peta Cara Kerja BeeSense.md

@@ -1,11 +1,11 @@
 ---
 source_file: "README.md"
 type: "code"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # SocialCrawler (Crawler/Backend/social_crawler.py)
@@ -20,4 +20,4 @@ tags:
 - [[TwitterCoordinatorWorker_2]] - `references` [EXTRACTED]
 - [[TwitterCrawler (Scweet 5.8.2)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
