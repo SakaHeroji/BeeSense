@@ -1,23 +1,21 @@
 ---
 type: community
-cohesion: 0.25
-members: 8
+cohesion: 0.33
+members: 6
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.25 - loosely connected
-**Members:** 8 nodes
+**Cohesion:** 0.33 - loosely connected
+**Members:** 6 nodes
 
 ## Members
-- [[1.800 detik target 1.000 post 10 balasan]] - concept - config/twitter_crawler.json
-- [[Allowlist Docker tanpa auth dan sesi]] - rationale - deployment/docker/Dockerfile.twitter.dockerignore
-- [[Image Twitter Python 3.12 UID 10001]] - concept - deployment/docker/Dockerfile.twitter
-- [[Jeda 5 dan 15 detik limiter window per operasi dan cap harian 120]] - concept - config/twitter_crawler.json
-- [[Preset percobaan Twitter 30 menit]] - concept - config/twitter_crawler.json
-- [[Query pendidikan Indonesia jendela tujuh hari]] - concept - config/twitter_crawler.json
-- [[Scweet 5.8.2]] - concept - requirements/twitter.txt
-- [[openpyxl 3.1.5]] - concept - requirements/twitter.txt
+- [[2 November 2026 pipeline integration]] - concept - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[31 October 2026 historical evidence]] - concept - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[SocialNLPClusterer]] - code - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[TwitterCrawler Scweet architecture]] - document - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[Workbook bound root sidecar]] - rationale - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[thread_root_key]] - concept - graphify-out/obsidian/TwitterCrawler Scweet.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,3 +23,9 @@ members: 8
 TABLE source_file, type FROM #community/Integrasi_X_dan_Provenans_Akuisisi
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
+
+## Top bridge nodes
+- [[SocialNLPClusterer]] - degree 3, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Bukti Ekstraktif Topik"
-location: "L1812"
+community: "Model dan Pengujian NLP"
+location: "L1877"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bukti_Ekstraktif_Topik
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # Evidence-grounded topic descriptions and descriptive, source-aware trends.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.explain_topics()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bukti_Ekstraktif_Topik
+#graphify/rationale #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

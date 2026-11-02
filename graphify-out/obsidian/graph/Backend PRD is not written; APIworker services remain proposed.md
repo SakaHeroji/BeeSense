@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Backend/README.md"
 type: "document"
-community: "Rencana Layanan Backend"
+community: "Rencana Produk dan Survei"
 location: "# PRD Backend"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Rencana_Layanan_Backend
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Backend PRD is not written; API/worker services remain proposed
@@ -19,4 +19,4 @@ tags:
 - [[Proposed server session, role, project isolation and idempotency]] - `references` [EXTRACTED]
 - [[Proposed survey transactions, immutable datasets and operational audit]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rencana_Layanan_Backend
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

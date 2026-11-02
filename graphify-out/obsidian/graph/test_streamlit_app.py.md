@@ -12,7 +12,7 @@ tags:
 # test_streamlit_app.py
 
 ## Connections
-- [[SocialNLPClusterer]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
 - [[StreamlitTests]] - `contains` [EXTRACTED]
 - [[encoder()]] - `imports` [EXTRACTED]
 - [[fixture()]] - `imports` [EXTRACTED]

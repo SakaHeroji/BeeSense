@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "document"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "L7-L15"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Reorganized BeeSense package and supporting-file structure
@@ -19,4 +19,4 @@ tags:
 - [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - `references` [EXTRACTED]
 - [[Root streamlit_apps.py delegates to Dashboard.app]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/document #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

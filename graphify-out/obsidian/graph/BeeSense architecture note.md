@@ -11,8 +11,7 @@ tags:
 # BeeSense architecture note
 
 ## Connections
-- [[Current November 2 snapshot pointer]] - `references` [EXTRACTED]
 - [[Extracted evidence and inferred cosine edges]] - `references` [EXTRACTED]
-- [[SocialNLPStreamlitApp_2]] - `references` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

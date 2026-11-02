@@ -11,10 +11,10 @@ tags:
 # Gemini 3.5 Flash Lite
 
 ## Connections
-- [[SocialNLPClusterer_3]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 - [[Topik Gemini note]] - `references` [EXTRACTED]
 - [[beesense-topic-id2]] - `references` [EXTRACTED]
-- [[topic_narratives.csv_1]] - `shares_data_with` [EXTRACTED]
+- [[topic_narratives.csv]] - `shares_data_with` [EXTRACTED]
 - [[topic_narratives.py_1]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

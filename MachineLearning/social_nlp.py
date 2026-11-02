@@ -27,7 +27,8 @@ else:
     import topic_narratives
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "2.5.0"
+VERSION = "2.6.0"
+RELEVANCE_EXTENSION = "beesense-context-relevance:1"
 TOPIC_SENTENCES_EXTENSION = "beesense-topic-sentences-excel:1"
 TOPIC_SENTENCES_FILE = "topic_sentences.xlsx"
 DEFAULT_TARGET_TOPICS = 20
@@ -86,8 +87,13 @@ class SocialNLPClusterer:
         base.setdefault("coherence", {"metric": "c_v", "topn": 10, "window_size": 110})
         base["coherence"].setdefault("min_score", DEFAULT_MIN_COHERENCE_CV)
         base.setdefault("gemini", deepcopy(topic_narratives.DEFAULTS))
+        base.setdefault("relevance_artifact", None)
         if isinstance(config, (str, Path)):
             config = json.loads(Path(config).read_text())
+        # Saved decisions belong to one corpus. Explicit configurations must
+        # opt into them instead of inheriting the repository's active mask.
+        if isinstance(config, dict) and "relevance_artifact" not in config:
+            base["relevance_artifact"] = None
         if config:
             if not isinstance(config, dict) or set(config) - set(base):
                 raise ValueError("Unknown NLP configuration fields")
@@ -112,6 +118,11 @@ class SocialNLPClusterer:
 
     def _validate_config(self):
         c = self.config
+        if c["relevance_artifact"] is not None and (
+            not isinstance(c["relevance_artifact"], str)
+            or not c["relevance_artifact"].strip()
+        ):
+            raise ValueError("relevance_artifact must be a directory path or null")
         for key in (
             "seed",
             "min_words",
@@ -414,10 +425,53 @@ class SocialNLPClusterer:
             "included_kinds": self.config["include_kinds"],
             "source_timezone": "Asia/Jakarta",
         }
+        if self.config["relevance_artifact"]:
+            self._apply_context_relevance()
+            unique = self.sentences
         if len(unique) < 12:
             raise ValueError("At least 12 informative unique sentences are required")
         self._event("prepared", **self.preparation)
         return self
+
+    def _apply_context_relevance(self):
+        from MachineLearning.context_relevance import ContextRelevanceFilter
+
+        directory = Path(self.config["relevance_artifact"])
+        directory = directory if directory.is_absolute() else ROOT / directory
+        decisions, report = ContextRelevanceFilter.load_decisions(
+            directory, self.input_sha256, self.occurrences.occurrence_id
+        )
+        merged = self.occurrences.merge(
+            decisions[["occurrence_id", "sentence_id", "source_row"]],
+            on="occurrence_id",
+            suffixes=("", "_audit"),
+            validate="one_to_one",
+        )
+        if any(
+            not merged[column].equals(merged[column + "_audit"])
+            for column in ("sentence_id", "source_row")
+        ):
+            raise ValueError(
+                "Relevance sentence provenance differs from prepared input"
+            )
+        keep = set(decisions.loc[decisions.decision == "relevant", "occurrence_id"])
+        self.occurrences = self.occurrences[
+            self.occurrences.occurrence_id.isin(keep)
+        ].reset_index(drop=True)
+        self.sentences = self.sentences[
+            self.sentences.sentence_id.isin(self.occurrences.sentence_id)
+        ].reset_index(drop=True)
+        self.relevance_decisions, self.relevance_report = decisions, report
+        self.preparation.update(
+            sentence_occurrences=len(self.occurrences),
+            unique_sentences=len(self.sentences),
+            duplicate_occurrences=len(self.occurrences) - len(self.sentences),
+            relevance_input_occurrences=report["total_occurrences"],
+            relevance_excluded_occurrences=report["total_occurrences"]
+            - len(self.occurrences),
+            relevance_retained_source_rows=int(self.occurrences.source_row.nunique()),
+        )
+        self._event("context_relevance_applied", **self.preparation)
 
     def _encode_sbert(self, texts):
         import torch
@@ -517,10 +571,20 @@ class SocialNLPClusterer:
             raise ValueError("Embedding source workbook differs from the current input")
         if summary["config"]["model"] != self.config["model"]:
             raise ValueError("Embedding model configuration differs from the saved run")
+        indices = list(range(len(data["sentences"])))
+        if self.config["relevance_artifact"]:
+            saved = data["sentences"].set_index("sentence_id", drop=False)
+            if not set(self.sentences.sentence_id) <= set(saved.index):
+                raise ValueError(
+                    "Filtered sentences are not a subset of saved embeddings"
+                )
+            positions = {sid: i for i, sid in enumerate(data["sentences"].sentence_id)}
+            indices = [positions[sid] for sid in self.sentences.sentence_id]
+        matched = data["sentences"].iloc[indices]
         for column in ("sentence_id", "embedding_text"):
-            if data["sentences"][column].tolist() != self.sentences[column].tolist():
+            if matched[column].tolist() != self.sentences[column].tolist():
                 raise ValueError("Prepared sentences differ from the embedding source")
-        vectors = data["embeddings"]
+        vectors = data["embeddings"][indices]
         if (
             vectors.ndim != 2
             or not np.isfinite(vectors).all()
@@ -528,11 +592,12 @@ class SocialNLPClusterer:
         ):
             raise ValueError("Saved SBERT embeddings must be finite and L2 normalized")
         self.embeddings = vectors.copy()
-        self.window_counts = data["sentences"]["embedding_windows"].astype(int).tolist()
+        self.window_counts = matched["embedding_windows"].astype(int).tolist()
         self.model_info = deepcopy(summary["model"])
         self.model_info.update(
             reused_from=str(directory),
             reused_manifest_sha256=data["artifact_manifest_sha256"],
+            reused_verified_subset=bool(self.config["relevance_artifact"]),
         )
         self._event("embeddings_reused", **self.model_info)
         return self
@@ -2268,6 +2333,11 @@ class SocialNLPClusterer:
             self.sentences.to_parquet(stage / "sentences.parquet", index=False)
             self.occurrences.to_parquet(stage / "occurrences.parquet", index=False)
             self.skipped.to_parquet(stage / "skipped.parquet", index=False)
+            if hasattr(self, "relevance_report"):
+                self.relevance_decisions.to_parquet(
+                    stage / "relevance_decisions.parquet", index=False
+                )
+                json_write(stage / "relevance_report.json", self.relevance_report)
             np.save(stage / "embeddings.npy", self.embeddings, allow_pickle=False)
             np.savez_compressed(
                 stage / "umap_embeddings.npz",
@@ -2326,6 +2396,7 @@ class SocialNLPClusterer:
                 "reduction": self.reduction_info,
                 "topic_reduction": getattr(self, "topic_reduction", None),
                 "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
+                "context_relevance": getattr(self, "relevance_report", None),
                 "topic_narratives": {
                     "enabled": self.config["gemini"]["enabled"],
                     "model": self.config["gemini"]["model"],
@@ -2343,9 +2414,18 @@ class SocialNLPClusterer:
                 stage / "manifest.json",
                 {
                     "schema_version": SCHEMA_VERSION,
-                    "extensions": [topic_narratives.EXTENSION]
-                    if self.config["gemini"]["enabled"]
-                    else [],
+                    "extensions": (
+                        (
+                            [topic_narratives.EXTENSION]
+                            if self.config["gemini"]["enabled"]
+                            else []
+                        )
+                        + (
+                            [RELEVANCE_EXTENSION]
+                            if hasattr(self, "relevance_report")
+                            else []
+                        )
+                    ),
                     "files_sha256": {
                         p.name: file_hash(p) for p in stage.iterdir() if p.is_file()
                     },
@@ -2386,7 +2466,9 @@ class SocialNLPClusterer:
         if not isinstance(extensions, list) or len(extensions) != len(set(extensions)):
             raise ValueError("Unsupported NLP artifact extension")
         narrative_extensions = [
-            item for item in extensions if item != TOPIC_SENTENCES_EXTENSION
+            item
+            for item in extensions
+            if item not in {TOPIC_SENTENCES_EXTENSION, RELEVANCE_EXTENSION}
         ]
         if narrative_extensions not in (
             [],
@@ -2398,6 +2480,8 @@ class SocialNLPClusterer:
             required.add(topic_narratives.CSV_NAME)
         if TOPIC_SENTENCES_EXTENSION in extensions:
             required.add(TOPIC_SENTENCES_FILE)
+        if RELEVANCE_EXTENSION in extensions:
+            required.update({"relevance_decisions.parquet", "relevance_report.json"})
         if set(manifest["files_sha256"]) != required:
             raise ValueError("Artifact manifest must cover all required files")
         if verify:
@@ -2410,6 +2494,24 @@ class SocialNLPClusterer:
         }
         for name in ["sentences", "occurrences", "skipped"]:
             result[name] = pd.read_parquet(directory / (name + ".parquet"))
+        relevance = result["summary"].get("context_relevance")
+        if bool(relevance) != (RELEVANCE_EXTENSION in extensions):
+            raise ValueError("Relevance artifact extension and summary disagree")
+        if relevance:
+            report = json.loads((directory / "relevance_report.json").read_text())
+            decisions = pd.read_parquet(directory / "relevance_decisions.parquet")
+            accepted = decisions.loc[decisions.decision == "relevant", "occurrence_id"]
+            if (
+                report != relevance
+                or report["source_sha256"] != result["summary"]["source_sha256"]
+                or decisions.occurrence_id.duplicated().any()
+                or len(decisions) != report["total_occurrences"]
+                or len(accepted) != report["accepted_occurrences"]
+                or set(accepted) != set(result["occurrences"].occurrence_id)
+            ):
+                raise ValueError("Relevance audit differs from the fitted corpus")
+            result["relevance_decisions"] = decisions
+            result["relevance_report"] = report
         enabled = result["summary"].get("topic_narratives", {}).get("enabled", False)
         if bool(narrative_extensions) != enabled:
             raise ValueError("Gemini artifact extension and summary disagree")

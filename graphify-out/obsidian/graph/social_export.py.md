@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # social_export.py
@@ -19,4 +19,4 @@ tags:
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

@@ -12,7 +12,6 @@ tags:
 # top_sentences()
 
 ## Connections
-- [[Deterministic fitted-sentence context ranking]] - `references` [EXTRACTED]
 - [[Up to ten unique fitted sentences, cosine rank descending, stable ID ties.]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
 - [[generate()]] - `calls` [EXTRACTED]

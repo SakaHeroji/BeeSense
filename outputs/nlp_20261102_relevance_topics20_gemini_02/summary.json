@@ -1,0 +1,1299 @@
+{
+  "schema_version": "beesense-sentence-clusters:2",
+  "producer_version": "2.6.0",
+  "created_at": "2026-11-02T06:35:22.208300+00:00",
+  "source_file": "/Users/socs3/Documents/BeeSense/outputs/social_20261102_combined_twitter_01/social_data.xlsx",
+  "source_sha256": "de6caf9b30724cc3d990ce25c81859b895559cd4be28f7ccbf95528613ce5990",
+  "preparation": {
+    "input_rows": 34764,
+    "eligible_source_rows": 32238,
+    "sentence_occurrences": 10496,
+    "unique_sentences": 10380,
+    "duplicate_occurrences": 116,
+    "skipped_segments": 5959,
+    "included_kinds": [
+      "comment",
+      "reply"
+    ],
+    "source_timezone": "Asia/Jakarta",
+    "relevance_input_occurrences": 53332,
+    "relevance_excluded_occurrences": 42836,
+    "relevance_retained_source_rows": 6544
+  },
+  "selected": {
+    "candidate": "sbert_umap_dbscan_eps0.25_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.25,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.8216763005780346,
+    "noise_fraction": 0.17832369942196535,
+    "largest_cluster_fraction": 0.1974440145386329,
+    "silhouette_cosine": 0.049654196947813034,
+    "stability_ari": 0.8118135135457774,
+    "selection_score": 0.35068462958690083,
+    "eligible": true,
+    "seconds": 0.6157513899997866,
+    "silhouette_sample_assigned": 1469,
+    "stability_union_points": 8940,
+    "dbscan_clusters": 66,
+    "alternate_dbscan_clusters": 66,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": 0.4733391691099718,
+    "coherence_status": "passed",
+    "coherence_topics": 20
+  },
+  "model": {
+    "family": "SBERT",
+    "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "backend": "sentence-transformers-pytorch-cpu",
+    "pooling": "SBERT modules; mean of overflow windows then L2",
+    "test_encoder": false,
+    "max_tokens": 128,
+    "stride": 24,
+    "fine_tuned_on_source": false,
+    "cache_hit": false,
+    "dimensions": 384,
+    "long_sentence_windows": 88,
+    "reused_from": "outputs/nlp_20261102_twitter_topics20_gemini_01",
+    "reused_manifest_sha256": "85c5a401f0daeccc45e76222555fcaae297038201bab936767e70da7aff7e0ba",
+    "reused_verified_subset": true
+  },
+  "fit_seconds": 83.83946109399767,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": "3.4.1",
+    "torch": "2.2.2",
+    "transformers": "4.49.0",
+    "tokenizers": "0.21.4",
+    "gensim": "4.4.0"
+  },
+  "config": {
+    "input_file": "outputs/social_20261102_combined_twitter_01/social_data.xlsx",
+    "output_dir": "/Users/socs3/Documents/BeeSense/outputs/nlp_20261102_relevance_topics20_gemini_02",
+    "target_topics": 20,
+    "cache_dir": ".cache/social_nlp",
+    "seed": 42,
+    "include_kinds": [
+      "comment",
+      "reply"
+    ],
+    "min_words": 2,
+    "min_characters": 8,
+    "max_segment_characters": 1200,
+    "max_unique_sentences": 100000,
+    "model": {
+      "backend": "sentence-transformers",
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "max_tokens": 128,
+      "stride": 24,
+      "batch_size": 32,
+      "threads": 4
+    },
+    "dbscan": {
+      "eps": [
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3
+      ],
+      "min_samples": [
+        3,
+        5,
+        10
+      ],
+      "neighborhood_batch_size": 256,
+      "max_neighbor_edges": 8000000
+    },
+    "evaluation": {
+      "sample_size": 1800,
+      "min_coverage": 0.4,
+      "max_largest_cluster": 0.5,
+      "score_tolerance": 0.005
+    },
+    "graph": {
+      "max_nodes": 180,
+      "neighbors": 3,
+      "min_similarity": 0.55
+    },
+    "explanation": {
+      "date_basis": "post_date",
+      "include_estimated_dates": true,
+      "window_months": 3,
+      "min_periods": 6,
+      "min_monthly_comments": 20,
+      "min_topic_comments": 20,
+      "min_window_topic_comments": 5,
+      "min_roots": 3,
+      "dominance_warning_threshold": 0.6,
+      "change_threshold_pp": 2.0,
+      "slope_threshold_pp": 0.25,
+      "kendall_threshold": 0.25,
+      "platform_shift_threshold_pp": 15.0,
+      "min_term_comments": 5,
+      "max_evidence": 3,
+      "mmr_lambda": 0.75
+    },
+    "umap": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0
+    },
+    "coherence": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    },
+    "gemini": {
+      "enabled": true,
+      "model": "gemini-3.5-flash-lite",
+      "auth_file": "config/auth.json",
+      "timeout_seconds": 60,
+      "max_attempts": 3,
+      "request_interval_seconds": 5
+    },
+    "relevance_artifact": "outputs/relevance_20261102_01"
+  },
+  "clusters": 20,
+  "unclustered_unique": 1851,
+  "unclustered_occurrences": 1872,
+  "selection_rule": "0.60*max(cosine_silhouette,0)*coverage + 0.25*max(stability_ARI,0) + 0.15*coverage",
+  "selection_policy": {
+    "highest_composite_score": 0.35068462958690083,
+    "score_tolerance": 0.005,
+    "near_tie_candidates": [
+      "sbert_umap_dbscan_eps0.25_min10"
+    ],
+    "tie_break": "prefer larger cosine silhouette in original embedding space, then stability and coverage",
+    "interpretation": "heuristic operational tolerance, not statistical significance or labeled accuracy",
+    "candidate_family": "SBERT + UMAP + DBSCAN + optional centroid topic merging",
+    "target_topics": 20,
+    "stability_test": "final topic partitions on two seeded UMAP projections, after merging when configured",
+    "coherence_gate": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    },
+    "coherence_search": "descending composite score; all candidates in the best passing score tolerance band are evaluated; lower scores are explicitly marked unevaluated"
+  },
+  "coherence": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4,
+    "macro_mean": 0.4733391691099718,
+    "target_met": true,
+    "topics_total": 20,
+    "topics_evaluated": 20,
+    "topics_below_target": 7,
+    "reference_documents": 10380,
+    "reference_sha256": "96669ffcaf1410dde9513ea99c0344facca623c4d760937847135cb6864bc738",
+    "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+    "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+    "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+    "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+    "gensim_version": "4.4.0",
+    "per_topic": [
+      {
+        "cluster_id": 0,
+        "terms": [
+          "beasiswa",
+          "dapat beasiswa",
+          "dapat",
+          "daftar",
+          "beasiswanya",
+          "daftar beasiswa",
+          "anak",
+          "orang",
+          "mampu",
+          "dapet beasiswa"
+        ],
+        "score": 0.41781938104500915
+      },
+      {
+        "cluster_id": 1,
+        "terms": [
+          "kampus",
+          "kuliah",
+          "mahasiswa",
+          "semester",
+          "universitas",
+          "kalo",
+          "tidak",
+          "sma",
+          "sama",
+          "orang"
+        ],
+        "score": 0.5014910981301676
+      },
+      {
+        "cluster_id": 2,
+        "terms": [
+          "kip",
+          "snbp",
+          "kip kuliah",
+          "snbt",
+          "pendaftaran",
+          "akun",
+          "daftar",
+          "seleksi",
+          "kuliah",
+          "jalur"
+        ],
+        "score": 0.8688250485202857
+      },
+      {
+        "cluster_id": 3,
+        "terms": [
+          "tahun",
+          "umur",
+          "usia",
+          "kip",
+          "pendaftaran",
+          "lulusan",
+          "waktu",
+          "lulus",
+          "buka",
+          "kip kuliah"
+        ],
+        "score": 0.3416124335268343
+      },
+      {
+        "cluster_id": 4,
+        "terms": [
+          "pajak",
+          "uang",
+          "mahal",
+          "biaya",
+          "bayar",
+          "duit",
+          "juta",
+          "ukt",
+          "kaya",
+          "rakyat"
+        ],
+        "score": 0.5132220892278458
+      },
+      {
+        "cluster_id": 5,
+        "terms": [
+          "luar negeri",
+          "luar",
+          "negeri",
+          "bahasa",
+          "kerja",
+          "inggris",
+          "visa",
+          "jerman",
+          "negara",
+          "kuliah luar"
+        ],
+        "score": 0.6271533134263442
+      },
+      {
+        "cluster_id": 6,
+        "terms": [
+          "ijazah",
+          "alumni",
+          "sertifikat",
+          "certificate",
+          "ijazahnya",
+          "sertifikasi",
+          "lulusan",
+          "lulus",
+          "punya",
+          "diploma"
+        ],
+        "score": 0.35972784373850286
+      },
+      {
+        "cluster_id": 7,
+        "terms": [
+          "kerja",
+          "jurusan",
+          "job",
+          "cari",
+          "kuliah",
+          "teknik",
+          "perusahaan",
+          "pekerjaan",
+          "kalo",
+          "sekarang"
+        ],
+        "score": 0.47197336342207363
+      },
+      {
+        "cluster_id": 8,
+        "terms": [
+          "pendidikan",
+          "jurusan",
+          "psikologi",
+          "bootcamp",
+          "kedokteran",
+          "jurusan psikologi",
+          "kuliah",
+          "kualitas",
+          "sekolah",
+          "matematika"
+        ],
+        "score": 0.30052558945507635
+      },
+      {
+        "cluster_id": 9,
+        "terms": [
+          "negara",
+          "rakyat",
+          "bangsa",
+          "kewarganegaraan",
+          "negeri",
+          "penghianat",
+          "warga",
+          "uang",
+          "luar negeri",
+          "warga negara"
+        ],
+        "score": 0.5516472342059433
+      },
+      {
+        "cluster_id": 10,
+        "terms": [
+          "s2",
+          "s1",
+          "s3",
+          "s2 s3",
+          "s1 s2",
+          "lanjut",
+          "lanjut s2",
+          "ambil",
+          "lulus",
+          "lulusan s1"
+        ],
+        "score": 0.4998725233505105
+      },
+      {
+        "cluster_id": 11,
+        "terms": [
+          "indonesia",
+          "rakyat indonesia",
+          "rakyat",
+          "negara",
+          "pendidikan",
+          "universitas",
+          "tidak",
+          "negeri",
+          "luar",
+          "seluruh"
+        ],
+        "score": 0.6267089874036391
+      },
+      {
+        "cluster_id": 12,
+        "terms": [
+          "indo",
+          "jepang",
+          "china",
+          "taiwan",
+          "mandarin",
+          "asia",
+          "kerja",
+          "kuliah",
+          "japan",
+          "bahasa"
+        ],
+        "score": 0.25215425545542275
+      },
+      {
+        "cluster_id": 13,
+        "terms": [
+          "nilai",
+          "mdis",
+          "ugm",
+          "rapor",
+          "tes",
+          "sma",
+          "lulus",
+          "nilai rapor",
+          "jenjang",
+          "ipk"
+        ],
+        "score": 0.29160231548568377
+      },
+      {
+        "cluster_id": 14,
+        "terms": [
+          "skill",
+          "belajar",
+          "orang",
+          "otak",
+          "fokus",
+          "tidak",
+          "susah",
+          "kalo",
+          "lain",
+          "diri"
+        ],
+        "score": 0.4292859128943891
+      },
+      {
+        "cluster_id": 15,
+        "terms": [
+          "lpdp",
+          "beasiswa lpdp",
+          "beasiswa",
+          "penerima",
+          "pejabat",
+          "penerima lpdp",
+          "dapat",
+          "lpdprens",
+          "hai lpdprens",
+          "hai"
+        ],
+        "score": 0.6060929874281643
+      },
+      {
+        "cluster_id": 16,
+        "terms": [
+          "dokumen",
+          "transkrip",
+          "asli",
+          "skripsi",
+          "ijazah",
+          "dokumen asli",
+          "ijazah transkrip",
+          "pdf",
+          "motivation",
+          "jurnal"
+        ],
+        "score": 0.39841748634149854
+      },
+      {
+        "cluster_id": 17,
+        "terms": [
+          "online",
+          "offline",
+          "kelas online",
+          "networking",
+          "kelas",
+          "kuliah online",
+          "koneksi",
+          "binus",
+          "kuliah",
+          "binus online"
+        ],
+        "score": 0.31032167739980493
+      },
+      {
+        "cluster_id": 18,
+        "terms": [
+          "ai",
+          "jurusan",
+          "sama",
+          "sama ai",
+          "tergantikan ai",
+          "tergantikan",
+          "skill",
+          "susah",
+          "kerjaan",
+          "semakin"
+        ],
+        "score": 0.45318490913566034
+      },
+      {
+        "cluster_id": 19,
+        "terms": [
+          "biaya",
+          "gratis",
+          "kuliah",
+          "swasta",
+          "uang",
+          "sekolah",
+          "pendidikan",
+          "biaya kuliah",
+          "bayar",
+          "mahal"
+        ],
+        "score": 0.6451449326065791
+      }
+    ]
+  },
+  "coherence_baseline": null,
+  "evaluation_scope": "Internal comparison on this corpus; no labeled semantic ground truth or universal-best claim",
+  "stability_scope": "Final topic partitions on two seeded UMAP projections, including configured centroid merging; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
+  "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> optional SBERT centroid topic merging -> c-TF-IDF topic descriptions",
+  "reduction": {
+    "algorithm": "UMAP",
+    "parameters": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0,
+      "metric": "cosine",
+      "n_jobs": 1
+    },
+    "seeds": [
+      42,
+      43
+    ],
+    "cache_hit": false,
+    "clustering_metric": "euclidean",
+    "original_dimensions": 384
+  },
+  "topic_reduction": {
+    "method": "sentence_weighted_ward",
+    "embedding_space": "original_normalized_SBERT",
+    "target_topics": 20,
+    "original_topics": 66,
+    "final_topics": 20,
+    "noise_preserved": true,
+    "mapping": {
+      "0": 0,
+      "1": 1,
+      "5": 1,
+      "7": 1,
+      "11": 1,
+      "2": 2,
+      "3": 2,
+      "4": 3,
+      "8": 4,
+      "30": 4,
+      "10": 5,
+      "19": 5,
+      "35": 5,
+      "51": 5,
+      "12": 6,
+      "16": 6,
+      "37": 6,
+      "13": 7,
+      "24": 7,
+      "36": 7,
+      "43": 7,
+      "46": 7,
+      "48": 7,
+      "54": 7,
+      "62": 7,
+      "14": 8,
+      "18": 8,
+      "29": 8,
+      "33": 8,
+      "40": 8,
+      "42": 8,
+      "49": 8,
+      "55": 8,
+      "56": 8,
+      "58": 8,
+      "60": 8,
+      "15": 9,
+      "17": 10,
+      "20": 11,
+      "21": 12,
+      "41": 12,
+      "22": 13,
+      "25": 13,
+      "26": 13,
+      "27": 13,
+      "28": 13,
+      "31": 13,
+      "32": 13,
+      "34": 13,
+      "38": 13,
+      "52": 13,
+      "59": 13,
+      "61": 13,
+      "63": 13,
+      "65": 13,
+      "23": 14,
+      "57": 14,
+      "39": 15,
+      "9": 16,
+      "44": 16,
+      "45": 17,
+      "53": 17,
+      "64": 17,
+      "47": 18,
+      "6": 19,
+      "50": 19
+    },
+    "merges": [
+      {
+        "left": [
+          53
+        ],
+        "right": [
+          64
+        ],
+        "squared_error_increase": 1.0367876574030568
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          6
+        ],
+        "squared_error_increase": 1.1231270346653877
+      },
+      {
+        "left": [
+          65
+        ],
+        "right": [
+          26
+        ],
+        "squared_error_increase": 1.6465457612245102
+      },
+      {
+        "left": [
+          33
+        ],
+        "right": [
+          40
+        ],
+        "squared_error_increase": 1.8952384450019446
+      },
+      {
+        "left": [
+          5
+        ],
+        "right": [
+          11
+        ],
+        "squared_error_increase": 2.046519593358349
+      },
+      {
+        "left": [
+          48
+        ],
+        "right": [
+          62
+        ],
+        "squared_error_increase": 2.3821264019275037
+      },
+      {
+        "left": [
+          58
+        ],
+        "right": [
+          60
+        ],
+        "squared_error_increase": 2.411776331985436
+      },
+      {
+        "left": [
+          18
+        ],
+        "right": [
+          33,
+          40
+        ],
+        "squared_error_increase": 2.5057350840982773
+      },
+      {
+        "left": [
+          34
+        ],
+        "right": [
+          61
+        ],
+        "squared_error_increase": 2.7402733947084585
+      },
+      {
+        "left": [
+          32
+        ],
+        "right": [
+          59
+        ],
+        "squared_error_increase": 3.061875521267479
+      },
+      {
+        "left": [
+          23
+        ],
+        "right": [
+          57
+        ],
+        "squared_error_increase": 3.140122701978301
+      },
+      {
+        "left": [
+          27
+        ],
+        "right": [
+          34,
+          61
+        ],
+        "squared_error_increase": 3.639724569749297
+      },
+      {
+        "left": [
+          10
+        ],
+        "right": [
+          51
+        ],
+        "squared_error_increase": 3.7964088923515082
+      },
+      {
+        "left": [
+          28
+        ],
+        "right": [
+          31
+        ],
+        "squared_error_increase": 3.9980518898407484
+      },
+      {
+        "left": [
+          22
+        ],
+        "right": [
+          26,
+          65
+        ],
+        "squared_error_increase": 4.026632164155027
+      },
+      {
+        "left": [
+          49
+        ],
+        "right": [
+          58,
+          60
+        ],
+        "squared_error_increase": 4.175168106195787
+      },
+      {
+        "left": [
+          32,
+          59
+        ],
+        "right": [
+          52
+        ],
+        "squared_error_increase": 4.289076813650801
+      },
+      {
+        "left": [
+          36
+        ],
+        "right": [
+          48,
+          62
+        ],
+        "squared_error_increase": 4.32439911756813
+      },
+      {
+        "left": [
+          13
+        ],
+        "right": [
+          24
+        ],
+        "squared_error_increase": 4.382124132468776
+      },
+      {
+        "left": [
+          22,
+          26,
+          65
+        ],
+        "right": [
+          25
+        ],
+        "squared_error_increase": 4.387859843112209
+      },
+      {
+        "left": [
+          10,
+          51
+        ],
+        "right": [
+          35
+        ],
+        "squared_error_increase": 4.652514309333429
+      },
+      {
+        "left": [
+          45
+        ],
+        "right": [
+          53,
+          64
+        ],
+        "squared_error_increase": 4.980001666458734
+      },
+      {
+        "left": [
+          46
+        ],
+        "right": [
+          54
+        ],
+        "squared_error_increase": 5.0888221467212835
+      },
+      {
+        "left": [
+          44
+        ],
+        "right": [
+          9
+        ],
+        "squared_error_increase": 5.226961879338247
+      },
+      {
+        "left": [
+          27,
+          34,
+          61
+        ],
+        "right": [
+          38
+        ],
+        "squared_error_increase": 5.5425272624788064
+      },
+      {
+        "left": [
+          32,
+          52,
+          59
+        ],
+        "right": [
+          63
+        ],
+        "squared_error_increase": 5.555715572729941
+      },
+      {
+        "left": [
+          49,
+          58,
+          60
+        ],
+        "right": [
+          56
+        ],
+        "squared_error_increase": 6.175419035781708
+      },
+      {
+        "left": [
+          36,
+          48,
+          62
+        ],
+        "right": [
+          46,
+          54
+        ],
+        "squared_error_increase": 6.250731825063498
+      },
+      {
+        "left": [
+          28,
+          31
+        ],
+        "right": [
+          32,
+          52,
+          59,
+          63
+        ],
+        "squared_error_increase": 6.405447976623831
+      },
+      {
+        "left": [
+          14
+        ],
+        "right": [
+          42
+        ],
+        "squared_error_increase": 6.653530708709405
+      },
+      {
+        "left": [
+          18,
+          33,
+          40
+        ],
+        "right": [
+          29
+        ],
+        "squared_error_increase": 7.016512229727313
+      },
+      {
+        "left": [
+          14,
+          42
+        ],
+        "right": [
+          55
+        ],
+        "squared_error_increase": 7.959409279469866
+      },
+      {
+        "left": [
+          2
+        ],
+        "right": [
+          3
+        ],
+        "squared_error_increase": 8.426913024862511
+      },
+      {
+        "left": [
+          22,
+          25,
+          26,
+          65
+        ],
+        "right": [
+          28,
+          31,
+          32,
+          52,
+          59,
+          63
+        ],
+        "squared_error_increase": 8.438370361559459
+      },
+      {
+        "left": [
+          10,
+          35,
+          51
+        ],
+        "right": [
+          19
+        ],
+        "squared_error_increase": 8.906750590600787
+      },
+      {
+        "left": [
+          5,
+          11
+        ],
+        "right": [
+          7
+        ],
+        "squared_error_increase": 9.166968272652523
+      },
+      {
+        "left": [
+          36,
+          46,
+          48,
+          54,
+          62
+        ],
+        "right": [
+          43
+        ],
+        "squared_error_increase": 9.30695656425709
+      },
+      {
+        "left": [
+          14,
+          42,
+          55
+        ],
+        "right": [
+          49,
+          56,
+          58,
+          60
+        ],
+        "squared_error_increase": 9.653060631483855
+      },
+      {
+        "left": [
+          12
+        ],
+        "right": [
+          16
+        ],
+        "squared_error_increase": 10.734267566361115
+      },
+      {
+        "left": [
+          22,
+          25,
+          26,
+          28,
+          31,
+          32,
+          52,
+          59,
+          63,
+          65
+        ],
+        "right": [
+          27,
+          34,
+          38,
+          61
+        ],
+        "squared_error_increase": 10.928228135619175
+      },
+      {
+        "left": [
+          12,
+          16
+        ],
+        "right": [
+          37
+        ],
+        "squared_error_increase": 11.862790878878288
+      },
+      {
+        "left": [
+          13,
+          24
+        ],
+        "right": [
+          36,
+          43,
+          46,
+          48,
+          54,
+          62
+        ],
+        "squared_error_increase": 12.410328441033858
+      },
+      {
+        "left": [
+          21
+        ],
+        "right": [
+          41
+        ],
+        "squared_error_increase": 12.602678483419064
+      },
+      {
+        "left": [
+          8
+        ],
+        "right": [
+          30
+        ],
+        "squared_error_increase": 12.795442966512315
+      },
+      {
+        "left": [
+          1
+        ],
+        "right": [
+          5,
+          7,
+          11
+        ],
+        "squared_error_increase": 13.459025618443617
+      },
+      {
+        "left": [
+          14,
+          42,
+          49,
+          55,
+          56,
+          58,
+          60
+        ],
+        "right": [
+          18,
+          29,
+          33,
+          40
+        ],
+        "squared_error_increase": 15.00662550479879
+      }
+    ]
+  },
+  "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
+  "context_relevance": {
+    "schema": "beesense-context-relevance:1",
+    "version": "1.0.0",
+    "source_sha256": "de6caf9b30724cc3d990ce25c81859b895559cd4be28f7ccbf95528613ce5990",
+    "source_run_manifest_sha256": "85c5a401f0daeccc45e76222555fcaae297038201bab936767e70da7aff7e0ba",
+    "configuration": {
+      "keywords": [
+        "kuliah",
+        "kampus",
+        "universitas",
+        "beasiswa",
+        "jurusan"
+      ],
+      "scope": "Pendidikan tinggi: pilihan kuliah, kampus dan universitas, jurusan, beasiswa, biaya kuliah, penerimaan mahasiswa, pengalaman mahasiswa dan prospek kerja lulusan.",
+      "references": {
+        "relevant": [
+          "Saya ingin daftar beasiswa kuliah tahun depan.",
+          "Biaya kuliah dan uang UKT di universitas ini mahal.",
+          "Orang tua saya tidak sanggup membayar biaya pendidikan kuliah.",
+          "Bagaimana syarat pendaftaran beasiswa KIP Kuliah?",
+          "Saya bingung memilih universitas swasta atau negeri.",
+          "Prospek kerja lulusan jurusan teknik informatika bagaimana?",
+          "Saya memilih jurusan kuliah sesuai minat dan peluang kerja.",
+          "Cara mendaftar penerimaan mahasiswa baru lewat SNBP SNBT UTBK.",
+          "Berapa nilai rapor dan skor ujian agar diterima di kampus?",
+          "Apakah ada batas usia untuk mendaftar kuliah atau beasiswa?",
+          "Kuliah sambil bekerja, kelas karyawan atau kuliah online.",
+          "Saya mau melanjutkan pendidikan sarjana, magister atau doktor.",
+          "Ibu tidak setuju saya kuliah di luar kota.",
+          "Kualitas dosen, akreditasi jurusan dan fasilitas kampus.",
+          "Saya sudah lulus SMA SMK dan ingin melanjutkan kuliah.",
+          "Memilih kampus karena biaya kos dan transportasi mahasiswa.",
+          "Kebijakan pemerintah tentang biaya pendidikan tinggi dan beasiswa.",
+          "Saya kesulitan mengerjakan tugas kuliah dan skripsi.",
+          "Pengalaman menjadi mahasiswa dan kehidupan perkuliahan.",
+          "Saya mencari beasiswa kuliah di luar negeri.",
+          "Setelah lulus sarjana saya mencari pekerjaan atau magang.",
+          "Jurusan psikologi, kedokteran, ekonomi atau teknik di universitas.",
+          "Saya ingin kuliah di BINUS, UI, UGM, ITB atau universitas lainnya.",
+          "Mental saya tertekan karena beban tugas kuliah dan skripsi."
+        ],
+        "generic": [
+          "Terima kasih kak atas informasinya.",
+          "Makasih banyak bang.",
+          "Semoga sehat selalu dan sukses.",
+          "Semangat ya, semoga sukses.",
+          "Aamiin, semoga dimudahkan semuanya.",
+          "Saya setuju sekali.",
+          "Betul sekali, sama seperti saya.",
+          "Wkwkwk lucu banget.",
+          "Saya baru tahu informasi ini.",
+          "Salam kenal dan salam sehat.",
+          "Mantap, keren, bagus sekali.",
+          "Saya suka video ini.",
+          "Saya menonton videonya sampai selesai.",
+          "Semoga bermanfaat bagi semua orang."
+        ],
+        "irrelevant": [
+          "Presiden dan pejabat korupsi harus dihukum berat.",
+          "Partai politik dan pemerintah sedang berebut kekuasaan.",
+          "MU kalah lagi semalam, pelatih sepak bolanya payah.",
+          "Pertandingan sepak bola dan pemain favorit saya.",
+          "Suami saya selingkuh dengan tetangga.",
+          "Istri dan suami bertengkar soal rumah tangga dan perceraian.",
+          "Saya sedang menonton drama film dan alur ceritanya menarik.",
+          "Saya ingin makan nasi goreng dan makanan enak.",
+          "Anak dan ibunya sedang bermain di rumah.",
+          "Saya bermain game online di telepon genggam.",
+          "Saya ingin membeli sabun dan produk perawatan kulit.",
+          "Dokter memberi obat untuk penyakit dan perawatan pasien.",
+          "Saya berobat ke psikolog atau psikiater karena gangguan mental.",
+          "Hubungan pacaran dan pernikahan yang tidak harmonis.",
+          "Artis dan selebriti terlibat skandal hiburan.",
+          "Saya melihat foto, video lucu dan konten di media sosial.",
+          "Pertikaian antarnegara, perang dan senjata nuklir.",
+          "Harga barang dan keadaan ekonomi negara memburuk.",
+          "Saya kecewa dengan presiden dan parlemen negara ini.",
+          "Resep masakan dan cara memasak makanan di rumah.",
+          "Saya membeli baju, sepatu dan barang belanjaan.",
+          "Anak saya masih balita dan belajar di sekolah dasar.",
+          "Cara mengedit foto dan video menggunakan aplikasi.",
+          "Saya sedang bercerita tentang pengalaman pribadi dan keluarga."
+        ]
+      },
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "model_cache_dir": ".cache/social_nlp/models",
+      "stride": 24,
+      "cache_dir": ".cache/context_relevance",
+      "batch_size": 32,
+      "threads": 4,
+      "max_tokens": 128,
+      "accept_score": 0.42,
+      "accept_margin": 0.035,
+      "other_score": 0.42,
+      "context_score": 0.5,
+      "context_direct_floor": 0.22,
+      "context_max_words": 14
+    },
+    "policy_sha256": "9a630d09b2ff733c433dbe9cdbbaa9b1c184f5509d5d3a890c8a5e6d6f818eeb",
+    "model": {
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+      "device": "cpu",
+      "score": "maximum cosine to reference examples; NOT probability",
+      "pooling": "SBERT overflow windows mean followed by L2 normalization",
+      "reused_source_manifest_sha256": "85c5a401f0daeccc45e76222555fcaae297038201bab936767e70da7aff7e0ba"
+    },
+    "total_occurrences": 53332,
+    "accepted_occurrences": 10496,
+    "accepted_unique_sentences": 10380,
+    "decisions": {
+      "uncertain": 20099,
+      "generic": 18990,
+      "relevant": 10496,
+      "irrelevant": 3747
+    },
+    "per_platform": {
+      "instagram": {
+        "generic": 1571,
+        "irrelevant": 115,
+        "relevant": 663,
+        "uncertain": 1088
+      },
+      "reddit": {
+        "generic": 3544,
+        "irrelevant": 1054,
+        "relevant": 4051,
+        "uncertain": 6207
+      },
+      "twitter": {
+        "generic": 201,
+        "irrelevant": 19,
+        "relevant": 23,
+        "uncertain": 228
+      },
+      "youtube": {
+        "generic": 13674,
+        "irrelevant": 2559,
+        "relevant": 5759,
+        "uncertain": 12576
+      }
+    },
+    "parent_context": {
+      "audited_parent_occurrences": 6633,
+      "rule": "Native root from source URL; parent only from checksum-verified matching source audit. Missing/conflicting parents are not inferred."
+    },
+    "validation": "Automatic semantic prototype labels; cosine thresholds are provisional, not human-calibrated; no measured precision/recall."
+  },
+  "topic_narratives": {
+    "enabled": true,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "beesense-topic-id:2",
+    "input_scope": "Top 10 positive c-TF-IDF keyword weights and up to 10 fitted sentences ranked by centroid cosine similarity per topic",
+    "interpretation": "AI-generated synthesis of keywords and representative sentences; not a quotation, population estimate or an additional coherence measurement",
+    "csv": "topic_narratives.csv",
+    "derived_from_run": "/Users/socs3/Documents/BeeSense/outputs/nlp_20261102_relevance_topics20_01",
+    "derived_from_manifest_sha256": "e0d18fc2b21cff9358976209101a52d3cbe5e0e92d5134eac46655266d969370",
+    "clustering_unchanged": true
+  },
+  "synthetic": false
+}

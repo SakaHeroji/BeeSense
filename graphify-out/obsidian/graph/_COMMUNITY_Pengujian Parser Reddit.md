@@ -10,11 +10,9 @@ members: 25
 **Members:** 25 nodes
 
 ## Members
-- [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.has_class()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.own_body()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.parent()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.redirect_request()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_01_shreddit_extracts_body_not_buttons_or_templates()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_02_old_nested_comments_do_not_merge_text_or_guess_role()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_03_relative_date_only_and_exact_are_distinct()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -27,14 +25,16 @@ members: 25
 - [[.test_11_missing_parent_remains_unknown()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.test_15_redirect_checks_before_following()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Exception]] - code
+- [[HTTPRedirectHandler]] - code
+- [[MemorySink]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[RestrictedRedirect]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[SourceFailure]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[fixture_page()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[native_fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[object_key()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[source_time()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,16 +44,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 15 edges to [[_COMMUNITY_Struktur DOM Reddit]]
-- 12 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 6 edges to [[_COMMUNITY_Validasi Record Reddit_1]]
-- 3 edges to [[_COMMUNITY_Validasi Record Reddit]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
+- 31 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 9 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 6 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 5 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 3 edges to [[_COMMUNITY_Struktur DOM Reddit]]
 
 ## Top bridge nodes
-- [[RedditTests]] - degree 20, connects to 4 communities
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
-- [[.thread()]] - degree 22, connects to 3 communities
-- [[.discover()]] - degree 6, connects to 3 communities
+- [[MemorySink]] - degree 6, connects to 4 communities
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 3 communities
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 3 communities
+- [[RedditTests]] - degree 20, connects to 2 communities
+- [[fixture_page()]] - degree 15, connects to 2 communities

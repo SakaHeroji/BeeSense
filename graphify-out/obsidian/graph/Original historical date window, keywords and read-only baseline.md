@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Konfigurasi Trial Reddit"
+community: "Batas Akuisisi Reddit"
 location: "## Konfigurasi percobaan 30 menit"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konfigurasi_Trial_Reddit
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Original historical date window, keywords and read-only baseline
@@ -17,4 +17,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[Tracked Reddit trial configuration]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Trial_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

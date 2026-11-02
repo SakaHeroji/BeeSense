@@ -1,45 +1,77 @@
 ---
 type: community
-cohesion: 0.08
-members: 30
+cohesion: 0.06
+members: 62
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 30 nodes
+**Cohesion:** 0.06 - loosely connected
+**Members:** 62 nodes
 
 ## Members
-- [[.setUp()_12]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_429_retry_headers_and_http200_challenge()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_auth_alias_and_local_secret_errors_are_not_values()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_barrier_keeps_partial_records_and_stops_remaining_operations()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_cached_root_without_comments_does_not_consume_network_delay()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_deadline_kills_owned_worker_and_retains_streamed_rows()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_interrupt_during_delay_finalizes_partial_excel()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_library_cooldown_waits_then_retries_same_operation_within_budget()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_native_identity_parentage_and_unknown_dates()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_persistent_subprocess_reuses_one_pid()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_plan_never_reads_auth_or_contacts_network()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_pool_diagnostics_expose_wait_only_and_keep_daily_cap_terminal()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_saved_429_and_login_barriers_prevent_new_network_clients()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_saved_state_reuses_account_without_resetting_counters()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_shared_excel_dedup_formula_safety_parent_relations_and_manifest()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_social_baseline_excludes_x_ids_previously_exported_as_comments()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_social_comment_thread_budget_prioritizes_root_acquisition()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_social_cooldown_keeps_partial_root_and_resumes_new_children_once()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_social_coordinator_stops_on_actual_rate_limit_with_partial_root()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_social_coordinator_uses_cached_search_root_and_native_replies()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_time_budget_caps_operations_and_preserves_records()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_transport_stops_all_network_after_first_429_sync_and_async()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_url_canonicalization_rejects_foreign_hosts_and_credentials()]] - code - tests/crawler/test_twitter_crawler.py
-- [[.test_validation_rejects_embedded_secrets_and_other_platforms()]] - code - tests/crawler/test_twitter_crawler.py
-- [[Offline contracts for TwitterX acquisition; no live credentials required.]] - rationale - tests/crawler/test_twitter_crawler.py
-- [[TwitterCrawlerTests]] - code - tests/crawler/test_twitter_crawler.py
-- [[hanging_worker()]] - code - tests/crawler/test_twitter_crawler.py
-- [[persistent_worker()]] - code - tests/crawler/test_twitter_crawler.py
-- [[test_twitter_crawler.py]] - code - tests/crawler/test_twitter_crawler.py
-- [[tweet()]] - code - tests/crawler/test_twitter_crawler.py
+- [[.__call__()_2]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__call__()_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_31]] - code - Crawler/Backend/social_crawler.py
+- [[.__init__()_32]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_35]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_33]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_34]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_36]] - code - Crawler/Backend/twitter_crawler.py
+- [[._baseline()_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[._checkpoint_items()_1]] - code - Crawler/Backend/social_crawler.py
+- [[._searches()]] - code - Crawler/Backend/twitter_crawler.py
+- [[._wants_replies()]] - code - Crawler/Backend/twitter_crawler.py
+- [[.accept()_5]] - code - Crawler/Backend/twitter_crawler.py
+- [[.close()_5]] - code - Crawler/Backend/twitter_crawler.py
+- [[.close()_4]] - code - Crawler/Backend/twitter_crawler.py
+- [[.close()_6]] - code - Crawler/Backend/twitter_crawler.py
+- [[.plan()_5]] - code - Crawler/Backend/twitter_crawler.py
+- [[.requires_network()]] - code - Crawler/Backend/twitter_crawler.py
+- [[.run()_4]] - code - Crawler/Backend/twitter_crawler.py
+- [[AccessBarrier_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[Adapt a persistent Scweet worker to SocialCrawler's five-argument protocol.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Bounded newest-first date windows, shared by both entry points.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Child-only guard pace curl requests and prohibit network after a barrier.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Expose only wait duration; never return account records or cookies.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Keep native parent IDs; never infer a reply parent from screen position.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[One isolated process owns Scweet state and transport for the whole trial.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Scweet-only trial; uses the existing shared sink, filters and Excel format.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[ScweetWorker]] - code - Crawler/Backend/twitter_crawler.py
+- [[Shared root selection and formula-safe Excel projection for social crawlers.]] - rationale - Crawler/Backend/social_export.py
+- [[SocialExportMixin_3]] - code
+- [[Standalone TwitterX acquisition with Scweet and BeeSense's Excel contract.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[TwitterAdapter]] - code - Crawler/Backend/twitter_crawler.py
+- [[TwitterCoordinatorWorker]] - code - Crawler/Backend/twitter_crawler.py
+- [[TwitterCrawler]] - code - Crawler/Backend/twitter_crawler.py
+- [[Use the shared record contract without changing native X identity.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[Virtual displays require Linux and Xvfb; other environments use headless.]] - rationale - Crawler/Backend/social_crawler.py
+- [[_config()]] - code - Crawler/Backend/social_crawler.py
+- [[_integer()_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[_keywords()]] - code - Crawler/Backend/social_crawler.py
+- [[_number()]] - code - Crawler/Backend/social_crawler.py
+- [[_url()]] - code - Crawler/Backend/social_crawler.py
+- [[account_cooldown()]] - code - Crawler/Backend/twitter_crawler.py
+- [[auth_material()]] - code - Crawler/Backend/twitter_crawler.py
+- [[configuration()]] - code - Crawler/Backend/twitter_crawler.py
+- [[create_client()_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[error_receipt()_2]] - code - Crawler/Backend/twitter_crawler.py
+- [[guarded_transport()]] - code - Crawler/Backend/twitter_crawler.py
+- [[main()_9]] - code - Crawler/Backend/twitter_crawler.py
+- [[native_id()]] - code - Crawler/Backend/twitter_crawler.py
+- [[normalize_item()_1]] - code - Crawler/Backend/twitter_crawler.py
+- [[object_key()_2]] - code - Crawler/Backend/twitter_crawler.py
+- [[post_url()]] - code - Crawler/Backend/twitter_crawler.py
+- [[private_json()]] - code - Crawler/Backend/twitter_crawler.py
+- [[read_json()]] - code - Crawler/Backend/twitter_crawler.py
+- [[resolve_reddrix_display()]] - code - Crawler/Backend/social_crawler.py
+- [[response_barrier()]] - code - Crawler/Backend/twitter_crawler.py
+- [[search_targets()]] - code - Crawler/Backend/twitter_crawler.py
+- [[social_crawler.py]] - code - Crawler/Backend/social_crawler.py
+- [[social_export.py]] - code - Crawler/Backend/social_export.py
+- [[twitter_crawler.py]] - code - Crawler/Backend/twitter_crawler.py
+- [[upstream_version()_2]] - code - Crawler/Backend/twitter_crawler.py
+- [[worker_main()]] - code - Crawler/Backend/twitter_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,13 +81,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
-- 1 edge to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
+- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 9 edges to [[_COMMUNITY_Worker Reddrix]]
+- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 3 edges to [[_COMMUNITY_Crawler Selenium]]
+- 3 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
+- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
+- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
+- 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[test_twitter_crawler.py]] - degree 8, connects to 3 communities
-- [[TwitterCrawlerTests]] - degree 26, connects to 1 community
-- [[.test_cached_root_without_comments_does_not_consume_network_delay()]] - degree 2, connects to 1 community
-- [[.test_social_baseline_excludes_x_ids_previously_exported_as_comments()]] - degree 2, connects to 1 community
-- [[.test_social_comment_thread_budget_prioritizes_root_acquisition()]] - degree 2, connects to 1 community
+- [[social_crawler.py]] - degree 34, connects to 13 communities
+- [[twitter_crawler.py]] - degree 27, connects to 2 communities
+- [[TwitterCoordinatorWorker]] - degree 11, connects to 2 communities
+- [[social_export.py]] - degree 6, connects to 2 communities
+- [[.__init__()_31]] - degree 5, connects to 2 communities

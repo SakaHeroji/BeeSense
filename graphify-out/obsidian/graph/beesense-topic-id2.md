@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[Gemini 3.5 Flash Lite]] - `references` [EXTRACTED]
-- [[topic_narratives.csv_1]] - `references` [EXTRACTED]
+- [[topic_narratives.csv]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

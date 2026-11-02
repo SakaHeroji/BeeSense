@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
+community: "Pengujian Narasi Gemini"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # published_source_files()
@@ -17,4 +17,4 @@ tags:
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

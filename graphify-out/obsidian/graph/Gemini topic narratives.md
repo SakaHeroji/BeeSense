@@ -1,5 +1,5 @@
 ---
-source_file: "docs/machine-learning/SOCIAL_NLP.md"
+source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
 type: "concept"
 community: "Panduan Pipeline BeeSense"
 tags:
@@ -11,9 +11,14 @@ tags:
 # Gemini topic narratives
 
 ## Connections
-- [[Candidate quality gate]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
-- [[Twitter NLP preset 2 November 2026]] - `references` [EXTRACTED]
-- [[topic_narratives.csv]] - `shares_data_with` [EXTRACTED]
+- [[AI synthesis interpretation]] - `rationale_for` [EXTRACTED]
+- [[Dashboard BeeSense]] - `references` [EXTRACTED]
+- [[Explicit Gemini and publication authorization]] - `rationale_for` [EXTRACTED]
+- [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
+- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer.generate_topic_narratives()]] - `implements` [EXTRACTED]
+- [[Top keywords and representative sentences]] - `references` [EXTRACTED]
+- [[beesense-topic-id2_1]] - `references` [EXTRACTED]
+- [[topic_narratives.csv_1]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

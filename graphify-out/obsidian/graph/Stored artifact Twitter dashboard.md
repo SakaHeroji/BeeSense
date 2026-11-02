@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[Twitter model artifact manifest]] - `references` [EXTRACTED]
 - [[X Twitter dashboard support]] - `references` [EXTRACTED]
-- [[topic_narratives.csv_1]] - `references` [EXTRACTED]
+- [[topic_narratives.csv]] - `references` [EXTRACTED]
 - [[topic_sentences.xlsx]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

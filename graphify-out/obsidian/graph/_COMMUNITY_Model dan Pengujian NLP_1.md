@@ -24,9 +24,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
-- 1 edge to [[_COMMUNITY_topic_sentence_export.py]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
+- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube_1]]
 
 ## Top bridge nodes
 - [[test_dashboard_runtime.py]] - degree 5, connects to 3 communities

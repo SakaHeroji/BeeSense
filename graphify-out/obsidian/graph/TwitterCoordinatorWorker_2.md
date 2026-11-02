@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[Scweet]] - `references` [EXTRACTED]
-- [[SocialCrawler_2]] - `references` [EXTRACTED]
-- [[TwitterCrawler_2]] - `references` [EXTRACTED]
+- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - `references` [EXTRACTED]
+- [[TwitterCrawler (Scweet 5.8.2)]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -1,29 +1,27 @@
 ---
 type: community
-cohesion: 0.18
-members: 14
+cohesion: 0.17
+members: 12
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 14 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[Active Twitter NLP snapshot]] - concept - README.md
-- [[Active four platform dataset]] - concept - README.md
-- [[BeeSense README]] - document - README.md
-- [[Dashboard URL state binding]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Dashboard runtime CI]] - concept - README.md
-- [[Dashboard runtime dependency separation]] - rationale - README.md
-- [[GitHub Actions validation]] - concept - README.md
-- [[Historical dashboard Docker verification]] - concept - README.md
-- [[Official Streamlit deployment documentation]] - document - README.md
+- [[BeeSense project structure]] - document - docs/PROJECT_STRUCTURE.md
+- [[Ignored local authentication and browser state]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Legacy Instagram browser isolation]] - rationale - docs/PROJECT_STRUCTURE.md
+- [[Multilingual SBERT]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Narrative request receipt cache]] - rationale - graphify-out/obsidian/Topik Gemini.md
+- [[Overflow window sentence encoding]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
 - [[Package rooted path consistency]] - rationale - docs/PROJECT_STRUCTURE.md
-- [[PyArrow 24 compatibility pin]] - rationale - README.md
-- [[SocialNLPStreamlitApp_2]] - code - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Streamlit Community Cloud deployment]] - concept - README.md
-- [[streamlit_apps.py_1]] - code - README.md
+- [[Separate training and test environments]] - concept - docs/PROJECT_STRUCTURE.md
+- [[Social NLP methodology note]] - document - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[SocialExportMixin_5]] - code - docs/PROJECT_STRUCTURE.md
+- [[Verified embedding cache]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[topic_narratives.py_1]] - code - docs/PROJECT_STRUCTURE.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,16 +31,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_5]]
-- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
-- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_4]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
 
 ## Top bridge nodes
-- [[Active Twitter NLP snapshot]] - degree 7, connects to 5 communities
-- [[BeeSense README]] - degree 8, connects to 1 community
-- [[SocialNLPStreamlitApp_2]] - degree 3, connects to 1 community
-- [[Active four platform dataset]] - degree 3, connects to 1 community
+- [[Multilingual SBERT]] - degree 4, connects to 1 community
+- [[topic_narratives.py_1]] - degree 3, connects to 1 community
 - [[Package rooted path consistency]] - degree 2, connects to 1 community
+- [[SocialExportMixin_5]] - degree 2, connects to 1 community
+- [[Social NLP methodology note]] - degree 2, connects to 1 community

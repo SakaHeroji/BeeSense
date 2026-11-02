@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[Combined social workbook 20261102]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_3]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 - [[Twitter acquisition report 2 November 2026]] - `references` [EXTRACTED]
 - [[Twitter model artifact manifest]] - `references` [EXTRACTED]
 - [[Twitter twenty topic result note]] - `references` [EXTRACTED]

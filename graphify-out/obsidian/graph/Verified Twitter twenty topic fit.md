@@ -11,7 +11,6 @@ tags:
 # Verified Twitter twenty topic fit
 
 ## Connections
-- [[Active Twitter NLP snapshot]] - `references` [EXTRACTED]
 - [[DBSCAN]] - `references` [EXTRACTED]
 - [[Dual projection stability evaluation]] - `references` [EXTRACTED]
 - [[Internal evaluation interpretation limits]] - `references` [EXTRACTED]

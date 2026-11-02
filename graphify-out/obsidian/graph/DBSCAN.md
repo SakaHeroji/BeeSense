@@ -14,7 +14,7 @@ tags:
 - [[Bounded reusable radius graph]] - `references` [EXTRACTED]
 - [[DBSCAN source cluster provenance]] - `references` [EXTRACTED]
 - [[Sentence weighted Ward reduction]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_3]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 - [[Verified Twitter twenty topic fit]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

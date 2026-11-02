@@ -1,6 +1,6 @@
 {
   "input_file": "outputs/social_20261102_combined_twitter_01/social_data.xlsx",
-  "output_dir": "outputs/nlp_20261102_twitter_topics20_gemini_01",
+  "output_dir": "outputs/nlp_20261102_relevance_topics20_gemini_02",
   "target_topics": 20,
   "cache_dir": ".cache/social_nlp",
   "seed": 42,
@@ -84,5 +84,6 @@
     "timeout_seconds": 60,
     "max_attempts": 3,
     "request_interval_seconds": 5
-  }
+  },
+  "relevance_artifact": "outputs/relevance_20261102_01"
 }

@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "rationale"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "## Display adaptif"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Curated adaptive display and isolated factory architecture
@@ -16,4 +16,4 @@ tags:
 - [[Integrated SocialCrawler Reddrix with thin Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[Reddrix-only Camoufox factory controls initial and refreshed sessions]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

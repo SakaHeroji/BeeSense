@@ -11,7 +11,7 @@ tags:
 # 2 November 2026 pipeline integration
 
 ## Connections
-- [[SocialNLPClusterer_2]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[TwitterCrawler Scweet architecture]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

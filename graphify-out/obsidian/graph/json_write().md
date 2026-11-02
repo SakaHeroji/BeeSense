@@ -2,7 +2,7 @@
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
 community: "topic_sentence_export.py"
-location: "L68"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,11 @@ tags:
 
 ## Connections
 - [[._reduce_embeddings()]] - `calls` [EXTRACTED]
-- [[.encode()]] - `calls` [EXTRACTED]
+- [[.encode()_1]] - `calls` [EXTRACTED]
 - [[.save()]] - `calls` [EXTRACTED]
 - [[.save_explanations()]] - `calls` [EXTRACTED]
+- [[enrich_run()]] - `calls` [EXTRACTED]
+- [[generate_topic_narratives.py]] - `imports` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[seal()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]

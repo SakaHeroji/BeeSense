@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Struktur DOM Reddit"
+community: "Parsing Identitas Reddit"
 location: "L637"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Struktur_DOM_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # walk()
@@ -21,4 +21,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[first()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

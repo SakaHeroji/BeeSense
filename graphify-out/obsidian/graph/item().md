@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "code"
-community: "InstaloaderCrawler"
+community: "Wrapper RedditCrawler"
 location: "L40"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/InstaloaderCrawler
+  - community/Wrapper_RedditCrawler
 ---
 
 # item()
@@ -19,4 +19,4 @@ tags:
 - [[records()_1]] - `calls` [EXTRACTED]
 - [[test_reddit_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/InstaloaderCrawler
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

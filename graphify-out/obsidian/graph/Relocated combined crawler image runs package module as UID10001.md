@@ -1,12 +1,12 @@
 ---
 source_file: "deployment/docker/Dockerfile.crawler"
 type: "rationale"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "L2-L20"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Relocated combined crawler image runs package module as UID10001
@@ -16,4 +16,4 @@ tags:
 - [[Reddrix Docker image unbuilt local daemon unavailable]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

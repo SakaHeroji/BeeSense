@@ -1,0 +1,150 @@
+{
+  "schema": "beesense-context-relevance:1",
+  "version": "1.0.0",
+  "source_sha256": "de6caf9b30724cc3d990ce25c81859b895559cd4be28f7ccbf95528613ce5990",
+  "source_run_manifest_sha256": "85c5a401f0daeccc45e76222555fcaae297038201bab936767e70da7aff7e0ba",
+  "configuration": {
+    "keywords": [
+      "kuliah",
+      "kampus",
+      "universitas",
+      "beasiswa",
+      "jurusan"
+    ],
+    "scope": "Pendidikan tinggi: pilihan kuliah, kampus dan universitas, jurusan, beasiswa, biaya kuliah, penerimaan mahasiswa, pengalaman mahasiswa dan prospek kerja lulusan.",
+    "references": {
+      "relevant": [
+        "Saya ingin daftar beasiswa kuliah tahun depan.",
+        "Biaya kuliah dan uang UKT di universitas ini mahal.",
+        "Orang tua saya tidak sanggup membayar biaya pendidikan kuliah.",
+        "Bagaimana syarat pendaftaran beasiswa KIP Kuliah?",
+        "Saya bingung memilih universitas swasta atau negeri.",
+        "Prospek kerja lulusan jurusan teknik informatika bagaimana?",
+        "Saya memilih jurusan kuliah sesuai minat dan peluang kerja.",
+        "Cara mendaftar penerimaan mahasiswa baru lewat SNBP SNBT UTBK.",
+        "Berapa nilai rapor dan skor ujian agar diterima di kampus?",
+        "Apakah ada batas usia untuk mendaftar kuliah atau beasiswa?",
+        "Kuliah sambil bekerja, kelas karyawan atau kuliah online.",
+        "Saya mau melanjutkan pendidikan sarjana, magister atau doktor.",
+        "Ibu tidak setuju saya kuliah di luar kota.",
+        "Kualitas dosen, akreditasi jurusan dan fasilitas kampus.",
+        "Saya sudah lulus SMA SMK dan ingin melanjutkan kuliah.",
+        "Memilih kampus karena biaya kos dan transportasi mahasiswa.",
+        "Kebijakan pemerintah tentang biaya pendidikan tinggi dan beasiswa.",
+        "Saya kesulitan mengerjakan tugas kuliah dan skripsi.",
+        "Pengalaman menjadi mahasiswa dan kehidupan perkuliahan.",
+        "Saya mencari beasiswa kuliah di luar negeri.",
+        "Setelah lulus sarjana saya mencari pekerjaan atau magang.",
+        "Jurusan psikologi, kedokteran, ekonomi atau teknik di universitas.",
+        "Saya ingin kuliah di BINUS, UI, UGM, ITB atau universitas lainnya.",
+        "Mental saya tertekan karena beban tugas kuliah dan skripsi."
+      ],
+      "generic": [
+        "Terima kasih kak atas informasinya.",
+        "Makasih banyak bang.",
+        "Semoga sehat selalu dan sukses.",
+        "Semangat ya, semoga sukses.",
+        "Aamiin, semoga dimudahkan semuanya.",
+        "Saya setuju sekali.",
+        "Betul sekali, sama seperti saya.",
+        "Wkwkwk lucu banget.",
+        "Saya baru tahu informasi ini.",
+        "Salam kenal dan salam sehat.",
+        "Mantap, keren, bagus sekali.",
+        "Saya suka video ini.",
+        "Saya menonton videonya sampai selesai.",
+        "Semoga bermanfaat bagi semua orang."
+      ],
+      "irrelevant": [
+        "Presiden dan pejabat korupsi harus dihukum berat.",
+        "Partai politik dan pemerintah sedang berebut kekuasaan.",
+        "MU kalah lagi semalam, pelatih sepak bolanya payah.",
+        "Pertandingan sepak bola dan pemain favorit saya.",
+        "Suami saya selingkuh dengan tetangga.",
+        "Istri dan suami bertengkar soal rumah tangga dan perceraian.",
+        "Saya sedang menonton drama film dan alur ceritanya menarik.",
+        "Saya ingin makan nasi goreng dan makanan enak.",
+        "Anak dan ibunya sedang bermain di rumah.",
+        "Saya bermain game online di telepon genggam.",
+        "Saya ingin membeli sabun dan produk perawatan kulit.",
+        "Dokter memberi obat untuk penyakit dan perawatan pasien.",
+        "Saya berobat ke psikolog atau psikiater karena gangguan mental.",
+        "Hubungan pacaran dan pernikahan yang tidak harmonis.",
+        "Artis dan selebriti terlibat skandal hiburan.",
+        "Saya melihat foto, video lucu dan konten di media sosial.",
+        "Pertikaian antarnegara, perang dan senjata nuklir.",
+        "Harga barang dan keadaan ekonomi negara memburuk.",
+        "Saya kecewa dengan presiden dan parlemen negara ini.",
+        "Resep masakan dan cara memasak makanan di rumah.",
+        "Saya membeli baju, sepatu dan barang belanjaan.",
+        "Anak saya masih balita dan belajar di sekolah dasar.",
+        "Cara mengedit foto dan video menggunakan aplikasi.",
+        "Saya sedang bercerita tentang pengalaman pribadi dan keluarga."
+      ]
+    },
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "model_cache_dir": ".cache/social_nlp/models",
+    "stride": 24,
+    "cache_dir": ".cache/context_relevance",
+    "batch_size": 32,
+    "threads": 4,
+    "max_tokens": 128,
+    "accept_score": 0.42,
+    "accept_margin": 0.035,
+    "other_score": 0.42,
+    "context_score": 0.5,
+    "context_direct_floor": 0.22,
+    "context_max_words": 14
+  },
+  "policy_sha256": "9a630d09b2ff733c433dbe9cdbbaa9b1c184f5509d5d3a890c8a5e6d6f818eeb",
+  "model": {
+    "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "device": "cpu",
+    "score": "maximum cosine to reference examples; NOT probability",
+    "pooling": "SBERT overflow windows mean followed by L2 normalization",
+    "reused_source_manifest_sha256": "85c5a401f0daeccc45e76222555fcaae297038201bab936767e70da7aff7e0ba"
+  },
+  "total_occurrences": 53332,
+  "accepted_occurrences": 10496,
+  "accepted_unique_sentences": 10380,
+  "decisions": {
+    "uncertain": 20099,
+    "generic": 18990,
+    "relevant": 10496,
+    "irrelevant": 3747
+  },
+  "per_platform": {
+    "instagram": {
+      "generic": 1571,
+      "irrelevant": 115,
+      "relevant": 663,
+      "uncertain": 1088
+    },
+    "reddit": {
+      "generic": 3544,
+      "irrelevant": 1054,
+      "relevant": 4051,
+      "uncertain": 6207
+    },
+    "twitter": {
+      "generic": 201,
+      "irrelevant": 19,
+      "relevant": 23,
+      "uncertain": 228
+    },
+    "youtube": {
+      "generic": 13674,
+      "irrelevant": 2559,
+      "relevant": 5759,
+      "uncertain": 12576
+    }
+  },
+  "parent_context": {
+    "audited_parent_occurrences": 6633,
+    "rule": "Native root from source URL; parent only from checksum-verified matching source audit. Missing/conflicting parents are not inferred."
+  },
+  "validation": "Automatic semantic prototype labels; cosine thresholds are provisional, not human-calibrated; no measured precision/recall."
+}

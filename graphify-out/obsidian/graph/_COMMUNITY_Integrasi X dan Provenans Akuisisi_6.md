@@ -1,25 +1,23 @@
 ---
 type: community
-cohesion: 0.29
-members: 10
+cohesion: 0.25
+members: 8
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.29 - loosely connected
-**Members:** 10 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 8 nodes
 
 ## Members
-- [[Daily request cap overshoot]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Deadline bounded pool cooldown]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Deadline preserving checkpoint resume]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Five batch BeeSense audit outputs]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Observed Twitter HTTP telemetry]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Scweet]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Scweet rate limiting documentation]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Twenty five query parity]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Twitter acquisition preset]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Verified Twitter acquisition 2 November 2026]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[1.800 detik target 1.000 post 10 balasan]] - concept - config/twitter_crawler.json
+- [[Allowlist Docker tanpa auth dan sesi]] - rationale - deployment/docker/Dockerfile.twitter.dockerignore
+- [[Image Twitter Python 3.12 UID 10001]] - concept - deployment/docker/Dockerfile.twitter
+- [[Jeda 5 dan 15 detik limiter window per operasi dan cap harian 120]] - concept - config/twitter_crawler.json
+- [[Preset percobaan Twitter 30 menit]] - concept - config/twitter_crawler.json
+- [[Query pendidikan Indonesia jendela tujuh hari]] - concept - config/twitter_crawler.json
+- [[Scweet 5.8.2]] - concept - requirements/twitter.txt
+- [[openpyxl 3.1.5]] - concept - requirements/twitter.txt
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,12 +25,3 @@ members: 10
 TABLE source_file, type FROM #community/Integrasi_X_dan_Provenans_Akuisisi
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_4]]
-
-## Top bridge nodes
-- [[Verified Twitter acquisition 2 November 2026]] - degree 8, connects to 1 community
-- [[Scweet]] - degree 4, connects to 1 community
-- [[Twitter acquisition preset]] - degree 4, connects to 1 community

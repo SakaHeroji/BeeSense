@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.test_shipped_dashboard_and_explanations_need_no_training_environment()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
 - [[test_dashboard_runtime.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Eksekusi dan Ekspor Crawler"
+community: "Koordinator Backend Sosial"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksekusi_dan_Ekspor_Crawler
+  - community/Koordinator_Backend_Sosial
 ---
 
 # SocialExportMixin
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SocialCrawler]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksekusi_dan_Ekspor_Crawler
+#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial

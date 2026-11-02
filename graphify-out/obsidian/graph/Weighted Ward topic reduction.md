@@ -11,9 +11,10 @@ tags:
 # Weighted Ward topic reduction
 
 ## Connections
-- [[Candidate quality gate]] - `references` [EXTRACTED]
-- [[DBSCAN clustering]] - `references` [EXTRACTED]
-- [[Multilingual SBERT encoder]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `implements` [EXTRACTED]
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
+- [[DBSCAN Euclidean density clustering]] - `shares_data_with` [EXTRACTED]
+- [[Silhouette and ARI evaluation]] - `conceptually_related_to` [EXTRACTED]
+- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - `implements` [EXTRACTED]
+- [[c-TF-IDF topic terms]] - `shares_data_with` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

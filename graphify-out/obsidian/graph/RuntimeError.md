@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Pengambilan HTML Reddit"
+community: "Crawler Selenium"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Pengambilan_HTML_Reddit
+  - community/Crawler_Selenium
 ---
 
 # RuntimeError
@@ -23,4 +23,4 @@ tags:
 - [[run()]] - `calls` [INFERRED]
 - [[worker()_1]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/INFERRED #community/Crawler_Selenium

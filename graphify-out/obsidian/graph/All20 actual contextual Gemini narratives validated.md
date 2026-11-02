@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "concept"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # All20 actual contextual Gemini narratives validated
@@ -17,7 +17,6 @@ tags:
 - [[Final Instagram-inclusive20-topicGemini configuration]] - `references` [EXTRACTED]
 - [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 - [[Published194e0b1 dashboard and byte-identical contextual CSV]] - `references` [EXTRACTED]
-- [[Verified current model and20context-grounded narratives]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `shares_data_with` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini
+#graphify/concept #graphify/EXTRACTED #community/Penggabungan_Dataset

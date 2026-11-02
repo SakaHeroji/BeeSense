@@ -128,6 +128,26 @@ def published_crawl_files():
     return allowed
 
 
+def published_relevance_files(directory, data):
+    """Bind a separately published relevance dataset to the active fitted mask."""
+    from MachineLearning.context_relevance import ContextRelevanceFilter
+
+    directory = Path(directory)
+    if "relevance_decisions" not in data:
+        raise ValueError("Configured relevance dataset is absent from the active model")
+    decisions, report = ContextRelevanceFilter.load_decisions(
+        directory,
+        data["summary"]["source_sha256"],
+        data["relevance_decisions"].occurrence_id,
+    )
+    if report != data["relevance_report"] or not decisions.equals(
+        data["relevance_decisions"]
+    ):
+        raise ValueError("Published relevance dataset differs from the active model")
+    manifest = json.loads((directory / "manifest.json").read_text())
+    return {directory / name for name in (*manifest["files_sha256"], "manifest.json")}
+
+
 def verify(check_git=False):
     config = json.loads((ROOT / "config/social_nlp.json").read_text())
     run = ROOT / config["output_dir"]
@@ -152,6 +172,11 @@ def verify(check_git=False):
     ):
         raise ValueError("Active run is missing its 20 Gemini topic descriptions")
     manifest = json.loads((run / "manifest.json").read_text())
+    relevance_files = (
+        published_relevance_files(ROOT / config["relevance_artifact"], data)
+        if config.get("relevance_artifact")
+        else set()
+    )
     runs = {run: manifest}
     sources = {source, baseline}
     # Versioned NLP snapshots are retained across retraining. Crawler output and
@@ -188,20 +213,29 @@ def verify(check_git=False):
                 ):
                     raise ValueError("Preserved training source checksum mismatch")
                 sources.add(preserved)
-    allowed = {
-        str((directory / name).relative_to(ROOT))
-        for directory, descriptor in runs.items()
-        for name in [*descriptor["files_sha256"], "manifest.json"]
-    } | {
-        str(path.relative_to(ROOT))
-        for path in {
-            audit,
-            *[file for item in sources for file in published_source_files(item)],
+    allowed = (
+        {
+            str((directory / name).relative_to(ROOT))
+            for directory, descriptor in runs.items()
+            for name in [*descriptor["files_sha256"], "manifest.json"]
         }
-    }
+        | {
+            str(path.relative_to(ROOT))
+            for path in {
+                audit,
+                *[file for item in sources for file in published_source_files(item)],
+            }
+        }
+        | {str(path.relative_to(ROOT)) for path in relevance_files}
+    )
     actual = {
         str(path.relative_to(ROOT))
-        for directory in {audit.parent, *[item.parent for item in sources], *runs}
+        for directory in {
+            audit.parent,
+            *[item.parent for item in sources],
+            *runs,
+            *[item.parent for item in relevance_files],
+        }
         for path in directory.rglob("*")
         if path.is_file()
         and path.name != ".DS_Store"

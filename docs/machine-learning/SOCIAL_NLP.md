@@ -1,5 +1,7 @@
 # Class NLP BeeSense: SBERT + UMAP + DBSCAN
 
+Snapshot aktif setelah persetujuan publikasi 2 November 2026: `outputs/nlp_20261102_relevance_topics20_gemini_02/`, **20 topik**, mean **c_v 0,4733391691**, **10.496 kemunculan/10.380 kalimat unik** setelah penyaringan, dan CSV **20 deskripsi Gemini**. Data mentah 34.764 record unik serta snapshot lama dipertahankan. Tujuh topik masih <0,4 individual; gate berlaku pada rata-rata. [Algoritma, audit, reproduksi dan rollback](CONTEXT_RELEVANCE.md). Bagian berikut merupakan riwayat dan penjelasan metode.
+
 [SocialNLPClusterer](../../MachineLearning/social_nlp.py) memakai **SBERT multilingual → normalisasi L2 →
 UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot kalimat → c-TF-IDF → artifact terverifikasi**.
 [SocialNLPStreamlitApp](../../Dashboard/app.py) membaca hasil tersimpan tanpa training pada rerun.

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "document"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "# Pipeline Instagram, dataset tiga hari dan Streamlit"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # Instagram acquisition stopped; audited model/Gemini release live; pacing updated offline
@@ -24,4 +24,4 @@ tags:
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `references` [EXTRACTED]
 - [[Verifieddashboard publication precedes offlinecrawlerpacing]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini
+#graphify/document #graphify/EXTRACTED #community/Penggabungan_Dataset

@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp_instagram_20261030.json"
 type: "concept"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "$.gemini"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # Verified model configuration enables contextual Gemini CSV
@@ -15,4 +15,4 @@ tags:
 - [[Active20-topic Instagram-inclusive model configuration_1]] - `references` [EXTRACTED]
 - [[Complete contextual20-row Gemini CSV passes bundle gate]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini
+#graphify/concept #graphify/EXTRACTED #community/Penggabungan_Dataset

@@ -18,7 +18,5 @@ tags:
 - [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `calls` [EXTRACTED]
 - [[test_dataset_merge.py]] - `imports` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
-- [[verify_native_dataset()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

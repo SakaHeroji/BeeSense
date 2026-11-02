@@ -11,7 +11,6 @@ tags:
 # Combined social workbook 20261102
 
 ## Connections
-- [[Active four platform dataset]] - `references` [EXTRACTED]
 - [[Global native X identity]] - `references` [EXTRACTED]
 - [[Merged record lineage contract]] - `references` [EXTRACTED]
 - [[Twitter acquisition report 2 November 2026]] - `references` [EXTRACTED]

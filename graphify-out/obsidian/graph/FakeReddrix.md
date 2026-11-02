@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_reddit_crawler.py"
 type: "code"
-community: "InstaloaderCrawler"
+community: "Wrapper RedditCrawler"
 location: "L63"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/InstaloaderCrawler
+  - community/Wrapper_RedditCrawler
 ---
 
 # FakeReddrix
@@ -26,4 +26,4 @@ tags:
 - [[test_reddit_crawler.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/InstaloaderCrawler
+#graphify/code #graphify/INFERRED #community/Wrapper_RedditCrawler

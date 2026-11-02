@@ -1,0 +1,8 @@
+{
+  "schema": "beesense-context-relevance:1",
+  "files_sha256": {
+    "relevance_report.json": "1a0fa775f6fe46906490d5b5991797349ac587393aad03edd4557e2588c19fe7",
+    "filtered_sentences.parquet": "e9b0536c5b74dab483e3fdde3c75df45552d81c982cfb928d39fcb8e0bc6a196",
+    "relevance_decisions.parquet": "4c5d2efd1d6038352c40c0ac10a4ec48a4cdd0bd9e56a06b08a8c7cfe089ae2b"
+  }
+}

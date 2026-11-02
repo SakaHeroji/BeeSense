@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[DBSCAN]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_3]] - `implements` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `implements` [EXTRACTED]
 - [[Verified Twitter twenty topic fit]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

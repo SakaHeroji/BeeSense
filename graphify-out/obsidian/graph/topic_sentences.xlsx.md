@@ -11,7 +11,6 @@ tags:
 # topic_sentences.xlsx
 
 ## Connections
-- [[Active Twitter NLP snapshot]] - `references` [EXTRACTED]
 - [[Stored artifact Twitter dashboard]] - `references` [EXTRACTED]
 - [[Twitter model artifact manifest]] - `references` [EXTRACTED]
 - [[Verified Twitter twenty topic fit]] - `references` [EXTRACTED]

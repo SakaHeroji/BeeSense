@@ -11,7 +11,7 @@ tags:
 # Comment sentence eligibility
 
 ## Connections
-- [[SocialNLPClusterer_3]] - `implements` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `implements` [EXTRACTED]
 - [[native_roots.json_1]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

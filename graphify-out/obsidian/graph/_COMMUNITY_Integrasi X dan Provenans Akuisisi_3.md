@@ -1,28 +1,27 @@
 ---
 type: community
-cohesion: 0.19
-members: 13
+cohesion: 0.23
+members: 12
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.19 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 0.23 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[Bounded reusable radius graph]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[Comment sentence eligibility]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[DBSCAN]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[DBSCAN source cluster provenance]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[Dual projection stability evaluation]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[Dual seed UMAP]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Internal evaluation interpretation limits]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[MMR diverse source evidence]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Sentence preparation provenance]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Sentence weighted Ward reduction]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[SocialNLPClusterer_3]] - code - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Theil Sen Kendall descriptive trends]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Verified Twitter twenty topic fit]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Credential and state isolation]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Native parent preservation]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Network pacing and root cache]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Persistent Scweet worker]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Persistent account state]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Pool cooldown wait]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Scweet 5.8.2_1]] - concept - docs/crawler/TWITTER_CRAWLER.md
+- [[Terminal access barriers]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Twitter live trial 31 October 2026]] - concept - docs/crawler/TWITTER_CRAWLER.md
+- [[Twitter thirty minute preset]] - concept - docs/crawler/TWITTER_CRAWLER.md
+- [[TwitterCoordinatorWorker_1]] - code - docs/crawler/TWITTER_CRAWLER.md
+- [[TwitterCrawler_1]] - code - docs/crawler/TWITTER_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,12 +31,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
-- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_6]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_5]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 
 ## Top bridge nodes
-- [[SocialNLPClusterer_3]] - degree 10, connects to 3 communities
-- [[Verified Twitter twenty topic fit]] - degree 8, connects to 3 communities
-- [[Comment sentence eligibility]] - degree 2, connects to 1 community
+- [[TwitterCrawler_1]] - degree 10, connects to 3 communities
+- [[TwitterCoordinatorWorker_1]] - degree 5, connects to 2 communities
+- [[Pool cooldown wait]] - degree 4, connects to 1 community
+- [[Twitter live trial 31 October 2026]] - degree 4, connects to 1 community

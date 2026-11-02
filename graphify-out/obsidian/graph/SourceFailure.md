@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Struktur DOM Reddit"
+community: "Pengujian Parser Reddit"
 location: "L482"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Struktur_DOM_Reddit
+  - community/Pengujian_Parser_Reddit
 ---
 
 # SourceFailure
@@ -26,4 +26,4 @@ tags:
 - [[assert_accessible()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

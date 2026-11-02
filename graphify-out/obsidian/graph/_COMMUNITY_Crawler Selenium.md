@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.07
-members: 58
+members: 62
 ---
 
 # Crawler Selenium
 
 **Cohesion:** 0.07 - loosely connected
-**Members:** 58 nodes
+**Members:** 62 nodes
 
 ## Members
 - [[.__init__()_27]] - code - Crawler/Backend/social_crawler_selenium.py
@@ -38,10 +38,13 @@ members: 58
 - [[.test_disabled_checkpoint_and_remote_credentials_are_rejected()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_dry_run_uses_same_config_and_excel_contract_without_browser()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_existing_output_is_not_overwritten()]] - code - tests/crawler/test_social_crawler_selenium.py
+- [[.test_missing_login_is_reported_without_credentials_or_exception_message()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_reddit_identity_and_subreddit_checks()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - code - tests/crawler/test_social_crawler_selenium.py
+- [[.test_repeated_cli_error_preserves_browser_without_claiming_access_barrier()]] - code - tests/crawler/test_instagram_browser.py
 - [[.test_search_scroll_deduplicates_and_enforces_candidate_cap()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_timeout_keeps_streamed_evidence_and_source_version()]] - code - tests/crawler/test_social_crawler_selenium.py
+- [[.test_unknown_antibot_status_is_not_guessed_as_http429()]] - code - tests/crawler/test_reddit_crawler.py
 - [[.test_worker_sanitizes_errors_and_closes_browser()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_youtube_acquisition_enforces_total_and_reply_caps()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[.test_youtube_scripts_extract_only_native_ids_and_own_text()]] - code - tests/crawler/test_social_crawler_selenium.py
@@ -52,6 +55,7 @@ members: 58
 - [[Drop-in SocialCrawler with Selenium for both platforms and shared exports.]] - rationale - Crawler/Backend/social_crawler_selenium.py
 - [[Offline exportworker tests, plus opt-in real Chrome DOM fixtures.]] - rationale - tests/crawler/test_social_crawler_selenium.py
 - [[One browser operation. The parent enforces the hard process deadline.]] - rationale - Crawler/Backend/social_crawler_selenium.py
+- [[RuntimeError]] - code
 - [[SeleniumDOMTests]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[SocialCrawlerSelenium]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[SocialCrawlerSeleniumTests]] - code - tests/crawler/test_social_crawler_selenium.py
@@ -77,18 +81,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
-- 5 edges to [[_COMMUNITY_Akuisisi YouTube]]
-- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit_2]]
-- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 5 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 5 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 2 edges to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
+- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
+- [[RuntimeError]] - degree 11, connects to 5 communities
 - [[SocialCrawlerSelenium]] - degree 25, connects to 2 communities
 - [[test_social_crawler_selenium.py]] - degree 16, connects to 2 communities
 - [[selenium_worker()]] - degree 14, connects to 2 communities
 - [[social_crawler_selenium.py]] - degree 12, connects to 2 communities
-- [[main()_6]] - degree 6, connects to 2 communities

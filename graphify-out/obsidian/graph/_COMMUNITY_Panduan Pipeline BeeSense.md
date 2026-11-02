@@ -1,45 +1,35 @@
 ---
 type: community
-cohesion: 0.07
-members: 30
+cohesion: 0.20
+members: 20
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.07 - loosely connected
-**Members:** 30 nodes
+**Cohesion:** 0.20 - loosely connected
+**Members:** 20 nodes
 
 ## Members
-- [[Advanced connected-browser Reddit campaign helpers]] - document - Crawler/Backend/Reddit/README_browser_campaign.md
-- [[Bounded native-ID evidence and explicit uncertainty]] - rationale - graphify-out/obsidian/Crawler Selenium.md
-- [[Checkpoint export to the eight-sheet contract]] - concept - Crawler/Backend/Reddit/README_browser_campaign.md
-- [[Combined Crawler Environment]] - document - requirements/crawler.txt
-- [[Coordinator waits for manual CAPTCHA without automated clicks]] - rationale - Crawler/Backend/Reddit/README_playwright.md
-- [[Fresh Chrome guest session per operation]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[General NLP Environment]] - document - requirements/nlp.txt
-- [[Gensim Coherence Environment]] - document - requirements/coherence.txt
-- [[Historical Selenium implementation preset500rootsplatform andonehour]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Instagram Chrome Worker Environment]] - document - requirements/instagram-browser.txt
-- [[Instaloader 4.16 Environment]] - document - requirements/instaloader.txt
-- [[Isolated Chrome profile, manual CAPTCHA wait and access-barrier stops]] - rationale - Crawler/Backend/Reddit/README_playwright.md
-- [[Isolated Reddrix Environment]] - document - requirements/reddrix.txt
-- [[Native SBERT Training Environment]] - document - requirements/sbert.txt
-- [[Native-ID provenance and bounded public excerpts]] - rationale - Crawler/Backend/Reddit/README_browser_campaign.md
-- [[Obsidian Crawler Selenium architecture]] - document - graphify-out/obsidian/Crawler Selenium.md
-- [[Official Selenium Manager ChromeDriver selection]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Offline Regression and Crawler Environment]] - document - requirements/dev.txt
-- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
-- [[Reddit Playwright CLI runner]] - document - Crawler/Backend/Reddit/README_playwright.md
-- [[Relative dates remain calendar estimates]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Selenium 4.51.0 Environment]] - document - requirements/selenium.txt
-- [[Selenium Rendered DOM]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Separate non-root crawler container with Selenium Grid]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Shared BundleSink and dual-workbook export path]] - concept - graphify-out/obsidian/Crawler Selenium.md
-- [[Shared rendered_thread_dom.mjs extraction]] - concept - Crawler/Backend/Reddit/README_playwright.md
-- [[SocialCrawlerSelenium Guide]] - document - docs/crawler/SELENIUM_CRAWLER.md
-- [[Standalone runner stops 429; coordinator 1.3 supports bounded cooldown]] - rationale - Crawler/Backend/Reddit/README_playwright.md
-- [[Worker hard deadline preserves streamed partial events]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[Candidate quality gate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Coherence c_v protocol]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[DBSCAN Euclidean density clustering]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Explanations and descriptive trends]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Gensim CoherenceModel]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Manifest and atomic artifact contract]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Multilingual MiniLM SBERT model card]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Multilingual SBERT encoder]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Overflow-window sentence encoding]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Silhouette and ARI evaluation]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - code - docs/machine-learning/SOCIAL_NLP.md
+- [[Twitter native root audit]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[UMAP projection]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Verified native root and parent context]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Weighted Ward topic reduction]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[beesense-sentence-clusters2]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[c-TF-IDF topic terms]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[prepare_excel (MachineLearningsocial_nlp.py)]] - code - docs/machine-learning/SOCIAL_NLP.md
+- [[scikit-learn DBSCAN documentation]] - document - docs/machine-learning/SOCIAL_NLP.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -49,10 +39,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
+- 10 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
+- 5 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
+- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 3 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 
 ## Top bridge nodes
-- [[SocialCrawlerSelenium Guide]] - degree 11, connects to 1 community
-- [[Reddit Playwright CLI runner]] - degree 6, connects to 1 community
-- [[Obsidian Crawler Selenium architecture]] - degree 5, connects to 1 community
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - degree 31, connects to 4 communities
+- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - degree 10, connects to 2 communities
+- [[Candidate quality gate]] - degree 5, connects to 1 community
+- [[Multilingual SBERT encoder]] - degree 5, connects to 1 community
+- [[Verified native root and parent context]] - degree 3, connects to 1 community

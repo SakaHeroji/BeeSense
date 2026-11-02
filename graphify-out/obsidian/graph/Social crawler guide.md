@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/SOCIAL_CRAWLER.md"
 type: "document"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Social crawler guide
@@ -15,4 +15,4 @@ tags:
 - [[SocialCrawler_1]] - `references` [EXTRACTED]
 - [[Twitter crawler guide]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

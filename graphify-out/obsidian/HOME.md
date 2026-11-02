@@ -7,7 +7,9 @@ tags: [beesense, dashboard]
 
 [[TwitterCrawler Scweet]] menambahkan class X/Twitter mandiri dengan konfigurasi percobaan 30 menit dan kontrak Excel yang sama. Kini terhubung ke SocialCrawler 1.7.0 dengan preset Twitter-only 3 jam/1.000 post, penggabungan native ID, NLP dan dashboard. Hasil uji live dicatat pada catatan tersebut.
 
-Snapshot aktif: **34.764 record unik, 20 topik, rata-rata c_v 0.424321**, 20 kalimat/deskripsi Gemini dan Excel 48.850 pasangan topik–kalimat. Lihat [[Twitter 20 Topik 20261102]]; angka lain di bawah adalah riwayat.
+Eksperimen lokal baru: [[Relevansi Konteks 20261102]] menyaring 10.496/53.332 kemunculan kalimat, lalu membentuk 20 topik dengan mean c_v 0,473339 dan 20 deskripsi Gemini dari keyword serta kalimat representatif. [Dashboard eksperimen](http://localhost:8502) menyediakan pembandingan sebelum/sesudah. Snapshot tersaring ber-Gemini kini menjadi default repository untuk publikasi; snapshot sebelum penyaringan tetap dipertahankan untuk pembandingan dan rollback.
+
+Arsip sebelum penyaringan: **34.764 record unik, 20 topik, rata-rata c_v 0.424321**, 20 kalimat/deskripsi Gemini dan Excel 48.850 pasangan topik–kalimat. Lihat [[Twitter 20 Topik 20261102]]; angka lain di bawah adalah riwayat.
 
 [[InstaloaderCrawler]] menjadi backend Instagram default SocialCrawler 1.6.0; catatannya memuat patch GraphQL web pengguna,
 uji Excel/dedup dan batas aksesnya. Detail hasil terbaru ada pada catatan tersebut.

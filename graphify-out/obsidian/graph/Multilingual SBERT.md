@@ -13,7 +13,7 @@ tags:
 ## Connections
 - [[Overflow window sentence encoding]] - `implements` [EXTRACTED]
 - [[Social NLP methodology note]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_3]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 - [[Verified embedding cache]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -11,7 +11,7 @@ tags:
 # thread_root_key
 
 ## Connections
-- [[SocialNLPClusterer_2]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[Workbook bound root sidecar]] - `rationale_for` [INFERRED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

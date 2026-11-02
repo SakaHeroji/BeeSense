@@ -15,7 +15,7 @@ tags:
 - [[Merged record lineage contract]] - `semantically_similar_to` [INFERRED]
 - [[Stored artifact Twitter dashboard]] - `references` [EXTRACTED]
 - [[Twitter retraining report 2 November 2026]] - `references` [EXTRACTED]
-- [[topic_narratives.csv_1]] - `references` [EXTRACTED]
+- [[topic_narratives.csv]] - `references` [EXTRACTED]
 - [[topic_sentences.xlsx]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

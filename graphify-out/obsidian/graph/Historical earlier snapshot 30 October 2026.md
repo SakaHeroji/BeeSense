@@ -13,6 +13,5 @@ tags:
 ## Connections
 - [[Dataset Dashboard note]] - `references` [EXTRACTED]
 - [[Historical Gemini publication 30 October 2026]] - `references` [EXTRACTED]
-- [[Historical dataset and model archives]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -2,7 +2,7 @@
 source_file: "tests/nlp/test_topic_narratives.py"
 type: "code"
 community: "Pengujian Narasi Gemini"
-location: "L50"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED

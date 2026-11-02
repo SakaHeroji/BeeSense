@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[MergeTests]] - `contains` [EXTRACTED]
-- [[SocialNLPClusterer]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
 - [[identity()]] - `imports` [EXTRACTED]
 - [[merge()]] - `imports` [EXTRACTED]
 - [[merge_social_datasets.py]] - `imports_from` [EXTRACTED]

@@ -12,7 +12,6 @@ tags:
 # validate_rows()
 
 ## Connections
-- [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - `references` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
 - [[build_prompt()]] - `calls` [EXTRACTED]
 - [[canonical()]] - `calls` [EXTRACTED]

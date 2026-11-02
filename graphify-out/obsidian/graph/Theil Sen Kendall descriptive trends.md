@@ -11,6 +11,6 @@ tags:
 # Theil Sen Kendall descriptive trends
 
 ## Connections
-- [[SocialNLPClusterer_3]] - `implements` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `implements` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

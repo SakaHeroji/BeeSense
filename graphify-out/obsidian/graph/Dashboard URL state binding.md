@@ -11,6 +11,6 @@ tags:
 # Dashboard URL state binding
 
 ## Connections
-- [[SocialNLPStreamlitApp_2]] - `implements` [EXTRACTED]
+- [[SocialNLPStreamlitApp]] - `implements` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

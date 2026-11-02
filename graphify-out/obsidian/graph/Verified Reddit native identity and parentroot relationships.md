@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Parsing Identitas Reddit"
+community: "Kontrak Record Reddit"
 location: "## Kontrak output Excel"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # Verified Reddit native identity and parent/root relationships
@@ -18,4 +18,4 @@ tags:
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit

@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp.json"
 type: "concept"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "$.output_dir"
 tags:
   - graphify/concept
   - graphify/INFERRED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # Active artifacts outputs/nlp_20261030_instagram_topics20_02
@@ -15,4 +15,4 @@ tags:
 - [[Active20-topic Instagram-inclusive model configuration]] - `references` [EXTRACTED]
 - [[Configured33034-record final merged workbook]] - `conceptually_related_to` [INFERRED]
 
-#graphify/concept #graphify/INFERRED #community/Konteks_dan_Provenance_Gemini
+#graphify/concept #graphify/INFERRED #community/Penggabungan_Dataset

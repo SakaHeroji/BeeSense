@@ -1,19 +1,20 @@
 ---
-source_file: "docs/machine-learning/SOCIAL_NLP.md"
+source_file: "docs/machine-learning/TWITTER_RETRAIN_20261102.md"
 type: "document"
-community: "Panduan Pipeline BeeSense"
+community: "Operasi dan Verifikasi BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # topic_narratives.csv
 
 ## Connections
-- [[Gemini topic narratives]] - `shares_data_with` [EXTRACTED]
-- [[NLP snapshot 30 October 2026 Instagram 500]] - `references` [EXTRACTED]
-- [[SocialNLPStreamlitApp_1]] - `references` [EXTRACTED]
-- [[Versioned model artifact contract]] - `references` [EXTRACTED]
+- [[Gemini 3.5 Flash Lite]] - `shares_data_with` [EXTRACTED]
+- [[Narrative CSV schema compatibility]] - `references` [EXTRACTED]
+- [[Stored artifact Twitter dashboard]] - `references` [EXTRACTED]
+- [[Twitter model artifact manifest]] - `references` [EXTRACTED]
+- [[beesense-topic-id2]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/document #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

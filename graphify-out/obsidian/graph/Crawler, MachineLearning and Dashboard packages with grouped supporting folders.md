@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "L9"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Crawler, MachineLearning and Dashboard packages with grouped supporting folders
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer]] - `references` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `references` [EXTRACTED]
+- [[SocialNLPStreamlitApp_1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

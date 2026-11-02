@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/RedditCrawler Reddrix.md"
 type: "rationale"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "# RedditCrawler Reddrix"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Reddrix trial preserves existing model and frontend boundaries
@@ -16,4 +16,4 @@ tags:
 - [[Integrated SocialCrawler Reddrix with thin Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[No databasemodelpersistent-contract migration]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

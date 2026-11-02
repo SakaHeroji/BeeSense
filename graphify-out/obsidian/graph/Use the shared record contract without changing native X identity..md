@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "rationale"
-community: "Eksekusi dan Ekspor Crawler"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L660"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Eksekusi_dan_Ekspor_Crawler
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Use the shared record contract without changing native X identity.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TwitterAdapter]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Eksekusi_dan_Ekspor_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

@@ -1,18 +1,20 @@
 ---
 type: community
 cohesion: 0.06
-members: 57
+members: 62
 ---
 
 # Worker Instaloader
 
 **Cohesion:** 0.06 - loosely connected
-**Members:** 57 nodes
+**Members:** 62 nodes
 
 ## Members
 - [[.__call__()]] - code - Crawler/Backend/instaloader_crawler.py
 - [[.__init__()_22]] - code - Crawler/Backend/instaloader_crawler.py
 - [[.__init__()_23]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.__init__()_25]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.__init__()_24]] - code - Crawler/Backend/instaloader_crawler.py
 - [[._operation()]] - code - Crawler/Backend/instaloader_crawler.py
 - [[.close()_2]] - code - Crawler/Backend/instaloader_crawler.py
 - [[.close()_1]] - code - Crawler/Backend/instaloader_crawler.py
@@ -32,9 +34,12 @@ members: 57
 - [[BrowserPatchTests]] - code - tests/crawler/test_instaloader_browser_patch.py
 - [[InstaloaderAdapter]] - code - Crawler/Backend/instaloader_crawler.py
 - [[InstaloaderCrawler]] - code - Crawler/Backend/instaloader_crawler.py
+- [[InstaloaderSettings]] - code - Crawler/Backend/instaloader_crawler.py
+- [[InstaloaderWorker]] - code - Crawler/Backend/instaloader_crawler.py
 - [[Keep server response bodies out of upstream CLI exception messages.]] - rationale - Crawler/Backend/instaloader_browser_patch.py
 - [[Load JSON cookies only; never unpickle a session or replay a password.]] - rationale - Crawler/Backend/instaloader_crawler.py
 - [[Observe all upstream sessions inside the dedicated, single-thread worker.      I]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[One subprocess and rate controller, with killable per-operation deadlines.]] - rationale - Crawler/Backend/instaloader_crawler.py
 - [[Prefer the library's GraphQL iterator, as upstream PR 2692 does.          Avoid]] - rationale - Crawler/Backend/instaloader_crawler.py
 - [[Runtime web GraphQL compatibility patch, adapted from the user's reference.  No]] - rationale - Crawler/Backend/instaloader_browser_patch.py
 - [[Separate backend; preserves the existing export and native-ID dedup logic.]] - rationale - Crawler/Backend/instaloader_crawler.py
@@ -76,16 +81,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 7 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
 - 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 2 edges to [[_COMMUNITY_Akuisisi YouTube]]
+- 3 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Worker Instaloader]]
-- 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit_2]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium]]
+- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 
 ## Top bridge nodes
-- [[instaloader_crawler.py]] - degree 22, connects to 4 communities
-- [[instaloader_worker()]] - degree 8, connects to 2 communities
-- [[instaloader_options()]] - degree 4, connects to 2 communities
-- [[_json()]] - degree 4, connects to 2 communities
+- [[instaloader_crawler.py]] - degree 22, connects to 3 communities
+- [[InstaloaderSettings]] - degree 7, connects to 2 communities
+- [[InstaloaderWorker]] - degree 9, connects to 1 community
+- [[instaloader_worker()]] - degree 8, connects to 1 community
 - [[.collect()]] - degree 8, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[Combined social workbook 20261102]] - `references` [EXTRACTED]
-- [[SocialCrawler_2]] - `references` [EXTRACTED]
+- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - `references` [EXTRACTED]
 - [[Twitter acquisition preset]] - `references` [EXTRACTED]
 - [[Twitter retraining report 2 November 2026]] - `references` [EXTRACTED]
 - [[Twitter twenty topic result note]] - `references` [EXTRACTED]

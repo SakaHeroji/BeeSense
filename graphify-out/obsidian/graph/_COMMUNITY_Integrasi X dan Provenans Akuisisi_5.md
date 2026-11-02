@@ -1,27 +1,25 @@
 ---
 type: community
 cohesion: 0.29
-members: 12
+members: 10
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
 **Cohesion:** 0.29 - loosely connected
-**Members:** 12 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[Combined social workbook 20261102]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Global native X identity]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Merged record lineage contract]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Native thread root explainability]] - rationale - graphify-out/obsidian/Twitter 20 Topik 20261102.md
-- [[Stored artifact Twitter dashboard]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Twitter acquisition report 2 November 2026]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Twitter model artifact manifest]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Twitter retraining report 2 November 2026]] - document - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Twitter twenty topic result note]] - document - graphify-out/obsidian/Twitter 20 Topik 20261102.md
-- [[X Twitter dashboard support]] - concept - graphify-out/obsidian/Twitter 20 Topik 20261102.md
-- [[native_roots.json_1]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[topic_sentences.xlsx]] - document - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Daily request cap overshoot]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Deadline bounded pool cooldown]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Deadline preserving checkpoint resume]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Five batch BeeSense audit outputs]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Observed Twitter HTTP telemetry]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Scweet]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Scweet rate limiting documentation]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Twenty five query parity]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Twitter acquisition preset]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Verified Twitter acquisition 2 November 2026]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,16 +29,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
-- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
-- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
-- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_4]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 
 ## Top bridge nodes
-- [[Combined social workbook 20261102]] - degree 8, connects to 2 communities
-- [[Twitter acquisition report 2 November 2026]] - degree 6, connects to 2 communities
-- [[topic_sentences.xlsx]] - degree 4, connects to 2 communities
-- [[Twitter model artifact manifest]] - degree 6, connects to 1 community
-- [[Twitter retraining report 2 November 2026]] - degree 6, connects to 1 community
+- [[Verified Twitter acquisition 2 November 2026]] - degree 8, connects to 1 community
+- [[Scweet]] - degree 4, connects to 1 community
+- [[Twitter acquisition preset]] - degree 4, connects to 1 community

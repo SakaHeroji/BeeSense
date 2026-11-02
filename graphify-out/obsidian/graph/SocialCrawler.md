@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Eksekusi dan Ekspor Crawler"
+community: "Koordinator Backend Sosial"
 location: "L809"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksekusi_dan_Ekspor_Crawler
+  - community/Koordinator_Backend_Sosial
 ---
 
 # SocialCrawler
@@ -110,4 +110,4 @@ tags:
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 - [[test_twitter_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksekusi_dan_Ekspor_Crawler
+#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial

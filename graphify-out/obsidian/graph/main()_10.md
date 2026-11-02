@@ -1,20 +1,18 @@
 ---
-source_file: "Dashboard/app.py"
+source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "app.py"
-location: "L2280"
+community: "Penggabungan Dataset"
+location: "L399"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apppy
+  - community/Penggabungan_Dataset
 ---
 
 # main()
 
 ## Connections
-- [[.render()_1]] - `calls` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `calls` [EXTRACTED]
-- [[app.py]] - `contains` [EXTRACTED]
-- [[streamlit_apps.py]] - `imports` [EXTRACTED]
+- [[merge()]] - `calls` [EXTRACTED]
+- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apppy
+#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Worker Reddrix"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # social_crawler.py
@@ -47,4 +47,4 @@ tags:
 - [[test_social_crawler_selenium.py]] - `imports_from` [EXTRACTED]
 - [[test_twitter_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

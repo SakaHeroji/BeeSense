@@ -44,9 +44,8 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Batas Integrasi Produksi]]
+- 3 edges to [[_COMMUNITY_Rencana Produk dan Survei]]
 - 2 edges to [[_COMMUNITY_Persyaratan Produk Crawler]]
-- 2 edges to [[_COMMUNITY_Rencana Produk dan Survei]]
-- 1 edge to [[_COMMUNITY_Rencana Layanan Backend]]
 
 ## Top bridge nodes
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - degree 14, connects to 3 communities

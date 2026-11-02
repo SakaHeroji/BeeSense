@@ -12,8 +12,7 @@ tags:
 # encoder()
 
 ## Connections
-- [[._encode_sbert()]] - `calls` [INFERRED]
-- [[.setUpClass()_3]] - `indirect_call` [INFERRED]
+- [[.setUpClass()_2]] - `indirect_call` [INFERRED]
 - [[.setUpClass()_1]] - `indirect_call` [INFERRED]
 - [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - `indirect_call` [INFERRED]
 - [[.test_coherence_search_evaluates_all_near_ties_and_skips_lower_scores()]] - `indirect_call` [INFERRED]

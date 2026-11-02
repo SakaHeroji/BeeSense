@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Encoding dan Penyimpanan Model"
+community: "Pengujian Narasi Gemini"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # Verify published source workbooks and the dashboard artifact bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_dashboard_data.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

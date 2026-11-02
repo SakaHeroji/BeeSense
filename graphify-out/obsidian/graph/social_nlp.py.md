@@ -1,31 +1,36 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Pengujian Narasi Gemini"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # social_nlp.py
 
 ## Connections
-- [[SocialNLPClusterer]] - `contains` [EXTRACTED]
+- [[ContextRelevanceFilter]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `contains` [EXTRACTED]
 - [[app.py]] - `imports_from` [EXTRACTED]
 - [[file_hash()]] - `contains` [EXTRACTED]
+- [[filter_context_relevance.py]] - `imports_from` [EXTRACTED]
+- [[generate_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[json_write()]] - `contains` [EXTRACTED]
-- [[main()_11]] - `contains` [EXTRACTED]
+- [[main()_12]] - `contains` [EXTRACTED]
+- [[relevance_dashboard.py]] - `imports_from` [EXTRACTED]
+- [[test_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports_from` [EXTRACTED]
 - [[test_dataset_merge.py]] - `imports_from` [EXTRACTED]
+- [[test_relevance_runtime.py]] - `imports_from` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_explanations.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[topic_narratives.py]] - `imports` [EXTRACTED]
 - [[topic_sentence_export.py]] - `imports_from` [EXTRACTED]
-- [[twitter_roots()]] - `imports` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

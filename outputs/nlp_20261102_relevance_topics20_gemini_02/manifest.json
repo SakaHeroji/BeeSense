@@ -1,0 +1,23 @@
+{
+  "schema_version": "beesense-sentence-clusters:2",
+  "extensions": [
+    "beesense-context-relevance:1",
+    "gemini-topic-narratives:2"
+  ],
+  "files_sha256": {
+    "embeddings.npy": "f285ed55735f54008703558843202b80e3ebf1c562f340146ff1e68cdfaba919",
+    "summary.json": "e6643ef9a8573a69c045d37cb848ca4a35e792a59c35846e8e19a57327d48f0c",
+    "social_data.parquet": "37d760f482496d3f63bcb8aabdf6e4acf1fbd3a779cd7c78700a7d9d0a8e88de",
+    "comparison.json": "5cc4d3466d5aa898085e4d409371c86ba9ae84175c386031b035a98f2e901f39",
+    "graph.json": "dd789fe92a8c6a784bc91071891e591d2bf1af765b0ddf2398b4e8fecabe5c15",
+    "relevance_report.json": "1a0fa775f6fe46906490d5b5991797349ac587393aad03edd4557e2588c19fe7",
+    "umap_embeddings.npz": "17691f253d3d442766acab5e751aafa52290b85c5298e7e9a31f664fa37caf5d",
+    "relevance_decisions.parquet": "4c5d2efd1d6038352c40c0ac10a4ec48a4cdd0bd9e56a06b08a8c7cfe089ae2b",
+    "skipped.parquet": "8d66d4e3c6ec8c539d5558fac8a43a51e2743dbabd47dfa1df19d083224b4e40",
+    "sentences.parquet": "64e3d707ae7d7cb17a5fe4f54bbe2a126b5de4488bc74c79b7c96660eb7bf7b1",
+    "centroids.npy": "8fda93904bd017db54f50fcec1a7ff9b30a52c553edbcd02071ff1691b1f9dba",
+    "topic_narratives.csv": "6e3532334e5a5b9aa7439b695e82e75ca34a900fca3b3d2d301b49e7981b5a29",
+    "topics.json": "c36db93d7c98c290861a15dd14e4c51be49bf8a3b5935158fbb00336a2f8c5d7",
+    "occurrences.parquet": "bcade8bdfd5e733d2cca9cb6f90259016f8f994d405c218466a4d70b2ff5f788"
+  }
+}

@@ -61,6 +61,24 @@ def percent(value):
     return format_percent(float(value), format="0.0%", locale="id_ID")
 
 
+def relevance_csv(frame):
+    """Keep original audit data intact; escape spreadsheet formulas on export."""
+    safe = frame.copy()
+    for column in safe.select_dtypes(include=["object", "string"]).columns:
+        safe[column] = safe[column].map(
+            lambda value: (
+                "'" + value
+                if isinstance(value, str)
+                and (
+                    value.lstrip(" \t\r\n").startswith(("=", "+", "-", "@"))
+                    or value.startswith(("\t", "\r", "\n"))
+                )
+                else value
+            )
+        )
+    return safe.to_csv(index=False).encode("utf-8-sig")
+
+
 @st.cache_data(show_spinner=False)
 def _graph_positions(ids, edges):
     """Keep the full-model layout stable while volume and edge filters change."""
@@ -132,6 +150,10 @@ class SocialNLPStreamlitApp:
             run_dir or os.environ.get("BEESENSE_NLP_RUN_DIR") or config["output_dir"]
         )
         self.run_dir = directory if directory.is_absolute() else ROOT / directory
+        baseline = os.environ.get("BEESENSE_BASELINE_RUN_DIR")
+        self.baseline_dir = Path(baseline) if baseline else None
+        if self.baseline_dir is not None and not self.baseline_dir.is_absolute():
+            self.baseline_dir = ROOT / self.baseline_dir
 
     @staticmethod
     def filter_occurrences(
@@ -1953,6 +1975,87 @@ class SocialNLPStreamlitApp:
 
     def _methods(self, data):
         summary = data["summary"]
+        relevance = data.get("relevance_report")
+        if relevance:
+            st.header("Penyaringan relevansi konteks")
+            st.write(relevance["configuration"]["scope"])
+            st.caption(
+                "Keyword pencarian: "
+                + ", ".join(relevance["configuration"]["keywords"])
+            )
+            counts = relevance["decisions"]
+            cols = st.columns(4)
+            for col, key, label in zip(
+                cols,
+                ["relevant", "generic", "irrelevant", "uncertain"],
+                [
+                    "Relevan · masuk model",
+                    "Interaksi umum",
+                    "Di luar lingkup",
+                    "Meragukan",
+                ],
+            ):
+                col.metric(label, number(counts.get(key, 0)))
+            st.info(
+                "Label relevansi dibuat otomatis dari kemiripan semantik terhadap contoh konteks. "
+                "Skor cosine bukan probabilitas dan belum divalidasi dengan label manusia. "
+                "Kalimat meragukan dipisahkan; data sumber tetap tersimpan."
+            )
+            by_platform = pd.DataFrame(relevance["per_platform"]).T.fillna(0)
+            st.dataframe(
+                by_platform.rename(
+                    columns={
+                        "relevant": "Relevan",
+                        "generic": "Interaksi umum",
+                        "irrelevant": "Di luar lingkup",
+                        "uncertain": "Meragukan",
+                    }
+                ),
+                width="stretch",
+            )
+            decisions = data["relevance_decisions"]
+            with st.expander("Audit keputusan relevansi"):
+                choice = st.selectbox(
+                    "Kategori keputusan",
+                    ["relevant", "generic", "irrelevant", "uncertain"],
+                    format_func={
+                        "relevant": "Relevan",
+                        "generic": "Interaksi umum",
+                        "irrelevant": "Di luar lingkup",
+                        "uncertain": "Meragukan",
+                    }.get,
+                    key="relevance_decision",
+                )
+                st.dataframe(
+                    decisions[decisions.decision == choice][
+                        [
+                            "sentence",
+                            "platform",
+                            "relevant_score",
+                            "generic_score",
+                            "irrelevant_score",
+                            "context_used",
+                            "context_quality",
+                            "reason",
+                            "url",
+                        ]
+                    ].head(200),
+                    hide_index=True,
+                    width="stretch",
+                )
+                st.download_button(
+                    "Unduh audit relevansi CSV",
+                    relevance_csv(decisions),
+                    file_name="audit_relevansi.csv",
+                    mime="text/csv",
+                    key="download_relevance_audit",
+                )
+            st.caption(
+                f"{number(relevance['accepted_occurrences'])} dari {number(relevance['total_occurrences'])} "
+                "kemunculan kalimat lolos penyaringan. Coherence berikut dihitung pada korpus yang lolos; "
+                "skor korpus sebelum dan sesudah penyaringan tidak langsung sebanding."
+            )
+            st.divider()
         st.header("Seberapa kuat kelompoknya?")
         st.write(
             "Hasil ini membantu eksplorasi percakapan. Label topik dibuat otomatis; belum ada label acuan untuk mengukur akurasi semantik."
@@ -2134,6 +2237,14 @@ class SocialNLPStreamlitApp:
             initial_sidebar_state="expanded",
         )
         self._css()
+        if self.baseline_dir is not None:
+            snapshot = st.sidebar.radio(
+                "Bandingkan snapshot",
+                ["Setelah penyaringan", "Sebelum penyaringan"],
+                key="snapshot_comparison",
+            )
+            if snapshot == "Sebelum penyaringan":
+                self.run_dir = self.baseline_dir
         title_slot = st.empty()
         st.write(
             "Lihat topik yang muncul, bandingkan platform, lalu telusuri kalimat aslinya."
@@ -2168,6 +2279,16 @@ class SocialNLPStreamlitApp:
             else ", ".join(labels[:-1]) + " & " + labels[-1]
         )
         title_slot.title("Percakapan " + title)
+        if data.get("relevance_report"):
+            report = data["relevance_report"]
+            st.info(
+                "Model eksperimen · penyaringan relevansi konteks: "
+                + number(report["accepted_occurrences"])
+                + " dari "
+                + number(report["total_occurrences"])
+                + " kalimat diterima. "
+                "Snapshot sebelum penyaringan tetap tersedia untuk pembandingan."
+            )
         pipeline_note = None
         if (
             data["summary"]["selected"].get("parameters", {}).get("algorithm")

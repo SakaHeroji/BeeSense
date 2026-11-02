@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
-location: "L63"
+community: "Pengujian Narasi Gemini"
+location: "L64"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # file_hash()
@@ -14,13 +14,14 @@ tags:
 ## Connections
 - [[._encode_sbert()]] - `calls` [EXTRACTED]
 - [[._reduce_embeddings()]] - `calls` [EXTRACTED]
-- [[.encode()]] - `calls` [EXTRACTED]
+- [[.encode()_1]] - `calls` [EXTRACTED]
 - [[.explain_topics()]] - `calls` [EXTRACTED]
 - [[.export_compact()]] - `calls` [INFERRED]
 - [[.finish()]] - `calls` [INFERRED]
 - [[.finish()_1]] - `calls` [INFERRED]
 - [[.load_explanations()]] - `calls` [EXTRACTED]
 - [[.load_run()]] - `calls` [EXTRACTED]
+- [[.narrative_source()]] - `calls` [EXTRACTED]
 - [[.prepare_excel()]] - `calls` [EXTRACTED]
 - [[.render()_1]] - `calls` [EXTRACTED]
 - [[.save()]] - `calls` [EXTRACTED]
@@ -29,9 +30,12 @@ tags:
 - [[.test_csv_manifest_and_roundtrip_bind_every_topic_and_keyword_weight()]] - `calls` [EXTRACTED]
 - [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - `calls` [EXTRACTED]
 - [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - `calls` [EXTRACTED]
+- [[.test_narrative_snapshot_preserves_fitted_files_and_original_bundle()]] - `calls` [EXTRACTED]
 - [[.test_saved_run_coherence_reproduces_the_published_score()]] - `calls` [EXTRACTED]
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `calls` [EXTRACTED]
 - [[app.py]] - `imports` [EXTRACTED]
+- [[enrich_run()]] - `calls` [EXTRACTED]
+- [[generate_topic_narratives.py]] - `imports` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 - [[published_crawl_files()]] - `calls` [EXTRACTED]
 - [[published_source_files()]] - `calls` [EXTRACTED]
@@ -43,4 +47,4 @@ tags:
 - [[verify()_1]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

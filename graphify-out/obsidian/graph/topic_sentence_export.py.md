@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Prepare an original-sentence export and seal it into a new NLP snapshot.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
 - [[export_payload()]] - `contains` [EXTRACTED]
 - [[file_hash()]] - `imports` [EXTRACTED]
 - [[json_write()]] - `imports` [EXTRACTED]

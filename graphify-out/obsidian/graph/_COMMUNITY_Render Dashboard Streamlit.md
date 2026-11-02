@@ -1,27 +1,22 @@
 ---
 type: community
-cohesion: 0.20
-members: 20
+cohesion: 0.30
+members: 15
 ---
 
 # Render Dashboard Streamlit
 
-**Cohesion:** 0.20 - loosely connected
-**Members:** 20 nodes
+**Cohesion:** 0.30 - loosely connected
+**Members:** 15 nodes
 
 ## Members
 - [[._chart_style()]] - code - Dashboard/app.py
 - [[._explanation_detail()]] - code - Dashboard/app.py
-- [[._gemini_inputs()]] - code - Dashboard/app.py
-- [[._methods()]] - code - Dashboard/app.py
 - [[._metrics()]] - code - Dashboard/app.py
 - [[._overview()]] - code - Dashboard/app.py
-- [[._selected_context()]] - code - Dashboard/app.py
 - [[._topic_detail()]] - code - Dashboard/app.py
 - [[.coverage_figure()]] - code - Dashboard/app.py
 - [[.explanation_figure()]] - code - Dashboard/app.py
-- [[.monthly_summary()]] - code - Dashboard/app.py
-- [[.platform_summary()]] - code - Dashboard/app.py
 - [[.ranking_figure()]] - code - Dashboard/app.py
 - [[.source_figure()]] - code - Dashboard/app.py
 - [[.term_figure()]] - code - Dashboard/app.py
@@ -39,15 +34,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_thread_url]]
-- 10 edges to [[_COMMUNITY_app.py]]
-- 4 edges to [[_COMMUNITY_Penjelasan Topik Dashboard]]
-- 3 edges to [[_COMMUNITY_.topic_figure]]
+- 17 edges to [[_COMMUNITY_thread_url]]
+- 10 edges to [[_COMMUNITY_app.py_1]]
+- 6 edges to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_Pengujian Analisis Dashboard]]
 
 ## Top bridge nodes
 - [[number()_1]] - degree 18, connects to 3 communities
-- [[._overview()]] - degree 11, connects to 3 communities
-- [[._topic_detail()]] - degree 12, connects to 2 communities
-- [[.term_figure()]] - degree 6, connects to 2 communities
-- [[._selected_context()]] - degree 5, connects to 2 communities
+- [[._overview()]] - degree 11, connects to 2 communities
+- [[._topic_detail()]] - degree 11, connects to 2 communities
+- [[._metrics()]] - degree 4, connects to 2 communities
+- [[percent()]] - degree 9, connects to 1 community

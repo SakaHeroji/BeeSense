@@ -2,7 +2,7 @@
 
 ## Snapshot terbaru
 
-Konfigurasi aktif kini memakai `outputs/nlp_20261030_instagram_500_topics20_gemini_02` dari `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`: 20 topik, rata-rata c_v 0,4386500025. Excel snapshot lengkap berisi 45.556 pasangan topik–kalimat asli unik; run ini juga memuat 20 terjemahan/ringkasan Gemini dan deskripsinya. Lihat [README](../../README.md) dan metode Social NLP untuk data serta batas interpretasi. Catatan hasil/narasi Gemini berikut merupakan riwayat snapshot sebelumnya.
+Konfigurasi aktif kini memakai `outputs/nlp_20261102_relevance_topics20_gemini_02/`: 20 topik tersaring, mean c_v 0,4733391691 dan 20 narasi Gemini dari 10 keyword serta 10 kalimat representatif per topik. Lihat [README](../../README.md) dan [runbook relevansi](../machine-learning/CONTEXT_RELEVANCE.md) untuk audit serta rollback. Snapshot sebelumnya tetap tersedia; bagian berikut merupakan riwayat.
 
 
 `SocialNLPClusterer` 2.4 menambahkan ringkasan berbahasa Indonesia setelah training,

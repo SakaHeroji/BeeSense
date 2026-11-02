@@ -1,29 +1,28 @@
 ---
 type: community
-cohesion: 0.20
-members: 14
+cohesion: 0.26
+members: 13
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.20 - loosely connected
-**Members:** 14 nodes
+**Cohesion:** 0.26 - loosely connected
+**Members:** 13 nodes
 
 ## Members
-- [[Credential and state isolation]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Native parent preservation]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Network pacing and root cache]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Persistent Scweet worker]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Persistent account state]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Pool cooldown wait]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Scweet 5.8.2_1]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[Social crawler guide]] - document - docs/crawler/SOCIAL_CRAWLER.md
-- [[Terminal access barriers]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Twitter crawler guide]] - document - docs/crawler/TWITTER_CRAWLER.md
-- [[Twitter live trial 31 October 2026]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[Twitter thirty minute preset]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[TwitterCoordinatorWorker_1]] - code - docs/crawler/TWITTER_CRAWLER.md
-- [[TwitterCrawler_1]] - code - docs/crawler/TWITTER_CRAWLER.md
+- [[Combined social workbook 20261102]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Comment sentence eligibility]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Global native X identity]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Merged record lineage contract]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Native thread root explainability]] - rationale - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[Stored artifact Twitter dashboard]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Twitter acquisition report 2 November 2026]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Twitter model artifact manifest]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Twitter retraining report 2 November 2026]] - document - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Twitter twenty topic result note]] - document - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[X Twitter dashboard support]] - concept - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[native_roots.json_1]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[topic_sentences.xlsx]] - document - docs/machine-learning/TWITTER_RETRAIN_20261102.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,12 +32,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_9]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
+- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
+- 2 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 
 ## Top bridge nodes
-- [[TwitterCrawler_1]] - degree 10, connects to 2 communities
-- [[TwitterCoordinatorWorker_1]] - degree 5, connects to 2 communities
-- [[Pool cooldown wait]] - degree 4, connects to 1 community
-- [[Social crawler guide]] - degree 3, connects to 1 community
+- [[Twitter acquisition report 2 November 2026]] - degree 6, connects to 2 communities
+- [[Combined social workbook 20261102]] - degree 7, connects to 1 community
+- [[Twitter model artifact manifest]] - degree 6, connects to 1 community
+- [[Twitter retraining report 2 November 2026]] - degree 6, connects to 1 community
+- [[Stored artifact Twitter dashboard]] - degree 4, connects to 1 community

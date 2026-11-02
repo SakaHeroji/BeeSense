@@ -68,17 +68,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit_2]]
-- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit_1]]
-- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit_4]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit_3]]
+- 7 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
-- 1 edge to [[_COMMUNITY_Konteks dan Provenance Gemini]]
+- 1 edge to [[_COMMUNITY_Penggabungan Dataset]]
 
 ## Top bridge nodes
-- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - degree 23, connects to 4 communities
-- [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 2 communities
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - degree 23, connects to 3 communities
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - degree 19, connects to 1 community
+- [[Chrome backend selected by same standalone InstagramCrawler class]] - degree 10, connects to 1 community
 - [[Historical interruptedChrome trial before1.5integration]] - degree 5, connects to 1 community
 - [[Offline testscontext checks do not establish live Instagram trial success]] - degree 3, connects to 1 community

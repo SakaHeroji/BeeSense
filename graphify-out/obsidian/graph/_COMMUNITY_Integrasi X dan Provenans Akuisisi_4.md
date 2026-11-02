@@ -1,27 +1,27 @@
 ---
 type: community
-cohesion: 0.27
+cohesion: 0.21
 members: 12
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.27 - loosely connected
+**Cohesion:** 0.21 - loosely connected
 **Members:** 12 nodes
 
 ## Members
-- [[._baseline()_1]] - code - Crawler/Backend/twitter_crawler.py
-- [[._searches()]] - code - Crawler/Backend/twitter_crawler.py
-- [[.close()_6]] - code - Crawler/Backend/twitter_crawler.py
-- [[.plan()_5]] - code - Crawler/Backend/twitter_crawler.py
-- [[.run()_4]] - code - Crawler/Backend/twitter_crawler.py
-- [[Bounded newest-first date windows, shared by both entry points.]] - rationale - Crawler/Backend/twitter_crawler.py
-- [[Scweet-only trial; uses the existing shared sink, filters and Excel format.]] - rationale - Crawler/Backend/twitter_crawler.py
-- [[SocialExportMixin_3]] - code
-- [[TwitterCrawler]] - code - Crawler/Backend/twitter_crawler.py
-- [[main()_9]] - code - Crawler/Backend/twitter_crawler.py
-- [[search_targets()]] - code - Crawler/Backend/twitter_crawler.py
-- [[upstream_version()_2]] - code - Crawler/Backend/twitter_crawler.py
+- [[Bounded reusable radius graph]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[DBSCAN]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[DBSCAN source cluster provenance]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Dual projection stability evaluation]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Dual seed UMAP]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Internal evaluation interpretation limits]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[MMR diverse source evidence]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[Sentence preparation provenance]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Sentence weighted Ward reduction]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[SocialNLPClusterer_1]] - code - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[Theil Sen Kendall descriptive trends]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[Verified Twitter twenty topic fit]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,16 +31,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
-- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_11]]
-- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_8]]
-- 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_9]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
+- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_4]]
 
 ## Top bridge nodes
-- [[TwitterCrawler]] - degree 11, connects to 3 communities
-- [[.close()_6]] - degree 7, connects to 3 communities
-- [[upstream_version()_2]] - degree 5, connects to 3 communities
-- [[.run()_4]] - degree 8, connects to 2 communities
-- [[search_targets()]] - degree 4, connects to 2 communities
+- [[SocialNLPClusterer_1]] - degree 10, connects to 3 communities
+- [[Verified Twitter twenty topic fit]] - degree 7, connects to 2 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "## Display adaptif macOS dan Linux"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Adaptive display v1.1.0 auto platform policy
@@ -24,4 +24,4 @@ tags:
 - [[Tracked reddrix.display_mode=auto]] - `conceptually_related_to` [EXTRACTED]
 - [[resolve_reddrix_display()]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import json
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -17,6 +18,7 @@ from streamlit.testing.v1 import AppTest
 
 from MachineLearning import topic_narratives as narratives
 from MachineLearning.social_nlp import ROOT, SocialNLPClusterer, file_hash
+from scripts.generate_topic_narratives import enrich_run
 
 
 def response():
@@ -419,6 +421,80 @@ class GeminiArtifactTests(unittest.TestCase):
                 narratives.CSV_NAME
             ],
         )
+
+    def narrative_source(self, root):
+        """A visibly synthetic fixture exercising the saved-bundle path."""
+        source = Path(root) / "source"
+        shutil.copytree(self.output, source)
+        summary_path = source / "summary.json"
+        summary = json.loads(summary_path.read_text())
+        summary["synthetic"] = False  # Exercise the real-run gate in isolation.
+        summary_path.write_text(json.dumps(summary))
+        manifest_path = source / "manifest.json"
+        manifest = json.loads(manifest_path.read_text())
+        manifest["files_sha256"]["summary.json"] = file_hash(summary_path)
+        manifest_path.write_text(json.dumps(manifest))
+        data = SocialNLPClusterer.load_run(source)
+        return source, data
+
+    def test_narrative_snapshot_preserves_fitted_files_and_original_bundle(self):
+        with tempfile.TemporaryDirectory() as root:
+            source, data = self.narrative_source(root)
+            output = Path(root) / "enriched"
+            before = {p.name: file_hash(p) for p in source.iterdir()}
+            with (
+                patch.object(
+                    narratives, "generate", return_value=data["topic_narratives"]
+                ),
+                patch.object(
+                    SocialNLPClusterer,
+                    "fit_excel",
+                    side_effect=AssertionError("No refit"),
+                ),
+            ):
+                enrich_run(source, output, data["summary"]["config"])
+            saved = SocialNLPClusterer.load_run(output)
+            self.assertEqual(len(saved["topic_narratives"]), 20)
+            self.assertEqual(
+                saved["summary"]["coherence"], data["summary"]["coherence"]
+            )
+            for name, expected in before.items():
+                self.assertEqual(file_hash(source / name), expected)
+                if name not in {"summary.json", "manifest.json"}:
+                    self.assertEqual(file_hash(output / name), expected)
+            self.assertEqual(
+                saved["summary"]["topic_narratives"]["derived_from_manifest_sha256"],
+                before["manifest.json"],
+            )
+            with self.assertRaises(FileExistsError):
+                enrich_run(source, output, data["summary"]["config"])
+
+    def test_narrative_snapshot_gate_and_source_changes_fail_before_publication(self):
+        with tempfile.TemporaryDirectory() as root:
+            source, data = self.narrative_source(root)
+            output = Path(root) / "enriched"
+            with patch.object(narratives, "generate") as request:
+                with self.assertRaisesRegex(ValueError, "real fitted run"):
+                    enrich_run(self.output, output, data["summary"]["config"])
+                disabled = {
+                    **data["summary"]["config"],
+                    "gemini": {**data["summary"]["config"]["gemini"], "enabled": False},
+                }
+                with self.assertRaisesRegex(ValueError, "Enable Gemini"):
+                    enrich_run(source, output, disabled)
+                with self.assertRaisesRegex(ValueError, "outside"):
+                    enrich_run(source, source / "nested", data["summary"]["config"])
+                request.assert_not_called()
+
+            def changed_source(*args, **kwargs):
+                (source / "topics.json").write_text("[]")
+                return data["topic_narratives"]
+
+            with patch.object(narratives, "generate", side_effect=changed_source):
+                with self.assertRaisesRegex(ValueError, "Source artifact changed"):
+                    enrich_run(source, output, data["summary"]["config"])
+            self.assertFalse(output.exists())
+            self.assertFalse(list(Path(root).glob(".nlp-narratives-*")))
 
     def test_dashboard_displays_generated_sentence_without_network_or_training(self):
         with (

@@ -12,8 +12,8 @@ tags:
 # Explainable Topics Guide
 
 ## Connections
-- [[BeeSense Dashboard Guide]] - `shares_data_with` [EXTRACTED]
 - [[Maximal Marginal Relevance]] - `references` [EXTRACTED]
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - `shares_data_with` [EXTRACTED]
 - [[Supported Descriptive Topic Trends]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

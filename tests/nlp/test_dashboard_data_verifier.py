@@ -5,7 +5,63 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
+import pandas as pd
+
 from scripts import verify_dashboard_data as verifier
+
+
+class PublishedRelevanceTests(unittest.TestCase):
+    def setUp(self):
+        workspace = tempfile.TemporaryDirectory()
+        self.addCleanup(workspace.cleanup)
+        self.root = Path(workspace.name)
+        self.decisions = pd.DataFrame(
+            [
+                {"occurrence_id": "one", "sentence_id": "s1", "decision": "relevant"},
+                {"occurrence_id": "two", "sentence_id": "s2", "decision": "uncertain"},
+            ]
+        )
+        self.report = {
+            "source_sha256": "a" * 64,
+            "total_occurrences": 2,
+            "accepted_occurrences": 1,
+            "accepted_unique_sentences": 1,
+            "decisions": {"relevant": 1, "uncertain": 1},
+        }
+        self.decisions.to_parquet(
+            self.root / "relevance_decisions.parquet", index=False
+        )
+        self.decisions.iloc[:1].to_parquet(
+            self.root / "filtered_sentences.parquet", index=False
+        )
+        (self.root / "relevance_report.json").write_text(json.dumps(self.report))
+        manifest = {
+            "schema": "beesense-context-relevance:1",
+            "files_sha256": {
+                p.name: verifier.file_hash(p) for p in self.root.iterdir()
+            },
+        }
+        (self.root / "manifest.json").write_text(json.dumps(manifest))
+        self.data = {
+            "summary": {"source_sha256": "a" * 64},
+            "relevance_decisions": self.decisions.copy(),
+            "relevance_report": self.report.copy(),
+        }
+
+    def test_published_filter_is_bound_to_the_fitted_decisions_and_source(self):
+        allowed = verifier.published_relevance_files(self.root, self.data)
+        self.assertEqual(allowed, set(self.root.iterdir()))
+        self.data["relevance_decisions"].loc[0, "decision"] = "uncertain"
+        with self.assertRaisesRegex(ValueError, "differs from the active model"):
+            verifier.published_relevance_files(self.root, self.data)
+        self.data.pop("relevance_decisions")
+        with self.assertRaisesRegex(ValueError, "absent"):
+            verifier.published_relevance_files(self.root, self.data)
+
+    def test_tampered_relevance_file_cannot_be_published(self):
+        (self.root / "filtered_sentences.parquet").write_bytes(b"tampered")
+        with self.assertRaisesRegex(ValueError, "checksum mismatch"):
+            verifier.published_relevance_files(self.root, self.data)
 
 
 class NativeDatasetTests(unittest.TestCase):

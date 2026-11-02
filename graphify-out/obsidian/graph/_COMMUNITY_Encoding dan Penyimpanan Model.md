@@ -1,15 +1,16 @@
 ---
 type: community
-cohesion: 0.12
-members: 26
+cohesion: 0.11
+members: 30
 ---
 
 # Encoding dan Penyimpanan Model
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 26 nodes
+**Cohesion:** 0.11 - loosely connected
+**Members:** 30 nodes
 
 ## Members
+- [[._apply_context_relevance()]] - code - MachineLearning/social_nlp.py
 - [[._cache_dir()]] - code - MachineLearning/social_nlp.py
 - [[._ctfidf_terms()]] - code - MachineLearning/social_nlp.py
 - [[._encode_sbert()]] - code - MachineLearning/social_nlp.py
@@ -24,9 +25,11 @@ members: 26
 - [[.build_topic_graph()]] - code - MachineLearning/social_nlp.py
 - [[.compare()]] - code - MachineLearning/social_nlp.py
 - [[.describe_topics()]] - code - MachineLearning/social_nlp.py
-- [[.encode()]] - code - MachineLearning/social_nlp.py
+- [[.encode()_1]] - code - MachineLearning/social_nlp.py
+- [[.evaluate_run_coherence()]] - code - MachineLearning/social_nlp.py
 - [[.fit_excel()]] - code - MachineLearning/social_nlp.py
 - [[.generate_topic_narratives()]] - code - MachineLearning/social_nlp.py
+- [[.prepare_excel()]] - code - MachineLearning/social_nlp.py
 - [[.save()]] - code - MachineLearning/social_nlp.py
 - [[.score_coherence()]] - code - MachineLearning/social_nlp.py
 - [[Derive Indonesian Gemini labels after topic count and coherence pass.]] - rationale - MachineLearning/social_nlp.py
@@ -36,6 +39,7 @@ members: 26
 - [[Reuse immutable SBERT features only after verifying datamodel identity.]] - rationale - MachineLearning/social_nlp.py
 - [[Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry.]] - rationale - MachineLearning/social_nlp.py
 - [[Use the same class TF-IDF vocabulary for selection and publication.]] - rationale - MachineLearning/social_nlp.py
+- [[main()_12]] - code - MachineLearning/social_nlp.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,16 +49,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 9 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
-- 3 edges to [[_COMMUNITY_topic_sentence_export.py]]
-- 3 edges to [[_COMMUNITY_Bukti Ekstraktif Topik_1]]
-- 1 edge to [[_COMMUNITY_Konteks dan Provenance Gemini]]
-- 1 edge to [[_COMMUNITY_Bukti Ekstraktif Topik]]
+- 29 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 10 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 4 edges to [[_COMMUNITY_topic_sentence_export.py]]
+- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
 
 ## Top bridge nodes
-- [[.encode()]] - degree 13, connects to 5 communities
-- [[._event()_1]] - degree 11, connects to 3 communities
+- [[.encode()_1]] - degree 13, connects to 3 communities
+- [[main()_12]] - degree 10, connects to 3 communities
 - [[._reduce_embeddings()]] - degree 7, connects to 3 communities
 - [[.save()]] - degree 7, connects to 3 communities
-- [[.fit_excel()]] - degree 6, connects to 3 communities
+- [[.prepare_excel()]] - degree 9, connects to 2 communities

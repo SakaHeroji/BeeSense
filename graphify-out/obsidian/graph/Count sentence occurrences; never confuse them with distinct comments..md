@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: ".topic_figure"
-location: "L397"
+community: "app.py"
+location: "L419"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/topic_figure
+  - community/apppy
 ---
 
 # Count sentence occurrences; never confuse them with distinct comments.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.topic_summary()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/topic_figure
+#graphify/rationale #graphify/EXTRACTED #community/apppy

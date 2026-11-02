@@ -11,6 +11,7 @@ tags:
 # Coherence c_v protocol
 
 ## Connections
-- [[Candidate quality gate]] - `references` [EXTRACTED]
+- [[Candidate quality gate]] - `rationale_for` [EXTRACTED]
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

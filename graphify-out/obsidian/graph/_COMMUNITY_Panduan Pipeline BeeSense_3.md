@@ -1,29 +1,27 @@
 ---
 type: community
-cohesion: 0.16
-members: 14
+cohesion: 0.29
+members: 12
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.16 - loosely connected
-**Members:** 14 nodes
+**Cohesion:** 0.29 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[30 October Three Platform Model]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
-- [[Artifact Loading Dashboard Environment]] - document - requirements/dashboard.txt
-- [[Artifact Only Dashboard Runtime]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
-- [[BeeSense Dashboard Guide]] - document - docs/dashboard/DASHBOARD_DESIGN.md
-- [[BeeSense Topic Prompt Version 2]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Explainable Topics Guide]] - document - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Gemini Topic Narratives Guide]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Kendall Tau B Consistency]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Maximal Marginal Relevance]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Post Clustering Synthesis Gate]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Streamlit Cloud Requirements Entry]] - document - requirements.txt
-- [[Supported Descriptive Topic Trends]] - rationale - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Theil Sen Monthly Slope]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
-- [[Verified Topic Narratives CSV]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Accessible dashboard interactions]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Counting units and topic share]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Dashboard BeeSense]] - document - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Dashboard validation]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Explicit relevance_artifact opt-in]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Filters preserve full-model memberships and scores]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Five dashboard views]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - code - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Temporal support and source audit]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Web Interface Guidelines]] - document - docs/dashboard/DASHBOARD_DESIGN.md
+- [[configsocial_nlp.json]] - concept - README.md
+- [[streamlit_apps.py_1]] - code - README.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,3 +29,18 @@ members: 14
 TABLE source_file, type FROM #community/Panduan_Pipeline_BeeSense
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 8 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
+- 4 edges to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
+- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_8]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
+
+## Top bridge nodes
+- [[streamlit_apps.py_1]] - degree 7, connects to 4 communities
+- [[Dashboard BeeSense]] - degree 16, connects to 3 communities
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - degree 10, connects to 3 communities
+- [[configsocial_nlp.json]] - degree 7, connects to 3 communities
+- [[Explicit relevance_artifact opt-in]] - degree 3, connects to 2 communities

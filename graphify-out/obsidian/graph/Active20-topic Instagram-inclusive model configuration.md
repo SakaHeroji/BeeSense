@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp.json"
 type: "document"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "$.input_file; $.output_dir; $.target_topics; $.coherence; $.gemini"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # Active20-topic Instagram-inclusive model configuration
@@ -24,4 +24,4 @@ tags:
 - [[Root Docker context allowlist for relocated dashboard runtime]] - `references` [EXTRACTED]
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini
+#graphify/document #graphify/EXTRACTED #community/Penggabungan_Dataset

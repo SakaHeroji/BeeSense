@@ -1,11 +1,11 @@
 ---
 source_file: "docs/crawler/TWITTER_CRAWLER.md"
 type: "document"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # Twitter crawler guide
@@ -15,4 +15,4 @@ tags:
 - [[Twitter live trial 31 October 2026]] - `references` [EXTRACTED]
 - [[TwitterCrawler_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

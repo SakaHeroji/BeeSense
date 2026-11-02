@@ -10,7 +10,7 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
-- [[.setUp()_13]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.setUp()_11]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_instagram_is_included_in_coverage_ranking_months_and_graph_hover()]] - code - tests/nlp/test_dashboard_analysis.py

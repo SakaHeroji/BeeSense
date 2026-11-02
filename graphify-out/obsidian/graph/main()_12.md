@@ -1,18 +1,26 @@
 ---
-source_file: "scripts/merge_social_datasets.py"
+source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Penggabungan Dataset"
-location: "L399"
+community: "Encoding dan Penyimpanan Model"
+location: "L2596"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penggabungan_Dataset
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # main()
 
 ## Connections
-- [[merge()]] - `calls` [EXTRACTED]
-- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
+- [[._event()_1]] - `calls` [EXTRACTED]
+- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
+- [[.explain_artifacts()]] - `calls` [EXTRACTED]
+- [[.fit_excel()]] - `calls` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[.prepare_excel()]] - `calls` [EXTRACTED]
+- [[.save()]] - `calls` [EXTRACTED]
+- [[.save_explanations()]] - `calls` [EXTRACTED]
+- [[SocialNLPClusterer_2]] - `calls` [EXTRACTED]
+- [[social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

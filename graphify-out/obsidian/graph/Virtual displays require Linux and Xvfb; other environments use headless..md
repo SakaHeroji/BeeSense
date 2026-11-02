@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Worker Reddrix"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L236"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Virtual displays require Linux and Xvfb; other environments use headless.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[resolve_reddrix_display()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

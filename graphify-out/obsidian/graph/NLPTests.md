@@ -12,8 +12,8 @@ tags:
 # NLPTests
 
 ## Connections
-- [[.setUpClass()_3]] - `method` [EXTRACTED]
-- [[.tearDownClass()_3]] - `method` [EXTRACTED]
+- [[.setUpClass()_2]] - `method` [EXTRACTED]
+- [[.tearDownClass()_2]] - `method` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `method` [EXTRACTED]
 - [[.test_bad_input_and_configuration_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - `method` [EXTRACTED]
@@ -39,7 +39,7 @@ tags:
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `method` [EXTRACTED]
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `method` [EXTRACTED]
 - [[.test_twitter_prepare_preserves_audited_roots_without_embedding_titles()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

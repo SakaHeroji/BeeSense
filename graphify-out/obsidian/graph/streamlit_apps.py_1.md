@@ -1,19 +1,22 @@
 ---
 source_file: "README.md"
 type: "code"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # streamlit_apps.py
 
 ## Connections
-- [[BeeSense README]] - `references` [EXTRACTED]
+- [[BeeSense_1]] - `references` [EXTRACTED]
+- [[BeeSense]] - `references` [EXTRACTED]
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
+- [[Dashboard BeeSense]] - `references` [EXTRACTED]
 - [[Package rooted path consistency]] - `references` [EXTRACTED]
-- [[SocialNLPStreamlitApp_2]] - `references` [EXTRACTED]
-- [[Streamlit Community Cloud deployment]] - `references` [EXTRACTED]
+- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

@@ -11,7 +11,6 @@ tags:
 # Topik Gemini note
 
 ## Connections
-- [[Current November 2 snapshot pointer]] - `references` [EXTRACTED]
 - [[Gemini 3.5 Flash Lite]] - `references` [EXTRACTED]
 - [[Historical Gemini publication 30 October 2026]] - `references` [EXTRACTED]
 

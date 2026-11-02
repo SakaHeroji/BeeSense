@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[Dual projection stability evaluation]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_3]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

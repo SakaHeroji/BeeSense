@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/InstagramCrawler instagrapi.md"
 type: "rationale"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "## Pemulihan 429 terkini"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # Instagram1.5.1 rate-limit recovery andstagedrun chronology
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Bounded Instagram recovery does not override user stop]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Penggabungan_Dataset

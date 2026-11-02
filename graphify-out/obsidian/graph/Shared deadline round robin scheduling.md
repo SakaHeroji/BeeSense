@@ -11,6 +11,6 @@ tags:
 # Shared deadline round robin scheduling
 
 ## Connections
-- [[SocialCrawler_2]] - `implements` [EXTRACTED]
+- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - `implements` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

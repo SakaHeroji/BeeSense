@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.run_merge()]] - `method` [EXTRACTED]
-- [[.setUp()_14]] - `method` [EXTRACTED]
+- [[.setUp()_12]] - `method` [EXTRACTED]
 - [[.source()]] - `method` [EXTRACTED]
 - [[.test_instagram_comment_identity_conflict_and_fake_host_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_instagram_latest_record_wins_without_removing_equal_text_distinct_ids()]] - `method` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[.test_twitter_comment_without_root_evidence_is_rejected()]] - `method` [EXTRACTED]
 - [[.test_twitter_native_dedup_and_audited_roots_survive_merge()]] - `method` [EXTRACTED]
 - [[.test_twitter_sidecar_cannot_be_reused_for_changed_workbook()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
 - [[test_dataset_merge.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

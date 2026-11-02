@@ -1,22 +1,20 @@
 ---
 type: community
-cohesion: 0.33
-members: 7
+cohesion: 0.50
+members: 5
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 0.33 - loosely connected
-**Members:** 7 nodes
+**Cohesion:** 0.50 - moderately connected
+**Members:** 5 nodes
 
 ## Members
-- [[InstaloaderCrawler_2]] - code - README.md
-- [[RedditCrawler_1]] - code - README.md
-- [[Reddrix subprocess lifecycle]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Shared deadline round robin scheduling]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[SocialCrawler_2]] - code - README.md
-- [[TwitterCoordinatorWorker_2]] - code - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[TwitterCrawler_2]] - code - README.md
+- [[Candidate scoring and selection]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Coherence c_v evaluation protocol]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Gensim CoherenceModel reference]] - document - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Historical baseline coherence snapshots]] - concept - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
+- [[Twenty topic mean coherence publication gate]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,10 +24,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_1]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
 
 ## Top bridge nodes
-- [[SocialCrawler_2]] - degree 8, connects to 2 communities
-- [[TwitterCoordinatorWorker_2]] - degree 3, connects to 1 community
+- [[Coherence c_v evaluation protocol]] - degree 5, connects to 1 community
+- [[Twenty topic mean coherence publication gate]] - degree 3, connects to 1 community

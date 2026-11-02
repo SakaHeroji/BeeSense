@@ -11,7 +11,6 @@ tags:
 # Twitter twenty topic result note
 
 ## Connections
-- [[BeeSense HOME]] - `references` [EXTRACTED]
 - [[Native thread root explainability]] - `references` [EXTRACTED]
 - [[Twitter acquisition report 2 November 2026]] - `references` [EXTRACTED]
 - [[Twitter retraining report 2 November 2026]] - `references` [EXTRACTED]

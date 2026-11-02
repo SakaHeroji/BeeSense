@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Runtime Docker dan Display"
+community: "Batas Akuisisi Reddit"
 location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Runtime_Docker_dan_Display
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # load_reddrix()
@@ -20,4 +20,4 @@ tags:
 - [[resolve_reddrix_display()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Runtime_Docker_dan_Display
+#graphify/code #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

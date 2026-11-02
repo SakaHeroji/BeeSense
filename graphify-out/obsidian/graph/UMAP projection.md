@@ -11,6 +11,8 @@ tags:
 # UMAP projection
 
 ## Connections
-- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
+- [[DBSCAN Euclidean density clustering]] - `shares_data_with` [EXTRACTED]
+- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - `implements` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

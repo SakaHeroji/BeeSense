@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Validasi Record Reddit"
+community: "Kontrak Record Reddit"
 location: "L239"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Record_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # RecordFactory
@@ -21,4 +21,4 @@ tags:
 - [[RedditRecordFactory]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

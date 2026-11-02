@@ -1,12 +1,12 @@
 ---
 source_file: "config/social_nlp.json"
 type: "concept"
-community: "Konteks dan Provenance Gemini"
+community: "Penggabungan Dataset"
 location: "$.gemini"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Konteks_dan_Provenance_Gemini
+  - community/Penggabungan_Dataset
 ---
 
 # Current active Gemini enabled; historical disabled state retained
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Active20-topic Instagram-inclusive model configuration]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini
+#graphify/concept #graphify/EXTRACTED #community/Penggabungan_Dataset

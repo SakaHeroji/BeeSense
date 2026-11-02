@@ -2,7 +2,7 @@
 source_file: "tests/nlp/test_dashboard_data_verifier.py"
 type: "code"
 community: "Penggabungan Dataset"
-location: "L140"
+location: "L196"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # PublishedDataTests
 
 ## Connections
-- [[.setUp()_9]] - `method` [EXTRACTED]
+- [[.setUp()_15]] - `method` [EXTRACTED]
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - `method` [EXTRACTED]
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - `method` [EXTRACTED]
 - [[.test_input_integrity_remains_enforced()]] - `method` [EXTRACTED]

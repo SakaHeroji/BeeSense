@@ -1,12 +1,12 @@
 ---
 source_file: "docs/machine-learning/EXPLAINABLE_TOPICS.md"
 type: "concept"
-community: "Penjelasan Topik Dashboard"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Mengukur pola waktu"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Penjelasan_Topik_Dashboard
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # MMR evidence and guarded Theil-Sen/Kendall directions
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard
+#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

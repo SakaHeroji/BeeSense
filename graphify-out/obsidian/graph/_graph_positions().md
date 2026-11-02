@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: ".topic_figure"
-location: "L65"
+community: "app.py"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_figure
+  - community/apppy
 ---
 
 # _graph_positions()
@@ -16,4 +16,4 @@ tags:
 - [[Keep the full-model layout stable while volume and edge filters change.]] - `rationale_for` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_figure
+#graphify/code #graphify/EXTRACTED #community/apppy

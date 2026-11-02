@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Eksekusi dan Ekspor Crawler"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L659"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Eksekusi_dan_Ekspor_Crawler
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # TwitterAdapter
@@ -20,4 +20,4 @@ tags:
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Eksekusi_dan_Ekspor_Crawler
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
