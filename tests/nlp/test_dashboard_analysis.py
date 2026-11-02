@@ -1,6 +1,11 @@
 from __future__ import annotations
 
+import json
+import os
+import tempfile
 import unittest
+from pathlib import Path
+from unittest.mock import patch
 
 import numpy as np
 import pandas as pd
@@ -10,6 +15,34 @@ from streamlit_apps import number, percent
 
 
 class AnalysisTests(unittest.TestCase):
+    def test_snapshot_comparison_uses_published_settings_without_local_environment(
+        self,
+    ):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "config").mkdir()
+            (root / "config/social_nlp.json").write_text(
+                json.dumps({"output_dir": "outputs/after"})
+            )
+            (root / "config/dashboard.json").write_text(
+                json.dumps(
+                    {
+                        "snapshot_comparison": {
+                            "after": "outputs/after",
+                            "before": "outputs/before",
+                        }
+                    }
+                )
+            )
+            with patch("Dashboard.app.ROOT", root), patch.dict(os.environ, {}):
+                os.environ.pop("BEESENSE_NLP_RUN_DIR", None)
+                os.environ.pop("BEESENSE_BASELINE_RUN_DIR", None)
+                self.assertEqual(App().baseline_dir, root / "outputs/before")
+                self.assertIsNone(App(root / "outputs/before").baseline_dir)
+                self.assertIsNone(App(root / "outputs/custom").baseline_dir)
+                os.environ["BEESENSE_BASELINE_RUN_DIR"] = "outputs/explicit_baseline"
+                self.assertEqual(App().baseline_dir, root / "outputs/explicit_baseline")
+
     def setUp(self):
         # One repeated sentence, one multi-sentence comment, two noise rows,
         # and mixed timestamp precision exercise the counting boundaries.

@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir --no-compile --only-binary=:all: -r requirements.
 COPY --chown=beesense:beesense streamlit_apps.py /app/
 COPY --chown=beesense:beesense MachineLearning /app/MachineLearning
 COPY --chown=beesense:beesense Dashboard /app/Dashboard
-COPY --chown=beesense:beesense config/social_nlp.json /app/config/
+COPY --chown=beesense:beesense config/social_nlp.json config/dashboard.json /app/config/
 COPY --chown=beesense:beesense .streamlit /app/.streamlit
 USER beesense
 EXPOSE 8501

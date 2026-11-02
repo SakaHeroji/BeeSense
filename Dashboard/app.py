@@ -151,6 +151,14 @@ class SocialNLPStreamlitApp:
         )
         self.run_dir = directory if directory.is_absolute() else ROOT / directory
         baseline = os.environ.get("BEESENSE_BASELINE_RUN_DIR")
+        settings = ROOT / "config/dashboard.json"
+        if baseline is None and settings.is_file():
+            comparison = json.loads(settings.read_text()).get("snapshot_comparison")
+            if (
+                comparison
+                and self.run_dir.resolve() == (ROOT / comparison["after"]).resolve()
+            ):
+                baseline = comparison["before"]
         self.baseline_dir = Path(baseline) if baseline else None
         if self.baseline_dir is not None and not self.baseline_dir.is_absolute():
             self.baseline_dir = ROOT / self.baseline_dir

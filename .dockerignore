@@ -16,5 +16,6 @@
 !streamlit_apps.py
 !config/
 !config/social_nlp.json
+!config/dashboard.json
 !.streamlit/
 !.streamlit/config.toml

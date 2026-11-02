@@ -52,7 +52,7 @@ Snapshot tanpa narasi `outputs/nlp_20261102_relevance_topics20_01/` tetap utuh. 
 
 Direktori contoh sudah terisi; gunakan nama output baru untuk percobaan berikutnya. Skrip menolak overwrite, memvalidasi checksum sumber sebelum/sesudah permintaan, menyalin file fitted apa adanya, dan mempublikasikan bundle secara atomik setelah CSV serta manifest lolos validasi. Dua belas file data/clustering/audit memiliki checksum identik dengan snapshot sebelum narasi. CSV mencakup tepat 20 topik, provenance prompt/model/sumber dan pemakaian token. API key hanya dibaca dari auth lokal yang diabaikan Git; tidak masuk konfigurasi atau bundle. Pembuatan narasi awal sempat ditolak persetujuan otomatis karena cakupan saat itu hanya lokal; permintaan eksplisit berikutnya memberi otorisasi untuk Gemini dan proses berhasil.
 
-Dashboard lokal pada `http://localhost:8502` memiliki pilihan **Bandingkan snapshot**. Bagian **Metode & data** menampilkan kategori keputusan, distribusi platform, contoh audit dan unduhan CSV. Runtime dashboard membaca hasil tersimpan tanpa memuat Torch, menjalankan filter, atau memanggil Gemini.
+Dashboard lokal pada `http://localhost:8502` dan Streamlit Cloud memiliki pilihan **Bandingkan snapshot**. `config/dashboard.json` mengikat pilihan sebelum/sesudah ke dua direktori model yang diterbitkan; Cloud tidak memerlukan variabel lingkungan lokal. Direktori model lain tidak otomatis mewarisi pembandingan ini. `BEESENSE_BASELINE_RUN_DIR` tetap dapat digunakan untuk pembandingan lokal yang eksplisit. Bagian **Metode & data** menampilkan kategori keputusan, distribusi platform, contoh audit dan unduhan CSV. Runtime dashboard membaca hasil tersimpan tanpa memuat Torch, menjalankan filter, atau memanggil Gemini.
 
 ## Rollback dan penyimpanan
 

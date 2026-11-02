@@ -1,4 +1,4 @@
-"""Opt-in verification of an unpublished local relevance experiment."""
+"""Verify the published relevance comparison in the minimal Cloud runtime."""
 
 import importlib.util
 import os
@@ -14,14 +14,14 @@ from MachineLearning.social_nlp import ROOT, SocialNLPClusterer
 
 
 @unittest.skipUnless(
-    os.environ.get("BEESENSE_RELEVANCE_RUN_DIR"), "Local experiment snapshot is opt-in"
+    os.environ.get("BEESENSE_RELEVANCE_RUN_DIR"),
+    "Versioned relevance snapshot is opt-in",
 )
 class RelevanceRuntimeTests(unittest.TestCase):
     def test_filtered_dashboard_all_views_and_baseline_switch(self):
         for name in ("torch", "sentence_transformers", "gensim", "umap"):
             self.assertIsNone(importlib.util.find_spec(name), name + " installed")
         run = Path(os.environ["BEESENSE_RELEVANCE_RUN_DIR"])
-        baseline = ROOT / "outputs/nlp_20261102_twitter_topics20_gemini_01"
         data = SocialNLPClusterer.load_run(run)
         self.assertEqual(len(data["topics"]), 20)
         self.assertEqual(len(data["topic_narratives"]), 20)
@@ -38,10 +38,7 @@ class RelevanceRuntimeTests(unittest.TestCase):
         with (
             patch.dict(
                 os.environ,
-                {
-                    "BEESENSE_NLP_RUN_DIR": str(run),
-                    "BEESENSE_BASELINE_RUN_DIR": str(baseline),
-                },
+                {},
             ),
             patch.object(
                 topic_narratives,
@@ -54,6 +51,9 @@ class RelevanceRuntimeTests(unittest.TestCase):
                 side_effect=AssertionError("No training on rerun"),
             ),
         ):
+            # Reproduce Community Cloud: no local launcher or environment setup.
+            os.environ.pop("BEESENSE_NLP_RUN_DIR", None)
+            os.environ.pop("BEESENSE_BASELINE_RUN_DIR", None)
             app = AppTest.from_file(
                 str(ROOT / "streamlit_apps.py"), default_timeout=120
             ).run()
