@@ -5,9 +5,9 @@ tags: [beesense, dashboard]
 
 # BeeSense
 
-[[TwitterCrawler Scweet]] menambahkan class X/Twitter mandiri dengan konfigurasi percobaan 30 menit dan kontrak Excel yang sama. Hasil uji live dicatat pada catatan tersebut; belum menjadi backend `SocialCrawler`.
+[[TwitterCrawler Scweet]] menambahkan class X/Twitter mandiri dengan konfigurasi percobaan 30 menit dan kontrak Excel yang sama. Kini terhubung ke SocialCrawler 1.7.0 dengan preset Twitter-only 3 jam/1.000 post, penggabungan native ID, NLP dan dashboard. Hasil uji live dicatat pada catatan tersebut.
 
-Snapshot aktif: **34.095 record, 20 topik, rata-rata c_v 0,43865**, dilengkapi 20 terjemahan/deskripsi [[Topik Gemini]] dan Excel 45.556 pasangan topik–kalimat. Lihat [[Training Instagram 20 Topik]] serta [[Dataset Dashboard]]. Catatan angka lain di bawah merupakan riwayat.
+Snapshot aktif: **34.764 record unik, 20 topik, rata-rata c_v 0.424321**, 20 kalimat/deskripsi Gemini dan Excel 48.850 pasangan topik–kalimat. Lihat [[Twitter 20 Topik 20261102]]; angka lain di bawah adalah riwayat.
 
 [[InstaloaderCrawler]] menjadi backend Instagram default SocialCrawler 1.6.0; catatannya memuat patch GraphQL web pengguna,
 uji Excel/dedup dan batas aksesnya. Detail hasil terbaru ada pada catatan tersebut.
@@ -20,11 +20,11 @@ uji Excel/dedup dan batas aksesnya. Detail hasil terbaru ada pada catatan terseb
 
 [[PRD Frontend Crawler]] merinci rencana ReactJS dengan dua menu: Crawler Otomatis dan Crawler Manual untuk URL/data survei. [Kumpulan PRD](../../PRD/README.md) memisahkan frontend, backend, dan machine learning; API/survei pada PRD masih merupakan rencana pengembangan.
 
-[[Frontend React Crawler]] tersedia di `Crawler/Frontend`: UI otomatis/manual, monitor, survei, dan dataset dengan adapter simulasi serta kontrak API. Tujuh sumber tersedia di UI/simulasi dengan tema putih–oranye dan teks hitam minimum 13 px. Backend akuisisi web dan lima adapter sosial tambahan masih perlu dibuat; mode simulasi tidak menjalankan crawling nyata.
+[[Frontend React Crawler]] tersedia di `Crawler/Frontend`: UI otomatis/manual, monitor, survei, dan dataset dengan adapter simulasi serta kontrak API. Tujuh sumber tersedia di UI/simulasi dengan tema putih–oranye dan teks hitam minimum 13 px. UI masih memakai adapter simulasi; API frontend belum mengendalikan crawler. Backend CLI YouTube, Reddit, Instagram dan X tersedia; mode simulasi tidak menjalankan crawling nyata.
 
 [Buka dashboard](http://127.0.0.1:8501) · [README](../../README.md) · [Graf kode](../graph.html) · [Laporan Graphify](../GRAPH_REPORT.md) · [[graph.canvas|Canvas arsitektur]]
 
-Vault memuat alur akuisisi → pemeriksaan ID/checksum → workbook gabungan → training → dashboard. Tiga workbook diterbitkan bersama run aktif dan empat snapshot NLP sebelumnya. Bundle akuisisi lokal tetap tersedia untuk audit.
+Vault memuat alur akuisisi → pemeriksaan ID/checksum → workbook gabungan → training → dashboard. Workbook baseline, sumber gabungan, snapshot aktif dan arsip sebelumnya dipertahankan. Lima bundle Twitter 2 November ikut dipublikasikan; runtime/auth tetap lokal.
 
 Statistik graf, cohesion, biaya token dan keterbatasan ekstraksi tersedia pada [laporan aktif](../GRAPH_REPORT.md). [[Crawler Selenium]] menghubungkan backend browser baru dengan exporter dan kontrak Excel yang dipertahankan.
 
@@ -34,12 +34,12 @@ Riwayat retrain gabungan: **20 topik**, rata-rata **c_v 0,4720**, ambang rata-ra
 
 [[RedditCrawler Reddrix]] kini menjadi backend Reddit default SocialCrawler 1.4.0, dengan YouTube yt-dlp dalam scheduler/bundle yang sama. Wrapper Reddit-only tetap tersedia; konfigurasi gabungan 3 jam dan percobaan 30 menit memakai display adaptif macOS/Linux. Percobaan sebelum integrasi selesai dengan 33 post/769 baris tanpa duplikasi baseline; integrasi tidak memulai crawl baru.
 
-[[Struktur Proyek]] menjelaskan lokasi package, config, dependency, dokumentasi dan Docker setelah reorganisasi. Entry point Cloud tetap streamlit_apps.py di root. Struktur Docker terbaru telah melewati build dan uji semua tampilan pada image bersih; rincian ada di [[Menjalankan BeeSense]].
+[[Struktur Proyek]] menjelaskan lokasi package, config, dependency, dokumentasi dan Docker setelah reorganisasi. Entry point Cloud tetap streamlit_apps.py di root. Verifikasi Docker pada catatan lama bersifat historis; image perubahan Twitter belum dibangun karena daemon lokal tidak aktif. Rincian ada di [[Menjalankan BeeSense]].
 
 [[Topik Gemini]] menjelaskan sintesis satu kalimat/deskripsi dari 10 keyword c-TF-IDF per topik dan CSV model yang dibaca dashboard tanpa API pada rerun.
 
 Model 30 Oktober sudah terverifikasi:33.034 record unik,20 topik/c_v 0,4315 danCSV 20 narasi [[Topik Gemini]]. [[Dataset Dashboard]] menyimpan perincian dan riwayat.
 
-[[Instagram 500 Post 2 Jam]]: run Instagram 2 jam, target 500 post baru; 324 ID baseline dikecualikan dan hasil akan digabung setelah verifikasi.
+[[Instagram 500 Post 2 Jam]]: riwayat akuisisi Instagram dua jam dengan 324 ID baseline sebagai pengecualian. Snapshot Instagram dipertahankan sebagai arsip.
 
-- [[Training Instagram 20 Topik]] — model terbaru 20 topik dan Excel seluruh kalimat anggota.
+- [[Training Instagram 20 Topik]] — arsip model Instagram dan Excel kalimat anggota.

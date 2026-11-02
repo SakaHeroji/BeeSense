@@ -14,8 +14,6 @@ tags:
 ## Connections
 - [[barrier_status()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_playwright.py]] - `contains` [EXTRACTED]
-- [[reddrix_error_receipt()]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[utcnow()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

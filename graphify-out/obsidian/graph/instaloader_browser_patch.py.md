@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_browser_patch.py"
 type: "code"
-community: "Format Grafik Dashboard"
+community: "Worker Instaloader"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Format_Grafik_Dashboard
+  - community/Worker_Instaloader
 ---
 
 # instaloader_browser_patch.py
@@ -23,4 +23,4 @@ tags:
 - [[main()_3]] - `contains` [EXTRACTED]
 - [[test_instaloader_browser_patch.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Format_Grafik_Dashboard
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

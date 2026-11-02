@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "rationale"
-community: "Akuisisi X dan Ekspor Scweet"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L386"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Child-only guard: pace curl requests and prohibit network after a barrier.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[guarded_transport()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

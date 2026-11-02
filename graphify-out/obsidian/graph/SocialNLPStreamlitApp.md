@@ -2,7 +2,7 @@
 source_file: "Dashboard/app.py"
 type: "code"
 community: "thread_url"
-location: "L120"
+location: "L126"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_30]] - `method` [EXTRACTED]
+- [[.__init__()_37]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -55,20 +55,19 @@ tags:
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
 - [[Active20-topicc_v0.4315 artifact andGemini display contract]] - `references` [EXTRACTED]
-- [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - `references` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
 - [[DashboardreadsverifiedCSVwithnoAPIortrainingonrerun]] - `references` [EXTRACTED]
 - [[Five artifact-backed Streamlit analysis views]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
 - [[Platform and top-five source graphs count unique topic comments]] - `implements` [INFERRED]
 - [[Read-only exploration of completed NLP runs; no training on page reruns.]] - `rationale_for` [EXTRACTED]
-- [[Root streamlit_apps.py delegates to Dashboard.app]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `uses` [INFERRED]
+- [[SocialNLPStreamlitApp_1]] - `references` [EXTRACTED]
 - [[Term bars show bounded phrase presence in unique filtered sentences]] - `implements` [INFERRED]
 - [[Three-platformUIcapabilitywithold-snapshotcompatibility]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_8]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/thread_url

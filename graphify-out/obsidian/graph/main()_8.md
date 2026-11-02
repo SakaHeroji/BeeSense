@@ -1,20 +1,21 @@
 ---
-source_file: "Dashboard/app.py"
+source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "app.py"
-location: "L2261"
+community: "Eksekusi dan Ekspor Crawler"
+location: "L2312"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apppy
+  - community/Eksekusi_dan_Ekspor_Crawler
 ---
 
 # main()
 
 ## Connections
-- [[.render()_1]] - `calls` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `calls` [EXTRACTED]
-- [[app.py]] - `contains` [EXTRACTED]
-- [[streamlit_apps.py]] - `imports` [EXTRACTED]
+- [[.export_compact()]] - `calls` [EXTRACTED]
+- [[.plan()_4]] - `calls` [EXTRACTED]
+- [[.run()_3]] - `calls` [EXTRACTED]
+- [[SocialCrawler]] - `calls` [EXTRACTED]
+- [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apppy
+#graphify/code #graphify/EXTRACTED #community/Eksekusi_dan_Ekspor_Crawler

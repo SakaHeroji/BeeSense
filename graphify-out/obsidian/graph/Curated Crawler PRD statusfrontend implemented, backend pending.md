@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[Crawler frontend product requirements]] - `references` [EXTRACTED]
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - `references` [EXTRACTED]
 - [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]

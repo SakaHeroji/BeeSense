@@ -12,7 +12,6 @@ tags:
 # Final campaign consolidation and explicit partial target shortfalls
 
 ## Connections
-- [[Atomic sibling .progress.json acquisition snapshots]] - `semantically_similar_to` [INFERRED]
 - [[Historical active-campaign state; acquisition now finalized PARTIAL]] - `references` [EXTRACTED]
 - [[Historical descriptor-based monitoring now resolves final campaign counters]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]

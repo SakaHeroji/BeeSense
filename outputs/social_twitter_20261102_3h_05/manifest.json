@@ -1,0 +1,102 @@
+{
+  "contract_version": "1.0.0",
+  "prd_reference": "2.1",
+  "schema_fingerprint": "c6dcff73113f3aba31c2329296cd72b1c24ce6e15db29e22a9e35fa662fc74de",
+  "project_id": "beesense-twitter-3h-20261102",
+  "run_id": "df62f9e0-5d96-473a-a72b-e91b9720abe9",
+  "created_at": "2026-11-02T03:25:32.012471+00:00",
+  "row_counts": {
+    "Contents": 198,
+    "Relations": 0,
+    "KeywordHits": 414,
+    "Metrics": 1186,
+    "Runs": 306,
+    "Sources": 1,
+    "TextChunks": 0,
+    "Readme": 22
+  },
+  "files_sha256": {
+    "dataset.xlsx": "71a764d0c54ef0b89e85e2614d2e0421af25e16d3c15023aae8aec311751023b",
+    "Runs.jsonl": "2d3a8c520d12a402e20d4f06dc15c860b96dfe957b567e9f19808356a556026e",
+    "Sources.jsonl": "2f7b30b2a13d036edbf24ffb959d8920ce03022804280430fd9600f8f9e19e63",
+    "social_data.xlsx": "db1224bd150b0007827fd8e7d49317b490766410dbc574a7d3d06f20a6ac688d",
+    "Contents.jsonl": "16cc59754b1f46e14e5277dc6a25fb19aeb471cb7c47a482b63b0c0f8fe39b14",
+    "TextChunks.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "KeywordHits.jsonl": "bb6bc40dbc2b9967fe865981aced5a791bc19e591e4ef08317aaabb2da476f16",
+    "Readme.jsonl": "17307466ba37827acbcc4670d2eab57361a94bf3e25d2450150bc506691ed3f6",
+    "Relations.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Metrics.jsonl": "40772397c717c0bc4db73107a3c26a9f2456812dbc1b3e91011b25a9cf88a76c",
+    "contract.json": "f7f32fb795c1e5ef785ee8f619c6c321d1b52a7fd7b98a0211c811a8a0c01b10",
+    "summary.json": "bb0fa237da1950db83b0a665764d2cc676c35678b75d538a7af3e8d13aaad37e"
+  },
+  "source": "social",
+  "mode": "social_crawler",
+  "producer_version": "1.7.0",
+  "synthetic": false,
+  "interrupted": false,
+  "targets_met": false,
+  "platform_summaries": {
+    "twitter": {
+      "enabled": true,
+      "min_posts": 865,
+      "min_comments_per_post": 0,
+      "posts_attempted": 242,
+      "posts_exported": 198,
+      "qualified_posts": 198,
+      "comments": 0,
+      "replies": 0,
+      "filtered_roots": {
+        "root_excluded_keyword": 15,
+        "root_missing_include_keyword": 29
+      },
+      "insufficient_comment_posts": 0,
+      "invalid_rows": 0,
+      "target_met": false,
+      "stop_reason": "ACCOUNT_UNAVAILABLE",
+      "cooldown_waits": 1,
+      "rate_limit_retries": 1,
+      "network": {
+        "requests": 104,
+        "http_status_counts": {
+          "200": 104
+        }
+      },
+      "existing_posts_skipped": 34,
+      "duplicate_posts_skipped": 0,
+      "posts_shortfall": 667
+    }
+  },
+  "comments_complete": false,
+  "primary_file": "social_data.xlsx",
+  "compact": {
+    "file": "social_data.xlsx",
+    "sheets": [
+      "Data"
+    ],
+    "columns": [
+      "platform",
+      "jenis",
+      "judul_post",
+      "tanggal_post_wib",
+      "akurasi_tanggal_post",
+      "tanggal_konten_wib",
+      "akurasi_tanggal_konten",
+      "teks",
+      "url",
+      "teks_dipotong"
+    ],
+    "timezone": "Asia/Jakarta",
+    "rows": 198,
+    "counts": {
+      "twitter:post": 198
+    },
+    "date_accuracy_counts": {
+      "pasti": 198
+    },
+    "truncated_texts": 0,
+    "filtered_roots": 0,
+    "filtered_comments": 0,
+    "date_estimate_anchor": "source_observed_at",
+    "relative_date_precision": "calendar_date_not_exact_timestamp"
+  }
+}

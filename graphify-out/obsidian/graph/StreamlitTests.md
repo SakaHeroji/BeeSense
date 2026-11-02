@@ -13,10 +13,10 @@ tags:
 
 ## Connections
 - [[.app()]] - `method` [EXTRACTED]
-- [[.setUp()_12]] - `method` [EXTRACTED]
-- [[.setUpClass()_2]] - `method` [EXTRACTED]
+- [[.setUp()_10]] - `method` [EXTRACTED]
+- [[.setUpClass()_1]] - `method` [EXTRACTED]
 - [[.tearDown()]] - `method` [EXTRACTED]
-- [[.tearDownClass()_2]] - `method` [EXTRACTED]
+- [[.tearDownClass()_1]] - `method` [EXTRACTED]
 - [[.test_all_views_and_noise_only_selection()]] - `method` [EXTRACTED]
 - [[.test_coherence_metric_and_per_topic_scores_are_visible()]] - `method` [EXTRACTED]
 - [[.test_complete_excel_download_is_available_without_training()]] - `method` [EXTRACTED]

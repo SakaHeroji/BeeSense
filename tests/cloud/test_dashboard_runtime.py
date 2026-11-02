@@ -59,10 +59,20 @@ class CloudRuntimeTests(unittest.TestCase):
             ).run()
             self.assertFalse(app.exception)
             self.assertFalse(app.error)
-            expected_title = (
-                "Percakapan YouTube, Reddit & Instagram"
-                if "instagram" in set(saved["occurrences"].platform)
-                else "Percakapan YouTube & Reddit"
+            labels = [
+                label
+                for key, label in {
+                    "youtube": "YouTube",
+                    "reddit": "Reddit",
+                    "instagram": "Instagram",
+                    "twitter": "X / Twitter",
+                }.items()
+                if key in set(saved["occurrences"].platform)
+            ]
+            expected_title = "Percakapan " + (
+                " & ".join(labels)
+                if len(labels) < 3
+                else ", ".join(labels[:-1]) + " & " + labels[-1]
             )
             self.assertEqual(app.title[0].value, expected_title)
             if saved.get("topic_narratives"):
@@ -100,6 +110,13 @@ class CloudRuntimeTests(unittest.TestCase):
                             "Unduh Excel topik dan kalimat",
                             [item.label for item in app.get("download_button")],
                         )
+            if "twitter" in set(saved["occurrences"].platform):
+                app.multiselect(key="platforms").set_value(["X / Twitter"]).run()
+                for view in app.radio(key="view").options:
+                    with self.subTest(twitter_only_view=view):
+                        app.radio(key="view").set_value(view).run()
+                        self.assertFalse(app.exception)
+                        self.assertFalse(app.error)
         for name in TRAINING_MODULES:
             self.assertNotIn(name, sys.modules, name + " imported")
 

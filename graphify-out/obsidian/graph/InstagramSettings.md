@@ -1,23 +1,20 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Koordinator Backend Sosial"
+community: "Pengambilan HTML Reddit"
 location: "L320"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Koordinator_Backend_Sosial
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # InstagramSettings
 
 ## Connections
 - [[.__init__()_21]] - `calls` [EXTRACTED]
-- [[._legacy_settings()]] - `calls` [EXTRACTED]
 - [[InstagramBrowserWorker]] - `uses` [INFERRED]
-- [[SocialCrawler]] - `uses` [INFERRED]
 - [[SocialExportMixin]] - `uses` [INFERRED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

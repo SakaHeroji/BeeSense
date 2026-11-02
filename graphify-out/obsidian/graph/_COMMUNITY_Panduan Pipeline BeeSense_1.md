@@ -1,30 +1,35 @@
 ---
 type: community
-cohesion: 0.23
-members: 15
+cohesion: 0.14
+members: 20
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.23 - loosely connected
-**Members:** 15 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 20 nodes
 
 ## Members
-- [[BeeSense Topic Prompt Version 2]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
-- [[Class Based TF IDF Labels]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Euclidean DBSCAN Clustering]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[General NLP Environment]] - document - requirements/nlp.txt
-- [[Gensim C V Coherence Protocol]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Gensim Coherence Environment]] - document - requirements/coherence.txt
-- [[Historical Coherence Query Memory]] - document - graphify-out/memory/query_20261028_155746_hitung_coherence_minimal_0_4__retrain_sbert_umap_d.md
-- [[Multilingual SBERT Embeddings]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Native ID Workbook Consolidation]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Native SBERT Training Environment]] - document - requirements/sbert.txt
-- [[SBERT and DBSCAN Method Note]] - document - docs/notes/note.md
-- [[Sentence Weighted Ward Reduction]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Social NLP Methodology]] - document - docs/machine-learning/SOCIAL_NLP.md
-- [[Topic Model Quality Gate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Two Seed UMAP Projection]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Bounded radius graph]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Candidate quality gate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Coherence c_v protocol]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[DBSCAN clustering]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Gemini topic narratives]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Multilingual SBERT encoder]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[NLP snapshot 29 October 2026]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[NLP snapshot 30 October 2026 Instagram 500]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[NLP snapshot 30 October 2026 earlier session]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Overflow window encoding]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Social NLP methodology]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[SocialNLPClusterer_1]] - code - docs/machine-learning/SOCIAL_NLP.md
+- [[SocialNLPStreamlitApp_1]] - code - docs/machine-learning/SOCIAL_NLP.md
+- [[Source and occurrence explainability]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Twitter NLP preset 2 November 2026]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[UMAP projection]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Versioned model artifact contract]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Weighted Ward topic reduction]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[c-TF-IDF topic labels]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[topic_narratives.csv]] - document - docs/machine-learning/SOCIAL_NLP.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,13 +39,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 1 edge to [[_COMMUNITY_thread_url]]
+- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 1 edge to [[_COMMUNITY_Penjelasan Topik Dashboard]]
 
 ## Top bridge nodes
-- [[Social NLP Methodology]] - degree 12, connects to 1 community
-- [[BeeSense Topic Prompt Version 2]] - degree 4, connects to 1 community
-- [[Gensim Coherence Environment]] - degree 4, connects to 1 community
-- [[Topic Model Quality Gate]] - degree 3, connects to 1 community
-- [[Native ID Workbook Consolidation]] - degree 2, connects to 1 community
+- [[SocialNLPClusterer_1]] - degree 15, connects to 2 communities
+- [[SocialNLPStreamlitApp_1]] - degree 3, connects to 1 community

@@ -18,7 +18,6 @@ tags:
 - [[Original date boundary and university-topic query scope]] - `references` [EXTRACTED]
 - [[Original historical date window, keywords and read-only baseline]] - `references` [EXTRACTED]
 - [[Read-only historical baseline exclusion]] - `references` [EXTRACTED]
-- [[SocialCrawler Reddrixyt-dlp defaults and Reddit-only wrapper]] - `references` [EXTRACTED]
 - [[Thirty-minute bounded trial with non-guaranteed target]] - `references` [EXTRACTED]
 - [[Tracked reddrix.display_mode=auto]] - `references` [EXTRACTED]
 - [[Trial config now explicitly selects Reddrix; wrapper preserves legacy compatibility]] - `references` [EXTRACTED]

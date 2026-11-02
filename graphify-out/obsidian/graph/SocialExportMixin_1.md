@@ -10,7 +10,4 @@ tags:
 
 # SocialExportMixin
 
-## Connections
-- [[TwitterCrawler]] - `inherits` [EXTRACTED]
-
 #graphify/code #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet

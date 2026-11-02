@@ -12,10 +12,11 @@ tags:
 # fixture()
 
 ## Connections
+- [[.setUpClass()_3]] - `calls` [EXTRACTED]
 - [[.setUpClass()_1]] - `calls` [EXTRACTED]
-- [[.setUpClass()_2]] - `calls` [EXTRACTED]
 - [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - `indirect_call` [INFERRED]
 - [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - `calls` [EXTRACTED]
+- [[.test_twitter_prepare_preserves_audited_roots_without_embedding_titles()]] - `calls` [EXTRACTED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports` [EXTRACTED]
 

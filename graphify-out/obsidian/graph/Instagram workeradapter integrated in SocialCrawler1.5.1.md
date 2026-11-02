@@ -16,7 +16,6 @@ tags:
 - [[Browser response429 and private-header boundary]] - `references` [EXTRACTED]
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
 - [[Chrome remains available for operator inspection]] - `references` [EXTRACTED]
-- [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 - [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - `references` [EXTRACTED]
 - [[Current Instagram bounded retry configuration; historical execution chronology]] - `references` [EXTRACTED]
 - [[Documented public hashtag probe fails upstream AttributeError withzero data]] - `references` [EXTRACTED]

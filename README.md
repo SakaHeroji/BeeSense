@@ -5,7 +5,7 @@ Kode dikelompokkan per komponen. `streamlit_apps.py` tetap entry point Streamlit
 | Folder | Isi |
 | --- | --- |
 | `Crawler/Frontend/` | Frontend React |
-| `Crawler/Backend/` | SocialCrawler, Reddrix, Selenium, adapter Reddit/YouTube/Instagram |
+| `Crawler/Backend/` | SocialCrawler, Reddrix, Selenium, adapter Reddit/YouTube/Instagram/Twitter |
 | `MachineLearning/` | Pipeline NLP dan pemuatan artifact |
 | `Dashboard/` | Implementasi dashboard Streamlit |
 | `config/` | Konfigurasi crawler dan NLP |
@@ -23,7 +23,7 @@ Lihat [peta lokasi dan perintah](docs/PROJECT_STRUCTURE.md). Jalankan perintah d
 
 Clustering dan penelusuran percakapan YouTube/Reddit/Instagram melalui dashboard Streamlit. SocialCrawler, class NLP, dan class UI terpisah. Dashboard membaca hasil clustering tersimpan sehingga dapat dibuka tanpa crawling, login Reddit, download model, atau training ulang.
 
-`TwitterCrawler` berbasis **Scweet 5.8.2** tersedia sebagai percobaan terpisah untuk X/Twitter, dengan [konfigurasi 30 menit](config/twitter_crawler.json), auth lokal, deduplikasi native ID, dan format Excel BeeSense yang sama. Lihat [panduan TwitterCrawler](docs/crawler/TWITTER_CRAWLER.md). Belum diintegrasikan ke `SocialCrawler` atau dashboard.
+`TwitterCrawler` berbasis **Scweet 5.8.2** tersedia sebagai percobaan terpisah untuk X/Twitter, dengan [konfigurasi 30 menit](config/twitter_crawler.json), auth lokal, deduplikasi native ID, dan format Excel BeeSense yang sama. Lihat [panduan TwitterCrawler](docs/crawler/TWITTER_CRAWLER.md). Kini tersedia dalam **SocialCrawler 1.7.0**, memakai [preset Twitter 3 jam/1.000 post](config/social_crawler_twitter_3h.json), root audit untuk dedup/penggabungan, serta dukungan X pada NLP dan dashboard.
 
 ## Menjalankan dashboard
 
@@ -76,7 +76,7 @@ python -m pip check
 python -m unittest discover -s tests/cloud -v
 ```
 
-Jalankan tes Cloud tersebut dalam environment dashboard bersih, terpisah dari `requirements/dev.txt`/training. Tidak ada retraining atau perubahan checksum dataset/model untuk perbaikan deployment ini.
+Jalankan tes Cloud tersebut dalam environment dashboard bersih, terpisah dari `requirements/dev.txt`/training. Tes Cloud hanya membaca artifact tersimpan dan tidak menjalankan training atau Gemini.
 
 ## Dataset yang disertakan
 
@@ -84,8 +84,10 @@ Workbook gabungan, baseline asli, run 20 topik aktif dan seluruh snapshot sebelu
 
 | Lokasi | Fungsi |
 |---|---|
-| `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx` | Aktif:34.095 record unik; 2.160 post asal dan 31.935 komentar/balasan |
-| `outputs/nlp_20261030_instagram_500_topics20_gemini_02/` | Aktif:20 topik, c_v 0,4387; 20 terjemahan/deskripsi Gemini dan Excel 45.556 kalimat |
+| `outputs/social_20261102_combined_twitter_01/social_data.xlsx` | Aktif: 34.764 record unik; empat platform, 0 duplikasi native ID |
+| `outputs/nlp_20261102_twitter_topics20_gemini_01/` | Aktif: 20 topik, mean c_v 0.4243; 20 deskripsi Gemini dan Excel 48.850 kalimat |
+| `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx` | Arsip Instagram:34.095 record unik; 2.160 post asal dan 31.935 komentar/balasan |
+| `outputs/nlp_20261030_instagram_500_topics20_gemini_02/` | Arsip Instagram:20 topik, c_v 0,4387; 20 terjemahan/deskripsi Gemini dan Excel 45.556 kalimat |
 | `outputs/nlp_20261030_instagram_500_topics20_01/` | Arsip clustering identik sebelum penambahan Gemini; Excel dipertahankan |
 | `outputs/social_20261028_01/dataset.xlsx` | Audit baseline 8 sheet, 8.449 record Contents; checksum asli tetap |
 | `outputs/social_20261028_01/social_data.xlsx` | Baseline 8.449 baris; dipertahankan utuh |
@@ -98,7 +100,7 @@ Workbook gabungan, baseline asli, run 20 topik aktif dan seluruh snapshot sebelu
 | `outputs/nlp_20261028_sbert_dbscan_01/` | Arsip SBERT/UMAP/DBSCAN sebelum evaluasi coherence |
 | `outputs/nlp_20261028_02/` | Arsip ONNX/UMAP/HDBSCAN untuk audit/kompatibilitas |
 
-Snapshot aktif memuat **52.861 kemunculan/51.979 kalimat unik** dan 29.132 komentar/balasan terwakili. Coverage 87,59%; noise 6.449 kalimat unik. Rata-rata c_v **0,4386500025** memenuhi ≥0,4; 9/20 topik berada di bawah 0,4 secara individual. Label c-TF-IDF dipertahankan bersama 20 kalimat/deskripsi Gemini. Excel dua kolom tersedia di Kalimat & sumber. Lihat [metode dan batas interpretasi](docs/machine-learning/SOCIAL_NLP.md).
+Snapshot aktif memuat **53.332 kemunculan/52.450 kalimat unik**, coverage **93.09%**, rata-rata **c_v 0.4243209772** dan **20 topik**. 9/20 topik masih <0,4 secara individual; gate berlaku pada rata-rata. CSV Gemini dan Excel dua kolom tersedia di dashboard, termasuk filter X / Twitter. [Hasil retraining dan batas evaluasi](docs/machine-learning/TWITTER_RETRAIN_20261102.md); [akuisisi Twitter 333/1.000 post](docs/crawler/TWITTER_ACQUISITION_20261102.md).
 
 Akuisisi 29 Oktober dibatasi tiga jam: YouTube 1.188 post tersimpan/300 qualified; Reddit 98/58. Qualified memerlukan ≥10 komentar/balasan unik. Target 1.000 qualified per platform belum tercapai. [Bundle audit hari ini](outputs/social_20261029_1000_3h/summary.json) dan segmen mentah disimpan lokal, di luar allowlist dataset dashboard. Data baru tidak bertumpang tindih dengan 50 video +181 thread baseline. [Script merge](scripts/merge_social_datasets.py) mempertahankan baris sumber dan menolak duplikasi ID; provenans lokal tersedia pada `output/combined_dataset_20261029.json`.
 

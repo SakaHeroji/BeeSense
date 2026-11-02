@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/topic_narratives.py"
 type: "code"
-community: "Generator Narasi Gemini"
+community: "Akuisisi YouTube"
 location: "L291"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Generator_Narasi_Gemini
+  - community/Akuisisi_YouTube
 ---
 
 # request_topic()
@@ -17,4 +17,4 @@ tags:
 - [[generate()]] - `calls` [EXTRACTED]
 - [[topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generator_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

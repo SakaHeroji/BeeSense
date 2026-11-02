@@ -16,6 +16,8 @@ from urllib.parse import parse_qs, urlsplit
 from openpyxl import Workbook, load_workbook
 from openpyxl.cell import WriteOnlyCell
 
+from MachineLearning.source_roots import twitter_roots, write_roots
+
 COLUMNS = (
     "platform",
     "jenis",
@@ -35,10 +37,28 @@ def sha(path):
         return file_digest(stream, "sha256").hexdigest()
 
 
-def identity(row):
+def identity(row, *, twitter=None):
     """Return global native object ID plus its root; text never defines identity."""
     platform, kind = row["platform"], row["jenis"]
     url = urlsplit(row["url"])
+    if (
+        platform == "twitter"
+        and url.scheme == "https"
+        and url.netloc in {"x.com", "www.x.com", "twitter.com", "www.twitter.com"}
+    ):
+        match = re.fullmatch(
+            r"/(?:[A-Za-z0-9_]{1,15}|i/web)/status/([1-9][0-9]{0,24})/?", url.path
+        )
+        if not match or url.query or url.fragment:
+            raise ValueError("Unsupported Twitter native URL")
+        native = match[1]
+        root_kind = kind == "post"
+        root = (twitter or {}).get(native, native if root_kind else None)
+        if not root or root_kind != (native == root):
+            raise ValueError("Twitter comment requires audited conversation root")
+        if kind not in {"post", "comment", "reply"}:
+            raise ValueError("Unsupported Twitter kind")
+        return (platform, "status", native), (platform, root)
     if platform == "youtube" and url.hostname in {"youtube.com", "www.youtube.com"}:
         params = parse_qs(url.query)
         root = params.get("v", [""])[0]
@@ -114,8 +134,10 @@ def merge(sources, output, provenance, *, duplicate_policy="error"):
     seen, roots, comment_roots = set(), set(), set()
     counts, lineage = Counter(), []
     total = 0
+    merged_twitter = {}
     try:
         for source in sources:
+            source_twitter = twitter_roots(source)
             before = sha(source)
             original = load_workbook(source, read_only=True, data_only=False)
             per_source = Counter()
@@ -129,11 +151,13 @@ def merge(sources, output, provenance, *, duplicate_policy="error"):
                         raise ValueError("Formula found in source data")
                     values = tuple(cell.value for cell in cells)
                     row = dict(zip(COLUMNS, values))
-                    key, root = identity(row)
+                    key, root = identity(row, twitter=source_twitter)
+                    if key[0] == "twitter":
+                        merged_twitter[key[2]] = root[1]
                     if key in seen:
                         raise ValueError(f"Duplicate native content: {key}")
                     seen.add(key)
-                    if key[1] == "post":
+                    if row["jenis"] in {"post", "video"}:
                         roots.add(root)
                     else:
                         comment_roots.add(root)
@@ -171,11 +195,16 @@ def merge(sources, output, provenance, *, duplicate_policy="error"):
             raise ValueError("Orphan comments in merged input")
         target = stage / "social_data.xlsx"
         book.save(target)
+        if merged_twitter:
+            write_roots(stage, target, merged_twitter)
         # Read back native identities and exact row count before publishing.
         check = load_workbook(target, read_only=True, data_only=False)
         rows = check["Data"].values
         assert tuple(next(rows)) == COLUMNS
-        verified = {identity(dict(zip(COLUMNS, values)))[0] for values in rows}
+        verified = {
+            identity(dict(zip(COLUMNS, values)), twitter=merged_twitter)[0]
+            for values in rows
+        }
         check.close()
         assert verified == seen and len(verified) == total
         report = {
@@ -225,6 +254,7 @@ def merge_unique(sources, output, provenance):
     sheet.append(COLUMNS)
     try:
         for source_index, source in enumerate(sources):
+            source_twitter = twitter_roots(source)
             before = sha(source)
             original = load_workbook(source, read_only=True, data_only=False)
             count = 0
@@ -237,8 +267,8 @@ def merge_unique(sources, output, provenance):
                         raise ValueError("Formula found in source data")
                     values = tuple(cell.value for cell in cells)
                     row = dict(zip(COLUMNS, values))
-                    key, root = identity(row)
-                    if key[1] == "comment" and row["teks_dipotong"]:
+                    key, root = identity(row, twitter=source_twitter)
+                    if row["jenis"] in {"comment", "reply"} and row["teks_dipotong"]:
                         raise ValueError(
                             "Truncated comment cannot become training input"
                         )
@@ -274,8 +304,14 @@ def merge_unique(sources, output, provenance):
             if sha(source) != before:
                 raise ValueError("Source changed during merge")
             lineage.append({"path": str(source), "sha256": before, "input_rows": count})
-        roots = {row["root"] for key, row in winners.items() if key[1] == "post"}
-        if {row["root"] for key, row in winners.items() if key[1] == "comment"} - roots:
+        roots = {
+            row["root"] for row in winners.values() if row["kind"] in {"post", "video"}
+        }
+        if {
+            row["root"]
+            for row in winners.values()
+            if row["kind"] in {"comment", "reply"}
+        } - roots:
             raise ValueError("Orphan comments in merged input")
         counts, retained = Counter(), Counter()
         with (stage / "record_lineage.jsonl").open("w", encoding="utf-8") as audit:
@@ -304,11 +340,21 @@ def merge_unique(sources, output, provenance):
                 )
         target = stage / "social_data.xlsx"
         book.save(target)
+        merged_twitter = {
+            key[2]: row["root"][1]
+            for key, row in winners.items()
+            if key[0] == "twitter"
+        }
+        if merged_twitter:
+            write_roots(stage, target, merged_twitter)
         check = load_workbook(target, read_only=True, data_only=False)
         try:
             rows = check["Data"].values
             assert tuple(next(rows)) == COLUMNS
-            ids = [identity(dict(zip(COLUMNS, row)))[0] for row in rows]
+            ids = [
+                identity(dict(zip(COLUMNS, row)), twitter=merged_twitter)[0]
+                for row in rows
+            ]
             assert len(ids) == len(set(ids)) == len(winners)
             assert set(ids) == set(winners)
         finally:

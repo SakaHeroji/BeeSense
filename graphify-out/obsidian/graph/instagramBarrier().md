@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser_capture.mjs"
 type: "code"
-community: "Worker Chrome Instagram"
+community: "Riwayat Sesi Instagram"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Chrome_Instagram
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # instagramBarrier()
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[instagram_browser_capture.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Chrome_Instagram
+#graphify/code #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

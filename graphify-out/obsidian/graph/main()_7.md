@@ -1,22 +1,23 @@
 ---
-source_file: "Crawler/Backend/social_crawler_selenium.py"
+source_file: "scripts/topic_sentence_export.py"
 type: "code"
-community: "Crawler Selenium"
-location: "L838"
+community: "topic_sentence_export.py"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium
+  - community/topic_sentence_exportpy
 ---
 
 # main()
 
 ## Connections
-- [[.error()]] - `indirect_call` [INFERRED]
-- [[.plan()_4]] - `calls` [EXTRACTED]
-- [[.run()_3]] - `calls` [EXTRACTED]
-- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[export_payload()]] - `calls` [EXTRACTED]
+- [[file_hash()]] - `calls` [EXTRACTED]
+- [[json_write()]] - `calls` [EXTRACTED]
+- [[seal()]] - `calls` [EXTRACTED]
+- [[topic_sentence_export.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium
+#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy

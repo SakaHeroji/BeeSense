@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Eksekusi dan Ekspor Crawler"
-location: "L986"
+location: "L1069"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

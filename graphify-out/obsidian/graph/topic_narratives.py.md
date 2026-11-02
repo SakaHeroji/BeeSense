@@ -1,18 +1,17 @@
 ---
 source_file: "MachineLearning/topic_narratives.py"
 type: "code"
-community: "Generator Narasi Gemini"
+community: "Akuisisi YouTube"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Generator_Narasi_Gemini
+  - community/Akuisisi_YouTube
 ---
 
 # topic_narratives.py
 
 ## Connections
-- [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
 - [[Dashboard build context includes root shim and artifact-reader packages]] - `references` [EXTRACTED]
 - [[Gemini narratives grounded in ranked topic keywords and representative sentences]] - `rationale_for` [EXTRACTED]
 - [[One request per topictop10weights plus10 fitted original sentences]] - `references` [EXTRACTED]
@@ -33,4 +32,4 @@ tags:
 - [[validate_text()]] - `contains` [EXTRACTED]
 - [[write_csv()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generator_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

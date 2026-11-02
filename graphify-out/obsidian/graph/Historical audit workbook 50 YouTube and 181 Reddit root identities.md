@@ -1,19 +1,17 @@
 ---
 source_file: "graphify-out/obsidian/Crawling 1000 Post Baru.md"
 type: "rationale"
-community: "Riwayat Dataset dan Metodologi"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "## Pengecualian dataset lama"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Dataset_dan_Metodologi
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Historical audit workbook: 50 YouTube and 181 Reddit root identities
 
 ## Connections
-- [[Obsidian dashboard dataset provenance]] - `references` [EXTRACTED]
-- [[Read-only nativecanonical index excludes 50 YouTube and 181 Reddit roots]] - `semantically_similar_to` [INFERRED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Dataset_dan_Metodologi
+#graphify/rationale #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

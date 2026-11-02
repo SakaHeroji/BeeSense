@@ -15,7 +15,10 @@ def verify_native_dataset(path):
     """Verify record identity independently of sentence-text deduplication."""
     from openpyxl import load_workbook
 
+    from MachineLearning.source_roots import twitter_roots
     from scripts.merge_social_datasets import COLUMNS, identity
+
+    native_roots = twitter_roots(path)
 
     book = load_workbook(path, read_only=True, data_only=False)
     seen, roots, parents = set(), set(), set()
@@ -29,11 +32,11 @@ def verify_native_dataset(path):
             if any(cell.data_type == "f" for cell in cells):
                 raise ValueError("Formula found in published dataset")
             row = dict(zip(COLUMNS, (cell.value for cell in cells)))
-            key, root = identity(row)
+            key, root = identity(row, twitter=native_roots)
             if key in seen:
                 raise ValueError("Duplicate native record in published dataset")
             seen.add(key)
-            (roots if key[1] == "post" else parents).add(root)
+            (roots if row["jenis"] in {"post", "video"} else parents).add(root)
     finally:
         book.close()
     if parents - roots:
@@ -57,6 +60,8 @@ def published_source_files(source):
             "record_lineage.jsonl",
             "duplicate_records.jsonl",
         }
+        if source.with_name("native_roots.json").exists():
+            expected.add("native_roots.json")
         if report.get("schema_version") == "beesense-append-only-merge:1":
             expected = {
                 "social_data.xlsx",
@@ -73,6 +78,53 @@ def published_source_files(source):
                 raise ValueError("Published merge audit checksum mismatch")
             allowed.add(path)
         allowed.add(report_path)
+    return allowed
+
+
+def published_crawl_files():
+    """Validate separately published X evidence without treating it as an NLP run."""
+    allowed = set()
+    tracked = set(
+        subprocess.check_output(
+            ["git", "ls-files", "--", "outputs"], cwd=ROOT, text=True
+        ).splitlines()
+    )
+    for directory in (ROOT / "outputs").glob("*"):
+        path = directory / "manifest.json"
+        if not path.is_file() or str(path.relative_to(ROOT)) not in tracked:
+            continue
+        descriptor = json.loads(path.read_text())
+        if descriptor.get("mode") not in {
+            "twitter_crawler",
+            "compact_projection_of_two_verified_audit_bundles",
+            "social_crawler",
+        }:
+            continue
+        names = descriptor.get("files_sha256", {})
+        expected = {
+            "Contents.jsonl",
+            "Relations.jsonl",
+            "KeywordHits.jsonl",
+            "Metrics.jsonl",
+            "Runs.jsonl",
+            "Sources.jsonl",
+            "TextChunks.jsonl",
+            "Readme.jsonl",
+            "contract.json",
+            "dataset.xlsx",
+            "social_data.xlsx",
+            "summary.json",
+        }
+        if descriptor["mode"] == "compact_projection_of_two_verified_audit_bundles":
+            expected = {"Contents.jsonl", "social_data.xlsx", "merge_report.json"}
+        if set(names) != expected:
+            raise ValueError("Unexpected published crawler files")
+        for name, digest in names.items():
+            candidate = directory / name
+            if file_hash(candidate) != digest:
+                raise ValueError("Published crawler checksum mismatch")
+            allowed.add(str(candidate.relative_to(ROOT)))
+        allowed.add(str(path.relative_to(ROOT)))
     return allowed
 
 
@@ -160,6 +212,7 @@ def verify(check_git=False):
             "Published source workbooks and NLP snapshots contain missing or unexpected files"
         )
     if check_git:
+        allowed |= published_crawl_files()
         tracked = set(
             subprocess.check_output(
                 ["git", "ls-files", "--", "outputs"], cwd=ROOT, text=True

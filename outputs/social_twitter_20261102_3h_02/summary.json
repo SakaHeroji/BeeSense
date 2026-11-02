@@ -1,0 +1,99 @@
+{
+  "status": "INTERRUPTED",
+  "targets_met": false,
+  "platforms": {
+    "twitter": {
+      "enabled": true,
+      "min_posts": 988,
+      "min_comments_per_post": 0,
+      "posts_attempted": 102,
+      "posts_exported": 92,
+      "qualified_posts": 92,
+      "comments": 62,
+      "replies": 45,
+      "filtered_roots": {
+        "root_missing_include_keyword": 8,
+        "root_excluded_keyword": 1,
+        "root_not_verified": 1
+      },
+      "insufficient_comment_posts": 0,
+      "invalid_rows": 16,
+      "target_met": false,
+      "stop_reason": "INTERRUPTED",
+      "cooldown_waits": 0,
+      "rate_limit_retries": 0,
+      "network": {
+        "requests": 74,
+        "http_status_counts": {
+          "200": 74
+        }
+      },
+      "existing_posts_skipped": 12,
+      "duplicate_posts_skipped": 0,
+      "posts_shortfall": 896
+    }
+  },
+  "output_dir": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_02",
+  "comments_complete": false,
+  "date_scope": "root_publication",
+  "delay_scope": "between_operations",
+  "run_id": "da0c504f-70d0-44f2-923a-9916fcdca2b5",
+  "deduplication_sources": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_01/dataset.xlsx",
+      "sha256": "ef23049ad37a11d447920c6fecceb240e86f0b914bcb82b59416559fb7a33dac",
+      "root_rows": {
+        "twitter": 19
+      }
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_02/dataset.xlsx",
+      "sha256": "4f7fe42ab5338b335c96edd38cb71da5b6647407a118cbd590b113da1535b998",
+      "root_rows": {
+        "twitter": 14
+      }
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_01/dataset.xlsx",
+      "sha256": "a9ee09bf6668cc69b7905b3970d516b36216e7112132a0231704ca3c1571460d",
+      "root_rows": {
+        "twitter": 12
+      }
+    }
+  ],
+  "elapsed_seconds": 701.17,
+  "primary_file": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_02/social_data.xlsx",
+  "compact": {
+    "file": "social_data.xlsx",
+    "sheets": [
+      "Data"
+    ],
+    "columns": [
+      "platform",
+      "jenis",
+      "judul_post",
+      "tanggal_post_wib",
+      "akurasi_tanggal_post",
+      "tanggal_konten_wib",
+      "akurasi_tanggal_konten",
+      "teks",
+      "url",
+      "teks_dipotong"
+    ],
+    "timezone": "Asia/Jakarta",
+    "rows": 199,
+    "counts": {
+      "twitter:post": 92,
+      "twitter:comment": 62,
+      "twitter:reply": 45
+    },
+    "date_accuracy_counts": {
+      "pasti": 199
+    },
+    "truncated_texts": 0,
+    "filtered_roots": 0,
+    "filtered_comments": 0,
+    "date_estimate_anchor": "source_observed_at",
+    "relative_date_precision": "calendar_date_not_exact_timestamp"
+  }
+}

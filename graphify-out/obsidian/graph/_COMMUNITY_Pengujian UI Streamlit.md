@@ -11,9 +11,9 @@ members: 15
 
 ## Members
 - [[.app()]] - code - tests/nlp/test_streamlit_app.py
-- [[.setUp()_12]] - code - tests/nlp/test_streamlit_app.py
+- [[.setUp()_10]] - code - tests/nlp/test_streamlit_app.py
 - [[.tearDown()]] - code - tests/nlp/test_streamlit_app.py
-- [[.tearDownClass()_2]] - code - tests/nlp/test_streamlit_app.py
+- [[.tearDownClass()_1]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_all_views_and_noise_only_selection()]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_coherence_metric_and_per_topic_scores_are_visible()]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_complete_excel_download_is_available_without_training()]] - code - tests/nlp/test_streamlit_app.py
@@ -35,9 +35,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
 
 ## Top bridge nodes
 - [[StreamlitTests]] - degree 17, connects to 1 community
 - [[.test_complete_excel_download_is_available_without_training()]] - degree 3, connects to 1 community
-- [[.setUp()_12]] - degree 2, connects to 1 community
+- [[.setUp()_10]] - degree 2, connects to 1 community

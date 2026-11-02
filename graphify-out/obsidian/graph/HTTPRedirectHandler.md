@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Pengujian Integrasi Reddrix"
+community: "Struktur DOM Reddit"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Integrasi_Reddrix
+  - community/Struktur_DOM_Reddit
 ---
 
 # HTTPRedirectHandler
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[RestrictedRedirect]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Integrasi_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit

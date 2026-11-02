@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Adaptive macOS and Linux display policy]] - `implements` [EXTRACTED]
-- [[BeeSense project]] - `references` [EXTRACTED]
 - [[Reddit 30-minute trial partial 33 posts and 736 commentsreplies]] - `references` [EXTRACTED]
 - [[Reddrix 1.2.14 shared SocialCrawler backend]] - `implements` [EXTRACTED]
 - [[Shared compact and eight-sheet social export contract]] - `implements` [EXTRACTED]

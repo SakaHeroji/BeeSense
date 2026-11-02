@@ -13,6 +13,7 @@
 !Crawler/Backend/instaloader_crawler.py
 !Crawler/Backend/instaloader_browser_patch.py
 !Crawler/Backend/social_crawler.py
+!Crawler/Backend/twitter_crawler.py
 !Crawler/Backend/instagram_browser.py
 !Crawler/Backend/instagram_browser_capture.mjs
 !Crawler/Backend/social_export.py
@@ -37,3 +38,6 @@ config/auth.json
 output/
 outputs/
 Crawler/Frontend/
+
+!requirements/twitter.txt
+!config/social_crawler_twitter_3h.json

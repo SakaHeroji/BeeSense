@@ -1,23 +1,26 @@
 ---
-source_file: "scripts/topic_sentence_export.py"
+source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "topic_sentence_export.py"
-location: "L110"
+community: "Encoding dan Penyimpanan Model"
+location: "L2494"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # main()
 
 ## Connections
+- [[._event()_1]] - `calls` [EXTRACTED]
+- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
+- [[.explain_artifacts()]] - `calls` [EXTRACTED]
+- [[.fit_excel()]] - `calls` [EXTRACTED]
 - [[.load_run()]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[export_payload()]] - `calls` [EXTRACTED]
-- [[file_hash()]] - `calls` [EXTRACTED]
-- [[json_write()]] - `calls` [EXTRACTED]
-- [[seal()]] - `calls` [EXTRACTED]
-- [[topic_sentence_export.py]] - `contains` [EXTRACTED]
+- [[.prepare_excel()]] - `calls` [EXTRACTED]
+- [[.save()]] - `calls` [EXTRACTED]
+- [[.save_explanations()]] - `calls` [EXTRACTED]
+- [[SocialNLPClusterer]] - `calls` [EXTRACTED]
+- [[social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

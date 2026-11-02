@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[General NLP Environment]] - `references` [EXTRACTED]
 - [[Gensim Coherence Environment]] - `references` [EXTRACTED]
-- [[Social NLP Methodology]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

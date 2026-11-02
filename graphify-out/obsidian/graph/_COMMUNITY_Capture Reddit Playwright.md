@@ -39,18 +39,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 4 edges to [[_COMMUNITY_Pengambilan HTML Reddit_2]]
 - 4 edges to [[_COMMUNITY_Validasi Record Reddit]]
-- 4 edges to [[_COMMUNITY_Worker Reddrix]]
-- 2 edges to [[_COMMUNITY_Generator Narasi Gemini]]
+- 2 edges to [[_COMMUNITY_Akuisisi YouTube]]
 - 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
+- 1 edge to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
 
 ## Top bridge nodes
 - [[crawl_reddit_playwright.py]] - degree 17, connects to 4 communities
 - [[run()]] - degree 15, connects to 4 communities
-- [[barrier_status()]] - degree 5, connects to 2 communities
 - [[validate_capture()]] - degree 5, connects to 2 communities
 - [[.call()]] - degree 7, connects to 1 community
+- [[.inspect()]] - degree 4, connects to 1 community

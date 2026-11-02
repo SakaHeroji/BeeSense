@@ -2,7 +2,7 @@
 source_file: "Dashboard/app.py"
 type: "code"
 community: ".topic_figure"
-location: "L59"
+location: "L65"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,11 +1,11 @@
 ---
 source_file: "config/twitter_crawler.json"
 type: "concept"
-community: "Akuisisi X dan Ekspor Scweet"
+community: "Integrasi X dan Provenans Akuisisi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Preset percobaan Twitter 30 menit
@@ -15,6 +15,5 @@ tags:
 - [[Image Twitter Python 3.12 UID 10001]] - `references` [EXTRACTED]
 - [[Jeda 5 dan 15 detik limiter window per operasi dan cap harian 120]] - `implements` [EXTRACTED]
 - [[Query pendidikan Indonesia jendela tujuh hari]] - `implements` [EXTRACTED]
-- [[TwitterCrawler mandiri]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_twitter_crawler.py"
 type: "code"
-community: "Akuisisi X dan Ekspor Scweet"
-location: "L19"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # tweet()
@@ -17,4 +17,4 @@ tags:
 - [[hanging_worker()]] - `calls` [EXTRACTED]
 - [[test_twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

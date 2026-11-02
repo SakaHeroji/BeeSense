@@ -34,9 +34,8 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Batas Integrasi Produksi]]
 - 2 edges to [[_COMMUNITY_Kontrak API Frontend]]
 - 1 edge to [[_COMMUNITY_Rencana Layanan Backend]]
-- 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
 
 ## Top bridge nodes
-- [[Curated Crawler PRD statusfrontend implemented, backend pending]] - degree 9, connects to 4 communities
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - degree 9, connects to 4 communities
+- [[Curated Crawler PRD statusfrontend implemented, backend pending]] - degree 8, connects to 3 communities
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - degree 6, connects to 1 community

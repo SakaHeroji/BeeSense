@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[ValueError]] - `calls` [INFERRED]
-- [[_url()]] - `calls` [EXTRACTED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[load_settings()_1]] - `calls` [EXTRACTED]
 

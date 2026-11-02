@@ -1,19 +1,18 @@
 ---
-source_file: "scripts/verify_dashboard_data.py"
+source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Verifikasi Artefak Dataset"
-location: "L187"
+community: "Penggabungan Dataset"
+location: "L399"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Verifikasi_Artefak_Dataset
+  - community/Penggabungan_Dataset
 ---
 
 # main()
 
 ## Connections
-- [[.error()]] - `indirect_call` [INFERRED]
-- [[verify()_1]] - `calls` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
+- [[merge()]] - `calls` [EXTRACTED]
+- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset
+#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

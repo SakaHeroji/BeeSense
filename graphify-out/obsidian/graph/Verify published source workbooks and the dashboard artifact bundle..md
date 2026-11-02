@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Verifikasi Artefak Dataset"
+community: "Encoding dan Penyimpanan Model"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Verifikasi_Artefak_Dataset
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Verify published source workbooks and the dashboard artifact bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_dashboard_data.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

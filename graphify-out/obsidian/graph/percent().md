@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Penjelasan Topik Dashboard"
-location: "L54"
+community: "Render Dashboard Streamlit"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penjelasan_Topik_Dashboard
+  - community/Render_Dashboard_Streamlit
 ---
 
 # percent()
@@ -22,4 +22,4 @@ tags:
 - [[app.py]] - `contains` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penjelasan_Topik_Dashboard
+#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

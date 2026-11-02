@@ -1,17 +1,16 @@
 ---
 source_file: "deployment/docker/Dockerfile.twitter.dockerignore"
 type: "rationale"
-community: "Akuisisi X dan Ekspor Scweet"
+community: "Integrasi X dan Provenans Akuisisi"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Allowlist Docker tanpa auth dan sesi
 
 ## Connections
 - [[Image Twitter Python 3.12 UID 10001]] - `rationale_for` [EXTRACTED]
-- [[State SQLite privat antar-run]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

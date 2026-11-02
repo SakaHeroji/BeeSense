@@ -1,44 +1,51 @@
 ---
 type: community
-cohesion: 0.14
-members: 29
+cohesion: 0.10
+members: 36
 ---
 
 # Worker Reddrix
 
-**Cohesion:** 0.14 - loosely connected
-**Members:** 29 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 36 nodes
 
 ## Members
-- [[.__init__()_27]] - code - Crawler/Backend/social_crawler.py
+- [[.__init__()_31]] - code - Crawler/Backend/social_crawler.py
+- [[._checkpoint_items()_1]] - code - Crawler/Backend/social_crawler.py
+- [[.crawler()_2]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[.runner()]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[.test_08_urls_reject_credentials_api_and_external_hosts()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Configure initial and refreshed sessions inside an isolated worker module.]] - rationale - Crawler/Backend/social_crawler.py
+- [[.test_default_config_selects_reddrix_without_loading_browser()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_display_mode_propagates_through_process_boundary()]] - code - tests/crawler/test_reddit_crawler.py
+- [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_mixed_baseline_skips_both_platforms_before_worker_requests()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_reddrix_retry_uses_coordinator_cooldown_and_same_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[Exercise the default Reddrix route with YouTube and the shared export pipeline.]] - rationale - tests/crawler/test_social_crawler_reddrix.py
 - [[FixtureReddrix]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[Guard Python entry points for multiprocessing spawn]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Main coordinator owns Reddrix normalization, display and worker]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[Map Reddrix 1.2.14 dictionaries without inventing identity or dates.]] - rationale - Crawler/Backend/social_crawler.py
-- [[Omitted retry setting defaults to zero]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
 - [[Reddrix anti-bot exceptions do not expose an authoritative HTTP status.]] - rationale - Crawler/Backend/social_crawler.py
+- [[SocialCrawlerReddrixTests]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[Spawn boundary retains streamed records when the hard deadline expires.]] - rationale - Crawler/Backend/social_crawler.py
 - [[Virtual displays require Linux and Xvfb; other environments use headless.]] - rationale - Crawler/Backend/social_crawler.py
 - [[_config()]] - code - Crawler/Backend/social_crawler.py
+- [[_integer()_1]] - code - Crawler/Backend/twitter_crawler.py
 - [[_keywords()]] - code - Crawler/Backend/social_crawler.py
 - [[_number()]] - code - Crawler/Backend/social_crawler.py
+- [[_url()]] - code - Crawler/Backend/social_crawler.py
 - [[collect_reddrix()]] - code - Crawler/Backend/social_crawler.py
-- [[load_reddrix()]] - code - Crawler/Backend/social_crawler.py
+- [[configuration()]] - code - Crawler/Backend/twitter_crawler.py
 - [[normalize_reddrix_item()]] - code - Crawler/Backend/social_crawler.py
+- [[post_url()]] - code - Crawler/Backend/twitter_crawler.py
 - [[reddrix_error_receipt()]] - code - Crawler/Backend/social_crawler.py
 - [[reddrix_receipt()]] - code - Crawler/Backend/social_crawler.py
-- [[reddrix_version()]] - code - Crawler/Backend/social_crawler.py
 - [[reddrix_worker()]] - code - Crawler/Backend/social_crawler.py
 - [[resolve_reddrix_display()]] - code - Crawler/Backend/social_crawler.py
 - [[run_reddrix_worker()]] - code - Crawler/Backend/social_crawler.py
 - [[social_crawler.py]] - code - Crawler/Backend/social_crawler.py
 - [[spawn_reddrix_fixture()]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[test_social_crawler_reddrix.py]] - code - tests/crawler/test_social_crawler_reddrix.py
-- [[thread_url()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -48,34 +55,30 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 7 edges to [[_COMMUNITY_Generator Narasi Gemini]]
+- 17 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
 - 6 edges to [[_COMMUNITY_InstaloaderCrawler]]
-- 5 edges to [[_COMMUNITY_Koordinator Backend Sosial_1]]
-- 4 edges to [[_COMMUNITY_Capture Reddit Playwright]]
-- 4 edges to [[_COMMUNITY_Worker Instaloader]]
-- 4 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 3 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
-- 3 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
-- 2 edges to [[_COMMUNITY_Validasi Record Reddit]]
-- 2 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
+- 6 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
+- 4 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 4 edges to [[_COMMUNITY_Runtime Docker dan Display_1]]
+- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
 - 2 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 2 edges to [[_COMMUNITY_Crawler Selenium]]
-- 2 edges to [[_COMMUNITY_Runtime Docker dan Display]]
-- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
-- 2 edges to [[_COMMUNITY_Default Backend Reddit]]
-- 1 edge to [[_COMMUNITY_Validasi Record Reddit_1]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_9]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_11]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
 - 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit_4]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
-- 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
-- 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_8]]
 
 ## Top bridge nodes
-- [[social_crawler.py]] - degree 42, connects to 12 communities
-- [[thread_url()]] - degree 8, connects to 5 communities
+- [[social_crawler.py]] - degree 34, connects to 15 communities
 - [[test_social_crawler_reddrix.py]] - degree 17, connects to 4 communities
-- [[_config()]] - degree 11, connects to 4 communities
-- [[Main coordinator owns Reddrix normalization, display and worker]] - degree 10, connects to 4 communities
+- [[SocialCrawlerReddrixTests]] - degree 15, connects to 4 communities
+- [[post_url()]] - degree 7, connects to 3 communities
+- [[FixtureReddrix]] - degree 6, connects to 3 communities

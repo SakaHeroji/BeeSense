@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Default Backend Reddit"
+community: "Runtime Docker dan Display"
 location: "## Verifikasi dan deployment"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Default_Backend_Reddit
+  - community/Runtime_Docker_dan_Display
 ---
 
 # No database/model/persistent-contract migration
@@ -15,4 +15,4 @@ tags:
 - [[Reddrix trial preserves existing model and frontend boundaries]] - `conceptually_related_to` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Default_Backend_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

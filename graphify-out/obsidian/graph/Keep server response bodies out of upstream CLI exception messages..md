@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_browser_patch.py"
 type: "rationale"
-community: "Format Grafik Dashboard"
+community: "Worker Instaloader"
 location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Format_Grafik_Dashboard
+  - community/Worker_Instaloader
 ---
 
 # Keep server response bodies out of upstream CLI exception messages.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[_check()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Format_Grafik_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader

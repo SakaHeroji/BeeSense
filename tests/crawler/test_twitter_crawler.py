@@ -14,6 +14,7 @@ from unittest.mock import Mock, patch
 from openpyxl import load_workbook
 
 from Crawler.Backend import twitter_crawler as x
+from Crawler.Backend.social_crawler import SocialCrawler
 
 
 def tweet(ident="100", text="Kuliah kampus", parent=None, comments=0):
@@ -62,8 +63,165 @@ class TwitterCrawlerTests(unittest.TestCase):
             plan = x.TwitterCrawler(self.cfg).plan()
         self.assertEqual(plan["config"]["total_seconds"], 1800)
         self.assertFalse(plan["live_access_verified"])
-        self.assertFalse(plan["integrated_into_social_crawler"])
+        self.assertTrue(plan["integrated_into_social_crawler"])
         self.assertEqual(plan["primary_output"]["columns"], list(x.COMPACT_COLUMNS))
+
+    def test_social_coordinator_uses_cached_search_root_and_native_replies(self):
+        calls = []
+
+        def worker(operation, target, seconds, emit):
+            calls.append(operation)
+            if operation == "search":
+                emit(tweet(comments=2))
+                emit(tweet("101", parent="100"))  # Not a new root.
+            else:
+                self.assertEqual(target["tweet_id"], "100")
+                emit(tweet("101", parent="100"))
+                emit(tweet("102", parent="101"))
+            return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+
+        adapter = x.TwitterCoordinatorWorker({}, worker=worker)
+        crawler = SocialCrawler(self.cfg, workers={"twitter": adapter})
+        report = crawler.run(self.path / "social")
+        self.assertEqual(calls, ["search", "replies"])
+        summary = report["platforms"]["twitter"]
+        self.assertEqual(
+            (summary["qualified_posts"], summary["comments"], summary["replies"]),
+            (1, 1, 1),
+        )
+        rows = [
+            json.loads(line)
+            for line in (self.path / "social/Contents.jsonl").read_text().splitlines()
+        ]
+        self.assertEqual(
+            {row["object_key"] for row in rows},
+            {x.object_key(n) for n in ("100", "101", "102")},
+        )
+        self.assertEqual(rows[2]["parent_key"], x.object_key("101"))
+        book = load_workbook(self.path / "social/social_data.xlsx", read_only=True)
+        self.assertEqual(len(list(book["Data"].values)), 4)
+        book.close()
+
+    def test_social_coordinator_stops_on_actual_rate_limit_with_partial_root(self):
+        def worker(operation, target, seconds, emit):
+            if operation == "search":
+                emit(tweet(comments=1))
+                return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+            return dict(status="RATE_LIMITED", retry_after_seconds=900, warnings=[])
+
+        adapter = x.TwitterCoordinatorWorker({}, worker=worker)
+        report = SocialCrawler(self.cfg, workers={"twitter": adapter}).run(
+            self.path / "limited"
+        )
+        self.assertEqual(report["platforms"]["twitter"]["stop_reason"], "RATE_LIMITED")
+        self.assertEqual(report["platforms"]["twitter"]["posts_exported"], 1)
+        self.assertEqual(report["status"], "PARTIAL")
+
+    def test_social_cooldown_keeps_partial_root_and_resumes_new_children_once(self):
+        now, reply_calls = [0], []
+        cfg = deepcopy(self.cfg)
+        cfg["platforms"]["twitter"].update(min_posts=2, max_posts=2)
+
+        def worker(operation, target, seconds, emit):
+            if operation == "search":
+                emit(tweet(comments=1))
+                emit(tweet("200"))
+            else:
+                reply_calls.append(target["tweet_id"])
+                if len(reply_calls) == 1:
+                    return dict(status="COOLDOWN", retry_after_seconds=20, warnings=[])
+                emit(tweet("101", parent="100"))
+                emit(tweet("101", text="Updated duplicate", parent="100"))
+            return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+
+        adapter = x.TwitterCoordinatorWorker(
+            {}, worker=worker, monotonic=lambda: now[0]
+        )
+        crawler = SocialCrawler(
+            cfg,
+            workers={"twitter": adapter},
+            monotonic=lambda: now[0],
+            sleep=lambda seconds: now.__setitem__(0, now[0] + seconds),
+        )
+        report = crawler.run(self.path / "cooldown")
+        summary = report["platforms"]["twitter"]
+        self.assertEqual(
+            (summary["posts_exported"], summary["comments"], summary["cooldown_waits"]),
+            (2, 1, 1),
+        )
+        self.assertEqual(reply_calls, ["100", "100"])
+        self.assertEqual(now[0], 20)
+        self.assertEqual(report["status"], "TARGET_MET")
+
+    def test_cached_root_without_comments_does_not_consume_network_delay(self):
+        cfg = deepcopy(self.cfg)
+        cfg["delay"]["seconds"] = 15
+        sleeps = []
+
+        def worker(operation, target, seconds, emit):
+            self.assertEqual(operation, "search")
+            emit(tweet())
+            return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+
+        adapter = x.TwitterCoordinatorWorker({}, worker=worker)
+        report = SocialCrawler(
+            cfg, workers={"twitter": adapter}, sleep=sleeps.append
+        ).run(self.path / "cache")
+        self.assertEqual(report["status"], "TARGET_MET")
+        self.assertEqual(sleeps, [])
+
+    def test_social_comment_thread_budget_prioritizes_root_acquisition(self):
+        cfg = deepcopy(self.cfg)
+        cfg["platforms"]["twitter"].update(
+            min_posts=2, max_posts=2, max_comment_threads=1
+        )
+        calls = []
+
+        def worker(operation, target, seconds, emit):
+            calls.append(operation)
+            if operation == "search":
+                emit(tweet("100", comments=2))
+                emit(tweet("200", comments=2))
+            else:
+                emit(tweet("101", parent="100"))
+            return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+
+        adapter = x.TwitterCoordinatorWorker({}, worker=worker)
+        crawler = SocialCrawler(cfg, workers={"twitter": adapter})
+        # Effective settings remain valid input, including coordinator defaults.
+        SocialCrawler(crawler.config, workers={"twitter": adapter}).plan()
+        report = crawler.run(self.path / "sampled")
+        self.assertEqual(calls, ["search", "replies"])
+        self.assertEqual(report["platforms"]["twitter"]["posts_exported"], 2)
+        self.assertEqual(report["platforms"]["twitter"]["comments"], 1)
+
+    def test_social_baseline_excludes_x_ids_previously_exported_as_comments(self):
+        def first_worker(operation, target, seconds, emit):
+            if operation == "search":
+                emit(tweet(comments=1))
+            else:
+                emit(tweet("101", parent="100"))
+            return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+
+        original = self.path / "historical"
+        SocialCrawler(
+            self.cfg,
+            workers={"twitter": x.TwitterCoordinatorWorker({}, worker=first_worker)},
+        ).run(original)
+        cfg = deepcopy(self.cfg)
+        cfg["exclude_existing_datasets"] = [str(original)]
+        cfg["platforms"]["twitter"].update(
+            queries=[], urls=["https://x.com/i/web/status/101"]
+        )
+        forbidden = Mock(
+            side_effect=AssertionError("Existing native ID must not be fetched")
+        )
+        report = SocialCrawler(cfg, workers={"twitter": forbidden}).run(
+            self.path / "excluded"
+        )
+        forbidden.assert_not_called()
+        self.assertEqual(report["platforms"]["twitter"]["existing_posts_skipped"], 1)
+        self.assertEqual(report["platforms"]["twitter"]["posts_exported"], 0)
 
     def test_validation_rejects_embedded_secrets_and_other_platforms(self):
         for change in (

@@ -1,20 +1,23 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Akuisisi X dan Ekspor Scweet"
+community: "Worker Reddrix"
 location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Worker_Reddrix
 ---
 
 # post_url()
 
 ## Connections
 - [[._baseline()_1]] - `calls` [EXTRACTED]
+- [[.accept()_5]] - `calls` [EXTRACTED]
+- [[_url()]] - `calls` [EXTRACTED]
 - [[configuration()]] - `calls` [EXTRACTED]
 - [[normalize_item()_1]] - `calls` [EXTRACTED]
+- [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

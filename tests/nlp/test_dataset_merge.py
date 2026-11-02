@@ -1,4 +1,5 @@
 import hashlib
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -6,10 +7,79 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 from openpyxl.cell import WriteOnlyCell
 
+from MachineLearning.social_nlp import SocialNLPClusterer
+from MachineLearning.source_roots import write_roots
 from scripts.merge_social_datasets import COLUMNS, merge
 
 
 class MergeTests(unittest.TestCase):
+    def test_twitter_native_dedup_and_audited_roots_survive_merge(self):
+        sources = []
+        for name, kind, text in (
+            ("first", "comment", "Kalimat pertama"),
+            ("latest", "reply", "Kalimat diperbarui"),
+        ):
+            original = self.source(
+                name,
+                [
+                    (
+                        "twitter",
+                        "post",
+                        "https://x.com/example/status/100",
+                        "Kuliah kampus",
+                    ),
+                    ("twitter", kind, "https://x.com/i/web/status/101", text),
+                ],
+            )
+            folder = self.root / name
+            folder.mkdir()
+            path = folder / "social_data.xlsx"
+            original.rename(path)
+            write_roots(folder, path, {"100": "100", "101": "100"})
+            sources.append(path)
+        result = merge(
+            sources,
+            self.root / "combined",
+            self.root / "provenance.json",
+            duplicate_policy="prefer_latest",
+        )
+        self.assertEqual(
+            (result["rows"], result["roots"], result["duplicates_removed"]), (2, 1, 2)
+        )
+        sidecar = json.loads((self.root / "combined/native_roots.json").read_text())
+        self.assertEqual(sidecar["twitter"], {"100": "100", "101": "100"})
+        self.assertIn("native_roots.json", result["files_sha256"])
+        self.assertEqual(
+            SocialNLPClusterer.parent_post_key(
+                {
+                    "platform": "twitter",
+                    "url": "https://x.com/i/web/status/101",
+                    "thread_root_key": "twitter:x_post:100",
+                }
+            ),
+            ("twitter:x_post:100", "source_audit"),
+        )
+
+    def test_twitter_comment_without_root_evidence_is_rejected(self):
+        source = self.source(
+            "no_audit",
+            [("twitter", "comment", "https://x.com/i/web/status/101", "Kuliah")],
+        )
+        with self.assertRaisesRegex(ValueError, "audited conversation root"):
+            self.run_merge([source])
+        self.assertFalse((self.root / "combined").exists())
+
+    def test_twitter_sidecar_cannot_be_reused_for_changed_workbook(self):
+        from MachineLearning.source_roots import twitter_roots
+
+        source = self.source(
+            "bound", [("twitter", "post", "https://x.com/i/web/status/100", "Kuliah")]
+        )
+        write_roots(self.root, source, {"100": "100"})
+        source.write_bytes(source.read_bytes() + b"changed")
+        with self.assertRaisesRegex(ValueError, "does not match workbook"):
+            twitter_roots(source)
+
     def setUp(self):
         folder = tempfile.TemporaryDirectory()
         self.addCleanup(folder.cleanup)

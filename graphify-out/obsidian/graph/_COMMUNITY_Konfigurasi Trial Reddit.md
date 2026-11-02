@@ -29,12 +29,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 5 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 2 edges to [[_COMMUNITY_Runtime Docker dan Display]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
+- 1 edge to [[_COMMUNITY_Runtime Docker dan Display_1]]
 
 ## Top bridge nodes
-- [[Tracked Reddit trial configuration]] - degree 10, connects to 2 communities
 - [[Thin Reddit-only wrapper selects shared Reddrix explicitly]] - degree 3, connects to 2 communities
+- [[Tracked Reddit trial configuration]] - degree 9, connects to 1 community
 - [[Original historical date window, keywords and read-only baseline]] - degree 4, connects to 1 community
 - [[Thirty-minute bounded trial with non-guaranteed target]] - degree 3, connects to 1 community
 - [[Tracked reddrix.display_mode=auto]] - degree 2, connects to 1 community

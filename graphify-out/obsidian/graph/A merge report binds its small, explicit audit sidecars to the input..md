@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Verifikasi Artefak Dataset"
-location: "L45"
+community: "Encoding dan Penyimpanan Model"
+location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Verifikasi_Artefak_Dataset
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # A merge report binds its small, explicit audit sidecars to the input.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[published_source_files()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Artefak_Dataset
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

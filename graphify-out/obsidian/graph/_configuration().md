@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[.__init__()_21]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [EXTRACTED]
-- [[_config()]] - `calls` [EXTRACTED]
 - [[_integer()]] - `calls` [EXTRACTED]
 - [[browser_configuration()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]

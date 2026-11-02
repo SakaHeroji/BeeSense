@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.generate()]] - `method` [EXTRACTED]
-- [[.setUp()_13]] - `method` [EXTRACTED]
+- [[.setUp()_11]] - `method` [EXTRACTED]
 - [[.tearDown()_1]] - `method` [EXTRACTED]
 - [[.test_changed_representative_sentence_invalidates_cache_and_tampering_fails()]] - `method` [EXTRACTED]
 - [[.test_credentials_stay_out_of_configuration_and_gate_precedes_api()]] - `method` [EXTRACTED]

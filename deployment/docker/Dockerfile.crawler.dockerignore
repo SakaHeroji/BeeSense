@@ -7,6 +7,7 @@
 !Crawler/Backend/
 !Crawler/Backend/__init__.py
 !Crawler/Backend/social_crawler.py
+!Crawler/Backend/twitter_crawler.py
 !Crawler/Backend/social_export.py
 !Crawler/Backend/instagram_crawler.py
 !Crawler/Backend/instaloader_crawler.py
@@ -42,3 +43,6 @@ config/auth.json
 **/*session*.json
 **/__pycache__/
 Crawler/Frontend/
+
+!requirements/twitter.txt
+!config/social_crawler_twitter_3h.json

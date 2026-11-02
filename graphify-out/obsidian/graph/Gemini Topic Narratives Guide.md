@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[BeeSense Dashboard Guide]] - `references` [EXTRACTED]
 - [[BeeSense Topic Prompt Version 2]] - `references` [EXTRACTED]
-- [[Instagram Pacing and Backoff]] - `semantically_similar_to` [INFERRED]
 - [[Post Clustering Synthesis Gate]] - `references` [EXTRACTED]
 - [[Verified Topic Narratives CSV]] - `references` [EXTRACTED]
 

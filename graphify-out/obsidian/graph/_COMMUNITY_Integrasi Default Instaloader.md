@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.20
-members: 23
+members: 22
 ---
 
 # Integrasi Default Instaloader
 
 **Cohesion:** 0.20 - loosely connected
-**Members:** 23 nodes
+**Members:** 22 nodes
 
 ## Members
 - [[Current Instaloader and full-crawler verification]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
@@ -16,7 +16,6 @@ members: 23
 - [[Experimental web_doc_id comments transport]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
 - [[Historical Instagram resume preset preserved]] - rationale - docs/crawler/INSTALOADER_CRAWLER.md
 - [[Historical trials 01–05]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
-- [[Instagram three-hour target preset]] - concept - docs/crawler/SOCIAL_CRAWLER.md
 - [[Instaloader Docker artifact awaiting runtime verification]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
 - [[Instaloader PR 2692]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
 - [[Instaloader issue 2651]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
@@ -40,15 +39,3 @@ members: 23
 TABLE source_file, type FROM #community/Integrasi_Default_Instaloader
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 5 edges to [[_COMMUNITY_Integrasi Default Instaloader_1]]
-- 3 edges to [[_COMMUNITY_Integrasi Default Instaloader_2]]
-- 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_3]]
-
-## Top bridge nodes
-- [[SocialCrawler 1.6.0 default Instaloader integration]] - degree 11, connects to 2 communities
-- [[InstaloaderCrawler guide and evidence]] - degree 10, connects to 2 communities
-- [[InstaloaderCrawler architecture note]] - degree 15, connects to 1 community
-- [[InstaloaderCrawler_1]] - degree 12, connects to 1 community
-- [[Trial06 verified capped live outcome]] - degree 7, connects to 1 community

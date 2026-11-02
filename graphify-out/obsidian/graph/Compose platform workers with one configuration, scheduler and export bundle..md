@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Koordinator Backend Sosial"
-location: "L746"
+community: "Eksekusi dan Ekspor Crawler"
+location: "L810"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Koordinator_Backend_Sosial
+  - community/Eksekusi_dan_Ekspor_Crawler
 ---
 
 # Compose platform workers with one configuration, scheduler and export bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SocialCrawler]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Koordinator_Backend_Sosial
+#graphify/rationale #graphify/EXTRACTED #community/Eksekusi_dan_Ekspor_Crawler

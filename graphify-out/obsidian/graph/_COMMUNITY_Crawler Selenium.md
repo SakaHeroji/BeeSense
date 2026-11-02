@@ -10,21 +10,21 @@ members: 58
 **Members:** 58 nodes
 
 ## Members
+- [[.__init__()_27]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.__init__()_28]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[.__init__()_29]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[._checkpoint_items()_1]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[._execute()_1]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[._legacy_settings()_1]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[._normalize()_1]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[._source_metadata()_1]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[._checkpoint_items()]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[._execute()]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[._legacy_settings()]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[._normalize()]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[._source_metadata()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[._youtube_reply()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[._youtube_sort()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.navigate()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.pause()]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[.plan()_4]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[.plan()_3]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.reddit()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.rows()]] - code - tests/crawler/test_social_crawler_selenium.py
-- [[.run()_3]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[.run()_2]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.search()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.selected_root()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[.selenium_version()]] - code - Crawler/Backend/social_crawler_selenium.py
@@ -63,7 +63,7 @@ members: 58
 - [[_reddit_records()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[_timestamp()_1]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[capture()]] - code - tests/crawler/test_social_crawler_selenium.py
-- [[main()_7]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[main()_6]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[selenium_worker()]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[social_crawler_selenium.py]] - code - Crawler/Backend/social_crawler_selenium.py
 - [[test_social_crawler_selenium.py]] - code - tests/crawler/test_social_crawler_selenium.py
@@ -77,12 +77,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 5 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 8 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 5 edges to [[_COMMUNITY_Akuisisi YouTube]]
+- 2 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
 - 2 edges to [[_COMMUNITY_Worker Reddrix]]
-- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Lingkungan Training SBERT]]
+- 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit_2]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
@@ -90,4 +91,4 @@ SORT file.name ASC
 - [[test_social_crawler_selenium.py]] - degree 16, connects to 2 communities
 - [[selenium_worker()]] - degree 14, connects to 2 communities
 - [[social_crawler_selenium.py]] - degree 12, connects to 2 communities
-- [[main()_7]] - degree 6, connects to 2 communities
+- [[main()_6]] - degree 6, connects to 2 communities

@@ -12,7 +12,7 @@ tags:
 # Clock
 
 ## Connections
-- [[.__init__()_33]] - `method` [EXTRACTED]
+- [[.__init__()_30]] - `method` [EXTRACTED]
 - [[.clock()_1]] - `method` [EXTRACTED]
 - [[.setUp()_7]] - `calls` [EXTRACTED]
 - [[.setUp()_5]] - `calls` [EXTRACTED]

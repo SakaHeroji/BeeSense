@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Lingkungan Training SBERT"
+community: "Batas Akuisisi Reddit"
 location: "## Menjalankan"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Lingkungan_Training_SBERT
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Isolated local environment and separately downloaded browser
@@ -15,4 +15,4 @@ tags:
 - [[Isolated Reddrix 1.2.14 crawler dependency pins]] - `references` [EXTRACTED]
 - [[Reddrix-backed RedditCrawler runbook]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Lingkungan_Training_SBERT
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

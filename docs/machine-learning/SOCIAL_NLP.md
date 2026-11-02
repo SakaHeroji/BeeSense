@@ -4,7 +4,13 @@
 UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot kalimat → c-TF-IDF → artifact terverifikasi**.
 [SocialNLPStreamlitApp](../../Dashboard/app.py) membaca hasil tersimpan tanpa training pada rerun.
 
-## Data dan hasil aktif setelah tambahan Instagram
+## Input Twitter/X
+
+SocialCrawler 1.7.0 memakai Scweet sebagai backend Twitter. Penggabungan workbook memakai ID X global, dengan root percakapan dari audit Contents atau sidecar `native_roots.json` yang terikat checksum input. Judul dan tanggal tidak dipakai menebak root X. `prepare_excel` mempertahankan `thread_root_key` pada metadata occurrence; explainability menggunakannya sebagai `source_audit`. Kalimat eligible tetap komentar dan balasan, sedangkan post asal dipertahankan sebagai konteks. Filter, grafik volume, cakupan, jaringan dan tren dashboard mengenali `twitter` / X.
+
+Preset `config/social_nlp_twitter_20261102.json` meminta tepat 20 topik, mean c_v minimal 0,4, dan Gemini enabled. Ambang tidak diturunkan otomatis. Gemini memakai top-10 keyword c-TF-IDF dan hingga 10 kalimat representatif setiap topik; satu kalimat topik dan deskripsi disimpan pada `topic_narratives.csv`. Dashboard memuat hasil tersimpan tanpa request Gemini pada rerun.
+
+## Hasil Instagram sebelum integrasi Twitter
 
 Input `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx` memuat **34.095 record unik**, **2.160 post asal**, dan **31.935 komentar/balasan**. Input menggabungkan 33.034 record sebelumnya dengan 301 post Instagram, 622 komentar dan 138 balasan baru. Pemeriksaan memastikan 0 duplikasi ID, 0 overlap post baru dengan baseline, dan semua nilai sel baseline tetap utuh.
 

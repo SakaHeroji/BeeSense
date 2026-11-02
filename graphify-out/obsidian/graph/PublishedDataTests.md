@@ -12,7 +12,7 @@ tags:
 # PublishedDataTests
 
 ## Connections
-- [[.setUp()_10]] - `method` [EXTRACTED]
+- [[.setUp()_9]] - `method` [EXTRACTED]
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - `method` [EXTRACTED]
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - `method` [EXTRACTED]
 - [[.test_input_integrity_remains_enforced()]] - `method` [EXTRACTED]

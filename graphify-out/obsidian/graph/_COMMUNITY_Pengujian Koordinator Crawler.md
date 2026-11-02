@@ -13,7 +13,6 @@ members: 40
 - [[.crawler()_1]] - code - tests/crawler/test_social_crawler.py
 - [[.read()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - code - tests/crawler/test_social_crawler.py
-- [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_candidate_cap_and_post_cap_are_independent_when_minimum_fits()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_checkpoint_dom_import_does_not_make_network_calls()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_combined_bundle_uses_original_contract_and_separate_platform_minimums()]] - code - tests/crawler/test_social_crawler.py
@@ -30,7 +29,6 @@ members: 40
 - [[.test_manual_captcha_wait_only_observes_and_obeys_global_deadline()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_minimum_counts_only_roots_with_enough_unique_comments()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_minimum_shortage_is_reported_at_hard_post_cap()]] - code - tests/crawler/test_social_crawler.py
-- [[.test_original_youtube_process_worker_boundary_works_as_package_import()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_partial_metadata_survives_a_worker_timeout()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_random_and_fixed_delays_are_between_operations()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_reddit_cooldown_honors_longer_server_wait_and_retry_cap()]] - code - tests/crawler/test_social_crawler.py
@@ -44,11 +42,13 @@ members: 40
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - code - tests/crawler/test_social_crawler.py
 - [[.youtube_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[Exercise Instagram through the combined coordinator, without network access.]] - rationale - tests/crawler/test_social_crawler_instagram.py
 - [[SocialCrawlerTests]] - code - tests/crawler/test_social_crawler.py
 - [[rd_events()]] - code - tests/crawler/test_social_crawler.py
 - [[receipt()]] - code - tests/crawler/test_social_crawler.py
 - [[spawn_youtube_fixture()]] - code - tests/crawler/test_social_crawler.py
 - [[test_social_crawler.py]] - code - tests/crawler/test_social_crawler.py
+- [[test_social_crawler_instagram.py]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[yt_events()]] - code - tests/crawler/test_social_crawler.py
 
 ## Live Query (requires Dataview plugin)
@@ -59,18 +59,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 4 edges to [[_COMMUNITY_Worker Reddrix]]
+- 15 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 7 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 6 edges to [[_COMMUNITY_Worker Reddrix]]
+- 3 edges to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Worker Instaloader]]
 - 1 edge to [[_COMMUNITY_InstaloaderCrawler]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
-- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial_1]]
 
 ## Top bridge nodes
-- [[receipt()]] - degree 25, connects to 5 communities
+- [[test_social_crawler_instagram.py]] - degree 13, connects to 5 communities
+- [[receipt()]] - degree 25, connects to 4 communities
+- [[test_social_crawler.py]] - degree 10, connects to 3 communities
+- [[SocialCrawlerTests]] - degree 42, connects to 2 communities
 - [[.crawler()_1]] - degree 32, connects to 2 communities
-- [[yt_events()]] - degree 18, connects to 2 communities
-- [[test_social_crawler.py]] - degree 10, connects to 2 communities
-- [[SocialCrawlerTests]] - degree 42, connects to 1 community

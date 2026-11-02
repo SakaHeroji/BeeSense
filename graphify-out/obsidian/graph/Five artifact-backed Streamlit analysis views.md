@@ -12,7 +12,6 @@ tags:
 # Five artifact-backed Streamlit analysis views
 
 ## Connections
-- [[BeeSense project]] - `references` [INFERRED]
 - [[Filters retain model membership and do not recompute c_v]] - `references` [EXTRACTED]
 - [[Four selected-topic cards unique comments, share, source roots and topic c_v]] - `references` [EXTRACTED]
 - [[Historical combined snapshot QA; relocated root shim checked offline]] - `references` [EXTRACTED]

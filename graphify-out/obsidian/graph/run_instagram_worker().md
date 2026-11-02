@@ -15,6 +15,5 @@ tags:
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[run_worker()]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

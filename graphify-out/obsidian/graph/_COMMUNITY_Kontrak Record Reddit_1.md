@@ -1,35 +1,23 @@
 ---
 type: community
-cohesion: 0.18
-members: 20
+cohesion: 0.36
+members: 8
 ---
 
 # Kontrak Record Reddit
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 20 nodes
+**Cohesion:** 0.36 - loosely connected
+**Members:** 8 nodes
 
 ## Members
 - [[.__init__()_4]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[._cells()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.abort()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.chunks()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.finish()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_01_frozen_header_fingerprint()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.write()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[BundleSink]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[Preserved eight-sheet audit and checksummed full-text bundle]] - concept - docs/crawler/REDDIT_CRAWLER.md
-- [[Validate the embedded contract; an external descriptor is optional.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[add_readme()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[main()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[parser()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[run()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[run_self_tests()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[schema_document()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[schema_fingerprint()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[verify_descriptor()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -39,23 +27,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 9 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 7 edges to [[_COMMUNITY_Validasi Record Reddit]]
-- 4 edges to [[_COMMUNITY_Pengujian Integrasi Reddrix]]
-- 3 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
-- 1 edge to [[_COMMUNITY_Generator Narasi Gemini]]
-- 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
+- 8 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 2 edges to [[_COMMUNITY_Validasi Record Reddit]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
 - 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
-- 1 edge to [[_COMMUNITY_Default Backend Reddit]]
-- 1 edge to [[_COMMUNITY_Akuisisi X dan Ekspor Scweet]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Validasi Record Reddit_1]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
 
 ## Top bridge nodes
-- [[BundleSink]] - degree 16, connects to 7 communities
-- [[run()_1]] - degree 21, connects to 5 communities
-- [[schema_fingerprint()]] - degree 12, connects to 4 communities
-- [[.finish()]] - degree 8, connects to 3 communities
-- [[add_readme()]] - degree 6, connects to 3 communities
+- [[BundleSink]] - degree 14, connects to 5 communities
+- [[.write()]] - degree 8, connects to 3 communities
+- [[.__init__()_4]] - degree 3, connects to 1 community
+- [[.abort()]] - degree 2, connects to 1 community
+- [[Preserved eight-sheet audit and checksummed full-text bundle]] - degree 2, connects to 1 community

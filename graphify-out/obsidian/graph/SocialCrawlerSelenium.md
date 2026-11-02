@@ -12,14 +12,14 @@ tags:
 # SocialCrawlerSelenium
 
 ## Connections
-- [[.__init__()_29]] - `method` [EXTRACTED]
-- [[._checkpoint_items()_1]] - `method` [EXTRACTED]
-- [[._execute()_1]] - `method` [EXTRACTED]
-- [[._legacy_settings()_1]] - `method` [EXTRACTED]
-- [[._normalize()_1]] - `method` [EXTRACTED]
-- [[._source_metadata()_1]] - `method` [EXTRACTED]
-- [[.plan()_4]] - `method` [EXTRACTED]
-- [[.run()_3]] - `method` [EXTRACTED]
+- [[.__init__()_28]] - `method` [EXTRACTED]
+- [[._checkpoint_items()]] - `method` [EXTRACTED]
+- [[._execute()]] - `method` [EXTRACTED]
+- [[._legacy_settings()]] - `method` [EXTRACTED]
+- [[._normalize()]] - `method` [EXTRACTED]
+- [[._source_metadata()]] - `method` [EXTRACTED]
+- [[.plan()_3]] - `method` [EXTRACTED]
+- [[.run()_2]] - `method` [EXTRACTED]
 - [[.selenium_version()]] - `method` [EXTRACTED]
 - [[.test_barrier_stops_after_first_call_and_still_exports_headers()]] - `calls` [EXTRACTED]
 - [[.test_both_workbooks_preserve_schema_and_selenium_provenance()]] - `calls` [EXTRACTED]
@@ -34,7 +34,7 @@ tags:
 - [[SeleniumDOMTests]] - `uses` [INFERRED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[SocialCrawlerSeleniumTests]] - `uses` [INFERRED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 

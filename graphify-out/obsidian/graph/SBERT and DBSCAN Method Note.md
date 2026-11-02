@@ -11,8 +11,4 @@ tags:
 
 # SBERT and DBSCAN Method Note
 
-## Connections
-- [[Euclidean DBSCAN Clustering]] - `references` [EXTRACTED]
-- [[Multilingual SBERT Embeddings]] - `references` [EXTRACTED]
-
 #graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

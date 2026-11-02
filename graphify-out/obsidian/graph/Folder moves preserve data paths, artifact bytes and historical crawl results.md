@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
-community: "Default Backend Reddit"
+community: "Runtime Docker dan Display"
 location: "L13"
 tags:
   - graphify/rationale
   - graphify/INFERRED
-  - community/Default_Backend_Reddit
+  - community/Runtime_Docker_dan_Display
 ---
 
 # Folder moves preserve data paths, artifact bytes and historical crawl results
@@ -15,4 +15,4 @@ tags:
 - [[Reddrix trial preserves existing model and frontend boundaries]] - `semantically_similar_to` [INFERRED]
 - [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Default_Backend_Reddit
+#graphify/rationale #graphify/INFERRED #community/Runtime_Docker_dan_Display

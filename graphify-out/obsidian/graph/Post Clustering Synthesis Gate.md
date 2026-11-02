@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[Gemini Topic Narratives Guide]] - `references` [EXTRACTED]
-- [[Topic Model Quality Gate]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

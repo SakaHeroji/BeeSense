@@ -8,6 +8,7 @@
 !MachineLearning/
 !MachineLearning/__init__.py
 !MachineLearning/social_nlp.py
+!MachineLearning/source_roots.py
 !MachineLearning/topic_narratives.py
 !Dashboard/
 !Dashboard/__init__.py

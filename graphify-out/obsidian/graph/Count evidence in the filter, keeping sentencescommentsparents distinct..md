@@ -2,7 +2,7 @@
 source_file: "Dashboard/app.py"
 type: "rationale"
 community: "Penjelasan Topik Dashboard"
-location: "L461"
+location: "L477"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

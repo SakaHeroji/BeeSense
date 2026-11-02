@@ -1,19 +1,18 @@
 ---
-source_file: "docs/machine-learning/SOCIAL_NLP.md"
-type: "concept"
-community: "Panduan Pipeline BeeSense"
-location: "/Users/sakaheroji/Documents/BeeSense/docs/machine-learning/SOCIAL_NLP.md:61"
+source_file: "docs/machine-learning/TWITTER_RETRAIN_20261102.md"
+type: "rationale"
+community: "Integrasi X dan Provenans Akuisisi"
 tags:
-  - graphify/concept
+  - graphify/rationale
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
-# Sentence Weighted Ward Reduction
+# Sentence weighted Ward reduction
 
 ## Connections
-- [[Class Based TF IDF Labels]] - `shares_data_with` [EXTRACTED]
-- [[Euclidean DBSCAN Clustering]] - `shares_data_with` [EXTRACTED]
-- [[Social NLP Methodology]] - `references` [EXTRACTED]
+- [[DBSCAN]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_3]] - `implements` [EXTRACTED]
+- [[Verified Twitter twenty topic fit]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

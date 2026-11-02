@@ -32,6 +32,7 @@ PALETTE = {
     "youtube": "#C64D36",
     "reddit": "#3568B3",
     "instagram": "#A93A82",
+    "twitter": "#222222",
     "paper": "#FFFFFF",
     "line": "#DCE5EE",
     "muted": "#52657B",
@@ -44,7 +45,12 @@ VIEWS = [
     "Kalimat & sumber",
     "Metode & data",
 ]
-PLATFORM_LABELS = {"youtube": "YouTube", "reddit": "Reddit", "instagram": "Instagram"}
+PLATFORM_LABELS = {
+    "youtube": "YouTube",
+    "reddit": "Reddit",
+    "instagram": "Instagram",
+    "twitter": "X / Twitter",
+}
 
 
 def number(value):
@@ -196,17 +202,23 @@ class SocialNLPStreamlitApp:
         platform_counts = (
             occurrences.groupby(["cluster_id", "platform"]).size().to_dict()
         )
-        three_platforms = bool((occurrences.platform == "instagram").any())
+        three_platforms = bool(
+            occurrences.platform.isin(["instagram", "twitter"]).any()
+        )
+        graph_platforms = ["reddit", "youtube", "instagram"]
+        if bool((occurrences.platform == "twitter").any()):
+            graph_platforms.append("twitter")
         largest = max(counts.values(), default=1)
         for cid in visible:
             youtube = platform_counts.get((cid, "youtube"), 0)
             reddit = platform_counts.get((cid, "reddit"), 0)
             instagram = platform_counts.get((cid, "instagram"), 0)
+            twitter = platform_counts.get((cid, "twitter"), 0)
             dominant = max(
                 PLATFORM_LABELS, key=lambda p: platform_counts.get((cid, p), 0)
             )
             colors.append(
-                {"reddit": 0, "youtube": 1, "instagram": 2}[dominant]
+                graph_platforms.index(dominant)
                 if three_platforms
                 else youtube / max(1, youtube + reddit)
             )
@@ -215,7 +227,7 @@ class SocialNLPStreamlitApp:
             labels.append(f"T{cid + 1:02d}")
             hover.append(
                 f"<b>T{cid + 1:02d} · {html.escape(label)}</b><br>{number(counts[cid])} kemunculan kalimat<br>"
-                f"YouTube {number(youtube)} / Reddit {number(reddit)} / Instagram {number(instagram)}<br>Klik untuk menelusuri topik"
+                f"YouTube {number(youtube)} / Reddit {number(reddit)} / Instagram {number(instagram)} / X / Twitter {number(twitter)}<br>Klik untuk menelusuri topik"
             )
         traces.append(
             go.Scatter(
@@ -231,19 +243,21 @@ class SocialNLPStreamlitApp:
                     **(
                         {
                             "cmin": -0.5,
-                            "cmax": 2.5,
+                            "cmax": len(graph_platforms) - 0.5,
                             "colorscale": [
-                                [0, PALETTE["reddit"]],
-                                [1 / 3, PALETTE["reddit"]],
-                                [1 / 3, PALETTE["youtube"]],
-                                [2 / 3, PALETTE["youtube"]],
-                                [2 / 3, PALETTE["instagram"]],
-                                [1, PALETTE["instagram"]],
+                                [position, PALETTE[platform]]
+                                for i, platform in enumerate(graph_platforms)
+                                for position in (
+                                    i / len(graph_platforms),
+                                    (i + 1) / len(graph_platforms),
+                                )
                             ],
                             "colorbar": {
                                 "title": {"text": "Platform terbanyak"},
-                                "tickvals": [0, 1, 2],
-                                "ticktext": ["Reddit", "YouTube", "Instagram"],
+                                "tickvals": list(range(len(graph_platforms))),
+                                "ticktext": [
+                                    PLATFORM_LABELS[p] for p in graph_platforms
+                                ],
                                 "len": 0.55,
                                 "thickness": 10,
                             },
@@ -397,6 +411,7 @@ class SocialNLPStreamlitApp:
                     "youtube": int((group.platform == "youtube").sum()),
                     "reddit": int((group.platform == "reddit").sum()),
                     "instagram": int((group.platform == "instagram").sum()),
+                    "twitter": int((group.platform == "twitter").sum()),
                     "share": len(group) / len(occurrences),
                 }
             )
@@ -413,6 +428,7 @@ class SocialNLPStreamlitApp:
                     "youtube",
                     "reddit",
                     "instagram",
+                    "twitter",
                     "share",
                 ],
             )
@@ -522,7 +538,7 @@ class SocialNLPStreamlitApp:
             "platforms": {
                 p: int((comments.platform == p).sum())
                 for p in PLATFORM_LABELS
-                if p != "instagram" or bool((frame.platform == "instagram").any())
+                if p in {"youtube", "reddit"} or bool((frame.platform == p).any())
             },
             "sources": sources,
             "terms": pd.DataFrame(mentions, columns=["term", "sentences", "share"]),
@@ -973,7 +989,7 @@ class SocialNLPStreamlitApp:
             )
         return self.filter_occurrences(
             occurrences,
-            [value.casefold() for value in platform_labels],
+            [key for key, label in PLATFORM_LABELS.items() if label in platform_labels],
             start,
             end,
             query,
@@ -1203,7 +1219,7 @@ class SocialNLPStreamlitApp:
     def _network(self, data, frame, selected):
         st.header("Peta hubungan antar topik")
         st.caption(
-            "Ukuran node mengikuti jumlah kalimat; legenda warna menunjukkan asal platform, atau platform terbanyak ketika Instagram disertakan. Kode T menghubungkan node dengan daftar topik."
+            "Ukuran node mengikuti jumlah kalimat; legenda warna menunjukkan asal platform, atau platform terbanyak ketika Instagram atau X disertakan. Kode T menghubungkan node dengan daftar topik."
         )
         count = int(frame.loc[frame.cluster_id >= 0, "cluster_id"].nunique())
         if not count:
@@ -1285,6 +1301,7 @@ class SocialNLPStreamlitApp:
                 "youtube": "YouTube",
                 "reddit": "Reddit",
                 "instagram": "Instagram",
+                "twitter": "X / Twitter",
             }
         )
         st.dataframe(
@@ -1298,6 +1315,7 @@ class SocialNLPStreamlitApp:
                     "YouTube",
                     "Reddit",
                     "Instagram",
+                    "X / Twitter",
                 ]
             ],
             hide_index=True,
@@ -1337,6 +1355,7 @@ class SocialNLPStreamlitApp:
             ("youtube", "YouTube", PALETTE["youtube"]),
             ("reddit", "Reddit", PALETTE["reddit"]),
             ("instagram", "Instagram", PALETTE["instagram"]),
+            ("twitter", "X / Twitter", PALETTE["twitter"]),
         ]:
             shares, details = [], []
             for row in rows:

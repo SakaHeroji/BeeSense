@@ -11,7 +11,6 @@ tags:
 # InstaloaderCrawler
 
 ## Connections
-- [[BeeSense README]] - `references` [EXTRACTED]
 - [[Diagnostic and active-data separation]] - `conceptually_related_to` [EXTRACTED]
 - [[Experimental web_doc_id comments transport]] - `conceptually_related_to` [EXTRACTED]
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]

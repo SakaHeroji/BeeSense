@@ -14,10 +14,8 @@ tags:
 ## Connections
 - [[Atomic20-row contextual CSV with per-topic provenance]] - `references` [EXTRACTED]
 - [[Authorized original-sentence context; credentials remain excluded]] - `references` [EXTRACTED]
-- [[BeeSense project]] - `references` [EXTRACTED]
 - [[Boundedtransientretryandfail-closedpublication]] - `references` [EXTRACTED]
 - [[Complete contextual20-row Gemini CSV passes bundle gate]] - `references` [EXTRACTED]
-- [[Contextual Gemini2 CSV is verified in the live dashboard]] - `references` [EXTRACTED]
 - [[ContextualCSVextension2 binds Parquet; legacyextension1 supported]] - `references` [EXTRACTED]
 - [[Deterministic fitted-sentence context ranking]] - `references` [EXTRACTED]
 - [[Gemini GenerateContent APIreference]] - `cites` [EXTRACTED]
@@ -25,7 +23,6 @@ tags:
 - [[Gemini structured-output documentation]] - `cites` [EXTRACTED]
 - [[Nine Gemini offline tests and all20 actual contextual CSV rows validated]] - `references` [EXTRACTED]
 - [[One request per topictop10weights plus10 fitted original sentences]] - `references` [EXTRACTED]
-- [[Producer2.4 contextual Gemini stage after verified model gate]] - `references` [EXTRACTED]
 - [[Prompt2 natural Indonesian synthesis with evidence-bound claims]] - `references` [EXTRACTED]
 - [[Receipts bind source,model,prompt,keywords and representative sentences]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer]] - `references` [EXTRACTED]

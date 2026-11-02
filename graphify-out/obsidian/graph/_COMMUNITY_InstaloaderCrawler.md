@@ -1,22 +1,19 @@
 ---
 type: community
-cohesion: 0.17
-members: 15
+cohesion: 0.23
+members: 12
 ---
 
 # InstaloaderCrawler
 
-**Cohesion:** 0.17 - loosely connected
-**Members:** 15 nodes
+**Cohesion:** 0.23 - loosely connected
+**Members:** 12 nodes
 
 ## Members
 - [[.__aenter__()]] - code - tests/crawler/test_reddit_crawler.py
 - [[.__aexit__()]] - code - tests/crawler/test_reddit_crawler.py
-- [[.__init__()_32]] - code - tests/crawler/test_reddit_crawler.py
+- [[.__init__()_29]] - code - tests/crawler/test_reddit_crawler.py
 - [[.get_items()]] - code - tests/crawler/test_reddit_crawler.py
-- [[.test_browser_factory_overrides_initial_and_refreshed_sessions()]] - code - tests/crawler/test_reddit_crawler.py
-- [[.test_missing_parent_and_timezone_are_preserved_as_unknown()]] - code - tests/crawler/test_reddit_crawler.py
-- [[.test_rejects_cross_thread_and_inconsistent_ids()]] - code - tests/crawler/test_reddit_crawler.py
 - [[.test_search_preserves_subreddit_scope_without_fetching_comments()]] - code - tests/crawler/test_reddit_crawler.py
 - [[.test_stream_enforces_duplicates_and_reply_budgets()]] - code - tests/crawler/test_reddit_crawler.py
 - [[.worker()_1]] - code - tests/crawler/test_reddit_crawler.py
@@ -34,16 +31,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
+- 7 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 6 edges to [[_COMMUNITY_Worker Reddrix]]
-- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial_1]]
+- 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit_3]]
+- 2 edges to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 1 edge to [[_COMMUNITY_Runtime Docker dan Display_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
 - [[FakeReddrix]] - degree 13, connects to 4 communities
 - [[test_reddit_crawler.py]] - degree 10, connects to 3 communities
 - [[.worker()_1]] - degree 4, connects to 3 communities
-- [[.test_browser_factory_overrides_initial_and_refreshed_sessions()]] - degree 3, connects to 2 communities
-- [[.test_missing_parent_and_timezone_are_preserved_as_unknown()]] - degree 3, connects to 2 communities
+- [[item()]] - degree 6, connects to 1 community
+- [[records()_1]] - degree 5, connects to 1 community

@@ -22,7 +22,6 @@ tags:
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `references` [EXTRACTED]
 - [[Main config now selects Reddit backend=reddrix]] - `references` [EXTRACTED]
 - [[Main root reddrix.display_mode=auto]] - `references` [EXTRACTED]
-- [[Package ROOT preserves repository-relative configuration and artifact paths]] - `references` [EXTRACTED]
 - [[Per-platform bounds max_posts 4000, max_candidates 6000]] - `references` [EXTRACTED]
 - [[Retained Playwright-only CAPTCHA fields600-second wait and five-second poll]] - `references` [EXTRACTED]
 - [[Runbook and historical record for finalized partial crawler campaign]] - `references` [EXTRACTED]

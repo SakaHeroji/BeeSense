@@ -1,6 +1,6 @@
 # TwitterCrawler — Scweet
 
-`Crawler/Backend/twitter_crawler.py` menyediakan class Python `TwitterCrawler` untuk percobaan Twitter/X secara terpisah. Akuisisi memakai **Scweet 5.8.2**, sedangkan filter, kontrak record, relasi, checksum dan Excel memakai komponen BeeSense yang sudah ada. Class ini belum dimasukkan ke `SocialCrawler` atau dashboard.
+`Crawler/Backend/twitter_crawler.py` menyediakan class Python `TwitterCrawler` untuk percobaan Twitter/X secara terpisah. Akuisisi memakai **Scweet 5.8.2**, sedangkan filter, kontrak record, relasi, checksum dan Excel memakai komponen BeeSense yang sudah ada. Mulai SocialCrawler 1.7.0, backend ini juga tersedia pada coordinator gabungan dan alur NLP/dashboard.
 
 ## Menjalankan dari root repository
 
@@ -21,6 +21,24 @@ from Crawler.Backend.twitter_crawler import TwitterCrawler
 crawler = TwitterCrawler("config/twitter_crawler.json")
 summary = crawler.run("outputs/twitter_scweet_trial_baru")
 ```
+
+## Integrasi SocialCrawler
+
+```sh
+.venv-twitter/bin/python -m Crawler.Backend.social_crawler \
+  --config config/social_crawler_twitter_3h.json --dry-run
+.venv-twitter/bin/python -m Crawler.Backend.social_crawler \
+  --config config/social_crawler_twitter_3h.json \
+  --output-dir outputs/social_twitter_run_baru
+```
+
+Preset Twitter-only ini membatasi runtime 10.800 detik dan menargetkan 1.000 root unik, tanpa minimum komentar. Daftar 25 variasi query serta filter include/exclude sama dengan preset Reddit; query YouTube menambahkan operator tanggal sesuai platform. Hasil Twitter diambil maksimal 200 per pencarian pada jendela tujuh hari, bahasa Indonesia. `max_comment_threads: 50` membatasi sampel thread komentar agar budget tidak habis pada lookup balasan; ini bukan cakupan seluruh komentar. Preset 3 jam memakai cap lokal 300 request/6.000 tweet per hari, sementara preset percobaan 30 menit tetap 120/2.000. Counter yang sudah terpakai tetap dihitung; cap lokal ini tidak mengubah batas server X. `TwitterCoordinatorWorker` mengadaptasi protokol Scweet ke scheduler, deadline, dedup dan bundle SocialCrawler; class mandiri tetap memakai worker/normalisasi yang sama. Root pencarian diproses dari cache tanpa lookup tambahan. Jeda antar-operasi hanya berlaku ketika operasi melakukan akses jaringan; hasil cache tidak menunggu jeda jaringan baru.
+
+Pengecualian SocialCrawler menerima direktori dengan `dataset.xlsx` audit. Root dengan native ID yang sudah ada dilewati. Seluruh ID X dalam satu run juga deduplikasi lintas jenis post/comment/reply. Timeout menyimpan data parsial; cooldown akun dihormati, sedangkan login/challenge, HTTP429 aktual dan cap harian menghentikan akses.
+
+`merge_social_datasets` mendukung native ID X dengan namespace global `status`; caption yang sama pada ID berbeda dipertahankan. Karena permalink balasan X tidak memuat root percakapannya, merge membaca `Contents.jsonl` yang hash-nya terverifikasi atau `native_roots.json` yang terikat checksum workbook. Parent tidak ditebak dari judul/tanggal. Sidecar root ikut disimpan dan dipublikasikan bersama input NLP. NLP mempertahankan thread root dalam Parquet dan menggunakannya pada explainability; platform X tersedia dalam filter, grafik cakupan, jaringan, dan tren dashboard.
+
+`config/social_nlp_twitter_20261102.json` menetapkan 20 topik dan mean coherence c_v minimum 0,4. Kandidat di bawah ambang tidak dipublikasikan. Gemini hanya dipanggil setelah gate lulus, memakai 10 keyword c-TF-IDF dan hingga 10 kalimat representatif per topik, lalu menyimpan 20 kalimat topik/deskripsi dalam CSV. Runtime dashboard membaca CSV tersimpan tanpa memanggil API.
 
 ## Konfigurasi dan autentikasi
 

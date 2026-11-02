@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Bukti Ekstraktif Topik"
-location: "L2077"
+community: "Encoding dan Penyimpanan Model"
+location: "L2099"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Bukti_Ekstraktif_Topik
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Explain already verified artifacts without encoding or fitting again.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.explain_artifacts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Bukti_Ekstraktif_Topik
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

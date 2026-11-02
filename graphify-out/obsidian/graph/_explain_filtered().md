@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Bukti Ekstraktif Topik"
-location: "L114"
+community: "app.py"
+location: "L120"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Bukti_Ekstraktif_Topik
+  - community/apppy
 ---
 
 # _explain_filtered()
@@ -16,4 +16,4 @@ tags:
 - [[.render()_1]] - `calls` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Bukti_Ekstraktif_Topik
+#graphify/code #graphify/EXTRACTED #community/apppy

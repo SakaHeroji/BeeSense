@@ -12,7 +12,6 @@ tags:
 # Reddit browser campaign helpers
 
 ## Connections
-- [[BeeSense project]] - `references` [EXTRACTED]
 - [[Reddit Playwright runner]] - `references` [EXTRACTED]
 - [[User checkpoint audit export and verification]] - `implements` [EXTRACTED]
 - [[Verify BeeSense CI]] - `references` [EXTRACTED]

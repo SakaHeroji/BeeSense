@@ -2,7 +2,7 @@
 source_file: "scripts/merge_social_datasets.py"
 type: "rationale"
 community: "Penggabungan Dataset"
-location: "L39"
+location: "L41"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

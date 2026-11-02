@@ -94,6 +94,7 @@ for (const [sheet, range] of [[sentences, 'A5:B5'], [topics, 'A6:C6']]) {
   };
 }
 console.log('Topic summary and formulas written');
+workbook.recalculate();
 const inspection = await workbook.inspect({ kind: 'table', range: 'Topik!A2:C4', include: 'values,formulas', tableMaxRows: 3, tableMaxCols: 3, maxChars: 1400 });
 console.log(inspection.ndjson);
 const calculated = topics.getRange('B2').values[0][0];

@@ -1,8 +1,8 @@
 ---
-source_file: "docs/PROJECT_STRUCTURE.md"
+source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "rationale"
 community: "app.py"
-location: "## Import Python dan path"
+location: "L11"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
@@ -12,9 +12,9 @@ tags:
 # Root streamlit_apps.py delegates to Dashboard.app
 
 ## Connections
-- [[Community Cloud root entry streamlit_apps.py; UI Dashboardapp.py]] - `references` [EXTRACTED]
-- [[Component-oriented repository layout after SocialCrawler integration]] - `references` [EXTRACTED]
-- [[SocialNLPStreamlitApp]] - `references` [EXTRACTED]
-- [[streamlit_apps.py]] - `references` [EXTRACTED]
+- [[Dashboard-only artifactexplanationUI dependency boundary]] - `references` [EXTRACTED]
+- [[Obsidian Cloud runbook streamlit_apps.py, Python 3.12 and complete artifact publication]] - `conceptually_related_to` [INFERRED]
+- [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
+- [[app.py]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/apppy

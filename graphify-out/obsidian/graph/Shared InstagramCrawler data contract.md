@@ -11,7 +11,6 @@ tags:
 # Shared InstagramCrawler data contract
 
 ## Connections
-- [[Instagram three-hour target preset]] - `implements` [EXTRACTED]
 - [[InstaloaderCrawler_1]] - `implements` [EXTRACTED]
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[SocialCrawler 1.6.0 default Instaloader integration]] - `implements` [EXTRACTED]

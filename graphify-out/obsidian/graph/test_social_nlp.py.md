@@ -20,5 +20,6 @@ tags:
 - [[fixture()]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports_from` [EXTRACTED]
+- [[write_roots()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

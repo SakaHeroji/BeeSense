@@ -47,9 +47,8 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Persyaratan Produk Crawler]]
 - 2 edges to [[_COMMUNITY_Rencana Produk dan Survei]]
 - 1 edge to [[_COMMUNITY_Rencana Layanan Backend]]
-- 1 edge to [[_COMMUNITY_Arsitektur Model dan Dashboard]]
 
 ## Top bridge nodes
 - [[Implemented ReactJSTypeScriptVite Crawler workspace]] - degree 14, connects to 3 communities
-- [[Curated React Crawler implementation with syntheticAPI separation]] - degree 10, connects to 3 communities
 - [[Expected typed frontend API contract; backend implementation pending]] - degree 14, connects to 2 communities
+- [[Curated React Crawler implementation with syntheticAPI separation]] - degree 9, connects to 2 communities

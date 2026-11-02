@@ -12,7 +12,6 @@ tags:
 # InstagramCrawler browser and instagrapi history
 
 ## Connections
-- [[BeeSense project structure and root-relative paths]] - `references` [EXTRACTED]
 - [[Explicit instagrapi backend]] - `references` [EXTRACTED]
 - [[Instagram acquisition, dataset and training pipeline]] - `references` [EXTRACTED]
 - [[Persistent Chrome worker with manual login]] - `references` [EXTRACTED]

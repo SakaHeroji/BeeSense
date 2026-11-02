@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/topic_narratives.py"
 type: "rationale"
-community: "Generator Narasi Gemini"
+community: "Akuisisi YouTube"
 location: "L211"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Generator_Narasi_Gemini
+  - community/Akuisisi_YouTube
 ---
 
 # Up to ten unique fitted sentences, cosine rank descending, stable ID ties.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[top_sentences()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Generator_Narasi_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube

@@ -9,7 +9,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import numpy as np
-from openpyxl import Workbook
+from openpyxl import Workbook, load_workbook
 
 from MachineLearning.social_nlp import (
     REQUIRED_COLUMNS,
@@ -173,6 +173,35 @@ class NLPTests(unittest.TestCase):
         self.assertEqual(set(p.occurrences["content_date_accuracy"]), {"perkiraan"})
         self.assertTrue(p.occurrences["post_date"].str.startswith("2026-10-01").all())
         self.assertEqual(p.occurrences["occurrence_id"].nunique(), 37)
+
+    def test_twitter_prepare_preserves_audited_roots_without_embedding_titles(self):
+        from MachineLearning.source_roots import write_roots
+
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "social_data.xlsx"
+            fixture(path)
+            book = load_workbook(path)
+            roots = {}
+            for index, row in enumerate(book["Data"].iter_rows(min_row=2), 101):
+                row[0].value = "twitter"
+                row[8].value = f"https://x.com/i/web/status/{index}"
+                roots[str(index)] = "100"
+            book.save(path)
+            book.close()
+            write_roots(folder, path, roots)
+            model = SocialNLPClusterer(self.config).prepare_excel(path)
+            self.assertEqual(
+                set(model.occurrences.thread_root_key), {"twitter:x_post:100"}
+            )
+            self.assertEqual(
+                set(model.source_data.thread_root_key), {"twitter:x_post:100"}
+            )
+            self.assertEqual(set(model.occurrences.platform), {"twitter"})
+            self.assertFalse(
+                model.sentences.embedding_text.str.contains(
+                    "TITLE_NOT_EMBEDDING_FEATURE"
+                ).any()
+            )
 
     def test_selected_candidate_has_semantic_separation_and_full_provenance(self):
         p = self.pipeline

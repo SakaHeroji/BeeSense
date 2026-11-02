@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Worker Reddrix"
-location: "L208"
+location: "L211"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

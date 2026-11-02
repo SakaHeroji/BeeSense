@@ -1,5 +1,27 @@
 # SocialCrawler
 
+## Integrasi Twitter 1.7 — Scweet
+
+`TwitterCoordinatorWorker` menghubungkan `TwitterCrawler` dan worker Scweet persisten
+ke scheduler, deadline, deduplikasi native ID serta exporter SocialCrawler. Preset
+`config/social_crawler_twitter_3h.json` hanya menjalankan X/Twitter: maksimal tiga
+jam, target 1.000 post, 25 variasi query pendidikan yang sama dengan Reddit dan
+filter include/exclude bersama. Sampel komentar dibatasi 50 thread, maksimal
+10 komentar/balasan per root; target root tidak mensyaratkan komentar.
+
+```sh
+python -m Crawler.Backend.social_crawler \
+  --config config/social_crawler_twitter_3h.json \
+  --output-dir outputs/social_twitter_run_baru
+```
+
+Root dari pencarian diproses dari cache, sedangkan operasi jaringan mengikuti
+jeda dan batas akun. Cooldown pool ditunggu bila masih muat dalam deadline;
+HTTP429 aktual, login/challenge dan cap harian menghentikan akses sambil menyimpan
+data parsial. Tidak ada reset counter atau pergantian akun. Lihat
+[konfigurasi, autentikasi dan batas Twitter](TWITTER_CRAWLER.md) serta
+[bukti akuisisi 2 November](TWITTER_ACQUISITION_20261102.md).
+
 ## Integrasi Instagram 1.6 — Instaloader
 
 Backend Instagram default kini **Instaloader 4.16**, melalui worker persisten yang
@@ -56,7 +78,7 @@ if __name__ == "__main__":
 | exclude_keywords | Buang root beserta threadnya atau komentar yang cocok |
 | delay | Fixed seconds atau random min_seconds/max_seconds |
 | timeout_seconds / total_seconds | Batas operasi dan keseluruhan run |
-| platforms | YouTube/Reddit aktif, query/URL, target minimum dan batas maksimum |
+| platforms | YouTube/Reddit/Instagram/Twitter aktif, query/URL, target minimum dan batas maksimum |
 | platform_execution | sequential atau round_robin; bergantian satu operasi per platform dengan satu deadline bersama |
 | exclude_existing_datasets | Daftar direktori dataset atau workbook audit dataset.xlsx untuk pengecualian identitas post lama |
 | min_posts | Minimum root yang memenuhi filter dan minimum komentar; video untuk YouTube |

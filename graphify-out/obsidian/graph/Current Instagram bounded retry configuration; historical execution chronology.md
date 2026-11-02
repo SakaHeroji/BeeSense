@@ -1,18 +1,17 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_CRAWLER.md"
 type: "rationale"
-community: "Riwayat Pacing Instagram"
+community: "Riwayat Sesi Instagram"
 location: "## Pemulihan HTTP 429 dan Chrome (30 Oktober)"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Riwayat_Pacing_Instagram
+  - community/Riwayat_Sesi_Instagram
 ---
 
 # Current Instagram bounded retry configuration; historical execution chronology
 
 ## Connections
-- [[Historical version-1.5.1 fixed Instagram recovery policy]] - `conceptually_related_to` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Pacing_Instagram
+#graphify/rationale #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

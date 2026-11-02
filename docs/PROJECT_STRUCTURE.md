@@ -11,7 +11,7 @@ BeeSense/
 │   └── Backend/
 │       ├── social_crawler.py     # YouTube yt-dlp + Reddit Reddrix
 │       ├── reddit_crawler.py     # Pembungkus Reddit-only
-│       ├── twitter_crawler.py    # Percobaan X/Twitter mandiri, Scweet dan Excel bersama
+│       ├── twitter_crawler.py    # X/Twitter Scweet, backend SocialCrawler dan class mandiri
 │       ├── instagram_crawler.py  # Scheduler/filter/Excel Instagram, instagrapi atau Chrome
 │       ├── instagram_browser.py  # Worker profil Chrome persisten, login manual
 │       ├── instagram_browser_capture.mjs  # Parser ID/komentar dokumen post
@@ -86,7 +86,7 @@ login berhasil. Profil browser khusus berada di `output/instagram_browser/chrome
 Trial Chrome lama mengambil 76 post/910 komentar sebelum dihentikan pengguna.
 Integrasi Instagram dalam SocialCrawler 1.5 kini tersedia; preset Instagram-only
 `config/social_crawler_instagram_3h.json` menjalankan target 1.000 post dalam tiga jam.
-Model/dashboard tiga platform sedang disiapkan; konfigurasi aktif baru diganti setelah gate model lolos. Pemindahan tiga metode seleksi/Excel ke SocialExportMixin mempertahankan
+Model/dashboard empat platform memakai snapshot Twitter 2 November yang lolos gate 20 topik/mean c_v ≥0,4; konfigurasi aktif mengarah ke artifact terverifikasi. Pemindahan tiga metode seleksi/Excel ke SocialExportMixin mempertahankan
 perilaku exporter YouTube/Reddit.
 
 `MachineLearning/topic_narratives.py` menangani transport/validasi Gemini untuk tahap `SocialNLPClusterer.generate_topic_narratives()`. CSV masuk direktori model versi baru; dashboard membaca hasil tanpa key. Panduan operasional: `docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md`.

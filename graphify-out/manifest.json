@@ -1,13 +1,13 @@
 {
   "scripts/verify_dashboard_data.py": {
-    "mtime": 1793374192.808492,
-    "ast_hash": "403fb6cb3dd95c8a3efe5bbbf87eac74",
+    "mtime": 1793584645.7984874,
+    "ast_hash": "f64a72b38ece4c4a7da24385d0b2f0d6",
     "semantic_hash": ""
   },
   "tests/nlp/test_dashboard_analysis.py": {
-    "mtime": 1793364715.2592778,
-    "ast_hash": "c887e544a0ee0077f8c03f458e351d3b",
-    "semantic_hash": "c887e544a0ee0077f8c03f458e351d3b"
+    "mtime": 1793584391.11298,
+    "ast_hash": "cac0e919e900d0ae47df96463d9a78d6",
+    "semantic_hash": ""
   },
   "tests/nlp/test_dashboard_data_verifier.py": {
     "mtime": 1793374193.7764027,
@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "tests/nlp/test_social_nlp.py": {
-    "mtime": 1793374262.9482398,
-    "ast_hash": "c7418f8afdc4b008813760e6583396d8",
+    "mtime": 1793585675.1622458,
+    "ast_hash": "094b154d7c44413a82b6d533e0bf5aa2",
     "semantic_hash": ""
   },
   "tests/nlp/test_streamlit_app.py": {
@@ -35,9 +35,9 @@
     "semantic_hash": "c1644526a7a705e8d57d3a531b7dc4a5"
   },
   "README.md": {
-    "mtime": 1793378436.3177316,
-    "ast_hash": "59b1988aab4f7d390efbfd4ddbcd0470",
-    "semantic_hash": ""
+    "mtime": 1793591937.9545825,
+    "ast_hash": "",
+    "semantic_hash": "caa87f73f9f8ddd7f3d6d7bf31a97617"
   },
   "graphify-out/memory/query_20261028_132041_jalankan_dashboard_streamlitnya.md": {
     "mtime": 1793193641.26462,
@@ -65,18 +65,18 @@
     "semantic_hash": "bd6cc23eae1275df62fa72a344788716"
   },
   "scripts/merge_social_datasets.py": {
-    "mtime": 1793364715.2544708,
-    "ast_hash": "e087f872e41e5e18cb3031a61dc915a3",
-    "semantic_hash": "e087f872e41e5e18cb3031a61dc915a3"
+    "mtime": 1793584645.3009338,
+    "ast_hash": "90db52c36a3f864b7c889303cc6a4df8",
+    "semantic_hash": ""
   },
   "tests/nlp/test_dataset_merge.py": {
-    "mtime": 1793364715.2605553,
-    "ast_hash": "c2754c6a833b51ad434f947c66a7021c",
-    "semantic_hash": "c2754c6a833b51ad434f947c66a7021c"
+    "mtime": 1793584391.1116524,
+    "ast_hash": "775c78785f4129438a28ffeb9b8980e5",
+    "semantic_hash": ""
   },
   "tests/cloud/test_dashboard_runtime.py": {
-    "mtime": 1793378319.7327628,
-    "ast_hash": "d52a1eea58b95c2f6be132b45bbebc80",
+    "mtime": 1793586922.4011867,
+    "ast_hash": "91c40480c58ffe0dfd05314c499320b5",
     "semantic_hash": ""
   },
   "Crawler/Frontend/.prettierrc.json": {
@@ -320,9 +320,9 @@
     "semantic_hash": "751a40f4f338caa2f3f5231088e3dd75"
   },
   "Crawler/Backend/social_crawler.py": {
-    "mtime": 1793364712.4448879,
-    "ast_hash": "33664e1c2db9a45df81637ef0ce61a30",
-    "semantic_hash": "33664e1c2db9a45df81637ef0ce61a30"
+    "mtime": 1793587180.1140096,
+    "ast_hash": "172876e9709260fedc104e8d74cc995d",
+    "semantic_hash": ""
   },
   "Crawler/Backend/social_crawler_selenium.py": {
     "mtime": 1793364712.4451995,
@@ -340,8 +340,8 @@
     "semantic_hash": "565e7bee9efc4a4f8c7f7186376b2e63"
   },
   "Dashboard/app.py": {
-    "mtime": 1793374833.7308638,
-    "ast_hash": "453ab1f1ab490eb974fdf625d4a7ce27",
+    "mtime": 1793592123.490509,
+    "ast_hash": "5a75cece21d7b2ab755d7e371003bc4a",
     "semantic_hash": ""
   },
   "MachineLearning/__init__.py": {
@@ -350,8 +350,8 @@
     "semantic_hash": "565e7bee9efc4a4f8c7f7186376b2e63"
   },
   "MachineLearning/social_nlp.py": {
-    "mtime": 1793374135.554206,
-    "ast_hash": "63f4010ce367879775bbb70cf45bde11",
+    "mtime": 1793585525.8952193,
+    "ast_hash": "fb64b61de1bec4f108a1f41af8d0b6e6",
     "semantic_hash": ""
   },
   "streamlit_apps.py": {
@@ -425,9 +425,9 @@
     "semantic_hash": ""
   },
   "docs/PROJECT_STRUCTURE.md": {
-    "mtime": 1793364712.474309,
-    "ast_hash": "970b2a815b69acf430d73232f0c66d9c",
-    "semantic_hash": "970b2a815b69acf430d73232f0c66d9c"
+    "mtime": 1793591937.962749,
+    "ast_hash": "",
+    "semantic_hash": "a9cd243d986d35f5ff28d354c5b027c9"
   },
   "docs/crawler/REDDIT_CRAWLER.md": {
     "mtime": 1793364712.4758928,
@@ -440,9 +440,9 @@
     "semantic_hash": "e50ea573b875b2d1298415fa61941627"
   },
   "docs/crawler/SOCIAL_CRAWLER.md": {
-    "mtime": 1793364712.476689,
-    "ast_hash": "ce0a28a09b5844721318008375d157c5",
-    "semantic_hash": "ce0a28a09b5844721318008375d157c5"
+    "mtime": 1793588907.125166,
+    "ast_hash": "",
+    "semantic_hash": "1dfa8ceade0a5abb5ed0e9c6786c0d1d"
   },
   "docs/dashboard/DASHBOARD_DESIGN.md": {
     "mtime": 1793378436.3198006,
@@ -455,9 +455,9 @@
     "semantic_hash": "a59553803ffd0ec55eb49d33c5ebc7fb"
   },
   "docs/machine-learning/SOCIAL_NLP.md": {
-    "mtime": 1793378436.3184144,
-    "ast_hash": "a644dfd9c2502b3e7eb1149461bb2c49",
-    "semantic_hash": ""
+    "mtime": 1793584751.0390666,
+    "ast_hash": "",
+    "semantic_hash": "1f6ed80dc767753cfd6ca61830795f47"
   },
   "requirements/coherence.txt": {
     "mtime": 1793364715.2504964,
@@ -705,8 +705,8 @@
     "semantic_hash": "0115fa8fa35a758234e077aada019765"
   },
   "scripts/build_topic_sentences.mjs": {
-    "mtime": 1793375385.012639,
-    "ast_hash": "396c54c15ac892fb65b7553fb665bf93",
+    "mtime": 1793587568.8352914,
+    "ast_hash": "e4c5e2128fb1bad2a4dba13818044a96",
     "semantic_hash": ""
   },
   "scripts/topic_sentence_export.py": {
@@ -730,24 +730,24 @@
     "semantic_hash": ""
   },
   "Crawler/Backend/twitter_crawler.py": {
-    "mtime": 1793419158.0915346,
-    "ast_hash": "859a530d1a8309fbd2cfc68d176d1595",
+    "mtime": 1793586201.108692,
+    "ast_hash": "da8cc5f12fe5085285bfc858dcb65be0",
     "semantic_hash": ""
   },
   "tests/crawler/test_twitter_crawler.py": {
-    "mtime": 1793419128.3841715,
-    "ast_hash": "78e2f9d57001404db12ef983392121f4",
+    "mtime": 1793587116.6103446,
+    "ast_hash": "73a3ef7b1d70664cd89961bb6c0174fa",
     "semantic_hash": ""
   },
   "docs/crawler/TWITTER_CRAWLER.md": {
-    "mtime": 1793419843.245792,
+    "mtime": 1793588600.5429633,
     "ast_hash": "",
-    "semantic_hash": "978c2f131eac0c0648761b140fc26948"
+    "semantic_hash": "c9ecb862ba78df506bf5430fc3db47d3"
   },
   "graphify-out/obsidian/TwitterCrawler Scweet.md": {
-    "mtime": 1793419843.2830024,
+    "mtime": 1793584751.0349674,
     "ast_hash": "",
-    "semantic_hash": "bccc896f4c80a5cd976dd7d2b45144d6"
+    "semantic_hash": "8628918792a099a2cba44d494deb5981"
   },
   "config/twitter_crawler.json": {
     "mtime": 1793418957.427022,
@@ -768,5 +768,50 @@
     "mtime": 1793417880.2454054,
     "ast_hash": "",
     "semantic_hash": "ce0dce9191ad51e2abb816b4e586dd00"
+  },
+  "MachineLearning/source_roots.py": {
+    "mtime": 1793586322.2402227,
+    "ast_hash": "b023813f7ff2c7fefa837076195580ef",
+    "semantic_hash": ""
+  },
+  "docs/crawler/TWITTER_ACQUISITION_20261102.md": {
+    "mtime": 1793591937.952668,
+    "ast_hash": "",
+    "semantic_hash": "1ca97ebeaa096f4145f2044e5afc52bd"
+  },
+  "docs/machine-learning/TWITTER_RETRAIN_20261102.md": {
+    "mtime": 1793591937.9529898,
+    "ast_hash": "",
+    "semantic_hash": "852c2ee428bb3134eda7b067526b907f"
+  },
+  "graphify-out/obsidian/HOME.md": {
+    "mtime": 1793591937.956133,
+    "ast_hash": "",
+    "semantic_hash": "abf7515162014d25ed7583adb17f2edd"
+  },
+  "graphify-out/obsidian/Twitter 20 Topik 20261102.md": {
+    "mtime": 1793591937.9532356,
+    "ast_hash": "",
+    "semantic_hash": "e46f753ba476cb3856cbd3b79bf73180"
+  },
+  "graphify-out/obsidian/Dataset Dashboard.md": {
+    "mtime": 1793591937.9575393,
+    "ast_hash": "",
+    "semantic_hash": "a27f9175f9dbb53c5209ad8b6404dd8f"
+  },
+  "graphify-out/obsidian/Metodologi Machine Learning Social NLP.md": {
+    "mtime": 1793591937.9590502,
+    "ast_hash": "",
+    "semantic_hash": "a137d35f54dffababa5acb7d76e55a9a"
+  },
+  "graphify-out/obsidian/Topik Gemini.md": {
+    "mtime": 1793591937.9598832,
+    "ast_hash": "",
+    "semantic_hash": "65cc3e2cccca9e8d5ffd6a9fef31bea8"
+  },
+  "graphify-out/obsidian/Arsitektur BeeSense.md": {
+    "mtime": 1793591937.9611442,
+    "ast_hash": "",
+    "semantic_hash": "4933a964a9e5daa2187886b77a2a596b"
   }
 }

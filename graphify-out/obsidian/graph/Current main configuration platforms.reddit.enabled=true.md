@@ -12,7 +12,6 @@ tags:
 # Current main configuration: platforms.reddit.enabled=true
 
 ## Connections
-- [[Historical Reddit continuations preserve bundles and original deadline]] - `conceptually_related_to` [INFERRED]
 - [[Historical platforms.reddit.enabled=false during requested pause]] - `references` [EXTRACTED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 

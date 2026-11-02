@@ -12,11 +12,9 @@ tags:
 # IntegratedInstagram1.5.2 pacing after verified dashboard release
 
 ## Connections
-- [[BeeSense crawler, NLP and dashboard class architecture]] - `references` [EXTRACTED]
 - [[BundleSink]] - `references` [EXTRACTED]
 - [[CAAHTTP200 without session;legacyHTTP400 needs_upgrade]] - `references` [EXTRACTED]
 - [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - `references` [EXTRACTED]
-- [[Documented local exponential cooldown respects longer Retry-After]] - `references` [EXTRACTED]
 - [[Documented public hashtag probe fails upstream AttributeError withzero data]] - `references` [EXTRACTED]
 - [[Explicit autopasswordsessionid login selection]] - `references` [EXTRACTED]
 - [[GETqesync405 carries public key;POST500 offers no proven login fix]] - `references` [EXTRACTED]
@@ -32,8 +30,6 @@ tags:
 - [[Local restoration verified; server reason remains unknown]] - `references` [EXTRACTED]
 - [[One LoginRequired recovery with verification-code preservation]] - `references` [EXTRACTED]
 - [[Opaque cookie and device retained;staleauthorization cleared onlyinmemory]] - `references` [EXTRACTED]
-- [[Release194e0b1 live with exact20-row200-sentence CSV]] - `references` [EXTRACTED]
-- [[Retained local jitter, batch rests and scheduler readiness]] - `references` [EXTRACTED]
 - [[Saved-device explicit login and bounded serial acquisition lifecycle]] - `references` [EXTRACTED]
 - [[SocialExportMixin]] - `references` [EXTRACTED]
 - [[User-provided instagrapi scraper guidance]] - `references` [EXTRACTED]

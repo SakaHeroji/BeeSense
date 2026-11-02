@@ -27,12 +27,12 @@ else:
     import topic_narratives
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "2.4.0"
+VERSION = "2.5.0"
 TOPIC_SENTENCES_EXTENSION = "beesense-topic-sentences-excel:1"
 TOPIC_SENTENCES_FILE = "topic_sentences.xlsx"
 DEFAULT_TARGET_TOPICS = 20
 DEFAULT_MIN_COHERENCE_CV = 0.4
-SUPPORTED_PLATFORMS = ("youtube", "reddit", "instagram")
+SUPPORTED_PLATFORMS = ("youtube", "reddit", "instagram", "twitter")
 ENCODER_CACHE_VERSION = "2.0.0"  # Coherence changes do not change SBERT encoding.
 SCHEMA_VERSION = "beesense-sentence-clusters:2"
 LEGACY_SCHEMA_VERSION = "beesense-sentence-clusters:1"
@@ -281,6 +281,9 @@ class SocialNLPClusterer:
             path = ROOT / path
         self.input_path = path.resolve()
         self.input_sha256 = file_hash(path)
+        from MachineLearning.source_roots import twitter_roots
+
+        native_roots = twitter_roots(path)
         workbook = load_workbook(path, read_only=True, data_only=True)
         try:
             if "Data" not in workbook.sheetnames:
@@ -295,6 +298,16 @@ class SocialNLPClusterer:
             sources = []
             for row_number, values in enumerate(iterator, 2):
                 row = dict(zip(headers, values))
+                if row["platform"] == "twitter":
+                    found = re.fullmatch(
+                        r"https://(?:www\.)?(?:x|twitter)\.com/(?:[A-Za-z0-9_]{1,15}|i/web)/status/([1-9][0-9]{0,24})/?",
+                        str(row["url"]),
+                    )
+                    if not found or found[1] not in native_roots:
+                        raise ValueError(
+                            "Twitter input requires audited native conversation roots"
+                        )
+                    row["thread_root_key"] = "twitter:x_post:" + native_roots[found[1]]
                 row["source_row"] = row_number
                 sources.append(row)
         finally:
@@ -373,6 +386,8 @@ class SocialNLPClusterer:
                     "segmentation": segmentation,
                     "url": str(row["url"] or ""),
                 }
+                if row["platform"] == "twitter":
+                    record["thread_root_key"] = row["thread_root_key"]
                 for source, target in [
                     ("tanggal_post_wib", "post_date"),
                     ("tanggal_konten_wib", "content_date"),
@@ -1324,6 +1339,13 @@ class SocialNLPClusterer:
         platform = str(row.get("platform", ""))
         parsed = urlparse(str(row.get("url", "")))
         host = (parsed.hostname or "").lower()
+        if platform == "twitter":
+            root = row.get("thread_root_key")
+            if isinstance(root, str) and re.fullmatch(
+                r"twitter:x_post:[1-9][0-9]{0,24}", root
+            ):
+                return root, "source_audit"
+            raise ValueError("Twitter explanation requires audited conversation root")
         if platform == "youtube" and (
             host == "youtube.com" or host.endswith(".youtube.com")
         ):

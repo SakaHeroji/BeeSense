@@ -2,3 +2,4 @@
 # Keep this independent of the Streamlit dashboard runtime.
 openpyxl==3.1.5
 -r instaloader.txt
+-r twitter.txt

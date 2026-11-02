@@ -1,18 +1,17 @@
 ---
 source_file: "config/social_crawler.json"
 type: "concept"
-community: "Default Backend Reddit"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "$.platforms.reddit.backend"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Default_Backend_Reddit
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Main config now selects Reddit backend=reddrix
 
 ## Connections
-- [[Default Reddit Reddrix with YouTube yt-dlp since SocialCrawler 1.4]] - `conceptually_related_to` [EXTRACTED]
 - [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Default_Backend_Reddit
+#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/reddrix.txt"
 type: "concept"
-community: "Lingkungan Training SBERT"
+community: "Batas Akuisisi Reddit"
 location: "L1-L6"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Lingkungan_Training_SBERT
+  - community/Batas_Akuisisi_Reddit
 ---
 
 # Isolated Reddrix 1.2.14 crawler dependency pins
@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Isolated local environment and separately downloaded browser]] - `references` [EXTRACTED]
 - [[Relocated Selenium image preserves included requirements and package modules]] - `references` [EXTRACTED]
-- [[Separate SBERT training and artifact-only dashboard environments]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Lingkungan_Training_SBERT
+#graphify/concept #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit

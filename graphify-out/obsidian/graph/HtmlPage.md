@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pengujian Integrasi Reddrix"
+community: "Parsing Identitas Reddit"
 location: "L558"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Integrasi_Reddrix
+  - community/Parsing_Identitas_Reddit
 ---
 
 # HtmlPage
@@ -17,4 +17,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[fixture_page()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Integrasi_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

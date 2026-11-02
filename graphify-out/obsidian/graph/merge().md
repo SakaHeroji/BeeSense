@@ -2,7 +2,7 @@
 source_file: "scripts/merge_social_datasets.py"
 type: "code"
 community: "Penggabungan Dataset"
-location: "L98"
+location: "L118"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -17,14 +17,15 @@ tags:
 - [[.test_latest_policy_audits_updated_comment_reply_classification()]] - `calls` [EXTRACTED]
 - [[.test_latest_policy_still_rejects_comment_attached_to_different_root()]] - `calls` [EXTRACTED]
 - [[.test_published_merge_audit_is_bound_to_its_file_checksums()]] - `calls` [EXTRACTED]
-- [[Native-ID baseline-then-new workbook merge with provenance]] - `implements` [INFERRED]
-- [[ValueError]] - `calls` [INFERRED]
+- [[.test_twitter_native_dedup_and_audited_roots_survive_merge()]] - `calls` [EXTRACTED]
 - [[identity()]] - `calls` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_12]] - `calls` [EXTRACTED]
 - [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `calls` [EXTRACTED]
 - [[sha()]] - `calls` [EXTRACTED]
 - [[test_dashboard_data_verifier.py]] - `imports` [EXTRACTED]
 - [[test_dataset_merge.py]] - `imports` [EXTRACTED]
+- [[twitter_roots()]] - `calls` [EXTRACTED]
+- [[write_roots()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/import_public_web_sections.py"
 type: "code"
-community: "Pengujian Integrasi Reddrix"
+community: "Parsing Identitas Reddit"
 location: "L11"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Integrasi_Reddrix
+  - community/Parsing_Identitas_Reddit
 ---
 
 # import_sections()
@@ -18,4 +18,4 @@ tags:
 - [[thread_id()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Integrasi_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

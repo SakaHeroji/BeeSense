@@ -5,7 +5,7 @@ tags: [beesense, crawler, twitter, scweet]
 
 # TwitterCrawler Scweet
 
-Class `TwitterCrawler` pada `Crawler/Backend/twitter_crawler.py` merupakan percobaan X/Twitter mandiri dengan Scweet 5.8.2. Konfigurasi `config/twitter_crawler.json` menetapkan 30 menit, target percobaan 1.000 post, maksimal 10 komentar/balasan per post dan query pendidikan dari preset Reddit. Belum diintegrasikan ke `SocialCrawler`, training atau dashboard.
+Class `TwitterCrawler` pada `Crawler/Backend/twitter_crawler.py` merupakan percobaan X/Twitter mandiri dengan Scweet 5.8.2. Konfigurasi `config/twitter_crawler.json` menetapkan 30 menit, target percobaan 1.000 post, maksimal 10 komentar/balasan per post dan query pendidikan dari preset Reddit. Kini diintegrasikan ke SocialCrawler 1.7.0 melalui TwitterCoordinatorWorker, dengan preset Twitter-only 3 jam/1.000 post pada config/social_crawler_twitter_3h.json.
 
 ## Alur dan kontrak
 
@@ -36,3 +36,11 @@ Hasil gabungan `outputs/twitter_scweet_20261031_30m_combined/social_data.xlsx` m
 17 uji TwitterCrawler lulus; regresi SocialCrawler 71 pengujian, 70 lulus/1 optional skip. Header Excel/row kontrak/checksum/ID/parent/sel formula/ketiadaan cookie lokal dalam ekspor diverifikasi. Ruff/pip check serta allowlist Moby dan dry-run context terisolasi lulus. Tidak perlu migrasi; Docker build/start tetap belum terverifikasi karena daemon tidak aktif. Detail dan batas ada di [panduan crawler](../../docs/crawler/TWITTER_CRAWLER.md).
 
 Lihat [[Struktur Proyek]], [[Arsitektur BeeSense]] dan [[HOME]].
+
+## Integrasi pipeline 2 November 2026
+
+SocialCrawler → TwitterCoordinatorWorker → ScweetWorker menggunakan sesi dan counter yang sama. Root hasil pencarian di-cache; hanya operasi jaringan yang menunggu jeda. Native X ID tetap unik lintas jenis record. Cooldown akun dapat ditunggu bila muat anggaran, HTTP429 aktual/login/challenge/cap harian menghentikan run dengan output parsial.
+
+Merge dataset membaca root X dari audit Contents yang terverifikasi, menerbitkan native_roots.json yang terikat checksum workbook, lalu SocialNLPClusterer mempertahankan thread_root_key pada Parquet. Target 20 topik dan mean c_v ≥0,4 tetap merupakan gate publikasi. Setelah lulus, Gemini memakai top-10 keyword dan top-10 kalimat untuk 20 kalimat/deskripsi CSV; dashboard memakai artifact tersimpan tanpa crawling atau API saat rerun.
+
+Angka pada bagian hasil 31 Oktober adalah riwayat; hasil 2 November akan dicatat setelah run selesai dan tervalidasi.

@@ -1,17 +1,16 @@
 ---
 source_file: "requirements/twitter.txt"
 type: "concept"
-community: "Akuisisi X dan Ekspor Scweet"
+community: "Integrasi X dan Provenans Akuisisi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # openpyxl 3.1.5
 
 ## Connections
-- [[Excel sosial sepuluh kolom WIB]] - `conceptually_related_to` [INFERRED]
 - [[Image Twitter Python 3.12 UID 10001]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

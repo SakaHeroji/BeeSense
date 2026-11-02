@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Adaptive macOS and Linux display policy]] - `rationale_for` [EXTRACTED]
 - [[RedditCrawler Reddrix wrapper]] - `implements` [EXTRACTED]
-- [[SocialCrawler backend selection]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard

@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[BeeSense Dashboard Guide]] - `references` [EXTRACTED]
 - [[Gemini Topic Narratives Guide]] - `references` [EXTRACTED]
-- [[Sentence Cluster Artifact Contract V2]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

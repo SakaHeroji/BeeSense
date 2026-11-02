@@ -1,0 +1,2094 @@
+{
+  "nodes": [
+    {
+      "id": "0",
+      "cluster_id": 0,
+      "label": "tahun / bulan / jam",
+      "terms": [
+        "tahun",
+        "bulan",
+        "jam",
+        "kip",
+        "pin",
+        "hari",
+        "spmb",
+        "lalu",
+        "jatim",
+        "waktu",
+        "daftar",
+        "tahun depan"
+      ],
+      "term_weights": [
+        {
+          "term": "tahun",
+          "weight": 0.12107104913001093
+        },
+        {
+          "term": "bulan",
+          "weight": 0.06299019109254153
+        },
+        {
+          "term": "jam",
+          "weight": 0.05445182389788299
+        },
+        {
+          "term": "kip",
+          "weight": 0.033883458673113626
+        },
+        {
+          "term": "pin",
+          "weight": 0.03332008542225523
+        },
+        {
+          "term": "hari",
+          "weight": 0.028361459955444073
+        },
+        {
+          "term": "spmb",
+          "weight": 0.02776673785187936
+        },
+        {
+          "term": "lalu",
+          "weight": 0.027511858719755054
+        },
+        {
+          "term": "jatim",
+          "weight": 0.024693763809259146
+        },
+        {
+          "term": "waktu",
+          "weight": 0.023420145541067142
+        },
+        {
+          "term": "daftar",
+          "weight": 0.023360936483302966
+        },
+        {
+          "term": "tahun depan",
+          "weight": 0.02326242691244291
+        }
+      ],
+      "coherence_cv": 0.31743198156008684,
+      "unique_sentences": 602,
+      "occurrences": 622,
+      "platform_counts": {
+        "youtube": 383,
+        "reddit": 201,
+        "instagram": 36,
+        "twitter": 2
+      },
+      "mean_centroid_similarity": 0.5586511492729187,
+      "representative_ids": [
+        "aad28cc6fb6a9008a8c08e8c",
+        "de63c4e8b3d8b8cf07cc8288",
+        "897d93c5c9d0706884663da4",
+        "94965b0f82f50936e22f304a",
+        "caf97f5f93e4b9924cb4c320"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "1",
+      "cluster_id": 1,
+      "label": "sama / orang / semoga",
+      "terms": [
+        "sama",
+        "orang",
+        "semoga",
+        "allah",
+        "jangan",
+        "selalu",
+        "kita",
+        "kalo",
+        "semangat",
+        "tidak",
+        "tau",
+        "sukses"
+      ],
+      "term_weights": [
+        {
+          "term": "sama",
+          "weight": 0.01665326545030206
+        },
+        {
+          "term": "orang",
+          "weight": 0.015968529286472657
+        },
+        {
+          "term": "semoga",
+          "weight": 0.014336354040985603
+        },
+        {
+          "term": "allah",
+          "weight": 0.01420128885027958
+        },
+        {
+          "term": "jangan",
+          "weight": 0.013296505069513619
+        },
+        {
+          "term": "selalu",
+          "weight": 0.01200721903246397
+        },
+        {
+          "term": "kita",
+          "weight": 0.011897732215612475
+        },
+        {
+          "term": "kalo",
+          "weight": 0.0118148045778758
+        },
+        {
+          "term": "semangat",
+          "weight": 0.010964452759776323
+        },
+        {
+          "term": "tidak",
+          "weight": 0.010895225309767576
+        },
+        {
+          "term": "tau",
+          "weight": 0.010466373541136541
+        },
+        {
+          "term": "sukses",
+          "weight": 0.008947608400644872
+        }
+      ],
+      "coherence_cv": 0.448053325105026,
+      "unique_sentences": 17403,
+      "occurrences": 17657,
+      "platform_counts": {
+        "youtube": 12243,
+        "reddit": 3553,
+        "instagram": 1578,
+        "twitter": 283
+      },
+      "mean_centroid_similarity": 0.5681871175765991,
+      "representative_ids": [
+        "2447abef05f3d9667f82f535",
+        "629055ed6407d00b667e18df",
+        "91dbd94eb057a63c6868ca84",
+        "f5248ef788f79dd9947f1b51",
+        "982fb46e49ec3ee257ba5493"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "2",
+      "cluster_id": 2,
+      "label": "kuliah / kerja / kampus",
+      "terms": [
+        "kuliah",
+        "kerja",
+        "kampus",
+        "beasiswa",
+        "tidak",
+        "sekolah",
+        "kalo",
+        "jurusan",
+        "mahasiswa",
+        "anak",
+        "orang",
+        "uang"
+      ],
+      "term_weights": [
+        {
+          "term": "kuliah",
+          "weight": 0.026537203344986365
+        },
+        {
+          "term": "kerja",
+          "weight": 0.01933302951688987
+        },
+        {
+          "term": "kampus",
+          "weight": 0.01576012194779383
+        },
+        {
+          "term": "beasiswa",
+          "weight": 0.014899204787649589
+        },
+        {
+          "term": "tidak",
+          "weight": 0.01349260307136811
+        },
+        {
+          "term": "sekolah",
+          "weight": 0.01314237173025328
+        },
+        {
+          "term": "kalo",
+          "weight": 0.012740895555491764
+        },
+        {
+          "term": "jurusan",
+          "weight": 0.012648547112271277
+        },
+        {
+          "term": "mahasiswa",
+          "weight": 0.01214052515457837
+        },
+        {
+          "term": "anak",
+          "weight": 0.011265497157847833
+        },
+        {
+          "term": "orang",
+          "weight": 0.011003304375658945
+        },
+        {
+          "term": "uang",
+          "weight": 0.010788515250299944
+        }
+      ],
+      "coherence_cv": 0.5984845031998481,
+      "unique_sentences": 15687,
+      "occurrences": 15902,
+      "platform_counts": {
+        "youtube": 8900,
+        "reddit": 5892,
+        "instagram": 1037,
+        "twitter": 73
+      },
+      "mean_centroid_similarity": 0.4594273865222931,
+      "representative_ids": [
+        "181a427052d1a07ac7f231b2",
+        "b1593ca48d81d2ee304f0d0c",
+        "6d16d287de2429e6913118b5",
+        "9d5a41c9f9c387e9e9d6e4a2",
+        "e9409fffafb0198bbb9ddce6"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "3",
+      "cluster_id": 3,
+      "label": "worth / buku / sabun",
+      "terms": [
+        "worth",
+        "buku",
+        "sabun",
+        "matematika",
+        "bootcamp",
+        "viral",
+        "kalo",
+        "kimia",
+        "test",
+        "nilai",
+        "ujian",
+        "toilet"
+      ],
+      "term_weights": [
+        {
+          "term": "worth",
+          "weight": 0.02277171454408299
+        },
+        {
+          "term": "buku",
+          "weight": 0.02251363636608995
+        },
+        {
+          "term": "sabun",
+          "weight": 0.022244057998646413
+        },
+        {
+          "term": "matematika",
+          "weight": 0.019804737838390193
+        },
+        {
+          "term": "bootcamp",
+          "weight": 0.019754815656480247
+        },
+        {
+          "term": "viral",
+          "weight": 0.01894969834894473
+        },
+        {
+          "term": "kalo",
+          "weight": 0.018470537387331464
+        },
+        {
+          "term": "kimia",
+          "weight": 0.017457747290129395
+        },
+        {
+          "term": "test",
+          "weight": 0.015120921699992452
+        },
+        {
+          "term": "nilai",
+          "weight": 0.015111621120739523
+        },
+        {
+          "term": "ujian",
+          "weight": 0.01453779257479302
+        },
+        {
+          "term": "toilet",
+          "weight": 0.01452324849777151
+        }
+      ],
+      "coherence_cv": 0.434259159347692,
+      "unique_sentences": 1486,
+      "occurrences": 1535,
+      "platform_counts": {
+        "youtube": 750,
+        "reddit": 692,
+        "instagram": 88,
+        "twitter": 5
+      },
+      "mean_centroid_similarity": 0.4253652095794678,
+      "representative_ids": [
+        "6a96c7842c870a35e2e9e3c8",
+        "3bbcdac46fa7feaba44d9767",
+        "11e11f56d52c70fe79cbae59",
+        "c67a09cb6ee8b2a9a7dc090e",
+        "f5319d13a44c52b0e7027da2"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "4",
+      "cluster_id": 4,
+      "label": "daftar / gas / daftarnya",
+      "terms": [
+        "daftar",
+        "gas",
+        "daftarnya",
+        "mobil",
+        "motor",
+        "desil",
+        "blacklist",
+        "k3",
+        "black",
+        "black list",
+        "list",
+        "sopir"
+      ],
+      "term_weights": [
+        {
+          "term": "daftar",
+          "weight": 0.12618639026139264
+        },
+        {
+          "term": "gas",
+          "weight": 0.07617263217880396
+        },
+        {
+          "term": "daftarnya",
+          "weight": 0.055154788204883475
+        },
+        {
+          "term": "mobil",
+          "weight": 0.048450334730975264
+        },
+        {
+          "term": "motor",
+          "weight": 0.04220199784917158
+        },
+        {
+          "term": "desil",
+          "weight": 0.03673009744708551
+        },
+        {
+          "term": "blacklist",
+          "weight": 0.03234259409599687
+        },
+        {
+          "term": "k3",
+          "weight": 0.03205527452303713
+        },
+        {
+          "term": "black",
+          "weight": 0.02768828880206064
+        },
+        {
+          "term": "black list",
+          "weight": 0.026411195088892638
+        },
+        {
+          "term": "list",
+          "weight": 0.025681150993902647
+        },
+        {
+          "term": "sopir",
+          "weight": 0.02517128331640584
+        }
+      ],
+      "coherence_cv": 0.38373393861088906,
+      "unique_sentences": 638,
+      "occurrences": 640,
+      "platform_counts": {
+        "youtube": 390,
+        "reddit": 139,
+        "instagram": 107,
+        "twitter": 4
+      },
+      "mean_centroid_similarity": 0.5235735177993774,
+      "representative_ids": [
+        "4b86bc7896b35538f0572477",
+        "0ca94445088a21dfde21d02f",
+        "3c6badd1e240bd38412faa56",
+        "2302003c5009296d57427bac",
+        "a7bb6b1dfcd0e1a70a5a2352"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "5",
+      "cluster_id": 5,
+      "label": "ibunya / ibu / anak",
+      "terms": [
+        "ibunya",
+        "ibu",
+        "anak",
+        "keluarga",
+        "sama",
+        "adik",
+        "adiknya",
+        "kakaknya",
+        "punya",
+        "danang",
+        "ku",
+        "ayah"
+      ],
+      "term_weights": [
+        {
+          "term": "ibunya",
+          "weight": 0.09187135985712114
+        },
+        {
+          "term": "ibu",
+          "weight": 0.09069009358000851
+        },
+        {
+          "term": "anak",
+          "weight": 0.07565868361773319
+        },
+        {
+          "term": "keluarga",
+          "weight": 0.04467493529675461
+        },
+        {
+          "term": "sama",
+          "weight": 0.03863378838303203
+        },
+        {
+          "term": "adik",
+          "weight": 0.02745034826716655
+        },
+        {
+          "term": "adiknya",
+          "weight": 0.02478914512731912
+        },
+        {
+          "term": "kakaknya",
+          "weight": 0.02377576442676557
+        },
+        {
+          "term": "punya",
+          "weight": 0.022788882581980575
+        },
+        {
+          "term": "danang",
+          "weight": 0.02247190886192886
+        },
+        {
+          "term": "ku",
+          "weight": 0.021731501669894248
+        },
+        {
+          "term": "ayah",
+          "weight": 0.02079305341125891
+        }
+      ],
+      "coherence_cv": 0.5956262352180234,
+      "unique_sentences": 1401,
+      "occurrences": 1420,
+      "platform_counts": {
+        "youtube": 1192,
+        "reddit": 169,
+        "instagram": 44,
+        "twitter": 15
+      },
+      "mean_centroid_similarity": 0.6468091011047363,
+      "representative_ids": [
+        "3b7b8b0af0e4e2f41494218c",
+        "bd95dba6587ba6129f0af25c",
+        "a8c751df9aa5cdf837c0572c",
+        "3eb5526b67421785b3946d24",
+        "aa509e40b95a4af32acb7e45"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "6",
+      "cluster_id": 6,
+      "label": "indo / jerman / nuklir",
+      "terms": [
+        "indo",
+        "jerman",
+        "nuklir",
+        "swasta",
+        "swiss",
+        "israel",
+        "iran",
+        "negara",
+        "bahasa jerman",
+        "kerja",
+        "kuliah",
+        "bahasa"
+      ],
+      "term_weights": [
+        {
+          "term": "indo",
+          "weight": 0.09322330572457777
+        },
+        {
+          "term": "jerman",
+          "weight": 0.061004822350591056
+        },
+        {
+          "term": "nuklir",
+          "weight": 0.03235632552403651
+        },
+        {
+          "term": "swasta",
+          "weight": 0.02548502498156307
+        },
+        {
+          "term": "swiss",
+          "weight": 0.024984954937531237
+        },
+        {
+          "term": "israel",
+          "weight": 0.021753338154825563
+        },
+        {
+          "term": "iran",
+          "weight": 0.020182473063981247
+        },
+        {
+          "term": "negara",
+          "weight": 0.018019806345800693
+        },
+        {
+          "term": "bahasa jerman",
+          "weight": 0.01712366947548175
+        },
+        {
+          "term": "kerja",
+          "weight": 0.016841417640742064
+        },
+        {
+          "term": "kuliah",
+          "weight": 0.016355688886307087
+        },
+        {
+          "term": "bahasa",
+          "weight": 0.014293872668265458
+        }
+      ],
+      "coherence_cv": 0.22320363169877316,
+      "unique_sentences": 898,
+      "occurrences": 904,
+      "platform_counts": {
+        "youtube": 533,
+        "reddit": 333,
+        "instagram": 34,
+        "twitter": 4
+      },
+      "mean_centroid_similarity": 0.4071562886238098,
+      "representative_ids": [
+        "292eb0903e36fdc18a9286d5",
+        "3ca617a2b9ba36db75969d45",
+        "f47d830214f8703ace422947",
+        "687a3bb85bf033e244c28164",
+        "395e7bacad0198d4069e53d2"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "7",
+      "cluster_id": 7,
+      "label": "umur / tua / usia",
+      "terms": [
+        "umur",
+        "tua",
+        "usia",
+        "muda",
+        "senior",
+        "orang tua",
+        "tahun",
+        "orang",
+        "generasi",
+        "anak muda",
+        "anak",
+        "batas"
+      ],
+      "term_weights": [
+        {
+          "term": "umur",
+          "weight": 0.1444790764063772
+        },
+        {
+          "term": "tua",
+          "weight": 0.10389984975332617
+        },
+        {
+          "term": "usia",
+          "weight": 0.08577227095031514
+        },
+        {
+          "term": "muda",
+          "weight": 0.08476052047471014
+        },
+        {
+          "term": "senior",
+          "weight": 0.07659850122342496
+        },
+        {
+          "term": "orang tua",
+          "weight": 0.07327708440320044
+        },
+        {
+          "term": "tahun",
+          "weight": 0.055820701216630325
+        },
+        {
+          "term": "orang",
+          "weight": 0.04322655839950649
+        },
+        {
+          "term": "generasi",
+          "weight": 0.03887472652602846
+        },
+        {
+          "term": "anak muda",
+          "weight": 0.0304402739296981
+        },
+        {
+          "term": "anak",
+          "weight": 0.029240766824178657
+        },
+        {
+          "term": "batas",
+          "weight": 0.02804398027397674
+        }
+      ],
+      "coherence_cv": 0.42580068602381094,
+      "unique_sentences": 316,
+      "occurrences": 319,
+      "platform_counts": {
+        "youtube": 185,
+        "reddit": 126,
+        "instagram": 7,
+        "twitter": 1
+      },
+      "mean_centroid_similarity": 0.6347532272338867,
+      "representative_ids": [
+        "06f0a8afd9043a481c8ff228",
+        "cddf219ec5b4aa7f279a1a04",
+        "ae9630515a827ba9741ba544",
+        "4897f68041f71401d32eb58c",
+        "b55befb253f398cd059922fd"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "8",
+      "cluster_id": 8,
+      "label": "kek / makan / kip",
+      "terms": [
+        "kek",
+        "makan",
+        "kip",
+        "petani",
+        "pertanian",
+        "masak",
+        "kopi",
+        "keknya",
+        "sama",
+        "ikan",
+        "daging",
+        "chef"
+      ],
+      "term_weights": [
+        {
+          "term": "kek",
+          "weight": 0.1028674891441944
+        },
+        {
+          "term": "makan",
+          "weight": 0.05811195560271547
+        },
+        {
+          "term": "kip",
+          "weight": 0.04638273527237329
+        },
+        {
+          "term": "petani",
+          "weight": 0.039237634610604324
+        },
+        {
+          "term": "pertanian",
+          "weight": 0.03431532554841343
+        },
+        {
+          "term": "masak",
+          "weight": 0.027859266667820973
+        },
+        {
+          "term": "kopi",
+          "weight": 0.027350914975639722
+        },
+        {
+          "term": "keknya",
+          "weight": 0.025557019586250937
+        },
+        {
+          "term": "sama",
+          "weight": 0.02400770168304762
+        },
+        {
+          "term": "ikan",
+          "weight": 0.02232916655664156
+        },
+        {
+          "term": "daging",
+          "weight": 0.02069471778863961
+        },
+        {
+          "term": "chef",
+          "weight": 0.019048707694748007
+        }
+      ],
+      "coherence_cv": 0.39240623203071573,
+      "unique_sentences": 548,
+      "occurrences": 552,
+      "platform_counts": {
+        "youtube": 372,
+        "reddit": 153,
+        "instagram": 24,
+        "twitter": 3
+      },
+      "mean_centroid_similarity": 0.5676124691963196,
+      "representative_ids": [
+        "a0cd2456bc7ddcf0b65503a1",
+        "2e3b4d9b0dce01b9a5399f1a",
+        "f1b979d8b8e3365389c82a86",
+        "f4cb3eac9d1783f81102af77",
+        "820ce04afa7e8c575bfcee33"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "9",
+      "cluster_id": 9,
+      "label": "indonesia / malaysia / rakyat",
+      "terms": [
+        "indonesia",
+        "malaysia",
+        "rakyat",
+        "rakyat indonesia",
+        "negara",
+        "jakarta",
+        "orang",
+        "tidak",
+        "pendidikan",
+        "universitas",
+        "seluruh",
+        "singapura"
+      ],
+      "term_weights": [
+        {
+          "term": "indonesia",
+          "weight": 0.1686689356386379
+        },
+        {
+          "term": "malaysia",
+          "weight": 0.027834909392664378
+        },
+        {
+          "term": "rakyat",
+          "weight": 0.02354409006751299
+        },
+        {
+          "term": "rakyat indonesia",
+          "weight": 0.02335178139739583
+        },
+        {
+          "term": "negara",
+          "weight": 0.022341775839333125
+        },
+        {
+          "term": "jakarta",
+          "weight": 0.019107893232863032
+        },
+        {
+          "term": "orang",
+          "weight": 0.018004988100346665
+        },
+        {
+          "term": "tidak",
+          "weight": 0.017046055512534818
+        },
+        {
+          "term": "pendidikan",
+          "weight": 0.016664292335660795
+        },
+        {
+          "term": "universitas",
+          "weight": 0.014732892555420934
+        },
+        {
+          "term": "seluruh",
+          "weight": 0.013814595076451055
+        },
+        {
+          "term": "singapura",
+          "weight": 0.013811209958327825
+        }
+      ],
+      "coherence_cv": 0.4370455403979487,
+      "unique_sentences": 1810,
+      "occurrences": 1837,
+      "platform_counts": {
+        "youtube": 1469,
+        "reddit": 328,
+        "instagram": 36,
+        "twitter": 4
+      },
+      "mean_centroid_similarity": 0.6623571515083313,
+      "representative_ids": [
+        "3394fe9964fffb2a1b43d95c",
+        "2fad78a68191c83119bae50e",
+        "d368e6d36263429c565ff42b",
+        "989b36bd70fdf7daddd652b4",
+        "45e75f476783e8ac64ac5257"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "10",
+      "cluster_id": 10,
+      "label": "gua / rocky / omon",
+      "terms": [
+        "gua",
+        "rocky",
+        "omon",
+        "gerung",
+        "jokowi",
+        "rocky gerung",
+        "gibran",
+        "bimo",
+        "orang",
+        "sama",
+        "omon omon",
+        "lucu"
+      ],
+      "term_weights": [
+        {
+          "term": "gua",
+          "weight": 0.09004560064900494
+        },
+        {
+          "term": "rocky",
+          "weight": 0.05313475188764987
+        },
+        {
+          "term": "omon",
+          "weight": 0.030773354247258328
+        },
+        {
+          "term": "gerung",
+          "weight": 0.02870333733587308
+        },
+        {
+          "term": "jokowi",
+          "weight": 0.026293712622460292
+        },
+        {
+          "term": "rocky gerung",
+          "weight": 0.024064100953180952
+        },
+        {
+          "term": "gibran",
+          "weight": 0.023935833775807203
+        },
+        {
+          "term": "bimo",
+          "weight": 0.021950699996686578
+        },
+        {
+          "term": "orang",
+          "weight": 0.020758169221091936
+        },
+        {
+          "term": "sama",
+          "weight": 0.020318770458397414
+        },
+        {
+          "term": "omon omon",
+          "weight": 0.01743758236186669
+        },
+        {
+          "term": "lucu",
+          "weight": 0.01615046389904043
+        }
+      ],
+      "coherence_cv": 0.36661549648684194,
+      "unique_sentences": 1365,
+      "occurrences": 1370,
+      "platform_counts": {
+        "youtube": 1010,
+        "reddit": 308,
+        "instagram": 41,
+        "twitter": 11
+      },
+      "mean_centroid_similarity": 0.5008310675621033,
+      "representative_ids": [
+        "d5d35f1e3e49b7249b73ed4d",
+        "f31ca90843ef422a40464fb1",
+        "da9cdb32bc857fe66b99170e",
+        "cbac68f31f2653055b983e3f",
+        "b28bb52f3ddd4339a30bef15"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "11",
+      "cluster_id": 11,
+      "label": "terima kasih / terimakasih / thank",
+      "terms": [
+        "terima kasih",
+        "terima",
+        "terimakasih",
+        "thank",
+        "kasih",
+        "thanks",
+        "makasih",
+        "mohon",
+        "infonya",
+        "salam",
+        "atas",
+        "halo"
+      ],
+      "term_weights": [
+        {
+          "term": "terima kasih",
+          "weight": 0.16880542577705368
+        },
+        {
+          "term": "terima",
+          "weight": 0.16003117018161067
+        },
+        {
+          "term": "terimakasih",
+          "weight": 0.15663729344832233
+        },
+        {
+          "term": "thank",
+          "weight": 0.15083117368213372
+        },
+        {
+          "term": "kasih",
+          "weight": 0.14834767384464412
+        },
+        {
+          "term": "thanks",
+          "weight": 0.11300721020534495
+        },
+        {
+          "term": "makasih",
+          "weight": 0.10464636004512302
+        },
+        {
+          "term": "mohon",
+          "weight": 0.07866892201912562
+        },
+        {
+          "term": "infonya",
+          "weight": 0.06926100241446785
+        },
+        {
+          "term": "salam",
+          "weight": 0.06307451838336182
+        },
+        {
+          "term": "atas",
+          "weight": 0.06131219057701699
+        },
+        {
+          "term": "halo",
+          "weight": 0.06090738613458764
+        }
+      ],
+      "coherence_cv": 0.463756340540055,
+      "unique_sentences": 883,
+      "occurrences": 976,
+      "platform_counts": {
+        "youtube": 714,
+        "reddit": 199,
+        "instagram": 61,
+        "twitter": 2
+      },
+      "mean_centroid_similarity": 0.7395615577697754,
+      "representative_ids": [
+        "5bef63bc2d0273e35c27f3db",
+        "628f3efb13e4f67bc20cf0c6",
+        "9754af89f98e45a055551056",
+        "445a9df9a358c162dee1b01c",
+        "55324403c603f545bc33db56"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "12",
+      "cluster_id": 12,
+      "label": "online / game / foto",
+      "terms": [
+        "online",
+        "game",
+        "foto",
+        "suara",
+        "iphone",
+        "podcast",
+        "animasi",
+        "media",
+        "iklan",
+        "episode",
+        "kamera",
+        "berita"
+      ],
+      "term_weights": [
+        {
+          "term": "online",
+          "weight": 0.05584504179730694
+        },
+        {
+          "term": "game",
+          "weight": 0.04665675960731669
+        },
+        {
+          "term": "foto",
+          "weight": 0.03256000479981706
+        },
+        {
+          "term": "suara",
+          "weight": 0.031094144573709303
+        },
+        {
+          "term": "iphone",
+          "weight": 0.030876593010779337
+        },
+        {
+          "term": "podcast",
+          "weight": 0.029203670214570793
+        },
+        {
+          "term": "animasi",
+          "weight": 0.02774407511933612
+        },
+        {
+          "term": "media",
+          "weight": 0.026344102711919337
+        },
+        {
+          "term": "iklan",
+          "weight": 0.02583314338837449
+        },
+        {
+          "term": "episode",
+          "weight": 0.025633106703873722
+        },
+        {
+          "term": "kamera",
+          "weight": 0.02347013735439188
+        },
+        {
+          "term": "berita",
+          "weight": 0.022831555683663428
+        }
+      ],
+      "coherence_cv": 0.4918574944757942,
+      "unique_sentences": 903,
+      "occurrences": 912,
+      "platform_counts": {
+        "youtube": 558,
+        "reddit": 292,
+        "instagram": 60,
+        "twitter": 2
+      },
+      "mean_centroid_similarity": 0.45995640754699707,
+      "representative_ids": [
+        "751c13ceeb8798f853866372",
+        "ef17ee58300c673b1204e12b",
+        "ea45b7475b17381250ebcf2b",
+        "352c8dc5e38ccdd170e819d4",
+        "e4d5834e997e7e8f61772e63"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "13",
+      "cluster_id": 13,
+      "label": "video / videonya / youtube",
+      "terms": [
+        "video",
+        "videonya",
+        "youtube",
+        "bermanfaat",
+        "nonton",
+        "vidio",
+        "bikin video",
+        "bikin",
+        "suka",
+        "yaa",
+        "semoga",
+        "terima"
+      ],
+      "term_weights": [
+        {
+          "term": "video",
+          "weight": 0.33661514832218326
+        },
+        {
+          "term": "videonya",
+          "weight": 0.10359968451412796
+        },
+        {
+          "term": "youtube",
+          "weight": 0.07120871692903635
+        },
+        {
+          "term": "bermanfaat",
+          "weight": 0.032750317535840665
+        },
+        {
+          "term": "nonton",
+          "weight": 0.03130895742615313
+        },
+        {
+          "term": "vidio",
+          "weight": 0.03125110826067394
+        },
+        {
+          "term": "bikin video",
+          "weight": 0.02749175132641077
+        },
+        {
+          "term": "bikin",
+          "weight": 0.023968419145093962
+        },
+        {
+          "term": "suka",
+          "weight": 0.021271207777173173
+        },
+        {
+          "term": "yaa",
+          "weight": 0.01867525729641517
+        },
+        {
+          "term": "semoga",
+          "weight": 0.0179564105460279
+        },
+        {
+          "term": "terima",
+          "weight": 0.017562373820137894
+        }
+      ],
+      "coherence_cv": 0.3440910843916881,
+      "unique_sentences": 371,
+      "occurrences": 377,
+      "platform_counts": {
+        "youtube": 335,
+        "reddit": 36,
+        "instagram": 5,
+        "twitter": 1
+      },
+      "mean_centroid_similarity": 0.7028140425682068,
+      "representative_ids": [
+        "696787dc5d0c6916cf5b3516",
+        "acccbea882b14cb05ea8fa1a",
+        "a3ab9fd07191be11e347073d",
+        "8d51693139693dbb478b97e4",
+        "8525cf95f7254bf992f588f4"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "14",
+      "cluster_id": 14,
+      "label": "dokter / psikolog / psikologi",
+      "terms": [
+        "dokter",
+        "psikolog",
+        "psikologi",
+        "kedokteran",
+        "psikiater",
+        "otak",
+        "kesehatan",
+        "spesialis",
+        "mental",
+        "adhd",
+        "jurusan",
+        "umum"
+      ],
+      "term_weights": [
+        {
+          "term": "dokter",
+          "weight": 0.08160667803188185
+        },
+        {
+          "term": "psikolog",
+          "weight": 0.07133745909599197
+        },
+        {
+          "term": "psikologi",
+          "weight": 0.06935765715350099
+        },
+        {
+          "term": "kedokteran",
+          "weight": 0.05337732571857723
+        },
+        {
+          "term": "psikiater",
+          "weight": 0.045364049973285914
+        },
+        {
+          "term": "otak",
+          "weight": 0.035186929251432096
+        },
+        {
+          "term": "kesehatan",
+          "weight": 0.03282228384218161
+        },
+        {
+          "term": "spesialis",
+          "weight": 0.02892535564056633
+        },
+        {
+          "term": "mental",
+          "weight": 0.027818809937649687
+        },
+        {
+          "term": "adhd",
+          "weight": 0.02428491213563151
+        },
+        {
+          "term": "jurusan",
+          "weight": 0.024226486707691456
+        },
+        {
+          "term": "umum",
+          "weight": 0.02114562718094543
+        }
+      ],
+      "coherence_cv": 0.4332575452577524,
+      "unique_sentences": 619,
+      "occurrences": 621,
+      "platform_counts": {
+        "youtube": 292,
+        "reddit": 287,
+        "instagram": 41,
+        "twitter": 1
+      },
+      "mean_centroid_similarity": 0.5884557962417603,
+      "representative_ids": [
+        "a5f2c721e7af280fffd5b9b2",
+        "a035b499d3286d4ffbb606c8",
+        "8fdc6696f475d15ae32387a7",
+        "750966fe2b03b7325193a7b9",
+        "c1b2c18b2bb4a245921334f5"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "15",
+      "cluster_id": 15,
+      "label": "negara / presiden / korupsi",
+      "terms": [
+        "negara",
+        "presiden",
+        "korupsi",
+        "pajak",
+        "rakyat",
+        "pemerintah",
+        "bangsa",
+        "koruptor",
+        "prabowo",
+        "hukum",
+        "kita",
+        "orang"
+      ],
+      "term_weights": [
+        {
+          "term": "negara",
+          "weight": 0.06979250363593935
+        },
+        {
+          "term": "presiden",
+          "weight": 0.04625493799104264
+        },
+        {
+          "term": "korupsi",
+          "weight": 0.032709401450535504
+        },
+        {
+          "term": "pajak",
+          "weight": 0.03252493554801278
+        },
+        {
+          "term": "rakyat",
+          "weight": 0.03136837914880672
+        },
+        {
+          "term": "pemerintah",
+          "weight": 0.03131801132815786
+        },
+        {
+          "term": "bangsa",
+          "weight": 0.027320879237253445
+        },
+        {
+          "term": "koruptor",
+          "weight": 0.02453140096563888
+        },
+        {
+          "term": "prabowo",
+          "weight": 0.02219760108952544
+        },
+        {
+          "term": "hukum",
+          "weight": 0.020701466348526442
+        },
+        {
+          "term": "kita",
+          "weight": 0.020655193222870915
+        },
+        {
+          "term": "orang",
+          "weight": 0.01942266257674062
+        }
+      ],
+      "coherence_cv": 0.6031719835498196,
+      "unique_sentences": 2151,
+      "occurrences": 2183,
+      "platform_counts": {
+        "youtube": 1842,
+        "reddit": 300,
+        "instagram": 30,
+        "twitter": 11
+      },
+      "mean_centroid_similarity": 0.5480490922927856,
+      "representative_ids": [
+        "21d6392029bfb37991ec7b09",
+        "95fcccee3de115500f309560",
+        "752c71c31096045bb3480464",
+        "ab99041156d1963f154b57c3",
+        "1c90cddd9a0a2164a2d69efc"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "16",
+      "cluster_id": 16,
+      "label": "cerita / film / ceritanya",
+      "terms": [
+        "cerita",
+        "film",
+        "ceritanya",
+        "drama",
+        "kisah",
+        "bagus",
+        "nyata",
+        "kisah nyata",
+        "suka",
+        "membosankan",
+        "alur",
+        "seru"
+      ],
+      "term_weights": [
+        {
+          "term": "cerita",
+          "weight": 0.18373662930391813
+        },
+        {
+          "term": "film",
+          "weight": 0.13362484636624888
+        },
+        {
+          "term": "ceritanya",
+          "weight": 0.11358888691457115
+        },
+        {
+          "term": "drama",
+          "weight": 0.11027546742661587
+        },
+        {
+          "term": "kisah",
+          "weight": 0.06974045345732045
+        },
+        {
+          "term": "bagus",
+          "weight": 0.057795123766310554
+        },
+        {
+          "term": "nyata",
+          "weight": 0.043233074516593355
+        },
+        {
+          "term": "kisah nyata",
+          "weight": 0.04311942323970226
+        },
+        {
+          "term": "suka",
+          "weight": 0.03628684264614026
+        },
+        {
+          "term": "membosankan",
+          "weight": 0.030776732802010678
+        },
+        {
+          "term": "alur",
+          "weight": 0.02860416496557946
+        },
+        {
+          "term": "seru",
+          "weight": 0.025226355243570742
+        }
+      ],
+      "coherence_cv": 0.3680498173477072,
+      "unique_sentences": 560,
+      "occurrences": 619,
+      "platform_counts": {
+        "youtube": 586,
+        "reddit": 30,
+        "twitter": 2,
+        "instagram": 1
+      },
+      "mean_centroid_similarity": 0.6635624170303345,
+      "representative_ids": [
+        "e42eeaf3e921940574f037fc",
+        "f824aaf4d43de02f54841d91",
+        "4a0db2bad1f09b7fb0e94f90",
+        "c108a4931f4c43443650deb5",
+        "cc833a29f3c4c43ef25b4020"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "17",
+      "cluster_id": 17,
+      "label": "jepang / china / mandarin",
+      "terms": [
+        "jepang",
+        "china",
+        "mandarin",
+        "bahasa",
+        "taiwan",
+        "cina",
+        "chinese",
+        "asia",
+        "korea",
+        "belajar",
+        "bahasa jepang",
+        "kerja"
+      ],
+      "term_weights": [
+        {
+          "term": "jepang",
+          "weight": 0.1370372319077605
+        },
+        {
+          "term": "china",
+          "weight": 0.10207780719038019
+        },
+        {
+          "term": "mandarin",
+          "weight": 0.07816207996240683
+        },
+        {
+          "term": "bahasa",
+          "weight": 0.05035076570041968
+        },
+        {
+          "term": "taiwan",
+          "weight": 0.04673648352213177
+        },
+        {
+          "term": "cina",
+          "weight": 0.04633888960544308
+        },
+        {
+          "term": "chinese",
+          "weight": 0.03134182543853317
+        },
+        {
+          "term": "asia",
+          "weight": 0.03070663427687523
+        },
+        {
+          "term": "korea",
+          "weight": 0.027305835476235402
+        },
+        {
+          "term": "belajar",
+          "weight": 0.026438332892362505
+        },
+        {
+          "term": "bahasa jepang",
+          "weight": 0.026390038807316125
+        },
+        {
+          "term": "kerja",
+          "weight": 0.024619112033569056
+        }
+      ],
+      "coherence_cv": 0.43783847593830405,
+      "unique_sentences": 505,
+      "occurrences": 522,
+      "platform_counts": {
+        "youtube": 308,
+        "reddit": 209,
+        "instagram": 4,
+        "twitter": 1
+      },
+      "mean_centroid_similarity": 0.6112729907035828,
+      "representative_ids": [
+        "58e3556f3c8223141086a44c",
+        "1d5b23a3209227214e1e256d",
+        "0170d22fd32c3fdb25fb274c",
+        "ab0afb57152bbbe836f8ede9",
+        "8be05c5f41389dd2763593e7"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "18",
+      "cluster_id": 18,
+      "label": "ai / manusia / pekerjaan",
+      "terms": [
+        "ai",
+        "manusia",
+        "pake ai",
+        "pekerjaan",
+        "sekarang",
+        "pake",
+        "bakal",
+        "kerja",
+        "digantikan",
+        "tidak",
+        "pakai ai",
+        "jurusan"
+      ],
+      "term_weights": [
+        {
+          "term": "ai",
+          "weight": 0.33581230657910643
+        },
+        {
+          "term": "manusia",
+          "weight": 0.023312155543546962
+        },
+        {
+          "term": "pake ai",
+          "weight": 0.022980920828124668
+        },
+        {
+          "term": "pekerjaan",
+          "weight": 0.019872457361117517
+        },
+        {
+          "term": "sekarang",
+          "weight": 0.01884430017527796
+        },
+        {
+          "term": "pake",
+          "weight": 0.01872143046254282
+        },
+        {
+          "term": "bakal",
+          "weight": 0.01766144273029719
+        },
+        {
+          "term": "kerja",
+          "weight": 0.017343799459714204
+        },
+        {
+          "term": "digantikan",
+          "weight": 0.01709987011653212
+        },
+        {
+          "term": "tidak",
+          "weight": 0.01679994888898763
+        },
+        {
+          "term": "pakai ai",
+          "weight": 0.01657740414888702
+        },
+        {
+          "term": "jurusan",
+          "weight": 0.016483159196264786
+        }
+      ],
+      "coherence_cv": 0.39663530908324174,
+      "unique_sentences": 383,
+      "occurrences": 391,
+      "platform_counts": {
+        "reddit": 244,
+        "youtube": 133,
+        "instagram": 14
+      },
+      "mean_centroid_similarity": 0.7011948823928833,
+      "representative_ids": [
+        "760ce720067e4e6033f824c5",
+        "69dadf11c5bf61f4fb441c9c",
+        "349afce2648b256a8695534a",
+        "e0c2c4b521aed182d7c291e4",
+        "80c1949e8092563b681afb45"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    },
+    {
+      "id": "19",
+      "cluster_id": 19,
+      "label": "istri / suami / nikah",
+      "terms": [
+        "istri",
+        "suami",
+        "nikah",
+        "wanita",
+        "istrinya",
+        "menikah",
+        "perempuan",
+        "cewek",
+        "pria",
+        "laki",
+        "gender",
+        "pernikahan"
+      ],
+      "term_weights": [
+        {
+          "term": "istri",
+          "weight": 0.14948867000434293
+        },
+        {
+          "term": "suami",
+          "weight": 0.09968279911443226
+        },
+        {
+          "term": "nikah",
+          "weight": 0.09087075757132258
+        },
+        {
+          "term": "wanita",
+          "weight": 0.08619077719948887
+        },
+        {
+          "term": "istrinya",
+          "weight": 0.07749486820505451
+        },
+        {
+          "term": "menikah",
+          "weight": 0.0520594346978394
+        },
+        {
+          "term": "perempuan",
+          "weight": 0.05157222444765669
+        },
+        {
+          "term": "cewek",
+          "weight": 0.03242149643612252
+        },
+        {
+          "term": "pria",
+          "weight": 0.032278364606600156
+        },
+        {
+          "term": "laki",
+          "weight": 0.032166038363942474
+        },
+        {
+          "term": "gender",
+          "weight": 0.025962688133740947
+        },
+        {
+          "term": "pernikahan",
+          "weight": 0.024607258388983675
+        }
+      ],
+      "coherence_cv": 0.32510076330975946,
+      "unique_sentences": 295,
+      "occurrences": 296,
+      "platform_counts": {
+        "youtube": 190,
+        "reddit": 100,
+        "twitter": 4,
+        "instagram": 2
+      },
+      "mean_centroid_similarity": 0.624428927898407,
+      "representative_ids": [
+        "e81742551f961130764aeadc",
+        "30333184bbceba81f4e33057",
+        "e6d3b2f38f22ad97ee28edd2",
+        "58f171feb47007316860b84e",
+        "bb5551cf7cfd24b3f64d88e8"
+      ],
+      "kind": "topic",
+      "inference": "unsupervised_cluster"
+    }
+  ],
+  "edges": [
+    {
+      "source": "0",
+      "target": "7",
+      "similarity": 0.6562299728393555,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "0",
+      "target": "4",
+      "similarity": 0.6017589569091797,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "0",
+      "target": "2",
+      "similarity": 0.5914636254310608,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "10",
+      "similarity": 0.9063673615455627,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "12",
+      "similarity": 0.7928734421730042,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "4",
+      "similarity": 0.7915679216384888,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "2",
+      "target": "3",
+      "similarity": 0.8053915500640869,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "2",
+      "target": "6",
+      "similarity": 0.7197771668434143,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "2",
+      "target": "15",
+      "similarity": 0.6258376836776733,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "3",
+      "similarity": 0.7815362215042114,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "3",
+      "target": "10",
+      "similarity": 0.7682693004608154,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "3",
+      "target": "4",
+      "similarity": 0.7457283139228821,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "4",
+      "target": "10",
+      "similarity": 0.717276394367218,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "5",
+      "similarity": 0.713561475276947,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "5",
+      "target": "10",
+      "similarity": 0.7132108807563782,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "5",
+      "target": "7",
+      "similarity": 0.6458141207695007,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "6",
+      "target": "15",
+      "similarity": 0.7026036381721497,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "6",
+      "similarity": 0.6700679063796997,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "7",
+      "target": "10",
+      "similarity": 0.6021875739097595,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "8",
+      "similarity": 0.717621922492981,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "8",
+      "target": "10",
+      "similarity": 0.6931173801422119,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "3",
+      "target": "8",
+      "similarity": 0.6459336876869202,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "9",
+      "target": "17",
+      "similarity": 0.6323832273483276,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "6",
+      "target": "9",
+      "similarity": 0.5763487815856934,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "10",
+      "target": "16",
+      "similarity": 0.7953332662582397,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "11",
+      "similarity": 0.7679136395454407,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "4",
+      "target": "11",
+      "similarity": 0.6617370843887329,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "11",
+      "target": "12",
+      "similarity": 0.649039626121521,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "12",
+      "target": "13",
+      "similarity": 0.7502042055130005,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "10",
+      "target": "12",
+      "similarity": 0.7386186122894287,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "13",
+      "target": "16",
+      "similarity": 0.6030856370925903,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "13",
+      "similarity": 0.5619068145751953,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "3",
+      "target": "14",
+      "similarity": 0.7013176679611206,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "2",
+      "target": "14",
+      "similarity": 0.6126608848571777,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "10",
+      "target": "15",
+      "similarity": 0.6690242886543274,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "15",
+      "similarity": 0.6421318054199219,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "1",
+      "target": "16",
+      "similarity": 0.7304682731628418,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "12",
+      "target": "16",
+      "similarity": 0.6699883937835693,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "6",
+      "target": "17",
+      "similarity": 0.614862322807312,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "5",
+      "target": "19",
+      "similarity": 0.6380383968353271,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    },
+    {
+      "source": "10",
+      "target": "19",
+      "similarity": 0.5954560041427612,
+      "relation": "semantic_similarity",
+      "confidence": "INFERRED",
+      "score_kind": "cosine_not_probability"
+    }
+  ],
+  "meaning": "Similarity of mean normalized sentence embeddings; no social-user relation inferred"
+}

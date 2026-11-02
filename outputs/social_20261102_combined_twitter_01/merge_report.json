@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "output": "/Users/socs3/Documents/BeeSense/outputs/social_20261102_combined_twitter_01/social_data.xlsx",
+  "rows": 34764,
+  "roots": 2526,
+  "comments": 32238,
+  "duplicate_native_ids": 0,
+  "duplicates_removed": 0,
+  "duplicate_policy": "prefer_latest_supplied_observation",
+  "counts": {
+    "instagram/comment": 3660,
+    "instagram/post": 625,
+    "instagram/reply": 138,
+    "reddit/comment": 2409,
+    "reddit/post": 297,
+    "reddit/reply": 1808,
+    "twitter/comment": 198,
+    "twitter/post": 366,
+    "twitter/reply": 105,
+    "youtube/comment": 19770,
+    "youtube/reply": 4150,
+    "youtube/video": 1238
+  },
+  "source_workbooks": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx",
+      "sha256": "ff4555a814e345573225fcce14c33d5fa549ef3800b885659df63998c6cc0a12",
+      "input_rows": 34095,
+      "retained_rows": 34095
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/twitter_scweet_20261031_30m_combined/social_data.xlsx",
+      "sha256": "5c364d96b859e30a1fd8bbe2612bcc076cad9f3273c0a88547812576275f2a64",
+      "input_rows": 45,
+      "retained_rows": 45
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_01/social_data.xlsx",
+      "sha256": "d5cd374a07a192aaf49505e542bb1deb195b3f2f33b26c2f307db73989beb005",
+      "input_rows": 12,
+      "retained_rows": 12
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_02/social_data.xlsx",
+      "sha256": "d359a46ae0122a8e2f694ebab5c67e59cb34a5d315c99e2efea1a0911ae4dd75",
+      "input_rows": 199,
+      "retained_rows": 199
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_03/social_data.xlsx",
+      "sha256": "83a27929612731a6eee327b9cfd7e13a6bb4ea2a9b68aed54c70422e18926aaa",
+      "input_rows": 212,
+      "retained_rows": 212
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_04/social_data.xlsx",
+      "sha256": "4ca4ab30fa50e0ee5588b45a7b0aa3aadba7bf5a5623610de6a07665ebd75b4d",
+      "input_rows": 3,
+      "retained_rows": 3
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_twitter_20261102_3h_05/social_data.xlsx",
+      "sha256": "db1224bd150b0007827fd8e7d49317b490766410dbc574a7d3d06f20a6ac688d",
+      "input_rows": 198,
+      "retained_rows": 198
+    }
+  ],
+  "output_sha256": "de6caf9b30724cc3d990ce25c81859b895559cd4be28f7ccbf95528613ce5990",
+  "row_order": "first native appearance; latest supplied record retained",
+  "source_observations_refreshed": false,
+  "synthetic": false,
+  "files_sha256": {
+    "record_lineage.jsonl": "695e4a301d665e2ea6d68055669b2cf7ecb67358fc0c965d5e06f5814b3f63ae",
+    "native_roots.json": "931bea99a7458263f647de0baa9ef2dee66837bba1fd8dd61a08dbd3b183f59c",
+    "social_data.xlsx": "de6caf9b30724cc3d990ce25c81859b895559cd4be28f7ccbf95528613ce5990",
+    "duplicate_records.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

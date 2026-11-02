@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "rationale"
-community: "Audit Akuisisi Instagram"
+community: "Konteks dan Provenance Gemini"
 location: "## Akuisisi dihentikan atas instruksi pengguna"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Audit_Akuisisi_Instagram
+  - community/Konteks_dan_Provenance_Gemini
 ---
 
 # User stopped Instagram acquisition; no subsequent crawl
@@ -15,4 +15,4 @@ tags:
 - [[Final audited33034-record Instagram-inclusive corpus]] - `references` [EXTRACTED]
 - [[Instagram acquisition stopped; audited modelGemini release live; pacing updated offline]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram
+#graphify/rationale #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini

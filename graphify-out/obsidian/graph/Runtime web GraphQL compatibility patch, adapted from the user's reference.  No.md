@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_browser_patch.py"
 type: "rationale"
-community: "Format Grafik Dashboard"
+community: "Worker Instaloader"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Format_Grafik_Dashboard
+  - community/Worker_Instaloader
 ---
 
 # Runtime web GraphQL compatibility patch, adapted from the user's reference.  No
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[instaloader_browser_patch.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Format_Grafik_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader

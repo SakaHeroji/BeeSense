@@ -1,29 +1,39 @@
 ---
 type: community
-cohesion: 0.16
-members: 14
+cohesion: 0.13
+members: 24
 ---
 
 # Encoding dan Penyimpanan Model
 
-**Cohesion:** 0.16 - loosely connected
-**Members:** 14 nodes
+**Cohesion:** 0.13 - loosely connected
+**Members:** 24 nodes
 
 ## Members
-- [[._ctfidf_terms()]] - code - MachineLearning/social_nlp.py
-- [[._filter_radius()]] - code - MachineLearning/social_nlp.py
-- [[._merge_topics()]] - code - MachineLearning/social_nlp.py
-- [[._radius_graph()]] - code - MachineLearning/social_nlp.py
-- [[._topic_vectorizer()]] - code - MachineLearning/social_nlp.py
-- [[.build_topic_graph()]] - code - MachineLearning/social_nlp.py
-- [[.compare()]] - code - MachineLearning/social_nlp.py
-- [[.describe_topics()]] - code - MachineLearning/social_nlp.py
-- [[.score_coherence()]] - code - MachineLearning/social_nlp.py
-- [[Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un]] - rationale - MachineLearning/social_nlp.py
-- [[Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi]] - rationale - MachineLearning/social_nlp.py
-- [[Preserve explicit zero distances, including identical sentence vectors.]] - rationale - MachineLearning/social_nlp.py
-- [[Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry.]] - rationale - MachineLearning/social_nlp.py
-- [[Use the same class TF-IDF vocabulary for selection and publication.]] - rationale - MachineLearning/social_nlp.py
+- [[.evaluate_run_coherence()]] - code - MachineLearning/social_nlp.py
+- [[.explain_artifacts()]] - code - MachineLearning/social_nlp.py
+- [[.load_explanations()]] - code - MachineLearning/social_nlp.py
+- [[.load_run()]] - code - MachineLearning/social_nlp.py
+- [[.save_explanations()]] - code - MachineLearning/social_nlp.py
+- [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_excel_extension_loads_without_gemini_and_binds_membership_and_bytes()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_legacy_v1_artifact_and_explanations_remain_readable()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_saved_run_coherence_reproduces_the_published_score()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - code - tests/nlp/test_social_nlp.py
+- [[A merge report binds its small, explicit audit sidecars to the input.]] - rationale - scripts/verify_dashboard_data.py
+- [[Explain already verified artifacts without encoding or fitting again.]] - rationale - MachineLearning/social_nlp.py
+- [[Publish a new versioned sidecar; never modify the original run.]] - rationale - MachineLearning/social_nlp.py
+- [[Validate separately published X evidence without treating it as an NLP run.]] - rationale - scripts/verify_dashboard_data.py
+- [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
+- [[Verify record identity independently of sentence-text deduplication.]] - rationale - scripts/verify_dashboard_data.py
+- [[file_hash()]] - code - MachineLearning/social_nlp.py
+- [[main()_11]] - code - MachineLearning/social_nlp.py
+- [[main()_13]] - code - scripts/verify_dashboard_data.py
+- [[published_crawl_files()]] - code - scripts/verify_dashboard_data.py
+- [[published_source_files()]] - code - scripts/verify_dashboard_data.py
+- [[verify()_1]] - code - scripts/verify_dashboard_data.py
+- [[verify_dashboard_data.py]] - code - scripts/verify_dashboard_data.py
+- [[verify_native_dataset()]] - code - scripts/verify_dashboard_data.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,14 +43,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 7 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 3 edges to [[_COMMUNITY_Generator Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Pemilihan Topik dan Coherence_1]]
+- 15 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 9 edges to [[_COMMUNITY_topic_sentence_export.py]]
+- 9 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 4 edges to [[_COMMUNITY_app.py]]
+- 4 edges to [[_COMMUNITY_Penggabungan Dataset]]
+- 3 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 2 edges to [[_COMMUNITY_Bukti Ekstraktif Topik]]
+- 2 edges to [[_COMMUNITY_Bukti Ekstraktif Topik_1]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Pengujian UI Streamlit]]
+- 1 edge to [[_COMMUNITY_Eksekusi dan Ekspor Crawler]]
+- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
 
 ## Top bridge nodes
-- [[.compare()]] - degree 13, connects to 3 communities
-- [[.describe_topics()]] - degree 6, connects to 3 communities
-- [[._merge_topics()]] - degree 5, connects to 3 communities
-- [[._radius_graph()]] - degree 4, connects to 3 communities
-- [[.score_coherence()]] - degree 7, connects to 2 communities
+- [[file_hash()]] - degree 30, connects to 10 communities
+- [[.load_run()]] - degree 15, connects to 7 communities
+- [[main()_11]] - degree 10, connects to 4 communities
+- [[verify_dashboard_data.py]] - degree 11, connects to 3 communities
+- [[.explain_artifacts()]] - degree 6, connects to 3 communities

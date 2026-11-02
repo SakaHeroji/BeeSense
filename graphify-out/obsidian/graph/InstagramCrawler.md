@@ -20,7 +20,6 @@ tags:
 - [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - `calls` [EXTRACTED]
 - [[.test_browser_is_real_backend_but_injected_workers_remain_synthetic()]] - `calls` [EXTRACTED]
 - [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
-- [[Historical SocialCrawler 1.5 browser integration; superseded default in 1.6]] - `references` [EXTRACTED]
 - [[Instagram workeradapter integrated in SocialCrawler1.5.1]] - `references` [EXTRACTED]
 - [[InstagramBrowserTests]] - `uses` [INFERRED]
 - [[InstagramBrowserWorker]] - `uses` [INFERRED]

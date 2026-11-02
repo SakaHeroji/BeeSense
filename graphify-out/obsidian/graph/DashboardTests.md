@@ -2,7 +2,7 @@
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
 community: "Model dan Pengujian NLP"
-location: "L656"
+location: "L685"
 tags:
   - graphify/code
   - graphify/EXTRACTED

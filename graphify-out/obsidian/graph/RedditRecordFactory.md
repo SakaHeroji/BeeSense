@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Validasi Record Reddit"
+community: "Parsing Identitas Reddit"
 location: "L916"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Record_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # RedditRecordFactory
@@ -21,4 +21,4 @@ tags:
 - [[export_campaign()]] - `calls` [EXTRACTED]
 - [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

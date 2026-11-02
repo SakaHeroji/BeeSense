@@ -2,7 +2,7 @@
 source_file: "Dashboard/app.py"
 type: "rationale"
 community: ".topic_figure"
-location: "L60"
+location: "L66"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

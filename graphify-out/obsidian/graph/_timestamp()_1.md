@@ -12,7 +12,7 @@ tags:
 # _timestamp()
 
 ## Connections
-- [[._normalize()_1]] - `calls` [EXTRACTED]
+- [[._normalize()]] - `calls` [EXTRACTED]
 - [[.search()]] - `calls` [EXTRACTED]
 - [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - `calls` [EXTRACTED]
 - [[.youtube()]] - `calls` [EXTRACTED]

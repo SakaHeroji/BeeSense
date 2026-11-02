@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/REDDIT_CRAWLER.md"
 type: "rationale"
-community: "Batas Akuisisi Reddit"
+community: "Runtime Docker dan Display"
 location: "## Hasil live"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Batas_Akuisisi_Reddit
+  - community/Runtime_Docker_dan_Display
 ---
 
 # Historical v1.0.0 module-specific non-Linux Xvfb shim
@@ -17,4 +17,4 @@ tags:
 - [[Reddrix-only Camoufox factory controls initial and refreshed sessions]] - `conceptually_related_to` [EXTRACTED]
 - [[load_reddrix()]] - `conceptually_related_to` [INFERRED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Runtime_Docker_dan_Display

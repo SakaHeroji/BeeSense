@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SocialCrawler: bounded YouTube/Reddit/Instagram acquisition with one export contract.
+"""SocialCrawler: bounded YouTube/Reddit/Instagram/Twitter acquisition with one export contract.
 
 Publication dates and include keywords select root posts/videos. Exclude keywords
 also remove comments. A minimum counts qualifying roots with enough unique
@@ -40,7 +40,7 @@ from Crawler.Backend.social_export import (
 )
 from Crawler.Backend.Youtube import crawl_youtube as youtube
 
-VERSION = "1.6.0"
+VERSION = "1.7.0"
 INSTAGRAM_RATE_LIMIT_DEFAULTS = {
     "rate_limit_cooldown_seconds": 360,
     "rate_limit_max_retries": 3,
@@ -71,6 +71,8 @@ STOP_STATUSES = BARRIERS | {
     "INTERRUPTED",
     "SESSION_INVALID",
     "CLIENT_UPGRADE_REQUIRED",
+    "ACCOUNT_UNAVAILABLE",
+    "COOLDOWN_EXCEEDS_BUDGET",
 }
 DEFAULT_PLATFORM = dict(
     enabled=True,
@@ -92,6 +94,7 @@ DEFAULT_CONFIG = dict(
     instagrapi={},
     instaloader={},
     instagram_browser={},
+    scweet={},
     instagram_pacing=deepcopy(INSTAGRAM_PACING_DEFAULTS),
     since=None,
     until=None,
@@ -529,9 +532,11 @@ def _config(value):
     if (
         not isinstance(platforms, dict)
         or not platforms
-        or set(platforms) - {"youtube", "reddit", "instagram"}
+        or set(platforms) - {"youtube", "reddit", "instagram", "twitter"}
     ):
-        raise ValueError("platforms must contain youtube, reddit and/or instagram")
+        raise ValueError(
+            "platforms must contain youtube, reddit, instagram and/or twitter"
+        )
     result = {}
     extra = {
         "youtube": {"cert_store"},
@@ -550,6 +555,59 @@ def _config(value):
         },
     }
     for name, settings in platforms.items():
+        if name == "twitter":
+            from Crawler.Backend.twitter_crawler import configuration
+
+            if not isinstance(settings, dict):
+                raise ValueError("twitter settings must be an object")
+            supplied = deepcopy(settings)
+            enabled = supplied.pop("enabled", True)
+            minimum = supplied.pop("min_comments_per_post", 0)
+            candidates = supplied.pop("max_candidates", 20000)
+            comment_threads = supplied.pop("max_comment_threads", 10000)
+            _number(supplied.pop("max_replies", 0), "twitter.max_replies", 0, 0, True)
+            if type(enabled) is not bool:
+                raise ValueError("twitter.enabled must be boolean")
+            _number(minimum, "twitter.min_comments_per_post", 0, 100, True)
+            _number(candidates, "twitter.max_candidates", 1, 20000, True)
+            _number(comment_threads, "twitter.max_comment_threads", 0, 10000, True)
+            if minimum and comment_threads < supplied.get("min_posts", 1000):
+                raise ValueError(
+                    "Twitter comment sampling cannot satisfy the minimum for every target post"
+                )
+            checked = configuration(
+                {
+                    **{
+                        key: deepcopy(cfg[key])
+                        for key in (
+                            "project_id",
+                            "since",
+                            "until",
+                            "include_keywords",
+                            "exclude_keywords",
+                            "include_mode",
+                            "delay",
+                            "timeout_seconds",
+                            "total_seconds",
+                            "scweet",
+                            "exclude_existing_datasets",
+                        )
+                    },
+                    "platforms": {"twitter": supplied},
+                }
+            )
+            cfg["scweet"] = checked["scweet"]
+            result[name] = {
+                **checked["platforms"][name],
+                "enabled": enabled,
+                "min_comments_per_post": minimum,
+                "max_candidates": candidates,
+                "max_replies": 0,
+                "max_comment_threads": comment_threads,
+            }
+            if minimum > result[name]["max_comments"]:
+                raise ValueError("Twitter minimum comments exceeds acquisition cap")
+            continue
         if name == "instagram":
             from Crawler.Backend import instagram_crawler as instagram
 
@@ -728,11 +786,17 @@ def _config(value):
         result[name] = p
     if not any(p["enabled"] for p in result.values()):
         raise ValueError("enable at least one platform")
+    if "twitter" not in result and cfg["scweet"]:
+        raise ValueError("scweet settings require the Twitter platform")
     cfg["platforms"] = result
     return cfg
 
 
 def _url(platform, value):
+    if platform == "twitter":
+        from Crawler.Backend.twitter_crawler import post_url
+
+        return post_url(value)
     if platform == "instagram":
         from Crawler.Backend.instagram_crawler import media_url
 
@@ -785,6 +849,15 @@ class SocialCrawler(SocialExportMixin):
             **(workers or {}),
         }
         self._instagram_worker = None
+        self._twitter_worker = None
+        if self.config["platforms"].get("twitter", {}).get("enabled"):
+            from Crawler.Backend.twitter_crawler import TwitterCoordinatorWorker
+
+            if "twitter" not in (workers or {}):
+                self._twitter_worker = TwitterCoordinatorWorker(self.config["scweet"])
+            self.workers["twitter"] = (workers or {}).get(
+                "twitter"
+            ) or self._twitter_worker
         options = self.config["platforms"].get("instagram", {})
         if options.get("enabled"):
             from Crawler.Backend.instagram_crawler import run_instagram_worker
@@ -817,7 +890,7 @@ class SocialCrawler(SocialExportMixin):
         self.progress = progress or (lambda event: None)
 
     def _existing_posts(self):
-        """Read root identities only; never alter the historical workbooks."""
+        """Read roots and all global X IDs; never alter historical workbooks."""
         from openpyxl import load_workbook
 
         excluded = {name: set() for name in self.config["platforms"]}
@@ -832,6 +905,7 @@ class SocialCrawler(SocialExportMixin):
                 checksum = file_digest(stream, "sha256").hexdigest()
             book = load_workbook(path, read_only=True, data_only=True)
             counts = Counter()
+            record_counts = Counter()
             try:
                 if "Contents" not in book.sheetnames:
                     raise ValueError(
@@ -848,10 +922,16 @@ class SocialCrawler(SocialExportMixin):
                 for values in rows:
                     row = dict(zip(headers, values))
                     name = row.get("platform")
-                    if name not in excluded or row.get("object_type") != "post":
+                    if name not in excluded or (
+                        row.get("object_type") != "post" and name != "twitter"
+                    ):
                         continue
                     url = _url(name, row.get("canonical_url"))
-                    if name == "instagram":
+                    if name == "twitter":
+                        native = _url(
+                            name, "https://x.com/i/web/status/" + str(row["native_id"])
+                        )
+                    elif name == "instagram":
                         from Crawler.Backend.instagram_crawler import (
                             media_pk_from_url,
                             native_pk,
@@ -880,12 +960,15 @@ class SocialCrawler(SocialExportMixin):
                             "Historical native ID and canonical URL disagree"
                         )
                     excluded[name].add(url)
-                    counts[name] += 1
+                    record_counts[name] += 1
+                    if row.get("object_type") == "post":
+                        counts[name] += 1
             finally:
                 book.close()
-            sources.append(
-                dict(path=str(path), sha256=checksum, root_rows=dict(counts))
-            )
+            source = dict(path=str(path), sha256=checksum, root_rows=dict(counts))
+            if "twitter" in record_counts:
+                source["identity_rows"] = dict(record_counts)
+            sources.append(source)
         return excluded, sources
 
     def _event(self, stage, **values):
@@ -1070,6 +1153,8 @@ class SocialCrawler(SocialExportMixin):
         return self.clock() < deadline
 
     def _legacy_settings(self, name, p):
+        if name == "twitter":
+            return SimpleNamespace(**p, timeout_seconds=self.config["timeout_seconds"])
         if name == "instagram":
             if p["backend"] == "instaloader":
                 from Crawler.Backend.instaloader_crawler import InstaloaderSettings
@@ -1398,7 +1483,7 @@ class SocialCrawler(SocialExportMixin):
         )
 
     def _execute(self, name, operation, target, settings, p, deadline, cached=None):
-        if cached is not None:
+        if cached is not None and name != "twitter":
             try:
                 return self._dom_events(cached, target, p), dict(
                     status="FINISHED_BEST_EFFORT",
@@ -1414,8 +1499,21 @@ class SocialCrawler(SocialExportMixin):
                     source_version=None,
                 )
         events = []
+        network_operation = not (
+            name == "twitter"
+            and cached is not None
+            and (not p["max_comments"] or not cached.get("comments", 0))
+        )
+        if name == "twitter" and hasattr(self.workers[name], "requires_network"):
+            network_operation = self.workers[name].requires_network(
+                operation, target, settings, cached
+            )
         try:
-            if not self._pace(deadline):
+            if (
+                network_operation
+                and not self._pace(deadline)
+                or self.clock() >= deadline
+            ):
                 return [], dict(
                     status="TIME_BUDGET_EXHAUSTED",
                     reason="global_deadline",
@@ -1435,7 +1533,9 @@ class SocialCrawler(SocialExportMixin):
                 )
             result = self.workers[name](
                 operation,
-                target,
+                {"tweet_id": target.rsplit("/", 1)[-1], "cached_root": cached}
+                if name == "twitter" and operation != "search"
+                else target,
                 settings,
                 min(settings.timeout_seconds, deadline - self.clock()),
                 lambda kind, payload: events.append((kind, payload)),
@@ -1478,13 +1578,18 @@ class SocialCrawler(SocialExportMixin):
                 source_version=None,
             )
         finally:
-            self._last_finished = self.clock()
+            if network_operation:
+                self._last_finished = self.clock()
 
     def _normalize(self, name, events, url, origin, factory, version):
         rows = {key: [] for key in reddit.TABLES}
         sink = SimpleNamespace(write=lambda table, row: rows[table].append(row))
         dataset = reddit.Dataset(factory, sink)
-        if name == "instagram":
+        if name == "twitter":
+            from Crawler.Backend.twitter_crawler import TwitterAdapter
+
+            adapter = TwitterAdapter(factory, dataset)
+        elif name == "instagram":
             from Crawler.Backend.instagram_crawler import InstagramAdapter
 
             adapter = InstagramAdapter(
@@ -1504,7 +1609,7 @@ class SocialCrawler(SocialExportMixin):
         invalid = 0
         for kind, payload in events:
             if (
-                name in {"reddit", "instagram"}
+                name in {"reddit", "instagram", "twitter"}
                 and kind != "record"
                 or name == "youtube"
                 and kind not in {"video", "comment"}
@@ -1524,6 +1629,14 @@ class SocialCrawler(SocialExportMixin):
 
     def _source_metadata(self, name, settings):
         """Describe the acquisition backend independently of the shared export."""
+        if name == "twitter":
+            from Crawler.Backend.twitter_crawler import METHOD
+
+            return dict(
+                producer_version="social-crawler:" + VERSION,
+                extraction_method=METHOD,
+                access_mode="saved_authenticated_web_session;read_only_acquisition",
+            )
         if name == "instagram":
             if settings["backend"] == "instaloader":
                 from Crawler.Backend.instaloader_crawler import (
@@ -1628,6 +1741,8 @@ class SocialCrawler(SocialExportMixin):
                     return
                 if name in {"reddit", "instagram"}:
                     summary.update(rate_limit_events=0, rate_limit_retries=0)
+                if name == "twitter":
+                    summary.update(cooldown_waits=0, rate_limit_retries=0, network={})
                 if name == "instagram":
                     summary.update(operations_completed=0, batch_pauses=0)
                 settings = self._legacy_settings(name, p)
@@ -1658,7 +1773,9 @@ class SocialCrawler(SocialExportMixin):
                 for url in p["urls"]:
                     enqueue(url)
                 searches = deque(
-                    (
+                    []
+                    if name == "twitter"
+                    else (
                         ("search", json.dumps({"hashtag": tag, "cursor": None}))
                         for tag in p["hashtags"]
                     )
@@ -1686,6 +1803,12 @@ class SocialCrawler(SocialExportMixin):
                         for sub in p["subreddits"]
                     )
                 )
+                if name == "twitter":
+                    from Crawler.Backend.twitter_crawler import search_targets
+
+                    searches = deque(
+                        ("search", target) for target in search_targets(self.config)
+                    )
                 search_cursors = set()
                 search_pages = 0
                 summary["stop_reason"] = "CANDIDATES_EXHAUSTED"
@@ -1704,7 +1827,8 @@ class SocialCrawler(SocialExportMixin):
                     if row_count >= 500000:
                         summary["stop_reason"] = "OUTPUT_ROW_BUDGET"
                         break
-                    if pending_operation is not None:
+                    retrying = pending_operation is not None
+                    if retrying:
                         operation, target, origin, cached = pending_operation
                         pending_operation = None
                         ready_at.pop(name, None)
@@ -1741,7 +1865,7 @@ class SocialCrawler(SocialExportMixin):
                             else "thread"
                         )
                     if not search:
-                        summary["posts_attempted"] += 1
+                        summary["posts_attempted"] += int(not retrying)
                         if (
                             name == "reddit"
                             and p["backend"] == "checkpoint"
@@ -1771,6 +1895,9 @@ class SocialCrawler(SocialExportMixin):
                                 enqueue(
                                     payload.get("url", ""),
                                     payload.get("discovered_from"),
+                                    payload.get("cached_root")
+                                    if name == "twitter"
+                                    else None,
                                 )
                         if name == "instagram" and result.get("next_cursor"):
                             query = json.loads(target)
@@ -1802,13 +1929,29 @@ class SocialCrawler(SocialExportMixin):
                         )
                         selected, reason = self._select(rows)
                         if selected:
+                            # X IDs are global across posts and replies; a changed
+                            # body or another thread must never duplicate an ID.
+                            if name == "twitter":
+                                selected = selected[:1] + [
+                                    row
+                                    for row in selected[1:]
+                                    if row["object_key"] not in object_keys
+                                ]
                             root_url = _url(name, selected[0]["canonical_url"])
-                            if root_url in excluded[name]:
+                            if (
+                                name == "twitter"
+                                and selected[0]["object_key"] in object_keys
+                                and root_url not in exported_roots[name]
+                            ):
+                                selected = []
+                                reason = "native_id_already_exported_as_reply"
+                                summary["duplicate_posts_skipped"] += 1
+                            elif root_url in excluded[name]:
                                 excluded_seen.add(root_url)
                                 summary["existing_posts_skipped"] = len(excluded_seen)
                                 selected = []
                                 reason = "root_seen_in_existing_dataset"
-                            elif root_url in exported_roots[name]:
+                            elif root_url in exported_roots[name] and name != "twitter":
                                 summary["duplicate_posts_skipped"] += 1
                                 selected = []
                                 reason = "duplicate_root_in_run"
@@ -1822,12 +1965,17 @@ class SocialCrawler(SocialExportMixin):
                                 "reason": "bounded_export_size",
                             }
                         if selected:
+                            new_root = root_url not in exported_roots[name]
                             exported_roots[name].add(root_url)
                             count = len(selected) - 1
                             qualified = count >= p["min_comments_per_post"]
-                            summary["qualified_posts"] += int(qualified)
-                            summary["insufficient_comment_posts"] += int(not qualified)
-                            summary["posts_exported"] += 1
+                            summary["qualified_posts"] += int(qualified and new_root)
+                            summary["insufficient_comment_posts"] += int(
+                                not qualified and new_root
+                            )
+                            summary["posts_exported"] += int(new_root)
+                            if not new_root:
+                                selected = selected[1:]
                             selected_ids = {row["observation_id"] for row in selected}
                             keys = {row["object_key"] for row in selected}
                             for row in selected:
@@ -1863,6 +2011,8 @@ class SocialCrawler(SocialExportMixin):
                             "retry_after_seconds:" + str(result["retry_after_seconds"])
                         )
                     finished = reddit.now_iso()
+                    if name == "twitter" and result.get("network"):
+                        summary["network"] = result["network"]
                     sink.write(
                         "Runs",
                         factory.row(
@@ -1870,7 +2020,9 @@ class SocialCrawler(SocialExportMixin):
                             unit_id=str(uuid.uuid4()),
                             source=name,
                             operation=operation,
-                            target=target,
+                            target=json.dumps(target, ensure_ascii=False)
+                            if isinstance(target, dict)
+                            else target,
                             status=result["status"],
                             reason=result.get("reason", "source_result"),
                             coverage="PARTIAL_NON_EXHAUSTIVE",
@@ -1889,6 +2041,25 @@ class SocialCrawler(SocialExportMixin):
                             finished_at=finished,
                         ),
                     )
+                    if name == "twitter" and result["status"] == "COOLDOWN":
+                        wait = result.get("retry_after_seconds")
+                        if (
+                            type(wait) in (int, float)
+                            and math.isfinite(wait)
+                            and 0 < wait < deadline - self.clock()
+                        ):
+                            # Existing Scweet state owns the cooldown. Resume the
+                            # same operation only after the complete wait.
+                            summary["cooldown_waits"] += 1
+                            ready_at[name] = self.clock() + wait
+                            pending_operation = (operation, target, origin, cached)
+                            self._event(
+                                "account_cooldown", platform=name, wait_seconds=wait
+                            )
+                            yield
+                            continue
+                        summary["stop_reason"] = "COOLDOWN_EXCEEDS_BUDGET"
+                        break
                     if (
                         name in {"reddit", "instagram"}
                         and result["status"] == "RATE_LIMITED"
@@ -2116,6 +2287,15 @@ class SocialCrawler(SocialExportMixin):
             (sink.path / "summary.json").write_text(
                 json.dumps(report, ensure_ascii=False, indent=2) + "\n"
             )
+            manifest_path = sink.path / "manifest.json"
+            manifest = json.loads(manifest_path.read_text())
+            with (sink.path / "summary.json").open("rb") as stream:
+                manifest["files_sha256"]["summary.json"] = file_digest(
+                    stream, "sha256"
+                ).hexdigest()
+            manifest_path.write_text(
+                json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
+            )
             self._event("finished", status=report["status"], output_dir=str(sink.path))
             return report
         except BaseException:
@@ -2125,6 +2305,8 @@ class SocialCrawler(SocialExportMixin):
         finally:
             if self._instagram_worker is not None:
                 self._instagram_worker.close()
+            if self._twitter_worker is not None:
+                self._twitter_worker.close()
 
 
 def main():

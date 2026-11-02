@@ -12,6 +12,6 @@ tags:
 # Historical Instagram Export Query Memory
 
 ## Connections
-- [[Shared SocialExportMixin Contract]] - `references` [INFERRED]
+- [[SocialExportMixin_4]] - `references` [INFERRED]
 
 #graphify/document #graphify/INFERRED #community/Panduan_Pipeline_BeeSense

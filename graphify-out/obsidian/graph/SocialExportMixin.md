@@ -19,13 +19,11 @@ tags:
 - [[InstagramCrawler]] - `uses` [INFERRED]
 - [[InstagramSettings]] - `uses` [INFERRED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
-- [[RecordFactory Dataset BundleSink SocialExportMixin]] - `references` [EXTRACTED]
 - [[Requires config, include and exclude matchers; performs no acquisition.]] - `rationale_for` [EXTRACTED]
 - [[SessionInvalid]] - `uses` [INFERRED]
-- [[SocialCrawler]] - `uses` [INFERRED]
+- [[SocialExportMixin_5]] - `references` [EXTRACTED]
 - [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - `references` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[social_export.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

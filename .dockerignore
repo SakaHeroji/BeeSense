@@ -7,7 +7,9 @@
 !requirements/dashboard.txt
 !MachineLearning/
 !MachineLearning/__init__.py
+!MachineLearning/topic_narratives.py
 !MachineLearning/social_nlp.py
+!MachineLearning/source_roots.py
 !Dashboard/
 !Dashboard/__init__.py
 !Dashboard/app.py

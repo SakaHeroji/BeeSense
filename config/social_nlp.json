@@ -1,6 +1,6 @@
 {
-  "input_file": "outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx",
-  "output_dir": "outputs/nlp_20261030_instagram_500_topics20_gemini_02",
+  "input_file": "outputs/social_20261102_combined_twitter_01/social_data.xlsx",
+  "output_dir": "outputs/nlp_20261102_twitter_topics20_gemini_01",
   "target_topics": 20,
   "cache_dir": ".cache/social_nlp",
   "seed": 42,

@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Worker Reddrix"
-location: "L434"
+location: "L437"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,16 +12,11 @@ tags:
 # _config()
 
 ## Connections
-- [[.__init__()_27]] - `calls` [EXTRACTED]
-- [[Omitted retry setting defaults to zero]] - `implements` [INFERRED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[_configuration()]] - `calls` [EXTRACTED]
+- [[.__init__()_31]] - `calls` [EXTRACTED]
 - [[_keywords()]] - `calls` [EXTRACTED]
 - [[_number()]] - `calls` [EXTRACTED]
 - [[_url()]] - `calls` [EXTRACTED]
-- [[browser_configuration()]] - `calls` [EXTRACTED]
-- [[instaloader_options()]] - `calls` [EXTRACTED]
+- [[configuration()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
-- [[utc_datetime()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Reddrix

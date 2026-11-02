@@ -1,28 +1,21 @@
 ---
-source_file: "MachineLearning/social_nlp.py"
+source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
-location: "L2472"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L1230"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # main()
 
 ## Connections
-- [[._event()_1]] - `calls` [EXTRACTED]
-- [[.error()]] - `indirect_call` [INFERRED]
-- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
-- [[.explain_artifacts()]] - `calls` [EXTRACTED]
-- [[.fit_excel()]] - `calls` [EXTRACTED]
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[.prepare_excel()]] - `calls` [EXTRACTED]
-- [[.save()]] - `calls` [EXTRACTED]
-- [[.save_explanations()]] - `calls` [EXTRACTED]
-- [[SocialNLPClusterer]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[.close()_6]] - `calls` [EXTRACTED]
+- [[.plan()_5]] - `calls` [EXTRACTED]
+- [[.run()_4]] - `calls` [EXTRACTED]
+- [[TwitterCrawler]] - `calls` [EXTRACTED]
+- [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

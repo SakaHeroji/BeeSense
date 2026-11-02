@@ -2,7 +2,7 @@
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
 community: "Bukti Ekstraktif Topik"
-location: "L1323"
+location: "L1338"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

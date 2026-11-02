@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/INSTAGRAM_PIPELINE_20261030.md"
 type: "concept"
-community: "Audit Akuisisi Instagram"
+community: "Konteks dan Provenance Gemini"
 location: "## Model 30 Oktober terverifikasi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Audit_Akuisisi_Instagram
+  - community/Konteks_dan_Provenance_Gemini
 ---
 
 # Final audited33034-record Instagram-inclusive corpus
@@ -17,4 +17,4 @@ tags:
 - [[Verified20-topic Instagram-inclusive modelmacro c_v0.4315219014]] - `shares_data_with` [EXTRACTED]
 - [[merge_social_datasets.py]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Audit_Akuisisi_Instagram
+#graphify/concept #graphify/EXTRACTED #community/Konteks_dan_Provenance_Gemini

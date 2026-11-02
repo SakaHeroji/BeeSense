@@ -15,8 +15,6 @@ tags:
 - [[Cookie accepted for loginaccount read; trial02 firsthashtag LOGIN_REQUIRED]] - `references` [EXTRACTED]
 - [[Documented public hashtag probe fails upstream AttributeError withzero data]] - `conceptually_related_to` [EXTRACTED]
 - [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - `references` [EXTRACTED]
-- [[Historical Reddrix integration did not launch live acquisition]] - `semantically_similar_to` [INFERRED]
-- [[Historical SocialCrawler 1.5 browser integration; superseded default in 1.6]] - `references` [EXTRACTED]
 - [[Historical initial password rejection and trial01 LOGIN_REQUIREDzero]] - `rationale_for` [EXTRACTED]
 - [[Historical real-cookie header-patch validation fails SDKAttributeError]] - `rationale_for` [EXTRACTED]
 - [[Instaloader preflight fails before discovery;zero acquired data]] - `rationale_for` [EXTRACTED]

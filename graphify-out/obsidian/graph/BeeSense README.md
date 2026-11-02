@@ -1,30 +1,23 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "Integrasi Default Instaloader"
+community: "Operasi dan Verifikasi BeeSense"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Integrasi_Default_Instaloader
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # BeeSense README
 
 ## Connections
-- [[Artifact checksum, Git allowlist and CI gates]] - `references` [EXTRACTED]
-- [[Dashboardtraining dependency isolation]] - `references` [EXTRACTED]
-- [[Gemini topic narrative artifacts]] - `references` [EXTRACTED]
-- [[Historical29October campaign PARTIAL outcome]] - `references` [EXTRACTED]
-- [[InstaloaderCrawler_1]] - `references` [EXTRACTED]
-- [[InstaloaderCrawler guide and evidence]] - `references` [EXTRACTED]
-- [[Published30October active corpus and20-topic snapshot]] - `references` [EXTRACTED]
-- [[PyArrow 24.0.0 runtime compatibility pin]] - `references` [EXTRACTED]
-- [[README historical dashboard Docker verification]] - `references` [EXTRACTED]
-- [[Retained historical workbooks and NLP snapshots]] - `references` [EXTRACTED]
-- [[SBERTUMAPDBSCAN training and verified embedding reuse]] - `references` [EXTRACTED]
-- [[Separated crawler, NLP and dashboard architecture]] - `references` [EXTRACTED]
-- [[SocialCrawler 1.6.0 default Instaloader integration]] - `references` [EXTRACTED]
-- [[SocialCrawler guide]] - `references` [EXTRACTED]
-- [[Streamlit Community Cloud deployment contract]] - `references` [EXTRACTED]
+- [[Active Twitter NLP snapshot]] - `references` [EXTRACTED]
+- [[Active four platform dataset]] - `references` [EXTRACTED]
+- [[Dashboard runtime dependency separation]] - `references` [EXTRACTED]
+- [[GitHub Actions validation]] - `references` [EXTRACTED]
+- [[Historical dashboard Docker verification]] - `references` [EXTRACTED]
+- [[PyArrow 24 compatibility pin]] - `references` [EXTRACTED]
+- [[SocialCrawler_2]] - `references` [EXTRACTED]
+- [[streamlit_apps.py_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader
+#graphify/document #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

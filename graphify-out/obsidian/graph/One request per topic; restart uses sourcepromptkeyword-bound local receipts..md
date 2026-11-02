@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/topic_narratives.py"
 type: "rationale"
-community: "Generator Narasi Gemini"
+community: "Akuisisi YouTube"
 location: "L326"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Generator_Narasi_Gemini
+  - community/Akuisisi_YouTube
 ---
 
 # One request per topic; restart uses source/prompt/keyword-bound local receipts.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[generate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Generator_Narasi_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube

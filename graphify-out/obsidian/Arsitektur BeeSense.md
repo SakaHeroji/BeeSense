@@ -5,6 +5,9 @@ tags: [beesense, crawler, nlp, streamlit]
 
 # Arsitektur BeeSense
 
+Snapshot aktif 2 November: **34.764 record unik, 20 topik, mean c_v 0.424321**, dengan CSV Gemini/Excel dan dukungan X. Rincian: [[Twitter 20 Topik 20261102]]. Bagian bertanggal sebelumnya di bawah adalah riwayat.
+
+
 SocialCrawler → Excel → SocialNLPClusterer → artifact terverifikasi → SocialNLPStreamlitApp.
 
 [[InstagramCrawler instagrapi]] kini terintegrasi ke SocialCrawler 1.5 melalui worker
@@ -12,13 +15,13 @@ Chrome/login manual atau instagrapi opsional. InstagramAdapter memakai kontrak b
 SocialExportMixin menyediakan seleksi root/Excel. Preset tiga jam hanya mengambil
 Instagram, kemudian dataset 27–30 Oktober dideduplikasi berdasarkan ID native dan
 model 20 topik/c_v ≥0,4 dilatih ulang. Statistik/penjelasan/dashboard mendukung tiga
-platform. Snapshot aktif sudah beralih ke model 30 Oktober yang lolos gate; frontend REST masih simulasi.
+platform. Snapshot periode tersebut memakai model 30 Oktober yang lolos gate; frontend REST masih simulasi.
 
-[[Frontend React Crawler]] menambahkan workspace React terpisah di `Crawler/Frontend`, berdasarkan [[PRD Frontend Crawler]]. Typed adapter memisahkan demo sintetis dari API/worker yang masih perlu diimplementasikan; aplikasi React tidak menjalankan crawler dari tab. UI mencakup tujuh sumber (YouTube, Reddit, Instagram, TikTok, Threads, Facebook, X/Twitter), dengan capability gating untuk lima adapter baru yang belum diimplementasikan. Survei memakai kontrak baru, sementara alur workbook sosial dan Dashboard Streamlit tetap terpisah.
+[[Frontend React Crawler]] menambahkan workspace React terpisah di `Crawler/Frontend`, berdasarkan [[PRD Frontend Crawler]]. Typed adapter memisahkan demo sintetis dari API/worker yang masih perlu diimplementasikan; aplikasi React tidak menjalankan crawler dari tab. UI mencakup tujuh sumber (YouTube, Reddit, Instagram, TikTok, Threads, Facebook, X/Twitter), dengan capability gating pada UI simulasi; API penghubung frontend ke crawler masih perlu diimplementasikan. Survei memakai kontrak baru, sementara alur workbook sosial dan Dashboard Streamlit tetap terpisah.
 
 [[Crawler Selenium|SocialCrawlerSelenium]] menyediakan pengambilan Chrome melalui Selenium untuk kedua platform, dengan filter dan exporter SocialCrawler yang sama.
 
-- [SocialCrawler](../../Crawler/Backend/social_crawler.py) 1.4.0 memakai YouTube yt-dlp dan Reddit Reddrix secara default, dalam satu config/social_crawler.json untuk rentang tanggal, jeda, keyword serta batas post/komentar. Worker/normalisasi/display Reddrix berada di file utama, dengan wrapper Reddit-only yang tetap tersedia.
+- [SocialCrawler](../../Crawler/Backend/social_crawler.py) 1.7.0 mendukung YouTube yt-dlp, Reddit Reddrix, Instagram Instaloader dan X Scweet; preset utama tetap YouTube/Reddit, dalam satu config/social_crawler.json untuk rentang tanggal, jeda, keyword serta batas post/komentar. Worker/normalisasi/display Reddrix berada di file utama, dengan wrapper Reddit-only yang tetap tersedia.
 - [SocialNLPClusterer](../../MachineLearning/social_nlp.py) memisahkan preparasi kalimat, embedding SBERT native multilingual, UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot menjadi 20 topik, c-TF-IDF, evaluasi coherence c_v, graf dan persistensi. Tidak mengimpor Streamlit.
 - [SocialNLPStreamlitApp](../../Dashboard/app.py) membaca hasil tersimpan. Lima tampilan: ringkasan, peta topik, penjelasan topik, kalimat/sumber dan metode/data. UI tidak training saat rerun.
 - MMR memilih bukti kalimat beragam. Theil–Sen/Kendall dan dua jendela waktu menyusun arah deskriptif dengan pemeriksaan sumber/platform/dukungan. Ini bukan sebab, ramalan atau tren populasi.
@@ -30,7 +33,7 @@ Kutipan sumber EXTRACTED; interpretasi pola dan edge cosine INFERRED. Lihat [met
 
 Metodologi lengkap, parameter dan pemilihan algoritma: [[Metodologi Machine Learning Social NLP]].
 
-Run aktif `outputs/nlp_20261030_instagram_topics20_02`: 20 topik, c_v 0,4315, dataset 33.034 record unik danCSV Gemini 20 topik. Source/nativeID/checksum sudah diverifikasi. Snapshot29 Oktober tetap dipertahankan sebagai arsip.
+Run pada periode tersebut `outputs/nlp_20261030_instagram_topics20_02`: 20 topik, c_v 0,4315, dataset 33.034 record unik danCSV Gemini 20 topik. Source/nativeID/checksum sudah diverifikasi. Snapshot29 Oktober tetap dipertahankan sebagai arsip.
 
 [[Crawling 1000 Post Baru]] memakai scheduler round robin dengan satu deadline, indeks ID post historis read-only dan penantian CAPTCHA manual. Ekspor baru tetap memakai kontrak delapan sheet serta workbook ringkas; crawler host tidak mengubah artifact dashboard aktif.
 

@@ -30,7 +30,7 @@ from Crawler.Backend.social_export import (
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-VERSION = "1.0.1"
+VERSION = "1.1.0"
 METHOD = "scweet_saved_web_session"
 NAMESPACE = "x_post"
 BARRIERS = {"RATE_LIMITED", "LOGIN_REQUIRED", "ACCESS_BLOCKED", "CHALLENGE_REQUIRED"}
@@ -235,7 +235,7 @@ def configuration(value):
         ("min_posts", 1, 10000),
         ("max_posts", 1, 10000),
         ("max_comments", 0, 100),
-        ("search_results", 1, 100),
+        ("search_results", 1, 500),
         ("search_window_days", 1, 365),
         ("max_searches", 1, 1000),
     ):
@@ -628,12 +628,162 @@ def worker_main(options, pipe):
         pipe.close()
 
 
+def search_targets(config):
+    """Bounded newest-first date windows, shared by both entry points."""
+    p = config["platforms"]["twitter"]
+    start, end = (contract.utc_datetime(config[key]) for key in ("since", "until"))
+    emitted = 0
+    while end > start:
+        lower = max(start, end - timedelta(days=p["search_window_days"]))
+        upper_date = (
+            (end + timedelta(days=end.time().isoformat() != "00:00:00"))
+            .date()
+            .isoformat()
+        )
+        for query in p["queries"]:
+            if emitted >= p["max_searches"]:
+                return
+            emitted += 1
+            yield dict(
+                query=query,
+                since=lower.date().isoformat(),
+                until=upper_date,
+                lang=p["lang"],
+                display_type="Latest",
+                tweet_type="originals_only",
+                limit=p["search_results"],
+            )
+        end = lower
+
+
+class TwitterAdapter:
+    """Use the shared record contract without changing native X identity."""
+
+    def __init__(self, factory, dataset):
+        self.factory, self.dataset = factory, dataset
+        self.seen = set()
+
+    def accept(self, kind, item, url, origin):
+        root = native_id(post_url(url).rsplit("/", 1)[1])
+        raw = normalize_item(item, root_id=root, discovered_from=origin)
+        key = object_key(raw.native_id)
+        if key in self.seen:
+            return
+        if raw.object_type == "post" and (
+            item.get("is_retweet") or item.get("in_reply_to_tweet_id")
+        ):
+            return
+        self.dataset.add_content(
+            raw,
+            [
+                (key, item.get(key), "count")
+                for key in (
+                    "likes",
+                    "comments",
+                    "retweets",
+                    "views",
+                    "quotes",
+                    "bookmarks",
+                )
+            ],
+        )
+        self.seen.add(key)
+
+
+class TwitterCoordinatorWorker:
+    """Adapt a persistent Scweet worker to SocialCrawler's five-argument protocol."""
+
+    def __init__(self, options, *, worker=None, monotonic=time.monotonic):
+        self.worker = worker or ScweetWorker(options)
+        self.clock = monotonic
+        self.reply_threads = set()
+
+    def _wants_replies(self, ident, item, settings):
+        return bool(
+            settings.max_comments
+            and item.get("comments", 0) > 0
+            and (
+                ident in self.reply_threads
+                or len(self.reply_threads) < settings.max_comment_threads
+            )
+        )
+
+    def requires_network(self, operation, target, settings, cached):
+        return (
+            operation == "search"
+            or cached is None
+            or self._wants_replies(target.rsplit("/", 1)[-1], cached, settings)
+        )
+
+    def __call__(self, operation, target, settings, seconds, emit):
+        deadline = self.clock() + seconds
+        if operation == "search":
+
+            def candidate(item):
+                if not item.get("in_reply_to_tweet_id") and not item.get("is_retweet"):
+                    try:
+                        raw = normalize_item(item)
+                    except (ValueError, TypeError, KeyError, AttributeError):
+                        return
+                    emit(
+                        "candidate",
+                        dict(
+                            url=raw.canonical_url,
+                            discovered_from=target.get("query"),
+                            cached_root=item,
+                        ),
+                    )
+
+            result = self.worker("search", target, seconds, candidate)
+        else:
+            roots = []
+            if target.get("cached_root") is not None:
+                roots.append(target["cached_root"])
+                result = dict(
+                    status="FINISHED_BEST_EFFORT",
+                    reason="cached_search_root",
+                    warnings=[],
+                )
+            else:
+                result = self.worker(
+                    "lookup", {"tweet_id": target["tweet_id"]}, seconds, roots.append
+                )
+            for item in roots:
+                if str(item.get("tweet_id")) != target["tweet_id"]:
+                    continue
+                emit("record", item)
+                if (
+                    self._wants_replies(target["tweet_id"], item, settings)
+                    and result["status"] == "FINISHED_BEST_EFFORT"
+                ):
+                    remaining = deadline - self.clock()
+                    if remaining <= 0:
+                        return dict(
+                            status="TIMEOUT",
+                            reason="twitter_replies_deadline",
+                            warnings=[],
+                        )
+                    self.reply_threads.add(target["tweet_id"])
+                    result = self.worker(
+                        "replies",
+                        dict(tweet_id=target["tweet_id"], limit=settings.max_comments),
+                        remaining,
+                        lambda row: emit("record", row),
+                    )
+        return {**result, "source_version": upstream_version()}
+
+    def close(self):
+        self.worker.close()
+
+
 class ScweetWorker:
     def __init__(self, options, *, target=worker_main):
         self.options, self.target = options, target
         self.process = self.pipe = None
 
     def __call__(self, operation, target, seconds, emit):
+        if self.process is not None and not self.process.is_alive():
+            self.close()
         if self.process is None:
             context = mp.get_context("spawn")
             self.pipe, child = context.Pipe()
@@ -709,7 +859,7 @@ class TwitterCrawler(SocialExportMixin):
             platform_scope="twitter_only",
             live_access_verified=False,
             trial_passed=False,
-            integrated_into_social_crawler=False,
+            integrated_into_social_crawler=True,
             date_scope="root_publication;until_exclusive",
             comments_complete=False,
             primary_output=dict(
@@ -744,33 +894,7 @@ class TwitterCrawler(SocialExportMixin):
         return keys, sources
 
     def _searches(self):
-        p = self.config["platforms"]["twitter"]
-        start, end = (
-            contract.utc_datetime(self.config["since"]),
-            contract.utc_datetime(self.config["until"]),
-        )
-        emitted = 0
-        while end > start:
-            lower = max(start, end - timedelta(days=p["search_window_days"]))
-            # Date-only search bounds enclose the precise local timestamp window.
-            upper_date = (
-                (end + timedelta(days=bool(end.time().isoformat() != "00:00:00")))
-                .date()
-                .isoformat()
-            )
-            for query in p["queries"]:
-                if emitted >= p["max_searches"]:
-                    return
-                emitted += 1
-                yield dict(
-                    query=query,
-                    since=lower.date().isoformat(),
-                    until=upper_date,
-                    lang=p["lang"],
-                    display_type="Latest",
-                    limit=p["search_results"],
-                )
-            end = lower
+        return search_targets(self.config)
 
     def close(self):
         if not self.synthetic:
@@ -1027,7 +1151,7 @@ class TwitterCrawler(SocialExportMixin):
                 ),
                 synthetic=self.synthetic,
                 interrupted=interrupted,
-                integrated_into_social_crawler=False,
+                integrated_into_social_crawler=True,
                 run_id=run_id,
                 output_dir=str(output),
                 primary_file=str(output / COMPACT_FILE),

@@ -1,17 +1,16 @@
 ---
 source_file: "requirements/twitter.txt"
 type: "concept"
-community: "Akuisisi X dan Ekspor Scweet"
+community: "Integrasi X dan Provenans Akuisisi"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Akuisisi_X_dan_Ekspor_Scweet
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Scweet 5.8.2
 
 ## Connections
 - [[Image Twitter Python 3.12 UID 10001]] - `references` [EXTRACTED]
-- [[TwitterCrawler mandiri]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Akuisisi_X_dan_Ekspor_Scweet
+#graphify/concept #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
