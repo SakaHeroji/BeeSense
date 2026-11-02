@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Koordinator Backend Sosial"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L809"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Koordinator_Backend_Sosial
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # SocialCrawler
@@ -73,6 +73,7 @@ tags:
 - [[Clock_1]] - `uses` [INFERRED]
 - [[Compose platform workers with one configuration, scheduler and export bundle.]] - `rationale_for` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
+- [[CrawlerBackendsocial_crawler.py]] - `references` [EXTRACTED]
 - [[FakeClient]] - `uses` [INFERRED]
 - [[FakeReddrix]] - `uses` [INFERRED]
 - [[FixtureReddrix]] - `uses` [INFERRED]
@@ -110,4 +111,4 @@ tags:
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 - [[test_twitter_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

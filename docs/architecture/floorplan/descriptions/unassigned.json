@@ -1,0 +1,8 @@
+{
+  "files": {
+    "requirements.txt": {
+      "name": "Kebutuhan dashboard online",
+      "description": "Memasang kebutuhan dashboard yang ringan tanpa menarik paket crawling atau pelatihan."
+    }
+  }
+}

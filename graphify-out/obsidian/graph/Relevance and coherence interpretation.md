@@ -11,7 +11,6 @@ tags:
 # Relevance and coherence interpretation
 
 ## Connections
-- [[Cara kerja BeeSense]] - `references` [EXTRACTED]
 - [[Filtered clustering 20 topics, mean c_v 0.4733391691]] - `conceptually_related_to` [EXTRACTED]
 - [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 

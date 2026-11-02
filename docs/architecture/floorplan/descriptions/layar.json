@@ -1,0 +1,56 @@
+{
+  "files": {
+    "Crawler/Frontend/.env.demo": {
+      "name": "Mode contoh untuk demonstrasi",
+      "description": "Memilih penghubung simulasi ketika layar dibangun untuk demonstrasi."
+    },
+    "Crawler/Frontend/.env.development": {
+      "name": "Mode contoh saat pengembangan",
+      "description": "Memilih penghubung simulasi ketika layar dicoba di komputer pengembang."
+    },
+    "Crawler/Frontend/.env.example": {
+      "name": "Contoh pengaturan koneksi layar",
+      "description": "Menunjukkan pengaturan mode, proyek, dan alamat server tanpa menyimpan kredensial."
+    },
+    "Crawler/Frontend/.prettierrc.json": {
+      "name": "Gaya penulisan layar",
+      "description": "Menyamakan bentuk penulisan kode tampilan agar perubahan mudah dibaca."
+    },
+    "Crawler/Frontend/Dockerfile": {
+      "name": "Paket penayangan layar crawler",
+      "description": "Membangun layar crawler dan menyiapkannya untuk ditayangkan sebagai halaman web."
+    },
+    "Crawler/Frontend/eslint.config.js": {
+      "name": "Pemeriksa aturan kode layar",
+      "description": "Menentukan pemeriksaan otomatis untuk menemukan kesalahan pada kode tampilan."
+    },
+    "Crawler/Frontend/index.html": {
+      "name": "Halaman awal crawler",
+      "description": "Menyediakan halaman browser tempat layar crawler dimuat."
+    },
+    "Crawler/Frontend/nginx.conf": {
+      "name": "Pengarah halaman crawler",
+      "description": "Melayani berkas tampilan dan mengarahkan alamat halaman kembali ke aplikasi crawler."
+    },
+    "Crawler/Frontend/package.json": {
+      "name": "Kebutuhan dan perintah layar",
+      "description": "Mencatat paket serta perintah untuk menjalankan, memeriksa, menguji, dan membangun layar crawler."
+    },
+    "Crawler/Frontend/src/styles.css": {
+      "name": "Tampilan putih dan oranye",
+      "description": "Mengatur warna, ukuran tulisan, jarak, serta penyesuaian halaman untuk berbagai ukuran layar."
+    },
+    "Crawler/Frontend/tsconfig.json": {
+      "name": "Aturan pemeriksaan tipe layar",
+      "description": "Menentukan cara memeriksa kesesuaian bentuk data sebelum layar dibangun."
+    },
+    "Crawler/Frontend/vite.config.ts": {
+      "name": "Pengaturan pembangunan layar",
+      "description": "Menentukan cara menjalankan dan membangun berkas tampilan crawler."
+    },
+    "Crawler/Frontend/vitest.config.ts": {
+      "name": "Pengaturan uji halaman",
+      "description": "Menyiapkan lingkungan pengujian untuk mencoba perilaku layar crawler."
+    }
+  }
+}

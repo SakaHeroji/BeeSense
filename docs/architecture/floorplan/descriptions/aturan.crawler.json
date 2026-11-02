@@ -1,0 +1,40 @@
+{
+  "files": {
+    "config/instagram_browser_crawler.json": {
+      "name": "Pengaturan Instagram lewat browser",
+      "description": "Memilih pengambilan lewat Chrome beserta profil lokal, jeda, dan batas percobaannya."
+    },
+    "config/instagram_crawler.json": {
+      "name": "Pengaturan Instagram terdahulu",
+      "description": "Mempertahankan pengaturan percobaan instagrapi beserta lokasi sesi dan hasilnya."
+    },
+    "config/instaloader_crawler.json": {
+      "name": "Pengaturan Instagram utama",
+      "description": "Menentukan sesi, sumber pencarian, jeda, dan lokasi hasil untuk pengambil Instagram utama."
+    },
+    "config/reddit_crawler.json": {
+      "name": "Percobaan Reddit mandiri",
+      "description": "Menentukan pencarian, jeda, hasil, dan batas percobaan untuk menjalankan sumber Reddit saja."
+    },
+    "config/social_crawler_instagram_3h.json": {
+      "name": "Rencana Instagram tiga jam",
+      "description": "Menjalankan Instagram saja dengan target seribu post serta batas waktu dan jeda yang ditentukan."
+    },
+    "config/social_crawler_instagram_resume_20261030.json": {
+      "name": "Rencana melanjutkan Instagram",
+      "description": "Menyimpan pengaturan lanjutan pengambilan Instagram dengan tetap menghindari post yang sudah tersimpan."
+    },
+    "config/social_crawler_twitter_3h.json": {
+      "name": "Rencana X tiga jam",
+      "description": "Menjalankan X saja melalui crawler gabungan dengan target seribu post dan batas waktu tiga jam."
+    },
+    "config/social_crawler.json": {
+      "name": "Pengaturan crawler gabungan",
+      "description": "Menetapkan keyword, sumber aktif, jeda, batas waktu, dan pengecualian record untuk crawler gabungan."
+    },
+    "config/twitter_crawler.json": {
+      "name": "Percobaan X mandiri",
+      "description": "Menyimpan pengaturan pencarian dan sesi lokal untuk mencoba crawler X secara terpisah."
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-11-02T07:49:49.750939+00:00",
+  "tasks": [
+    {
+      "title": "Alur lengkap sampai dashboard",
+      "request": "Lengkapi crawler sosial media dan tampilkan flow clustering sebelum serta setelah penyaringan.",
+      "summary": "Peta kini menampilkan tujuh platform beserta statusnya, pengolahan berkas, dua jalur clustering terperinci, Gemini dan pemilihan snapshot dashboard. Ini pembaruan dokumentasi; kode aplikasi dan model tidak dijalankan ulang.",
+      "items": [
+        {
+          "ref": "ambil",
+          "change": "changed",
+          "note": "Ketujuh platform diberi kartu dan status agar kemampuan backend terlihat."
+        },
+        {
+          "ref": "data",
+          "change": "new",
+          "note": "Tahap Excel, dedup ID, dan persiapan kalimat kini disambungkan ke kedua cabang."
+        },
+        {
+          "ref": "sebelum",
+          "change": "new",
+          "note": "Jalur tanpa mask diperinci dari SBERT hingga 20 topik dan evaluasi."
+        },
+        {
+          "ref": "relevansi",
+          "change": "new",
+          "note": "Keputusan relevansi dan konteks sumber dijelaskan sebelum clustering subset."
+        },
+        {
+          "ref": "setelah",
+          "change": "new",
+          "note": "Jalur subset relevan mempunyai tahap UMAP, DBSCAN, Ward dan gate tersendiri."
+        },
+        {
+          "ref": "berkas",
+          "change": "changed",
+          "note": "Dua snapshot, CSV Gemini dan checksum ditunjukkan sebagai keluaran nyata."
+        },
+        {
+          "ref": "dashboard",
+          "change": "changed",
+          "note": "Radio pemilihan hasil disambungkan ke dua bundle tersimpan."
+        }
+      ]
+    }
+  ]
+}

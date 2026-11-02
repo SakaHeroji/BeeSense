@@ -1,0 +1,8 @@
+{
+  "files": {
+    "Crawler/Backend/twitter_crawler.py": {
+      "name": "Pengambil post dan balasan X",
+      "description": "Mengambil percakapan X memakai sesi lokal, membatasi permintaan, dan menyimpan identitas serta hubungan balasannya."
+    }
+  }
+}

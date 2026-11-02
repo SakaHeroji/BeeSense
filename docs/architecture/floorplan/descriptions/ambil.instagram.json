@@ -1,0 +1,24 @@
+{
+  "files": {
+    "Crawler/Backend/instagram_browser_capture.mjs": {
+      "name": "Pembaca halaman Instagram",
+      "description": "Membaca isi post yang terlihat pada dokumen halaman dan mengenali tanda pembatasan atau verifikasi akses."
+    },
+    "Crawler/Backend/instagram_browser.py": {
+      "name": "Pengambil Instagram lewat Chrome",
+      "description": "Mengambil dokumen halaman menggunakan profil browser tersimpan dan memberi ruang untuk login manual."
+    },
+    "Crawler/Backend/instagram_crawler.py": {
+      "name": "Pilihan Instagram terdahulu",
+      "description": "Menyediakan jalur pengambilan melalui instagrapi serta pengaturan sesi dan ekspor yang dipakai bersama."
+    },
+    "Crawler/Backend/instaloader_browser_patch.py": {
+      "name": "Penyesuai permintaan Instagram",
+      "description": "Menyesuaikan permintaan daftar post mengikuti format web Instagram untuk sesi pengambilan yang sedang berjalan."
+    },
+    "Crawler/Backend/instaloader_crawler.py": {
+      "name": "Pengambil Instagram utama",
+      "description": "Mengambil post dan komentar Instagram, memantau batas akses, dan menyimpan hasil dengan format Excel bersama."
+    }
+  }
+}

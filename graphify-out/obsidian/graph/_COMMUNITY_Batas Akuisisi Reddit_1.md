@@ -35,9 +35,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 7 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
 
 ## Top bridge nodes
 - [[Thin Reddit-only wrapper selects shared Reddrix explicitly]] - degree 3, connects to 2 communities

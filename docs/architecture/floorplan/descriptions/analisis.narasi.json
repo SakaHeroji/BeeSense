@@ -1,0 +1,8 @@
+{
+  "files": {
+    "MachineLearning/topic_narratives.py": {
+      "name": "Perangkai deskripsi Gemini",
+      "description": "Meminta kalimat topik dan deskripsi dari Gemini berdasarkan keyword serta kalimat contoh, lalu memeriksa hasilnya."
+    }
+  }
+}

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Worker Reddrix"
+community: "Pengujian Koordinator Crawler"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Pengujian_Koordinator_Crawler
 ---
 
 # test_social_crawler_reddrix.py
@@ -30,4 +30,4 @@ tags:
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[yt_events()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

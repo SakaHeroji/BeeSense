@@ -23,6 +23,7 @@ tags:
 - [[.make()]] - `calls` [EXTRACTED]
 - [[.test_weak_short_match_requires_context()]] - `calls` [EXTRACTED]
 - [[Classify target sentences; parent context may rescue only ambiguous text.      U]] - `rationale_for` [EXTRACTED]
+- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)_1]] - `references` [EXTRACTED]
 - [[LocalSemanticBackend]] - `uses` [INFERRED]
 - [[RelevanceTests]] - `uses` [INFERRED]
 - [[SocialNLPClusterer_2]] - `uses` [INFERRED]

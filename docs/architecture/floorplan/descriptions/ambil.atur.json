@@ -1,0 +1,8 @@
+{
+  "files": {
+    "Crawler/Backend/social_crawler.py": {
+      "name": "Pengatur crawling empat sumber",
+      "description": "Membagi pengambilan YouTube, Reddit, Instagram, dan X dengan batas waktu, jeda, serta format hasil yang sama."
+    }
+  }
+}

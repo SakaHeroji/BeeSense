@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Kontrak Record Reddit"
+community: "Pengambilan HTML Reddit"
 location: "L616"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # _integer()
@@ -16,4 +16,4 @@ tags:
 - [[_configuration()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

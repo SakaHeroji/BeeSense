@@ -1,0 +1,8 @@
+{
+  "files": {
+    "MachineLearning/social_nlp.py": {
+      "name": "Pengolah kalimat menjadi topik",
+      "description": "Menyiapkan kalimat, membentuk kelompok topik, menilai coherence, dan menyimpan hasil yang dapat diperiksa kembali."
+    }
+  }
+}

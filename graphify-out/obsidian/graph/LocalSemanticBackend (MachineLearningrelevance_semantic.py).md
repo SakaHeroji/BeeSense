@@ -11,7 +11,6 @@ tags:
 # LocalSemanticBackend (MachineLearning/relevance_semantic.py)
 
 ## Connections
-- [[Cara kerja BeeSense]] - `references` [EXTRACTED]
 - [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)]] - `references` [EXTRACTED]
 - [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
 - [[Semantic-reference relevance classification]] - `implements` [EXTRACTED]

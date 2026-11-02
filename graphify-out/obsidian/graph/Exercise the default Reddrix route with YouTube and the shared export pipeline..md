@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "rationale"
-community: "Worker Reddrix"
+community: "Pengujian Koordinator Crawler"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Pengujian_Koordinator_Crawler
 ---
 
 # Exercise the default Reddrix route with YouTube and the shared export pipeline.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_social_crawler_reddrix.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

@@ -1,0 +1,12 @@
+{
+  "files": {
+    ".devcontainer/devcontainer.json": {
+      "name": "Lingkungan kerja pengembang",
+      "description": "Menyiapkan lingkungan pengembangan yang bisa dibuka ulang dengan pengaturan yang sama."
+    },
+    ".streamlit/config.toml": {
+      "name": "Pengaturan tampilan Streamlit",
+      "description": "Menentukan tema dan perilaku dasar dashboard saat dibuka lokal maupun online."
+    }
+  }
+}

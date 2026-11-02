@@ -1,0 +1,120 @@
+{
+  "files": {
+    "Crawler/Backend/Reddit/browser_campaign_detail.test.mjs": {
+      "name": "Uji pembacaan detail Reddit",
+      "description": "Memeriksa pengenalan kendala akses dan waktu tunggu saat membaca detail thread."
+    },
+    "Crawler/Backend/Reddit/browser_campaign.test.mjs": {
+      "name": "Uji pemilihan calon thread",
+      "description": "Memeriksa penggabungan calon thread dan pemilihan rentang waktu pencarian."
+    },
+    "Crawler/Backend/Reddit/public_web_post.test.mjs": {
+      "name": "Uji kutipan post publik",
+      "description": "Memeriksa perubahan kutipan halaman publik menjadi catatan post yang terstruktur."
+    },
+    "Crawler/Backend/Reddit/test_crawl_reddit_playwright.py": {
+      "name": "Uji lanjutan pengambilan Reddit",
+      "description": "Memeriksa kelanjutan pekerjaan browser serta penyimpanan bukti dan batas akses."
+    },
+    "Crawler/Frontend/src/test/api.test.ts": {
+      "name": "Uji koneksi layar crawler",
+      "description": "Memeriksa penanganan permintaan dan kesalahan saat layar berhubungan dengan server."
+    },
+    "Crawler/Frontend/src/test/domain.test.ts": {
+      "name": "Uji aturan masukan layar",
+      "description": "Memeriksa tautan, sumber, konfigurasi, dan contoh data sebelum dipakai halaman crawler."
+    },
+    "Crawler/Frontend/src/test/setup.ts": {
+      "name": "Uji persiapan layar contoh",
+      "description": "Menyiapkan fasilitas browser contoh untuk menjalankan pemeriksaan tampilan."
+    },
+    "Crawler/Frontend/src/test/workflows.test.tsx": {
+      "name": "Uji alur kerja layar crawler",
+      "description": "Mencoba langkah pengguna pada halaman crawler, termasuk peninjauan masukan dan perpindahan tampilan."
+    },
+    "tests/cloud/test_dashboard_runtime.py": {
+      "name": "Uji dashboard tanpa pelatihan",
+      "description": "Membuka semua tampilan dashboard dengan kebutuhan Cloud minimal sambil melarang training dan panggilan Gemini."
+    },
+    "tests/cloud/test_relevance_runtime.py": {
+      "name": "Uji pembanding sebelum dan sesudah",
+      "description": "Memastikan radio pembandingan bekerja di Cloud tanpa bergantung pada pengaturan lingkungan lokal."
+    },
+    "tests/crawler/test_instagram_browser.py": {
+      "name": "Uji pembacaan Instagram di Chrome",
+      "description": "Memeriksa pengambilan halaman, identitas post, dan asal bukti tanpa login Instagram nyata."
+    },
+    "tests/crawler/test_instagram_crawler.py": {
+      "name": "Uji Instagram terdahulu",
+      "description": "Memeriksa sesi, batas waktu, hasil, dan penyimpanan crawler Instagram dengan contoh terkontrol."
+    },
+    "tests/crawler/test_instaloader_browser_patch.py": {
+      "name": "Uji penyesuaian permintaan Instagram",
+      "description": "Memeriksa format permintaan web Instagram tanpa mengirim permintaan ke layanan aslinya."
+    },
+    "tests/crawler/test_instaloader_crawler.py": {
+      "name": "Uji pengambil Instagram utama",
+      "description": "Memeriksa pengambilan, kendala akses, batas waktu, dan hasil pengambil Instagram utama."
+    },
+    "tests/crawler/test_reddit_crawler.py": {
+      "name": "Uji pengambil Reddit mandiri",
+      "description": "Memeriksa pemetaan isi Reddit serta identitas record dan format ekspor bersama."
+    },
+    "tests/crawler/test_social_crawler_instagram.py": {
+      "name": "Uji Instagram dalam crawler gabungan",
+      "description": "Memeriksa bahwa bagian Instagram mengikuti penjadwalan dan penyimpanan crawler gabungan."
+    },
+    "tests/crawler/test_social_crawler_reddrix.py": {
+      "name": "Uji Reddit dalam crawler gabungan",
+      "description": "Memeriksa jalur Reddit utama bersama YouTube dengan pengaturan dan penyimpanan yang sama."
+    },
+    "tests/crawler/test_social_crawler_selenium.py": {
+      "name": "Uji crawler alternatif lewat browser",
+      "description": "Memeriksa hasil dan batas proses crawler browser serta menyediakan percobaan halaman lokal terpilih."
+    },
+    "tests/crawler/test_social_crawler.py": {
+      "name": "Uji pengatur crawling",
+      "description": "Memeriksa pembagian pekerjaan, jeda, batas waktu, pengecualian post lama, dan hasil gabungan."
+    },
+    "tests/crawler/test_twitter_crawler.py": {
+      "name": "Uji post dan balasan X",
+      "description": "Memeriksa identitas percakapan, sesi, batas akses, serta format hasil X tanpa kredensial nyata."
+    },
+    "tests/nlp/test_context_relevance.py": {
+      "name": "Uji penyaringan sesuai konteks",
+      "description": "Memeriksa keputusan relevansi, keutuhan audit, dan pencegahan keputusan dataset lain terpakai pada konfigurasi baru."
+    },
+    "tests/nlp/test_dashboard_analysis.py": {
+      "name": "Uji hitungan dan pembandingan dashboard",
+      "description": "Memeriksa perhitungan volume, platform, grafik, dan pengaturan pembandingan hasil."
+    },
+    "tests/nlp/test_dashboard_data_verifier.py": {
+      "name": "Uji kelengkapan paket publikasi",
+      "description": "Memastikan sumber, keputusan relevansi, dan model terbitan cocok serta menolak berkas yang berubah."
+    },
+    "tests/nlp/test_dataset_merge.py": {
+      "name": "Uji penggabungan tanpa ID ganda",
+      "description": "Memeriksa deduplikasi, asal record, serta hubungan post dan balasan pada workbook gabungan."
+    },
+    "tests/nlp/test_social_nlp.py": {
+      "name": "Uji pengelompokan kalimat",
+      "description": "Memeriksa persiapan kalimat, pengelompokan, penilaian, penyimpanan model, dan pembacaan kembali hasil."
+    },
+    "tests/nlp/test_streamlit_app.py": {
+      "name": "Uji tampilan dan filter Streamlit",
+      "description": "Mencoba halaman serta filter dashboard dengan hasil contoh tanpa menjalankan pengambilan baru."
+    },
+    "tests/nlp/test_topic_explanations.py": {
+      "name": "Uji penjelasan berbasis bukti",
+      "description": "Memeriksa tren, dukungan sumber, dan pemilihan contoh kalimat agar penjelasan tidak melampaui buktinya."
+    },
+    "tests/nlp/test_topic_narratives.py": {
+      "name": "Uji deskripsi Gemini tersimpan",
+      "description": "Memeriksa format narasi, bukti masukan, pemakaian ulang respons, dan penambahan narasi tanpa mengubah model."
+    },
+    "tests/nlp/test_topic_sentence_export.py": {
+      "name": "Uji Excel kalimat per topik",
+      "description": "Memeriksa bahwa kalimat yang diekspor sesuai keanggotaan topik dan isi asli sumber."
+    }
+  }
+}

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pengujian Parser Reddit"
+community: "Parsing Identitas Reddit"
 location: "L689"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Parser_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # assert_accessible()
@@ -19,4 +19,4 @@ tags:
 - [[rendered_text()]] - `calls` [EXTRACTED]
 - [[walk()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

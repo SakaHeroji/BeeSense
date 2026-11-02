@@ -1,13 +1,13 @@
 ---
 type: community
 cohesion: 0.06
-members: 70
+members: 73
 ---
 
 # Pengambilan HTML Reddit
 
 **Cohesion:** 0.06 - loosely connected
-**Members:** 70 nodes
+**Members:** 73 nodes
 
 ## Members
 - [[.__init__()_19]] - code - Crawler/Backend/instagram_browser.py
@@ -31,6 +31,7 @@ members: 70
 - [[.test_configuration_rejects_secrets_and_invalid_limits()]] - code - tests/crawler/test_instagram_browser.py
 - [[.test_document_parser_rejects_unrelated_posts_and_preserves_reply_parent()]] - code - tests/crawler/test_instagram_browser.py
 - [[.test_navigation_observes_429_even_when_chrome_throws_before_response()]] - code - tests/crawler/test_instagram_browser.py
+- [[.test_password_upgrade_challenge_and_rate_limit_are_not_retried()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_timeout_preserves_browser_for_manual_inspection()]] - code - tests/crawler/test_instagram_browser.py
 - [[Accept only Instagram postreel permalinks; strip tracking parameters.]] - rationale - Crawler/Backend/instagram_crawler.py
 - [[Atomic owner-only settings; passwords are never part of this file.]] - rationale - Crawler/Backend/instagram_crawler.py
@@ -53,6 +54,8 @@ members: 70
 - [[Standalone trial. The production SocialCrawler backend stays unchanged.]] - rationale - Crawler/Backend/instagram_crawler.py
 - [[The supplied settings do not contain an authenticated mobile session.]] - rationale - Crawler/Backend/instagram_crawler.py
 - [[Validate restored state; allow one explicit LoginRequired recovery only.]] - rationale - Crawler/Backend/instagram_crawler.py
+- [[_configuration()]] - code - Crawler/Backend/instagram_crawler.py
+- [[_integer()]] - code - Crawler/Backend/instagram_crawler.py
 - [[_manual_verification_required()]] - code - Crawler/Backend/instagram_crawler.py
 - [[_raise_exception()]] - code - Crawler/Backend/instagram_crawler.py
 - [[_timestamp()]] - code - Crawler/Backend/instagram_crawler.py
@@ -89,22 +92,24 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 16 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 13 edges to [[_COMMUNITY_Akuisisi YouTube]]
 - 7 edges to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 5 edges to [[_COMMUNITY_Crawler Selenium]]
 - 4 edges to [[_COMMUNITY_Worker Instaloader]]
 - 4 edges to [[_COMMUNITY_Pengujian Client Instagram]]
 - 3 edges to [[_COMMUNITY_Capture Reddit Playwright]]
-- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 3 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
-- 2 edges to [[_COMMUNITY_Akuisisi YouTube]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_3]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 - 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
 
 ## Top bridge nodes
-- [[instagram_crawler.py]] - degree 37, connects to 5 communities
-- [[.error()]] - degree 11, connects to 5 communities
+- [[instagram_crawler.py]] - degree 37, connects to 4 communities
 - [[normalize_item()]] - degree 17, connects to 4 communities
+- [[.error()]] - degree 11, connects to 4 communities
 - [[SocialExportMixin]] - degree 13, connects to 3 communities
 - [[SessionInvalid]] - degree 12, connects to 2 communities

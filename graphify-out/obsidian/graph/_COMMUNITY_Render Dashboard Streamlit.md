@@ -1,18 +1,17 @@
 ---
 type: community
-cohesion: 0.23
-members: 18
+cohesion: 0.24
+members: 17
 ---
 
 # Render Dashboard Streamlit
 
-**Cohesion:** 0.23 - loosely connected
-**Members:** 18 nodes
+**Cohesion:** 0.24 - loosely connected
+**Members:** 17 nodes
 
 ## Members
 - [[._chart_style()]] - code - Dashboard/app.py
 - [[._explanation_detail()]] - code - Dashboard/app.py
-- [[._methods()]] - code - Dashboard/app.py
 - [[._metrics()]] - code - Dashboard/app.py
 - [[._overview()]] - code - Dashboard/app.py
 - [[._topic_detail()]] - code - Dashboard/app.py
@@ -37,16 +36,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_thread_url]]
-- 10 edges to [[_COMMUNITY_app.py_1]]
+- 17 edges to [[_COMMUNITY_thread_url]]
+- 9 edges to [[_COMMUNITY_thread_url_1]]
 - 4 edges to [[_COMMUNITY_app.py]]
-- 1 edge to [[_COMMUNITY_thread_url_1]]
-- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
+- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_3]]
+- 1 edge to [[_COMMUNITY_thread_url_2]]
 - 1 edge to [[_COMMUNITY_Pengujian Analisis Dashboard]]
 
 ## Top bridge nodes
-- [[number()_1]] - degree 18, connects to 4 communities
-- [[._methods()]] - degree 5, connects to 3 communities
+- [[number()_1]] - degree 18, connects to 5 communities
 - [[._overview()]] - degree 11, connects to 2 communities
 - [[._topic_detail()]] - degree 11, connects to 2 communities
+- [[percent()]] - degree 9, connects to 2 communities
 - [[._metrics()]] - degree 4, connects to 2 communities

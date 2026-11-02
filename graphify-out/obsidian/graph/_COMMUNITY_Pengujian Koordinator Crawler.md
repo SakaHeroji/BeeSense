@@ -1,13 +1,13 @@
 ---
 type: community
-cohesion: 0.15
-members: 40
+cohesion: 0.13
+members: 44
 ---
 
 # Pengujian Koordinator Crawler
 
-**Cohesion:** 0.15 - loosely connected
-**Members:** 40 nodes
+**Cohesion:** 0.13 - loosely connected
+**Members:** 44 nodes
 
 ## Members
 - [[.crawler()_1]] - code - tests/crawler/test_social_crawler.py
@@ -44,11 +44,15 @@ members: 40
 - [[.test_topic_exclusions_remove_roots_and_comments_without_excluding_normal_diplomas()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_unrepresentable_server_cooldown_preserves_partial_bundle()]] - code - tests/crawler/test_social_crawler.py
 - [[.youtube_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[Exercise Instagram through the combined coordinator, without network access.]] - rationale - tests/crawler/test_social_crawler_instagram.py
+- [[Exercise the default Reddrix route with YouTube and the shared export pipeline.]] - rationale - tests/crawler/test_social_crawler_reddrix.py
 - [[SocialCrawlerTests]] - code - tests/crawler/test_social_crawler.py
 - [[rd_events()]] - code - tests/crawler/test_social_crawler.py
 - [[receipt()]] - code - tests/crawler/test_social_crawler.py
 - [[spawn_youtube_fixture()]] - code - tests/crawler/test_social_crawler.py
 - [[test_social_crawler.py]] - code - tests/crawler/test_social_crawler.py
+- [[test_social_crawler_instagram.py]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[test_social_crawler_reddrix.py]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[yt_events()]] - code - tests/crawler/test_social_crawler.py
 
 ## Live Query (requires Dataview plugin)
@@ -59,19 +63,20 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 15 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 4 edges to [[_COMMUNITY_Worker Reddrix]]
+- 14 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
+- 8 edges to [[_COMMUNITY_Worker Reddrix]]
+- 6 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 4 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
 - 3 edges to [[_COMMUNITY_Worker Instaloader]]
+- 3 edges to [[_COMMUNITY_Pengujian Client Instagram]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
 
 ## Top bridge nodes
-- [[receipt()]] - degree 25, connects to 5 communities
-- [[test_social_crawler.py]] - degree 10, connects to 4 communities
-- [[.crawler()_1]] - degree 32, connects to 2 communities
-- [[yt_events()]] - degree 18, connects to 2 communities
-- [[SocialCrawlerTests]] - degree 42, connects to 1 community
+- [[test_social_crawler_reddrix.py]] - degree 17, connects to 5 communities
+- [[test_social_crawler_instagram.py]] - degree 13, connects to 5 communities
+- [[receipt()]] - degree 25, connects to 3 communities
+- [[test_social_crawler.py]] - degree 10, connects to 3 communities
+- [[SocialCrawlerTests]] - degree 42, connects to 2 communities

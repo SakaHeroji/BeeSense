@@ -1,0 +1,16 @@
+{
+  "files": {
+    "Crawler/__init__.py": {
+      "name": "Bagian pengambilan",
+      "description": "Membuat bagian ini dapat dipanggil oleh komponen Python lainnya."
+    },
+    "Crawler/Backend/__init__.py": {
+      "name": "Bagian pengambilan Python",
+      "description": "Membuat bagian ini dapat dipanggil oleh komponen Python lainnya."
+    },
+    "Crawler/Backend/social_crawler_selenium.py": {
+      "name": "Pilihan crawler lewat browser",
+      "description": "Mengambil YouTube dan Reddit lewat browser sambil mempertahankan format hasil serta pengaturan pengambilan bersama."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "files": {
+    ".github/workflows/ci.yml": {
+      "name": "Pemeriksaan utama GitHub",
+      "description": "Memeriksa berkas terbitan, kode, crawler, dan dashboard pada dua versi Python setiap ada perubahan."
+    },
+    ".github/workflows/crawler-frontend.yml": {
+      "name": "Pemeriksaan layar crawler",
+      "description": "Menguji dan membangun layar crawler, lalu memeriksa hasil penayangannya sebelum dianggap siap."
+    }
+  }
+}

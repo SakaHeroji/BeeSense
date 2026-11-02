@@ -1,0 +1,60 @@
+{
+  "files": {
+    "deployment/docker/Dockerfile.crawler": {
+      "name": "Lingkungan crawler gabungan",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan crawler gabungan di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.crawler.dockerignore": {
+      "name": "Berkas yang dibawa crawler gabungan",
+      "description": "Memilih berkas untuk lingkungan crawler gabungan dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    },
+    "deployment/docker/Dockerfile.dashboard": {
+      "name": "Lingkungan dashboard hasil",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan dashboard hasil di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.dashboard.dockerignore": {
+      "name": "Berkas yang dibawa dashboard hasil",
+      "description": "Memilih berkas untuk lingkungan dashboard hasil dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    },
+    "deployment/docker/Dockerfile.instagram": {
+      "name": "Lingkungan Instagram terdahulu",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan Instagram terdahulu di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.instagram-browser": {
+      "name": "Lingkungan Instagram lewat browser",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan Instagram lewat browser di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.instagram-browser.dockerignore": {
+      "name": "Berkas yang dibawa Instagram lewat browser",
+      "description": "Memilih berkas untuk lingkungan Instagram lewat browser dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    },
+    "deployment/docker/Dockerfile.instagram.dockerignore": {
+      "name": "Berkas yang dibawa Instagram terdahulu",
+      "description": "Memilih berkas untuk lingkungan Instagram terdahulu dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    },
+    "deployment/docker/Dockerfile.instaloader": {
+      "name": "Lingkungan Instagram utama",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan Instagram utama di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.instaloader.dockerignore": {
+      "name": "Berkas yang dibawa Instagram utama",
+      "description": "Memilih berkas untuk lingkungan Instagram utama dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    },
+    "deployment/docker/Dockerfile.selenium": {
+      "name": "Lingkungan crawler lewat browser",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan crawler lewat browser di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.selenium.dockerignore": {
+      "name": "Berkas yang dibawa crawler lewat browser",
+      "description": "Memilih berkas untuk lingkungan crawler lewat browser dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    },
+    "deployment/docker/Dockerfile.twitter": {
+      "name": "Lingkungan crawler X",
+      "description": "Menyiapkan paket dan perintah untuk menjalankan crawler X di lingkungan terpisah."
+    },
+    "deployment/docker/Dockerfile.twitter.dockerignore": {
+      "name": "Berkas yang dibawa crawler X",
+      "description": "Memilih berkas untuk lingkungan crawler X dan menjaga login, sesi, serta hasil lokal tetap di luar paket."
+    }
+  }
+}

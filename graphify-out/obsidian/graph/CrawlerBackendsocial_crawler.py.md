@@ -11,8 +11,13 @@ tags:
 # Crawler/Backend/social_crawler.py
 
 ## Connections
+- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[Cara kerja BeeSense]] - `references` [EXTRACTED]
 - [[CrawlerBackendsocial_export.py]] - `shares_data_with` [EXTRACTED]
-- [[YouTube yt-dlp, Reddit Reddrix, Instagram Instaloader, X Scweet]] - `references` [EXTRACTED]
+- [[Instagram — implemented Instaloader backend]] - `references` [EXTRACTED]
+- [[Reddit — implemented Reddrix backend]] - `references` [EXTRACTED]
+- [[SocialCrawler]] - `references` [EXTRACTED]
+- [[XTwitter — implemented Scweet backend]] - `references` [EXTRACTED]
+- [[YouTube — implemented yt-dlp backend]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

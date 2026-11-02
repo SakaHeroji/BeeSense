@@ -1,0 +1,56 @@
+{
+  "files": {
+    "Crawler/Backend/reddit_crawler.py": {
+      "name": "Jalankan crawling Reddit saja",
+      "description": "Menjalankan bagian Reddit dari crawler gabungan dengan pengaturan dan ekspor yang sama."
+    },
+    "Crawler/Backend/Reddit/__init__.py": {
+      "name": "Bagian sumber Reddit",
+      "description": "Membuat bagian ini dapat dipanggil oleh komponen Python lainnya."
+    },
+    "Crawler/Backend/Reddit/browser_campaign_detail.mjs": {
+      "name": "Pembaca detail thread Reddit",
+      "description": "Melengkapi isi thread dan mencatat kegagalan pembacaan maupun waktu tunggu yang diminta sumber."
+    },
+    "Crawler/Backend/Reddit/browser_campaign.mjs": {
+      "name": "Pemilih thread pada browser",
+      "description": "Mengumpulkan calon thread, menyaring rentang waktu, dan menggabungkan hasil pencarian yang berulang."
+    },
+    "Crawler/Backend/Reddit/config_reddit_1000.json": {
+      "name": "Rencana seribu post Reddit",
+      "description": "Menyimpan rencana pengambilan Reddit dengan target seribu post serta pengecualian dataset sebelumnya."
+    },
+    "Crawler/Backend/Reddit/config_reddit.json": {
+      "name": "Pengaturan Reddit terpisah",
+      "description": "Menentukan keyword, rentang waktu, dan batas pengambilan untuk crawler Reddit terdahulu."
+    },
+    "Crawler/Backend/Reddit/crawl_reddit_playwright.py": {
+      "name": "Lanjutkan pengambilan browser Reddit",
+      "description": "Melanjutkan pengambilan halaman publik yang sudah direncanakan sambil menyimpan kemajuan dan kendala akses."
+    },
+    "Crawler/Backend/Reddit/crawl_reddit_single.py": {
+      "name": "Dasar record dan crawler Reddit",
+      "description": "Menyediakan pembaca Reddit, pemeriksa keyword, serta susunan record dan ekspor yang juga dipakai sumber lain."
+    },
+    "Crawler/Backend/Reddit/export_browser_campaign.py": {
+      "name": "Ekspor hasil browser Reddit",
+      "description": "Mengubah hasil pengambilan melalui browser menjadi workbook dan catatan asal dalam format Reddit bersama."
+    },
+    "Crawler/Backend/Reddit/import_public_web_sections.py": {
+      "name": "Gabungkan kutipan halaman publik",
+      "description": "Mengaitkan kutipan web yang sudah diperiksa dengan calon thread dari pengambilan browser."
+    },
+    "Crawler/Backend/Reddit/public_web_post.mjs": {
+      "name": "Pembaca kutipan post publik",
+      "description": "Mengubah potongan halaman post publik menjadi catatan yang bisa diperiksa dan digabung."
+    },
+    "Crawler/Backend/Reddit/rendered_thread_dom.mjs": {
+      "name": "Pembaca thread yang terbuka",
+      "description": "Mengambil isi dan hubungan percakapan dari halaman Reddit yang sudah tampil di browser."
+    },
+    "Crawler/Backend/Reddit/verify_browser_campaign.py": {
+      "name": "Periksa bukti hasil Reddit",
+      "description": "Memeriksa kecocokan isi, hubungan, nilai workbook, dan checksum tanpa menghubungi Reddit lagi."
+    }
+  }
+}

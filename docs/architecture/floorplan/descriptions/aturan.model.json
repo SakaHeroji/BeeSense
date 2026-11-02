@@ -1,0 +1,36 @@
+{
+  "files": {
+    "config/context_relevance.json": {
+      "name": "Aturan kesesuaian konteks",
+      "description": "Menyimpan keyword, contoh makna yang dicari, serta ambang sementara untuk memilah kalimat."
+    },
+    "config/dashboard.json": {
+      "name": "Pasangan hasil pembandingan",
+      "description": "Menghubungkan pilihan sebelum dan sesudah penyaringan dengan dua model yang sudah diterbitkan."
+    },
+    "config/social_nlp_instagram_20261030_final.json": {
+      "name": "Pengaturan akhir analisis Instagram",
+      "description": "Mempertahankan pengaturan hasil akhir pada percobaan gabungan Instagram terdahulu."
+    },
+    "config/social_nlp_instagram_20261030.json": {
+      "name": "Rencana analisis tambahan Instagram",
+      "description": "Menyimpan pengaturan pelatihan gabungan untuk penambahan Instagram pada percobaan 30 Oktober."
+    },
+    "config/social_nlp_instagram_500_20261030.json": {
+      "name": "Analisis percobaan lima ratus post",
+      "description": "Menyimpan pengaturan pelatihan setelah percobaan pengambilan Instagram dengan target lima ratus post."
+    },
+    "config/social_nlp_relevance_20261102.json": {
+      "name": "Percobaan analisis setelah penyaringan",
+      "description": "Menyimpan pengaturan hasil tersaring dan deskripsi Gemini agar percobaan dapat dijalankan kembali."
+    },
+    "config/social_nlp_twitter_20261102.json": {
+      "name": "Analisis sebelum penyaringan",
+      "description": "Menyimpan pengaturan model empat sumber sebelum penyaringan sebagai pembanding dan pilihan pemulihan."
+    },
+    "config/social_nlp.json": {
+      "name": "Model analisis yang aktif",
+      "description": "Menentukan dataset sumber, model tersaring, jumlah topik, ambang coherence, dan penggunaan Gemini."
+    }
+  }
+}

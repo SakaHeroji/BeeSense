@@ -1,0 +1,1347 @@
+{
+  "$schema": "floorplan/architecture@1",
+  "project": {
+    "name": "BeeSense",
+    "summary": "Empat crawler nyata menghasilkan Excel/audit. Dataset gabungan bercabang ke clustering sebelum penyaringan dan clustering setelah seleksi konteks; masing-masing menghasilkan 20 topik, deskripsi Gemini dan snapshot yang dipilih pada dashboard. Tiga platform lain masih UI/rencana.",
+    "entrypoints": [
+      "streamlit_apps.py",
+      "Crawler/Frontend/src/main.tsx",
+      "Crawler/Backend/social_crawler.py",
+      "MachineLearning/social_nlp.py"
+    ]
+  },
+  "audience": "everyone",
+  "include": [
+    "code",
+    "config",
+    "data"
+  ],
+  "ignore": [
+    "graphify-out/**",
+    "outputs/**",
+    "output/**",
+    "floorplan/**",
+    "**/fixtures/**",
+    "docs/architecture/floorplan/**"
+  ],
+  "nodes": [
+    {
+      "id": "layar",
+      "label": "Layar crawler",
+      "kind": "ui",
+      "summary": "Menyiapkan pencarian, tautan, dan survei; mode contoh berjalan sendiri dan belum tersambung ke crawler Python.",
+      "exclude": [
+        "**/test/**"
+      ],
+      "paths": [
+        "Crawler/Frontend/**"
+      ]
+    },
+    {
+      "id": "layar.halaman",
+      "label": "Pekerjaan dan hasil",
+      "kind": "feature",
+      "summary": "Menampilkan pengaturan pencarian, proses pengambilan, hasil, riwayat, dan formulir survei.",
+      "paths": [
+        "Crawler/Frontend/src/features/**"
+      ],
+      "parent": "layar"
+    },
+    {
+      "id": "layar.kerangka",
+      "label": "Menu dan halaman",
+      "kind": "ui",
+      "summary": "Membuka halaman crawler otomatis atau manual dan menjaga susunan menunya.",
+      "paths": [
+        "Crawler/Frontend/src/app/**",
+        "Crawler/Frontend/src/main.tsx"
+      ],
+      "parent": "layar"
+    },
+    {
+      "id": "layar.contoh",
+      "label": "Data contoh",
+      "kind": "library",
+      "summary": "Menjalankan simulasi pekerjaan untuk mencoba layar tanpa mengambil post dari internet.",
+      "paths": [
+        "Crawler/Frontend/src/shared/demo.ts"
+      ],
+      "parent": "layar"
+    },
+    {
+      "id": "layar.penghubung",
+      "label": "Aturan dan penghubung layar",
+      "kind": "library",
+      "summary": "Memeriksa masukan dan menyiapkan permintaan ke server crawler yang masih perlu dibangun.",
+      "exclude": [
+        "**/demo.ts"
+      ],
+      "paths": [
+        "Crawler/Frontend/src/shared/**"
+      ],
+      "parent": "layar"
+    },
+    {
+      "id": "ambil",
+      "label": "1. Crawler media sosial",
+      "kind": "worker",
+      "summary": "Empat backend mengambil data nyata; tiga platform lain baru ada di layar. Buka untuk melihat ketujuh sumber.",
+      "exclude": [
+        "**/test_*.py",
+        "**/*.test.mjs",
+        "**/fixtures/**"
+      ],
+      "paths": [
+        "Crawler/Backend/**",
+        "Crawler/__init__.py"
+      ],
+      "details": "YouTube, Reddit, Instagram, dan X sudah memiliki adapter Python. TikTok, Threads, dan Facebook baru tersedia di pilihan UI/simulasi. Pengambilan nyata memakai CLI; tombol UI belum memulai backend."
+    },
+    {
+      "id": "ambil.atur",
+      "label": "Pengatur pengambilan",
+      "kind": "worker",
+      "summary": "Membagi pekerjaan antarplatform, membatasi waktu, dan menunda permintaan saat sumber membatasi akses.",
+      "paths": [
+        "Crawler/Backend/social_crawler.py"
+      ],
+      "parent": "ambil"
+    },
+    {
+      "id": "ambil.youtube",
+      "label": "YouTube · tersedia",
+      "kind": "worker",
+      "summary": "yt-dlp mengambil post dan percakapannya, lalu meneruskan hasil ke format bersama.",
+      "paths": [
+        "Crawler/Backend/Youtube/**"
+      ],
+      "parent": "ambil",
+      "details": "Video, komentar, serta identitas sumber dari YouTube. Pembatasan platform dan verifikasi masih dapat terjadi.",
+      "tags": [
+        "Backend tersedia"
+      ]
+    },
+    {
+      "id": "ambil.reddit",
+      "label": "Reddit · tersedia",
+      "kind": "worker",
+      "summary": "Reddrix mengambil post dan percakapannya, lalu meneruskan hasil ke format bersama.",
+      "paths": [
+        "Crawler/Backend/Reddit/**",
+        "Crawler/Backend/reddit_crawler.py"
+      ],
+      "parent": "ambil",
+      "details": "Thread dan balasan. Worker Reddrix dijalankan koordinator; jalur browser lama tetap tersedia. Pembatasan platform dan verifikasi masih dapat terjadi.",
+      "tags": [
+        "Backend tersedia"
+      ]
+    },
+    {
+      "id": "ambil.instagram",
+      "label": "Instagram · tersedia",
+      "kind": "worker",
+      "summary": "Instaloader mengambil post dan percakapannya, lalu meneruskan hasil ke format bersama.",
+      "paths": [
+        "Crawler/Backend/*instagram*",
+        "Crawler/Backend/*instaloader*"
+      ],
+      "parent": "ambil",
+      "details": "Post dan komentar melalui Instaloader dengan patch GraphQL web. Jalur instagrapi/browser lama tersimpan sebagai alternatif. Pembatasan platform dan verifikasi masih dapat terjadi.",
+      "tags": [
+        "Backend tersedia"
+      ]
+    },
+    {
+      "id": "ambil.twitter",
+      "label": "X / Twitter · tersedia",
+      "kind": "worker",
+      "summary": "Scweet mengambil post dan percakapannya, lalu meneruskan hasil ke format bersama.",
+      "paths": [
+        "Crawler/Backend/twitter_crawler.py"
+      ],
+      "parent": "ambil",
+      "details": "Post dan balasan memakai Scweet serta sesi lokal; hubungan percakapan disimpan untuk konteks. Pembatasan platform dan verifikasi masih dapat terjadi.",
+      "tags": [
+        "Backend tersedia"
+      ]
+    },
+    {
+      "id": "ambil.ekspor",
+      "label": "Penyimpan hasil crawler",
+      "kind": "library",
+      "summary": "Menyamakan format Excel dan catatan asal agar hasil dari beberapa sumber bisa digabung.",
+      "paths": [
+        "Crawler/Backend/social_export.py"
+      ],
+      "parent": "ambil"
+    },
+    {
+      "id": "analisis",
+      "label": "Implementasi NLP bersama",
+      "kind": "library",
+      "summary": "Kode yang sama menjalankan kedua jalur; perbedaannya ada pada korpus, mask relevansi, dan preset.",
+      "paths": [
+        "MachineLearning/**"
+      ],
+      "parent": "alat"
+    },
+    {
+      "id": "analisis.relevansi",
+      "label": "Nilai kalimat beserta konteks",
+      "kind": "feature",
+      "summary": "Bandingkan makna dengan contoh pendidikan, interaksi umum, dan luar lingkup; parent terverifikasi membantu kasus ambigu.",
+      "paths": [
+        "MachineLearning/context_relevance.py",
+        "MachineLearning/relevance_semantic.py"
+      ],
+      "parent": "relevansi"
+    },
+    {
+      "id": "analisis.topik",
+      "label": "SocialNLPClusterer",
+      "kind": "feature",
+      "summary": "Menjalankan prepare → encode → compare → describe → save; rincian tiap tahap terlihat pada dua jalur clustering.",
+      "paths": [
+        "MachineLearning/social_nlp.py"
+      ],
+      "parent": "analisis"
+    },
+    {
+      "id": "analisis.narasi",
+      "label": "Penulis deskripsi topik",
+      "kind": "feature",
+      "summary": "Mengirim sepuluh keyword dan sepuluh contoh kalimat per topik ke Gemini, lalu menyimpan hasilnya ke CSV.",
+      "paths": [
+        "MachineLearning/topic_narratives.py"
+      ],
+      "parent": "berkas"
+    },
+    {
+      "id": "analisis.asal",
+      "label": "Penelusur asal percakapan",
+      "kind": "library",
+      "summary": "Mencocokkan post dan balasan X dengan catatan asal yang sudah diperiksa.",
+      "paths": [
+        "MachineLearning/source_roots.py"
+      ],
+      "parent": "data"
+    },
+    {
+      "id": "dashboard",
+      "label": "6. Dashboard dan pembandingan",
+      "kind": "ui",
+      "summary": "Radio sebelum/setelah memilih snapshot tersimpan; grafik, deskripsi, dan kalimat sumber mengikuti hasil yang dipilih.",
+      "paths": [
+        "Dashboard/**",
+        "streamlit_apps.py"
+      ],
+      "details": "Entry point streamlit_apps.py → Dashboard/app.py. config/dashboard.json menunjuk dua bundle. Tidak ada crawling, training, clustering, atau panggilan Gemini pada rerun dashboard. Nomor topik antar-snapshot tidak otomatis merujuk tema yang sama; baca keyword dan buktinya."
+    },
+    {
+      "id": "alat",
+      "label": "Perintah, konfigurasi, dan pemeriksaan",
+      "kind": "script",
+      "summary": "Menyimpan mesin NLP bersama, preset, skrip pendukung, dependency, serta pengujian; tahap CLI tetap dijalankan terpisah.",
+      "paths": [
+        "scripts/**"
+      ]
+    },
+    {
+      "id": "alat.gabung",
+      "label": "Gabung dan buang ID ganda",
+      "kind": "script",
+      "summary": "Satukan batch berdasarkan platform, jenis record, dan ID asli; teks sama bukan alasan menghapus record.",
+      "paths": [
+        "scripts/merge_social_datasets.py"
+      ],
+      "parent": "data",
+      "details": "Implementasi: scripts/merge_social_datasets.py. Penggabungan merupakan perintah operator tersendiri, bukan pekerjaan otomatis yang dipicu UI. Observasi terbaru dipilih saat ID sumber yang sama muncul kembali."
+    },
+    {
+      "id": "alat.filter",
+      "label": "Jalankan penyaringan terpisah",
+      "kind": "script",
+      "summary": "Membaca korpus snapshot dan sumber yang terverifikasi, lalu menyimpan keputusan tiap kemunculan.",
+      "paths": [
+        "scripts/filter_context_relevance.py"
+      ],
+      "parent": "relevansi"
+    },
+    {
+      "id": "alat.narasi",
+      "label": "Penambah deskripsi tersimpan",
+      "kind": "script",
+      "summary": "Menambahkan CSV Gemini ke hasil yang sudah dilatih tanpa mengubah kelompok topiknya.",
+      "paths": [
+        "scripts/generate_topic_narratives.py"
+      ],
+      "parent": "berkas"
+    },
+    {
+      "id": "alat.periksa",
+      "label": "Pemeriksa publikasi",
+      "kind": "script",
+      "summary": "Mencocokkan workbook, keputusan relevansi, dan model dengan daftar berkas serta checksum Git.",
+      "paths": [
+        "scripts/verify_dashboard_data.py"
+      ],
+      "parent": "alat"
+    },
+    {
+      "id": "alat.unduh",
+      "label": "Ekspor dan pembanding lokal",
+      "kind": "script",
+      "summary": "Membuat Excel kalimat per topik dan membuka pembandingan hasil di komputer sendiri.",
+      "paths": [
+        "scripts/topic_sentence_export.py",
+        "scripts/build_topic_sentences.mjs",
+        "scripts/relevance_dashboard.py"
+      ],
+      "parent": "alat"
+    },
+    {
+      "id": "aturan",
+      "label": "Pengaturan dan publikasi",
+      "kind": "infra",
+      "summary": "Menentukan sumber pencarian, model aktif, kebutuhan program, dan cara menayangkan versi baru.",
+      "paths": [
+        "config/**",
+        "deployment/**",
+        ".github/**",
+        ".streamlit/**",
+        ".devcontainer/**"
+      ],
+      "parent": "alat"
+    },
+    {
+      "id": "aturan.crawler",
+      "label": "Pengaturan pengambilan",
+      "kind": "config",
+      "summary": "Menentukan keyword, sumber, durasi, dan target post untuk tiap percobaan.",
+      "paths": [
+        "config/*crawler*.json"
+      ],
+      "parent": "aturan"
+    },
+    {
+      "id": "aturan.model",
+      "label": "Pengaturan analisis dan dashboard",
+      "kind": "config",
+      "summary": "Menetapkan model aktif, ambang relevansi, dan dua hasil yang bisa dibandingkan di dashboard.",
+      "paths": [
+        "config/social_nlp*.json",
+        "config/context_relevance.json",
+        "config/dashboard.json"
+      ],
+      "parent": "aturan"
+    },
+    {
+      "id": "aturan.jalankan",
+      "label": "Paket dan lingkungan jalan",
+      "kind": "infra",
+      "summary": "Memisahkan kebutuhan crawler, pelatihan, dan dashboard agar layanan online tetap ringan.",
+      "paths": [
+        "deployment/**",
+        "requirements.txt"
+      ],
+      "parent": "aturan"
+    },
+    {
+      "id": "aturan.periksa",
+      "label": "Pemeriksaan GitHub",
+      "kind": "infra",
+      "summary": "Memeriksa kode dan mencoba dashboard pada dua versi Python setiap ada perubahan repository.",
+      "paths": [
+        ".github/**"
+      ],
+      "parent": "aturan"
+    },
+    {
+      "id": "uji",
+      "label": "Pemeriksaan otomatis",
+      "kind": "test",
+      "summary": "Mencoba crawler, penyaringan, pengelompokan, dan layar dengan contoh terkontrol.",
+      "paths": [
+        "tests/**",
+        "Crawler/Frontend/src/test/**",
+        "Crawler/Backend/**/test_*.py",
+        "Crawler/Backend/**/*.test.mjs"
+      ],
+      "parent": "alat"
+    },
+    {
+      "id": "berkas",
+      "label": "5. Deskripsi dan hasil tersimpan",
+      "kind": "data",
+      "summary": "Gemini menjelaskan 20 topik, lalu dua snapshot lengkap dan checksum disimpan agar bisa dibandingkan.",
+      "details": "SocialNLPClusterer.save() menulis bundle baru secara atomik. generate_topic_narratives.py juga dapat menambahkan narasi pada bundle turunan tanpa mengubah clustering. Snapshot sebelumnya dipertahankan."
+    },
+    {
+      "id": "luar.youtube",
+      "label": "YouTube",
+      "kind": "external",
+      "summary": "Menyediakan video dan komentar yang diambil crawler.",
+      "packages": [
+        "pypi:yt_dlp"
+      ],
+      "hosts": [
+        "www.youtube.com",
+        "youtu.be"
+      ],
+      "parent": "ambil.youtube"
+    },
+    {
+      "id": "luar.reddit",
+      "label": "Reddit",
+      "kind": "external",
+      "summary": "Menyediakan thread dan balasan yang dibaca crawler.",
+      "hosts": [
+        "www.reddit.com",
+        "old.reddit.com",
+        "reddit.com"
+      ],
+      "parent": "ambil.reddit"
+    },
+    {
+      "id": "luar.instagram",
+      "label": "Instagram",
+      "kind": "external",
+      "summary": "Menyediakan post serta komentar dan dapat meminta verifikasi atau membatasi permintaan.",
+      "packages": [
+        "pypi:instaloader",
+        "pypi:instagrapi"
+      ],
+      "hosts": [
+        "www.instagram.com",
+        "instagram.com"
+      ],
+      "parent": "ambil.instagram"
+    },
+    {
+      "id": "luar.x",
+      "label": "X / Twitter",
+      "kind": "external",
+      "summary": "Menyediakan post serta balasan yang diambil memakai sesi akun lokal.",
+      "packages": [
+        "pypi:Scweet"
+      ],
+      "hosts": [
+        "x.com",
+        "twitter.com"
+      ],
+      "parent": "ambil.twitter"
+    },
+    {
+      "id": "luar.model",
+      "label": "Model bahasa pralatih",
+      "kind": "external",
+      "summary": "Menyediakan model untuk membandingkan makna kalimat; setelah diunduh, pemrosesan berjalan lokal.",
+      "packages": [
+        "pypi:sentence_transformers",
+        "pypi:huggingface_hub"
+      ],
+      "parent": "analisis"
+    },
+    {
+      "id": "luar.gemini",
+      "label": "Google Gemini",
+      "kind": "external",
+      "summary": "Membuat kalimat topik dan paragraf penjelasan dari bukti terpilih.",
+      "hosts": [
+        "generativelanguage.googleapis.com"
+      ],
+      "parent": "berkas"
+    },
+    {
+      "id": "ambil.tiktok",
+      "label": "TikTok · rencana",
+      "kind": "feature",
+      "summary": "Pilihan pada UI/simulasi; adapter crawler Python belum tersedia.",
+      "tags": [
+        "UI saja",
+        "Belum ada backend"
+      ],
+      "parent": "ambil",
+      "details": "Didefinisikan pada Crawler/Frontend/src/shared/domain.ts dan data contoh. Tidak ada jalur pengambilan nyata dari platform ini dalam SocialCrawler."
+    },
+    {
+      "id": "ambil.threads",
+      "label": "Threads · rencana",
+      "kind": "feature",
+      "summary": "Pilihan pada UI/simulasi; adapter crawler Python belum tersedia.",
+      "tags": [
+        "UI saja",
+        "Belum ada backend"
+      ],
+      "parent": "ambil",
+      "details": "Didefinisikan pada Crawler/Frontend/src/shared/domain.ts dan data contoh. Tidak ada jalur pengambilan nyata dari platform ini dalam SocialCrawler."
+    },
+    {
+      "id": "ambil.facebook",
+      "label": "Facebook · rencana",
+      "kind": "feature",
+      "summary": "Pilihan pada UI/simulasi; adapter crawler Python belum tersedia.",
+      "tags": [
+        "UI saja",
+        "Belum ada backend"
+      ],
+      "parent": "ambil",
+      "details": "Didefinisikan pada Crawler/Frontend/src/shared/domain.ts dan data contoh. Tidak ada jalur pengambilan nyata dari platform ini dalam SocialCrawler."
+    },
+    {
+      "id": "data",
+      "label": "2. Hasil crawling → kalimat",
+      "kind": "data",
+      "summary": "Gabungkan Excel, periksa ID, lalu siapkan korpus kalimat yang menjadi pangkal dua jalur clustering."
+    },
+    {
+      "id": "data.raw",
+      "label": "Excel dan audit crawler",
+      "kind": "data",
+      "summary": "Workbook tiap batch menyimpan post, komentar, ID asli, dan bukti hubungan percakapan.",
+      "parent": "data",
+      "details": "Hasil SocialCrawler berada di outputs/social_*/. Catatan JSON/JSONL dan checksum mendukung penelusuran asal. Berkas hasil tidak dimasukkan satu per satu ke peta kode."
+    },
+    {
+      "id": "data.merged",
+      "label": "Dataset gabungan · 34.764",
+      "kind": "data",
+      "summary": "Satu workbook dari empat platform, 34.764 record unik dan nol ID ganda pada hasil terverifikasi.",
+      "parent": "data",
+      "details": "outputs/social_20261102_combined_twitter_01/social_data.xlsx\n\nBerisi 2.526 post akar dan 32.238 komentar/balasan. Dataset sumber lengkap tetap dipertahankan pada kedua hasil NLP."
+    },
+    {
+      "id": "data.prepare",
+      "label": "Pecah komentar menjadi kalimat",
+      "kind": "feature",
+      "summary": "Pilih komentar/balasan, potong kalimat, simpan posisi teks dan ID asal, lalu pisahkan teks unik dari kemunculannya.",
+      "parent": "data",
+      "details": "MachineLearning/social_nlp.py: SocialNLPClusterer.prepare_excel(). Minimal 2 kata dan 8 karakter; segmen panjang dibatasi. Post akar dipakai sebagai konteks, bukan otomatis menjadi kalimat yang dikelompokkan."
+    },
+    {
+      "id": "data.sentences",
+      "label": "53.332 kemunculan kalimat",
+      "kind": "data",
+      "summary": "52.450 teks unik menjadi korpus sebelum penyaringan; setiap kemunculan tetap mempunyai sumber.",
+      "parent": "data",
+      "details": "Angka ini adalah kalimat, bukan jumlah post. Teks identik di beberapa komentar di-encode sekali, tetapi semua kemunculannya disimpan. Penyaringan diterapkan per kemunculan agar konteks masing-masing tetap diperiksa."
+    },
+    {
+      "id": "sebelum",
+      "label": "3A. Clustering sebelum penyaringan",
+      "kind": "feature",
+      "summary": "52.450 kalimat unik → SBERT → UMAP → DBSCAN → Ward → 20 topik; mean c_v 0,4243.",
+      "details": "Jalur arsip tanpa relevance_artifact memakai config/social_nlp_twitter_20261102.json. Seluruh korpus kalimat yang lolos persiapan dasar dipakai. Ini snapshot tersimpan yang dipilih oleh radio Sebelum penyaringan di dashboard; bukan training baru saat radio ditekan."
+    },
+    {
+      "id": "relevansi",
+      "label": "3B. Penyaringan konteks",
+      "kind": "feature",
+      "summary": "53.332 kemunculan diperiksa; 10.496 relevan diteruskan, keputusan lainnya tetap dicatat.",
+      "details": "Ini cabang sebelum clustering tersaring, bukan saringan sesudah pembentukan topik. Root dan parent terverifikasi hanya membantu kalimat pendek yang ambigu. Skor kemiripan bukan probabilitas dan belum dikalibrasi dengan label manusia."
+    },
+    {
+      "id": "relevansi.context",
+      "label": "Cocokkan akar dan balasan induk",
+      "kind": "feature",
+      "summary": "Gunakan hubungan ID sumber yang terverifikasi; jangan menebak konteks dari judul yang mirip.",
+      "parent": "relevansi",
+      "details": "MachineLearning/source_roots.py dan ContextRelevanceFilter.build_units(). Konteks tidak menggantikan kalimat asli yang menjadi fitur clustering."
+    },
+    {
+      "id": "relevansi.decisions",
+      "label": "Simpan empat keputusan",
+      "kind": "data",
+      "summary": "Relevan 10.496 · umum 18.990 · luar lingkup 3.747 · belum pasti 20.099.",
+      "parent": "relevansi",
+      "details": "outputs/relevance_20261102_01/relevance_decisions.parquet, filtered_sentences.parquet, relevance_report.json dan manifest. Hanya label relevant dipakai; 42.836 kemunculan lainnya tidak masuk clustering. Data sumber tidak dihapus."
+    },
+    {
+      "id": "relevansi.accepted",
+      "label": "10.496 kemunculan lolos",
+      "kind": "data",
+      "summary": "10.380 teks unik dari 6.544 komentar/balasan menjadi masukan clustering tersaring.",
+      "parent": "relevansi",
+      "details": "Mask keputusan dipasang pada SocialNLPClusterer._apply_context_relevance() sesudah prepare_excel() dan sebelum encode(). Setiap kecocokan kalimat, sumber, serta checksum artefak diperiksa."
+    },
+    {
+      "id": "setelah",
+      "label": "4. Clustering setelah penyaringan",
+      "kind": "feature",
+      "summary": "10.380 kalimat unik → SBERT → UMAP → DBSCAN → Ward → 20 topik; mean c_v 0,4733.",
+      "details": "Jalur aktif memakai config/social_nlp_relevance_20261102.json / config/social_nlp.json dan outputs/relevance_20261102_01. UMAP, DBSCAN, penggabungan, dan evaluasi dihitung ulang pada subset relevan. Bobot SBERT tidak dilatih ulang."
+    },
+    {
+      "id": "sebelum.input",
+      "label": "Masukan · 52.450 teks unik",
+      "kind": "data",
+      "summary": "Korpus lengkap setelah persiapan dasar.",
+      "parent": "sebelum"
+    },
+    {
+      "id": "sebelum.encode",
+      "label": "SBERT · 384 dimensi",
+      "kind": "feature",
+      "summary": "Ubah makna kalimat menjadi vektor, rata-ratakan jendela panjang, lalu normalkan panjang vektor.",
+      "parent": "sebelum",
+      "details": "SocialNLPClusterer.encode(). Model multilingual MiniLM-L12-v2 pralatih, revision tetap; jendela 128 token dengan stride 24. Tidak ada fine-tuning bobot neural. Teks identik di-encode sekali; semua kemunculan tetap terlacak."
+    },
+    {
+      "id": "sebelum.umap",
+      "label": "UMAP · dua seed",
+      "kind": "feature",
+      "summary": "Ringkas vektor menjadi 10 dimensi dengan seed 42 dan 43 untuk memeriksa kestabilan hasil.",
+      "parent": "sebelum",
+      "details": "SocialNLPClusterer._reduce_embeddings(). n_neighbors=15, min_dist=0, metric cosine. DBSCAN memakai jarak Euclidean pada proyeksi ini; evaluasi silhouette tetap memakai ruang SBERT asli."
+    },
+    {
+      "id": "sebelum.dbscan",
+      "label": "DBSCAN · cari kelompok rapat",
+      "kind": "feature",
+      "summary": "Uji 15 pasangan parameter; hasil utama terpilih mempunyai 319 kelompok awal.",
+      "parent": "sebelum",
+      "details": "SocialNLPClusterer.compare(). Grid eps=[0.10,0.15,0.20,0.25,0.30], min_samples=[3,5,10], pada dua seed UMAP. Pilihan snapshot: eps=0,20, min_samples=5. Titik yang tidak cukup rapat diberi noise -1. Tiap kandidat yang punya setidaknya 20 kelompok dapat dilanjutkan ke Ward; pemilihan final dilakukan sesudah evaluasi."
+    },
+    {
+      "id": "sebelum.ward",
+      "label": "Ward · 319 → 20 topik",
+      "kind": "feature",
+      "summary": "Gabungkan kelompok utuh berdasarkan centroid SBERT dan jumlah kalimat; noise tetap di luar topik.",
+      "parent": "sebelum",
+      "details": "SocialNLPClusterer._merge_topics(). Sentence-weighted Ward meminimalkan kenaikan galat kuadrat pada ruang SBERT ternormalisasi. Tidak membelah kelompok DBSCAN dan tidak memasukkan noise. Kandidat dengan kurang dari 20 kelompok ditolak."
+    },
+    {
+      "id": "sebelum.evaluate",
+      "label": "Evaluasi dan gate coherence",
+      "kind": "feature",
+      "summary": "Pilih kandidat yang memenuhi syarat; mean c_v 0,4243, cakupan 93,09%.",
+      "parent": "sebelum",
+      "details": "SocialNLPClusterer.compare(), _evaluate(), _ctfidf_terms(), score_coherence(). Seleksi mempertimbangkan silhouette cosine, stability ARI antar-seed, cakupan ≥0,4, kelompok terbesar ≤0,5, dan mean c_v ≥0,4. c_v memakai top 10 istilah c-TF-IDF, window 110 dan korpus unik termasuk noise. Kandidat di bawah rentang skor yang bisa menang ditandai tidak dievaluasi coherence. Bila tidak ada kandidat lolos, proses berhenti dan tidak menerbitkan hasil baru. Noise terpilih: 3626 teks unik. Target 0,4 berlaku untuk rata-rata seluruh topik, bukan jaminan setiap topik."
+    },
+    {
+      "id": "sebelum.describe",
+      "label": "c-TF-IDF dan contoh kalimat",
+      "kind": "feature",
+      "summary": "Rangking kata khas serta kalimat terdekat ke centroid untuk menjelaskan 20 kelompok yang terpilih.",
+      "parent": "sebelum",
+      "details": "SocialNLPClusterer.describe_topics(). Label dikembalikan dari teks unik ke seluruh kemunculan dan ID sumber. Keyword dan contoh representatif menjadi masukan Gemini; Gemini tidak membentuk cluster."
+    },
+    {
+      "id": "setelah.input",
+      "label": "Masukan · 10.380 teks unik",
+      "kind": "data",
+      "summary": "Subset relevan; 42.836 kemunculan lainnya tidak ikut clustering.",
+      "parent": "setelah"
+    },
+    {
+      "id": "setelah.encode",
+      "label": "SBERT · 384 dimensi",
+      "kind": "feature",
+      "summary": "Ubah makna kalimat menjadi vektor, rata-ratakan jendela panjang, lalu normalkan panjang vektor.",
+      "parent": "setelah",
+      "details": "SocialNLPClusterer.encode(). Model multilingual MiniLM-L12-v2 pralatih, revision tetap; jendela 128 token dengan stride 24. Tidak ada fine-tuning bobot neural. Pada hasil tersaring, subset embedding baseline digunakan ulang hanya setelah ID, teks, source SHA, revision, dan pengaturan jendela cocok."
+    },
+    {
+      "id": "setelah.umap",
+      "label": "UMAP · dua seed",
+      "kind": "feature",
+      "summary": "Ringkas vektor menjadi 10 dimensi dengan seed 42 dan 43 untuk memeriksa kestabilan hasil.",
+      "parent": "setelah",
+      "details": "SocialNLPClusterer._reduce_embeddings(). n_neighbors=15, min_dist=0, metric cosine. DBSCAN memakai jarak Euclidean pada proyeksi ini; evaluasi silhouette tetap memakai ruang SBERT asli."
+    },
+    {
+      "id": "setelah.dbscan",
+      "label": "DBSCAN · cari kelompok rapat",
+      "kind": "feature",
+      "summary": "Uji 15 pasangan parameter; hasil utama terpilih mempunyai 66 kelompok awal.",
+      "parent": "setelah",
+      "details": "SocialNLPClusterer.compare(). Grid eps=[0.10,0.15,0.20,0.25,0.30], min_samples=[3,5,10], pada dua seed UMAP. Pilihan snapshot: eps=0,25, min_samples=10. Titik yang tidak cukup rapat diberi noise -1. Tiap kandidat yang punya setidaknya 20 kelompok dapat dilanjutkan ke Ward; pemilihan final dilakukan sesudah evaluasi."
+    },
+    {
+      "id": "setelah.ward",
+      "label": "Ward · 66 → 20 topik",
+      "kind": "feature",
+      "summary": "Gabungkan kelompok utuh berdasarkan centroid SBERT dan jumlah kalimat; noise tetap di luar topik.",
+      "parent": "setelah",
+      "details": "SocialNLPClusterer._merge_topics(). Sentence-weighted Ward meminimalkan kenaikan galat kuadrat pada ruang SBERT ternormalisasi. Tidak membelah kelompok DBSCAN dan tidak memasukkan noise. Kandidat dengan kurang dari 20 kelompok ditolak."
+    },
+    {
+      "id": "setelah.evaluate",
+      "label": "Evaluasi dan gate coherence",
+      "kind": "feature",
+      "summary": "Pilih kandidat yang memenuhi syarat; mean c_v 0,4733, cakupan 82,17%.",
+      "parent": "setelah",
+      "details": "SocialNLPClusterer.compare(), _evaluate(), _ctfidf_terms(), score_coherence(). Seleksi mempertimbangkan silhouette cosine, stability ARI antar-seed, cakupan ≥0,4, kelompok terbesar ≤0,5, dan mean c_v ≥0,4. c_v memakai top 10 istilah c-TF-IDF, window 110 dan korpus unik termasuk noise. Kandidat di bawah rentang skor yang bisa menang ditandai tidak dievaluasi coherence. Bila tidak ada kandidat lolos, proses berhenti dan tidak menerbitkan hasil baru. Noise terpilih: 1851 teks unik. Target 0,4 berlaku untuk rata-rata seluruh topik, bukan jaminan setiap topik."
+    },
+    {
+      "id": "setelah.describe",
+      "label": "c-TF-IDF dan contoh kalimat",
+      "kind": "feature",
+      "summary": "Rangking kata khas serta kalimat terdekat ke centroid untuk menjelaskan 20 kelompok yang terpilih.",
+      "parent": "setelah",
+      "details": "SocialNLPClusterer.describe_topics(). Label dikembalikan dari teks unik ke seluruh kemunculan dan ID sumber. Keyword dan contoh representatif menjadi masukan Gemini; Gemini tidak membentuk cluster."
+    },
+    {
+      "id": "berkas.before",
+      "label": "Snapshot sebelum · 20 topik",
+      "kind": "data",
+      "summary": "53.332 kemunculan · mean c_v 0,4243 · 20 narasi Gemini.",
+      "parent": "berkas",
+      "details": "outputs/nlp_20261102_twitter_topics20_gemini_01/\n\n9/20 topik individual memiliki c_v <0,4. Rata-rata dihitung pada 52.450 teks unik termasuk noise."
+    },
+    {
+      "id": "berkas.after",
+      "label": "Snapshot setelah · 20 topik",
+      "kind": "data",
+      "summary": "10.496 kemunculan · mean c_v 0,4733 · 20 narasi Gemini.",
+      "parent": "berkas",
+      "details": "outputs/nlp_20261102_relevance_topics20_gemini_02/\n\n7/20 topik individual memiliki c_v <0,4. Korpus berbeda, sehingga selisih rata-rata bukan bukti akurasi naik."
+    },
+    {
+      "id": "berkas.contract",
+      "label": "Parquet, CSV, metrik, manifest",
+      "kind": "data",
+      "summary": "Simpan anggota kalimat, sumber, keyword, narasi, angka evaluasi, model, dan checksum dalam satu bundle.",
+      "parent": "berkas",
+      "details": "Berkas utama: sentences.parquet, occurrences.parquet, social_data.parquet, topics.json, summary.json, topic_narratives.csv dan manifest.json. Nama aktual diperiksa dari bundle; manifest memeriksa integritas saat load. Raw dataset tetap lengkap; tidak semua raw record menjadi kalimat clustering."
+    },
+    {
+      "id": "dashboard.select",
+      "label": "Radio sebelum / setelah",
+      "kind": "feature",
+      "summary": "Baca dua path snapshot dari config/dashboard.json, lalu muat hasil pilihan pengguna.",
+      "parent": "dashboard",
+      "details": "SocialNLPStreamlitApp memuat hasil read-only dan memeriksa kontrak artefaknya. Mengganti radio hanya mengganti bundle, bukan melatih model."
+    },
+    {
+      "id": "dashboard.views",
+      "label": "Grafik, topik, dan bukti",
+      "kind": "ui",
+      "summary": "Buka ringkasan, peta topik, penjelasan, kalimat sumber, serta metode dan data.",
+      "parent": "dashboard"
+    }
+  ],
+  "edges": [
+    {
+      "to": "ambil.atur",
+      "kind": "config",
+      "label": "keyword, target, waktu",
+      "from": "aturan.crawler"
+    },
+    {
+      "to": "ambil.youtube",
+      "kind": "call",
+      "label": "jalankan adapter aktif",
+      "from": "ambil.atur"
+    },
+    {
+      "to": "ambil.ekspor",
+      "kind": "data",
+      "label": "hasil ke kontrak bersama",
+      "from": "ambil.youtube"
+    },
+    {
+      "to": "ambil.reddit",
+      "kind": "call",
+      "label": "jalankan adapter aktif",
+      "from": "ambil.atur"
+    },
+    {
+      "to": "ambil.ekspor",
+      "kind": "data",
+      "label": "hasil ke kontrak bersama",
+      "from": "ambil.reddit"
+    },
+    {
+      "to": "ambil.instagram",
+      "kind": "call",
+      "label": "jalankan adapter aktif",
+      "from": "ambil.atur"
+    },
+    {
+      "to": "ambil.ekspor",
+      "kind": "data",
+      "label": "hasil ke kontrak bersama",
+      "from": "ambil.instagram"
+    },
+    {
+      "to": "ambil.twitter",
+      "kind": "call",
+      "label": "jalankan adapter aktif",
+      "from": "ambil.atur"
+    },
+    {
+      "to": "ambil.ekspor",
+      "kind": "data",
+      "label": "hasil ke kontrak bersama",
+      "from": "ambil.twitter"
+    },
+    {
+      "to": "data.raw",
+      "kind": "data",
+      "label": "tulis workbook dan audit",
+      "from": "ambil.ekspor"
+    },
+    {
+      "to": "alat.gabung",
+      "kind": "data",
+      "label": "operator menggabungkan batch",
+      "from": "data.raw",
+      "description": "Ini perpindahan berkas antarperintah, bukan pemicu otomatis."
+    },
+    {
+      "to": "data.merged",
+      "kind": "data",
+      "label": "dedup ID asli",
+      "from": "alat.gabung"
+    },
+    {
+      "to": "data.prepare",
+      "kind": "data",
+      "label": "baca workbook",
+      "from": "data.merged"
+    },
+    {
+      "to": "relevansi.context",
+      "kind": "data",
+      "label": "akar percakapan terverifikasi",
+      "from": "analisis.asal"
+    },
+    {
+      "to": "data.sentences",
+      "kind": "data",
+      "label": "teks unik dan semua kemunculan",
+      "from": "data.prepare"
+    },
+    {
+      "to": "sebelum.input",
+      "kind": "data",
+      "label": "tanpa mask relevansi",
+      "from": "data.sentences"
+    },
+    {
+      "to": "alat.filter",
+      "kind": "data",
+      "label": "masukan penyaringan",
+      "from": "data.sentences"
+    },
+    {
+      "to": "relevansi.context",
+      "kind": "call",
+      "label": "bangun unit dan konteks",
+      "from": "alat.filter"
+    },
+    {
+      "to": "analisis.relevansi",
+      "kind": "data",
+      "label": "kalimat target + konteks",
+      "from": "relevansi.context"
+    },
+    {
+      "to": "relevansi.decisions",
+      "kind": "data",
+      "label": "label dan alasan tersimpan",
+      "from": "analisis.relevansi"
+    },
+    {
+      "to": "relevansi.accepted",
+      "kind": "data",
+      "label": "ambil label relevant saja",
+      "from": "relevansi.decisions"
+    },
+    {
+      "to": "setelah.input",
+      "kind": "data",
+      "label": "subset yang lolos",
+      "from": "relevansi.accepted"
+    },
+    {
+      "to": "setelah.encode",
+      "kind": "data",
+      "label": "reuse subset embedding terverifikasi",
+      "from": "sebelum.encode",
+      "description": "Reuse fitur beku; UMAP, DBSCAN, Ward, dan evaluasi tetap dihitung ulang pada subset."
+    },
+    {
+      "to": "sebelum.encode",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "sebelum.input"
+    },
+    {
+      "to": "sebelum.umap",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "sebelum.encode"
+    },
+    {
+      "to": "sebelum.dbscan",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "sebelum.umap"
+    },
+    {
+      "to": "sebelum.ward",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "sebelum.dbscan"
+    },
+    {
+      "to": "sebelum.evaluate",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "sebelum.ward"
+    },
+    {
+      "to": "sebelum.describe",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "sebelum.evaluate"
+    },
+    {
+      "to": "analisis.narasi",
+      "kind": "data",
+      "label": "10 keyword + 10 contoh per topik",
+      "from": "sebelum.describe"
+    },
+    {
+      "to": "setelah.encode",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "setelah.input"
+    },
+    {
+      "to": "setelah.umap",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "setelah.encode"
+    },
+    {
+      "to": "setelah.dbscan",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "setelah.umap"
+    },
+    {
+      "to": "setelah.ward",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "setelah.dbscan"
+    },
+    {
+      "to": "setelah.evaluate",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "setelah.ward"
+    },
+    {
+      "to": "setelah.describe",
+      "kind": "data",
+      "label": "lanjut ke tahap berikut",
+      "from": "setelah.evaluate"
+    },
+    {
+      "to": "analisis.narasi",
+      "kind": "data",
+      "label": "10 keyword + 10 contoh per topik",
+      "from": "setelah.describe"
+    },
+    {
+      "to": "berkas.before",
+      "kind": "data",
+      "label": "CSV pada snapshot sebelum",
+      "from": "analisis.narasi"
+    },
+    {
+      "to": "berkas.after",
+      "kind": "data",
+      "label": "CSV pada snapshot setelah",
+      "from": "analisis.narasi"
+    },
+    {
+      "to": "berkas.before",
+      "kind": "data",
+      "label": "model dan hasil sebelum",
+      "from": "sebelum.describe"
+    },
+    {
+      "to": "berkas.after",
+      "kind": "data",
+      "label": "model dan hasil setelah",
+      "from": "setelah.describe"
+    },
+    {
+      "to": "berkas.contract",
+      "kind": "data",
+      "label": "kontrak bundle yang sama",
+      "from": "berkas.before"
+    },
+    {
+      "to": "berkas.contract",
+      "kind": "data",
+      "label": "kontrak bundle yang sama",
+      "from": "berkas.after"
+    },
+    {
+      "to": "dashboard.select",
+      "kind": "data",
+      "label": "path before pada konfigurasi",
+      "from": "berkas.before"
+    },
+    {
+      "to": "dashboard.select",
+      "kind": "data",
+      "label": "path after pada konfigurasi",
+      "from": "berkas.after"
+    },
+    {
+      "to": "dashboard.select",
+      "kind": "config",
+      "label": "pilihan snapshot",
+      "from": "config/dashboard.json"
+    },
+    {
+      "to": "dashboard.views",
+      "kind": "data",
+      "label": "muat hasil terpilih",
+      "from": "dashboard.select"
+    },
+    {
+      "to": "layar.halaman",
+      "kind": "data",
+      "label": "data contoh; backend belum tersambung",
+      "from": "layar.contoh"
+    },
+    {
+      "to": "sebelum",
+      "kind": "config",
+      "label": "preset 20 topik, mean c_v ≥0,4",
+      "from": "aturan.model"
+    },
+    {
+      "to": "setelah",
+      "kind": "config",
+      "label": "preset 20 topik, mean c_v ≥0,4",
+      "from": "aturan.model"
+    }
+  ],
+  "flows": [
+    {
+      "id": "utama",
+      "title": "01 · Crawling sampai dashboard",
+      "description": "Ikuti perpindahan berkas nyata. Pengambilan, penggabungan, penyaringan, training dan publikasi adalah perintah operator terpisah.",
+      "steps": [
+        {
+          "node": "ambil",
+          "note": "Empat backend tersedia: YouTube, Reddit, Instagram dan X. TikTok, Threads dan Facebook masih UI/rencana."
+        },
+        {
+          "node": "data",
+          "note": "Excel/audit setiap batch digabung berdasarkan ID asli, lalu komentar dipecah menjadi kalimat dengan jejak sumber."
+        },
+        {
+          "node": "sebelum",
+          "note": "Cabang A langsung mengelompokkan semua kalimat yang lolos persiapan dasar, tanpa mask relevansi."
+        },
+        {
+          "node": "relevansi",
+          "note": "Cabang B memeriksa konteks tiap kemunculan dan hanya meneruskan label relevan; empat keputusan tetap tersimpan."
+        },
+        {
+          "node": "setelah",
+          "note": "Cabang B membentuk kelompok baru pada subset relevan. Kedua jalur memakai SBERT, UMAP, DBSCAN dan Ward hingga 20 topik."
+        },
+        {
+          "node": "berkas",
+          "note": "Setelah evaluasi lolos, Gemini menulis deskripsi. Dua bundle terpisah menyimpan Parquet, CSV, metrik dan checksum."
+        },
+        {
+          "node": "dashboard",
+          "note": "Radio memilih snapshot sebelum atau setelah penyaringan. Dashboard membaca hasil yang selesai dan tidak menjalankan ulang pipeline."
+        }
+      ]
+    },
+    {
+      "id": "sumber",
+      "title": "02 · Semua platform dan statusnya",
+      "description": "Daftar kemampuan, bukan urutan berpindah akun. Hanya empat sumber tersambung ke ekspor; tiga kartu rencana tidak mempunyai aliran data nyata.",
+      "steps": [
+        {
+          "node": "ambil.atur",
+          "note": "SocialCrawler membaca sumber aktif dari konfigurasi dan mengatur deadline, jeda, retry serta dedup."
+        },
+        {
+          "node": "ambil.youtube",
+          "note": "YouTube: yt-dlp mengambil video dan komentar."
+        },
+        {
+          "node": "ambil.reddit",
+          "note": "Reddit: Reddrix mengambil thread dan balasan."
+        },
+        {
+          "node": "ambil.instagram",
+          "note": "Instagram: Instaloader dengan patch web mengambil post dan komentar."
+        },
+        {
+          "node": "ambil.twitter",
+          "note": "X / Twitter: Scweet mengambil post dan balasan."
+        },
+        {
+          "node": "ambil.tiktok",
+          "note": "TikTok baru tersedia pada UI/simulasi. Adapter Python belum ada."
+        },
+        {
+          "node": "ambil.threads",
+          "note": "Threads baru tersedia pada UI/simulasi. Adapter Python belum ada."
+        },
+        {
+          "node": "ambil.facebook",
+          "note": "Facebook baru tersedia pada UI/simulasi. Adapter Python belum ada."
+        },
+        {
+          "node": "ambil.ekspor",
+          "note": "Keempat backend nyata menyimpan hasil dalam kontrak Excel/audit bersama."
+        }
+      ]
+    },
+    {
+      "id": "persiapan",
+      "title": "03 · Dari Excel menjadi korpus",
+      "description": "Dedup record dan dedup fitur kalimat mempunyai tujuan berbeda; setiap kemunculan dan asal tetap tersimpan.",
+      "steps": [
+        {
+          "node": "data.raw",
+          "note": "Batch crawler menghasilkan Excel serta catatan audit."
+        },
+        {
+          "node": "alat.gabung",
+          "note": "Gabungkan berdasarkan platform/jenis/ID asli. Teks sama dari record berbeda tetap dipertahankan."
+        },
+        {
+          "node": "data.merged",
+          "note": "Hasil terverifikasi: 34.764 record unik dari empat platform, tanpa ID ganda."
+        },
+        {
+          "node": "data.prepare",
+          "note": "Pilih 32.238 komentar/balasan dan lakukan pemisahan kalimat dengan posisi teks."
+        },
+        {
+          "node": "data.sentences",
+          "note": "Terdapat 53.332 kemunculan, mewakili 52.450 teks unik. Ini pangkal cabang sebelum dan setelah penyaringan."
+        }
+      ]
+    },
+    {
+      "id": "clustering-sebelum",
+      "title": "04 · Clustering SEBELUM penyaringan",
+      "description": "Tahapan diimplementasikan oleh SocialNLPClusterer yang sama. Evaluasi berada di dalam pencarian kandidat; ringkasan ini menampilkan jalur kandidat yang terpilih.",
+      "steps": [
+        {
+          "node": "data.sentences",
+          "note": "Tanpa penyaringan konteks: seluruh kalimat hasil persiapan dasar diteruskan."
+        },
+        {
+          "node": "sebelum.input",
+          "note": "52.450 teks unik menjadi fitur; semua kemunculan tetap terlacak."
+        },
+        {
+          "node": "sebelum.encode",
+          "note": "Encode SBERT pralatih 384 dimensi dan normalkan vektor. Tidak ada fine-tuning bobot."
+        },
+        {
+          "node": "sebelum.umap",
+          "note": "Fit UMAP 10 dimensi pada seed 42 dan 43; dua proyeksi dipakai untuk uji kestabilan."
+        },
+        {
+          "node": "sebelum.dbscan",
+          "note": "Uji 15 pasangan eps/min_samples pada tiap seed. Kandidat utama terpilih memiliki 319 kelompok DBSCAN; noise tetap -1."
+        },
+        {
+          "node": "sebelum.ward",
+          "note": "Untuk setiap kandidat yang cukup kelompok, gabungkan utuh memakai Ward berbobot sampai 20 topik. Snapshot terpilih: 319 → 20."
+        },
+        {
+          "node": "sebelum.evaluate",
+          "note": "Bandingkan geometri, kestabilan dan cakupan; hitung c_v untuk kandidat yang masih bisa menang. Hasil terpilih mean c_v 0,4243; bila tak ada yang ≥0,4, hentikan publikasi."
+        },
+        {
+          "node": "sebelum.describe",
+          "note": "Tetapkan keyword c-TF-IDF dan contoh terdekat centroid; kembalikan label ke kemunculan dan sumber."
+        },
+        {
+          "node": "analisis.narasi",
+          "note": "Gemini menerima 10 keyword berbobot positif dan 10 contoh per topik, lalu menulis kalimat topik beserta deskripsi."
+        },
+        {
+          "node": "berkas.before",
+          "note": "Simpan hasil, metrik dan narasi dalam snapshot terpisah dengan manifest checksum."
+        },
+        {
+          "node": "dashboard.select",
+          "note": "Radio dashboard memilih snapshot ini; tidak melakukan fit lagi."
+        }
+      ]
+    },
+    {
+      "id": "clustering-setelah",
+      "title": "05 · Clustering SETELAH penyaringan",
+      "description": "Tahapan diimplementasikan oleh SocialNLPClusterer yang sama. Evaluasi berada di dalam pencarian kandidat; ringkasan ini menampilkan jalur kandidat yang terpilih.",
+      "steps": [
+        {
+          "node": "data.sentences",
+          "note": "Mulai dari 53.332 kemunculan pada korpus yang sama."
+        },
+        {
+          "node": "relevansi.context",
+          "note": "Cocokkan kalimat dengan root/parent terverifikasi; konteks tidak menggantikan teks target."
+        },
+        {
+          "node": "analisis.relevansi",
+          "note": "Bandingkan makna pendidikan, interaksi umum dan luar lingkup. Kasus belum pasti tidak ikut clustering."
+        },
+        {
+          "node": "relevansi.decisions",
+          "note": "Semua label dan alasan disimpan. Hanya 10.496 kemunculan relevan lolos."
+        },
+        {
+          "node": "relevansi.accepted",
+          "note": "Subset menjadi 10.380 teks unik; sumber lengkap tetap dipertahankan."
+        },
+        {
+          "node": "setelah.input",
+          "note": "10.380 teks unik menjadi fitur; semua kemunculan tetap terlacak."
+        },
+        {
+          "node": "setelah.encode",
+          "note": "Encode SBERT pralatih 384 dimensi dan normalkan vektor. Tidak ada fine-tuning bobot. Embedding subset boleh digunakan ulang setelah pemeriksaan identitas lengkap."
+        },
+        {
+          "node": "setelah.umap",
+          "note": "Fit UMAP 10 dimensi pada seed 42 dan 43; dua proyeksi dipakai untuk uji kestabilan."
+        },
+        {
+          "node": "setelah.dbscan",
+          "note": "Uji 15 pasangan eps/min_samples pada tiap seed. Kandidat utama terpilih memiliki 66 kelompok DBSCAN; noise tetap -1."
+        },
+        {
+          "node": "setelah.ward",
+          "note": "Untuk setiap kandidat yang cukup kelompok, gabungkan utuh memakai Ward berbobot sampai 20 topik. Snapshot terpilih: 66 → 20."
+        },
+        {
+          "node": "setelah.evaluate",
+          "note": "Bandingkan geometri, kestabilan dan cakupan; hitung c_v untuk kandidat yang masih bisa menang. Hasil terpilih mean c_v 0,4733; bila tak ada yang ≥0,4, hentikan publikasi."
+        },
+        {
+          "node": "setelah.describe",
+          "note": "Tetapkan keyword c-TF-IDF dan contoh terdekat centroid; kembalikan label ke kemunculan dan sumber."
+        },
+        {
+          "node": "analisis.narasi",
+          "note": "Gemini menerima 10 keyword berbobot positif dan 10 contoh per topik, lalu menulis kalimat topik beserta deskripsi."
+        },
+        {
+          "node": "berkas.after",
+          "note": "Simpan hasil, metrik dan narasi dalam snapshot terpisah dengan manifest checksum."
+        },
+        {
+          "node": "dashboard.select",
+          "note": "Radio dashboard memilih snapshot ini; tidak melakukan fit lagi."
+        }
+      ]
+    },
+    {
+      "id": "bandingkan",
+      "title": "06 · Dua snapshot ke dashboard",
+      "description": "Hasil sudah selesai; mengganti radio tidak menjalankan crawler, model, atau API Gemini.",
+      "steps": [
+        {
+          "node": "berkas.before",
+          "note": "Sebelum: 20 topik, 53.332 kemunculan, mean c_v 0,4243; 9 topik individual di bawah 0,4."
+        },
+        {
+          "node": "berkas.after",
+          "note": "Setelah: 20 topik, 10.496 kemunculan, mean c_v 0,4733; 7 topik individual di bawah 0,4."
+        },
+        {
+          "node": "config/dashboard.json",
+          "note": "Konfigurasi menyimpan path before dan after. Ini memilih dua run, bukan mencampur anggotanya."
+        },
+        {
+          "node": "dashboard.select",
+          "note": "Pilih radio Sebelum penyaringan atau Setelah penyaringan; loader memeriksa bundle yang dipilih."
+        },
+        {
+          "node": "dashboard.views",
+          "note": "Grafik, keyword, deskripsi Gemini dan bukti sumber mengikuti snapshot pilihan. Nomor topik tidak otomatis sepadan antar-run."
+        }
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "node": "ambil",
+      "title": "Mulai dari tujuh platform",
+      "note": "Buka kartu ini untuk membedakan empat backend nyata dan tiga sumber yang masih direncanakan."
+    },
+    {
+      "node": "data",
+      "title": "Hasil crawling tidak langsung menjadi topik",
+      "note": "Excel digabung berdasarkan ID, lalu komentar/balasan dipecah menjadi kalimat dengan asal yang tetap terlacak."
+    },
+    {
+      "node": "sebelum",
+      "title": "Cabang A: sebelum penyaringan",
+      "note": "52.450 teks unik melewati SBERT, UMAP, DBSCAN dan Ward. Pilih flow 04 untuk mengikuti tiap tahap."
+    },
+    {
+      "node": "relevansi",
+      "title": "Cabang B dimulai dari konteks",
+      "note": "Hanya 10.496 kemunculan berlabel relevan diteruskan; semua keputusan lainnya tetap ada dalam audit."
+    },
+    {
+      "node": "setelah",
+      "title": "Cabang B: clustering dihitung ulang",
+      "note": "10.380 teks unik dikelompokkan kembali menjadi 20 topik. Pilih flow 05 untuk melihat tahap lengkapnya."
+    },
+    {
+      "node": "berkas",
+      "title": "Gemini menjelaskan hasil yang selesai",
+      "note": "Keyword dan contoh kalimat masuk ke Gemini. CSV narasi dan bundle sebelum/setelah tetap terpisah."
+    },
+    {
+      "node": "dashboard",
+      "title": "Pilih hasil untuk dibaca",
+      "note": "Radio sebelum/setelah memuat snapshot tersimpan. Dashboard tidak melatih ulang model."
+    }
+  ],
+  "annotations": [
+    {
+      "path": "Crawler/Frontend/src/shared/api.ts",
+      "note": "Penghubung permintaan sudah tersedia, tetapi server untuk menerima permintaan ini belum ada di repository.",
+      "tags": [
+        "belum tersambung"
+      ]
+    },
+    {
+      "path": "Dashboard/app.py",
+      "note": "Membaca hasil tersimpan. Tombol pembandingan tidak menjalankan pelatihan atau memanggil Gemini lagi.",
+      "tags": [
+        "hanya membaca"
+      ]
+    },
+    {
+      "path": "MachineLearning/social_nlp.py",
+      "note": "Satu implementasi untuk dua cabang. fit_excel memanggil prepare_excel → encode → compare → describe_topics; compare mencakup UMAP, DBSCAN, Ward dan seleksi coherence. Encoder SBERT tetap pralatih.",
+      "tags": [
+        "Dua jalur clustering"
+      ]
+    },
+    {
+      "path": "Crawler/Backend/social_crawler.py",
+      "note": "Backend nyata tersedia untuk YouTube, Reddit, Instagram dan X. Pilihan TikTok, Threads serta Facebook pada UI belum mempunyai adapter di koordinator ini.",
+      "tags": [
+        "Empat backend nyata"
+      ]
+    }
+  ]
+}

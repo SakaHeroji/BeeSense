@@ -1,0 +1,28 @@
+{
+  "files": {
+    "Crawler/Frontend/src/features/Automatic.tsx": {
+      "name": "Rencana crawling otomatis",
+      "description": "Membantu memilih sumber, keyword, target, dan dataset pembanding sebelum memulai pekerjaan."
+    },
+    "Crawler/Frontend/src/features/DatasetView.tsx": {
+      "name": "Penjelajah hasil pengambilan",
+      "description": "Menampilkan record hasil beserta pencarian, penyaringan sumber, ekspor, dan pemilihan bahan analisis."
+    },
+    "Crawler/Frontend/src/features/History.tsx": {
+      "name": "Riwayat pengambilan",
+      "description": "Menampilkan pekerjaan sebelumnya agar pengguna dapat membuka status dan hasilnya kembali."
+    },
+    "Crawler/Frontend/src/features/JobDetail.tsx": {
+      "name": "Pemantau pekerjaan crawler",
+      "description": "Menampilkan kemajuan per sumber, status akses, tindakan menghentikan pekerjaan, dan ringkasan hasil."
+    },
+    "Crawler/Frontend/src/features/Manual.tsx": {
+      "name": "Masukan URL manual",
+      "description": "Memeriksa daftar tautan yang dimasukkan pengguna dan menyediakan pintu masuk untuk data survei."
+    },
+    "Crawler/Frontend/src/features/Survey.tsx": {
+      "name": "Pemeriksa impor survei",
+      "description": "Membaca jawaban survei, menunjukkan masalah pada record, dan meminta peninjauan sebelum penyimpanan."
+    }
+  }
+}

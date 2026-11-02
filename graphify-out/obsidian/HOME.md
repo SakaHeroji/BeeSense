@@ -7,7 +7,9 @@ tags: [beesense, dashboard]
 
 ## Peta cara kerja
 
-[[Peta Cara Kerja BeeSense]] menjelaskan alur pengambilan, penyaringan, pembentukan topik, Gemini, dan dashboard dengan bahasa sehari-hari. [Floor plan interaktif lokal](http://127.0.0.1:4378) memuat 139 berkas dan tiga alur kerja. Layar crawler masih simulasi; proses pengambilan nyata berjalan melalui perintah Python.
+[[Peta Cara Kerja BeeSense]] menjelaskan alur pengambilan, penyaringan, pembentukan topik, Gemini, dan dashboard dengan bahasa sehari-hari. [Floor plan interaktif lokal](http://127.0.0.1:4378) memuat 139 berkas dan enam alur kerja. Layar crawler masih simulasi; proses pengambilan nyata berjalan melalui perintah Python.
+
+[[Alur Clustering Sebelum dan Setelah Penyaringan]] memperlihatkan percabangan dari workbook yang sama: 52.450 teks unik tanpa mask atau 10.380 teks unik yang relevan, masing-masing melalui SBERT → UMAP → DBSCAN → Ward → 20 topik → evaluasi → Gemini → dashboard. Ketujuh platform ditampilkan dengan status empat backend nyata dan tiga UI/rencana. Di floorplan, pilih **Flows → 04** atau **05** untuk rincian clustering.
 
 [[TwitterCrawler Scweet]] menambahkan class X/Twitter mandiri dengan konfigurasi percobaan 30 menit dan kontrak Excel yang sama. Kini terhubung ke SocialCrawler 1.7.0 dengan preset Twitter-only 3 jam/1.000 post, penggabungan native ID, NLP dan dashboard. Hasil uji live dicatat pada catatan tersebut.
 

@@ -33,16 +33,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 2 edges to [[_COMMUNITY_app.py]]
-- 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
 - 2 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 1 edge to [[_COMMUNITY_Alur Dataset Model Dashboard_2]]
 - 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
 - 1 edge to [[_COMMUNITY_thread_url]]
 
 ## Top bridge nodes
 - [[BeeSense startup, verification and coherence training runbook]] - degree 7, connects to 3 communities
-- [[Reorganized BeeSense package and supporting-file structure]] - degree 6, connects to 3 communities
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - degree 4, connects to 3 communities
+- [[Reorganized BeeSense package and supporting-file structure]] - degree 6, connects to 2 communities
 - [[Package module CLIs retain repository-root path semantics]] - degree 3, connects to 2 communities

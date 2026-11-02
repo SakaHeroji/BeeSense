@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[Cara kerja BeeSense]] - `references` [EXTRACTED]
-- [[Crawler frontend simulation]] - `references` [EXTRACTED]
-- [[Frontend request receiver not implemented in repository]] - `conceptually_related_to` [EXTRACTED]
+- [[CrawlerFrontend simulation]] - `references` [EXTRACTED]
+- [[Frontend backend connection unimplemented]] - `conceptually_related_to` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

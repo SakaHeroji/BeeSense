@@ -1,0 +1,8 @@
+{
+  "files": {
+    "Crawler/Frontend/src/shared/demo.ts": {
+      "name": "Simulasi pekerjaan crawler",
+      "description": "Meniru sesi, kemajuan pekerjaan, survei, dan dataset agar layar bisa dicoba tanpa pengambilan nyata."
+    }
+  }
+}

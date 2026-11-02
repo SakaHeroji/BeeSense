@@ -1,0 +1,24 @@
+{
+  "files": {
+    "Crawler/Backend/Youtube/__init__.py": {
+      "name": "Bagian sumber YouTube",
+      "description": "Membuat bagian ini dapat dipanggil oleh komponen Python lainnya."
+    },
+    "Crawler/Backend/Youtube/config_youtube.json": {
+      "name": "Pengaturan pencarian YouTube",
+      "description": "Menentukan pencarian, batas pengambilan, dan lokasi hasil untuk menjalankan sumber YouTube secara terpisah."
+    },
+    "Crawler/Backend/Youtube/contract.json": {
+      "name": "Format catatan YouTube",
+      "description": "Menetapkan susunan catatan yang digunakan untuk menyimpan isi, asal, dan hubungan data YouTube."
+    },
+    "Crawler/Backend/Youtube/crawl_youtube.py": {
+      "name": "Pengambil video dan komentar",
+      "description": "Mencari video YouTube serta mengambil komentar dengan batas waktu dan pencatatan status pengambilan."
+    },
+    "Crawler/Backend/Youtube/social_common.py": {
+      "name": "Aturan penyimpanan YouTube",
+      "description": "Membentuk record, hubungan, dan workbook YouTube dengan struktur hasil yang dapat diperiksa kembali."
+    }
+  }
+}

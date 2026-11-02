@@ -1,0 +1,8 @@
+{
+  "files": {
+    "scripts/generate_topic_narratives.py": {
+      "name": "Tambahkan deskripsi ke model",
+      "description": "Menambahkan narasi Gemini ke hasil pelatihan tersimpan dengan mempertahankan seluruh kelompok dan berkas model asal."
+    }
+  }
+}

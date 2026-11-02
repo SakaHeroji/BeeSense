@@ -11,7 +11,7 @@ tags:
 # Operator-run artifact workflow
 
 ## Connections
-- [[Acquisition → IDchecksum checks → merged workbook → training → dashboard]] - `semantically_similar_to` [INFERRED]
 - [[Cara kerja BeeSense]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer.fit_excel() pipeline]] - `conceptually_related_to` [INFERRED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

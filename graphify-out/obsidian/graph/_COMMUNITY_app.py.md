@@ -37,13 +37,13 @@ SORT file.name ASC
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Render Dashboard Streamlit]]
 - 3 edges to [[_COMMUNITY_thread_url]]
-- 3 edges to [[_COMMUNITY_app.py_1]]
+- 3 edges to [[_COMMUNITY_thread_url_1]]
 - 2 edges to [[_COMMUNITY_Alur Dataset Model Dashboard_1]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
 - 1 edge to [[_COMMUNITY_Penggabungan Dataset]]
 - 1 edge to [[_COMMUNITY_topic_sentence_export.py]]
-- 1 edge to [[_COMMUNITY_thread_url_1]]
-- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
+- 1 edge to [[_COMMUNITY_thread_url_2]]
+- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_3]]
 - 1 edge to [[_COMMUNITY_Pengujian Analisis Dashboard]]
 
 ## Top bridge nodes

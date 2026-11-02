@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Kontrak Record Reddit"
+community: "Pengambilan HTML Reddit"
 location: "L621"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Pengambilan_HTML_Reddit
 ---
 
 # _configuration()
@@ -20,4 +20,4 @@ tags:
 - [[media_url()]] - `calls` [EXTRACTED]
 - [[utc_datetime()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit

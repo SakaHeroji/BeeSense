@@ -76,12 +76,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 6 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
 - 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
 - 1 edge to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_Riwayat Sesi Instagram]]
 - 1 edge to [[_COMMUNITY_topic_sentence_export.py]]
-- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
 
 ## Top bridge nodes
 - [[Active20-topic Instagram-inclusive model configuration]] - degree 11, connects to 2 communities

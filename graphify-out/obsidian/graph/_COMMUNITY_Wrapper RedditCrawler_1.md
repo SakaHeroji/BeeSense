@@ -34,15 +34,15 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 5 edges to [[_COMMUNITY_Worker Reddrix]]
+- 4 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 - 3 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 2 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
+- 2 edges to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_3]]
-- 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
 
 ## Top bridge nodes
-- [[FakeReddrix]] - degree 13, connects to 4 communities
+- [[FakeReddrix]] - degree 13, connects to 5 communities
 - [[test_reddit_crawler.py]] - degree 10, connects to 4 communities
 - [[.worker()_1]] - degree 4, connects to 3 communities
 - [[.test_missing_parent_and_timezone_are_preserved_as_unknown()]] - degree 3, connects to 2 communities

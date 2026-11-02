@@ -1,0 +1,8 @@
+{
+  "files": {
+    "scripts/verify_dashboard_data.py": {
+      "name": "Periksa paket publikasi",
+      "description": "Memeriksa identitas record, checksum, keputusan relevansi, serta kelengkapan berkas yang akan dipublikasikan."
+    }
+  }
+}

@@ -81,14 +81,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 8 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
+- 6 edges to [[_COMMUNITY_Akuisisi YouTube]]
 - 5 edges to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 5 edges to [[_COMMUNITY_Kontrak Record Reddit]]
 - 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 2 edges to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
 - 1 edge to [[_COMMUNITY_Worker Instaloader]]
-- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_4]]
+- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]

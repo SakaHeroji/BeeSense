@@ -1,0 +1,16 @@
+{
+  "files": {
+    "Crawler/Frontend/src/app/App.tsx": {
+      "name": "Pemilih halaman crawler",
+      "description": "Menghubungkan alamat halaman dengan crawler otomatis, crawler manual, dan rincian pekerjaan."
+    },
+    "Crawler/Frontend/src/app/Shell.tsx": {
+      "name": "Menu dan bingkai kerja",
+      "description": "Menampilkan navigasi, informasi sesi, dan bingkai bersama untuk semua halaman crawler."
+    },
+    "Crawler/Frontend/src/main.tsx": {
+      "name": "Pembuka layar crawler",
+      "description": "Memasang layar crawler ke halaman browser dan memuat tampilannya."
+    }
+  }
+}

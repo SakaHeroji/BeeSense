@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Koordinator Backend Sosial"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L2312"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Koordinator_Backend_Sosial
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # main()
@@ -18,4 +18,4 @@ tags:
 - [[SocialCrawler]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Koordinator_Backend_Sosial
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

@@ -1,23 +1,27 @@
 ---
 type: community
-cohesion: 0.25
-members: 8
+cohesion: 0.32
+members: 12
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.25 - loosely connected
-**Members:** 8 nodes
+**Cohesion:** 0.32 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[Baseline identity exclusion]] - rationale - docs/crawler/SOCIAL_CRAWLER.md
-- [[Native X identity]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Social campaign 29 October 2026]] - concept - docs/crawler/SOCIAL_CRAWLER.md
-- [[Social crawler guide]] - document - docs/crawler/SOCIAL_CRAWLER.md
-- [[Twitter crawler guide]] - document - docs/crawler/TWITTER_CRAWLER.md
-- [[Verified conversation root provenance]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[merge_social_datasets]] - code - docs/crawler/TWITTER_CRAWLER.md
-- [[native_roots.json]] - document - docs/crawler/TWITTER_CRAWLER.md
+- [[Accessible dashboard interactions]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Active outputsnlp_20261102_relevance_topics20_gemini_02]] - concept - README.md
+- [[Counting units and topic share]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Dashboard BeeSense]] - document - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Dashboard validation]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Filters preserve full-model memberships and scores]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Five dashboard views]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - code - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Temporal support and source audit]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Web Interface Guidelines]] - document - docs/dashboard/DASHBOARD_DESIGN.md
+- [[configsocial_nlp.json]] - concept - README.md
+- [[streamlit_apps.py_1]] - code - README.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,12 +31,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 5 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
+- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
+- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
+- 3 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_9]]
+- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
 
 ## Top bridge nodes
-- [[Social campaign 29 October 2026]] - degree 3, connects to 1 community
-- [[Social crawler guide]] - degree 3, connects to 1 community
-- [[Native X identity]] - degree 3, connects to 1 community
-- [[Twitter crawler guide]] - degree 3, connects to 1 community
-- [[Baseline identity exclusion]] - degree 2, connects to 1 community
+- [[Active outputsnlp_20261102_relevance_topics20_gemini_02]] - degree 8, connects to 4 communities
+- [[Dashboard BeeSense]] - degree 16, connects to 3 communities
+- [[streamlit_apps.py_1]] - degree 5, connects to 3 communities
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - degree 10, connects to 2 communities
+- [[configsocial_nlp.json]] - degree 5, connects to 2 communities

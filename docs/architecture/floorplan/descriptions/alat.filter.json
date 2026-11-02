@@ -1,0 +1,8 @@
+{
+  "files": {
+    "scripts/filter_context_relevance.py": {
+      "name": "Jalankan penyaringan konteks",
+      "description": "Menjalankan penyaringan pada hasil persiapan kalimat dan menyimpan dataset keputusan baru tanpa menimpa sumber."
+    }
+  }
+}

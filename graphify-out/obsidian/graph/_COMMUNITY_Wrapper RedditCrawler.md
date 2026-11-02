@@ -38,12 +38,12 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
-- 5 edges to [[_COMMUNITY_Koordinator Backend Sosial]]
-- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
-- 2 edges to [[_COMMUNITY_Batas Akuisisi Reddit]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 5 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
+- 3 edges to [[_COMMUNITY_Batas Akuisisi Reddit_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_1]]
+- 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit]]
 - 1 edge to [[_COMMUNITY_Batas Akuisisi Reddit_3]]
 - 1 edge to [[_COMMUNITY_Worker Reddrix]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]

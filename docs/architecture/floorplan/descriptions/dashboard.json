@@ -1,0 +1,16 @@
+{
+  "files": {
+    "Dashboard/__init__.py": {
+      "name": "Bagian penjelajah hasil",
+      "description": "Membuat bagian ini dapat dipanggil oleh komponen Python lainnya."
+    },
+    "Dashboard/app.py": {
+      "name": "Penjelajah topik dan bukti",
+      "description": "Menampilkan grafik, deskripsi Gemini, kalimat sumber, dan pilihan hasil sebelum atau sesudah penyaringan."
+    },
+    "streamlit_apps.py": {
+      "name": "Pembuka dashboard online",
+      "description": "Membuka dashboard yang sama saat dijalankan lokal maupun melalui Streamlit Cloud."
+    }
+  }
+}

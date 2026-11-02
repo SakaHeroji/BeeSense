@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Koordinator Backend Sosial"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L893"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Koordinator_Backend_Sosial
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Read roots and all global X IDs; never alter historical workbooks.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._existing_posts()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Koordinator_Backend_Sosial
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

@@ -1,0 +1,8 @@
+{
+  "files": {
+    "Crawler/Backend/social_export.py": {
+      "name": "Penyama hasil ke Excel",
+      "description": "Menulis hasil berbagai crawler ke format bersama dan menjaga nilai teks agar aman dibuka sebagai spreadsheet."
+    }
+  }
+}

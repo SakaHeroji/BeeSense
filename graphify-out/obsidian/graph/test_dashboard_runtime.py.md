@@ -1,12 +1,12 @@
 ---
 source_file: "tests/cloud/test_dashboard_runtime.py"
 type: "code"
-community: "Model dan Pengujian NLP"
+community: "topic_sentence_export.py"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/topic_sentence_exportpy
 ---
 
 # test_dashboard_runtime.py
@@ -18,4 +18,4 @@ tags:
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[topic_narratives.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy

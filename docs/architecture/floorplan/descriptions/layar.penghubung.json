@@ -1,0 +1,28 @@
+{
+  "files": {
+    "Crawler/Frontend/src/shared/api.ts": {
+      "name": "Penghubung layar ke server",
+      "description": "Mengirim permintaan layar ke alamat server yang ditentukan atau memilih penghubung data contoh."
+    },
+    "Crawler/Frontend/src/shared/context.ts": {
+      "name": "Informasi bersama layar",
+      "description": "Membagikan informasi aplikasi dan kesalahan masukan agar halaman memakai keadaan yang sama."
+    },
+    "Crawler/Frontend/src/shared/domain.ts": {
+      "name": "Aturan masukan crawler",
+      "description": "Memeriksa konfigurasi, tautan, sumber, dan format tampilan yang digunakan oleh halaman crawler."
+    },
+    "Crawler/Frontend/src/shared/hooks.ts": {
+      "name": "Perilaku bersama halaman",
+      "description": "Menjaga waktu, ukuran layar, pencarian, dan pilihan pada alamat halaman tetap sesuai tindakan pengguna."
+    },
+    "Crawler/Frontend/src/shared/types.ts": {
+      "name": "Bentuk data antarhalaman",
+      "description": "Menyamakan bentuk pekerjaan, pengaturan, hasil, dan jawaban survei yang dipertukarkan layar."
+    },
+    "Crawler/Frontend/src/shared/ui.tsx": {
+      "name": "Elemen tampilan bersama",
+      "description": "Menyediakan tombol, dialog, formulir, penanda status, dan pesan yang digunakan di seluruh layar."
+    }
+  }
+}

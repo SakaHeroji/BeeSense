@@ -1,0 +1,16 @@
+{
+  "files": {
+    "scripts/build_topic_sentences.mjs": {
+      "name": "Buat workbook kalimat topik",
+      "description": "Menyusun workbook topik dan kalimat dari berkas masukan yang sudah disiapkan untuk ekspor."
+    },
+    "scripts/relevance_dashboard.py": {
+      "name": "Pembanding model lokal",
+      "description": "Membuka hasil penyaringan atau model sebelumnya pada dashboard lokal untuk meninjau perbedaannya."
+    },
+    "scripts/topic_sentence_export.py": {
+      "name": "Siapkan Excel kalimat topik",
+      "description": "Menyiapkan kalimat asli per topik dan memeriksa Excel sebelum menggabungkannya ke hasil model versi baru."
+    }
+  }
+}

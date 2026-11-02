@@ -1,0 +1,8 @@
+{
+  "files": {
+    "MachineLearning/__init__.py": {
+      "name": "Bagian analisis kalimat",
+      "description": "Membuat bagian ini dapat dipanggil oleh komponen Python lainnya."
+    }
+  }
+}

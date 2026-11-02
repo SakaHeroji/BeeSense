@@ -1,0 +1,8 @@
+{
+  "files": {
+    "scripts/merge_social_datasets.py": {
+      "name": "Gabungkan hasil crawling",
+      "description": "Menggabungkan workbook dan menyingkirkan ID post atau komentar yang berulang sambil mencatat asal setiap record."
+    }
+  }
+}

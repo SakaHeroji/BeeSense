@@ -1,16 +1,15 @@
 ---
 type: community
-cohesion: 0.21
-members: 28
+cohesion: 0.25
+members: 22
 ---
 
 # Pengujian Parser Reddit
 
-**Cohesion:** 0.21 - loosely connected
-**Members:** 28 nodes
+**Cohesion:** 0.25 - loosely connected
+**Members:** 22 nodes
 
 ## Members
-- [[.__init__()_10]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.has_class()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -26,18 +25,13 @@ members: 28
 - [[.test_09_search_uses_recognized_cards_not_sidebar_links()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_11_missing_parent_remains_unknown()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[assert_accessible()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[content_node()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[Whole-post comment budget includes replies; nested replies share thread cap.]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[bounded_events()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[fixture_page()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[rendered_text()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[source_time()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[walk()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[worker()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -47,16 +41,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 11 edges to [[_COMMUNITY_Struktur DOM Reddit]]
-- 7 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 5 edges to [[_COMMUNITY_Kontrak Record Reddit_2]]
-- 4 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 15 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 11 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 8 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 5 edges to [[_COMMUNITY_Parsing Identitas Reddit_3]]
+- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit_2]]
 - 3 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
 
 ## Top bridge nodes
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
-- [[RedditTests]] - degree 20, connects to 3 communities
-- [[.thread()]] - degree 22, connects to 2 communities
-- [[fixture_page()]] - degree 15, connects to 2 communities
+- [[RedditTests]] - degree 20, connects to 6 communities
+- [[.thread()]] - degree 22, connects to 4 communities
+- [[worker()]] - degree 10, connects to 4 communities
+- [[fixture_page()]] - degree 15, connects to 3 communities
+- [[RedditHtmlParser]] - degree 20, connects to 2 communities

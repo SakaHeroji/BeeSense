@@ -35,7 +35,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_2]]
 
 ## Top bridge nodes
 - [[ResumeTests]] - degree 16, connects to 1 community

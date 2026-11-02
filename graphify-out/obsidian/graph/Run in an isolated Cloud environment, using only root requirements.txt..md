@@ -1,12 +1,12 @@
 ---
 source_file: "tests/cloud/test_dashboard_runtime.py"
 type: "rationale"
-community: "Model dan Pengujian NLP"
+community: "topic_sentence_export.py"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/topic_sentence_exportpy
 ---
 
 # Run in an isolated Cloud environment, using only root requirements.txt.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_dashboard_runtime.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/rationale #graphify/EXTRACTED #community/topic_sentence_exportpy

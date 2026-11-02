@@ -1,0 +1,12 @@
+{
+  "files": {
+    "MachineLearning/context_relevance.py": {
+      "name": "Penyaring konteks pendidikan",
+      "description": "Memilih kalimat yang relevan dengan memperhatikan konteks asalnya dan menyimpan setiap keputusan penyaringan."
+    },
+    "MachineLearning/relevance_semantic.py": {
+      "name": "Pembanding makna kalimat",
+      "description": "Membandingkan makna kalimat dengan contoh relevan, percakapan umum, dan pembahasan di luar lingkup secara lokal."
+    }
+  }
+}

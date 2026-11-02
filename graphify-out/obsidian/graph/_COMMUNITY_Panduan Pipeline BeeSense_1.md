@@ -1,28 +1,34 @@
 ---
 type: community
-cohesion: 0.17
-members: 13
+cohesion: 0.22
+members: 19
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.17 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 19 nodes
 
 ## Members
-- [[Bounded native-ID evidence and explicit uncertainty]] - rationale - graphify-out/obsidian/Crawler Selenium.md
-- [[Fresh Chrome guest session per operation]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Historical Selenium implementation preset500rootsplatform andonehour]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Obsidian Crawler Selenium architecture]] - document - graphify-out/obsidian/Crawler Selenium.md
-- [[Official Selenium Manager ChromeDriver selection]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
-- [[Relative dates remain calendar estimates]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Separate non-root crawler container with Selenium Grid]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Shared BundleSink and dual-workbook export path]] - concept - graphify-out/obsidian/Crawler Selenium.md
-- [[Shared rendered_thread_dom.mjs extraction]] - concept - Crawler/Backend/Reddit/README_playwright.md
-- [[SocialCrawlerSelenium Guide]] - document - docs/crawler/SELENIUM_CRAWLER.md
-- [[Worker hard deadline preserves streamed partial events]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[Candidate quality gate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Coherence c_v protocol]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[DBSCAN Euclidean density clustering]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Explanations and descriptive trends]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Gensim CoherenceModel]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Manifest and atomic artifact contract]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Multilingual MiniLM SBERT model card]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Multilingual SBERT encoder]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Overflow-window sentence encoding]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[Silhouette and ARI evaluation]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - code - docs/machine-learning/SOCIAL_NLP.md
+- [[Twitter native root audit]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[UMAP projection]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[Weighted Ward topic reduction]] - rationale - docs/machine-learning/SOCIAL_NLP.md
+- [[beesense-sentence-clusters2]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[c-TF-IDF topic terms]] - concept - docs/machine-learning/SOCIAL_NLP.md
+- [[prepare_excel (MachineLearningsocial_nlp.py)]] - code - docs/machine-learning/SOCIAL_NLP.md
+- [[scikit-learn DBSCAN documentation]] - document - docs/machine-learning/SOCIAL_NLP.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,12 +38,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_5]]
-- 1 edge to [[_COMMUNITY_Koordinator Backend Sosial]]
+- 6 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
+- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
+- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
+- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
 
 ## Top bridge nodes
-- [[SocialCrawlerSelenium Guide]] - degree 11, connects to 2 communities
-- [[Obsidian Crawler Selenium architecture]] - degree 5, connects to 1 community
-- [[Shared rendered_thread_dom.mjs extraction]] - degree 2, connects to 1 community
+- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - degree 29, connects to 4 communities
+- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - degree 9, connects to 1 community
+- [[Candidate quality gate]] - degree 5, connects to 1 community
+- [[Multilingual SBERT encoder]] - degree 4, connects to 1 community
+- [[Overflow-window sentence encoding]] - degree 3, connects to 1 community

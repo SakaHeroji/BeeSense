@@ -32,7 +32,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Pengambilan HTML Reddit]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
 - 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
