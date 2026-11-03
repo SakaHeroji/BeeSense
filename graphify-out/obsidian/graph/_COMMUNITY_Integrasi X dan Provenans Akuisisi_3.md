@@ -1,27 +1,26 @@
 ---
 type: community
-cohesion: 0.23
-members: 12
+cohesion: 0.22
+members: 11
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.23 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 11 nodes
 
 ## Members
-- [[Credential and state isolation]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Native parent preservation]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Network pacing and root cache]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Persistent Scweet worker]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Persistent account state]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Pool cooldown wait]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Scweet 5.8.2_1]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[Terminal access barriers]] - rationale - docs/crawler/TWITTER_CRAWLER.md
-- [[Twitter live trial 31 October 2026]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[Twitter thirty minute preset]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[TwitterCoordinatorWorker_1]] - code - docs/crawler/TWITTER_CRAWLER.md
-- [[TwitterCrawler_1]] - code - docs/crawler/TWITTER_CRAWLER.md
+- [[.__call__()_3]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__call__()_2]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_38]] - code - Crawler/Backend/twitter_crawler.py
+- [[.__init__()_37]] - code - Crawler/Backend/twitter_crawler.py
+- [[._wants_replies()]] - code - Crawler/Backend/twitter_crawler.py
+- [[.close()_5]] - code - Crawler/Backend/twitter_crawler.py
+- [[.close()_4]] - code - Crawler/Backend/twitter_crawler.py
+- [[.requires_network()]] - code - Crawler/Backend/twitter_crawler.py
+- [[Adapt a persistent Scweet worker to SocialCrawler's five-argument protocol.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[ScweetWorker]] - code - Crawler/Backend/twitter_crawler.py
+- [[TwitterCoordinatorWorker]] - code - Crawler/Backend/twitter_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,12 +30,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_7]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_6]]
-- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 7 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
 
 ## Top bridge nodes
-- [[TwitterCrawler_1]] - degree 10, connects to 3 communities
-- [[TwitterCoordinatorWorker_1]] - degree 5, connects to 2 communities
-- [[Pool cooldown wait]] - degree 4, connects to 1 community
-- [[Twitter live trial 31 October 2026]] - degree 4, connects to 1 community
+- [[TwitterCoordinatorWorker]] - degree 7, connects to 1 community
+- [[ScweetWorker]] - degree 6, connects to 1 community
+- [[.__call__()_2]] - degree 3, connects to 1 community
+- [[.__call__()_3]] - degree 2, connects to 1 community
+- [[.close()_5]] - degree 2, connects to 1 community

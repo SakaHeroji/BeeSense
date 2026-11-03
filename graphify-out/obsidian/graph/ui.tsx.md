@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Frontend/src/shared/ui.tsx"
 type: "code"
-community: "Form Akuisisi dan Survei"
+community: "Frontend dan Transaksi Sosmed"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Form_Akuisisi_dan_Survei
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # ui.tsx
 
 ## Connections
-- [[Automatic.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `contains` [EXTRACTED]
 - [[Button()]] - `contains` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
@@ -22,20 +22,20 @@ tags:
 - [[Field()]] - `contains` [EXTRACTED]
 - [[FieldError]] - `imports` [EXTRACTED]
 - [[FieldErrorsContext]] - `imports` [EXTRACTED]
-- [[History.tsx]] - `imports_from` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
 - [[JobStatus]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports_from` [EXTRACTED]
 - [[Notice()]] - `contains` [EXTRACTED]
 - [[Platform]] - `imports` [EXTRACTED]
 - [[PlatformMark()]] - `contains` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[Shell.tsx]] - `imports_from` [EXTRACTED]
 - [[Spinner()]] - `contains` [EXTRACTED]
 - [[Stepper()]] - `contains` [EXTRACTED]
-- [[Survey.tsx]] - `imports_from` [EXTRACTED]
+- [[StorageSettings.tsx]] - `imports_from` [EXTRACTED]
+- [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]
 - [[UnsavedGuard()]] - `contains` [EXTRACTED]
 - [[context.ts]] - `imports_from` [EXTRACTED]
 - [[statusLabels]] - `contains` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -38,6 +38,5 @@ tags:
 - [[New user authorization supersedes historical preparation-only restriction]] - `references` [EXTRACTED]
 - [[Obsidian records bounded retry policy and chronological authorization]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
-- [[configsocial_crawler.json]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

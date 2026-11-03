@@ -2,7 +2,7 @@
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
 community: "Encoding dan Penyimpanan Model"
-location: "L2273"
+location: "L2304"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -7,6 +7,7 @@
 !Crawler/Backend/
 !Crawler/Backend/__init__.py
 !Crawler/Backend/social_crawler.py
+!Crawler/Backend/tiktok_crawler.py
 !Crawler/Backend/twitter_crawler.py
 !Crawler/Backend/instaloader_crawler.py
 !Crawler/Backend/instaloader_browser_patch.py
@@ -27,13 +28,20 @@
 !Crawler/Backend/Reddit/rendered_thread_dom.mjs
 !config/
 !config/social_crawler.json
-!config/reddit_crawler.json
 !requirements/crawler.txt
 !requirements/instaloader.txt
 !requirements/reddrix.txt
 !deployment/docker/Dockerfile.selenium
 !requirements/selenium.txt
 !Crawler/Backend/social_crawler_selenium.py
+
+# Shared universal config and crawler modules used by standalone entry points.
+!Crawler/Backend/storage_config.py
+!Crawler/Backend/crawler_config.py
+!Crawler/Backend/crawler_limits.py
+!Crawler/Backend/scweet_limits.py
+!Crawler/Backend/social_identity.py
+!Crawler/Backend/social_archive.py
 
 # Local credentials and sessions never enter any image build context.
 config/auth.json
@@ -45,4 +53,3 @@ config/auth.json
 Crawler/Frontend/
 
 !requirements/twitter.txt
-!config/social_crawler_twitter_3h.json

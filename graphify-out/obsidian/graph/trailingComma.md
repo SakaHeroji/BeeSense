@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/.prettierrc.json"
 type: "code"
-community: "Format Kode Frontend"
+community: "Frontend dan Transaksi Sosmed"
 location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Format_Kode_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # trailingComma
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.prettierrc.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Format_Kode_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

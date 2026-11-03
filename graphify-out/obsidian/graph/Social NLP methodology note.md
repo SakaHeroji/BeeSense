@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Coherence c_v evaluation protocol]] - `references` [EXTRACTED]
-- [[Multilingual SBERT]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -1,5 +1,7 @@
 # Penyaringan relevansi konteks sebelum clustering
 
+Penjelasan langkah demi langkah dengan contoh dan bahasa sehari-hari tersedia di [Cara BeeSense menyaring kalimat](PROSES_PENYARINGAN_KALIMAT.md).
+
 `ContextRelevanceFilter` pada `MachineLearning/context_relevance.py` membuat keputusan otomatis per kemunculan kalimat. Backend `LocalSemanticBackend` pada `MachineLearning/relevance_semantic.py` memakai encoder SBERT multibahasa pralatih yang sama dengan pipeline NLP. Tidak ada pelabelan setiap record oleh pengguna, training classifier berlabel, atau permintaan API per komentar.
 
 ## Ruang lingkup dan algoritma
@@ -20,7 +22,7 @@ Ambang bersifat sementara dan belum dikalibrasi dengan label manusia. Uji contoh
 
 ## Menjalankan eksperimen
 
-Lingkungan pemrosesan memakai `requirements/sbert.txt`; dashboard memakai `requirements.txt`. Setelah persetujuan pengguna untuk publikasi, `config/social_nlp.json` mengarah ke snapshot tersaring `outputs/nlp_20261102_relevance_topics20_gemini_02/`. Preset Twitter sebelum penyaringan dan snapshot lamanya tetap tersedia untuk rollback. Entry point Streamlit Cloud tetap `streamlit_apps.py`; runtime tidak memakai API key.
+Lingkungan pemrosesan memakai `requirements/sbert.txt`; dashboard memakai `requirements.txt`. Setelah persetujuan pengguna untuk publikasi, `config/social_nlp.json` mengarah ke snapshot tersaring `outputs/nlp_20261102_relevance_topics20_gemini_02/`. Konfigurasi historis tersimpan dalam `summary.json` setiap snapshot; snapshot sebelum penyaringan tetap tersedia untuk pembandingan. Entry point Streamlit Cloud tetap `streamlit_apps.py`; runtime tidak memakai API key.
 
 ```bash
 .venv-sbert/bin/python -m scripts.filter_context_relevance \
@@ -29,7 +31,7 @@ Lingkungan pemrosesan memakai `requirements/sbert.txt`; dashboard memakai `requi
   --output-dir outputs/relevance_20261102_01
 
 .venv-sbert/bin/python -m MachineLearning.social_nlp \
-  --config config/social_nlp_relevance_20261102.json \
+  --config config/social_nlp.json \
   --reuse-embeddings-from outputs/nlp_20261102_twitter_topics20_gemini_01
 
 .venv-dashboard/bin/python -m scripts.relevance_dashboard
@@ -39,7 +41,7 @@ Penyaringan menghasilkan `relevance_decisions.parquet`, `filtered_sentences.parq
 
 Embedding target yang identik dapat digunakan kembali hanya setelah checksum sumber, konfigurasi encoder, sentence ID, teks, dan normalisasi diverifikasi. UMAP, DBSCAN, penggabungan menjadi 20 topik dan evaluasi dijalankan lagi pada kalimat yang lolos. Gate rata-rata c_v ≥0,4 tetap berlaku. Coherence sebelum/sesudah filter memiliki korpus referensi berbeda, sehingga bukan perbandingan kualitas langsung.
 
-Setelah pengguna secara eksplisit meminta deskripsi Gemini untuk 20 topik tersaring, preset eksperimen mengaktifkan Gemini. Setiap topik mengirim 10 keyword c-TF-IDF tertinggi dan 10 kalimat representatif berurutan menurut cosine ke centroid, memakai prompt `beesense-topic-id:2`. Hasil satu kalimat topik beserta paragraf deskripsi disimpan di `outputs/nlp_20261102_relevance_topics20_gemini_02/topic_narratives.csv`. Ini sintesis AI dari bukti terpilih, bukan pengukuran popularitas atau validasi akurasi relevansi.
+Setelah pengguna secara eksplisit meminta deskripsi Gemini untuk 20 topik tersaring, konfigurasi eksperimen mengaktifkan Gemini. Setiap topik mengirim 10 keyword c-TF-IDF tertinggi dan 10 kalimat representatif berurutan menurut cosine ke centroid, memakai prompt `beesense-topic-id:2`. Hasil satu kalimat topik beserta paragraf deskripsi disimpan di `outputs/nlp_20261102_relevance_topics20_gemini_02/topic_narratives.csv`. Ini sintesis AI dari bukti terpilih, bukan pengukuran popularitas atau validasi akurasi relevansi.
 
 Snapshot tanpa narasi `outputs/nlp_20261102_relevance_topics20_01/` tetap utuh. Penambahan narasi menggunakan skrip berikut tanpa menjalankan training, UMAP, atau clustering ulang:
 
@@ -47,7 +49,7 @@ Snapshot tanpa narasi `outputs/nlp_20261102_relevance_topics20_01/` tetap utuh. 
 .venv-sbert/bin/python -m scripts.generate_topic_narratives \
   --source-run outputs/nlp_20261102_relevance_topics20_01 \
   --output-dir outputs/nlp_20261102_relevance_topics20_gemini_02 \
-  --config config/social_nlp_relevance_20261102.json
+  --config config/social_nlp.json
 ```
 
 Direktori contoh sudah terisi; gunakan nama output baru untuk percobaan berikutnya. Skrip menolak overwrite, memvalidasi checksum sumber sebelum/sesudah permintaan, menyalin file fitted apa adanya, dan mempublikasikan bundle secara atomik setelah CSV serta manifest lolos validasi. Dua belas file data/clustering/audit memiliki checksum identik dengan snapshot sebelum narasi. CSV mencakup tepat 20 topik, provenance prompt/model/sumber dan pemakaian token. API key hanya dibaca dari auth lokal yang diabaikan Git; tidak masuk konfigurasi atau bundle. Pembuatan narasi awal sempat ditolak persetujuan otomatis karena cakupan saat itu hanya lokal; permintaan eksplisit berikutnya memberi otorisasi untuk Gemini dan proses berhasil.
@@ -62,7 +64,7 @@ Pilih **Sebelum penyaringan** pada sidebar untuk pembandingan langsung. Untuk me
 .venv-dashboard/bin/python -m scripts.relevance_dashboard --baseline
 ```
 
-Snapshot lama dan workbook gabungan dipertahankan. Konfigurasi sebelum penyaringan tersedia di `config/social_nlp_twitter_20261102.json`; konfigurasi aktif kini memakai preset relevansi setelah pengguna menyetujui publikasi. Cadangan kode sebelum eksperimen disimpan di `output/relevance_experiment_20261102/rollback/`, dengan hash checkpoint pada `baseline.json` di folder induknya. Untuk mengembalikan default repository, salin preset Twitter sebelum penyaringan ke `config/social_nlp.json`, verifikasi bundle, lalu commit/push agar Cloud memuatnya. Publikasi memakai bundle penuh dengan allowlist Git dan pemeriksaan `python -m scripts.verify_dashboard_data --check-git`; dataset penyaringan dicocokkan dengan keputusan fitted model.
+Snapshot lama dan workbook gabungan dipertahankan. Konfigurasi sebelum penyaringan tersimpan pada `outputs/nlp_20261102_twitter_topics20_gemini_01/summary.json` bagian `config`; konfigurasi aktif tetap memakai `config/social_nlp.json`. Cadangan kode sebelum eksperimen disimpan di `output/relevance_experiment_20261102/rollback/`, dengan hash checkpoint pada `baseline.json` di folder induknya. Untuk membaca baseline, pilih snapshot sebelum penyaringan pada dashboard; untuk reproduksi fitting, gunakan dictionary `config` dari summary tersebut dan direktori output baru. Lihat [konfigurasi NLP tunggal](CONFIGURATION.md). Publikasi memakai bundle penuh dengan allowlist Git dan pemeriksaan `python -m scripts.verify_dashboard_data --check-git`; dataset penyaringan dicocokkan dengan keputusan fitted model.
 
 Tidak diperlukan migrasi database aplikasi. Cache skor SQLite baru bersifat disposable dan menggunakan nama format `semantic_scores_v1.sqlite3`; artifact memiliki extension versi tersendiri. Docker dashboard tetap membaca bundle melalui volume; model/training tidak ditambahkan ke dependency runtime dashboard.
 

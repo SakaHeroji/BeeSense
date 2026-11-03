@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Dependency Pengembangan Frontend"
-location: "L47"
+community: "Frontend dan Transaksi Sosmed"
+location: "L51"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Dependency_Pengembangan_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # vitest
@@ -15,4 +15,4 @@ tags:
 - [[devDependencies]] - `contains` [EXTRACTED]
 - [[vitest_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

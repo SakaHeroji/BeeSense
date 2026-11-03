@@ -1,34 +1,31 @@
 ---
-source_file: "Dashboard/app.py"
+source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Render Dashboard Streamlit"
-location: "L56"
+community: "Frontend dan Transaksi Sosmed"
+location: "L43"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Render_Dashboard_Streamlit
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # number()
 
 ## Connections
-- [[._methods()]] - `calls` [EXTRACTED]
-- [[._metrics()]] - `calls` [EXTRACTED]
-- [[._network()]] - `calls` [EXTRACTED]
-- [[._overview()]] - `calls` [EXTRACTED]
-- [[._selected_context()]] - `calls` [EXTRACTED]
-- [[._sentences()]] - `calls` [EXTRACTED]
-- [[._topic_detail()]] - `calls` [EXTRACTED]
-- [[.coverage_figure()]] - `calls` [EXTRACTED]
-- [[.explanation_figure()]] - `calls` [EXTRACTED]
-- [[.ranking_figure()]] - `calls` [EXTRACTED]
-- [[.render()_1]] - `calls` [EXTRACTED]
-- [[.source_figure()]] - `calls` [EXTRACTED]
-- [[.term_figure()]] - `calls` [EXTRACTED]
-- [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - `calls` [INFERRED]
-- [[.topic_figure()]] - `calls` [EXTRACTED]
-- [[.topic_platform_figure()]] - `calls` [EXTRACTED]
-- [[app.py]] - `contains` [EXTRACTED]
-- [[streamlit_apps.py]] - `imports` [EXTRACTED]
+- [[Composition()]] - `calls` [EXTRACTED]
+- [[ConfigReview()]] - `calls` [EXTRACTED]
+- [[ConfigReview.tsx]] - `imports` [EXTRACTED]
+- [[DatasetView()]] - `calls` [EXTRACTED]
+- [[DatasetView.tsx]] - `imports` [EXTRACTED]
+- [[JobDetail.tsx]] - `imports` [EXTRACTED]
+- [[PlatformCard()]] - `calls` [EXTRACTED]
+- [[PlatformPage()]] - `calls` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
+- [[ProgressChart()]] - `calls` [EXTRACTED]
+- [[TransactionMigration()]] - `calls` [EXTRACTED]
+- [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
+- [[domain.ts]] - `contains` [EXTRACTED]
+- [[validateConfig()]] - `calls` [EXTRACTED]
+- [[validateStorage()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

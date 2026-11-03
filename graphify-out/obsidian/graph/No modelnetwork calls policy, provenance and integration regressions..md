@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_context_relevance.py"
 type: "rationale"
-community: "Penyaringan Relevansi dan Narasi Topik"
+community: "Model dan Pengujian NLP"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # No model/network calls: policy, provenance and integration regressions.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_context_relevance.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/rationale #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

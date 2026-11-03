@@ -1,17 +1,17 @@
 ---
-source_file: "docs/machine-learning/TWITTER_RETRAIN_20261102.md"
+source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
 type: "concept"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Panduan Pipeline BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # beesense-topic-id:2
 
 ## Connections
-- [[Gemini 3.5 Flash Lite]] - `references` [EXTRACTED]
-- [[topic_narratives.csv]] - `references` [EXTRACTED]
+- [[Gemini topic narratives]] - `references` [EXTRACTED]
+- [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

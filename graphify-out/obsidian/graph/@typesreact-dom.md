@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Dependency Pengembangan Frontend"
-location: "L38"
+community: "Frontend Crawler per Platform"
+location: "L42"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Dependency_Pengembangan_Frontend
+  - community/Frontend_Crawler_per_Platform
 ---
 
 # @types/react-dom
@@ -15,4 +15,4 @@ tags:
 - [[@typesreact-dom_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_Crawler_per_Platform

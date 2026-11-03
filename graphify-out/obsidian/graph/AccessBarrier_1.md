@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L325"
+location: "L348"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # AccessBarrier
 
 ## Connections
-- [[.__init__()_32]] - `method` [EXTRACTED]
+- [[.__init__()_35]] - `method` [EXTRACTED]
 - [[RuntimeError]] - `inherits` [EXTRACTED]
 - [[create_client()_1]] - `calls` [EXTRACTED]
 - [[error_receipt()_2]] - `indirect_call` [INFERRED]

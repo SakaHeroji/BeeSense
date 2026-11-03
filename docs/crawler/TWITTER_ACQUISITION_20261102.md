@@ -1,5 +1,7 @@
 # Akuisisi Twitter/X — 2 November 2026
 
+> Konfigurasi saat campaign di bawah adalah riwayat. Untuk run baru, gunakan [satu konfigurasi universal](CONFIGURATION.md); preset crawler bertanggal sudah dihapus.
+
 SocialCrawler 1.7.0 memakai TwitterCoordinatorWorker dan Scweet dengan kontrak Excel BeeSense. Hanya Twitter yang dicrawl; YouTube, Reddit dan Instagram dibaca dari data yang sudah ada.
 
 ## Hasil terverifikasi
@@ -26,7 +28,7 @@ Audit kontrak/manifest: **0 ID ganda antarbatch, 0 parent unresolved, 0 parent l
 
 ## Konfigurasi dan output
 
-[Preset publik](../../config/social_crawler_twitter_3h.json): Twitter-only, 25 query, 200 hasil per pencarian, jendela tujuh hari, maksimal 200 pencarian, minimum lima detik antar-request dan 15 detik antar-operasi jaringan. Sampel maksimal 50 thread/10 komentar per root; batch 04/05 memprioritaskan root tanpa komentar tambahan. Cap lokal 300 request/6.000 tweet per hari mempertahankan penggunaan sebelumnya dan tidak mengubah batas server. Auth dan SQLite tetap diabaikan Git.
+Preset historis `social_crawler_twitter_3h.json` (sudah digabung ke konfigurasi universal): Twitter-only, 25 query, 200 hasil per pencarian, jendela tujuh hari, maksimal 200 pencarian, minimum lima detik antar-request dan 15 detik antar-operasi jaringan. Sampel maksimal 50 thread/10 komentar per root; batch 04/05 memprioritaskan root tanpa komentar tambahan. Cap lokal 300 request/6.000 tweet per hari mempertahankan penggunaan sebelumnya dan tidak mengubah batas server. Auth dan SQLite tetap diabaikan Git.
 
 Preset berikutnya mengizinkan maksimal 4.000 pemeriksaan root untuk mencapai target 1.000 post yang lolos filter. max_posts menghitung percobaan, bukan jumlah ekspor; run berhenti ketika 1.000 root qualified tercapai. Batch live hari ini mempertahankan nilai konfigurasi aslinya dalam audit Sources, tidak dieksekusi ulang untuk perubahan preset ini.
 

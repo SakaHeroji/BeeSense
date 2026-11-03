@@ -1,28 +1,24 @@
 ---
 type: community
-cohesion: 0.17
-members: 13
+cohesion: 0.28
+members: 9
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.17 - loosely connected
-**Members:** 13 nodes
+**Cohesion:** 0.28 - loosely connected
+**Members:** 9 nodes
 
 ## Members
-- [[Bounded native-ID evidence and explicit uncertainty]] - rationale - graphify-out/obsidian/Crawler Selenium.md
-- [[Fresh Chrome guest session per operation]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Historical Selenium implementation preset500rootsplatform andonehour]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Inherited SocialCrawler filters and Excel exporters]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Obsidian Crawler Selenium architecture]] - document - graphify-out/obsidian/Crawler Selenium.md
-- [[Official Selenium Manager ChromeDriver selection]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
-- [[Relative dates remain calendar estimates]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
-- [[Separate non-root crawler container with Selenium Grid]] - concept - docs/crawler/SELENIUM_CRAWLER.md
-- [[Shared BundleSink and dual-workbook export path]] - concept - graphify-out/obsidian/Crawler Selenium.md
-- [[Shared rendered_thread_dom.mjs extraction]] - concept - Crawler/Backend/Reddit/README_playwright.md
-- [[SocialCrawlerSelenium Guide]] - document - docs/crawler/SELENIUM_CRAWLER.md
-- [[Worker hard deadline preserves streamed partial events]] - rationale - docs/crawler/SELENIUM_CRAWLER.md
+- [[Combined Crawler Environment]] - document - requirements/crawler.txt
+- [[General NLP Environment]] - document - requirements/nlp.txt
+- [[Gensim Coherence Environment]] - document - requirements/coherence.txt
+- [[Instagram Chrome Worker Environment]] - document - requirements/instagram-browser.txt
+- [[Instaloader 4.16 Environment]] - document - requirements/instaloader.txt
+- [[Isolated Reddrix Environment]] - document - requirements/reddrix.txt
+- [[Native SBERT Training Environment]] - document - requirements/sbert.txt
+- [[Offline Regression and Crawler Environment]] - document - requirements/dev.txt
+- [[Selenium 4.51.0 Environment]] - document - requirements/selenium.txt
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,14 +26,3 @@ members: 13
 TABLE source_file, type FROM #community/Panduan_Pipeline_BeeSense
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_5]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_6]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_8]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
-
-## Top bridge nodes
-- [[SocialCrawlerSelenium Guide]] - degree 11, connects to 2 communities
-- [[Obsidian Crawler Selenium architecture]] - degree 5, connects to 1 community
-- [[Shared rendered_thread_dom.mjs extraction]] - degree 2, connects to 1 community

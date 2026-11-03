@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L637"
+community: "Pengujian Parser Reddit"
+location: "L638"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Pengujian_Parser_Reddit
 ---
 
 # walk()
 
 ## Connections
-- [[.__init__()_10]] - `calls` [EXTRACTED]
+- [[.__init__()_29]] - `calls` [EXTRACTED]
 - [[.discover()]] - `calls` [EXTRACTED]
 - [[.thread()]] - `calls` [EXTRACTED]
 - [[Node]] - `indirect_call` [INFERRED]
@@ -21,4 +21,4 @@ tags:
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[first()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

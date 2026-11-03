@@ -1,23 +1,19 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L71"
+community: "Akuisisi YouTube"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # now_iso()
 
 ## Connections
-- [[.fetch()_2]] - `calls` [EXTRACTED]
-- [[.fetch()_1]] - `calls` [EXTRACTED]
 - [[.finish()]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[export_campaign()]] - `calls` [EXTRACTED]
-- [[normalize_item()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

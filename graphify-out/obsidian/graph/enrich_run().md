@@ -19,7 +19,7 @@ tags:
 - [[file_hash()]] - `calls` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
 - [[json_write()]] - `calls` [EXTRACTED]
-- [[main()_13]] - `calls` [EXTRACTED]
+- [[main()_3]] - `calls` [EXTRACTED]
 - [[test_topic_narratives.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

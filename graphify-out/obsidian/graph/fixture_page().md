@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Pengujian Parser Reddit"
-location: "L1198"
+location: "L1199"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -26,6 +26,6 @@ tags:
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
 - [[HtmlPage]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[digest()]] - `calls` [EXTRACTED]
+- [[digest()_3]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

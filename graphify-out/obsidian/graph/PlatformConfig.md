@@ -1,18 +1,17 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Form Akuisisi dan Survei"
-location: "L51"
+community: "Frontend dan Transaksi Sosmed"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Form_Akuisisi_dan_Survei
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # PlatformConfig
 
 ## Connections
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

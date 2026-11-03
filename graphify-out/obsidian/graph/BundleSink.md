@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L345"
+community: "Akuisisi YouTube"
+location: "L299"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # BundleSink
@@ -17,14 +17,9 @@ tags:
 - [[.abort()]] - `method` [EXTRACTED]
 - [[.chunks()]] - `method` [EXTRACTED]
 - [[.finish()]] - `method` [EXTRACTED]
-- [[.test_13_excel_literal_ids_and_lossless_text()]] - `calls` [EXTRACTED]
 - [[.write()]] - `method` [EXTRACTED]
-- [[Async Reddrix to validated records to existing Excel pipeline]] - `references` [EXTRACTED]
 - [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel.]] - `rationale_for` [EXTRACTED]
-- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
-- [[Preserved eight-sheet audit and checksummed full-text bundle]] - `conceptually_related_to` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[export_campaign()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

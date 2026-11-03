@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L169"
+community: "Akuisisi YouTube"
+location: "L123"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # KeywordMatcher
@@ -14,14 +14,8 @@ tags:
 ## Connections
 - [[.__init__()_1]] - `method` [EXTRACTED]
 - [[.find()]] - `method` [EXTRACTED]
-- [[.setUp()]] - `calls` [EXTRACTED]
-- [[.test_04_unicode_offsets_boundary_and_casefold()]] - `calls` [EXTRACTED]
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
-- [[.validate()]] - `calls` [EXTRACTED]
 - [[Aho-Corasick; offsets refer to Python Unicode code points in source.]] - `rationale_for` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[export_campaign()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

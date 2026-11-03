@@ -1,23 +1,21 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L416"
+community: "Batas Crawler Opsional"
+location: "L425"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # InstagramAdapter
 
 ## Connections
-- [[.__init__()_20]] - `method` [EXTRACTED]
+- [[.__init__()_33]] - `method` [EXTRACTED]
 - [[.accept()_4]] - `method` [EXTRACTED]
-- [[.run()]] - `calls` [EXTRACTED]
-- [[InstagramBrowserWorker]] - `uses` [INFERRED]
+- [[.run()_2]] - `calls` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
-- [[SocialExportMixin]] - `uses` [INFERRED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

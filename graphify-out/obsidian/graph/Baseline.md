@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Tipe dan Client API"
+community: "Frontend dan Transaksi Sosmed"
 location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Tipe_dan_Client_API
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # Baseline
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Tipe_dan_Client_API
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

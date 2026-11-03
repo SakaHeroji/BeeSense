@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Pengujian Alur Frontend"
-location: "L269"
+community: "Frontend dan Transaksi Sosmed"
+location: "L259"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Alur_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # demoApi
@@ -14,7 +14,8 @@ tags:
 ## Connections
 - [[api.ts]] - `imports` [EXTRACTED]
 - [[demo.ts]] - `contains` [EXTRACTED]
-- [[domain.test.ts]] - `imports` [EXTRACTED]
+- [[platform-workspace.test.tsx]] - `imports` [EXTRACTED]
+- [[transaction.test.ts]] - `imports` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Alur_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

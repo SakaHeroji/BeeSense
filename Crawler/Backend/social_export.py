@@ -5,6 +5,7 @@ import json
 import re
 from collections import Counter
 from datetime import date, datetime, timedelta
+from functools import cached_property
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -28,6 +29,11 @@ COMPACT_COLUMNS = (
 
 class SocialExportMixin:
     """Requires config, include and exclude matchers; performs no acquisition."""
+
+    @cached_property
+    def comment_exclude(self):
+        terms = self.config.get("comment_exclude_keywords")
+        return self.exclude if terms is None else reddit.KeywordMatcher(terms)
 
     @staticmethod
     def _calendar_date(row):
@@ -182,7 +188,7 @@ class SocialExportMixin:
             if not root:
                 continue
             if row["object_type"] != "post" and any(
-                self.exclude.find(row["text_source"])
+                self.comment_exclude.find(row["text_source"])
             ):
                 skipped_comments += 1
                 continue
@@ -277,7 +283,7 @@ class SocialExportMixin:
                 or not row["text_source"].strip()
             ):
                 continue
-            if any(self.exclude.find(row["text_source"])):
+            if any(self.comment_exclude.find(row["text_source"])):
                 continue
             selected.append(row)
             seen.add(row["object_key"])

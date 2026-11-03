@@ -19,7 +19,7 @@ tags:
 - [[.test_dashboard_displays_generated_sentence_without_network_or_training()]] - `method` [EXTRACTED]
 - [[.test_narrative_snapshot_gate_and_source_changes_fail_before_publication()]] - `method` [EXTRACTED]
 - [[.test_narrative_snapshot_preserves_fitted_files_and_original_bundle()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_topic_narratives.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Batas Akuisisi Reddit"
-location: "L258"
+community: "Kuota Harian Scweet"
+location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Batas_Akuisisi_Reddit
+  - community/Kuota_Harian_Scweet
 ---
 
 # Configure initial and refreshed sessions inside an isolated worker module.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[load_reddrix()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Batas_Akuisisi_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Kuota_Harian_Scweet

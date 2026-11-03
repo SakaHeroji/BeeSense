@@ -1,34 +1,27 @@
 ---
 type: community
-cohesion: 0.22
-members: 19
+cohesion: 0.18
+members: 12
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 19 nodes
+**Cohesion:** 0.18 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[Candidate quality gate]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - document - docs/machine-learning/SOCIAL_NLP.md
-- [[Coherence c_v protocol]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[DBSCAN Euclidean density clustering]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Explanations and descriptive trends]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Gensim CoherenceModel]] - document - docs/machine-learning/SOCIAL_NLP.md
-- [[Manifest and atomic artifact contract]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Multilingual MiniLM SBERT model card]] - document - docs/machine-learning/SOCIAL_NLP.md
-- [[Multilingual SBERT encoder]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Overflow-window sentence encoding]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[Silhouette and ARI evaluation]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - code - docs/machine-learning/SOCIAL_NLP.md
-- [[Twitter native root audit]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[UMAP projection]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[Weighted Ward topic reduction]] - rationale - docs/machine-learning/SOCIAL_NLP.md
-- [[beesense-sentence-clusters2]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[c-TF-IDF topic terms]] - concept - docs/machine-learning/SOCIAL_NLP.md
-- [[prepare_excel (MachineLearningsocial_nlp.py)]] - code - docs/machine-learning/SOCIAL_NLP.md
-- [[scikit-learn DBSCAN documentation]] - document - docs/machine-learning/SOCIAL_NLP.md
+- [[Cakupan mengikuti konten yang tersedia pada sumber]] - rationale - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Instagrapi cursor parent dan balasan sampai habis]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Instaloader iterator komentar dan balasan tersendiri]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Obsidian Target 1000 Post Tanpa Batas Waktu]] - document - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Pagination komentar dan balasan sampai iterator atau cursor selesai]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Perubahan ini tidak memulai crawl langsung]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Progress remaining_seconds null, bukan JSON Infinity]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Reddrix memakai infinity internal untuk count]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Scheduler target per platform dengan validasi nullable limit]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[Scweet replies menerima None]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[crawler_limits.py menyatukan cap dan durasi opsional]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
+- [[yt-dlp menerima cap kosong]] - concept - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -38,14 +31,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
-- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
+- 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_5]]
+- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_4]]
 
 ## Top bridge nodes
-- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - degree 29, connects to 4 communities
-- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - degree 9, connects to 1 community
-- [[Candidate quality gate]] - degree 5, connects to 1 community
-- [[Multilingual SBERT encoder]] - degree 4, connects to 1 community
-- [[Overflow-window sentence encoding]] - degree 3, connects to 1 community
+- [[Obsidian Target 1000 Post Tanpa Batas Waktu]] - degree 9, connects to 2 communities

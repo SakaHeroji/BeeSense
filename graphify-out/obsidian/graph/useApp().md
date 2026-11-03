@@ -1,31 +1,28 @@
 ---
 source_file: "Crawler/Frontend/src/shared/context.ts"
 type: "code"
-community: "Form Akuisisi dan Survei"
+community: "Frontend dan Transaksi Sosmed"
 location: "L10"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Form_Akuisisi_dan_Survei
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # useApp()
 
 ## Connections
-- [[Automatic()]] - `calls` [EXTRACTED]
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
-- [[Baselines()]] - `calls` [EXTRACTED]
-- [[ConfigReview()]] - `calls` [EXTRACTED]
+- [[AuthSettings()]] - `calls` [EXTRACTED]
+- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[DatasetView()]] - `calls` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
 - [[JobDetail()]] - `calls` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
-- [[Manual()]] - `calls` [EXTRACTED]
-- [[Manual.tsx]] - `imports` [EXTRACTED]
-- [[ManualUrl()]] - `calls` [EXTRACTED]
 - [[PlatformCard()]] - `calls` [EXTRACTED]
-- [[Survey()]] - `calls` [EXTRACTED]
-- [[Survey.tsx]] - `imports` [EXTRACTED]
+- [[PlatformPage()]] - `calls` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
+- [[TransactionMigration()]] - `calls` [EXTRACTED]
+- [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[context.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Form_Akuisisi_dan_Survei
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

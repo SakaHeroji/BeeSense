@@ -12,6 +12,6 @@ tags:
 
 ## Connections
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
-- [[Weighted Ward topic reduction_1]] - `rationale_for` [EXTRACTED]
+- [[Weighted Ward topic reduction]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

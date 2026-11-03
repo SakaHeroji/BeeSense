@@ -1,21 +1,23 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "scripts/topic_sentence_export.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L339"
+community: "topic_sentence_export.py"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/topic_sentence_exportpy
 ---
 
 # main()
 
 ## Connections
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[parser()_1]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
-- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[export_payload()]] - `calls` [EXTRACTED]
+- [[file_hash()]] - `calls` [EXTRACTED]
+- [[json_write()]] - `calls` [EXTRACTED]
+- [[seal()]] - `calls` [EXTRACTED]
+- [[topic_sentence_export.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy

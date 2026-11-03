@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[LocalSemanticBackend]] - `contains` [EXTRACTED]
 - [[Reference profile and lazy local SBERT backend for relevance filtering.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports_from` [EXTRACTED]
 

@@ -12,8 +12,6 @@ tags:
 
 ## Connections
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
-- [[Arsitektur BeeSense]] - `references` [EXTRACTED]
-- [[BeeSense_1]] - `references` [EXTRACTED]
 - [[CrawlerBackendsocial_crawler.py]] - `references` [EXTRACTED]
 - [[CrawlerBackendsocial_export.py]] - `references` [EXTRACTED]
 - [[CrawlerFrontend simulation]] - `references` [EXTRACTED]
@@ -25,12 +23,11 @@ tags:
 - [[Instagram — implemented Instaloader backend]] - `references` [EXTRACTED]
 - [[Operator-run artifact workflow]] - `references` [EXTRACTED]
 - [[Reddit — implemented Reddrix backend]] - `references` [EXTRACTED]
-- [[Relevansi Konteks 20261102]] - `references` [EXTRACTED]
 - [[Threads — UIsimulation only]] - `references` [EXTRACTED]
 - [[TikTok — UIsimulation only]] - `references` [EXTRACTED]
 - [[Verified Cloud release]] - `references` [EXTRACTED]
 - [[XTwitter — implemented Scweet backend]] - `references` [EXTRACTED]
 - [[YouTube — implemented yt-dlp backend]] - `references` [EXTRACTED]
-- [[scriptsmerge_social_datasets.py_1]] - `references` [EXTRACTED]
+- [[scriptsmerge_social_datasets.py]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

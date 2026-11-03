@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
-community: "Pengambilan HTML Reddit"
-location: "L794"
+community: "Batas Crawler Opsional"
+location: "L826"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # Standalone trial. The production SocialCrawler backend stays unchanged.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[InstagramCrawler]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

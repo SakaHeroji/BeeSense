@@ -12,17 +12,17 @@ tags:
 # export_campaign()
 
 ## Connections
-- [[BundleSink]] - `calls` [EXTRACTED]
-- [[ContentInput]] - `calls` [EXTRACTED]
-- [[Dataset]] - `calls` [EXTRACTED]
-- [[KeywordMatcher]] - `calls` [EXTRACTED]
+- [[BundleSink_1]] - `calls` [EXTRACTED]
+- [[ContentInput_1]] - `calls` [EXTRACTED]
+- [[Dataset_1]] - `calls` [EXTRACTED]
+- [[KeywordMatcher_1]] - `calls` [EXTRACTED]
 - [[RedditRecordFactory]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[add_readme()]] - `calls` [EXTRACTED]
+- [[add_readme()_1]] - `calls` [EXTRACTED]
 - [[export_browser_campaign.py]] - `contains` [EXTRACTED]
 - [[load_campaign()]] - `calls` [EXTRACTED]
-- [[now_iso()]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()]] - `calls` [EXTRACTED]
-- [[utc_datetime()]] - `calls` [EXTRACTED]
+- [[now_iso()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
+- [[utc_datetime()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

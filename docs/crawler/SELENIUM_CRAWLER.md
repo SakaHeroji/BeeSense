@@ -1,5 +1,7 @@
 # SocialCrawlerSelenium
 
+> Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
+
 [social_crawler_selenium.py](../../Crawler/Backend/social_crawler_selenium.py) menyediakan class
 `SocialCrawlerSelenium(SocialCrawler)`. Pencarian, video/post dan komentar YouTube
 serta Reddit diperoleh dari halaman publik yang dirender Chrome melalui Selenium
@@ -21,9 +23,13 @@ Default membaca `config/social_crawler.json` yang sama, termasuk seluruh query, 
 subreddit, keyword, target, batas komentar/balasan, jeda dan batas waktu. Field
 backend/CLI/profile/checkpoint Playwright tidak dipakai. Konfigurasi yang menunjuk
 `import_checkpoint_dir` ditolak agar snapshot lama tidak dikira hasil Selenium live.
-Tidak ada file konfigurasi kedua yang mengubah target secara diam-diam.
+Tidak ada file konfigurasi kedua yang mengubah target secara diam-diam. Runner
+Selenium memilih YouTube/Reddit dari file universal; Instagram/Twitter menggunakan
+backend SocialCrawler masing-masing. Default kini 1.000 post per platform, tanpa
+batas jam dan tanpa cap komentar/balasan. Pagination/scroll berhenti saat sumber
+tidak bertambah, habis, diblokir atau pengguna menghentikan proses.
 
-Konfigurasi penuh saat implementasi menargetkan 500 root berkualifikasi per
+Riwayat konfigurasi saat implementasi awal menargetkan 500 root berkualifikasi per
 platform, minimal 10 komentar termasuk balasan per root, jeda 2 detik, dan batas
 keseluruhan 3.600 detik. Platform diproses berurutan seperti crawler lama: YouTube
 lebih dahulu, lalu Reddit dengan sisa waktu global. Target bukan jaminan hasil.

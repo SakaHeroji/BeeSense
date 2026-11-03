@@ -1,21 +1,18 @@
 ---
-source_file: "Crawler/Backend/social_crawler.py"
+source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L2312"
+community: "Arsip Data Harian"
+location: "L320"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Arsip_Data_Harian
 ---
 
 # main()
 
 ## Connections
-- [[.export_compact()]] - `calls` [EXTRACTED]
-- [[.plan()_4]] - `calls` [EXTRACTED]
-- [[.run()_3]] - `calls` [EXTRACTED]
-- [[SocialCrawler]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `contains` [EXTRACTED]
+- [[merge()]] - `calls` [EXTRACTED]
+- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

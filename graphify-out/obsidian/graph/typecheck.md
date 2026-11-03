@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Skrip Build Frontend"
+community: "Frontend dan Transaksi Sosmed"
 location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Skrip_Build_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # typecheck
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[scripts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Skrip_Build_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

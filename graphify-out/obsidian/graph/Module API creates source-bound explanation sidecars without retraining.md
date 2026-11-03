@@ -12,8 +12,7 @@ tags:
 # Module API creates source-bound explanation sidecars without retraining
 
 ## Connections
-- [[Active20-topic Instagram-inclusive model configuration]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 - [[Source-bound beesense-topic-explanations1 sidecar manifest]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 

@@ -1,30 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import {
-  ArrowUpRight,
-  BookOpen,
-  ChevronDown,
-  Database,
-  FlaskConical,
-  Layers3,
-  LifeBuoy,
-  Menu,
-  Radio,
-  ShieldCheck,
-  X,
-} from 'lucide-react';
+import { ArrowUpRight, FlaskConical, LifeBuoy, Menu, ShieldCheck, X } from 'lucide-react';
 import { api } from '../shared/api';
 import { useMediaQuery } from '../shared/hooks';
-import { demoMode, safeExternal } from '../shared/domain';
-import { Button, Dialog, Notice, Spinner } from '../shared/ui';
+import { demoMode, platformName, platforms } from '../shared/domain';
+import { Button, Dialog, Notice, PlatformMark, Spinner } from '../shared/ui';
 import { AppContext } from '../shared/context';
 
 export default function Shell() {
   const location = useLocation();
   const client = useQueryClient();
   const [mobile, setMobile] = useState(false);
-  const [modules, setModules] = useState(false);
   const [help, setHelp] = useState(false);
   const [toast, setToast] = useState('');
   const narrow = useMediaQuery('(max-width: 760px)');
@@ -70,11 +57,6 @@ export default function Shell() {
     const timer = setTimeout(() => setToast(''), 7000);
     return () => clearTimeout(timer);
   }, [toast]);
-  const manual = location.pathname.includes('/manual');
-  const externalModules = [
-    { name: 'NLP Machine Learning', icon: FlaskConical, url: import.meta.env.VITE_NLP_URL },
-    { name: 'Dashboard', icon: Layers3, url: import.meta.env.VITE_DASHBOARD_URL },
-  ];
   return (
     <div className="workspace">
       <a className="skip-link" href="#main">
@@ -94,81 +76,33 @@ export default function Shell() {
         className={`sidebar ${mobile ? 'is-open' : ''}`}
         aria-label="Navigasi workspace"
       >
-        <Link to="/crawler/automatic" className="brand" onClick={() => setMobile(false)}>
+        <Link to="/crawler/youtube" className="brand" onClick={() => setMobile(false)}>
           <img src="/beesense.svg" alt="" width="39" height="39" />
           <span>
             BeeSense<span className="brand-sub">Research workspace</span>
           </span>
         </Link>
-        <div className="module-switch">
-          <button onClick={() => setModules(!modules)} aria-expanded={modules}>
-            <span>
-              <Database size={17} /> Crawler
-            </span>
-            <ChevronDown size={15} />
-          </button>
-          {modules && (
-            <div className="module-menu">
-              <strong>Frontend BeeSense</strong>
-              {externalModules.map((m) => {
-                const href = m.url ? safeExternal(m.url) : undefined;
-                return href ? (
-                  <a key={m.name} href={href} target="_blank" rel="noreferrer">
-                    <m.icon size={17} />
-                    {m.name}
-                    <ArrowUpRight size={14} />
-                  </a>
-                ) : (
-                  <span key={m.name}>
-                    <m.icon size={17} />
-                    <span>
-                      {m.name}
-                      <small>Belum tersedia</small>
-                    </span>
-                  </span>
-                );
-              })}
-            </div>
-          )}
-        </div>
         <p className="nav-caption">Akuisisi data</p>
         <nav aria-label="Menu Crawler">
-          <NavLink
-            to="/crawler/automatic"
-            className={!manual ? 'active' : ''}
-            onClick={() => {
-              setMobile(false);
-              setModules(false);
-            }}
-          >
-            <Radio size={19} />
-            <span>Crawler Otomatis</span>
-          </NavLink>
-          <NavLink
-            to="/crawler/manual?tab=url"
-            className={manual ? 'active' : ''}
-            onClick={() => {
-              setMobile(false);
-              setModules(false);
-            }}
-          >
-            <BookOpen size={19} />
-            <span>Crawler Manual</span>
-          </NavLink>
+          {platforms.map((platform) => (
+            <NavLink
+              key={platform}
+              to={`/crawler/${platform}`}
+              onClick={() => {
+                setMobile(false);
+              }}
+            >
+              <PlatformMark platform={platform} />
+              <span>{platformName(platform)}</span>
+            </NavLink>
+          ))}
         </nav>
         <div className="sidebar-bottom">
-          <div className="research-note">
-            <span className="leaf-icon">
-              <ShieldCheck size={19} />
-            </span>
-            <strong>Data yang dapat ditelusuri</strong>
-            <p>Setiap akuisisi membawa sumber, versi, dan jejak kualitasnya.</p>
-          </div>
           <button className="help-button" onClick={() => setHelp(true)}>
             <LifeBuoy size={18} /> Panduan workspace <ArrowUpRight size={14} />
           </button>
           <span className="sidebar-version">
-            BeeSense Crawler <span>v1.0</span>
+            BeeSense Crawler <span>v1.2</span>
           </span>
         </div>
       </aside>
@@ -254,7 +188,16 @@ export default function Shell() {
             <AppContext.Provider
               value={{ cap: capabilities.data!, session: session.data!, notify: setToast }}
             >
-              <Outlet key={session.data!.role} />
+              <Suspense
+                fallback={
+                  <div className="loading-page" role="status">
+                    <Spinner />
+                    Memuat halaman…
+                  </div>
+                }
+              >
+                <Outlet key={session.data!.role} />
+              </Suspense>
             </AppContext.Provider>
           )}
         </main>
@@ -276,8 +219,8 @@ export default function Shell() {
       )}
       <Dialog open={help} onClose={() => setHelp(false)} title="Panduan workspace">
         <p>
-          Gunakan Crawler Otomatis untuk menemukan post melalui query. Gunakan Crawler Manual untuk
-          URL pilihan atau respons survei yang telah dikumpulkan.
+          Pilih menu sosmed, atur pencarian, lalu tinjau konfigurasi sebelum mulai crawling. Gunakan
+          buka Hasil per tanggal untuk statistik, data lengkap dan migrasi transaksi ke PostgreSQL.
         </p>
         <div className="help-list">
           <p>
@@ -300,8 +243,8 @@ export default function Shell() {
             <p>
               <b>Simulasi aman</b>
               <br />
-              Gunakan data sintetis. Jawaban survei demo berada di memori dan hilang saat refresh.
-              Hanya metadata pekerjaan simulasi disimpan di browser.
+              Gunakan data sintetis. Pengaturan akun dan migrasi hanya disimulasikan, tanpa menulis
+              file atau database. Hanya metadata pekerjaan simulasi disimpan di browser.
             </p>
           )}
         </div>

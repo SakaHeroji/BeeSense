@@ -1,20 +1,19 @@
 ---
 source_file: "PRD/PRD Frontend/PRD Frontend Crawler.md"
 type: "concept"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "line 411"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # White-orange visual system and black text
 
 ## Connections
-- [[BeeSense Crawler React frontend]] - `implements` [EXTRACTED]
 - [[Crawler acceptance criteria]] - `references` [EXTRACTED]
 - [[Crawler frontend product requirements]] - `implements` [EXTRACTED]
 - [[Crawler screen design and recovery interactions]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
 community: "Worker Instaloader"
-location: "L119"
+location: "L121"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,6 @@ tags:
 # _json()
 
 ## Connections
-- [[.__init__()_25]] - `calls` [EXTRACTED]
-- [[SessionInvalid]] - `calls` [EXTRACTED]
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 - [[session_cookies()]] - `calls` [EXTRACTED]
 

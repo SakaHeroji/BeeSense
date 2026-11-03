@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
+community: "Batas Crawler Opsional"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # instagram_browser.py
@@ -16,8 +16,9 @@ tags:
 - [[Serial Chrome acquisition using a persistent profile and manual login.  The same]] - `rationale_for` [EXTRACTED]
 - [[browser_configuration()]] - `contains` [EXTRACTED]
 - [[browser_script()]] - `contains` [EXTRACTED]
-- [[decode_cli_output()]] - `imports` [EXTRACTED]
+- [[crawler_limits.py]] - `imports_from` [EXTRACTED]
 - [[normalize_item()]] - `imports` [EXTRACTED]
+- [[reached()]] - `imports` [EXTRACTED]
 - [[test_instagram_browser.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

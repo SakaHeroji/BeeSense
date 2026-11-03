@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
 community: "Crawler Selenium"
-location: "L542"
+location: "L550"
 tags:
   - graphify/code
   - graphify/EXTRACTED

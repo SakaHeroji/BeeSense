@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Pengambilan HTML Reddit"
-location: "L34"
+community: "Batas Crawler Opsional"
+location: "L40"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # Return a local date for display; relative source dates stay estimates.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._calendar_date()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

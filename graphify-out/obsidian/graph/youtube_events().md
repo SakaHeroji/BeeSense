@@ -12,7 +12,7 @@ tags:
 # youtube_events()
 
 ## Connections
-- [[.worker()_2]] - `calls` [EXTRACTED]
+- [[.worker()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Akuisisi YouTube"
-location: "L300"
+community: "Kontrak Record Reddit"
+location: "L346"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # Atomic new directory; streaming JSONL + streaming, formula-safe Excel.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[BundleSink_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit

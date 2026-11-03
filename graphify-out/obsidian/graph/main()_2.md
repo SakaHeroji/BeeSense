@@ -1,25 +1,20 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "scripts/filter_context_relevance.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L1282"
+community: "Penyaringan Relevansi dan Narasi Topik"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # main()
 
 ## Connections
-- [[.check_session()]] - `calls` [EXTRACTED]
-- [[.error()]] - `indirect_call` [INFERRED]
-- [[.plan()]] - `calls` [EXTRACTED]
-- [[.run()]] - `calls` [EXTRACTED]
-- [[InstagramCrawler]] - `calls` [EXTRACTED]
-- [[error_receipt()]] - `calls` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[login_local()]] - `calls` [EXTRACTED]
-- [[run_instagram_worker()]] - `calls` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[ContextRelevanceFilter]] - `calls` [EXTRACTED]
+- [[LocalSemanticBackend]] - `calls` [EXTRACTED]
+- [[filter_context_relevance.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

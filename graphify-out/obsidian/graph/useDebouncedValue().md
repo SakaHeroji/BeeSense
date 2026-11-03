@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/hooks.ts"
 type: "code"
-community: "Monitor Job dan Dataset"
+community: "Frontend dan Transaksi Sosmed"
 location: "L41"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Job_dan_Dataset
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # useDebouncedValue()
@@ -16,4 +16,4 @@ tags:
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
 - [[hooks.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

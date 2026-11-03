@@ -1,10 +1,9 @@
-import { Component, type ReactNode } from 'react';
+import { Component, lazy, type ReactNode } from 'react';
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Shell from './Shell';
-import Automatic from '../features/Automatic';
-import Manual from '../features/Manual';
-import JobDetail from '../features/JobDetail';
+const PlatformWorkspace = lazy(() => import('../features/PlatformWorkspace'));
+const JobDetail = lazy(() => import('../features/JobDetail'));
 
 const router = createBrowserRouter([
   {
@@ -13,23 +12,23 @@ const router = createBrowserRouter([
       <div className="connection-state">
         <h1>Tampilan perlu dibuka ulang</h1>
         <p>Data pekerjaan server tetap tersedia. Muat ulang untuk membuka kembali workspace.</p>
-        <a className="button primary" href="/crawler/automatic">
+        <a className="button primary" href="/crawler/youtube">
           Buka workspace
         </a>
       </div>
     ),
     children: [
-      { path: '/', element: <Navigate to="/crawler/automatic" replace /> },
-      { path: '/crawler/automatic', element: <Automatic /> },
-      { path: '/crawler/manual', element: <Manual /> },
+      { path: '/', element: <Navigate to="/crawler/youtube" replace /> },
+      { path: '/crawler/automatic', element: <Navigate to="/crawler/youtube" replace /> },
+      { path: '/crawler/:platform', element: <PlatformWorkspace /> },
+      { path: '/crawler/:platform/jobs/:jobId', element: <JobDetail /> },
       { path: '/crawler/automatic/jobs/:jobId', element: <JobDetail /> },
-      { path: '/crawler/manual/jobs/:jobId', element: <JobDetail /> },
       {
         path: '*',
         element: (
           <div className="empty">
             <h1>Halaman tidak ditemukan</h1>
-            <a href="/crawler/automatic">Kembali ke Crawler</a>
+            <a href="/crawler/youtube">Kembali ke Crawler</a>
           </div>
         ),
       },

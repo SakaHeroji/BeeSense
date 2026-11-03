@@ -31,6 +31,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from urllib.parse import parse_qs, urlencode, urlsplit
 
+from Crawler.Backend.crawler_config import expand_config
+from Crawler.Backend.crawler_limits import deadline_after, reached, remaining_seconds
 from Crawler.Backend.Reddit import crawl_reddit_single as reddit
 from Crawler.Backend.social_export import (
     COMPACT_COLUMNS,
@@ -38,9 +40,14 @@ from Crawler.Backend.social_export import (
     COMPACT_TIMEZONE,
     SocialExportMixin,
 )
+from Crawler.Backend.storage_config import (
+    DEFAULT_STORAGE,
+    require_excel_storage,
+    storage_config,
+)
 from Crawler.Backend.Youtube import crawl_youtube as youtube
 
-VERSION = "1.7.0"
+VERSION = "1.10.0"
 INSTAGRAM_RATE_LIMIT_DEFAULTS = {
     "rate_limit_cooldown_seconds": 360,
     "rate_limit_max_retries": 3,
@@ -90,6 +97,8 @@ DEFAULT_PLATFORM = dict(
 )
 DEFAULT_CONFIG = dict(
     project_id="social-intelligence",
+    output_root="outputs/crawling",
+    storage=DEFAULT_STORAGE,
     reddrix={"display_mode": "auto"},
     instagrapi={},
     instaloader={},
@@ -100,6 +109,7 @@ DEFAULT_CONFIG = dict(
     until=None,
     include_keywords=[],
     exclude_keywords=[],
+    comment_exclude_keywords=None,
     include_mode="any",
     delay=dict(mode="fixed", seconds=2.0),
     timeout_seconds=120,
@@ -285,10 +295,16 @@ async def collect_reddrix(
         include_comments=not search,
         max_results=settings["search_results"]
         if search
+        else float("inf")
+        if settings["max_comments"] is None
         else 1 + settings["max_comments"],
         max_posts_per_collection=settings["search_results"] if search else 1,
-        max_comments_per_post=settings["max_comments"],
-        max_top_comments_per_post=settings["max_comments"],
+        max_comments_per_post=float("inf")
+        if settings["max_comments"] is None
+        else settings["max_comments"],
+        max_top_comments_per_post=float("inf")
+        if settings["max_comments"] is None
+        else settings["max_comments"],
     )
     if search:
         parsed = urlsplit(target)
@@ -338,7 +354,7 @@ async def collect_reddrix(
                 seen.add(row["fullname"])
                 parents[row["fullname"]] = row["parent"]
                 if row["kind"] != "post":
-                    if comments + replies >= settings["max_comments"]:
+                    if reached(comments + replies, settings["max_comments"]):
                         continue
                     if row["kind"] == "reply":
                         parent, visited = row["parent"], set()
@@ -350,10 +366,8 @@ async def collect_reddrix(
                         ):
                             visited.add(parent)
                             parent = parents[parent]
-                        if (
-                            replies >= settings["max_replies"]
-                            or branches.get(parent, 0)
-                            >= settings["max_replies_per_thread"]
+                        if reached(replies, settings["max_replies"]) or reached(
+                            branches.get(parent, 0), settings["max_replies_per_thread"]
                         ):
                             continue
                         replies += 1
@@ -436,14 +450,13 @@ def _keywords(value, name):
 
 def _config(value):
     cfg = deepcopy(DEFAULT_CONFIG)
-    if isinstance(value, (str, Path)):
-        path = Path(value)
-        if path.stat().st_size > 1_000_000:
-            raise ValueError("config exceeds 1 MB")
-        value = json.loads(path.read_text())
+    value = expand_config(value)
     if not isinstance(value, dict) or set(value) - set(DEFAULT_CONFIG):
         raise ValueError("config must be an object with known SocialCrawler fields")
     cfg.update(deepcopy(value))
+    cfg["storage"] = storage_config(cfg["storage"])
+    if not isinstance(cfg["output_root"], str) or not cfg["output_root"].strip():
+        raise ValueError("output_root must be a directory path")
     pacing = cfg["instagram_pacing"]
     if not isinstance(pacing, dict) or set(pacing) - set(INSTAGRAM_PACING_DEFAULTS):
         raise ValueError("instagram_pacing must contain known pacing settings")
@@ -498,10 +511,15 @@ def _config(value):
         raise ValueError("since must be before until; until is exclusive")
     for key in ["include_keywords", "exclude_keywords"]:
         cfg[key] = _keywords(cfg[key], key)
+    if cfg["comment_exclude_keywords"] is not None:
+        cfg["comment_exclude_keywords"] = _keywords(
+            cfg["comment_exclude_keywords"], "comment_exclude_keywords"
+        )
     if cfg["include_mode"] not in {"any", "all"}:
         raise ValueError("include_mode must be any or all")
     _number(cfg["timeout_seconds"], "timeout_seconds", 5, 600, True)
-    _number(cfg["total_seconds"], "total_seconds", 1, 86400, True)
+    if cfg["total_seconds"] is not None:
+        _number(cfg["total_seconds"], "total_seconds", 1, 86400, True)
     if cfg["platform_execution"] not in {"sequential", "round_robin"}:
         raise ValueError("platform_execution must be sequential or round_robin")
     paths = cfg["exclude_existing_datasets"]
@@ -532,10 +550,10 @@ def _config(value):
     if (
         not isinstance(platforms, dict)
         or not platforms
-        or set(platforms) - {"youtube", "reddit", "instagram", "twitter"}
+        or set(platforms) - {"youtube", "reddit", "instagram", "twitter", "tiktok"}
     ):
         raise ValueError(
-            "platforms must contain youtube, reddit, instagram and/or twitter"
+            "platforms must contain youtube, reddit, instagram, twitter and/or tiktok"
         )
     result = {}
     extra = {
@@ -555,6 +573,11 @@ def _config(value):
         },
     }
     for name, settings in platforms.items():
+        if name == "tiktok":
+            from Crawler.Backend.tiktok_crawler import platform_configuration
+
+            result[name] = platform_configuration(settings)
+            continue
         if name == "twitter":
             from Crawler.Backend.twitter_crawler import configuration
 
@@ -565,13 +588,21 @@ def _config(value):
             minimum = supplied.pop("min_comments_per_post", 0)
             candidates = supplied.pop("max_candidates", 20000)
             comment_threads = supplied.pop("max_comment_threads", 10000)
-            _number(supplied.pop("max_replies", 0), "twitter.max_replies", 0, 0, True)
+            replies = supplied.pop("max_replies", 0)
+            if replies is not None:
+                _number(replies, "twitter.max_replies", 0, 0, True)
             if type(enabled) is not bool:
                 raise ValueError("twitter.enabled must be boolean")
             _number(minimum, "twitter.min_comments_per_post", 0, 100, True)
-            _number(candidates, "twitter.max_candidates", 1, 20000, True)
-            _number(comment_threads, "twitter.max_comment_threads", 0, 10000, True)
-            if minimum and comment_threads < supplied.get("min_posts", 1000):
+            if candidates is not None:
+                _number(candidates, "twitter.max_candidates", 1, 20000, True)
+            if comment_threads is not None:
+                _number(comment_threads, "twitter.max_comment_threads", 0, 10000, True)
+            if (
+                minimum
+                and comment_threads is not None
+                and comment_threads < supplied.get("min_posts", 1000)
+            ):
                 raise ValueError(
                     "Twitter comment sampling cannot satisfy the minimum for every target post"
                 )
@@ -585,6 +616,7 @@ def _config(value):
                             "until",
                             "include_keywords",
                             "exclude_keywords",
+                            "comment_exclude_keywords",
                             "include_mode",
                             "delay",
                             "timeout_seconds",
@@ -602,10 +634,10 @@ def _config(value):
                 "enabled": enabled,
                 "min_comments_per_post": minimum,
                 "max_candidates": candidates,
-                "max_replies": 0,
+                "max_replies": replies,
                 "max_comment_threads": comment_threads,
             }
-            if minimum > result[name]["max_comments"]:
+            if reached(minimum - 1, result[name]["max_comments"]):
                 raise ValueError("Twitter minimum comments exceeds acquisition cap")
             continue
         if name == "instagram":
@@ -636,6 +668,7 @@ def _config(value):
                     "until",
                     "include_keywords",
                     "exclude_keywords",
+                    "comment_exclude_keywords",
                     "include_mode",
                     "timeout_seconds",
                     "total_seconds",
@@ -687,12 +720,21 @@ def _config(value):
             ("max_replies_per_thread", 0, 100),
             ("search_results", 1, 500 if name == "youtube" else 50),
         ]:
-            _number(p[field], name + "." + field, low, high, True)
-        if p["min_posts"] > p["max_posts"] or p["min_posts"] > p["max_candidates"]:
+            if p[field] is not None or field not in {
+                "max_posts",
+                "max_candidates",
+                "max_comments",
+                "max_replies",
+                "max_replies_per_thread",
+            }:
+                _number(p[field], name + "." + field, low, high, True)
+        if reached(p["min_posts"] - 1, p["max_posts"]) or reached(
+            p["min_posts"] - 1, p["max_candidates"]
+        ):
             raise ValueError(
                 name + ": min_posts must not exceed max_posts or max_candidates"
             )
-        if p["min_comments_per_post"] > p["max_comments"]:
+        if reached(p["min_comments_per_post"] - 1, p["max_comments"]):
             raise ValueError(name + ": minimum comments exceeds acquisition cap")
         for key in ["urls", "queries"]:
             if not isinstance(p[key], list) or any(
@@ -793,6 +835,10 @@ def _config(value):
 
 
 def _url(platform, value):
+    if platform == "tiktok":
+        from Crawler.Backend.tiktok_crawler import post_url
+
+        return post_url(value)
     if platform == "twitter":
         from Crawler.Backend.twitter_crawler import post_url
 
@@ -850,6 +896,20 @@ class SocialCrawler(SocialExportMixin):
         }
         self._instagram_worker = None
         self._twitter_worker = None
+        self._tiktok_worker = None
+        if self.config["platforms"].get("tiktok", {}).get("enabled"):
+            from Crawler.Backend.tiktok_crawler import TikTokWorker
+
+            if "tiktok" not in (workers or {}):
+                self._tiktok_worker = TikTokWorker(
+                    self.config,
+                    progress=lambda event: self._event(
+                        event.pop("event"), platform="tiktok", **event
+                    ),
+                )
+            self.workers["tiktok"] = (workers or {}).get(
+                "tiktok"
+            ) or self._tiktok_worker
         if self.config["platforms"].get("twitter", {}).get("enabled"):
             from Crawler.Backend.twitter_crawler import TwitterCoordinatorWorker
 
@@ -931,6 +991,11 @@ class SocialCrawler(SocialExportMixin):
                         native = _url(
                             name, "https://x.com/i/web/status/" + str(row["native_id"])
                         )
+                    elif name == "tiktok":
+                        native = _url(
+                            name,
+                            "https://www.tiktok.com/@_/video/" + str(row["native_id"]),
+                        )
                     elif name == "instagram":
                         from Crawler.Backend.instagram_crawler import (
                             media_pk_from_url,
@@ -979,8 +1044,8 @@ class SocialCrawler(SocialExportMixin):
                 "run_id": self._run_id,
                 "platforms": self._run_summaries,
                 "elapsed_seconds": round(self.clock() - self._run_started, 2),
-                "remaining_seconds": max(
-                    0, round(self._run_deadline - self.clock(), 2)
+                "remaining_seconds": remaining_seconds(
+                    self._run_deadline, self.clock()
                 ),
             }
             temporary = self._progress_path.with_suffix(".tmp")
@@ -1044,14 +1109,16 @@ class SocialCrawler(SocialExportMixin):
                         "display": deepcopy(self.reddit_display),
                         "search_sort": "relevance; configured search_sort is not honored by Reddrix",
                         "comment_sort": "not exposed by Reddrix",
-                        "internal_retries": "fixed upstream retries within the hard operation deadline",
+                        "internal_retries": "fixed upstream retries; request timeouts and optional run deadline remain active",
                     }
                 }
                 if REDDRIX_METHOD in backends.values()
                 else {}
             ),
             "date_scope": "root_publication",
-            "comment_scope": "all_visible_context_except_excluded_keywords",
+            "comment_scope": "all_visible_context"
+            if self.config["comment_exclude_keywords"] == []
+            else "all_visible_context_except_excluded_keywords",
             "minimum_scope": "per_platform_roots_with_minimum_unique_comments_including_replies",
             "delay_scope": "between_search_or_content_operations_not_each_HTTP_subrequest",
             "until_exclusive": True,
@@ -1106,6 +1173,7 @@ class SocialCrawler(SocialExportMixin):
                         "until",
                         "include_keywords",
                         "exclude_keywords",
+                        "comment_exclude_keywords",
                         "include_mode",
                     ]
                 },
@@ -1153,7 +1221,7 @@ class SocialCrawler(SocialExportMixin):
         return self.clock() < deadline
 
     def _legacy_settings(self, name, p):
-        if name == "twitter":
+        if name in {"twitter", "tiktok"}:
             return SimpleNamespace(**p, timeout_seconds=self.config["timeout_seconds"])
         if name == "instagram":
             if p["backend"] == "instaloader":
@@ -1255,7 +1323,7 @@ class SocialCrawler(SocialExportMixin):
                 raw = None
             if p["backend"] != "checkpoint" or raw:
                 items.append((url, candidate.get("discovered_from"), raw))
-            if len(items) >= p["max_candidates"]:
+            if reached(len(items), p["max_candidates"]):
                 break
         # Existing DOM evidence is reused before starting new browser requests.
         return sorted(items, key=lambda item: item[2] is None)
@@ -1483,7 +1551,7 @@ class SocialCrawler(SocialExportMixin):
         )
 
     def _execute(self, name, operation, target, settings, p, deadline, cached=None):
-        if cached is not None and name != "twitter":
+        if cached is not None and name not in {"twitter", "tiktok"}:
             try:
                 return self._dom_events(cached, target, p), dict(
                     status="FINISHED_BEST_EFFORT",
@@ -1502,9 +1570,11 @@ class SocialCrawler(SocialExportMixin):
         network_operation = not (
             name == "twitter"
             and cached is not None
-            and (not p["max_comments"] or not cached.get("comments", 0))
+            and (p["max_comments"] == 0 or not cached.get("comments", 0))
         )
-        if name == "twitter" and hasattr(self.workers[name], "requires_network"):
+        if name in {"twitter", "tiktok"} and hasattr(
+            self.workers[name], "requires_network"
+        ):
             network_operation = self.workers[name].requires_network(
                 operation, target, settings, cached
             )
@@ -1531,13 +1601,39 @@ class SocialCrawler(SocialExportMixin):
                     p,
                     min(settings.timeout_seconds, deadline - self.clock()),
                 )
+            # Uncapped comment pagination may span many individual HTTP requests.
+            # Each transport retains its socket timeout; the run has no clock cap
+            # when total_seconds is null. Browser snapshots keep operation bounds.
+            seconds = min(settings.timeout_seconds, deadline - self.clock())
+            if name == "tiktok" and getattr(self.workers[name], "live_chrome", False):
+                seconds = deadline - self.clock()
+            if name == "tiktok" and p.get("manual_wait_seconds", 0):
+                seconds = min(
+                    settings.timeout_seconds + p["manual_wait_seconds"],
+                    deadline - self.clock(),
+                )
+            if (
+                operation != "search"
+                and p["max_comments"] is None
+                and (
+                    name == "youtube"
+                    or name in {"twitter", "tiktok"}
+                    or name == "reddit"
+                    and p["backend"] == "reddrix"
+                    or name == "instagram"
+                    and p["backend"] != "browser"
+                )
+            ):
+                seconds = deadline - self.clock()
             result = self.workers[name](
                 operation,
                 {"tweet_id": target.rsplit("/", 1)[-1], "cached_root": cached}
                 if name == "twitter" and operation != "search"
+                else {"video_id": target.rsplit("/", 1)[-1], "cached_root": cached}
+                if name == "tiktok" and operation != "search"
                 else target,
                 settings,
-                min(settings.timeout_seconds, deadline - self.clock()),
+                seconds,
                 lambda kind, payload: events.append((kind, payload)),
             )
             return events, result
@@ -1585,7 +1681,11 @@ class SocialCrawler(SocialExportMixin):
         rows = {key: [] for key in reddit.TABLES}
         sink = SimpleNamespace(write=lambda table, row: rows[table].append(row))
         dataset = reddit.Dataset(factory, sink)
-        if name == "twitter":
+        if name == "tiktok":
+            from Crawler.Backend.tiktok_crawler import TikTokAdapter
+
+            adapter = TikTokAdapter(factory, dataset, version)
+        elif name == "twitter":
             from Crawler.Backend.twitter_crawler import TwitterAdapter
 
             adapter = TwitterAdapter(factory, dataset)
@@ -1609,7 +1709,7 @@ class SocialCrawler(SocialExportMixin):
         invalid = 0
         for kind, payload in events:
             if (
-                name in {"reddit", "instagram", "twitter"}
+                name in {"reddit", "instagram", "twitter", "tiktok"}
                 and kind != "record"
                 or name == "youtube"
                 and kind not in {"video", "comment"}
@@ -1629,6 +1729,19 @@ class SocialCrawler(SocialExportMixin):
 
     def _source_metadata(self, name, settings):
         """Describe the acquisition backend independently of the shared export."""
+        if name == "tiktok":
+            from Crawler.Backend.tiktok_crawler import METHOD
+
+            worker = self.workers.get(name)
+            return dict(
+                producer_version="social-crawler:" + VERSION,
+                extraction_method=getattr(worker, "extraction_method", METHOD),
+                access_mode=getattr(
+                    worker,
+                    "access_mode",
+                    "playwright_browser;provided_msToken;single_session;no_captcha_solver",
+                ),
+            )
         if name == "twitter":
             from Crawler.Backend.twitter_crawler import METHOD
 
@@ -1676,7 +1789,8 @@ class SocialCrawler(SocialExportMixin):
         )
 
     def run(self, output_dir=None):
-        """Return an explicit target/shortfall report and write one atomic bundle."""
+        """Write an audit bundle; default runs also publish platform/day partitions."""
+        require_excel_storage(self.config)
         reddit.verify_descriptor()
         self._last_finished = None
         self._browser = None
@@ -1689,7 +1803,8 @@ class SocialCrawler(SocialExportMixin):
             Path(output_dir)
             if output_dir
             else ROOT
-            / "outputs"
+            / "output"
+            / "crawler_runs"
             / (
                 "social_"
                 + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
@@ -1698,7 +1813,7 @@ class SocialCrawler(SocialExportMixin):
             )
         )
         sink = reddit.BundleSink(output, self.config["project_id"], run_id)
-        deadline = self.clock() + self.config["total_seconds"]
+        deadline = deadline_after(self.clock(), self.config["total_seconds"])
         summaries = {}
         ready_at = {}
         object_keys = set()
@@ -1763,7 +1878,9 @@ class SocialCrawler(SocialExportMixin):
                         excluded_seen.add(url)
                         summary["existing_posts_skipped"] = len(excluded_seen)
                         return
-                    if url not in known and len(known) < p["max_candidates"]:
+                    if url not in known and not reached(
+                        len(known), p["max_candidates"]
+                    ):
                         known.add(url)
                         queue.append((url, origin, cached))
 
@@ -1774,7 +1891,7 @@ class SocialCrawler(SocialExportMixin):
                     enqueue(url)
                 searches = deque(
                     []
-                    if name == "twitter"
+                    if name in {"twitter", "tiktok"}
                     else (
                         ("search", json.dumps({"hashtag": tag, "cursor": None}))
                         for tag in p["hashtags"]
@@ -1803,6 +1920,15 @@ class SocialCrawler(SocialExportMixin):
                         for sub in p["subreddits"]
                     )
                 )
+                if name == "tiktok":
+                    searches.extend(
+                        ("search", json.dumps({"query": query}))
+                        for query in p["queries"]
+                    )
+                    searches.extend(
+                        ("search", json.dumps({"hashtag": tag}))
+                        for tag in p["hashtags"]
+                    )
                 if name == "twitter":
                     from Crawler.Backend.twitter_crawler import search_targets
 
@@ -1821,10 +1947,10 @@ class SocialCrawler(SocialExportMixin):
                     if self.clock() >= deadline:
                         summary["stop_reason"] = "TIME_BUDGET_EXHAUSTED"
                         break
-                    if summary["posts_attempted"] >= p["max_posts"]:
+                    if reached(summary["posts_attempted"], p["max_posts"]):
                         summary["stop_reason"] = "MAX_POSTS_REACHED"
                         break
-                    if row_count >= 500000:
+                    if row_count >= 500000 and p["max_comments"] is not None:
                         summary["stop_reason"] = "OUTPUT_ROW_BUDGET"
                         break
                     retrying = pending_operation is not None
@@ -1843,9 +1969,9 @@ class SocialCrawler(SocialExportMixin):
                         if (
                             name == "reddit"
                             and p["backend"] == "checkpoint"
-                            or len(known) >= p["max_candidates"]
+                            or reached(len(known), p["max_candidates"])
                             or name == "instagram"
-                            and search_pages >= p["max_search_pages"]
+                            and reached(search_pages, p["max_search_pages"])
                         ):
                             break
                         try:
@@ -1896,7 +2022,7 @@ class SocialCrawler(SocialExportMixin):
                                     payload.get("url", ""),
                                     payload.get("discovered_from"),
                                     payload.get("cached_root")
-                                    if name == "twitter"
+                                    if name in {"twitter", "tiktok"}
                                     else None,
                                 )
                         if name == "instagram" and result.get("next_cursor"):
@@ -1931,7 +2057,7 @@ class SocialCrawler(SocialExportMixin):
                         if selected:
                             # X IDs are global across posts and replies; a changed
                             # body or another thread must never duplicate an ID.
-                            if name == "twitter":
+                            if name in {"twitter", "tiktok"}:
                                 selected = selected[:1] + [
                                     row
                                     for row in selected[1:]
@@ -1957,7 +2083,10 @@ class SocialCrawler(SocialExportMixin):
                                 reason = "duplicate_root_in_run"
                         if not selected:
                             filtered[reason] += 1
-                        if row_count + len(selected) > 500000:
+                        if (
+                            row_count + len(selected) > 500000
+                            and p["max_comments"] is not None
+                        ):
                             selected = []
                             result = {
                                 **result,
@@ -2011,7 +2140,7 @@ class SocialCrawler(SocialExportMixin):
                             "retry_after_seconds:" + str(result["retry_after_seconds"])
                         )
                     finished = reddit.now_iso()
-                    if name == "twitter" and result.get("network"):
+                    if name in {"twitter", "tiktok"} and result.get("network"):
                         summary["network"] = result["network"]
                     sink.write(
                         "Runs",
@@ -2094,7 +2223,7 @@ class SocialCrawler(SocialExportMixin):
                         can_retry = (
                             summary["rate_limit_retries"] < p["rate_limit_max_retries"]
                             and summary["qualified_posts"] < p["min_posts"]
-                            and summary["posts_attempted"] < p["max_posts"]
+                            and not reached(summary["posts_attempted"], p["max_posts"])
                             and written == 0
                             and wait < deadline - self.clock()
                         )
@@ -2284,6 +2413,23 @@ class SocialCrawler(SocialExportMixin):
                     compact=compact,
                 )
             )
+            if output_dir is None and compact["rows"]:
+                from Crawler.Backend.social_archive import organize
+
+                organized = organize(
+                    [sink.path / COMPACT_FILE],
+                    ROOT / self.config["output_root"],
+                    allow_synthetic=self._synthetic,
+                )
+                report["organized_output_root"] = organized["output_root"]
+                report["primary_files"] = organized["primary_files"]
+                report["organized_unique_records"] = organized["rows"]
+                report["organized_duplicate_native_ids"] = organized[
+                    "duplicate_native_ids"
+                ]
+            elif output_dir is None:
+                report["primary_files"] = []
+                report["organization_skipped"] = "no_selected_records"
             (sink.path / "summary.json").write_text(
                 json.dumps(report, ensure_ascii=False, indent=2) + "\n"
             )
@@ -2307,6 +2453,8 @@ class SocialCrawler(SocialExportMixin):
                 self._instagram_worker.close()
             if self._twitter_worker is not None:
                 self._twitter_worker.close()
+            if self._tiktok_worker is not None:
+                self._tiktok_worker.close()
 
 
 def main():
@@ -2314,7 +2462,11 @@ def main():
     parser.add_argument(
         "--config", type=Path, default=ROOT / "config/social_crawler.json"
     )
-    parser.add_argument("--output-dir", type=Path)
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        help="Explicit raw audit bundle path; omit for organized platform/day outputs",
+    )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--display-mode", choices=["auto", "headless", "virtual"])
     parser.add_argument(

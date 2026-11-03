@@ -71,9 +71,7 @@ class InstaloaderCrawlerTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.path = Path(self.temp.name)
-        self.config = json.loads(
-            (il.ig.ROOT / "config/instaloader_crawler.json").read_text()
-        )
+        self.config = il.standalone_config(None, "instagram", backend="instaloader")
         self.config["exclude_existing_datasets"] = []
         self.config["delay"]["seconds"] = 0
         self.config["platforms"]["instagram"].update(

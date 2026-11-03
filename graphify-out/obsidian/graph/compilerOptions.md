@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/tsconfig.json"
 type: "code"
-community: "Konfigurasi TypeScript"
+community: "Frontend dan Transaksi Sosmed"
 location: "L2"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_TypeScript
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # compilerOptions
@@ -25,8 +25,8 @@ tags:
 - [[resolveJsonModule]] - `contains` [EXTRACTED]
 - [[skipLibCheck]] - `contains` [EXTRACTED]
 - [[strict]] - `contains` [EXTRACTED]
-- [[target]] - `contains` [EXTRACTED]
+- [[target_1]] - `contains` [EXTRACTED]
 - [[tsconfig.json]] - `contains` [EXTRACTED]
 - [[types]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_TypeScript
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

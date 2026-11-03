@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/reddit_crawler.py"
 type: "rationale"
 community: "Wrapper RedditCrawler"
-location: "L43"
+location: "L48"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -11,7 +11,4 @@ tags:
 
 # Instagram1.5.1 rate-limit recovery andstagedrun chronology
 
-## Connections
-- [[Bounded Instagram recovery does not override user stop]] - `references` [EXTRACTED]
-
 #graphify/rationale #graphify/EXTRACTED #community/Penggabungan_Dataset

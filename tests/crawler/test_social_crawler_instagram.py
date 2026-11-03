@@ -7,17 +7,19 @@ from copy import deepcopy
 from pathlib import Path
 from unittest.mock import patch
 
+from Crawler.Backend.crawler_config import read_config
 from Crawler.Backend.instaloader_crawler import InstaloaderSettings, InstaloaderWorker
-from Crawler.Backend.social_crawler import ROOT, SocialCrawler
+from Crawler.Backend.social_crawler import SocialCrawler
 from tests.crawler.test_instagram_crawler import URL, records
 from tests.crawler.test_social_crawler import Clock, receipt, yt_events
 
 
 class InstagramIntegrationTests(unittest.TestCase):
     def setUp(self):
-        self.cfg = json.loads(
-            (ROOT / "config/social_crawler_instagram_3h.json").read_text()
-        )
+        self.cfg = read_config()
+        self.cfg["platforms"] = {"instagram": self.cfg["platforms"]["instagram"]}
+        self.cfg["platforms"]["instagram"]["enabled"] = True
+        self.cfg.pop("scweet")
         self.cfg["exclude_existing_datasets"] = []
         self.cfg["delay"] = {"mode": "fixed", "seconds": 0}
         self.cfg["instagram_pacing"]["enabled"] = False

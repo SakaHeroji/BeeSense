@@ -1,5 +1,9 @@
 # BeeSense
 
+Output standar `SocialCrawler` kini berada di **[outputs/crawling](outputs/crawling/README.md)**, per platform dan tanggal crawling WIB, dengan ID unik lintas tanggal. [Panduan output](docs/crawler/OUTPUTS.md) menjelaskan audit, lokasi bundle mentah dan pemulihan riwayat.
+
+Semua runner social crawler sekarang dikustom dari **[config/social_crawler.json](config/social_crawler.json)**. Keyword, query, periode, durasi, dan target bersama cukup diubah sekali; override dan flag aktif tersedia per platform. Delapan JSON preset duplikat sudah dihapus. Lihat [panduan konfigurasi](docs/crawler/CONFIGURATION.md).
+
 Kode dikelompokkan per komponen. `streamlit_apps.py` tetap entry point Streamlit Cloud; implementasi UI berada di `Dashboard/app.py`.
 
 | Folder | Isi |
@@ -17,13 +21,13 @@ Kode dikelompokkan per komponen. `streamlit_apps.py` tetap entry point Streamlit
 
 Lihat [peta lokasi dan perintah](docs/PROJECT_STRUCTURE.md). Jalankan perintah dari root repository.
 
-[`SocialCrawler`](Crawler/Backend/social_crawler.py) kini memakai **Reddrix untuk Reddit** dan yt-dlp untuk YouTube, dengan display adaptif macOS/Linux dan satu kontrak Excel. [`RedditCrawler`](Crawler/Backend/reddit_crawler.py) tetap tersedia sebagai pembungkus Reddit-only dari implementasi yang sama. [Konfigurasi utama](config/social_crawler.json) tetap 3 jam; [percobaan Reddit](config/reddit_crawler.json) tetap 30 menit. Lihat [panduan gabungan](docs/crawler/SOCIAL_CRAWLER.md) dan [batas Reddrix/hasil percobaan](docs/crawler/REDDIT_CRAWLER.md).
+[`SocialCrawler`](Crawler/Backend/social_crawler.py) kini memakai **Reddrix untuk Reddit** dan yt-dlp untuk YouTube, dengan display adaptif macOS/Linux dan satu kontrak Excel. [`RedditCrawler`](Crawler/Backend/reddit_crawler.py) tetap tersedia sebagai pembungkus Reddit-only dari implementasi yang sama. [Konfigurasi utama](config/social_crawler.json) tetap 3 jam; [runner Reddit mandiri](docs/crawler/REDDIT_CRAWLER.md) mewarisi durasi yang sama. Lihat [panduan gabungan](docs/crawler/SOCIAL_CRAWLER.md) dan [batas Reddrix/hasil percobaan](docs/crawler/REDDIT_CRAWLER.md).
 
-[`InstaloaderCrawler`](Crawler/Backend/instaloader_crawler.py) kini menjadi backend Instagram default **SocialCrawler 1.6.0**, dengan patch GraphQL web dan komentar NodeIterator yang sudah diuji pada 1 post/20 komentar nyata. [Preset Instagram 3 jam](config/social_crawler_instagram_3h.json) tetap menargetkan 1.000 post; minimum jeda, deadline, dedup dan ekspor Excel dipertahankan. [Panduan Instaloader](docs/crawler/INSTALOADER_CRAWLER.md) memuat setup auth lokal, hasil uji dan batasnya. `InstagramCrawler` lama tetap menjadi coordinator/export adapter bersama dan tersedia untuk backend eksplisit sebelumnya.
+[`InstaloaderCrawler`](Crawler/Backend/instaloader_crawler.py) kini menjadi backend Instagram default **SocialCrawler 1.6.0**, dengan patch GraphQL web dan komentar NodeIterator yang sudah diuji pada 1 post/20 komentar nyata. [Pengaturan Instagram](config/social_crawler.json) tetap menargetkan 1.000 post; minimum jeda, deadline, dedup dan ekspor Excel dipertahankan. [Panduan Instaloader](docs/crawler/INSTALOADER_CRAWLER.md) memuat setup auth lokal, hasil uji dan batasnya. `InstagramCrawler` lama tetap menjadi coordinator/export adapter bersama dan tersedia untuk backend eksplisit sebelumnya.
 
 Clustering dan penelusuran percakapan YouTube/Reddit/Instagram melalui dashboard Streamlit. SocialCrawler, class NLP, dan class UI terpisah. Dashboard membaca hasil clustering tersimpan sehingga dapat dibuka tanpa crawling, login Reddit, download model, atau training ulang.
 
-`TwitterCrawler` berbasis **Scweet 5.8.2** tersedia sebagai percobaan terpisah untuk X/Twitter, dengan [konfigurasi 30 menit](config/twitter_crawler.json), auth lokal, deduplikasi native ID, dan format Excel BeeSense yang sama. Lihat [panduan TwitterCrawler](docs/crawler/TWITTER_CRAWLER.md). Kini tersedia dalam **SocialCrawler 1.7.0**, memakai [preset Twitter 3 jam/1.000 post](config/social_crawler_twitter_3h.json), root audit untuk dedup/penggabungan, serta dukungan X pada NLP dan dashboard.
+`TwitterCrawler` berbasis **Scweet 5.8.2** tersedia sebagai percobaan terpisah untuk X/Twitter, dengan [konfigurasi universal](config/social_crawler.json), auth lokal, deduplikasi native ID, dan format Excel BeeSense yang sama. Lihat [panduan TwitterCrawler](docs/crawler/TWITTER_CRAWLER.md). Kini tersedia dalam **SocialCrawler 1.7.0**, memakai [bagian Twitter pada konfigurasi utama](config/social_crawler.json), root audit untuk dedup/penggabungan, serta dukungan X pada NLP dan dashboard.
 
 ## Menjalankan dashboard
 
@@ -131,7 +135,7 @@ Versi class berbasis Selenium tersedia di [social_crawler_selenium.py](Crawler/B
 Lihat [panduan Selenium](docs/crawler/SELENIUM_CRAWLER.md) dan [peta Obsidian](graphify-out/obsidian/Crawler%20Selenium.md).
 Versi ini membaca JSON yang sama dan mempertahankan format kedua workbook Excel.
 
-Untuk tooling crawler dan tes NLP lengkap pada Python 3.12, pasang `python -m pip install -r requirements/dev.txt`. `requirements.txt` hanya memasang runtime dashboard; training SBERT tetap memakai environment tersendiri di bawah. Seluruh pengaturan crawl tetap berada dalam **config/social_crawler.json**; opsi NLP/penjelasan di **config/social_nlp.json**.
+Untuk tooling crawler dan tes NLP lengkap pada Python 3.12, pasang `python -m pip install -r requirements/dev.txt`. `requirements.txt` hanya memasang runtime dashboard; training SBERT tetap memakai environment tersendiri di bawah. Seluruh pengaturan crawl tetap berada dalam **config/social_crawler.json**; opsi NLP/penjelasan di **config/social_nlp.json**. Lima preset NLP duplikat sudah dihapus; lihat [panduan satu konfigurasi NLP](docs/machine-learning/CONFIGURATION.md). Periksa pengaturan tanpa training memakai `python -m MachineLearning.social_nlp --dry-run`.
 
 ```bash
 # Validasi konfigurasi; tidak mengakses jaringan.

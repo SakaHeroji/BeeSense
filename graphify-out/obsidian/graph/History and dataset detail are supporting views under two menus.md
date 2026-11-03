@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/README.md"
 type: "concept"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "# PRD Frontend"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # History and dataset detail are supporting views under two menus
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Frontend PRD index]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

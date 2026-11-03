@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
-- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)_1]] - `rationale_for` [EXTRACTED]
+- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)]] - `rationale_for` [EXTRACTED]
 - [[MachineLearningsource_roots.py and build_units()]] - `implements` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

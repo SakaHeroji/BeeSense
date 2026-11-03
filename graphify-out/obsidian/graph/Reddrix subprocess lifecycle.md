@@ -10,7 +10,4 @@ tags:
 
 # Reddrix subprocess lifecycle
 
-## Connections
-- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - `implements` [EXTRACTED]
-
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

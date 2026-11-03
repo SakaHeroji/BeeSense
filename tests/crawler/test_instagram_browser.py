@@ -10,6 +10,7 @@ from types import SimpleNamespace
 from unittest.mock import patch
 
 from Crawler.Backend import instagram_browser as browser
+from Crawler.Backend.crawler_config import standalone_config
 from Crawler.Backend.instagram_crawler import InstagramCrawler
 
 
@@ -25,14 +26,13 @@ class InstagramBrowserTests(unittest.TestCase):
                 browser.browser_configuration(value)
 
     def test_browser_is_real_backend_but_injected_workers_remain_synthetic(self):
-        crawler = InstagramCrawler("config/instagram_browser_crawler.json")
+        cfg = standalone_config(None, "instagram", backend="browser")
+        crawler = InstagramCrawler(cfg)
         self.assertFalse(crawler.synthetic)
         self.assertEqual(crawler.method, browser.BROWSER_METHOD)
         self.assertIsInstance(crawler.worker, browser.InstagramBrowserWorker)
-        self.assertEqual(crawler.config["total_seconds"], 1800)
-        fixture = InstagramCrawler(
-            "config/instagram_browser_crawler.json", worker=lambda *args: None
-        )
+        self.assertEqual(crawler.config["total_seconds"], cfg["total_seconds"])
+        fixture = InstagramCrawler(cfg, worker=lambda *args: None)
         self.assertTrue(fixture.synthetic)
 
     def test_cli_error_never_exposes_auth_redirect_or_input(self):
@@ -167,9 +167,7 @@ await assert.rejects(navigate(page,'https://www.instagram.com/p/B/',1000),/gener
     def test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live(self):
         from tests.crawler.test_instagram_crawler import URL, records
 
-        cfg = json.loads(
-            (browser.ROOT / "config/instagram_browser_crawler.json").read_text()
-        )
+        cfg = standalone_config(None, "instagram", backend="browser")
         cfg["exclude_existing_datasets"] = []
         cfg["platforms"]["instagram"].update(
             urls=[URL], hashtags=[], min_posts=1, min_comments_per_post=2

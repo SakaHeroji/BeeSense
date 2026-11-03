@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/relevance_dashboard.py"
 type: "rationale"
-community: "topic_sentence_export.py"
+community: "Model dan Pengujian NLP"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # Start the local relevance experiment, or its preserved baseline snapshot.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[relevance_dashboard.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/rationale #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

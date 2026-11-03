@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Penggabungan Dataset"
-location: "L35"
+community: "Arsip Data Harian"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penggabungan_Dataset
+  - community/Arsip_Data_Harian
 ---
 
 # sha()
@@ -16,4 +16,4 @@ tags:
 - [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

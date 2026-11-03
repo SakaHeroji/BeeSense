@@ -20,6 +20,6 @@ tags:
 - [[_pace()]] - `calls` [EXTRACTED]
 - [[apply_browser_patch()]] - `indirect_call` [INFERRED]
 - [[instaloader_browser_patch.py]] - `contains` [EXTRACTED]
-- [[main()_3]] - `indirect_call` [INFERRED]
+- [[main()]] - `indirect_call` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

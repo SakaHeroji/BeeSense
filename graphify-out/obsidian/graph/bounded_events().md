@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pengujian Parser Reddit"
-location: "L830"
+community: "Parsing Identitas Reddit"
+location: "L831"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Parser_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # bounded_events()
@@ -15,6 +15,6 @@ tags:
 - [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - `calls` [EXTRACTED]
 - [[Whole-post comment budget includes replies; nested replies share thread cap.]] - `rationale_for` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[worker()]] - `calls` [EXTRACTED]
+- [[worker()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

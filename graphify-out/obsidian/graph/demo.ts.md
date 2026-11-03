@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
+community: "Frontend dan Transaksi Sosmed"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # demo.ts
@@ -20,37 +20,32 @@ tags:
 - [[Job]] - `imports` [EXTRACTED]
 - [[PreviewRow]] - `imports` [EXTRACTED]
 - [[SeriesPoint]] - `imports` [EXTRACTED]
-- [[SurveyAnswer]] - `imports` [EXTRACTED]
-- [[SurveyReview]] - `imports` [EXTRACTED]
 - [[advance()]] - `contains` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[cap]] - `contains` [EXTRACTED]
-- [[committed]] - `contains` [EXTRACTED]
 - [[dataset()]] - `contains` [EXTRACTED]
 - [[demoApi]] - `contains` [EXTRACTED]
-- [[domain.test.ts]] - `imports_from` [EXTRACTED]
 - [[domain.ts]] - `imports_from` [EXTRACTED]
 - [[emptyCounts()]] - `contains` [EXTRACTED]
 - [[get()]] - `contains` [EXTRACTED]
 - [[initialConfig()]] - `imports` [EXTRACTED]
 - [[load()]] - `contains` [EXTRACTED]
 - [[plans]] - `contains` [EXTRACTED]
+- [[platform-workspace.test.tsx]] - `imports_from` [EXTRACTED]
 - [[platforms]] - `imports` [EXTRACTED]
 - [[queryLines()]] - `imports` [EXTRACTED]
+- [[redactConfig()]] - `imports` [EXTRACTED]
 - [[requireOperator()]] - `contains` [EXTRACTED]
-- [[reviewUrls()]] - `imports` [EXTRACTED]
-- [[reviews]] - `contains` [EXTRACTED]
 - [[save()]] - `contains` [EXTRACTED]
 - [[seed()]] - `contains` [EXTRACTED]
-- [[stamp()]] - `contains` [EXTRACTED]
-- [[surveyDatasets]] - `contains` [EXTRACTED]
-- [[surveyKey()]] - `imports` [EXTRACTED]
-- [[surveyKnown]] - `contains` [EXTRACTED]
+- [[stamp()_1]] - `contains` [EXTRACTED]
+- [[transaction-demo.ts]] - `imports_from` [EXTRACTED]
+- [[transaction.test.ts]] - `imports_from` [EXTRACTED]
+- [[transactionDemoApi]] - `imports` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 - [[update()]] - `contains` [EXTRACTED]
 - [[validateConfig()]] - `imports` [EXTRACTED]
-- [[validateSurvey()]] - `imports` [EXTRACTED]
 - [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 - [[zeros]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

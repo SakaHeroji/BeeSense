@@ -1,17 +1,17 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
-community: "Pengambilan HTML Reddit"
-location: "L199"
+community: "Batas Crawler Opsional"
+location: "L208"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # Atomic owner-only settings; passwords are never part of this file.
 
 ## Connections
-- [[save_session()]] - `rationale_for` [EXTRACTED]
+- [[save_session()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

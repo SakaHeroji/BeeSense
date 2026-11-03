@@ -1,20 +1,19 @@
 ---
 source_file: "PRD/PRD Frontend/Rancangan Layar Crawler.md"
 type: "document"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "line 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Crawler screen design and recovery interactions
 
 ## Connections
-- [[Atomic survey review and idempotent commit]] - `semantically_similar_to` [INFERRED]
 - [[Crawler frontend product requirements]] - `references` [EXTRACTED]
 - [[Frontend PRD index]] - `references` [EXTRACTED]
 - [[White-orange visual system and black text]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L63"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,10 +14,8 @@ tags:
 ## Connections
 - [[._baseline()_1]] - `calls` [EXTRACTED]
 - [[.accept()_5]] - `calls` [EXTRACTED]
-- [[_url()]] - `calls` [EXTRACTED]
 - [[configuration()]] - `calls` [EXTRACTED]
 - [[normalize_item()_1]] - `calls` [EXTRACTED]
-- [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

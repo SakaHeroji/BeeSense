@@ -1,16 +1,13 @@
 ---
 source_file: "graphify-out/obsidian/Metodologi Machine Learning Social NLP.md"
 type: "rationale"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Operasi dan Verifikasi BeeSense"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # DBSCAN source cluster provenance
 
-## Connections
-- [[DBSCAN]] - `references` [EXTRACTED]
-
-#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

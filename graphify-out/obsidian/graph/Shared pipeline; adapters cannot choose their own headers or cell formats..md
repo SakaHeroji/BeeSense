@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Kontrak Record Reddit"
-location: "L303"
+community: "Akuisisi YouTube"
+location: "L257"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # Shared pipeline; adapters cannot choose their own headers or cell formats.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Dataset]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube

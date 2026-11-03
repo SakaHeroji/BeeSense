@@ -14,6 +14,6 @@ tags:
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 - [[MachineLearningtopic_narratives.py]] - `implements` [EXTRACTED]
 - [[Offline narrative validation]] - `references` [EXTRACTED]
-- [[topic_narratives.csv_1]] - `references` [EXTRACTED]
+- [[topic_narratives.csv]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

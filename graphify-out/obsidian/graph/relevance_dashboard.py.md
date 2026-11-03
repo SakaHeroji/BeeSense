@@ -1,20 +1,20 @@
 ---
 source_file: "scripts/relevance_dashboard.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Model dan Pengujian NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # relevance_dashboard.py
 
 ## Connections
-- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[Start the local relevance experiment, or its preserved baseline snapshot.]] - `rationale_for` [EXTRACTED]
-- [[main()_14]] - `contains` [EXTRACTED]
+- [[main()_7]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

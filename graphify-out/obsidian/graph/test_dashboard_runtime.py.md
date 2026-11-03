@@ -1,12 +1,12 @@
 ---
 source_file: "tests/cloud/test_dashboard_runtime.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Model dan Pengujian NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # test_dashboard_runtime.py
@@ -14,8 +14,8 @@ tags:
 ## Connections
 - [[CloudRuntimeTests]] - `contains` [EXTRACTED]
 - [[Run in an isolated Cloud environment, using only root requirements.txt.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[topic_narratives.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

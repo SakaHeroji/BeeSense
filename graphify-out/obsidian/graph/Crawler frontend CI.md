@@ -1,18 +1,17 @@
 ---
 source_file: ".github/workflows/crawler-frontend.yml"
 type: "document"
-community: "CI Container Frontend"
+community: "Persyaratan Produk Crawler"
 location: "line 1"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/CI_Container_Frontend
+  - community/Persyaratan_Produk_Crawler
 ---
 
 # Crawler frontend CI
 
 ## Connections
-- [[BeeSense Crawler React frontend]] - `references` [EXTRACTED]
 - [[SPA container health and deep-link checks]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/CI_Container_Frontend
+#graphify/document #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler

@@ -1,19 +1,18 @@
 ---
 source_file: "PRD/PRD Machine Learning/README.md"
 type: "rationale"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "line 7"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Survey-specific NLP schema requirement
 
 ## Connections
 - [[Machine-learning PRD pending]] - `references` [EXTRACTED]
-- [[NLP schema eligibility gate]] - `semantically_similar_to` [INFERRED]
 - [[Survey answer, role and question provenance]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/rationale #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

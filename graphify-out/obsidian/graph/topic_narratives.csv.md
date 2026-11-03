@@ -1,20 +1,20 @@
 ---
-source_file: "docs/machine-learning/TWITTER_RETRAIN_20261102.md"
-type: "document"
-community: "Operasi dan Verifikasi BeeSense"
+source_file: "docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md"
+type: "concept"
+community: "Panduan Pipeline BeeSense"
 tags:
-  - graphify/document
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Panduan_Pipeline_BeeSense
 ---
 
 # topic_narratives.csv
 
 ## Connections
-- [[Gemini 3.5 Flash Lite]] - `shares_data_with` [EXTRACTED]
-- [[Narrative CSV schema compatibility]] - `references` [EXTRACTED]
-- [[Stored artifact Twitter dashboard]] - `references` [EXTRACTED]
-- [[Twitter model artifact manifest]] - `references` [EXTRACTED]
-- [[beesense-topic-id2]] - `references` [EXTRACTED]
+- [[Dashboard BeeSense]] - `references` [EXTRACTED]
+- [[Gemini topic narratives]] - `shares_data_with` [EXTRACTED]
+- [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
+- [[Relevansi Konteks — 2 November 2026]] - `references` [EXTRACTED]
+- [[gemini-topic-narratives2]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

@@ -1,18 +1,20 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L324"
+community: "Kontrak Record Reddit"
+location: "L1366"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # parser()
 
 ## Connections
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - `calls` [EXTRACTED]
+- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[main()_13]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

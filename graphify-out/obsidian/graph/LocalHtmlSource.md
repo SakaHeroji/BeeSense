@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Parsing Identitas Reddit"
-location: "L613"
+location: "L614"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,10 @@ tags:
 # LocalHtmlSource
 
 ## Connections
-- [[.__init__()_7]] - `method` [EXTRACTED]
+- [[.__init__()_26]] - `method` [EXTRACTED]
 - [[.fetch()_2]] - `method` [EXTRACTED]
 - [[HtmlSource]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[worker()]] - `calls` [EXTRACTED]
+- [[worker()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

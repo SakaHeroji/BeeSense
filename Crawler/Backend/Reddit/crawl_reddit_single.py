@@ -521,9 +521,9 @@ class Settings:
     subreddits:tuple[str,...]=("indonesia","karir","indotech")
     max_posts:int=3
     search_results:int=5
-    max_comments:int=100
-    max_replies:int=30
-    max_replies_per_thread:int=5
+    max_comments:int|None=100
+    max_replies:int|None=30
+    max_replies_per_thread:int|None=5
     timeout_seconds:int=45
     total_seconds:int=300
     request_delay:float=2.0
@@ -540,6 +540,7 @@ class Settings:
             "total_seconds":(10,1800),"max_html_bytes":(10000,20_000_000)}
         for name,(low,high) in limits.items():
             v=getattr(self,name)
+            if v is None and name in {"max_comments","max_replies","max_replies_per_thread"}:continue
             if type(v) is not int or not low<=v<=high:raise ValueError(f"{name} wajib integer {low}..{high}")
         if type(self.request_delay) not in (int,float) or not math.isfinite(self.request_delay) or not 1<=self.request_delay<=30:
             raise ValueError("request_delay wajib 1..30 detik")
@@ -834,7 +835,7 @@ def bounded_events(records,settings):
         if record["fullname"] in seen:continue
         seen.add(record["fullname"])
         if record["kind"]=="post":yield "record",record;continue
-        if total>=settings.max_comments:limited=True;continue
+        if settings.max_comments is not None and total>=settings.max_comments:limited=True;continue
         if record["kind"]=="reply":
             parent=record["parent"];branch=parent;visited=set()
             while parent in by_id and parent not in visited:
@@ -842,7 +843,7 @@ def bounded_events(records,settings):
                 if candidate["kind"]!="reply":branch=parent;break
                 parent=candidate["parent"]
                 if parent:branch=parent
-            if replies>=settings.max_replies or threads.get(branch,0)>=settings.max_replies_per_thread:
+            if (settings.max_replies is not None and replies>=settings.max_replies) or (settings.max_replies_per_thread is not None and threads.get(branch,0)>=settings.max_replies_per_thread):
                 limited=True;continue
             replies+=1;threads[branch]=threads.get(branch,0)+1
         total+=1;yield "record",record

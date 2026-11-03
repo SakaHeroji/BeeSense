@@ -1,27 +1,28 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L256"
+community: "Kontrak Record Reddit"
+location: "L302"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # Dataset
 
 ## Connections
-- [[.__init__()_17]] - `method` [EXTRACTED]
+- [[.__init__()_22]] - `method` [EXTRACTED]
 - [[.add_content()_1]] - `method` [EXTRACTED]
 - [[.finish_relations()_1]] - `method` [EXTRACTED]
-- [[SafeLogger]] - `uses` [INFERRED]
-- [[Settings_1]] - `uses` [INFERRED]
+- [[.setUp()_14]] - `calls` [EXTRACTED]
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
+- [[.test_13_excel_literal_ids_and_lossless_text()]] - `calls` [EXTRACTED]
 - [[Shared pipeline; adapters cannot choose their own headers or cell formats._1]] - `rationale_for` [EXTRACTED]
-- [[YouTubeAdapter]] - `uses` [INFERRED]
-- [[crawl_youtube.py]] - `imports` [EXTRACTED]
-- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [INFERRED]
 - [[run()_2]] - `calls` [EXTRACTED]
-- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

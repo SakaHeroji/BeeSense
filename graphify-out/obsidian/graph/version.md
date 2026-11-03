@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Metadata Package Frontend"
+community: "Frontend dan Transaksi Sosmed"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Metadata_Package_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # version
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[package.json]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Metadata_Package_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

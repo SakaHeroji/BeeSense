@@ -14,9 +14,8 @@ tags:
 - [[AI synthesis interpretation]] - `rationale_for` [EXTRACTED]
 - [[Dashboard BeeSense]] - `references` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer.generate_topic_narratives()]] - `implements` [EXTRACTED]
 - [[Top keywords and representative sentences]] - `references` [EXTRACTED]
-- [[beesense-topic-id2_1]] - `references` [EXTRACTED]
-- [[topic_narratives.csv_1]] - `shares_data_with` [EXTRACTED]
+- [[beesense-topic-id2]] - `references` [EXTRACTED]
+- [[topic_narratives.csv]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

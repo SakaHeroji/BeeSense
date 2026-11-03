@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L23"
+community: "Frontend dan Transaksi Sosmed"
+location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # platformLabels
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

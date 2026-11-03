@@ -1,19 +1,25 @@
 ---
-source_file: "MachineLearning/context_relevance.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Penyaringan Relevansi dan Narasi Topik"
-location: "L36"
+community: "Kontrak Record Reddit"
+location: "L77"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Kontrak_Record_Reddit
 ---
 
 # digest()
 
 ## Connections
-- [[.__init__()_37]] - `calls` [EXTRACTED]
-- [[._scores()]] - `calls` [EXTRACTED]
-- [[context_relevance.py]] - `contains` [EXTRACTED]
+- [[.__init__()_20]] - `calls` [EXTRACTED]
+- [[.accept()_3]] - `calls` [EXTRACTED]
+- [[.add_content()_1]] - `calls` [EXTRACTED]
+- [[.content()_1]] - `calls` [EXTRACTED]
+- [[.finish_relations()_1]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[fixture_page()]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
+- [[validate_row()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

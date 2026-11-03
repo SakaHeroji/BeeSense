@@ -12,7 +12,7 @@ tags:
 
 ## Connections
 - [[2 November 2026 pipeline integration]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
 - [[thread_root_key]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

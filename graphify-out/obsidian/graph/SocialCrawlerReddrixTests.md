@@ -1,20 +1,20 @@
 ---
 source_file: "tests/crawler/test_social_crawler_reddrix.py"
 type: "code"
-community: "Worker Reddrix"
+community: "Kuota Harian Scweet"
 location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Kuota_Harian_Scweet
 ---
 
 # SocialCrawlerReddrixTests
 
 ## Connections
-- [[.crawler()_2]] - `method` [EXTRACTED]
+- [[.crawler()_3]] - `method` [EXTRACTED]
 - [[.runner()]] - `method` [EXTRACTED]
-- [[.setUp()_7]] - `method` [EXTRACTED]
+- [[.setUp()_17]] - `method` [EXTRACTED]
 - [[.test_default_config_selects_reddrix_without_loading_browser()]] - `method` [EXTRACTED]
 - [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - `method` [EXTRACTED]
 - [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - `method` [EXTRACTED]
@@ -23,9 +23,7 @@ tags:
 - [[.test_reddrix_retry_uses_coordinator_cooldown_and_same_worker()]] - `method` [EXTRACTED]
 - [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - `method` [EXTRACTED]
 - [[.youtube_worker()]] - `method` [EXTRACTED]
-- [[Clock_1]] - `uses` [INFERRED]
-- [[FakeReddrix]] - `uses` [INFERRED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_social_crawler_reddrix.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

@@ -25,10 +25,7 @@ tags:
 - [[.test_random_and_fixed_delays_are_between_operations()]] - `calls` [EXTRACTED]
 - [[.test_redirect_to_historical_root_is_not_exported()]] - `calls` [EXTRACTED]
 - [[.test_single_sheet_compact_export_repeats_root_date_and_keeps_audit_dates()]] - `calls` [EXTRACTED]
-- [[.youtube_worker()]] - `calls` [EXTRACTED]
 - [[spawn_youtube_fixture()]] - `calls` [EXTRACTED]
 - [[test_social_crawler.py]] - `contains` [EXTRACTED]
-- [[test_social_crawler_instagram.py]] - `imports` [EXTRACTED]
-- [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Koordinator_Crawler

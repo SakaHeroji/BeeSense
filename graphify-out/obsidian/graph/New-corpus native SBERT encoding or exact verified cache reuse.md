@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Menjalankan BeeSense.md"
 type: "concept"
-community: "Alur Dataset Model Dashboard"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "# Menjalankan BeeSense"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # New-corpus native SBERT encoding or exact verified cache reuse
@@ -17,4 +17,4 @@ tags:
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/concept #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

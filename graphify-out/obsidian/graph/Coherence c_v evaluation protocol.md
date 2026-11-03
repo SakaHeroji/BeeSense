@@ -15,6 +15,5 @@ tags:
 - [[Gensim CoherenceModel reference]] - `cites` [EXTRACTED]
 - [[Historical baseline coherence snapshots]] - `references` [EXTRACTED]
 - [[Social NLP methodology note]] - `references` [EXTRACTED]
-- [[Twenty topic mean coherence publication gate]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

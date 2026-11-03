@@ -1,21 +1,20 @@
 ---
-source_file: "Crawler/Backend/instaloader_crawler.py"
+source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Worker Instaloader"
-location: "L30"
+community: "Batas Crawler Opsional"
+location: "L61"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Batas_Crawler_Opsional
 ---
 
 # upstream_version()
 
 ## Connections
-- [[.__call__()]] - `calls` [EXTRACTED]
-- [[.__init__()_25]] - `calls` [EXTRACTED]
-- [[.collect()]] - `calls` [EXTRACTED]
+- [[.__init__()_34]] - `calls` [EXTRACTED]
+- [[collect()]] - `calls` [EXTRACTED]
 - [[error_receipt()_1]] - `calls` [EXTRACTED]
-- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
+- [[instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

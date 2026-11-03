@@ -1,21 +1,18 @@
 ---
 source_file: "graphify-out/obsidian/InstagramCrawler instagrapi.md"
 type: "concept"
-community: "Riwayat Sesi Instagram"
+community: "Batas Crawler Opsional"
 location: "## Perkembangan terkini: Chrome"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Riwayat_Sesi_Instagram
+  - community/Batas_Crawler_Opsional
 ---
 
 # Historical interruptedChrome trial before1.5integration
 
 ## Connections
-- [[Bind document-script comments by native DOM permalink andsame shortcode]] - `references` [EXTRACTED]
-- [[Chrome backend selected by same standalone InstagramCrawler class]] - `references` [EXTRACTED]
-- [[Historical Chrome trial02 INTERRUPTED76posts910comments]] - `references` [EXTRACTED]
 - [[InstagramBrowserWorker]] - `references` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram
+#graphify/concept #graphify/EXTRACTED #community/Batas_Crawler_Opsional

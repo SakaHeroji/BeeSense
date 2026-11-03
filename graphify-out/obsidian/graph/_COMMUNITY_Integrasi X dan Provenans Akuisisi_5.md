@@ -1,25 +1,19 @@
 ---
 type: community
-cohesion: 0.29
-members: 10
+cohesion: 0.50
+members: 4
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.29 - loosely connected
-**Members:** 10 nodes
+**Cohesion:** 0.50 - moderately connected
+**Members:** 4 nodes
 
 ## Members
-- [[Daily request cap overshoot]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Deadline bounded pool cooldown]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Deadline preserving checkpoint resume]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Five batch BeeSense audit outputs]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Observed Twitter HTTP telemetry]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Scweet]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Scweet rate limiting documentation]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Twenty five query parity]] - rationale - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Twitter acquisition preset]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Verified Twitter acquisition 2 November 2026]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
+- [[Allowlist Docker tanpa auth dan sesi]] - rationale - deployment/docker/Dockerfile.twitter.dockerignore
+- [[Image Twitter Python 3.12 UID 10001]] - concept - deployment/docker/Dockerfile.twitter
+- [[Scweet 5.8.2]] - concept - requirements/twitter.txt
+- [[openpyxl 3.1.5]] - concept - requirements/twitter.txt
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,12 +21,3 @@ members: 10
 TABLE source_file, type FROM #community/Integrasi_X_dan_Provenans_Akuisisi
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-
-## Top bridge nodes
-- [[Verified Twitter acquisition 2 November 2026]] - degree 8, connects to 1 community
-- [[Scweet]] - degree 4, connects to 1 community
-- [[Twitter acquisition preset]] - degree 4, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Worker Reddrix"
-location: "L373"
+community: "Kuota Harian Scweet"
+location: "L387"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Kuota_Harian_Scweet
 ---
 
 # Spawn boundary retains streamed records when the hard deadline expires.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[reddrix_worker()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Kuota_Harian_Scweet

@@ -12,13 +12,13 @@ tags:
 # verify()
 
 ## Connections
-- [[dumps()]] - `calls` [EXTRACTED]
+- [[dumps()_1]] - `calls` [EXTRACTED]
 - [[safe_web_url()]] - `calls` [EXTRACTED]
-- [[schema_document()]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()]] - `calls` [EXTRACTED]
+- [[schema_document()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 - [[thread_id()]] - `calls` [EXTRACTED]
-- [[utc_datetime()]] - `calls` [EXTRACTED]
-- [[validate_row()]] - `calls` [EXTRACTED]
+- [[utc_datetime()_1]] - `calls` [EXTRACTED]
+- [[validate_row()_1]] - `calls` [EXTRACTED]
 - [[verify_browser_campaign.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

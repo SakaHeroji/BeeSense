@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Penggabungan Dataset"
-location: "L236"
+community: "Arsip Data Harian"
+location: "L157"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penggabungan_Dataset
+  - community/Arsip_Data_Harian
 ---
 
 # merge_unique()
@@ -17,7 +17,5 @@ tags:
 - [[merge()]] - `calls` [EXTRACTED]
 - [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 - [[sha()]] - `calls` [EXTRACTED]
-- [[twitter_roots()]] - `calls` [EXTRACTED]
-- [[write_roots()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

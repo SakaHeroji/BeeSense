@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Worker Reddrix"
-location: "L200"
+community: "Kuota Harian Scweet"
+location: "L210"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Kuota_Harian_Scweet
 ---
 
 # reddrix_receipt()
@@ -17,4 +17,4 @@ tags:
 - [[reddrix_version()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

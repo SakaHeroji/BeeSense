@@ -12,7 +12,7 @@ tags:
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_40]] - `method` [EXTRACTED]
+- [[.__init__()_8]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -44,7 +44,7 @@ tags:
 - [[.monthly_summary()]] - `method` [EXTRACTED]
 - [[.platform_summary()]] - `method` [EXTRACTED]
 - [[.ranking_figure()]] - `method` [EXTRACTED]
-- [[.render()_1]] - `method` [EXTRACTED]
+- [[.render()]] - `method` [EXTRACTED]
 - [[.selected_cluster()]] - `method` [EXTRACTED]
 - [[.sentence_figure()]] - `method` [EXTRACTED]
 - [[.source_figure()]] - `method` [EXTRACTED]
@@ -60,7 +60,7 @@ tags:
 - [[Read-only exploration of completed NLP runs; no training on page reruns.]] - `rationale_for` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_16]] - `calls` [EXTRACTED]
+- [[main()_5]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/thread_url

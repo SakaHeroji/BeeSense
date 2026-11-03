@@ -1,17 +1,16 @@
 ---
 type: community
 cohesion: 1.00
-members: 2
+members: 1
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
 **Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Members:** 1 nodes
 
 ## Members
-- [[Persisted Gemini topic descriptions]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[Twitter NLP publication gate]] - rationale - docs/crawler/TWITTER_CRAWLER.md
+- [[Shared session and counter]] - rationale - graphify-out/obsidian/TwitterCrawler Scweet.md
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Machine Learning/README.md"
 type: "document"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "line 3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Machine-learning PRD pending
@@ -16,4 +16,4 @@ tags:
 - [[Crawler frontend product requirements]] - `references` [EXTRACTED]
 - [[Survey-specific NLP schema requirement]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

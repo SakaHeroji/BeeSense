@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="id">
+  <meta charset="utf-8" /><title>BeeSense TikTok</title
+  ><link rel="stylesheet" href="popup.css" />
+  <main>
+    <p class="eyebrow">BEESENSE · TIKTOK</p>
+    <h1>Sambungkan Chrome</h1>
+    <p>
+      Gunakan tab TikTok aktif. Python menyimpan hasil ke Excel. Selesaikan
+      CAPTCHA sendiri bila diminta.
+    </p>
+    <label for="origin">Alamat penghubung lokal</label
+    ><input
+      id="origin"
+      placeholder="http://127.0.0.1:PORT/"
+      autocomplete="off"
+    />
+    <label for="code">Kode pasangan sementara</label
+    ><input id="code" type="password" autocomplete="off" />
+    <button id="start">Mulai pada tab TikTok ini</button
+    ><button id="continue" class="secondary">
+      Lanjut setelah validasi manual</button
+    ><button id="stop" class="secondary">Hentikan pengambilan</button>
+    <p id="status" role="status">Belum terhubung.</p>
+    <p class="fine">
+      Izin debugger memungkinkan pembacaan respons halaman. Kode ini hanya
+      mengendalikan tab TikTok yang dipilih dan mengirim data publik ke
+      127.0.0.1.
+    </p>
+  </main>
+  <script type="module" src="popup.mjs"></script>
+</html>

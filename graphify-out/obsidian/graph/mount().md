@@ -1,17 +1,17 @@
 ---
-source_file: "Crawler/Frontend/src/test/workflows.test.tsx"
+source_file: "Crawler/Frontend/src/test/platform-workspace.test.tsx"
 type: "code"
-community: "Pengujian Alur Frontend"
-location: "L18"
+community: "Frontend dan Transaksi Sosmed"
+location: "L16"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Alur_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # mount()
 
 ## Connections
-- [[workflows.test.tsx]] - `contains` [EXTRACTED]
+- [[platform-workspace.test.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Alur_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

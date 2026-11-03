@@ -1,10 +1,10 @@
 # BeeSense Crawler Frontend
 
-Frontend **ReactJS + TypeScript + Vite** berdasarkan [PRD Crawler](<../../PRD/PRD Frontend/PRD Frontend Crawler.md>). Dua menu utama: Crawler Otomatis dan Crawler Manual. Pilihan URL dan survei berada di dalam Crawler Manual.
+React, TypeScript dan Vite untuk tujuh menu: YouTube, Reddit, Instagram, TikTok, Threads, Facebook dan X/Twitter. Lingkup versi 1.2 adalah **frontend terlebih dahulu**. Tidak ada menu/perangkat Migrasi Excel terpisah atau Crawler Manual. Form URL/survei dan penulis migrasi PostgreSQL yang sempat dibuat telah dihapus sesuai koreksi lingkup.
 
-## Jalankan lokal
+## Menjalankan
 
-Gunakan Node.js 22.12 atau lebih baru dan npm. Dari root repository:
+Node.js ≥22.12 dan npm:
 
 ```sh
 cd Crawler/Frontend
@@ -12,76 +12,45 @@ npm ci
 npm run dev
 ```
 
-Buka **http://127.0.0.1:5173**. Mode development menggunakan adapter **simulasi**, dengan banner tetap. Tidak ada request ke platform sosial, crawling, training, atau perubahan dataset sebenarnya. Metadata pekerjaan demo disimpan di localStorage agar monitor dapat dibuka setelah refresh. Jawaban survei dan indeks respons demo hanya berada di memori; gunakan data sintetis dan impor ulang sesudah refresh.
-
-Untuk meninjau build demo:
+Buka http://127.0.0.1:5173. Development memakai simulasi berlabel. Tidak ada crawling, pembacaan arsip Excel, penulisan database atau perubahan auth.json. Hanya metadata crawling demo tersimpan di browser; simulasi migrasi/akun berada di memori dan hilang saat refresh. Gunakan input sintetis untuk demo.
 
 ```sh
+npm run check
+npm run format:check
 npm run build:demo
 npm run preview
 ```
 
-Preview tersedia pada http://127.0.0.1:4173. Pekerjaan simulasi baru dipercepat menjadi sekitar 45 detik, bukan tiga jam pengambilan sesungguhnya. Melalui monitor, uji skenario CAPTCHA, 429, dan kegagalan ekspor. Mengembalikan skenario ke Normal memungkinkan simulasi berlanjut; ini bukan tombol melewati rate limit pada mode API.
+Build produksi memakai mode API dan tidak fallback diam-diam ke simulasi. Konfigurasi publik berada di `.env.example`; VITE_* tidak boleh memuat token, cookie atau DSN.
 
-## Mode backend API
+## Konfigurasi per sosmed
 
-Salin `.env.example` menjadi `.env.local`, tentukan `VITE_DATA_MODE=api`, alamat API, dan proyek. `npm run build` memakai mode API secara default; tidak fallback diam-diam ke demo ketika backend gagal. Nilai `VITE_*` bersifat publik dan ditanam saat build: jangan masukkan token, cookie, atau rahasia.
+`config/social_crawler.json` adalah sumber nilai awal. `scripts/sync-config.mjs` membuat proyeksi publik `src/shared/crawler-defaults.json` sebelum dev/test/build. Edit JSON root, bukan snapshot; regenerasikan sebelum membangun dari context Docker frontend terisolasi. Proyeksi tidak membaca auth.json atau menyertakan rahasia.
 
-Typed HTTP adapter ada di `src/shared/api.ts`; kontrak transport ada di [docs/API_CONTRACT.md](docs/API_CONTRACT.md). API/worker/autentikasi belum disediakan oleh folder frontend ini. Mode API baru dapat mengakuisisi data setelah layanan backend mengimplementasikan kontrak tersebut. `social_crawler.py` saat ini adalah CLI/library, bukan HTTP server yang dapat langsung dipanggil SPA.
+Form menyediakan tanggal publikasi WIB dari/sampai sebelum, include/exclude keywords, query atau hashtag Instagram, subreddit Reddit, target post dan batas waktu jam opsional. Hanya sumber halaman yang aktif. Default 1.000 post, komentar/balasan tanpa cap, tanpa batas durasi. Excel lokal default; PostgreSQL/keduanya menyediakan host/IP, port dan URI sementara.
 
-Backend wajib menegakkan izin, deduplikasi, validasi, idempotensi, penyimpanan pekerjaan persisten, dan otorisasi ekspor/sesi CAPTCHA. Role selector hanya ada pada demo; bukan mekanisme autentikasi. Mode API memperoleh sesi dari server. Polling snapshot setiap lima detik dipakai untuk sinkronisasi dan pemulihan; SSE dapat ditambahkan tanpa mengubah kepemilikan state server.
+Akun & sesi opsional ditampilkan untuk Instagram, X/Twitter, TikTok, Threads dan Facebook. Username/session ID disiapkan untuk `config/auth.json` melalui kontrak HTTP tersendiri; bukan bagian konfigurasi crawling. Session ID disembunyikan, bisa ditampilkan dengan tombol, tidak disimpan ke URL/localStorage dan dibersihkan setelah simulasi simpan. Isian kosong mempertahankan nilai yang ada. Simpan perubahan akun sebelum meninjau crawling. Demo hanya menyimpan metadata akun di memori, tanpa menyimpan session ID atau mengubah file nyata.
 
-## Fitur
+## Data, statistik dan migrasi transaksi
 
-- Wizard otomatis empat langkah, target per platform, batas waktu, tanggal WIB, filter, baseline wajib, dan review rencana sebelum mulai.
-- Riwayat/filter pekerjaan; monitor per platform, grafik dan tabel progres, penghentian aman, serta pemisahan hasil parsial/finalisasi/gagal.
-- Input URL dengan normalisasi native ID, seleksi hasil valid, deteksi duplikat, dan mode tanpa discovery tambahan.
-- Form survei atau impor CSV/XLSX, pemilihan sheet, mapping, review, dan commit respons lengkap. Template awal `minat-studi` versi 1 memerlukan Q01 teks dan Q02 skala 1–5.
-- Preview dataset, kualitas, konteks sumber, ekspor sesuai izin, serta pilihan input NLP dengan penerimaan eksplisit terhadap hasil parsial.
-- Form tidak menyimpan jawaban survei di URL/localStorage. Konten ditampilkan sebagai teks; CSV melindungi sel yang bisa ditafsirkan sebagai formula.
+Tab Hasil per tanggal memakai tanggal eksekusi `startedAt` dalam WIB. Tanggal publikasi dan waktu pembuatan job tidak menjadi tanggal crawling. Filter/pagination/ID transaksi berada pada URL. Transaksi dideduplikasi menurut ID; preview maksimal 50 baris dengan pencarian dan ekspor Excel halaman aktif.
 
-Data demo selalu sintetis. Daftar baseline demo beserta native ID contoh bukan indeks dari dataset produksi. Unduhan demo hanya preview CSV halaman aktif dan manifest simulasi; bukan delapan-sheet workbook audit atau manifest terverifikasi. Adapter survei NLP belum tersedia, sehingga handoff survei diblokir secara eksplisit.
+Setiap transaksi mempunyai aksi Statistik, Lihat data dan Migrasi ke PostgreSQL. Statistik lengkap berada di `/crawler/:platform/jobs/:id?panel=statistics`: post, qualified, komentar, balasan, total konten unik, kandidat, duplikat, penolakan, target/gap/persentase, waktu, penyimpanan dan versi dataset. Transaksi multi-sumber dibatasi ke sosmed pada route.
 
-## Pemeriksaan
+Migrasi terbuka di data transaksi yang sama: `/crawler/:platform?view=results&transaction=:id&action=migrate`. Tidak ada unggah file atau halaman migrasi umum. Sumber dikunci ke job, sosmed dan versi/checksum dataset. Review menampilkan tanggal crawling, jumlah seluruh jenis konten, target PostgreSQL dan kebijakan lewati ID yang ada. Progres berada inline pada data tersebut. Simulasi ulang dataset/target yang sama melewati seluruh ID; ini ilustrasi frontend, bukan bukti database nyata. Pada refresh penuh, progres simulasi dapat tidak tersedia karena state hanya berada di memori.
 
-```sh
-npm run format:check
-npm run lint
-npm run test
-npm run build
-```
+Mulai crawling membuka monitor job untuk progres, aktivitas, konfigurasi dan dataset. Tautan monitor lama otomatis tetap didukung. Menu/form manual sudah tidak tersedia.
 
-Vitest mencakup batas konfigurasi, normalisasi URL, survei atomik/duplikat/konflik, izin, transport API, dan interaksi inti. Uji terhadap adapter simulasi tidak membuktikan backend atau browser worker nyata telah tersedia. Hasil audit UX dan cakupan rilis dicatat di [docs/DELIVERY.md](docs/DELIVERY.md).
+## Batas backend dan database
+
+[Kontrak API](docs/API_CONTRACT.md) adalah rancangan untuk tahap berikutnya. HTTP server/worker, penyimpanan auth.json dan migrasi transaksi PostgreSQL **belum diimplementasikan**. Tombol API hanya aktif bila capability tersedia. SocialCrawler Python tetap CLI/library dengan empat adapter; tiga sumber lainnya masih UI/rencana. Penulisan langsung PostgreSQL belum tersedia dan runner menolak opsi tersebut sebelum crawling.
+
+Utility `excel_postgresql.py`, SQL, tes database khusus, job CI dan image utility migrasi Excel telah dihapus. Database serta sumber Excel yang sudah ada tidak disentuh. **No migration required** untuk perubahan frontend ini.
 
 ## Docker
 
-Dari folder ini:
-
 ```sh
-# Build API by default. Route /api/v1 to a backend through your ingress.
-docker build -t beesense-crawler-frontend:api .
-
-# Review UI with synthetic data only.
-docker build --build-arg VITE_DATA_MODE=demo -t beesense-crawler-frontend:demo .
-docker run -d --name beesense-crawler-frontend -p 127.0.0.1:4174:8080 beesense-crawler-frontend:demo
+docker build -t beesense-crawler-frontend:api Crawler/Frontend
 ```
 
-Container berjalan sebagai UID 101 di port 8080 dengan health check `/healthz`. SPA deep links memakai fallback ke index; request API yang belum dirutekan memperoleh JSON 503. Ini container baru untuk Crawler, terpisah dari runtime Streamlit. Tidak ada perubahan skema database atau migrasi pada pekerjaan frontend ini.
-
-## Struktur
-
-```text
-src/app/        shell, router, provider, error boundary
-src/features/   otomatis, manual URL, survei, riwayat, monitor, dataset
-src/shared/     typed contract, HTTP/demo adapter, validasi, UI bersama
-src/test/       unit dan workflow integration tests
-docs/          kontrak integrasi, audit UX, dan hasil verifikasi
-```
-
-Pilihan visual memakai Plus Jakarta Sans yang dibundel lokal, tema putih–oranye dengan teks hitam minimum 13 px, dan tata letak form dengan ringkasan konteks. Rujukan teknologi: [React SPA](https://react.dev/learn/build-a-react-app-from-scratch), [Vite](https://vite.dev/guide/), [TanStack Query](https://tanstack.com/query/latest/docs/framework/react/overview), [React Router](https://reactrouter.com/start/declarative/installation), serta [SheetJS](https://docs.sheetjs.com/docs/getting-started/installation/nodejs/). SheetJS menggunakan tarball resmi 0.20.3; integrity dan dependency lain dikunci pada `package-lock.json`.
-
-## Tema dan sumber sosial
-
-Semua teks berwarna `#000000`, termasuk hint, placeholder, badge, tombol, dan teks nonaktif. Ukuran body/input 15 px, label/tombol 14 px, teks pendukung minimal 13 px. Permukaan putih `#FFFFFF`, canvas `#FAFAFA`, aksen `#FF8A24`, hover `#FF7608`, latar lembut `#FFF3E8`, border `#E6DDD5`. Warna hijau tidak digunakan. Aturan desain tercatat di [PRD §14.1](<../../PRD/PRD Frontend/PRD Frontend Crawler.md#141-tema-putih-oranye-dan-tipografi-wajib>).
-
-UI dan simulasi menyediakan **YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter** pada pemilihan sumber, query/target, validasi URL lengkap, monitor, grafik, dan filter. YouTube/Reddit dipilih sebagai default; lima sumber baru bersifat opt-in. Mode API hanya mengaktifkan sumber yang dinyatakan tersedia oleh backend melalui capabilities. Python SocialCrawler saat ini baru memiliki adapter YouTube/Reddit; lima adapter lain dan normalisasi skema NLP perlu diimplementasikan serta diuji. Handoff dataset demo yang memuat sumber baru diblokir sampai adapter skema NLP siap.
+Jalankan dari root repository. Image frontend tetap Nginx non-root UID 101, port 8080, health `/healthz`, SPA fallback. Tidak ada perubahan Compose/env/infrastruktur produksi. Docker daemon lokal tidak aktif sehingga image revisi ini belum dibangun. [Delivery dan audit UI](docs/DELIVERY.md) memuat bukti verifikasi.

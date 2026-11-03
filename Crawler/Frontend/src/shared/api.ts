@@ -1,5 +1,5 @@
-import type { Api, Config, Job, Plan, SurveyAnswer, SurveyReview } from './types';
-import { demoMode, projectId } from './domain';
+import type { Api, Config, Job, Plan } from './types';
+import { demoMode, projectId, redactConfig } from './domain';
 import { demoApi } from './demo';
 
 export class ApiError extends Error {
@@ -21,7 +21,7 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
       ...options,
       headers: {
         Accept: 'application/json',
-        ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+        ...(typeof options.body === 'string' ? { 'Content-Type': 'application/json' } : {}),
         ...options.headers,
       },
     });
@@ -53,22 +53,29 @@ const post = <T>(path: string, data: unknown, key?: string) =>
   });
 const jobPath = (id: string) => `/acquisition-jobs/${encodeURIComponent(id)}`;
 export const httpApi: Api = {
+  prepareTransactionMigration: (job, platform, target) =>
+    post(`${jobPath(job.id)}/platforms/${platform}/migration-plans`, {
+      dataset_id: job.dataset!.id,
+      version: job.dataset!.version,
+      checksum: job.dataset!.checksum,
+      postgresql: target,
+    }),
+  startTransactionMigration: (plan, key) =>
+    post(`${jobPath(plan.jobId)}/platforms/${plan.platform}/migrations`, { plan_id: plan.id }, key),
+  transactionMigration: (id) => request(`/transaction-migrations/${encodeURIComponent(id)}`),
+  authStatus: (platform) => request(`/crawler/platforms/${platform}/auth`),
+  saveAuth: (platform, value) => post(`/crawler/platforms/${platform}/auth`, value),
   session: () => request('/session'),
   capabilities: () => request('/crawler/capabilities'),
   jobs: () => request('/acquisition-jobs'),
   job: (id) => request(jobPath(id)),
-  validate: (config: Config) => post('/acquisition-plans/validate', { config }),
+  validate: async (config: Config) => {
+    const plan = await post<Plan>('/acquisition-plans/validate', { config });
+    return { ...plan, config: redactConfig(plan.config) };
+  },
   start: (plan: Plan, key: string) => post('/acquisition-jobs', { plan_id: plan.id }, key),
   stop: (id) => post(`${jobPath(id)}/stop`, {}),
   verification: (id) => post(`${jobPath(id)}/verification-session`, {}),
-  reviewUrls: (urls, baselines) => post('/crawler/urls/validate', { urls, baselines }),
-  validateSurvey: (rows: SurveyAnswer[]) => post('/survey-imports/validate', { rows }),
-  commitSurvey: (review: SurveyReview, key: string) =>
-    post(
-      `/survey-imports/${encodeURIComponent(review.id)}/commit`,
-      { validation_id: review.id, fingerprint: review.fingerprint, accept_valid_only: true },
-      key,
-    ),
   dataset: (job: Job, page: number, search: string, source: string) =>
     request(
       `/datasets/${encodeURIComponent(job.dataset!.id)}/versions/${job.dataset!.version}?${new URLSearchParams({ page: String(page), search, source })}`,

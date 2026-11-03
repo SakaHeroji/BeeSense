@@ -20,7 +20,7 @@ tags:
 - [[_pace()]] - `contains` [EXTRACTED]
 - [[apply_browser_patch()]] - `contains` [EXTRACTED]
 - [[browser_graphql_query()]] - `contains` [EXTRACTED]
-- [[main()_3]] - `contains` [EXTRACTED]
+- [[main()]] - `contains` [EXTRACTED]
 - [[test_instaloader_browser_patch.py]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

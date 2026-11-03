@@ -1,19 +1,23 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L339"
+community: "Crawler Selenium"
+location: "L144"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Crawler_Selenium
 ---
 
 # _timestamp()
 
 ## Connections
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[normalize_item()]] - `calls` [EXTRACTED]
-- [[utc_datetime()]] - `calls` [EXTRACTED]
+- [[._normalize()]] - `calls` [EXTRACTED]
+- [[.search()]] - `calls` [EXTRACTED]
+- [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - `calls` [EXTRACTED]
+- [[.youtube()]] - `calls` [EXTRACTED]
+- [[_reddit_records()]] - `calls` [EXTRACTED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

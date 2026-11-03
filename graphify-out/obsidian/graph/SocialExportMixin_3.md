@@ -1,16 +1,16 @@
 ---
 source_file: ""
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Batas Crawler Opsional"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Batas_Crawler_Opsional
 ---
 
 # SocialExportMixin
 
 ## Connections
-- [[TwitterCrawler]] - `inherits` [EXTRACTED]
+- [[InstagramCrawler]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

@@ -1,27 +1,20 @@
 ---
 type: community
-cohesion: 0.24
-members: 12
+cohesion: 0.40
+members: 5
 ---
 
 # thread_url
 
-**Cohesion:** 0.24 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.40 - moderately connected
+**Members:** 5 nodes
 
 ## Members
-- [[._css()]] - code - Dashboard/app.py
-- [[._explanation_index()]] - code - Dashboard/app.py
-- [[._explanations_view()]] - code - Dashboard/app.py
-- [[._gemini_inputs()]] - code - Dashboard/app.py
-- [[._gemini_overview()]] - code - Dashboard/app.py
-- [[._network()]] - code - Dashboard/app.py
-- [[._selected_context()]] - code - Dashboard/app.py
-- [[._topic_option()]] - code - Dashboard/app.py
-- [[._topic_selector()]] - code - Dashboard/app.py
-- [[.render()_1]] - code - Dashboard/app.py
-- [[.topic_summary()]] - code - Dashboard/app.py
-- [[Count sentence occurrences; never confuse them with distinct comments.]] - rationale - Dashboard/app.py
+- [[.test_topic_graph_is_bounded_and_noise_is_not_a_topic()]] - code - tests/nlp/test_social_nlp.py
+- [[.topic_figure()]] - code - Dashboard/app.py
+- [[Bounded topic graph volume from filtered rows, semantic edges from the full mod]] - rationale - Dashboard/app.py
+- [[Keep the full-model layout stable while volume and edge filters change.]] - rationale - Dashboard/app.py
+- [[_graph_positions()]] - code - Dashboard/app.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,15 +24,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_thread_url]]
-- 9 edges to [[_COMMUNITY_Render Dashboard Streamlit]]
-- 3 edges to [[_COMMUNITY_app.py]]
-- 1 edge to [[_COMMUNITY_thread_url_2]]
-- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_3]]
+- 2 edges to [[_COMMUNITY_thread_url]]
+- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
+- 1 edge to [[_COMMUNITY_app.py]]
+- 1 edge to [[_COMMUNITY_Render Dashboard Streamlit]]
 
 ## Top bridge nodes
-- [[.render()_1]] - degree 16, connects to 4 communities
-- [[._network()]] - degree 6, connects to 3 communities
-- [[._topic_option()]] - degree 6, connects to 2 communities
-- [[._selected_context()]] - degree 5, connects to 2 communities
-- [[.topic_summary()]] - degree 5, connects to 2 communities
+- [[.topic_figure()]] - degree 6, connects to 2 communities
+- [[_graph_positions()]] - degree 3, connects to 1 community
+- [[.test_topic_graph_is_bounded_and_noise_is_not_a_topic()]] - degree 2, connects to 1 community

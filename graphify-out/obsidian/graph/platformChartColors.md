@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L42"
+community: "Frontend dan Transaksi Sosmed"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # platformChartColors
@@ -15,4 +15,4 @@ tags:
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

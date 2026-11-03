@@ -1,25 +1,23 @@
 ---
-source_file: "Crawler/Frontend/src/features/Automatic.tsx"
+source_file: "Crawler/Frontend/src/shared/ConfigReview.tsx"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L304"
+community: "Frontend dan Transaksi Sosmed"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # ConfigReview()
 
 ## Connections
-- [[Automatic.tsx]] - `contains` [EXTRACTED]
+- [[ConfigReview.tsx]] - `contains` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports` [EXTRACTED]
+- [[dateTime()]] - `calls` [EXTRACTED]
+- [[isoWib()]] - `calls` [EXTRACTED]
 - [[lines()]] - `calls` [EXTRACTED]
-- [[number()]] - `calls` [EXTRACTED]
+- [[number()_1]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
-- [[queryLines()]] - `calls` [EXTRACTED]
-- [[reviewUrls()]] - `calls` [EXTRACTED]
-- [[useApp()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

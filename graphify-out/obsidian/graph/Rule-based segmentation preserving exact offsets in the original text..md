@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Model dan Pengujian NLP"
-location: "L234"
+community: "Encoding dan Penyimpanan Model"
+location: "L268"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Rule-based segmentation preserving exact offsets in the original text.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.sentence_spans()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

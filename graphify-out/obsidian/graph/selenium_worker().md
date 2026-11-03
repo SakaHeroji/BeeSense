@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
 community: "Crawler Selenium"
-location: "L569"
+location: "L577"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # selenium_worker()
 
 ## Connections
-- [[.__init__()_28]] - `indirect_call` [INFERRED]
+- [[.__init__()_17]] - `indirect_call` [INFERRED]
 - [[.error()]] - `indirect_call` [INFERRED]
 - [[.reddit()]] - `calls` [EXTRACTED]
 - [[.search()]] - `calls` [EXTRACTED]

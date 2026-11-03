@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
-community: "Worker Reddrix"
-location: "L121"
+community: "Kuota Harian Scweet"
+location: "L131"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Kuota_Harian_Scweet
 ---
 
 # Map Reddrix 1.2.14 dictionaries without inventing identity or dates.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[normalize_reddrix_item()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/rationale #graphify/EXTRACTED #community/Kuota_Harian_Scweet

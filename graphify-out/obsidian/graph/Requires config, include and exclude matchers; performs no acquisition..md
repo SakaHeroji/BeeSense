@@ -1,17 +1,17 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Pengambilan HTML Reddit"
-location: "L30"
+community: "Batas Crawler Opsional"
+location: "L31"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # Requires config, include and exclude matchers; performs no acquisition.
 
 ## Connections
-- [[SocialExportMixin]] - `rationale_for` [EXTRACTED]
+- [[SocialExportMixin_4]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

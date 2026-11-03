@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "rationale"
-community: "Parsing Identitas Reddit"
-location: "L342"
+community: "Akuisisi YouTube"
+location: "L296"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # Normalize a source event; write only through the shared Dataset/Sink.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.accept()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube

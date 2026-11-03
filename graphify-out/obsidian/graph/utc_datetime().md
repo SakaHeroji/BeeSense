@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L80"
+community: "Akuisisi YouTube"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # utc_datetime()
@@ -14,22 +14,10 @@ tags:
 ## Connections
 - [[.__init__()_2]] - `calls` [EXTRACTED]
 - [[.content()]] - `calls` [EXTRACTED]
-- [[.fetch()_2]] - `calls` [EXTRACTED]
 - [[.row()]] - `calls` [EXTRACTED]
-- [[.validate()]] - `calls` [EXTRACTED]
 - [[.write()]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[_configuration()]] - `calls` [EXTRACTED]
-- [[_timestamp()]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[export_campaign()]] - `calls` [EXTRACTED]
-- [[import_sections()]] - `calls` [EXTRACTED]
-- [[load_campaign()]] - `calls` [EXTRACTED]
-- [[run()]] - `calls` [EXTRACTED]
-- [[source_time()]] - `calls` [EXTRACTED]
-- [[valid_candidate()]] - `calls` [EXTRACTED]
-- [[validate_capture()]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 - [[validate_row()]] - `calls` [EXTRACTED]
-- [[verify()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

@@ -1,20 +1,19 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Worker Reddrix"
-location: "L372"
+community: "Kuota Harian Scweet"
+location: "L386"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Reddrix
+  - community/Kuota_Harian_Scweet
 ---
 
 # reddrix_worker()
 
 ## Connections
-- [[.run()_3]] - `calls` [EXTRACTED]
+- [[.run()_4]] - `calls` [EXTRACTED]
 - [[.runner()]] - `indirect_call` [INFERRED]
-- [[Hard-deadline subprocess retains streamed records]] - `conceptually_related_to` [INFERRED]
 - [[Spawn boundary retains streamed records when the hard deadline expires.]] - `rationale_for` [EXTRACTED]
 - [[collect_reddrix()]] - `calls` [EXTRACTED]
 - [[reddrix_error_receipt()]] - `calls` [EXTRACTED]
@@ -23,4 +22,4 @@ tags:
 - [[spawn_reddrix_fixture()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Reddrix
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

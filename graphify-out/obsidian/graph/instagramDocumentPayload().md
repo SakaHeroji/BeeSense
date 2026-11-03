@@ -12,7 +12,6 @@ tags:
 # instagramDocumentPayload()
 
 ## Connections
-- [[Bind document-script comments by native DOM permalink andsame shortcode]] - `conceptually_related_to` [INFERRED]
 - [[instagram_browser_capture.mjs]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Riwayat_Sesi_Instagram

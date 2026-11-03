@@ -1,36 +1,17 @@
 ---
 type: community
-cohesion: 0.10
-members: 21
+cohesion: 1.00
+members: 2
 ---
 
 # Dependency Pengembangan Frontend
 
-**Cohesion:** 0.10 - loosely connected
-**Members:** 21 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 2 nodes
 
 ## Members
-- [[@eslintjs]] - code - Crawler/Frontend/package.json
-- [[@eslintjs_1]] - concept - Crawler/Frontend/package.json
-- [[@testing-libraryuser-event]] - code - Crawler/Frontend/package.json
-- [[@testing-libraryuser-event_1]] - concept - Crawler/Frontend/package.json
-- [[@typesreact]] - code - Crawler/Frontend/package.json
-- [[@typesreact_1]] - concept - Crawler/Frontend/package.json
-- [[@typesreact-dom]] - code - Crawler/Frontend/package.json
-- [[@typesreact-dom_1]] - concept - Crawler/Frontend/package.json
-- [[@vitejsplugin-react]] - code - Crawler/Frontend/package.json
-- [[@vitejsplugin-react_1]] - concept - Crawler/Frontend/package.json
-- [[devDependencies]] - code - Crawler/Frontend/package.json
-- [[eslint]] - code - Crawler/Frontend/package.json
-- [[eslint_1]] - concept - Crawler/Frontend/package.json
-- [[jsdom]] - code - Crawler/Frontend/package.json
-- [[jsdom_1]] - concept - Crawler/Frontend/package.json
-- [[prettier]] - code - Crawler/Frontend/package.json
-- [[prettier_1]] - concept - Crawler/Frontend/package.json
-- [[typescript-eslint]] - code - Crawler/Frontend/package.json
-- [[typescript-eslint_1]] - concept - Crawler/Frontend/package.json
-- [[vitest]] - code - Crawler/Frontend/package.json
-- [[vitest_1]] - concept - Crawler/Frontend/package.json
+- [[@testing-libraryjest-dom]] - code - Crawler/Frontend/package.json
+- [[@testing-libraryjest-dom_1]] - concept - Crawler/Frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,13 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Metadata Package Frontend]]
-- 1 edge to [[_COMMUNITY_Aturan React Hooks]]
-- 1 edge to [[_COMMUNITY_Matcher DOM Pengujian]]
-- 1 edge to [[_COMMUNITY_Testing Library React]]
-- 1 edge to [[_COMMUNITY_Tipe Parser CSV]]
-- 1 edge to [[_COMMUNITY_Compiler TypeScript]]
-- 1 edge to [[_COMMUNITY_Bundler Vite]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_6]]
 
 ## Top bridge nodes
-- [[devDependencies]] - degree 17, connects to 7 communities
+- [[@testing-libraryjest-dom]] - degree 2, connects to 1 community

@@ -22,12 +22,15 @@ from hashlib import sha256
 from pathlib import Path
 from urllib.parse import urlsplit
 
+from Crawler.Backend.crawler_config import DEFAULT_CONFIG_PATH, standalone_config
+from Crawler.Backend.crawler_limits import deadline_after, reached, remaining_seconds
 from Crawler.Backend.Reddit import crawl_reddit_single as contract
 from Crawler.Backend.social_export import (
     COMPACT_COLUMNS,
     COMPACT_FILE,
     SocialExportMixin,
 )
+from Crawler.Backend.storage_config import require_excel_storage, storage_config
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = "1.1.0"
@@ -149,11 +152,13 @@ def _integer(value, name, low, high):
 def configuration(value):
     cfg = deepcopy(value if isinstance(value, dict) else read_json(value))
     allowed = {
+        "storage",
         "project_id",
         "since",
         "until",
         "include_keywords",
         "exclude_keywords",
+        "comment_exclude_keywords",
         "include_mode",
         "delay",
         "timeout_seconds",
@@ -180,10 +185,19 @@ def configuration(value):
             not isinstance(x, str) or not x.strip() for x in cfg[key]
         ):
             raise ValueError("Invalid " + key)
+    cfg["storage"] = storage_config(cfg.get("storage"))
+    cfg.setdefault("comment_exclude_keywords", None)
+    if cfg["comment_exclude_keywords"] is not None:
+        value = cfg["comment_exclude_keywords"]
+        if not isinstance(value, list) or any(
+            not isinstance(term, str) or not term.strip() for term in value
+        ):
+            raise ValueError("Invalid comment_exclude_keywords")
     if cfg.get("include_mode", "any") not in {"any", "all"}:
         raise ValueError("include_mode must be any or all")
     cfg.setdefault("include_mode", "any")
-    _integer(cfg.get("total_seconds", 1800), "total_seconds", 1, 10800)
+    if cfg.get("total_seconds", 1800) is not None:
+        _integer(cfg.get("total_seconds", 1800), "total_seconds", 1, 10800)
     cfg.setdefault("total_seconds", 1800)
     cfg.setdefault("timeout_seconds", 180)
     _integer(cfg["timeout_seconds"], "timeout_seconds", 1, 300)
@@ -239,8 +253,13 @@ def configuration(value):
         ("search_window_days", 1, 365),
         ("max_searches", 1, 1000),
     ):
-        _integer(p[key], key, low, high)
-    if p["min_posts"] > p["max_posts"]:
+        if p[key] is not None or key not in {
+            "max_posts",
+            "max_comments",
+            "max_searches",
+        }:
+            _integer(p[key], key, low, high)
+    if reached(p["min_posts"] - 1, p["max_posts"]):
         raise ValueError("min_posts exceeds max_posts")
     options = cfg.setdefault("scweet", {})
     defaults = dict(
@@ -272,7 +291,11 @@ def configuration(value):
         ("window_request_limit", 1, 40),
         ("rate_limit_cooldown_seconds", 360, 86400),
     ):
-        _integer(options[key], key, low, high)
+        if options[key] is not None or key not in {
+            "daily_requests_limit",
+            "daily_tweets_limit",
+        }:
+            _integer(options[key], key, low, high)
     if type(options["manifest_scrape_on_init"]) is not bool:
         raise ValueError("manifest_scrape_on_init must be boolean")
     return cfg
@@ -473,8 +496,8 @@ def create_client(options):
         api_http_mode="sync",
         min_delay_s=options["request_interval_seconds"],
         window_request_limit=options["window_request_limit"],
-        daily_requests_limit=options["daily_requests_limit"],
-        daily_tweets_limit=options["daily_tweets_limit"],
+        daily_requests_limit=options["daily_requests_limit"] or 300,
+        daily_tweets_limit=options["daily_tweets_limit"] or 6000,
         max_empty_pages=1,
         max_task_attempts=1,
         max_fallback_attempts=1,
@@ -497,6 +520,12 @@ def create_client(options):
         )
     finally:
         os.umask(previous_umask)
+    if options["daily_requests_limit"] is None or options["daily_tweets_limit"] is None:
+        from Crawler.Backend.scweet_limits import configure_daily_quotas
+
+        configure_daily_quotas(
+            client, options["daily_requests_limit"], options["daily_tweets_limit"]
+        )
     diagnostics = client._accounts_repo.eligibility_diagnostics()
     if not diagnostics["eligible"]:
         blocked = set(diagnostics.get("blocked_counts", {}))
@@ -641,7 +670,7 @@ def search_targets(config):
             .isoformat()
         )
         for query in p["queries"]:
-            if emitted >= p["max_searches"]:
+            if reached(emitted, p["max_searches"]):
                 return
             emitted += 1
             yield dict(
@@ -700,11 +729,11 @@ class TwitterCoordinatorWorker:
 
     def _wants_replies(self, ident, item, settings):
         return bool(
-            settings.max_comments
+            settings.max_comments != 0
             and item.get("comments", 0) > 0
             and (
                 ident in self.reply_threads
-                or len(self.reply_threads) < settings.max_comment_threads
+                or not reached(len(self.reply_threads), settings.max_comment_threads)
             )
         )
 
@@ -843,7 +872,7 @@ class TwitterCrawler(SocialExportMixin):
         monotonic=time.monotonic,
         sleep=time.sleep,
     ):
-        self.config = configuration(config or ROOT / "config/twitter_crawler.json")
+        self.config = configuration(standalone_config(config, "twitter"))
         self.include = contract.KeywordMatcher(self.config["include_keywords"])
         self.exclude = contract.KeywordMatcher(self.config["exclude_keywords"])
         self.worker = worker or ScweetWorker(self.config["scweet"])
@@ -872,24 +901,54 @@ class TwitterCrawler(SocialExportMixin):
         for supplied in self.config["exclude_existing_datasets"]:
             path = (ROOT / supplied).resolve()
             if path.is_dir():
-                path /= "Contents.jsonl"
+                path /= (
+                    "Contents.jsonl"
+                    if (path / "Contents.jsonl").is_file()
+                    else "dataset.xlsx"
+                )
+            if path.suffix not in {".jsonl", ".xlsx"}:
+                raise ValueError(
+                    "Twitter baseline must be an audit bundle, workbook or Contents.jsonl"
+                )
             with path.open("rb") as stream:
                 digest = sha256(stream.read()).hexdigest()
-            if path.suffix != ".jsonl":
-                raise ValueError(
-                    "Twitter baseline must be an audit bundle or Contents.jsonl"
-                )
-            for line in path.read_text(encoding="utf-8").splitlines():
-                row = json.loads(line)
-                contract.validate_row("Contents", row)
-                if row["platform"] == "twitter":
-                    key = object_key(row["native_id"])
-                    if (
-                        post_url(row["canonical_url"])
-                        != "https://x.com/i/web/status/" + row["native_id"]
-                    ):
-                        raise ValueError("Baseline native ID and URL disagree")
-                    keys.add(key)
+            book = None
+            try:
+                if path.suffix == ".xlsx":
+                    from openpyxl import load_workbook
+
+                    book = load_workbook(path, read_only=True, data_only=True)
+                    if "Contents" not in book.sheetnames:
+                        raise ValueError(
+                            "Deduplication workbook requires the Contents audit sheet"
+                        )
+                    rows = book["Contents"].iter_rows(values_only=True)
+                    headers = next(rows, ())
+                    if not {"platform", "native_id", "canonical_url"} <= set(headers):
+                        raise ValueError(
+                            "Deduplication workbook is missing identity columns"
+                        )
+                    records = (dict(zip(headers, cells)) for cells in rows)
+                else:
+                    records = (
+                        json.loads(line)
+                        for line in path.read_text(encoding="utf-8").splitlines()
+                    )
+                for row in records:
+                    if path.suffix == ".jsonl":
+                        contract.validate_row("Contents", row)
+                    if row["platform"] == "twitter":
+                        native = native_id(row["native_id"])
+                        key = object_key(native)
+                        if (
+                            post_url(row["canonical_url"])
+                            != "https://x.com/i/web/status/" + native
+                        ):
+                            raise ValueError("Baseline native ID and URL disagree")
+                        keys.add(key)
+            finally:
+                if book is not None:
+                    book.close()
             sources.append(dict(path=str(path), sha256=digest))
         return keys, sources
 
@@ -901,6 +960,7 @@ class TwitterCrawler(SocialExportMixin):
             self.worker.close()
 
     def run(self, output_dir):
+        require_excel_storage(self.config)
         excluded, baselines = self._baseline()
         output = Path(output_dir).resolve()
         run_id = str(uuid.uuid4())
@@ -911,7 +971,7 @@ class TwitterCrawler(SocialExportMixin):
         dataset = contract.Dataset(factory, sink)
         p = self.config["platforms"]["twitter"]
         began = self.clock()
-        deadline = began + self.config["total_seconds"]
+        deadline = deadline_after(began, self.config["total_seconds"])
         counts = dict(
             posts_exported=0,
             comments=0,
@@ -944,7 +1004,7 @@ class TwitterCrawler(SocialExportMixin):
                 platform="twitter",
                 observed_at=contract.now_iso(),
                 elapsed_seconds=round(self.clock() - began, 2),
-                remaining_seconds=round(max(0, deadline - self.clock()), 2),
+                remaining_seconds=remaining_seconds(deadline, self.clock()),
                 **counts,
                 **extra,
             )
@@ -970,10 +1030,10 @@ class TwitterCrawler(SocialExportMixin):
                     if not selected:
                         filtered[reason] += 1
                         return
-                    if counts["posts_exported"] >= p["max_posts"]:
+                    if reached(counts["posts_exported"], p["max_posts"]):
                         return
                 elif raw.thread_root_key not in selected_roots or any(
-                    self.exclude.find(raw.text_source)
+                    self.comment_exclude.find(raw.text_source)
                 ):
                     filtered["unselected_reply_context"] += 1
                     return
@@ -1000,7 +1060,7 @@ class TwitterCrawler(SocialExportMixin):
                     if raw.object_type == "post":
                         selected_roots.add(key)
                         if (
-                            p["max_comments"]
+                            p["max_comments"] != 0
                             and item.get("comments", 0) > 0
                             and key not in reply_queued
                         ):
@@ -1057,7 +1117,11 @@ class TwitterCrawler(SocialExportMixin):
                     result = self.worker(
                         operation,
                         target,
-                        min(self.config["timeout_seconds"], deadline - self.clock()),
+                        (deadline - self.clock())
+                        if operation == "replies" and p["max_comments"] is None
+                        else min(
+                            self.config["timeout_seconds"], deadline - self.clock()
+                        ),
                         lambda row: accept(
                             row,
                             root_id=target["tweet_id"]
@@ -1194,7 +1258,7 @@ class TwitterCrawler(SocialExportMixin):
                     ),
                     (
                         "Cakupan",
-                        "Replies are capped, not exhaustive. Missing native parents remain unresolved references. Curated text completeness is unknown.",
+                        "Replies follow configured nullable caps. Source completeness is unverified; missing native parents remain unresolved references.",
                     ),
                     (
                         "Autentikasi",
@@ -1229,9 +1293,7 @@ class TwitterCrawler(SocialExportMixin):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--config", type=Path, default=ROOT / "config/twitter_crawler.json"
-    )
+    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()

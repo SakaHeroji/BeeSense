@@ -1,17 +1,17 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L87"
+community: "Akuisisi YouTube"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # fields()
 
 ## Connections
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

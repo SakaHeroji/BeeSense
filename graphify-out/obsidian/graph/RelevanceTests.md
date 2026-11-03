@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.make()]] - `method` [EXTRACTED]
 - [[.predictor()]] - `method` [EXTRACTED]
-- [[.setUp()_12]] - `method` [EXTRACTED]
+- [[.setUp()_5]] - `method` [EXTRACTED]
 - [[.snapshot()]] - `method` [EXTRACTED]
 - [[.tearDown()_1]] - `method` [EXTRACTED]
 - [[.test_audit_csv_escapes_formulas_without_changing_stored_text()]] - `method` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[.test_training_consumes_mask_without_modifying_source_text()]] - `method` [EXTRACTED]
 - [[.test_weak_short_match_requires_context()]] - `method` [EXTRACTED]
 - [[ContextRelevanceFilter]] - `uses` [INFERRED]
-- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_context_relevance.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

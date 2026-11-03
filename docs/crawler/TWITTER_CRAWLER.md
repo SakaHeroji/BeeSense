@@ -1,5 +1,7 @@
 # TwitterCrawler — Scweet
 
+> Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
+
 `Crawler/Backend/twitter_crawler.py` menyediakan class Python `TwitterCrawler` untuk percobaan Twitter/X secara terpisah. Akuisisi memakai **Scweet 5.8.2**, sedangkan filter, kontrak record, relasi, checksum dan Excel memakai komponen BeeSense yang sudah ada. Mulai SocialCrawler 1.7.0, backend ini juga tersedia pada coordinator gabungan dan alur NLP/dashboard.
 
 ## Menjalankan dari root repository
@@ -9,7 +11,7 @@ python3 -m venv .venv-twitter
 .venv-twitter/bin/python -m pip install -r requirements/twitter.txt
 .venv-twitter/bin/python -m Crawler.Backend.twitter_crawler --dry-run
 .venv-twitter/bin/python -m Crawler.Backend.twitter_crawler \
-  --config config/twitter_crawler.json \
+  --config config/social_crawler.json \
   --output-dir outputs/twitter_scweet_trial_baru
 ```
 
@@ -18,7 +20,7 @@ Nama direktori output harus baru. `--dry-run` memvalidasi konfigurasi tanpa memb
 ```python
 from Crawler.Backend.twitter_crawler import TwitterCrawler
 
-crawler = TwitterCrawler("config/twitter_crawler.json")
+crawler = TwitterCrawler("config/social_crawler.json")
 summary = crawler.run("outputs/twitter_scweet_trial_baru")
 ```
 
@@ -26,31 +28,45 @@ summary = crawler.run("outputs/twitter_scweet_trial_baru")
 
 ```sh
 .venv-twitter/bin/python -m Crawler.Backend.social_crawler \
-  --config config/social_crawler_twitter_3h.json --dry-run
+  --config config/social_crawler.json --dry-run
 .venv-twitter/bin/python -m Crawler.Backend.social_crawler \
-  --config config/social_crawler_twitter_3h.json \
+  --config config/social_crawler.json \
   --output-dir outputs/social_twitter_run_baru
 ```
 
-Preset Twitter-only ini membatasi runtime 10.800 detik dan menargetkan 1.000 root unik, tanpa minimum komentar. Daftar 25 variasi query serta filter include/exclude sama dengan preset Reddit; query YouTube menambahkan operator tanggal sesuai platform. Hasil Twitter diambil maksimal 200 per pencarian pada jendela tujuh hari, bahasa Indonesia. `max_comment_threads: 50` membatasi sampel thread komentar agar budget tidak habis pada lookup balasan; ini bukan cakupan seluruh komentar. Preset 3 jam memakai cap lokal 300 request/6.000 tweet per hari, sementara preset percobaan 30 menit tetap 120/2.000. Counter yang sudah terpakai tetap dihitung; cap lokal ini tidak mengubah batas server X. `TwitterCoordinatorWorker` mengadaptasi protokol Scweet ke scheduler, deadline, dedup dan bundle SocialCrawler; class mandiri tetap memakai worker/normalisasi yang sama. Root pencarian diproses dari cache tanpa lookup tambahan. Jeda antar-operasi hanya berlaku ketika operasi melakukan akses jaringan; hasil cache tidak menunggu jeda jaringan baru.
+Untuk Twitter-only, aktifkan hanya flag Twitter dalam file utama. Default sekarang
+menargetkan 1.000 root unik tanpa batas durasi, komentar/balasan, jumlah thread atau
+kuota harian lokal. `scweet.daily_requests_limit` dan `daily_tweets_limit` bernilai
+`null`; counter tetap dipertahankan. Query pendidikan, jendela tujuh hari dan 200
+hasil per pencarian tetap berlaku. Root hasil pencarian memakai cache tanpa lookup
+ulang. [Panduan konfigurasi universal](CONFIGURATION.md) menjelaskan nullable limit.
 
-Pengecualian SocialCrawler menerima direktori dengan `dataset.xlsx` audit. Root dengan native ID yang sudah ada dilewati. Seluruh ID X dalam satu run juga deduplikasi lintas jenis post/comment/reply. Timeout menyimpan data parsial; cooldown akun dihormati, sedangkan login/challenge, HTTP429 aktual dan cap harian menghentikan akses.
+Pengecualian SocialCrawler menerima direktori dengan `dataset.xlsx` audit. Root dengan native ID yang sudah ada dilewati. Seluruh ID X dalam satu run juga deduplikasi lintas jenis post/comment/reply. Timeout menyimpan data parsial; cooldown akun dihormati, sedangkan login/challenge, HTTP429 aktual dan cap harian jika dipilih menghentikan akses.
 
 `merge_social_datasets` mendukung native ID X dengan namespace global `status`; caption yang sama pada ID berbeda dipertahankan. Karena permalink balasan X tidak memuat root percakapannya, merge membaca `Contents.jsonl` yang hash-nya terverifikasi atau `native_roots.json` yang terikat checksum workbook. Parent tidak ditebak dari judul/tanggal. Sidecar root ikut disimpan dan dipublikasikan bersama input NLP. NLP mempertahankan thread root dalam Parquet dan menggunakannya pada explainability; platform X tersedia dalam filter, grafik cakupan, jaringan, dan tren dashboard.
 
-`config/social_nlp_twitter_20261102.json` menetapkan 20 topik dan mean coherence c_v minimum 0,4. Kandidat di bawah ambang tidak dipublikasikan. Gemini hanya dipanggil setelah gate lulus, memakai 10 keyword c-TF-IDF dan hingga 10 kalimat representatif per topik, lalu menyimpan 20 kalimat topik/deskripsi dalam CSV. Runtime dashboard membaca CSV tersimpan tanpa memanggil API.
+`config/social_nlp.json` menetapkan 20 topik dan mean coherence c_v minimum 0,4. Kandidat di bawah ambang tidak dipublikasikan. Gemini hanya dipanggil setelah gate lulus, memakai 10 keyword c-TF-IDF dan hingga 10 kalimat representatif per topik, lalu menyimpan 20 kalimat topik/deskripsi dalam CSV. Runtime dashboard membaca CSV tersimpan tanpa memanggil API.
 
 ## Konfigurasi dan autentikasi
 
-Preset `config/twitter_crawler.json` mengatur batas **1.800 detik / 30 menit**, target percobaan **1.000 post**, maksimal **10 komentar/balasan per post**, 20 hasil per pencarian, query pendidikan yang sama dengan preset Reddit, bahasa Indonesia, serta filter include/exclude dan tanggal publikasi root. Pencarian membagi periode menjadi jendela tujuh hari dari yang terbaru; timestamp UTC lokal diperiksa kembali setelah hasil diterima. Batas `until` eksklusif. Target merupakan batas/tujuan percobaan, bukan jaminan hasil; proses dapat selesai lebih awal jika akses ditolak atau kandidat habis.
+`config/social_crawler.json` memakai `total_seconds: null`, target 1.000 post dan
+`max_comments: null`. Balasan dipaginasi sampai cursor sumber selesai. Tanggal dan
+include/exclude root tetap diperiksa; `comment_exclude_keywords: []` mempertahankan
+seluruh teks komentar. `until` eksklusif. Kandidat habis atau akses ditolak tetap
+dapat menghasilkan shortfall yang dilaporkan secara eksplisit.
 
 `scweet.auth_file` menunjuk `config/auth.json`, yang tetap diabaikan Git. Loader memilih tepat satu entri `sosmed: twitter` (alias `x` didukung), membaca `username`, lalu memetakan **`auth_token` atau `sessionid` → cookie X `auth_token`**. `ct0` opsional; Scweet dapat mengambilnya dari sesi. Tidak ada login password otomatis, token di argumen terminal, penyalinan rahasia ke konfigurasi publik, atau pencatatan nilai cookie.
 
 State Scweet (`output/scweet/state.db`, file SQLite WAL/SHM, identitas lokal dan barrier) mengandung materi autentikasi dan tetap di luar Git maupun image Docker. Direktori dibuat dengan izin 0700 dan file baru 0600. Satu worker persisten menggunakan satu client sepanjang run. Saat state sudah ada, provisioning tidak diulang sehingga counter harian, lease dan cooldown upstream dipertahankan. State yang berbeda dari kredensial lokal ditolak untuk mencegah pemakaian akun lain secara tidak sengaja.
 
-Preset membatasi satu concurrency, minimum 5 detik antar-request curl, 15 detik antar-operasi, serta mengonfigurasi limiter Scweet menjadi 20 request per jendela 900 detik dan 120 request per hari. Limiter window Scweet diinisialisasi per operasi; angka 20 tersebut bukan batas global lintas-operasi. Counter harian dan cooldown akun disimpan dalam SQLite. Ini pengaturan konservatif, **bukan jaminan bebas HTTP 429**. Bootstrap/manifest memakai request tambahan; deadline keseluruhan tetap berlaku. Tidak ada pergantian akun, proxy atau identitas otomatis.
+Satu concurrency, minimum lima detik antar-request, dua detik antar-operasi dan
+window pacing 20 request tetap dikonfigurasi. Kuota request/tweet harian lokal
+nonaktif. Predicate kuota Scweet diganti oleh `scweet_limits.configure_daily_quotas`
+tanpa mengubah lease, cooldown, autentikasi atau counter. Timeout socket tetap
+berlaku; operasi pagination tanpa cap mengikuti durasi run opsional. Tidak ada
+pergantian akun atau identitas otomatis.
 
-Versi adapter 1.0.1 membedakan **cooldown pool Scweet** dari respons HTTP429. Scweet dapat mengistirahatkan akun berdasarkan header rate limit meski respons terakhir HTTP200; jika diagnosis pool hanya `cooldown` dan waktu tunggunya masih muat dalam anggaran run, scheduler menunggu lalu mengulang operasi yang sama dengan client/state yang sama. Akun tidak dirotasi, counter tidak direset, dan cap harian tetap terminal. Cooldown yang sudah ada diperiksa sebelum manifest di-refresh. HTTP429 yang benar-benar diterima transport tetap menghentikan run dan tidak dicoba ulang otomatis.
+Versi adapter 1.0.1 membedakan **cooldown pool Scweet** dari respons HTTP429. Scweet dapat mengistirahatkan akun berdasarkan header rate limit meski respons terakhir HTTP200; jika diagnosis pool hanya `cooldown` dan waktu tunggunya masih muat dalam anggaran run, scheduler menunggu lalu mengulang operasi yang sama dengan client/state yang sama. Akun tidak dirotasi, counter tidak direset, dan cap harian jika diaktifkan tetap terminal. Cooldown yang sudah ada diperiksa sebelum manifest di-refresh. HTTP429 yang benar-benar diterima transport tetap menghentikan run dan tidak dicoba ulang otomatis.
 
 HTTP 429, login, challenge, atau penolakan 400/403 dicatat sebagai barrier. Transport menolak request berikutnya dalam worker yang sama, dan scheduler menghentikan run sambil menyimpan hasil sebelumnya. Retry-After/reset rate limit dipertimbangkan pada `barrier.json`, dengan jeda minimal 900 detik untuk 429. Barrier login/challenge membutuhkan penanganan manual dan tidak dibersihkan otomatis. Timeout operasi menghentikan subprocess milik crawler; Chrome pengguna tidak dibuka/ditutup oleh class ini.
 
@@ -63,7 +79,7 @@ HTTP 429, login, challenge, atau penolakan 400/403 dicatat sebagai barrier. Tran
 
 `platform=twitter`, namespace `x_post`, dan native tweet ID disimpan sebagai string. URL X/Twitter dinormalisasi ke `https://x.com/i/web/status/<id>` dan harus cocok dengan ID. Seluruh record dideduplikasi berdasarkan native ID meski teks berubah. `exclude_existing_datasets` dapat menunjuk bundle audit sebelumnya atau file `Contents.jsonl` untuk pengecualian lintas-run; input historis tidak diubah. Pengecualian belum memakai workbook ringkas karena file itu tidak menyimpan kolom native ID.
 
-Post balasan/retweet dari pencarian tidak dijadikan root mandiri. Komentar langsung memakai native `in_reply_to_tweet_id`; balasan bertingkat mempertahankan parent aslinya. Parent yang tidak ikut terambil tidak dianggap pasti ada dalam ekspor. Jumlah komentar dibatasi, bukan cakupan lengkap. Teks lengkap/truncation tidak dijamin oleh curated schema Scweet sehingga audit menandai `text_complete=false`; teks panjang tetap disimpan utuh di JSONL/TextChunks. Excel memakai sel teks untuk mencegah formula injection.
+Post balasan/retweet dari pencarian tidak dijadikan root mandiri. Komentar langsung memakai native `in_reply_to_tweet_id`; balasan bertingkat mempertahankan parent aslinya. Parent yang tidak ikut terambil tidak dianggap pasti ada dalam ekspor. Default komentar tidak dibatasi jumlahnya; kelengkapan tetap bergantung pada data yang disediakan X. Teks lengkap/truncation tidak dijamin oleh curated schema Scweet sehingga audit menandai `text_complete=false`; teks panjang tetap disimpan utuh di JSONL/TextChunks. Excel memakai sel teks untuk mencegah formula injection.
 
 `trial_passed`, `live_access_verified`, jumlah hasil, status barrier dan stop reason dibedakan dari pengujian sintetis. Sukses uji akses tidak berarti target 1.000 post tercapai atau seluruh komentar berhasil dibaca.
 

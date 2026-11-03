@@ -15,9 +15,9 @@ tags:
 - [[ContextRelevanceFilter]] - `imports` [EXTRACTED]
 - [[Filter a verified existing corpus into a new auditable relevance dataset.]] - `rationale_for` [EXTRACTED]
 - [[LocalSemanticBackend]] - `imports` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[context_relevance.py]] - `imports_from` [EXTRACTED]
-- [[main()_12]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[relevance_semantic.py]] - `imports_from` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Job dan Dataset"
-location: "L60"
+community: "Frontend dan Transaksi Sosmed"
+location: "L52"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Job_dan_Dataset
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # duration()
@@ -17,4 +17,4 @@ tags:
 - [[PlatformCard()]] - `calls` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Job dan Dataset"
-location: "L453"
+community: "Frontend dan Transaksi Sosmed"
+location: "L324"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Job_dan_Dataset
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # download()
@@ -14,8 +14,6 @@ tags:
 ## Connections
 - [[DatasetView()]] - `calls` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
-- [[Survey()]] - `calls` [EXTRACTED]
-- [[Survey.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

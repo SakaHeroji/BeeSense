@@ -12,9 +12,9 @@ tags:
 # SocialCrawlerTests
 
 ## Connections
-- [[.crawler()_1]] - `method` [EXTRACTED]
+- [[.crawler()]] - `method` [EXTRACTED]
 - [[.read()]] - `method` [EXTRACTED]
-- [[.setUp()_5]] - `method` [EXTRACTED]
+- [[.setUp()_1]] - `method` [EXTRACTED]
 - [[.test_barrier_stops_platform_and_keeps_partial_bundle()]] - `method` [EXTRACTED]
 - [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - `method` [EXTRACTED]
 - [[.test_calendar_month_boundary_date_only_and_unrecognized_dates()]] - `method` [EXTRACTED]

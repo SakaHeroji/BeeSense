@@ -1,25 +1,23 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L75"
+community: "Parsing Identitas Reddit"
+location: "L518"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Akuisisi_YouTube
+  - graphify/EXTRACTED
+  - community/Parsing_Identitas_Reddit
 ---
 
 # Settings
 
 ## Connections
+- [[.test_10_reply_cap_includes_nested_replies_and_preserves_roots()]] - `calls` [EXTRACTED]
+- [[.test_14_settings_bounds_and_no_zero_fill()]] - `calls` [EXTRACTED]
+- [[.test_16_hard_timeout_keeps_already_received_event()]] - `calls` [EXTRACTED]
 - [[.validate()_1]] - `method` [EXTRACTED]
-- [[BundleSink_1]] - `uses` [INFERRED]
-- [[ContentInput_1]] - `uses` [INFERRED]
-- [[Dataset_1]] - `uses` [INFERRED]
-- [[KeywordMatcher_1]] - `uses` [INFERRED]
-- [[RecordFactory_1]] - `uses` [INFERRED]
-- [[SourceAdapter_2]] - `uses` [INFERRED]
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[load_settings()_1]] - `calls` [EXTRACTED]
+- [[worker()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

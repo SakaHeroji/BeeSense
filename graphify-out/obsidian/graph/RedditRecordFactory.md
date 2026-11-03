@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Kontrak Record Reddit"
-location: "L916"
+location: "L917"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,12 @@ tags:
 # RedditRecordFactory
 
 ## Connections
-- [[.content()_1]] - `method` [EXTRACTED]
+- [[.content()_2]] - `method` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
-- [[RecordFactory]] - `inherits` [EXTRACTED]
-- [[Verified Reddit native identity and parentroot relationships]] - `conceptually_related_to` [INFERRED]
+- [[RecordFactory_1]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

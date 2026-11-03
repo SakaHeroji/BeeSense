@@ -15,7 +15,6 @@ tags:
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
 - [[Crawler frontend product requirements]] - `references` [EXTRACTED]
 - [[Crawler wireframes are illustrative design requirements, not app screenshots]] - `references` [EXTRACTED]
-- [[Curated React Crawler implementation with syntheticAPI separation]] - `references` [EXTRACTED]
 - [[Curated immutable dataset selection does not train or change Dashboard]] - `references` [EXTRACTED]
 - [[Curated two-menu contract with URLSurvey under Manual]] - `references` [EXTRACTED]
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]

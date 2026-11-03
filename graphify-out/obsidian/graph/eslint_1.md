@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Dependency Pengembangan Frontend"
-location: "L40"
+community: "Frontend dan Transaksi Sosmed"
+location: "L44"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dependency_Pengembangan_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # eslint
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[eslint]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend
+#graphify/concept #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

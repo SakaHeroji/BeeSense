@@ -12,17 +12,17 @@ tags:
 # LocalSemanticBackend
 
 ## Connections
-- [[.__call__()_3]] - `method` [EXTRACTED]
-- [[.__init__()_38]] - `method` [EXTRACTED]
+- [[.__call__()]] - `method` [EXTRACTED]
+- [[.__init__()_7]] - `method` [EXTRACTED]
 - [[._scores()]] - `calls` [EXTRACTED]
 - [[.encode()]] - `method` [EXTRACTED]
 - [[ContextRelevanceFilter]] - `uses` [INFERRED]
-- [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)_1]] - `references` [EXTRACTED]
+- [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)]] - `references` [EXTRACTED]
 - [[SBERT prototypes; scores are cosine similarities, never probabilities.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[context_relevance.py]] - `imports` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports` [EXTRACTED]
-- [[main()_12]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[relevance_semantic.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

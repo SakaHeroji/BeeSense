@@ -1,29 +1,13 @@
 ---
-source_file: "Crawler/Backend/social_export.py"
+source_file: ""
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L29"
+community: "Akuisisi TikTok dan Ekspor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # SocialExportMixin
 
-## Connections
-- [[._calendar_date()]] - `method` [EXTRACTED]
-- [[._select()]] - `method` [EXTRACTED]
-- [[._write_compact()]] - `method` [EXTRACTED]
-- [[InstagramAdapter]] - `uses` [INFERRED]
-- [[InstagramCrawler]] - `uses` [INFERRED]
-- [[InstagramSettings]] - `uses` [INFERRED]
-- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
-- [[Requires config, include and exclude matchers; performs no acquisition.]] - `rationale_for` [EXTRACTED]
-- [[SessionInvalid]] - `uses` [INFERRED]
-- [[SocialExportMixin_5]] - `references` [EXTRACTED]
-- [[Three unchanged SocialCrawler methods moved to SocialExportMixin]] - `references` [EXTRACTED]
-- [[instagram_crawler.py]] - `imports` [EXTRACTED]
-- [[social_export.py]] - `contains` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

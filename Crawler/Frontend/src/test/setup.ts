@@ -14,3 +14,16 @@ HTMLDialogElement.prototype.close = function () {
 };
 
 HTMLElement.prototype.scrollIntoView = vi.fn();
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (media: string) => ({
+    matches: false,
+    media,
+    onchange: null,
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
+    addListener: vi.fn(),
+    removeListener: vi.fn(),
+    dispatchEvent: vi.fn(),
+  }),
+});

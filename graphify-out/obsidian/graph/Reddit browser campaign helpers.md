@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Reddit Playwright runner]] - `references` [EXTRACTED]
 - [[User checkpoint audit export and verification]] - `implements` [EXTRACTED]
-- [[Verify BeeSense CI]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard

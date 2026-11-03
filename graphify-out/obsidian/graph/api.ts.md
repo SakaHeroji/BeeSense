@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/api.ts"
 type: "code"
-community: "Tipe dan Client API"
+community: "Frontend dan Transaksi Sosmed"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Tipe_dan_Client_API
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # api.ts
@@ -14,18 +14,15 @@ tags:
 ## Connections
 - [[Api]] - `imports` [EXTRACTED]
 - [[ApiError]] - `contains` [EXTRACTED]
-- [[Automatic.tsx]] - `imports_from` [EXTRACTED]
+- [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
 - [[Config]] - `imports` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
-- [[History.tsx]] - `imports_from` [EXTRACTED]
 - [[Job]] - `imports` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
-- [[Manual.tsx]] - `imports_from` [EXTRACTED]
 - [[Plan]] - `imports` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[Shell.tsx]] - `imports_from` [EXTRACTED]
-- [[Survey.tsx]] - `imports_from` [EXTRACTED]
-- [[SurveyAnswer]] - `imports` [EXTRACTED]
-- [[SurveyReview]] - `imports` [EXTRACTED]
+- [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]
 - [[api.test.ts]] - `imports_from` [EXTRACTED]
 - [[base]] - `contains` [EXTRACTED]
 - [[demo.ts]] - `imports_from` [EXTRACTED]
@@ -34,7 +31,9 @@ tags:
 - [[httpApi]] - `contains` [EXTRACTED]
 - [[jobPath()]] - `contains` [EXTRACTED]
 - [[post()]] - `contains` [EXTRACTED]
+- [[redactConfig()]] - `imports` [EXTRACTED]
 - [[request()]] - `contains` [EXTRACTED]
+- [[transaction.test.ts]] - `imports_from` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Tipe_dan_Client_API
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

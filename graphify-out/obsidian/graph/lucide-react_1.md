@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Dependency Runtime Frontend"
-location: "L24"
+community: "Frontend dan Transaksi Sosmed"
+location: "L30"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Dependency_Runtime_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # lucide-react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[lucide-react]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Dependency_Runtime_Frontend
+#graphify/concept #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

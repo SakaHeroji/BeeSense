@@ -9,6 +9,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import Crawler.Backend.social_crawler as core
+from Crawler.Backend.crawler_config import (
+    DEFAULT_CONFIG_PATH,
+    expand_config,
+    standalone_config,
+)
 from Crawler.Backend.social_crawler import ROOT, SocialCrawler
 
 VERSION = core.REDDRIX_ADAPTER_VERSION
@@ -43,13 +48,7 @@ class RedditCrawler(SocialCrawler):
     """Run only Reddit through the shared Reddrix implementation in SocialCrawler."""
 
     def __init__(self, config=None, *, display_mode=None, workers=None, **kwargs):
-        supplied = ROOT / "config/reddit_crawler.json" if config is None else config
-        if isinstance(supplied, (str, Path)):
-            path = Path(supplied)
-            if path.stat().st_size > 1_000_000:
-                raise ValueError("config exceeds 1 MB")
-            supplied = json.loads(path.read_text())
-        supplied = deepcopy(supplied)
+        supplied = expand_config(standalone_config(config, "reddit"))
         if not isinstance(supplied, dict) or "reddit" not in supplied.get(
             "platforms", {}
         ):
@@ -77,15 +76,13 @@ class RedditCrawler(SocialCrawler):
             "live_access_verified": False,
             "upstream_search_sort": "relevance (Reddrix keyword mode ignores sort)",
             "comment_sort": "Reddrix does not expose comment sorting; configured sort is best effort only",
-            "upstream_internal_retries": "Reddrix 1.2.14 has fixed internal retries; hard operation deadline still applies",
+            "upstream_internal_retries": "Reddrix 1.2.14 has fixed internal retries; request timeouts and optional run deadline apply",
         }
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--config", type=Path, default=ROOT / "config/reddit_crawler.json"
-    )
+    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--display-mode", choices=["auto", "headless", "virtual"])

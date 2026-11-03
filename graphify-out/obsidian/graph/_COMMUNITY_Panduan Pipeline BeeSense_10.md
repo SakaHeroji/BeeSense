@@ -1,17 +1,16 @@
 ---
 type: community
 cohesion: 1.00
-members: 2
+members: 1
 ---
 
 # Panduan Pipeline BeeSense
 
 **Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Members:** 1 nodes
 
 ## Members
-- [[Artifact Loading Dashboard Environment]] - document - requirements/dashboard.txt
-- [[Streamlit Cloud Requirements Entry]] - document - requirements.txt
+- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
 
 ## Live Query (requires Dataview plugin)
 

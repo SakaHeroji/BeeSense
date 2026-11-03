@@ -1,5 +1,7 @@
 # Class NLP BeeSense: SBERT + UMAP + DBSCAN
 
+Seluruh pengaturan memakai **[satu config NLP](CONFIGURATION.md)**; preset bertanggal sudah dihapus. Snapshot dan konfigurasi efektif dalam `summary.json` tetap dipertahankan.
+
 Snapshot aktif setelah persetujuan publikasi 2 November 2026: `outputs/nlp_20261102_relevance_topics20_gemini_02/`, **20 topik**, mean **c_v 0,4733391691**, **10.496 kemunculan/10.380 kalimat unik** setelah penyaringan, dan CSV **20 deskripsi Gemini**. Data mentah 34.764 record unik serta snapshot lama dipertahankan. Tujuh topik masih <0,4 individual; gate berlaku pada rata-rata. [Algoritma, audit, reproduksi dan rollback](CONTEXT_RELEVANCE.md). Bagian berikut merupakan riwayat dan penjelasan metode.
 
 [SocialNLPClusterer](../../MachineLearning/social_nlp.py) memakai **SBERT multilingual → normalisasi L2 →
@@ -10,7 +12,7 @@ UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot kalimat
 
 SocialCrawler 1.7.0 memakai Scweet sebagai backend Twitter. Penggabungan workbook memakai ID X global, dengan root percakapan dari audit Contents atau sidecar `native_roots.json` yang terikat checksum input. Judul dan tanggal tidak dipakai menebak root X. `prepare_excel` mempertahankan `thread_root_key` pada metadata occurrence; explainability menggunakannya sebagai `source_audit`. Kalimat eligible tetap komentar dan balasan, sedangkan post asal dipertahankan sebagai konteks. Filter, grafik volume, cakupan, jaringan dan tren dashboard mengenali `twitter` / X.
 
-Preset `config/social_nlp_twitter_20261102.json` meminta tepat 20 topik, mean c_v minimal 0,4, dan Gemini enabled. Ambang tidak diturunkan otomatis. Gemini memakai top-10 keyword c-TF-IDF dan hingga 10 kalimat representatif setiap topik; satu kalimat topik dan deskripsi disimpan pada `topic_narratives.csv`. Dashboard memuat hasil tersimpan tanpa request Gemini pada rerun.
+Konfigurasi utama `config/social_nlp.json` meminta tepat 20 topik, mean c_v minimal 0,4, dan Gemini enabled. Ambang tidak diturunkan otomatis. Gemini memakai top-10 keyword c-TF-IDF dan hingga 10 kalimat representatif setiap topik; satu kalimat topik dan deskripsi disimpan pada `topic_narratives.csv`. Dashboard memuat hasil tersimpan tanpa request Gemini pada rerun.
 
 ## Hasil Instagram sebelum integrasi Twitter
 

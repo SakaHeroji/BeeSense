@@ -15,7 +15,7 @@ tags:
 - [[.discover()]] - `calls` [EXTRACTED]
 - [[.test_08_urls_reject_credentials_api_and_external_hosts()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[load_settings()]] - `calls` [EXTRACTED]
+- [[load_settings()_1]] - `calls` [EXTRACTED]
 - [[thread_id()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

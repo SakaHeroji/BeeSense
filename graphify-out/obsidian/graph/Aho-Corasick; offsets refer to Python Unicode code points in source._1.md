@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Akuisisi YouTube"
-location: "L124"
+community: "Capture Reddit Playwright"
+location: "L170"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Capture_Reddit_Playwright
 ---
 
 # Aho-Corasick; offsets refer to Python Unicode code points in source.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[KeywordMatcher_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/rationale #graphify/EXTRACTED #community/Capture_Reddit_Playwright

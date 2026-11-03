@@ -5,7 +5,7 @@ community: "Panduan Pipeline BeeSense"
 location: "Supervisor paragraph"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Panduan_Pipeline_BeeSense
 ---
 
@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
-- [[Relative dates remain calendar estimates]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Panduan_Pipeline_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

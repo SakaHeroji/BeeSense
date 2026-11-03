@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.adapter()]] - `method` [EXTRACTED]
-- [[.setUp()_3]] - `method` [EXTRACTED]
+- [[.setUp()_10]] - `method` [EXTRACTED]
 - [[.settings()]] - `method` [EXTRACTED]
 - [[.test_configuration_rejects_retry_or_unbounded_requests()]] - `method` [EXTRACTED]
 - [[.test_coordinator_stops_at_first_429()]] - `method` [EXTRACTED]

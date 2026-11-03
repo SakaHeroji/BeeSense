@@ -12,7 +12,7 @@ tags:
 # capture()
 
 ## Connections
-- [[.crawler()_1]] - `indirect_call` [INFERRED]
+- [[.crawler()]] - `indirect_call` [INFERRED]
 - [[.test_reddit_identity_and_subreddit_checks()]] - `calls` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `contains` [EXTRACTED]
 

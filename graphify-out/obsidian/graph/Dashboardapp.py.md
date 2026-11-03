@@ -14,7 +14,7 @@ tags:
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[Saved-snapshot dashboard runtime]] - `implements` [EXTRACTED]
 - [[SocialNLPStreamlitApp_1]] - `references` [EXTRACTED]
-- [[configdashboard.json_1]] - `references` [EXTRACTED]
-- [[streamlit_apps.py_2]] - `references` [EXTRACTED]
+- [[configdashboard.json]] - `references` [EXTRACTED]
+- [[streamlit_apps.py_1]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

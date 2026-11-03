@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
 community: "Crawler Selenium"
-location: "L246"
+location: "L248"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # _SeleniumSource
 
 ## Connections
-- [[.__init__()_27]] - `method` [EXTRACTED]
+- [[.__init__()_16]] - `method` [EXTRACTED]
 - [[._youtube_reply()]] - `method` [EXTRACTED]
 - [[._youtube_sort()]] - `method` [EXTRACTED]
 - [[.navigate()]] - `method` [EXTRACTED]

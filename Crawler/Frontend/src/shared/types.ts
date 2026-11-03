@@ -42,22 +42,34 @@ export interface Baseline {
   required: boolean;
 }
 export interface Capabilities {
+  migrationsAvailable?: boolean;
+  authAvailable?: boolean;
   platforms: Platform[];
   limits: Limits;
   baselines: Baseline[];
   verificationAvailable: boolean;
-  surveySchemaSupported: boolean;
+}
+export type StorageDestination = 'excel' | 'postgresql' | 'both';
+export interface StorageConfig {
+  destination: StorageDestination;
+  postgresql: {
+    host: string;
+    port: number;
+    connectionEnv: string;
+    connectionString?: string;
+  };
 }
 export interface PlatformConfig {
   enabled: boolean;
   queries: string;
+  hashtags: string;
   target: number;
   minComments: number;
-  maxPosts: number;
-  maxCandidates: number;
-  maxComments: number;
-  maxReplies: number;
-  maxRepliesPerThread: number;
+  maxPosts: number | null;
+  maxCandidates: number | null;
+  maxComments: number | null;
+  maxReplies: number | null;
+  maxRepliesPerThread: number | null;
 }
 export interface Config {
   name: string;
@@ -69,7 +81,8 @@ export interface Config {
   exclude: string;
   includeMode: 'any' | 'all';
   subreddit: string;
-  duration: number;
+  duration: number | null;
+  storage: StorageConfig;
   delay: number;
   timeout: number;
   cooldown: number;
@@ -171,51 +184,19 @@ export interface DatasetDetail {
   files: DatasetFile[];
   warning?: string;
 }
-export type UrlStatus = 'valid' | 'duplicate' | 'existing' | 'unsupported' | 'invalid';
-export interface UrlReview {
-  input: string;
-  canonical?: string;
-  nativeId?: string;
-  locatorKey?: string;
-  platform?: Platform;
-  status: UrlStatus;
-  reason: string;
-}
-export const surveyFields = [
-  'survey_id',
-  'survey_version',
-  'response_id',
-  'respondent_code',
-  'respondent_role',
-  'submitted_at',
-  'question_id',
-  'answer_text',
-  'answer_value',
-  'usage_permission',
-  'source_reference',
-] as const;
-export type SurveyField = (typeof surveyFields)[number];
-export type SurveyAnswer = Record<SurveyField, string>;
-export interface SurveyIssue {
-  row: number;
-  responseId: string;
-  field: string;
-  message: string;
-}
-export interface SurveyReview {
-  id: string;
-  fingerprint: string;
-  expiresAt: string;
-  totalResponses: number;
-  answerRows: number;
-  validResponses: number;
-  duplicateResponses: number;
-  invalidResponses: number;
-  deniedResponses: number;
-  issues: SurveyIssue[];
-  validRows: SurveyAnswer[];
-}
 export interface Api {
+  prepareTransactionMigration(
+    job: Job,
+    platform: Platform,
+    target: StorageConfig['postgresql'],
+  ): Promise<TransactionMigrationPlan>;
+  startTransactionMigration(
+    plan: TransactionMigrationPlan,
+    key: string,
+  ): Promise<TransactionMigration>;
+  transactionMigration(id: string): Promise<TransactionMigration>;
+  authStatus(platform: Platform): Promise<AuthStatus>;
+  saveAuth(platform: Platform, value: AuthInput): Promise<AuthStatus>;
   session(): Promise<Session>;
   capabilities(): Promise<Capabilities>;
   jobs(): Promise<Job[]>;
@@ -224,10 +205,43 @@ export interface Api {
   start(plan: Plan, key: string): Promise<Job>;
   stop(id: string): Promise<Job>;
   verification(id: string): Promise<{ url?: string; message: string }>;
-  reviewUrls(urls: string[], baselines: string[]): Promise<UrlReview[]>;
-  validateSurvey(rows: SurveyAnswer[]): Promise<SurveyReview>;
-  commitSurvey(review: SurveyReview, key: string): Promise<Job>;
   dataset(job: Job, page: number, search: string, source: string): Promise<DatasetDetail>;
   handoff(job: Job, acceptPartial: boolean): Promise<{ id: string }>;
   demoScenario?(id: string, scenario: string): Promise<Job>;
+}
+
+export interface AuthInput {
+  username: string;
+  sessionid: string;
+}
+export interface AuthStatus {
+  platform: Platform;
+  username: string;
+  hasSession: boolean;
+  file: 'config/auth.json';
+  demo?: boolean;
+}
+export interface TransactionMigrationPlan {
+  id: string;
+  expiresAt: string;
+  jobId: string;
+  platform: Platform;
+  datasetId: string;
+  version: number;
+  checksum: string;
+  crawlDate: string;
+  total: number;
+  host: string;
+  port: number;
+}
+export interface TransactionMigration extends TransactionMigrationPlan {
+  status: 'QUEUED' | 'RUNNING' | 'COMPLETED' | 'FAILED';
+  phase: string;
+  createdAt: string;
+  updatedAt: string;
+  processed: number;
+  inserted: number;
+  skipped: number;
+  error?: string;
+  demo?: boolean;
 }

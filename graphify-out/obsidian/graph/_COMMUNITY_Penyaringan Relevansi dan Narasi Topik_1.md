@@ -1,28 +1,29 @@
 ---
 type: community
 cohesion: 0.08
-members: 43
+members: 44
 ---
 
 # Penyaringan Relevansi dan Narasi Topik
 
 **Cohesion:** 0.08 - loosely connected
-**Members:** 43 nodes
+**Members:** 44 nodes
 
 ## Members
-- [[.__call__()_3]] - code - MachineLearning/relevance_semantic.py
-- [[.__init__()_37]] - code - MachineLearning/context_relevance.py
-- [[.__init__()_38]] - code - MachineLearning/relevance_semantic.py
+- [[.__call__()]] - code - MachineLearning/relevance_semantic.py
+- [[.__init__()_6]] - code - MachineLearning/context_relevance.py
+- [[.__init__()_7]] - code - MachineLearning/relevance_semantic.py
 - [[._scores()]] - code - MachineLearning/context_relevance.py
 - [[._validate()]] - code - MachineLearning/context_relevance.py
 - [[.build_units()]] - code - MachineLearning/context_relevance.py
 - [[.classify_many()]] - code - MachineLearning/context_relevance.py
-- [[.close()_7]] - code - MachineLearning/context_relevance.py
+- [[.close()]] - code - MachineLearning/context_relevance.py
 - [[.encode()]] - code - MachineLearning/relevance_semantic.py
 - [[.filter_snapshot()]] - code - MachineLearning/context_relevance.py
+- [[.load_decisions()]] - code - MachineLearning/context_relevance.py
 - [[.make()]] - code - tests/nlp/test_context_relevance.py
 - [[.predictor()]] - code - tests/nlp/test_context_relevance.py
-- [[.setUp()_12]] - code - tests/nlp/test_context_relevance.py
+- [[.setUp()_5]] - code - tests/nlp/test_context_relevance.py
 - [[.snapshot()]] - code - tests/nlp/test_context_relevance.py
 - [[.tearDown()_1]] - code - tests/nlp/test_context_relevance.py
 - [[.test_cache_resumes_and_configuration_changes_invalidate_it()]] - code - tests/nlp/test_context_relevance.py
@@ -34,12 +35,12 @@ members: 43
 - [[.test_same_ambiguous_sentence_can_have_different_context_decisions()]] - code - tests/nlp/test_context_relevance.py
 - [[.test_training_consumes_mask_without_modifying_source_text()]] - code - tests/nlp/test_context_relevance.py
 - [[.test_weak_short_match_requires_context()]] - code - tests/nlp/test_context_relevance.py
+- [[Bind a separately published relevance dataset to the active fitted mask.]] - rationale - scripts/verify_dashboard_data.py
 - [[Classify target sentences; parent context may rescue only ambiguous text.      U]] - rationale - MachineLearning/context_relevance.py
 - [[ContextRelevanceFilter]] - code - MachineLearning/context_relevance.py
 - [[Filter a verified existing corpus into a new auditable relevance dataset.]] - rationale - scripts/filter_context_relevance.py
 - [[Local, auditable zero-shot relevance decisions before topic clustering.  Model s]] - rationale - MachineLearning/context_relevance.py
 - [[LocalSemanticBackend]] - code - MachineLearning/relevance_semantic.py
-- [[No modelnetwork calls policy, provenance and integration regressions.]] - rationale - tests/nlp/test_context_relevance.py
 - [[Reference profile and lazy local SBERT backend for relevance filtering.]] - rationale - MachineLearning/relevance_semantic.py
 - [[RelevanceTests]] - code - tests/nlp/test_context_relevance.py
 - [[Resolve roots from native URLs; never match conversations by title.]] - rationale - MachineLearning/context_relevance.py
@@ -48,11 +49,11 @@ members: 43
 - [[Write a new, checksum-bound decision dataset; never overwrite input.]] - rationale - MachineLearning/context_relevance.py
 - [[checksum()_1]] - code - MachineLearning/context_relevance.py
 - [[context_relevance.py]] - code - MachineLearning/context_relevance.py
-- [[digest()_3]] - code - MachineLearning/context_relevance.py
+- [[digest()_2]] - code - MachineLearning/context_relevance.py
 - [[filter_context_relevance.py]] - code - scripts/filter_context_relevance.py
-- [[main()_12]] - code - scripts/filter_context_relevance.py
+- [[main()_2]] - code - scripts/filter_context_relevance.py
+- [[published_relevance_files()]] - code - scripts/verify_dashboard_data.py
 - [[relevance_semantic.py]] - code - MachineLearning/relevance_semantic.py
-- [[test_context_relevance.py]] - code - tests/nlp/test_context_relevance.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -62,16 +63,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 10 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 3 edges to [[_COMMUNITY_topic_sentence_export.py]]
-- 2 edges to [[_COMMUNITY_Model dan Pengujian NLP_1]]
+- 7 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 5 edges to [[_COMMUNITY_Model dan Pengujian NLP_1]]
+- 4 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
-- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_3]]
+- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
 
 ## Top bridge nodes
-- [[ContextRelevanceFilter]] - degree 21, connects to 5 communities
-- [[test_context_relevance.py]] - degree 9, connects to 3 communities
-- [[RelevanceTests]] - degree 18, connects to 2 communities
+- [[ContextRelevanceFilter]] - degree 19, connects to 3 communities
+- [[RelevanceTests]] - degree 18, connects to 3 communities
 - [[LocalSemanticBackend]] - degree 12, connects to 2 communities
 - [[filter_context_relevance.py]] - degree 8, connects to 2 communities
+- [[context_relevance.py]] - degree 8, connects to 1 community

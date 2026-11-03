@@ -49,7 +49,10 @@ class TwitterCrawlerTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.path = Path(self.temp.name)
-        self.cfg = json.loads((x.ROOT / "config/twitter_crawler.json").read_text())
+        self.cfg = x.standalone_config(None, "twitter")
+        self.cfg["total_seconds"] = 1800
+        self.cfg["until"] = "2026-11-03T00:00:00+07:00"
+        self.cfg["exclude_existing_datasets"] = []
         self.cfg["delay"]["seconds"] = 0
         self.cfg["platforms"]["twitter"].update(
             queries=["kuliah"], min_posts=1, max_posts=2, max_searches=1
@@ -277,6 +280,38 @@ class TwitterCrawlerTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             x.normalize_item(bad)
 
+    def test_shared_workbook_baseline_excludes_posts_and_replies_and_checks_identity(
+        self,
+    ):
+        from openpyxl import Workbook
+
+        folder = self.path / "baseline"
+        folder.mkdir()
+        path = folder / "dataset.xlsx"
+        book = Workbook()
+        sheet = book.active
+        sheet.title = "Contents"
+        sheet.append(["platform", "object_type", "native_id", "canonical_url"])
+        sheet.append(["youtube", "post", "AAAAAAAAAAA", "https://youtu.be/AAAAAAAAAAA"])
+        for native, kind in (("100", "post"), ("101", "comment"), ("102", "reply")):
+            sheet.append(
+                ["twitter", kind, native, "https://x.com/i/web/status/" + native]
+            )
+        book.save(path)
+        for supplied in (path, folder):
+            with self.subTest(baseline=supplied):
+                cfg = deepcopy(self.cfg)
+                cfg["exclude_existing_datasets"] = [str(supplied)]
+                keys, sources = x.TwitterCrawler(cfg)._baseline()
+                self.assertEqual(keys, {x.object_key(n) for n in ("100", "101", "102")})
+                self.assertEqual(sources[0]["path"], str(path.resolve()))
+                self.assertEqual(len(sources[0]["sha256"]), 64)
+        sheet.cell(3, 4).value = "https://x.com/i/web/status/999"
+        book.save(path)
+        book.close()
+        with self.assertRaisesRegex(ValueError, "native ID and URL disagree"):
+            x.TwitterCrawler(cfg)._baseline()
+
     def test_url_canonicalization_rejects_foreign_hosts_and_credentials(self):
         self.assertEqual(
             x.post_url("https://twitter.com/example/status/100?s=20"),
@@ -493,8 +528,12 @@ class TwitterCrawlerTests(unittest.TestCase):
         )
         client = Mock()
         client._accounts_repo.eligibility_diagnostics.return_value = {"eligible": 1}
-        with patch("Scweet.Scweet", return_value=client) as constructor:
+        with (
+            patch("Scweet.Scweet", return_value=client) as constructor,
+            patch("Crawler.Backend.scweet_limits.configure_daily_quotas") as quotas,
+        ):
             self.assertIs(x.create_client(options), client)
+        quotas.assert_called_once_with(client, None, None)
         self.assertFalse(constructor.call_args.kwargs["provision"])
         self.assertIsNone(constructor.call_args.kwargs["cookies"])
         x.private_json(

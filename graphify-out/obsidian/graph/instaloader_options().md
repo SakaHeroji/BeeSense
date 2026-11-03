@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
 community: "Worker Instaloader"
-location: "L593"
+location: "L619"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # instaloader_options()
 
 ## Connections
-- [[.__init__()_25]] - `calls` [EXTRACTED]
+- [[.__init__()_15]] - `calls` [EXTRACTED]
 - [[Validate shared Instaloader settings without loading credentials or networking.]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]

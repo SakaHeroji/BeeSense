@@ -16,7 +16,7 @@ tags:
 - [[Gemini narratives grounded in ranked topic keywords and representative sentences]] - `rationale_for` [EXTRACTED]
 - [[build_prompt()]] - `contains` [EXTRACTED]
 - [[canonical()]] - `contains` [EXTRACTED]
-- [[digest()_2]] - `contains` [EXTRACTED]
+- [[digest()_1]] - `contains` [EXTRACTED]
 - [[generate()]] - `contains` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[load_key()]] - `contains` [EXTRACTED]

@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Narrative evidence validation]] - `references` [EXTRACTED]
-- [[topic_narratives.csv]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

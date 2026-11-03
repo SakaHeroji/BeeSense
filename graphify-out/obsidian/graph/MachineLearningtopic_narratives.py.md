@@ -11,7 +11,6 @@ tags:
 # MachineLearning/topic_narratives.py
 
 ## Connections
-- [[BeeSense]] - `references` [EXTRACTED]
 - [[Gemini generateContent transport]] - `implements` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 - [[gemini-topic-narratives2]] - `implements` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L169"
+community: "Frontend dan Transaksi Sosmed"
+location: "L160"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # get()
@@ -15,4 +15,4 @@ tags:
 - [[demo.ts]] - `contains` [EXTRACTED]
 - [[load()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

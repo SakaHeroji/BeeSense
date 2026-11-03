@@ -1,22 +1,24 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Batas Crawler Opsional"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Batas_Crawler_Opsional
 ---
 
 # social_export.py
 
 ## Connections
 - [[Shared root selection and formula-safe Excel projection for social crawlers.]] - `rationale_for` [EXTRACTED]
-- [[SocialExportMixin]] - `contains` [EXTRACTED]
+- [[SocialExportMixin_4]] - `contains` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `imports_from` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
+- [[social_archive.py]] - `imports_from` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
+- [[tiktok_crawler.py]] - `imports_from` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

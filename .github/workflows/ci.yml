@@ -31,6 +31,7 @@ jobs:
             requirements/coherence.txt
             requirements/instaloader.txt
             requirements/twitter.txt
+            requirements/tiktok.txt
       - name: Install dependencies
         run: python -m pip install -r requirements/dev.txt
       - name: Verify shipped dashboard dataset
@@ -42,11 +43,20 @@ jobs:
       - name: NLP and Streamlit regression tests
         run: python -m unittest discover -s tests/nlp -v
       - name: SocialCrawler offline tests
-        run: python -m unittest discover -s tests/crawler -p 'test_social_crawler*.py' -v
+        run: |
+          python -m unittest discover -s tests/crawler -p 'test_social_crawler*.py' -v
+          python -m unittest discover -s tests/crawler -p test_crawler_config.py -v
+          python -m unittest discover -s tests/crawler -p test_social_archive.py -v
+          python -m unittest discover -s tests/crawler -p test_unlimited_crawling.py -v
+          python -m unittest discover -s tests/crawler -p test_storage_config.py -v
+      - name: Daily social archive lint
+        run: |
+          python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/social_archive.py Crawler/Backend/social_identity.py Crawler/Backend/crawler_limits.py Crawler/Backend/scweet_limits.py Crawler/Backend/storage_config.py tests/crawler/test_storage_config.py tests/crawler/test_social_archive.py tests/crawler/test_unlimited_crawling.py
+          python -m ruff format --isolated --check Crawler/Backend/social_archive.py Crawler/Backend/social_identity.py Crawler/Backend/crawler_limits.py Crawler/Backend/scweet_limits.py Crawler/Backend/storage_config.py tests/crawler/test_storage_config.py tests/crawler/test_social_archive.py tests/crawler/test_unlimited_crawling.py
       - name: RedditCrawler Reddrix contract tests
         run: |
-          python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
-          python -m ruff format --isolated --check Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
+          python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/crawler_config.py Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_crawler_config.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
+          python -m ruff format --isolated --check Crawler/Backend/crawler_config.py Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_crawler_config.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
           python -m unittest discover -s tests/crawler -p test_reddit_crawler.py -v
       - name: InstagramCrawler offline contract tests
         run: |
@@ -63,6 +73,15 @@ jobs:
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/twitter_crawler.py tests/crawler/test_twitter_crawler.py
           python -m ruff format --isolated --check Crawler/Backend/twitter_crawler.py tests/crawler/test_twitter_crawler.py
           python -m unittest discover -s tests/crawler -p test_twitter_crawler.py -v
+      - name: Check TikTok crawler
+        run: |
+          python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/tiktok_crawler.py Crawler/Backend/Tiktok/chrome_bridge.py tests/crawler/test_tiktok_crawler.py tests/crawler/test_tiktok_chrome_bridge.py
+          python -m ruff format --isolated --check Crawler/Backend/tiktok_crawler.py Crawler/Backend/Tiktok/chrome_bridge.py tests/crawler/test_tiktok_crawler.py tests/crawler/test_tiktok_chrome_bridge.py
+          python -m unittest discover -s tests/crawler -p test_tiktok_crawler.py -v
+          python -m unittest discover -s tests/crawler -p test_tiktok_chrome_bridge.py -v
+          node --test tests/crawler/test_tiktok_chrome_extension.mjs
+          node --check Crawler/Backend/Tiktok/chrome_extension/background.mjs
+          node --check Crawler/Backend/Tiktok/chrome_extension/popup.mjs
       - name: Selenium crawler lint
         run: |
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/social_crawler_selenium.py tests/crawler/test_social_crawler_selenium.py

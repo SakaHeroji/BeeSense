@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/package.json"
 type: "code"
 community: "Aturan React Hooks"
-location: "L41"
+location: "L45"
 tags:
   - graphify/code
   - graphify/EXTRACTED

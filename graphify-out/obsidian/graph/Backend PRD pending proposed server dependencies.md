@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Backend/README.md"
 type: "document"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "line 3"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Backend PRD pending: proposed server dependencies
@@ -14,7 +14,5 @@ tags:
 ## Connections
 - [[BeeSense product requirements index]] - `references` [EXTRACTED]
 - [[Crawler frontend product requirements]] - `references` [EXTRACTED]
-- [[Expected Crawler API contract]] - `references` [EXTRACTED]
-- [[Server-owned acquisition job lifecycle]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

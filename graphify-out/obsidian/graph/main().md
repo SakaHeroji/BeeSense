@@ -1,24 +1,18 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/instaloader_browser_patch.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L1397"
+community: "Worker Instaloader"
+location: "L197"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Worker_Instaloader
 ---
 
 # main()
 
 ## Connections
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[dumps()]] - `calls` [EXTRACTED]
-- [[parser()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
-- [[run_self_tests()]] - `calls` [EXTRACTED]
-- [[schema_document()]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()]] - `calls` [EXTRACTED]
-- [[verify_descriptor()]] - `calls` [EXTRACTED]
+- [[browser_graphql_query()]] - `indirect_call` [INFERRED]
+- [[instaloader_browser_patch.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

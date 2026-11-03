@@ -12,7 +12,7 @@ tags:
 # TwitterCrawlerTests
 
 ## Connections
-- [[.setUp()_10]] - `method` [EXTRACTED]
+- [[.setUp()_15]] - `method` [EXTRACTED]
 - [[.test_429_retry_headers_and_http200_challenge()]] - `method` [EXTRACTED]
 - [[.test_auth_alias_and_local_secret_errors_are_not_values()]] - `method` [EXTRACTED]
 - [[.test_barrier_keeps_partial_records_and_stops_remaining_operations()]] - `method` [EXTRACTED]
@@ -27,6 +27,7 @@ tags:
 - [[.test_saved_429_and_login_barriers_prevent_new_network_clients()]] - `method` [EXTRACTED]
 - [[.test_saved_state_reuses_account_without_resetting_counters()]] - `method` [EXTRACTED]
 - [[.test_shared_excel_dedup_formula_safety_parent_relations_and_manifest()]] - `method` [EXTRACTED]
+- [[.test_shared_workbook_baseline_excludes_posts_and_replies_and_checks_identity()]] - `method` [EXTRACTED]
 - [[.test_social_baseline_excludes_x_ids_previously_exported_as_comments()]] - `method` [EXTRACTED]
 - [[.test_social_comment_thread_budget_prioritizes_root_acquisition()]] - `method` [EXTRACTED]
 - [[.test_social_cooldown_keeps_partial_root_and_resumes_new_children_once()]] - `method` [EXTRACTED]

@@ -1,25 +1,23 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L170"
+community: "Kontrak Record Reddit"
+location: "L216"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # ContentInput
 
 ## Connections
-- [[.accept()_2]] - `calls` [EXTRACTED]
+- [[.accept()_1]] - `calls` [INFERRED]
+- [[.accept()_3]] - `calls` [EXTRACTED]
 - [[.add_content()_1]] - `references` [EXTRACTED]
-- [[.content()_2]] - `references` [EXTRACTED]
-- [[SafeLogger]] - `uses` [INFERRED]
-- [[Settings_1]] - `uses` [INFERRED]
-- [[YouTubeAdapter]] - `uses` [INFERRED]
-- [[crawl_youtube.py]] - `imports` [EXTRACTED]
-- [[import_pilot()]] - `calls` [EXTRACTED]
-- [[social_common.py]] - `contains` [EXTRACTED]
+- [[.content()_1]] - `references` [EXTRACTED]
+- [[.setUp()_14]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

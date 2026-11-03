@@ -12,7 +12,7 @@ members: 16
 ## Members
 - [[.capture()_1]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
 - [[.save_raw()]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
-- [[.setUp()_1]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
+- [[.setUp()]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
 - [[.test_candidate_rejects_wrong_host_identity_and_window()]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
 - [[.test_captcha_detected_but_user_post_discussing_captcha_is_not_a_barrier()]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
 - [[.test_chrome_http_429_error_page_is_a_rate_limit()]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
@@ -35,7 +35,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_2]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
 
 ## Top bridge nodes
 - [[ResumeTests]] - degree 16, connects to 1 community

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Dependency Runtime Frontend"
-location: "L23"
+community: "Frontend dan Transaksi Sosmed"
+location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Dependency_Runtime_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # @tanstack/react-query
@@ -15,4 +15,4 @@ tags:
 - [[@tanstackreact-query_1]] - `imports` [EXTRACTED]
 - [[dependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Dependency_Runtime_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

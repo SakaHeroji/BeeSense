@@ -1,8 +1,8 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "MachineLearning/topic_narratives.py"
 type: "code"
 community: "Akuisisi YouTube"
-location: "L35"
+location: "L147"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,12 +12,9 @@ tags:
 # digest()
 
 ## Connections
-- [[.__init__()_15]] - `calls` [EXTRACTED]
-- [[.add_content()_1]] - `calls` [EXTRACTED]
-- [[.content()_2]] - `calls` [EXTRACTED]
-- [[.finish_relations()_1]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
-- [[social_common.py]] - `contains` [EXTRACTED]
-- [[validate_row()_1]] - `calls` [EXTRACTED]
+- [[canonical()]] - `calls` [EXTRACTED]
+- [[generate()]] - `calls` [EXTRACTED]
+- [[topic_narratives.py]] - `contains` [EXTRACTED]
+- [[validate_rows()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

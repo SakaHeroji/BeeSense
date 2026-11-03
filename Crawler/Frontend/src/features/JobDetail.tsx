@@ -25,16 +25,17 @@ import {
 import type { Job, Platform, PlatformProgress } from '../shared/types';
 import { Badge, Button, Dialog, Empty, Notice, PlatformMark, Spinner } from '../shared/ui';
 import { useApp } from '../shared/context';
-import { ConfigReview } from './Automatic';
+import { ConfigReview } from '../shared/ConfigReview';
+import JobStatistics from './JobStatistics';
 import DatasetView from './DatasetView';
 
 const liveStates = ['QUEUED', 'RUNNING', 'STOP_REQUESTED', 'FINALIZING'];
 export default function JobDetail() {
-  const { jobId = '' } = useParams();
+  const { jobId = '', platform: routePlatform } = useParams();
   const client = useQueryClient();
   const { session, notify } = useApp();
   const navigate = useNavigate();
-  const [tab, setTab] = useUrlState('panel', 'progress');
+  const [tab] = useUrlState('panel', 'progress');
   const [verificationResult, setVerificationResult] = useState<{
     url?: string;
     message: string;
@@ -104,9 +105,23 @@ export default function JobDetail() {
         <Button onClick={() => void query.refetch()}>Coba lagi</Button>
       </>
     );
-  const job = query.data;
+  const original = query.data;
+  if (routePlatform && !original.platforms.some((p) => p.platform === routePlatform))
+    return <Empty title="Transaksi tidak ditemukan untuk sosmed ini" />;
+  const scopedPlatforms = original.platforms.filter(
+    (p) => !routePlatform || p.platform === routePlatform,
+  );
+  const scopedRows = scopedPlatforms.reduce(
+    (sum, p) => sum + p.counts.roots + p.counts.comments + p.counts.replies,
+    0,
+  );
+  const job = {
+    ...original,
+    platforms: scopedPlatforms,
+    dataset: original.dataset ? { ...original.dataset, rows: scopedRows } : undefined,
+  };
   const live = liveStates.includes(job.status);
-  const manual = job.mode !== 'automatic';
+  const currentPlatform = job.platforms.find((p) => p.platform === routePlatform)?.platform;
   const stale = live && (!online || !!query.error || now - Date.parse(job.updatedAt) > 20000);
   const counts = job.platforms.reduce(
     (acc, p) => ({
@@ -120,22 +135,15 @@ export default function JobDetail() {
   );
   return (
     <>
-      <Link
-        className="back-link"
-        to={`/crawler/${manual ? 'manual?tab=history' : 'automatic?view=history'}`}
-      >
-        <ArrowLeft size={15} />
-        Riwayat {manual ? 'manual' : 'otomatis'}
+      <Link className="back-link" to={`/crawler/${currentPlatform || 'youtube'}?view=results`}>
+        <ArrowLeft size={15} aria-hidden="true" />
+        Hasil {platformName(currentPlatform || 'youtube')}
       </Link>
       <div className="page-heading job-heading">
         <div>
           <span className="section-kicker">
             <Radio size={16} />
-            {job.mode === 'survey'
-              ? 'Data survei'
-              : job.mode === 'url'
-                ? 'Akuisisi URL pilihan'
-                : 'Akuisisi otomatis'}
+            Akuisisi otomatis
           </span>
           <h1 id="main-title" tabIndex={-1}>
             {job.name}
@@ -159,7 +167,12 @@ export default function JobDetail() {
         </span>
         <span>
           <Hourglass size={16} />
-          <b>Deadline</b> {job.deadlineAt ? dateTime(job.deadlineAt) : 'Menunggu worker'}
+          <b>Deadline</b>{' '}
+          {job.deadlineAt
+            ? dateTime(job.deadlineAt)
+            : job.config?.duration === null
+              ? 'Tanpa batas waktu'
+              : 'Menunggu worker'}
         </span>
         {live && job.deadlineAt && (
           <span className="time-remaining">
@@ -188,7 +201,7 @@ export default function JobDetail() {
           <Notice tone={job.status === 'FAILED' ? 'error' : 'warning'}>{job.reason}</Notice>
         )}
       </div>
-      {!!job.platforms.length && (
+      {!!job.platforms.length && tab === 'progress' && (
         <div className="platform-progress-grid">
           {job.platforms.map((p) => (
             <PlatformCard
@@ -230,6 +243,7 @@ export default function JobDetail() {
       )}
       <div className="page-tabs">
         {[
+          ['statistics', 'Statistik transaksi'],
           ['progress', 'Progres'],
           ['activity', 'Aktivitas'],
           ['configuration', 'Konfigurasi'],
@@ -241,49 +255,29 @@ export default function JobDetail() {
           </Link>
         ))}
       </div>
-      {tab === 'progress' &&
-        (job.mode === 'survey' ? (
-          <section className="panel padded">
-            <h2>Respons tersimpan</h2>
-            <div className="review-counts">
-              <span>
-                <b>{job.dataset?.responses || 0}</b> respons valid
-              </span>
-              <span>
-                <b>{job.dataset?.rows || 0}</b> jawaban
-              </span>
-              <span>
-                <b>{job.dataset?.textRows || 0}</b> jawaban teks
-              </span>
-            </div>
-            <p>Pertanyaan dan peran responden tetap terpisah dari teks jawaban.</p>
-            <Button onClick={() => setTab('result')}>
-              Periksa dataset
-              <ArrowUpRight size={16} />
-            </Button>
-          </section>
-        ) : (
-          <>
-            <ProgressChart job={job} />
-            <div className="chart-grid">
-              <Composition
-                title="Komposisi konten terkumpul"
-                values={[
-                  ['Post', counts.roots],
-                  ['Komentar', counts.comments],
-                  ['Reply', counts.replies],
-                ]}
-              />
-              <Composition
-                title="Data yang dilewati"
-                values={[
-                  ['Duplikat', counts.duplicates],
-                  ['Ditolak filter/akses', counts.rejected],
-                ]}
-              />
-            </div>
-          </>
-        ))}
+      {tab === 'statistics' && <JobStatistics job={job} platform={currentPlatform} />}
+      {tab === 'progress' && (
+        <>
+          <ProgressChart job={job} />
+          <div className="chart-grid">
+            <Composition
+              title="Komposisi konten terkumpul"
+              values={[
+                ['Post', counts.roots],
+                ['Komentar', counts.comments],
+                ['Reply', counts.replies],
+              ]}
+            />
+            <Composition
+              title="Data yang dilewati"
+              values={[
+                ['Duplikat', counts.duplicates],
+                ['Ditolak filter/akses', counts.rejected],
+              ]}
+            />
+          </div>
+        </>
+      )}
       {tab === 'activity' && (
         <section className="panel padded">
           <div className="panel-heading">
@@ -333,7 +327,7 @@ export default function JobDetail() {
                   <Button
                     variant="secondary"
                     onClick={() =>
-                      navigate(`/crawler/${manual ? 'manual?tab=url' : 'automatic'}`, {
+                      navigate(`/crawler/${currentPlatform || 'youtube'}`, {
                         state: { config: job.config },
                       })
                     }
@@ -346,11 +340,8 @@ export default function JobDetail() {
             </>
           ) : (
             <>
-              <h2>Batch survei</h2>
-              <p>
-                Template minat-studi versi 1. Jawaban tidak dimasukkan ke konfigurasi pekerjaan atau
-                browser storage.
-              </p>
+              <h2>Konfigurasi tidak tersedia</h2>
+              <p>Transaksi ini tidak menyertakan snapshot konfigurasi.</p>
             </>
           )}
         </section>

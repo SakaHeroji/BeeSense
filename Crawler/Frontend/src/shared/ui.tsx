@@ -223,8 +223,11 @@ export function Dialog({
     </dialog>
   );
 }
-export function UnsavedGuard({ dirty }: { dirty: boolean }) {
-  const blocker = useBlocker(dirty);
+export function UnsavedGuard({ dirty, pathOnly = false }: { dirty: boolean; pathOnly?: boolean }) {
+  const blocker = useBlocker(
+    ({ currentLocation, nextLocation }) =>
+      dirty && (!pathOnly || currentLocation.pathname !== nextLocation.pathname),
+  );
   useEffect(() => {
     const handler = (e: BeforeUnloadEvent) => {
       if (dirty) e.preventDefault();

@@ -1,28 +1,26 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L135"
+community: "Frontend dan Transaksi Sosmed"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # validateConfig()
 
 ## Connections
-- [[Automatic()]] - `calls` [EXTRACTED]
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports` [EXTRACTED]
-- [[ManualUrl()]] - `calls` [EXTRACTED]
+- [[PlatformPage()]] - `calls` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[demo.ts]] - `imports` [EXTRACTED]
-- [[domain.test.ts]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 - [[isoWib()]] - `calls` [EXTRACTED]
 - [[lines()]] - `calls` [EXTRACTED]
-- [[number()]] - `calls` [EXTRACTED]
+- [[number()_1]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[queryLines()]] - `calls` [EXTRACTED]
+- [[validateStorage()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

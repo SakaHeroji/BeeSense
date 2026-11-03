@@ -1,17 +1,16 @@
 ---
-source_file: "docs/PROJECT_STRUCTURE.md"
+source_file: ""
 type: "code"
-community: "Operasi dan Verifikasi BeeSense"
+community: "Akuisisi TikTok dan Ekspor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Operasi_dan_Verifikasi_BeeSense
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # SocialExportMixin
 
 ## Connections
-- [[BeeSense project structure]] - `references` [EXTRACTED]
-- [[SocialExportMixin]] - `references` [EXTRACTED]
+- [[NativeTikTokClient]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

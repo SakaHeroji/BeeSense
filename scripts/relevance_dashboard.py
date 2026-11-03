@@ -18,7 +18,7 @@ def main():
     parser.add_argument(
         "--config",
         type=Path,
-        default=ROOT / "config/social_nlp_relevance_20261102.json",
+        default=ROOT / "config/social_nlp.json",
     )
     parser.add_argument(
         "--baseline-run",

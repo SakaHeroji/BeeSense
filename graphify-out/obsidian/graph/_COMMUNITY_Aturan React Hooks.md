@@ -21,7 +21,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Dependency Pengembangan Frontend]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_6]]
 
 ## Top bridge nodes
 - [[eslint-plugin-react-hooks]] - degree 2, connects to 1 community

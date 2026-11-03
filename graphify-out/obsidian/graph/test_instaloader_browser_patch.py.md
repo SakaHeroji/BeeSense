@@ -16,6 +16,6 @@ tags:
 - [[Verify the supplied browser-style patch without sending network requests.]] - `rationale_for` [EXTRACTED]
 - [[context()]] - `contains` [EXTRACTED]
 - [[instaloader_browser_patch.py]] - `imports_from` [EXTRACTED]
-- [[response()_1]] - `contains` [EXTRACTED]
+- [[response()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

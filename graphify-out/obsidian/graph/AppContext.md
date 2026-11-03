@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/context.ts"
 type: "code"
-community: "Pengujian Alur Frontend"
+community: "Frontend dan Transaksi Sosmed"
 location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Alur_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # AppContext
@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Shell.tsx]] - `imports` [EXTRACTED]
 - [[context.ts]] - `contains` [EXTRACTED]
-- [[workflows.test.tsx]] - `imports` [EXTRACTED]
+- [[platform-workspace.test.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Alur_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

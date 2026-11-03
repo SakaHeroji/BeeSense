@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_browser.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L16"
+community: "Batas Crawler Opsional"
+location: "L17"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # InstagramBrowserTests
@@ -24,4 +24,4 @@ tags:
 - [[InstagramCrawler]] - `uses` [INFERRED]
 - [[test_instagram_browser.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

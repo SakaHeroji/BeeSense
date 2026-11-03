@@ -13,14 +13,13 @@ tags:
 
 ## Connections
 - [[ContextRelevanceFilter]] - `imports` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[Verify published source workbooks and the dashboard artifact bundle.]] - `rationale_for` [EXTRACTED]
 - [[file_hash()]] - `imports` [EXTRACTED]
-- [[main()_15]] - `contains` [EXTRACTED]
+- [[main()_4]] - `contains` [EXTRACTED]
 - [[published_crawl_files()]] - `contains` [EXTRACTED]
 - [[published_relevance_files()]] - `contains` [EXTRACTED]
 - [[published_source_files()]] - `contains` [EXTRACTED]
-- [[scriptsverify_dashboard_data.py]] - `references` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[verify()_1]] - `contains` [EXTRACTED]
 - [[verify_native_dataset()]] - `contains` [EXTRACTED]

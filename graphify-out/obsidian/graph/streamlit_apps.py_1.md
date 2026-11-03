@@ -1,20 +1,17 @@
 ---
-source_file: "README.md"
+source_file: "graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md"
 type: "code"
-community: "Panduan Pipeline BeeSense"
+community: "Penyaringan Relevansi dan Narasi Topik"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # streamlit_apps.py
 
 ## Connections
-- [[BeeSense]] - `references` [EXTRACTED]
-- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
-- [[Dashboard BeeSense]] - `references` [EXTRACTED]
-- [[Package rooted path consistency]] - `references` [EXTRACTED]
-- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - `references` [EXTRACTED]
+- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
+- [[Dashboardapp.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

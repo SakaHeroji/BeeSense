@@ -1,12 +1,12 @@
 ---
 source_file: "requirements/coherence.txt"
 type: "document"
-community: "Alur Dataset Model Dashboard"
+community: "Penjadwalan dan Riwayat Akuisisi"
 location: "comment and dependency declarations"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/Penjadwalan_dan_Riwayat_Akuisisi
 ---
 
 # Training/evaluation-only Gensim coherence requirements
@@ -16,4 +16,4 @@ tags:
 - [[Native SBERT training requirements include coherence evaluation]] - `references` [EXTRACTED]
 - [[New-corpus native SBERT encoding or exact verified cache reuse]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/document #graphify/EXTRACTED #community/Penjadwalan_dan_Riwayat_Akuisisi

@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/merge_social_datasets.py"
 type: "code"
-community: "Penggabungan Dataset"
-location: "L118"
+community: "Arsip Data Harian"
+location: "L39"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penggabungan_Dataset
+  - community/Arsip_Data_Harian
 ---
 
 # merge()
@@ -18,12 +18,10 @@ tags:
 - [[.test_latest_policy_still_rejects_comment_attached_to_different_root()]] - `calls` [EXTRACTED]
 - [[.test_twitter_native_dedup_and_audited_roots_survive_merge()]] - `calls` [EXTRACTED]
 - [[identity()]] - `calls` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 - [[merge_social_datasets.py]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `calls` [EXTRACTED]
 - [[sha()]] - `calls` [EXTRACTED]
 - [[test_dataset_merge.py]] - `imports` [EXTRACTED]
-- [[twitter_roots()]] - `calls` [EXTRACTED]
-- [[write_roots()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

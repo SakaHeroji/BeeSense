@@ -1,27 +1,21 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L187"
+community: "Capture Reddit Playwright"
+location: "L188"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Akuisisi_YouTube
+  - graphify/EXTRACTED
+  - community/Capture_Reddit_Playwright
 ---
 
 # YouTubeAdapter
 
 ## Connections
-- [[.__init__()_14]] - `method` [EXTRACTED]
-- [[.accept()_2]] - `method` [EXTRACTED]
-- [[BundleSink_1]] - `uses` [INFERRED]
-- [[ContentInput_1]] - `uses` [INFERRED]
-- [[Dataset_1]] - `uses` [INFERRED]
-- [[KeywordMatcher_1]] - `uses` [INFERRED]
-- [[RecordFactory_1]] - `uses` [INFERRED]
-- [[SourceAdapter_2]] - `uses` [INFERRED]
-- [[SourceAdapter_1]] - `inherits` [EXTRACTED]
+- [[.__init__()_19]] - `method` [EXTRACTED]
+- [[.accept()_1]] - `method` [EXTRACTED]
+- [[SourceAdapter_2]] - `inherits` [EXTRACTED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

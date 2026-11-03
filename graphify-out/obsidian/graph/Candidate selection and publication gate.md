@@ -15,7 +15,7 @@ tags:
 - [[After-filtering clustering branch]] - `conceptually_related_to` [EXTRACTED]
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[Before-filtering clustering branch]] - `conceptually_related_to` [EXTRACTED]
-- [[Coherence c_v protocol_1]] - `rationale_for` [EXTRACTED]
-- [[Weighted Ward topic reduction_1]] - `shares_data_with` [EXTRACTED]
+- [[Coherence c_v protocol]] - `rationale_for` [EXTRACTED]
+- [[Weighted Ward topic reduction]] - `shares_data_with` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

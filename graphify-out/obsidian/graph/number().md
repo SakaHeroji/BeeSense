@@ -1,32 +1,34 @@
 ---
-source_file: "Crawler/Frontend/src/shared/domain.ts"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Monitor Job dan Dataset"
-location: "L51"
+community: "Render Dashboard Streamlit"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Job_dan_Dataset
+  - community/Render_Dashboard_Streamlit
 ---
 
 # number()
 
 ## Connections
-- [[Automatic()]] - `calls` [EXTRACTED]
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
-- [[Baselines()]] - `calls` [EXTRACTED]
-- [[Composition()]] - `calls` [EXTRACTED]
-- [[ConfigReview()]] - `calls` [EXTRACTED]
-- [[DatasetView()]] - `calls` [EXTRACTED]
-- [[DatasetView.tsx]] - `imports` [EXTRACTED]
-- [[History()]] - `calls` [EXTRACTED]
-- [[History.tsx]] - `imports` [EXTRACTED]
-- [[JobDetail.tsx]] - `imports` [EXTRACTED]
-- [[PlatformCard()]] - `calls` [EXTRACTED]
-- [[ProgressChart()]] - `calls` [EXTRACTED]
-- [[Survey()]] - `calls` [EXTRACTED]
-- [[Survey.tsx]] - `imports` [EXTRACTED]
-- [[domain.ts]] - `contains` [EXTRACTED]
-- [[validateConfig()]] - `calls` [EXTRACTED]
+- [[._methods()]] - `calls` [EXTRACTED]
+- [[._metrics()]] - `calls` [EXTRACTED]
+- [[._network()]] - `calls` [EXTRACTED]
+- [[._overview()]] - `calls` [EXTRACTED]
+- [[._selected_context()]] - `calls` [EXTRACTED]
+- [[._sentences()]] - `calls` [EXTRACTED]
+- [[._topic_detail()]] - `calls` [EXTRACTED]
+- [[.coverage_figure()]] - `calls` [EXTRACTED]
+- [[.explanation_figure()]] - `calls` [EXTRACTED]
+- [[.ranking_figure()]] - `calls` [EXTRACTED]
+- [[.render()]] - `calls` [EXTRACTED]
+- [[.source_figure()]] - `calls` [EXTRACTED]
+- [[.term_figure()]] - `calls` [EXTRACTED]
+- [[.test_indonesian_numbers_dates_and_empty_aggregates()]] - `calls` [INFERRED]
+- [[.topic_figure()]] - `calls` [EXTRACTED]
+- [[.topic_platform_figure()]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

@@ -1,37 +1,21 @@
 ---
 type: implementation
-status: frontend-implemented-backend-pending
-tags: [beesense, react, crawler, frontend, survey]
+status: frontend-first
+tags: [beesense, react, crawler, frontend]
 ---
 
 # Frontend React Crawler
 
-[Crawler/Frontend](../../Crawler/Frontend/README.md) mengimplementasikan [[PRD Frontend Crawler]] dengan ReactJS, TypeScript, Vite, React Router, dan TanStack Query. Dua menu utama tetap Crawler Otomatis dan Crawler Manual; Manual berisi URL, survei, dan riwayat.
+[Crawler/Frontend](../../Crawler/Frontend/README.md) memakai React, TypeScript, Vite, React Router dan TanStack Query. Tujuh menu sosmed adalah satu-satunya navigasi utama. Menu/route/form Crawler Manual dan Migrasi Excel terpisah sudah dihapus sesuai koreksi lingkup; frontend dikerjakan terlebih dahulu.
 
-## Pemisahan lingkungan
+[[Frontend Social Media Per Platform]] memuat formulir, hasil transaksi menurut tanggal eksekusi WIB, statistik lengkap dan [[Migrasi Transaksi per Sosmed]]. Mulai crawling tetap membuka monitor job dengan progres, aktivitas, konfigurasi dan dataset.
 
-Development memakai adapter simulasi dengan banner tetap. Tidak ada crawling, training, atau perubahan dataset nyata. Metadata pekerjaan sintetis disimpan di browser untuk membuka kembali monitor; jawaban survei dan indeks respons demo hanya berada di memori.
+Development memakai simulasi berlabel, tanpa crawling/database/file nyata. Build API tidak fallback ke demo. Typed adapter di api.ts hanya menyiapkan [kontrak HTTP](../../Crawler/Frontend/docs/API_CONTRACT.md); layanan HTTP dan worker belum tersedia. Python SocialCrawler tetap CLI/library empat adapter, tiga sumber lain UI/rencana.
 
-Build produksi memakai mode API secara default dan tidak fallback ke demo saat backend gagal. [`api.ts`](../../Crawler/Frontend/src/shared/api.ts) menyiapkan integrasi berbasis sesi, validasi rencana, idempotency key, polling snapshot, kontrol pekerjaan, validasi/commit survei, dataset berversi, dan handoff NLP. [Kontrak API](../../Crawler/Frontend/docs/API_CONTRACT.md) masih perlu diimplementasikan backend. [[Crawler Selenium]] dan SocialCrawler Python saat ini bukan HTTP server untuk SPA.
+Form akun & sesi opsional menyiapkan penyimpanan config/auth.json untuk Instagram, X, TikTok, Threads dan Facebook. Session ID disembunyikan, tidak dikembalikan server, tidak disimpan ke URL/localStorage/bundle dan dibersihkan setelah simulasi simpan. Metadata username/hasSession berada di memori demo. Frontend tidak membaca atau menulis file auth.json asli.
 
-## Alur yang tersedia
+Tema: #FFFFFF/#FAFAFA, teks #000000, aksen #FF8A24, pilihan #FFF3E8, garis #E6DDD5. Plus Jakarta Sans; teks minimum 12 px, pendukung 13 px, body/input 15 px, input mobile 16 px. [Audit dan delivery](../../Crawler/Frontend/docs/DELIVERY.md) mencatat bukti dan batas.
 
-- Wizard otomatis: query/platform, tanggal WIB, filter/target, baseline wajib, review, validasi, dan mulai.
-- Monitor: roots/qualified/comments/replies terpisah, deadline server, stale/reconnect, cooldown/CAPTCHA, finalisasi, stop aman, grafik dan tabel.
-- URL: host allowlist, locator/URL kanonik, native ID final tetap diverifikasi backend, deduplikasi dan daftar terpilih tanpa discovery tambahan.
-- Survei: template minat-studi v1, formulir atau CSV/XLSX, pemilihan sheet, mapping, review, dan commit respons lengkap. Metadata peran/izin/pertanyaan tetap terpisah dari teks jawaban.
-- Hasil: preview, kualitas, konteks, berkas sesuai izin, dan penerimaan eksplisit atas dataset parsial sebelum pemilihan input NLP. Skema survei dan lima sumber sosial baru belum divalidasi adapter NLP, sehingga handoff dataset tersebut diblokir pada simulasi.
+Utility backend/SQL/CI/image migrasi Excel sebelumnya sudah dihapus. Tidak ada migrasi database baru atau perubahan data asli. Docker frontend non-root UID101/8080 tetap; daemon tidak aktif, revisi image belum dibangun. Runtime lokal tetap http://127.0.0.1:5173.
 
-Audit UI/UX mengikuti skill frontend-design dan web-design-guidelines: kontras teks, label/error terhubung, validasi per langkah, deep link tab, dialog, dan navigasi mobile berkeyboard. [Catatan delivery](../../Crawler/Frontend/docs/DELIVERY.md) memisahkan hasil verifikasi frontend dari kemampuan backend yang belum ada.
-
-## Menjalankan
-
-`cd Crawler/Frontend && npm ci && npm run dev` membuka http://127.0.0.1:5173. Docker baru memakai Nginx UID 101 pada port 8080, health `/healthz`, dan SPA fallback; terpisah dari Dashboard Streamlit. Tidak ada perubahan skema database atau migrasi.
-
-[[Arsitektur BeeSense]] · [[PRD Frontend Crawler]] · [[Dataset Dashboard]] · [[HOME]]
-
-## Tema dan tujuh sumber
-
-Versi PRD 1.1 menetapkan permukaan putih `#FFFFFF`, canvas `#FAFAFA`, aksen oranye `#FF8A24`, hover `#FF7608`, latar lembut `#FFF3E8`, garis `#E6DDD5`, serta **seluruh teks hitam `#000000`, minimum 13 px**. Body/input 15 px; label/tombol 14 px. Logo, grafik, dan status memakai oranye/hitam/abu-abu tanpa hijau. Label grafik memakai HTML agar ukuran teks tidak menyusut bersama SVG.
-
-Tujuh pilihan UI dan simulasi: YouTube, Reddit, Instagram, TikTok, Threads, Facebook, X/Twitter. Query, target, kartu progres, seri grafik, filter riwayat, dan preview menggunakan daftar platform yang sama. Lima tambahan default nonaktif dan dapat dipilih pada demo. Mode API hanya mengaktifkan capability yang dikirim server. Backend HTTP/worker belum tersedia; SocialCrawler Python tetap baru memiliki adapter YouTube/Reddit. Lima adapter baru dan pemetaan NLP merupakan dependensi terencana, bukan crawler yang sudah berjalan.
+[[Frontend Social Media Per Platform]] · [[Migrasi Transaksi per Sosmed]] · [[Arsitektur BeeSense]] · [[HOME]]

@@ -1,5 +1,7 @@
 # InstaloaderCrawler
 
+> Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
+
 Implementasi di `Crawler/Backend/instaloader_crawler.py`, memakai
 Instaloader **4.16**. Class mewarisi coordinator/exporter InstagramCrawler:
 filter tanggal/keyword, native ID, deduplikasi baseline, deadline, audit workbook
@@ -17,11 +19,12 @@ python3 -m venv .venv-instaloader
 .venv-instaloader/bin/python -m Crawler.Backend.instaloader_crawler --output-dir outputs/instagram_instaloader_trial
 ```
 
-`config/instaloader_crawler.json`: maksimal **300 detik/10 post**, hashtag kuliah,
-minimum 1 komentar per qualified post, maksimal 20 komentar/10 preview balasan,
-jeda HTTP minimal 5 detik, timeout operasi 60 detik, **tanpa retry 429**.
-Folder baseline lokal yang disebut konfigurasi harus tersedia; hasil tetap
-menyimpan checksum setiap workbook baseline. Output baru harus memakai folder baru.
+`config/social_crawler.json` menyediakan bagian `platforms.instagram` dan `instaloader`.
+Runner mandiri mewarisi durasi **tanpa batas jam**, target **1.000 post**, minimum
+komentar nol dan cap komentar/balasan `null` yang sama dengan coordinator. Jika parent
+hanya membawa preview balasan, iterator GraphQL balasan dibaca sampai selesai. Trial awal **300 detik/10 post** di bagian
+riwayat memakai preset lama yang sudah dihapus; untuk mengulang batas itu, ubah
+`total_seconds`, `platform_defaults` atau override Instagram dalam file utama.
 
 Autentikasi membaca `sessionid` dari entry Instagram pada `config/auth.json`, atau
 memakai JSON sesi di `output/instaloader/session.json` jika sudah ada. File auth
@@ -55,8 +58,8 @@ sesuai [PR #2692](https://github.com/instaloader/instaloader/pull/2692), sehingg
 thread besar tidak dipaksa menuju endpoint mobile. Jalur ini berhasil diuji live.
 Opsi eksperimental `web_doc_id`, berdasarkan format pada [issue #2651](https://github.com/instaloader/instaloader/issues/2651),
 belum berhasil pada post uji karena respons tidak memuat connection yang diharapkan.
-Tidak ada fallback otomatis setelah penolakan. Reply hanya preview yang disertakan
-server, dengan parent native eksplisit; tidak ada klaim komentar/reply lengkap.
+Tidak ada fallback otomatis setelah penolakan. Reply preview yang parsial dilanjutkan melalui iterator GraphQL balasan, dengan
+parent native eksplisit; kelengkapan tetap bergantung pada respons server.
 
 Patch juga dapat menjalankan CLI native, dengan opsi upstream:
 
@@ -108,6 +111,6 @@ Keberhasilan uji singkat tidak menjamin tidak ada HTTP 429 pada run berikutnya.
 
 ## Integrasi SocialCrawler 1.6.0
 
-`social_crawler.py` memilih `InstaloaderWorker` persisten, `InstaloaderSettings`, dan provenans `instaloader_saved_web_session` secara default untuk Instagram. Validator opsi digunakan bersama class standalone. Preset `social_crawler_instagram_3h.json` memakai backend instaloader dengan target 1.000 post/10.800 detik dan minimal 10 komentar. Preset resume historis `social_crawler_instagram_resume_20261030.json` juga beralih backend, dengan sisa target/waktu aslinya tetap 870 qualified post/6.065 detik. Keduanya mempertahankan pacing batch dan retry 429 nol. Kebijakan retry yang secara eksplisit disetel pengguna tetap mengikuti scheduler/cooldown; worker mempertahankan context tanpa mengirim request selama menunggu. Backend browser/instagrapi lama tersedia bila dipilih eksplisit.
+`social_crawler.py` memilih `InstaloaderWorker` persisten, `InstaloaderSettings`, dan provenans `instaloader_saved_web_session` secara default untuk Instagram. Validator opsi digunakan bersama class standalone. Preset historis yang sudah dihapus `social_crawler_instagram_3h.json` memakai backend instaloader dengan target 1.000 post/10.800 detik dan minimal 10 komentar. Preset resume historis `social_crawler_instagram_resume_20261030.json` juga beralih backend, dengan sisa target/waktu aslinya tetap 870 qualified post/6.065 detik. Keduanya mempertahankan pacing batch dan retry 429 nol. Kebijakan retry yang secara eksplisit disetel pengguna tetap mengikuti scheduler/cooldown; worker mempertahankan context tanpa mengirim request selama menunggu. Backend browser/instagrapi lama tersedia bila dipilih eksplisit.
 
 Tes integrasi memeriksa pemilihan worker/settings default, lifecycle close, Excel/provenans, baseline dedup, discovery cursor, ekspor lintas platform, jeda, retry/deadline dan penolakan credential di config. `requirements/crawler.txt` membawa dependency Instaloader; allowlist/image crawler, Selenium dan browser telah diperbarui untuk dependency/source baru. Tidak ada migrasi database.

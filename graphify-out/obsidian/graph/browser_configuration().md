@@ -1,21 +1,19 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L24"
+community: "Batas Crawler Opsional"
+location: "L26"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # browser_configuration()
 
 ## Connections
-- [[.__init__()_19]] - `calls` [EXTRACTED]
+- [[.__init__()_11]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[_configuration()]] - `calls` [EXTRACTED]
 - [[instagram_browser.py]] - `contains` [EXTRACTED]
-- [[instagram_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

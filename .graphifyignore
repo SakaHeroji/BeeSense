@@ -9,3 +9,6 @@ Reddit/fixtures/
 .cache/
 .ruff_cache/
 __pycache__/
+
+# Isolated TikTok runtime is excluded from architecture extraction.
+.venv-tiktok/

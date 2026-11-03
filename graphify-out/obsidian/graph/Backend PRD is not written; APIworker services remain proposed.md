@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[BeeSense PRDs separate frontend, backend and machine-learning responsibility]] - `references` [EXTRACTED]
 - [[Crawler frontend product requirements]] - `references` [EXTRACTED]
-- [[Expected typed frontend API contract; backend implementation pending]] - `references` [EXTRACTED]
 - [[Proposed persistent Python worker and authorized CAPTCHA browser bridge]] - `references` [EXTRACTED]
 - [[Proposed server session, role, project isolation and idempotency]] - `references` [EXTRACTED]
 - [[Proposed survey transactions, immutable datasets and operational audit]] - `references` [EXTRACTED]

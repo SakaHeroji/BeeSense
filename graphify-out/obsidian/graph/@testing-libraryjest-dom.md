@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Matcher DOM Pengujian"
-location: "L33"
+community: "Dependency Pengembangan Frontend"
+location: "L38"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Matcher_DOM_Pengujian
+  - community/Dependency_Pengembangan_Frontend
 ---
 
 # @testing-library/jest-dom
@@ -15,4 +15,4 @@ tags:
 - [[@testing-libraryjest-dom_1]] - `imports` [EXTRACTED]
 - [[devDependencies]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Matcher_DOM_Pengujian
+#graphify/code #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend

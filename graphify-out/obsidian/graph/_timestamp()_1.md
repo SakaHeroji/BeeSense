@@ -1,23 +1,18 @@
 ---
-source_file: "Crawler/Backend/social_crawler_selenium.py"
+source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Crawler Selenium"
-location: "L142"
+community: "Batas Crawler Opsional"
+location: "L348"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium
+  - community/Batas_Crawler_Opsional
 ---
 
 # _timestamp()
 
 ## Connections
-- [[._normalize()]] - `calls` [EXTRACTED]
-- [[.search()]] - `calls` [EXTRACTED]
-- [[.test_relative_and_date_only_are_not_promoted_to_exact()]] - `calls` [EXTRACTED]
-- [[.youtube()]] - `calls` [EXTRACTED]
-- [[_reddit_records()]] - `calls` [EXTRACTED]
-- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
-- [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
+- [[instagram_crawler.py]] - `contains` [EXTRACTED]
+- [[normalize_item()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

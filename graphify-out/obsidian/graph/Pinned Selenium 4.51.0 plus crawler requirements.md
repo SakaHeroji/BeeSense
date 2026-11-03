@@ -11,7 +11,4 @@ tags:
 
 # Pinned Selenium 4.51.0 plus crawler requirements
 
-## Connections
-- [[SocialCrawlerSelenium Guide]] - `references` [EXTRACTED]
-
 #graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

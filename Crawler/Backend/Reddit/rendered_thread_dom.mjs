@@ -13,7 +13,7 @@ export function captureRenderedThread({nativeId, maxComments = 2000}) {
     score_display: element.getAttribute('score'), comment_count_display: element.getAttribute('comment-count'),
     source_show_full_content: element.hasAttribute('show-full-content'),
   };
-  const comments = Array.from(document.querySelectorAll('[role="article"]')).slice(0, maxComments).map(article => {
+  const comments = Array.from(document.querySelectorAll('[role="article"]')).slice(0, maxComments ?? undefined).map(article => {
     const own = selector => Array.from(article.querySelectorAll(selector)).filter(child => child.closest('[role="article"]') === article);
     const link = own('a[href*="/comment/"]')[0];
     const commentId = link?.href.match(/\/comment\/([a-z0-9]+)\//)?.[1];

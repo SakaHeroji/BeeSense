@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L239"
+community: "Akuisisi YouTube"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # RecordFactory
@@ -16,9 +16,7 @@ tags:
 - [[.content()]] - `method` [EXTRACTED]
 - [[.key()]] - `method` [EXTRACTED]
 - [[.row()]] - `method` [EXTRACTED]
-- [[.setUp()]] - `calls` [EXTRACTED]
-- [[.validate()]] - `calls` [EXTRACTED]
-- [[RedditRecordFactory]] - `inherits` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

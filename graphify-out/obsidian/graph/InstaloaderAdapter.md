@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
 community: "Worker Instaloader"
-location: "L261"
+location: "L263"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # InstaloaderAdapter
 
 ## Connections
-- [[.__init__()_23]] - `method` [EXTRACTED]
+- [[.__init__()_13]] - `method` [EXTRACTED]
 - [[.collect()]] - `method` [EXTRACTED]
 - [[.comment()]] - `method` [EXTRACTED]
 - [[.legacy_comments()]] - `method` [EXTRACTED]

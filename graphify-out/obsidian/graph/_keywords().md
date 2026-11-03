@@ -1,18 +1,19 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L418"
+community: "Kuota Harian Scweet"
+location: "L432"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Kuota_Harian_Scweet
 ---
 
 # _keywords()
 
 ## Connections
+- [[ValueError]] - `calls` [INFERRED]
 - [[_config()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

@@ -1,37 +1,48 @@
 ---
 type: community
-cohesion: 0.14
-members: 22
+cohesion: 0.10
+members: 33
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 0.14 - loosely connected
-**Members:** 22 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 33 nodes
 
 ## Members
-- [[Apache Arrow issue 50471]] - document - README.md
-- [[BeeSense]] - document - README.md
-- [[CrawlerBackendsocial_crawler_selenium.py]] - code - README.md
-- [[Dashboard runtime separated from training and crawling]] - rationale - README.md
-- [[InstagramCrawler_1]] - code - README.md
-- [[InstaloaderCrawler (CrawlerBackendinstaloader_crawler.py)]] - code - README.md
-- [[Local Docker artifact mount]] - rationale - README.md
-- [[Publication allowlist, checksums, and Git index]] - rationale - README.md
-- [[PyArrow 24.0.0 runtime pin]] - rationale - README.md
-- [[Raw inputs and archives preserved]] - rationale - README.md
-- [[RedditCrawler (CrawlerBackendreddit_crawler.py)]] - code - README.md
-- [[Reddrix subprocess lifecycle]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Shared deadline round robin scheduling]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - code - README.md
-- [[Streamlit Community Cloud release target]] - concept - README.md
-- [[Streamlit dependency documentation]] - document - README.md
-- [[Streamlit deployment documentation]] - document - README.md
-- [[TwitterCoordinatorWorker_2]] - code - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[TwitterCrawler (Scweet 5.8.2)]] - code - README.md
-- [[dashboard-runtime CI]] - concept - README.md
-- [[scriptsmerge_social_datasets.py]] - code - README.md
-- [[scriptsverify_dashboard_data.py]] - code - README.md
+- [[AI synthesis interpretation]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Accessible dashboard interactions]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Counting units and topic share]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Dashboard BeeSense]] - document - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Dashboard validation]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Education keyword profile kuliah, kampus, universitas, beasiswa, jurusan]] - concept - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Explainable Topics Guide]] - document - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[Filtered Gemini repository default and rollback]] - rationale - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Filters preserve full-model memberships and scores]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Fingerprinted receipt cache]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Five dashboard views]] - concept - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Gemini generateContent transport]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Gemini model documentation]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Gemini structured output]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Gemini topic narratives]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[GenerateContent API]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Kalimat dan deskripsi topik melalui Gemini]] - document - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Kendall Tau B Consistency]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[MachineLearningtopic_narratives.py]] - code - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Maximal Marginal Relevance]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[Offline narrative validation]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Publication failure and retry policy]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Relevansi Konteks — 2 November 2026]] - document - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[SocialNLPClusterer.save()]] - code - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[SocialNLPStreamlitApp (Dashboardapp.py)]] - code - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Supported Descriptive Topic Trends]] - rationale - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[Temporal support and source audit]] - rationale - docs/dashboard/DASHBOARD_DESIGN.md
+- [[Theil Sen Monthly Slope]] - concept - docs/machine-learning/EXPLAINABLE_TOPICS.md
+- [[Top keywords and representative sentences]] - rationale - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[Web Interface Guidelines]] - document - docs/dashboard/DASHBOARD_DESIGN.md
+- [[beesense-topic-id2]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[gemini-topic-narratives2]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
+- [[topic_narratives.csv]] - concept - docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,17 +52,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_2]]
-- 3 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_4]]
+- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader]]
 
 ## Top bridge nodes
-- [[BeeSense]] - degree 27, connects to 4 communities
-- [[scriptsverify_dashboard_data.py]] - degree 4, connects to 2 communities
-- [[SocialCrawler (CrawlerBackendsocial_crawler.py)]] - degree 8, connects to 1 community
-- [[Dashboard runtime separated from training and crawling]] - degree 5, connects to 1 community
-- [[TwitterCoordinatorWorker_2]] - degree 3, connects to 1 community
+- [[Kalimat dan deskripsi topik melalui Gemini]] - degree 18, connects to 2 communities
+- [[Dashboard BeeSense]] - degree 12, connects to 1 community

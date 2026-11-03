@@ -19,6 +19,6 @@ tags:
 - [[Reddit — implemented Reddrix backend]] - `shares_data_with` [EXTRACTED]
 - [[XTwitter — implemented Scweet backend]] - `shares_data_with` [EXTRACTED]
 - [[YouTube — implemented yt-dlp backend]] - `shares_data_with` [EXTRACTED]
-- [[scriptsmerge_social_datasets.py_1]] - `shares_data_with` [EXTRACTED]
+- [[scriptsmerge_social_datasets.py]] - `shares_data_with` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

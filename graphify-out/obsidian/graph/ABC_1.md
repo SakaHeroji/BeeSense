@@ -11,7 +11,7 @@ tags:
 # ABC
 
 ## Connections
-- [[SourceAdapter_2]] - `inherits` [EXTRACTED]
+- [[SourceAdapter_1]] - `inherits` [EXTRACTED]
 - [[social_common.py]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/app/App.tsx"
 type: "code"
-community: "Router dan Batas Error"
-location: "L61"
+community: "Frontend dan Transaksi Sosmed"
+location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Router_dan_Batas_Error
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # client
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[App.tsx]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Router_dan_Batas_Error
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

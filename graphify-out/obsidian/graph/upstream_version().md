@@ -1,20 +1,21 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L52"
+community: "Worker Instaloader"
+location: "L32"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Worker_Instaloader
 ---
 
 # upstream_version()
 
 ## Connections
-- [[.__init__()_21]] - `calls` [EXTRACTED]
-- [[collect()]] - `calls` [EXTRACTED]
+- [[.__call__()_1]] - `calls` [EXTRACTED]
+- [[.__init__()_15]] - `calls` [EXTRACTED]
+- [[.collect()]] - `calls` [EXTRACTED]
 - [[error_receipt()]] - `calls` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

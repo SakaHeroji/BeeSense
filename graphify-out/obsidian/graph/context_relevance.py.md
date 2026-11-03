@@ -16,7 +16,7 @@ tags:
 - [[Local, auditable zero-shot relevance decisions before topic clustering.  Model s]] - `rationale_for` [EXTRACTED]
 - [[LocalSemanticBackend]] - `imports` [EXTRACTED]
 - [[checksum()_1]] - `contains` [EXTRACTED]
-- [[digest()_3]] - `contains` [EXTRACTED]
+- [[digest()_2]] - `contains` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[relevance_semantic.py]] - `imports_from` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports_from` [EXTRACTED]

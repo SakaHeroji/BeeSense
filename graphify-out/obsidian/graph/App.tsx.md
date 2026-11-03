@@ -1,26 +1,24 @@
 ---
 source_file: "Crawler/Frontend/src/app/App.tsx"
 type: "code"
-community: "Router dan Batas Error"
+community: "Frontend dan Transaksi Sosmed"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Router_dan_Batas_Error
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # App.tsx
 
 ## Connections
 - [[App()]] - `contains` [EXTRACTED]
-- [[Automatic.tsx]] - `imports_from` [EXTRACTED]
 - [[ErrorBoundary]] - `contains` [EXTRACTED]
-- [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
-- [[Manual()]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports_from` [EXTRACTED]
+- [[JobDetail]] - `contains` [EXTRACTED]
+- [[PlatformWorkspace]] - `contains` [EXTRACTED]
 - [[Shell.tsx]] - `imports_from` [EXTRACTED]
 - [[client]] - `contains` [EXTRACTED]
 - [[main.tsx]] - `imports_from` [EXTRACTED]
 - [[router]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Router_dan_Batas_Error
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L178"
+community: "Batas Crawler Opsional"
+location: "L187"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # load_client()
@@ -19,4 +19,4 @@ tags:
 - [[login_from_file()]] - `calls` [EXTRACTED]
 - [[login_local()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

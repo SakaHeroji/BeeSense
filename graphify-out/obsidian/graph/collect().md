@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L464"
+community: "Batas Crawler Opsional"
+location: "L473"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # collect()
 
 ## Connections
-- [[ValueError]] - `calls` [EXTRACTED]
+- [[ValueError_2]] - `calls` [EXTRACTED]
 - [[_value()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[instagram_worker()]] - `calls` [EXTRACTED]
@@ -21,6 +21,6 @@ tags:
 - [[media_url()]] - `calls` [EXTRACTED]
 - [[native_pk()]] - `calls` [EXTRACTED]
 - [[normalize_item()]] - `calls` [EXTRACTED]
-- [[upstream_version()]] - `calls` [EXTRACTED]
+- [[upstream_version()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

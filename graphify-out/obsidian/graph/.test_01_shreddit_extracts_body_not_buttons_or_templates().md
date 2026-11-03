@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Pengujian Parser Reddit"
-location: "L1206"
+location: "L1207"
 tags:
   - graphify/code
   - graphify/EXTRACTED

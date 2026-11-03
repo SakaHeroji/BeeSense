@@ -12,8 +12,8 @@ tags:
 # InstagramCrawlerTests
 
 ## Connections
-- [[.crawler()]] - `method` [EXTRACTED]
-- [[.setUp()_2]] - `method` [EXTRACTED]
+- [[.crawler()_2]] - `method` [EXTRACTED]
+- [[.setUp()_16]] - `method` [EXTRACTED]
 - [[.test_actual_instagram_worker_missing_session_stops_without_network()]] - `method` [EXTRACTED]
 - [[.test_auth_file_login_selects_instagram_and_never_exports_credentials()]] - `method` [EXTRACTED]
 - [[.test_authentication_barrier_keeps_partial_records_without_retry()]] - `method` [EXTRACTED]
@@ -37,12 +37,11 @@ tags:
 - [[.test_search_uses_explicit_hashtag_cursor()]] - `method` [EXTRACTED]
 - [[.test_source_identity_parent_and_unknown_time_are_preserved()]] - `method` [EXTRACTED]
 - [[.test_spawned_worker_preserves_events_and_kills_hanging_process()]] - `method` [EXTRACTED]
-- [[.test_tracked_trial_is_30_minutes_and_main_remains_two_platforms()]] - `method` [EXTRACTED]
+- [[.test_standalone_inherits_main_duration_and_keeps_combined_enabled_scope()]] - `method` [EXTRACTED]
 - [[.test_upgrade_gate_is_distinct_from_throttling_and_unknown_source_errors()]] - `method` [EXTRACTED]
 - [[.test_url_canonicalization_and_identity()]] - `method` [EXTRACTED]
 - [[.test_verified_429_respects_retry_after_and_budget()]] - `method` [EXTRACTED]
-- [[.worker()]] - `method` [EXTRACTED]
-- [[Offline testscontext checks do not establish live Instagram trial success]] - `references` [INFERRED]
+- [[.worker()_2]] - `method` [EXTRACTED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
 

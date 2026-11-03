@@ -2,6 +2,7 @@
 source_file: "docs/crawler/INSTALOADER_CRAWLER.md"
 type: "concept"
 community: "Integrasi Default Instaloader"
+location: "1"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
@@ -11,16 +12,13 @@ tags:
 # InstaloaderCrawler
 
 ## Connections
-- [[Diagnostic and active-data separation]] - `conceptually_related_to` [EXTRACTED]
-- [[Experimental web_doc_id comments transport]] - `conceptually_related_to` [EXTRACTED]
+- [[InstagramCrawler instagrapi atau browser]] - `implements` [EXTRACTED]
+- [[Instaloader mempertahankan pacing dan berhenti pada hambatan akses]] - `references` [EXTRACTED]
+- [[Instaloader 1000 post, tanpa batas jam atau cap komentar]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
-- [[InstaloaderCrawler guide and evidence]] - `references` [EXTRACTED]
-- [[Legacy query_hash comment NodeIterator]] - `conceptually_related_to` [EXTRACTED]
-- [[Local JSON session handling]] - `conceptually_related_to` [EXTRACTED]
-- [[Persistent worker, rate state and hard deadline]] - `conceptually_related_to` [EXTRACTED]
-- [[Runtime web GraphQL patch]] - `conceptually_related_to` [EXTRACTED]
-- [[Shared InstagramCrawler data contract]] - `implements` [EXTRACTED]
-- [[SocialCrawler 1.6.0 default Instaloader integration]] - `conceptually_related_to` [EXTRACTED]
-- [[Standalone experiment caps]] - `conceptually_related_to` [EXTRACTED]
+- [[Iterator GraphQL balasan saat parent hanya preview]] - `references` [EXTRACTED]
+- [[One social_crawler.json business configuration shared by all runners]] - `references` [EXTRACTED]
+- [[SocialCrawler 1.10.0 dengan backend TikTok mandiri]] - `references` [EXTRACTED]
+- [[social_crawler.json sumber konfigurasi universal]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

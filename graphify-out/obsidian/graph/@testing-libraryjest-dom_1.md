@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Matcher DOM Pengujian"
-location: "L33"
+community: "Dependency Pengembangan Frontend"
+location: "L38"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Matcher_DOM_Pengujian
+  - community/Dependency_Pengembangan_Frontend
 ---
 
 # @testing-library/jest-dom
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@testing-libraryjest-dom]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Matcher_DOM_Pengujian
+#graphify/concept #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend

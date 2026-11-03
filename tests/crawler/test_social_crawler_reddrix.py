@@ -82,8 +82,11 @@ class SocialCrawlerReddrixTests(unittest.TestCase):
             crawler = SocialCrawler()
             plan = crawler.plan()
         self.assertEqual(plan["config"]["platforms"]["reddit"]["backend"], "reddrix")
-        self.assertEqual(plan["config"]["total_seconds"], 10800)
-        self.assertEqual(set(plan["acquisition_backends"]), {"youtube", "reddit"})
+        self.assertIsNone(plan["config"]["total_seconds"])
+        self.assertEqual(
+            set(plan["acquisition_backends"]),
+            {"youtube", "reddit", "instagram", "twitter", "tiktok"},
+        )
         self.assertEqual(plan["acquisition_backends"]["reddit"], REDDRIX_METHOD)
         self.assertIs(crawler.workers["reddit"].func, run_reddrix_worker)
         self.assertFalse(crawler._synthetic)

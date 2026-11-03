@@ -1,12 +1,12 @@
 ---
 source_file: "PRD/PRD Frontend/Acceptance Criteria Crawler.md"
 type: "document"
-community: "Batas Integrasi Produksi"
+community: "Rencana Produk dan Survei"
 location: "# Acceptance Criteria Crawler"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Batas_Integrasi_Produksi
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Draft acceptance criteria are release requirements, not a React test report
@@ -22,4 +22,4 @@ tags:
 - [[Frontend PRD index]] - `references` [EXTRACTED]
 - [[Production release requires real integration evidence and preserved survey schema]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Batas_Integrasi_Produksi
+#graphify/document #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

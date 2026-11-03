@@ -26,7 +26,7 @@ tags:
 - [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - `method` [EXTRACTED]
 - [[.test_stable_and_episodic_patterns()]] - `method` [EXTRACTED]
 - [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Penjelasan_Topik

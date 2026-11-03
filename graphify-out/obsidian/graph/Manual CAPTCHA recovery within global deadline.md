@@ -5,7 +5,7 @@ community: "Alur Dataset Model Dashboard"
 location: "line 3"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Alur_Dataset_Model_Dashboard
 ---
 
@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[Reddit Playwright runner]] - `implements` [EXTRACTED]
-- [[Server-owned acquisition job lifecycle]] - `semantically_similar_to` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Alur_Dataset_Model_Dashboard
+#graphify/rationale #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard

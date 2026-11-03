@@ -1,5 +1,7 @@
 # Pipeline Instagram, dataset tiga hari dan Streamlit
 
+> Konfigurasi saat campaign di bawah adalah riwayat. Untuk run baru, gunakan [satu konfigurasi universal](CONFIGURATION.md); preset crawler bertanggal sudah dihapus.
+
 ## Snapshot terbaru
 
 Konfigurasi aktif kini memakai `outputs/nlp_20261030_instagram_500_topics20_gemini_02` dari `outputs/social_20261030_combined_instagram_500_2h_02/social_data.xlsx`: 20 topik, rata-rata c_v 0,4386500025. Excel snapshot lengkap berisi 45.556 pasangan topik–kalimat asli unik; run ini juga memuat 20 terjemahan/ringkasan Gemini dan deskripsinya. Lihat [README](../../README.md) dan metode Social NLP untuk data serta batas interpretasi. Catatan hasil/narasi Gemini berikut merupakan riwayat snapshot sebelumnya.
@@ -49,7 +51,7 @@ balasan; 49.952 pengulangan lintas berkas dihapus. Ini **bukan hasil akhir**.
 ## Model dan dashboard
 
 `MachineLearning/social_nlp.py` mendefinisikan default 20 topik dan c_v minimum 0,4;
-`config/social_nlp_instagram_20261030.json` menetapkan input/output versi baru.
+Preset NLP saat campaign menetapkan input/output versi baru. Preset itu sudah disatukan ke `config/social_nlp.json`; konfigurasi historis tetap berada dalam `summary.json` run tersebut.
 Pipeline tetap SBERT multilingual → dua proyeksi UMAP → pencarian DBSCAN → penggabungan
 Ward berbobot menjadi 20 topik. Coherence mengukur seluruh topik terhadap referensi
 korpus yang tetap; rata-rata 0,4 tidak menjamin tiap topik 0,4 dan bukan akurasi berlabel.

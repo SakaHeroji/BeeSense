@@ -1,21 +1,19 @@
 ---
-source_file: "Crawler/Backend/twitter_crawler.py"
+source_file: "scripts/organize_social_outputs.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L1230"
+community: "Arsip Data Harian"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Arsip_Data_Harian
 ---
 
 # main()
 
 ## Connections
-- [[.close()_6]] - `calls` [EXTRACTED]
-- [[.plan()_5]] - `calls` [EXTRACTED]
-- [[.run()_4]] - `calls` [EXTRACTED]
-- [[TwitterCrawler]] - `calls` [EXTRACTED]
-- [[twitter_crawler.py]] - `contains` [EXTRACTED]
+- [[consolidate()]] - `calls` [EXTRACTED]
+- [[discover()]] - `calls` [EXTRACTED]
+- [[organize_social_outputs.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

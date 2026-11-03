@@ -16,6 +16,8 @@ import time
 import uuid
 from pathlib import Path
 
+from Crawler.Backend.crawler_limits import reached
+
 ROOT = Path(__file__).resolve().parents[2]
 CLI_VERSION = "0.1.22"
 BROWSER_METHOD = "playwright_chrome_rendered_document"
@@ -267,15 +269,13 @@ class InstagramBrowserWorker:
                         continue
                     parent = item.get("replied_to_comment_id")
                     if parent:
-                        if (
-                            replies >= settings.max_replies
-                            or per_thread.get(parent, 0)
-                            >= settings.max_replies_per_thread
+                        if reached(replies, settings.max_replies) or reached(
+                            per_thread.get(parent, 0), settings.max_replies_per_thread
                         ):
                             continue
                         replies += 1
                         per_thread[parent] = per_thread.get(parent, 0) + 1
-                    elif len(seen) - replies >= settings.max_comments:
+                    elif reached(len(seen) - replies, settings.max_comments):
                         continue
                     seen.add(item["pk"])
                     row = normalize_item(item, target, media=media, parent=parent)

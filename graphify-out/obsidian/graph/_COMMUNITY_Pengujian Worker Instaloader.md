@@ -1,17 +1,17 @@
 ---
 type: community
 cohesion: 0.13
-members: 27
+members: 25
 ---
 
 # Pengujian Worker Instaloader
 
 **Cohesion:** 0.13 - loosely connected
-**Members:** 27 nodes
+**Members:** 25 nodes
 
 ## Members
 - [[.adapter()]] - code - tests/crawler/test_instaloader_crawler.py
-- [[.setUp()_3]] - code - tests/crawler/test_instaloader_crawler.py
+- [[.setUp()_10]] - code - tests/crawler/test_instaloader_crawler.py
 - [[.settings()]] - code - tests/crawler/test_instaloader_crawler.py
 - [[.test_configuration_rejects_retry_or_unbounded_requests()]] - code - tests/crawler/test_instaloader_crawler.py
 - [[.test_coordinator_stops_at_first_429()]] - code - tests/crawler/test_instaloader_crawler.py
@@ -32,11 +32,9 @@ members: 27
 - [[.test_web_comments_pagination_ids_and_previews_do_not_use_mobile()]] - code - tests/crawler/test_instaloader_crawler.py
 - [[.test_web_graphql_applies_supplied_patch_only_to_owned_context()]] - code - tests/crawler/test_instaloader_crawler.py
 - [[InstaloaderCrawlerTests]] - code - tests/crawler/test_instaloader_crawler.py
-- [[Offline contracts for the separate Instaloader experiment.]] - rationale - tests/crawler/test_instaloader_crawler.py
 - [[fixture_post()]] - code - tests/crawler/test_instaloader_crawler.py
 - [[hanging_fixture()]] - code - tests/crawler/test_instaloader_crawler.py
 - [[persistent_fixture()]] - code - tests/crawler/test_instaloader_crawler.py
-- [[test_instaloader_crawler.py]] - code - tests/crawler/test_instaloader_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -46,7 +44,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Worker Instaloader]]
+- 4 edges to [[_COMMUNITY_Pengujian Client Instagram_1]]
 
 ## Top bridge nodes
-- [[test_instaloader_crawler.py]] - degree 6, connects to 1 community
+- [[InstaloaderCrawlerTests]] - degree 22, connects to 1 community
+- [[fixture_post()]] - degree 5, connects to 1 community
+- [[hanging_fixture()]] - degree 2, connects to 1 community
+- [[persistent_fixture()]] - degree 2, connects to 1 community

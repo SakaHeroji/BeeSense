@@ -34,3 +34,24 @@ describe('API transport contract', () => {
     await expect(httpApi.stop('private-job')).rejects.toThrow('Anda tidak memiliki izin');
   });
 });
+
+describe('storage transport', () => {
+  it('sends per-platform storage once to plan validation and redacts echoed credentials', async () => {
+    const config = initialConfig('automatic', 'reddit');
+    config.storage.destination = 'postgresql';
+    config.storage.postgresql.connectionString = 'postgresql://demo:synthetic@127.0.0.1:5432/demo';
+    const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue(
+      new Response(JSON.stringify({ id: 'p1', config, expiresAt: '2099-01-01', warnings: [] }), {
+        headers: { 'Content-Type': 'application/json' },
+      }),
+    );
+    const plan = await httpApi.validate(config);
+    expect(
+      JSON.parse(fetchMock.mock.calls[0][1]!.body as string).config.storage.postgresql
+        .connectionString,
+    ).toContain('synthetic');
+    expect(plan.config.storage.destination).toBe('postgresql');
+    expect(plan.config.storage.postgresql.connectionString).toBeUndefined();
+    expect(config.storage.postgresql.connectionString).toContain('synthetic');
+  });
+});

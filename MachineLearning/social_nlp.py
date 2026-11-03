@@ -38,6 +38,24 @@ ENCODER_CACHE_VERSION = "2.0.0"  # Coherence changes do not change SBERT encodin
 SCHEMA_VERSION = "beesense-sentence-clusters:2"
 LEGACY_SCHEMA_VERSION = "beesense-sentence-clusters:1"
 EXPLANATION_SCHEMA = "beesense-topic-explanations:1"
+EXPLANATION_FIELDS = {
+    "date_basis",
+    "include_estimated_dates",
+    "window_months",
+    "min_periods",
+    "min_monthly_comments",
+    "min_topic_comments",
+    "min_window_topic_comments",
+    "min_roots",
+    "dominance_warning_threshold",
+    "change_threshold_pp",
+    "slope_threshold_pp",
+    "kendall_threshold",
+    "platform_shift_threshold_pp",
+    "min_term_comments",
+    "max_evidence",
+    "mmr_lambda",
+}
 REQUIRED_COLUMNS = {
     "platform",
     "jenis",
@@ -73,6 +91,44 @@ def json_write(path, value):
     )
 
 
+def load_config(config=None):
+    """Resolve one editable NLP config and optional legacy partial overrides.
+
+    Explicit overrides must opt into corpus-specific relevance decisions. Reading
+    the primary file by path has the same meaning as the default constructor.
+    """
+    primary = ROOT / "config/social_nlp.json"
+    base = json.loads(primary.read_text(encoding="utf-8"))
+    if not isinstance(base, dict):
+        raise ValueError("NLP configuration must be an object")
+    base.setdefault("target_topics", DEFAULT_TARGET_TOPICS)
+    base.setdefault("coherence", {"metric": "c_v", "topn": 10, "window_size": 110})
+    if not isinstance(base["coherence"], dict):
+        raise ValueError("coherence settings must be an object")
+    base["coherence"].setdefault("min_score", DEFAULT_MIN_COHERENCE_CV)
+    base.setdefault("gemini", deepcopy(topic_narratives.DEFAULTS))
+    base.setdefault("relevance_artifact", None)
+    if config is None:
+        return base
+    if isinstance(config, (str, Path)):
+        path = Path(config)
+        if path.resolve() == primary.resolve():
+            return base
+        config = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(config, dict) or set(config) - set(base):
+        raise ValueError("Unknown NLP configuration fields")
+    if "relevance_artifact" not in config:
+        base["relevance_artifact"] = None
+    for key, value in config.items():
+        if isinstance(base[key], dict):
+            if not isinstance(value, dict) or set(value) - set(base[key]):
+                raise ValueError("Unknown settings in " + key)
+            base[key].update(deepcopy(value))
+        else:
+            base[key] = deepcopy(value)
+    return base
+
+
 class SocialNLPClusterer:
     """Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.
 
@@ -82,29 +138,7 @@ class SocialNLPClusterer:
     """
 
     def __init__(self, config=None, *, encoder=None, progress=None):
-        base = json.loads((ROOT / "config/social_nlp.json").read_text())
-        base.setdefault("target_topics", DEFAULT_TARGET_TOPICS)
-        base.setdefault("coherence", {"metric": "c_v", "topn": 10, "window_size": 110})
-        base["coherence"].setdefault("min_score", DEFAULT_MIN_COHERENCE_CV)
-        base.setdefault("gemini", deepcopy(topic_narratives.DEFAULTS))
-        base.setdefault("relevance_artifact", None)
-        if isinstance(config, (str, Path)):
-            config = json.loads(Path(config).read_text())
-        # Saved decisions belong to one corpus. Explicit configurations must
-        # opt into them instead of inheriting the repository's active mask.
-        if isinstance(config, dict) and "relevance_artifact" not in config:
-            base["relevance_artifact"] = None
-        if config:
-            if not isinstance(config, dict) or set(config) - set(base):
-                raise ValueError("Unknown NLP configuration fields")
-            for key, value in config.items():
-                if isinstance(base[key], dict):
-                    if not isinstance(value, dict) or set(value) - set(base[key]):
-                        raise ValueError("Unknown settings in " + key)
-                    base[key].update(deepcopy(value))
-                else:
-                    base[key] = deepcopy(value)
-        self.config = base
+        self.config = load_config(config)
         self.encoder = encoder
         self.progress = progress or (lambda event: None)
         self._validate_config()
@@ -1350,10 +1384,7 @@ class SocialNLPClusterer:
 
     @staticmethod
     def _validate_explanation_options(options):
-        expected = json.loads((ROOT / "config/social_nlp.json").read_text())[
-            "explanation"
-        ]
-        if set(options) != set(expected):
+        if not isinstance(options, dict) or set(options) != EXPLANATION_FIELDS:
             raise ValueError("Invalid explanation option fields")
         if options["date_basis"] not in {"post_date", "content_date"}:
             raise ValueError("Explanation date_basis must be post_date or content_date")
@@ -2600,6 +2631,11 @@ def main():
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--prepare-only", action="store_true")
     parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Validate and show configuration without loading data, models or API credentials",
+    )
+    parser.add_argument(
         "--reuse-embeddings-from",
         type=Path,
         help="Reuse checksum-verified SBERT embeddings for identical input/model; refit UMAP and DBSCAN",
@@ -2626,7 +2662,20 @@ def main():
                 json.dumps(event, ensure_ascii=False, allow_nan=False), flush=True
             ),
         )
-        if args.explain_run:
+        if args.dry_run:
+            effective = deepcopy(pipeline.config)
+            if args.input:
+                effective["input_file"] = str(args.input)
+            if args.output_dir:
+                effective["output_dir"] = str(args.output_dir)
+            print(
+                json.dumps(
+                    {"status": "CONFIG_VALID", "config": effective},
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+        elif args.explain_run:
             if not args.output_dir or args.prepare_only or args.input:
                 raise ValueError(
                     "--explain-run requires a new --output-dir and cannot be combined with --input/--prepare-only"

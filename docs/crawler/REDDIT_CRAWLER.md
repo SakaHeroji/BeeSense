@@ -1,10 +1,17 @@
 # RedditCrawler dengan Reddrix
 
+> Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
+
 Class `RedditCrawler` berada di [reddit_crawler.py](../../Crawler/Backend/reddit_crawler.py) sebagai pembungkus Reddit-only untuk backend Reddrix yang sekarang terintegrasi dalam [SocialCrawler](../../Crawler/Backend/social_crawler.py) **1.4.0**. Normalisasi, display adaptif, iterator dan worker subprocess hanya diimplementasikan sekali di `Crawler/Backend/social_crawler.py`. Library sumber: [Reddrix](https://github.com/Coding-Doctor-Omar/reddrix) / [PyPI](https://pypi.org/project/reddrix/), versi 1.2.14. Tidak menggunakan Reddit Data API/OAuth atau layanan berbayar.
 
-## Konfigurasi percobaan 30 menit
+## Konfigurasi aktif
 
-[`reddit_crawler.json`](../../config/reddit_crawler.json) mempertahankan bagian Reddit dan `total_seconds` **1800**. Konfigurasi utama `config/social_crawler.json` tetap **10800 detik** untuk YouTube+Reddit; keduanya sekarang memakai `backend=reddrix` dan `reddrix.display_mode=auto`. Target tetap 1000 qualified post, minimum 10 komentar/reply unik per post, batas 4000 percobaan/6000 kandidat, 100 komentar termasuk maksimum 30 reply dan 10 reply per thread, delay antaroperasi 2 detik, timeout operasi 90 detik. Target tidak dijamin tercapai dalam 30 menit.
+[`social_crawler.json`](../../config/social_crawler.json) menjadi satu sumber
+pengaturan. Wrapper memilih Reddit dengan `total_seconds: null`, target minimal
+1.000 post dan `min_comments_per_post: 0`. Jumlah komentar/balasan, percobaan post
+dan kandidat tidak diberi cap lokal (`null`). Backend Reddrix dan
+`reddrix.display_mode: auto` tetap digunakan. Target dapat kurang jika sumber
+habis atau akses berhenti; [panduan universal](CONFIGURATION.md) memuat rinciannya.
 
 Rentang tanggal tetap **27 Oktober 2025 10:17 WIB sampai sebelum 27 Oktober 2026 10:17 WIB**. Include/exclude keyword dan baseline `outputs/social_20261028_01` tetap mengikuti file sumber. Ini bukan pengambilan khusus postingan hari percobaan. Baseline hanya dibaca dan tidak diubah.
 
@@ -15,13 +22,13 @@ python3.12 -m venv .venv-reddrix
 .venv-reddrix/bin/python -m pip install -r requirements/reddrix.txt
 .venv-reddrix/bin/reddrix install
 .venv-reddrix/bin/python -m Crawler.Backend.reddit_crawler --dry-run
-.venv-reddrix/bin/python -m Crawler.Backend.reddit_crawler --config config/reddit_crawler.json --output-dir outputs/reddit_reddrix_trial_01
+.venv-reddrix/bin/python -m Crawler.Backend.reddit_crawler --config config/social_crawler.json --output-dir outputs/reddit_reddrix_trial_01
 ```
 
 ```python
 from Crawler.Backend.reddit_crawler import RedditCrawler
 
-crawler = RedditCrawler("config/reddit_crawler.json")
+crawler = RedditCrawler("config/social_crawler.json")
 report = crawler.run("outputs/reddit_reddrix_trial_02")
 print(report["primary_file"], report["status"])
 ```
@@ -52,7 +59,7 @@ Override melalui CLI atau class:
 ```
 
 ```python
-crawler = RedditCrawler("config/reddit_crawler.json", display_mode="auto")
+crawler = RedditCrawler("config/social_crawler.json", display_mode="auto")
 print(crawler.plan()["display"])
 ```
 
@@ -80,12 +87,12 @@ Tes offline wrapper/adapter (16 tes): `python -m unittest discover -s tests/craw
 
 Tidak ada perubahan database/model/kontrak persisten. **No migration required.**
 
-`deployment/docker/Dockerfile.crawler` menyiapkan worker Linux UID10001 dan kini ber-entrypoint `Crawler/Backend/social_crawler.py` untuk kedua platform. Proses satu kali, tanpa port/health endpoint; readiness diperiksa melalui dry-run dan keberadaan binary browser. Mount baseline/config read-only dan folder hasil writable untuk UID10001 saat live (siapkan direktori host dengan izin yang sesuai). Docker daemon lokal tidak aktif; build/run image belum terverifikasi. Gunakan `--config config/reddit_crawler.json` bila ingin hanya konfigurasi percobaan Reddit.
+`deployment/docker/Dockerfile.crawler` menyiapkan worker Linux UID10001 dan kini ber-entrypoint `Crawler/Backend/social_crawler.py` untuk kedua platform. Proses satu kali, tanpa port/health endpoint; readiness diperiksa melalui dry-run dan keberadaan binary browser. Mount baseline/config read-only dan folder hasil writable untuk UID10001 saat live (siapkan direktori host dengan izin yang sesuai). Docker daemon lokal tidak aktif; build/run image belum terverifikasi. Untuk Reddit saja dalam image gabungan, pilih entry point modul `reddit_crawler` seperti contoh berikut.
 
 ```sh
 docker build -f deployment/docker/Dockerfile.crawler -t beesense-reddit-reddrix:local .
 docker run --rm beesense-reddit-reddrix:local --dry-run
-docker run --rm --shm-size=1g -v "$PWD/outputs/social_20261028_01:/app/outputs/social_20261028_01:ro" -v "$PWD/output/reddrix-docker:/data" beesense-reddit-reddrix:local --config config/reddit_crawler.json --output-dir /data/trial_01
+docker run --rm --entrypoint python --shm-size=1g -v "$PWD/outputs/social_20261028_01:/app/outputs/social_20261028_01:ro" -v "$PWD/output/reddrix-docker:/data" beesense-reddit-reddrix:local -m Crawler.Backend.reddit_crawler --config config/social_crawler.json --output-dir /data/trial_01
 ```
 
 ## Hasil live

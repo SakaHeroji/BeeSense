@@ -22,6 +22,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from urllib.parse import parse_qs, quote, urlencode, urljoin, urlsplit
 
+from Crawler.Backend.crawler_config import expand_config, read_config
+from Crawler.Backend.crawler_limits import deadline_after, reached
 from Crawler.Backend.social_crawler import ROOT, SocialCrawler, reddit, youtube
 
 VERSION = "0.1.0"
@@ -78,7 +80,7 @@ const identity = element => {
   const link = own(element, '#published-time-text a,a[href*="lc="]');
   try {return new URL(link.href).searchParams.get('lc');} catch {return null;}
 };
-return nodes.slice(0, arguments[0]).map(element => {
+return nodes.slice(0, arguments[0] ?? undefined).map(element => {
   const thread = element.closest('ytd-comment-thread-renderer');
   const top = thread?.querySelector(commentSelector);
   const reply = !!element.closest('ytd-comment-replies-renderer');
@@ -265,7 +267,9 @@ class _SeleniumSource:
         )
         self.selector = SocialCrawler(config)
         self.sleep, self.clock = sleep, clock
-        self.deadline = clock() + settings.timeout_seconds
+        self.deadline = deadline_after(
+            clock(), None if settings.max_comments is None else settings.timeout_seconds
+        )
         self.seen, self.records = set(), {}
         self.comments = self.replies = 0
         self.branches = Counter()
@@ -378,20 +382,22 @@ class _SeleniumSource:
         self.pause()
         self._youtube_sort()
         stalled = 0
-        for _ in range(500):
+        while True:
             self.state()
             before = len(self.seen)
             for item in self.driver.execute_script(
-                YOUTUBE_COMMENTS, self.settings.max_comments + 200
+                YOUTUBE_COMMENTS,
+                None
+                if self.settings.max_comments is None
+                else self.settings.max_comments + 200,
             ):
                 identity = item["id"]
                 if identity in self.seen or not youtube.COMMENT_ID.fullmatch(identity):
                     continue
                 parent = item.get("parent")
                 if parent and parent != "root":
-                    if (
-                        self.replies >= self.settings.max_replies
-                        or self.branches[parent] >= self.settings.max_replies_per_thread
+                    if reached(self.replies, self.settings.max_replies) or reached(
+                        self.branches[parent], self.settings.max_replies_per_thread
                     ):
                         continue
                     self.replies += 1
@@ -399,7 +405,7 @@ class _SeleniumSource:
                 item["observed_at"] = reddit.now_iso()
                 self.send(("comment", item))
                 self.seen.add(identity)
-                if len(self.seen) >= self.settings.max_comments:
+                if reached(len(self.seen), self.settings.max_comments):
                     self.warnings.add("comment_cap_reached")
                     return
             stalled = stalled + 1 if len(self.seen) == before else 0
@@ -444,7 +450,7 @@ class _SeleniumSource:
         from selenium.common.exceptions import WebDriverException
         from selenium.webdriver.common.by import By
 
-        if self.replies >= self.settings.max_replies:
+        if reached(self.replies, self.settings.max_replies):
             return False
         for button in self.driver.find_elements(
             By.CSS_SELECTOR,
@@ -462,7 +468,9 @@ class _SeleniumSource:
                 )
                 if (
                     parent
-                    and self.branches[parent] < self.settings.max_replies_per_thread
+                    and not reached(
+                        self.branches[parent], self.settings.max_replies_per_thread
+                    )
                     and button.is_displayed()
                 ):
                     button.click()
@@ -483,7 +491,7 @@ class _SeleniumSource:
         )
         stalled = 0
         root_checked = False
-        for _ in range(500):
+        while True:
             self.state()
             capture = self.driver.execute_script(
                 script,
@@ -528,7 +536,7 @@ class _SeleniumSource:
                     post["title"], post["text"], post["published_at"]
                 ):
                     return
-            if len(self.seen) - 1 >= self.settings.max_comments:
+            if reached(len(self.seen) - 1, self.settings.max_comments):
                 self.warnings.add("comment_cap_reached")
                 return
             stalled = stalled + 1 if len(self.seen) == before else 0
@@ -632,7 +640,18 @@ class SocialCrawlerSelenium(SocialCrawler):
         progress=None,
         **kwargs,
     ):
-        super().__init__(config, workers=workers, **kwargs)
+        raw = read_config(config)
+        if "schema_version" in raw:
+            raw = expand_config(raw)
+            raw["platforms"] = {
+                name: p
+                for name, p in raw["platforms"].items()
+                if name in {"youtube", "reddit"}
+            }
+            raw["scweet"] = {}
+        elif set(raw.get("platforms", {})) - {"youtube", "reddit"}:
+            raise ValueError("Selenium supports YouTube and Reddit only")
+        super().__init__(raw, workers=workers, **kwargs)
         self.browser_options = dict(
             headless=headless,
             chrome_binary=chrome_binary,

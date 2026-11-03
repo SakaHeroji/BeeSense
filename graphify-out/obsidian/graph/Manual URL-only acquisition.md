@@ -1,19 +1,17 @@
 ---
 source_file: "PRD/PRD Frontend/PRD Frontend Crawler.md"
 type: "concept"
-community: "Persyaratan Produk Crawler"
+community: "Rencana Produk dan Survei"
 location: "line 243"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Persyaratan_Produk_Crawler
+  - community/Rencana_Produk_dan_Survei
 ---
 
 # Manual URL-only acquisition
 
 ## Connections
-- [[BeeSense Crawler React frontend]] - `implements` [EXTRACTED]
 - [[Crawler frontend product requirements]] - `implements` [EXTRACTED]
-- [[Native-ID deduplication and latest-observation lineage]] - `semantically_similar_to` [INFERRED]
 
-#graphify/concept #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler
+#graphify/concept #graphify/EXTRACTED #community/Rencana_Produk_dan_Survei

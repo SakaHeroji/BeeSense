@@ -1,12 +1,12 @@
 ---
 source_file: ".github/workflows/crawler-frontend.yml"
 type: "concept"
-community: "CI Container Frontend"
+community: "Persyaratan Produk Crawler"
 location: "line 30"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/CI_Container_Frontend
+  - community/Persyaratan_Produk_Crawler
 ---
 
 # SPA container health and deep-link checks
@@ -15,4 +15,4 @@ tags:
 - [[BeeSense Crawler SPA document]] - `references` [EXTRACTED]
 - [[Crawler frontend CI]] - `implements` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/CI_Container_Frontend
+#graphify/concept #graphify/EXTRACTED #community/Persyaratan_Produk_Crawler

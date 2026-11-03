@@ -12,6 +12,6 @@ tags:
 # Validate the embedded contract; an external descriptor is optional.
 
 ## Connections
-- [[verify_descriptor()]] - `rationale_for` [EXTRACTED]
+- [[verify_descriptor()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit

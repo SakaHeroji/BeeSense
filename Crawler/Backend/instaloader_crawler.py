@@ -22,6 +22,8 @@ from types import SimpleNamespace
 from urllib.parse import urlsplit
 
 from Crawler.Backend import instagram_crawler as ig
+from Crawler.Backend.crawler_config import DEFAULT_CONFIG_PATH, standalone_config
+from Crawler.Backend.crawler_limits import cap, reached, remaining
 
 METHOD = "instaloader_saved_web_session"
 COOKIE_NAMES = {"sessionid", "csrftoken", "ds_user_id", "mid", "ig_did", "rur"}
@@ -108,9 +110,9 @@ class InstaloaderSettings:
     request_interval_seconds: float = 5
     request_timeout_seconds: int = 30
     search_results: int = 10
-    max_comments: int = 20
-    max_replies: int = 10
-    max_replies_per_thread: int = 5
+    max_comments: int | None = 20
+    max_replies: int | None = 10
+    max_replies_per_thread: int | None = 5
     search_tab: str = "recent"
     comments_transport: str = "query_hash"
     timeout_seconds: int = 60
@@ -297,7 +299,20 @@ class InstaloaderAdapter:
         def wrap(node):
             item = self.web_comment(node)
             edges = (node.get("edge_threaded_comments") or {}).get("edges", [])
-            item.answers = (self.web_comment(edge["node"]) for edge in edges)
+            connection = node.get("edge_threaded_comments") or {}
+            if connection.get("count", len(edges)) > len(edges):
+                item.answers = self.module.NodeIterator(
+                    self.loader.context,
+                    "51fdd02b67508306ad4484ff574a0b62",
+                    lambda response: response["data"]["comment"][
+                        "edge_threaded_comments"
+                    ],
+                    self.web_comment,
+                    {"comment_id": str(node["id"])},
+                    f"https://www.instagram.com/p/{post.shortcode}/",
+                )
+            else:
+                item.answers = (self.web_comment(edge["node"]) for edge in edges)
             return item
 
         yield from self.module.NodeIterator(
@@ -314,20 +329,20 @@ class InstaloaderAdapter:
     def web_comments(self, post):
         """Bounded web comments through Instaloader's patched context.
 
-        Query shape is documented in upstream issue #2651. Replies are limited
-        to previews returned with the parent, with no claim of full coverage.
+        Query shape is documented in upstream issue #2651. Partial reply previews
+        are expanded with the native GraphQL answer iterator. Coverage is unverified.
         """
         from instaloader.exceptions import BadResponseException
 
         if post.comments == 0:
             return
         cursor, cursors, seen = None, set(), set()
-        while len(seen) < self.settings.max_comments:
+        while not reached(len(seen), self.settings.max_comments):
             response = self.loader.context.doc_id_graphql_query(
                 "25060748103519434",
                 dict(
                     media_id=str(post.mediaid),
-                    first=min(20, self.settings.max_comments),
+                    first=cap(20, self.settings.max_comments),
                     after=cursor,
                     before=None,
                     last=None,
@@ -351,12 +366,22 @@ class InstaloaderAdapter:
                 if native in seen:
                     continue
                 seen.add(native)
-                item.answers = (
-                    self.web_comment(child)
-                    for child in node.get("preview_child_comments", []) or []
-                )
+                previews = node.get("preview_child_comments", []) or []
+                if node.get("child_comment_count", len(previews)) > len(previews):
+                    item.answers = self.module.NodeIterator(
+                        self.loader.context,
+                        "51fdd02b67508306ad4484ff574a0b62",
+                        lambda response: response["data"]["comment"][
+                            "edge_threaded_comments"
+                        ],
+                        self.web_comment,
+                        {"comment_id": native},
+                        f"https://www.instagram.com/p/{post.shortcode}/",
+                    )
+                else:
+                    item.answers = (self.web_comment(child) for child in previews)
                 yield item
-                if len(seen) >= self.settings.max_comments:
+                if reached(len(seen), self.settings.max_comments):
                     return
             page = connection.get("page_info") or {}
             next_cursor = page.get("end_cursor")
@@ -456,11 +481,12 @@ class InstaloaderAdapter:
                 seen.add(native)
                 emit("record", self.comment(comment, url, media))
                 parents += 1
-                cap = min(
-                    settings.max_replies_per_thread, settings.max_replies - replies
+                thread_limit = cap(
+                    settings.max_replies_per_thread,
+                    remaining(settings.max_replies, replies),
                 )
                 thread_count = 0
-                if cap:
+                if thread_limit != 0:
                     for answer in comment.answers:
                         key = ig.native_pk(answer.id)
                         if key in seen:
@@ -469,9 +495,9 @@ class InstaloaderAdapter:
                         emit("record", self.comment(answer, url, media, native))
                         replies += 1
                         thread_count += 1
-                        if thread_count >= cap:
+                        if reached(thread_count, thread_limit):
                             break
-                if parents >= settings.max_comments:
+                if reached(parents, settings.max_comments):
                     break
             if parents:
                 save_session(self.loader, settings)
@@ -630,11 +656,7 @@ class InstaloaderCrawler(ig.InstagramCrawler):
     """Separate backend; preserves the existing export and native-ID dedup logic."""
 
     def __init__(self, config=None, *, worker=None, **kwargs):
-        cfg = (
-            _json(config or ig.ROOT / "config/instaloader_crawler.json")
-            if not isinstance(config, dict)
-            else dict(config)
-        )
+        cfg = standalone_config(config, "instagram", backend="instaloader")
         if not isinstance(cfg, dict):
             raise ValueError("Instaloader config must be an object")
         if (
@@ -722,9 +744,7 @@ class InstaloaderCrawler(ig.InstagramCrawler):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--config", type=Path, default=ig.ROOT / "config/instaloader_crawler.json"
-    )
+    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH)
     parser.add_argument("--output-dir", type=Path)
     group = parser.add_mutually_exclusive_group()
     group.add_argument("--dry-run", action="store_true")

@@ -1,27 +1,21 @@
 ---
 type: community
-cohesion: 0.21
-members: 12
+cohesion: 0.33
+members: 6
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.21 - loosely connected
-**Members:** 12 nodes
+**Cohesion:** 0.33 - loosely connected
+**Members:** 6 nodes
 
 ## Members
-- [[Bounded reusable radius graph]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[DBSCAN]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[DBSCAN source cluster provenance]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[Dual projection stability evaluation]] - rationale - graphify-out/obsidian/Metodologi Machine Learning Social NLP.md
-- [[Dual seed UMAP]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Internal evaluation interpretation limits]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[MMR diverse source evidence]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Sentence preparation provenance]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Sentence weighted Ward reduction]] - rationale - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[SocialNLPClusterer_1]] - code - docs/machine-learning/TWITTER_RETRAIN_20261102.md
-- [[Theil Sen Kendall descriptive trends]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Verified Twitter twenty topic fit]] - concept - docs/machine-learning/TWITTER_RETRAIN_20261102.md
+- [[2 November 2026 pipeline integration]] - concept - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[31 October 2026 historical evidence]] - concept - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[SocialNLPClusterer]] - code - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[TwitterCrawler Scweet architecture]] - document - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[Workbook bound root sidecar]] - rationale - graphify-out/obsidian/TwitterCrawler Scweet.md
+- [[thread_root_key]] - concept - graphify-out/obsidian/TwitterCrawler Scweet.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,11 +25,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_2]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense]]
-- 1 edge to [[_COMMUNITY_Operasi dan Verifikasi BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 
 ## Top bridge nodes
-- [[SocialNLPClusterer_1]] - degree 10, connects to 3 communities
-- [[Verified Twitter twenty topic fit]] - degree 7, connects to 2 communities
+- [[SocialNLPClusterer]] - degree 3, connects to 1 community

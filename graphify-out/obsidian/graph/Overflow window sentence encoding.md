@@ -10,7 +10,4 @@ tags:
 
 # Overflow window sentence encoding
 
-## Connections
-- [[Multilingual SBERT]] - `implements` [EXTRACTED]
-
 #graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

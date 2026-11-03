@@ -76,9 +76,9 @@ class Settings:
     project_id:str="university-intelligence"
     max_videos:int=3
     search_results:int=3
-    max_comments:int=100
-    max_replies:int=30
-    max_replies_per_thread:int=5
+    max_comments:int|None=100
+    max_replies:int|None=30
+    max_replies_per_thread:int|None=5
     timeout_seconds:int=120
     total_seconds:int=600
     request_delay:float=2.0
@@ -93,6 +93,7 @@ class Settings:
                 "max_replies_per_thread":(0,100),"timeout_seconds":(10,600),"total_seconds":(20,3600)}
         for k,(a,b) in limits.items():
             v=getattr(self,k)
+            if v is None and k in {"max_comments","max_replies","max_replies_per_thread"}:continue
             if type(v) is not int or not a<=v<=b:raise ValueError(f"{k} harus integer {a}–{b}")
         if type(self.request_delay) not in (int,float) or not 0<=self.request_delay<=30:raise ValueError("request_delay harus 0–30 detik")
         if self.sort not in {"new","top"} or self.cert_store not in {"system","bundled"}:raise ValueError("sort/cert_store tidak dikenal")
@@ -112,8 +113,8 @@ def worker(operation,target,settings,pipe):
               "nocheckcertificate":False,"ignore_no_formats_error":True,"ignoreerrors":False,
               "getcomments":operation=="video","extract_flat":operation=="search"}
         if settings["cert_store"]=="system":opts["compat_opts"]={"no-certifi"}
-        limits=[settings["max_comments"],settings["max_comments"],settings["max_replies"],settings["max_replies_per_thread"],2]
-        opts["extractor_args"]={"youtube":{"comment_sort":[settings["sort"]],"max_comments":[str(x) for x in limits]}}
+        limits=[settings["max_comments"],settings["max_comments"],settings["max_replies"],settings["max_replies_per_thread"],None if settings["max_comments"] is None else 2]
+        opts["extractor_args"]={"youtube":{"comment_sort":[settings["sort"]],"max_comments":[str(x) if x is not None else "" for x in limits]}}
         with yt_dlp.YoutubeDL(opts) as ydl:
             if operation=="search":
                 info=ydl.extract_info(f"ytsearch{settings['search_results']}:{target}",download=False)
@@ -144,7 +145,7 @@ def worker(operation,target,settings,pipe):
                     if not isinstance(c,dict):continue
                     pipe.send(("comment",{k:c.get(k) for k in ("id","text","parent","timestamp","_time_text","like_count","author_id")}))
                 status=("COMMENTS_DISABLED" if "COMMENTS_DISABLED" in logger.codes else
-                        "LIMIT_REACHED" if len(comments)>=settings["max_comments"] else
+                        "LIMIT_REACHED" if settings["max_comments"] is not None and len(comments)>=settings["max_comments"] else
                         "FINISHED_BEST_EFFORT" if comments else "NO_RESULT_UNKNOWN")
                 pipe.send(("done",{"status":status,"reason":"bounded_web_comments_not_complete" if comments else "no_comments_returned_not_proof_of_absence",
                     "warnings":sorted(logger.codes),"source_version":__version__}))

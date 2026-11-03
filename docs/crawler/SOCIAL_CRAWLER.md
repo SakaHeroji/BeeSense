@@ -1,23 +1,42 @@
 # SocialCrawler
 
+SocialCrawler **1.10.0** menyimpan output standar per platform/tanggal WIB dan menggabungkan ID secara global. Lihat [struktur output](OUTPUTS.md). Tanpa `--output-dir`, bundle mentah masuk `output/crawler_runs/` dan file harian diperbarui otomatis.
+
+> Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
+
+Default aktif: **1.000 post per platform**, kelima platform aktif,
+`total_seconds: null`, komentar/balasan tanpa cap, dan kuota harian Scweet `null`.
+`comment_exclude_keywords: []` menjaga seluruh konteks komentar. Baca
+[makna nullable limit dan kondisi berhenti](CONFIGURATION.md#default-aktif-1000-post-per-platform).
+
+## Integrasi TikTok 1.10 — browser mandiri
+
+`TikTokCrawler` 2.0.0 memakai NativeTikTokClient dan Playwright 1.64.1, tanpa SDK
+TikTok. Browser merender query/tag dan membaca respons UI serta metadata native;
+komentar/balasan dimuat lewat kontrol UI. Konfigurasi, filter root, statistik,
+exporter dan organizer ID tetap berbagi kontrak crawler lain. Jeda adaptif,
+Retry-After persisten dan barrier terminal mengendalikan request. Auth tidak
+diubah. Run kosong tetap audit/Excel saja. Lihat [panduan](TIKTOK_CRAWLER.md) dan
+[uji live mandiri yang belum berhasil](TIKTOK_NATIVE_TRIAL_20261103.md).
+
 ## Integrasi Twitter 1.7 — Scweet
 
 `TwitterCoordinatorWorker` menghubungkan `TwitterCrawler` dan worker Scweet persisten
-ke scheduler, deadline, deduplikasi native ID serta exporter SocialCrawler. Preset
-`config/social_crawler_twitter_3h.json` hanya menjalankan X/Twitter: maksimal tiga
-jam, target 1.000 post, 25 variasi query pendidikan yang sama dengan Reddit dan
-filter include/exclude bersama. Sampel komentar dibatasi 50 thread, maksimal
-10 komentar/balasan per root; target root tidak mensyaratkan komentar.
+ke scheduler, deadline, deduplikasi native ID serta exporter SocialCrawler. Bagian
+`platforms.twitter` dalam `config/social_crawler.json` menyediakan X/Twitter. Aktifkan
+hanya flag Twitter untuk menjalankannya sendiri: target 1.000 post, tanpa batas
+jam atau cap komentar/thread/kuota harian lokal. Query pendidikan dan filter root
+sama dengan Reddit; target root tidak mensyaratkan komentar.
 
 ```sh
 python -m Crawler.Backend.social_crawler \
-  --config config/social_crawler_twitter_3h.json \
+  --config config/social_crawler.json \
   --output-dir outputs/social_twitter_run_baru
 ```
 
 Root dari pencarian diproses dari cache, sedangkan operasi jaringan mengikuti
 jeda dan batas akun. Cooldown pool ditunggu bila masih muat dalam deadline;
-HTTP429 aktual, login/challenge dan cap harian menghentikan akses sambil menyimpan
+HTTP429 aktual, login/challenge dan cap harian jika diaktifkan menghentikan akses sambil menyimpan
 data parsial. Tidak ada reset counter atau pergantian akun. Lihat
 [konfigurasi, autentikasi dan batas Twitter](TWITTER_CRAWLER.md) serta
 [bukti akuisisi 2 November](TWITTER_ACQUISITION_20261102.md).
@@ -32,15 +51,15 @@ upstream #2692. Uji standalone berhasil membaca 1 post/20 komentar nyata dalam
 
 ```sh
 python -m Crawler.Backend.social_crawler \
-  --config config/social_crawler_instagram_3h.json \
+  --config config/social_crawler.json \
   --output-dir outputs/social_instagram_run_baru
 ```
 
-Preset Instagram-only tetap **10.800 detik**, target **1.000 post/minimum 10 komentar**.
+Untuk Instagram-only, aktifkan hanya flag Instagram dalam file utama. Durasi bersama **tanpa batas jam**, target **1.000 post**, tanpa minimum komentar.
 `instaloader` mengatur username, path auth/session, timeout request, minimum jeda
 HTTP 5 detik dan comments_transport=query_hash. Auth dibaca dari file lokal yang
 diabaikan Git; tidak ada password atau token di config publik. Retry HTTP 429
-preset adalah nol; pacing 5–10 detik dan batch pause tetap aktif. Opsi retry
+awal adalah nol; jeda HTTP minimum lima detik dan batch pause tetap aktif. Opsi retry
 non-default mengikuti cooldown scheduler tanpa mereset context/rate controller.
 
 Native ID, relasi parent, filter, dedup baseline dan kontrak Excel tetap digunakan
@@ -75,7 +94,7 @@ if __name__ == "__main__":
 |---|---|
 | since / until | Waktu ISO dengan timezone; awal inklusif, akhir eksklusif |
 | include_keywords / include_mode | Kata/frasa literal pada root post/video; any atau all |
-| exclude_keywords | Buang root beserta threadnya atau komentar yang cocok |
+| exclude_keywords / comment_exclude_keywords | Filter root dan komentar terpisah; default komentar `[]` tidak disaring |
 | delay | Fixed seconds atau random min_seconds/max_seconds |
 | timeout_seconds / total_seconds | Batas operasi dan keseluruhan run |
 | platforms | YouTube/Reddit/Instagram/Twitter aktif, query/URL, target minimum dan batas maksimum |
@@ -92,9 +111,9 @@ Jeda berlaku antar operasi, bukan setiap subrequest di dalam yt-dlp/browser. Min
 
 Exclude proyek mencakup MBG/makan bergizi gratis, kopdes/koperasi desa merah putih, ijazah Jokowi/Gibran, DPR serta variasi dalam JSON. Root bertanggal tidak pasti dikeluarkan jika filter tanggal aktif; komentar bertanggal perkiraan masih bisa menjadi konteks. Balasan dapat mempertahankan unresolved_reference bila induknya dibuang oleh filter.
 
-## Campaign 1.000 post baru per platform, 3 jam
+## Riwayat campaign 1.000 post baru per platform, 3 jam
 
-Konfigurasi aktif memakai `total_seconds: 10800`, `timeout_seconds: 90` dan
+Konfigurasi saat campaign memakai `total_seconds: 10800`, `timeout_seconds: 90` dan
 `platform_execution: round_robin`. YouTube dan Reddit bergantian setelah setiap
 operasi pencarian atau post, sehingga YouTube tidak menghabiskan seluruh waktu
 sebelum Reddit mendapat giliran. Tidak ada request paralel baru. Rentang tanggal,
@@ -146,12 +165,12 @@ Target, kekurangan minimum dan alasan berhenti tersedia dalam summary.json. TARG
 
 ## Reddit
 
-Percobaan Instagram berada pada [InstagramCrawler standalone](INSTAGRAM_CRAWLER.md).
-Backend tersebut belum diaktifkan pada SocialCrawler karena login live ditolak.
+Instagram tersedia pada [runner standalone](INSTAGRAM_CRAWLER.md) dan SocialCrawler.
+Instagram aktif pada default universal; ubah `platforms.instagram.enabled` untuk memilih cakupan run.
 Seleksi root dan proyeksi Excel sekarang dibagi melalui `SocialExportMixin` di
 `Crawler/Backend/social_export.py`; kontrak dan perilaku ekspor tetap sama.
 
-Mulai SocialCrawler **1.4.0**, backend default dan konfigurasi utama memakai **Reddrix**. `RedditCrawler` di `Crawler/Backend/reddit_crawler.py` menjadi pembungkus Reddit-only yang memakai implementasi sama, tanpa duplikasi worker. YouTube tetap yt-dlp; kedua platform berbagi batas waktu, scheduler, filter, indeks baseline, dan satu bundle Excel/JSONL. `config/social_crawler.json` tetap 10800 detik untuk kedua platform, sedangkan `config/reddit_crawler.json` tetap 1800 detik untuk percobaan Reddit saja. Integrasi ini tidak memulai crawling baru atau mengubah hasil percobaan sebelumnya.
+Mulai SocialCrawler **1.4.0**, backend default dan konfigurasi utama memakai **Reddrix**. `RedditCrawler` di `Crawler/Backend/reddit_crawler.py` menjadi pembungkus Reddit-only yang memakai implementasi sama, tanpa duplikasi worker. YouTube tetap yt-dlp; kedua platform berbagi batas waktu, scheduler, filter, indeks baseline, dan satu bundle Excel/JSONL. `config/social_crawler.json` kini memakai durasi `null` tanpa batas jam, dan wrapper Reddit-only mewarisi durasi opsional yang sama dari file tersebut. Integrasi ini tidak memulai crawling baru atau mengubah hasil percobaan sebelumnya.
 
 `reddrix.display_mode: auto` memilih native headless di macOS meskipun ada XQuartz, virtual display pada Linux dengan Xvfb di PATH, dan native headless pada Linux tanpa Xvfb/Windows. Mode `headless` selalu native; `virtual` memerlukan Linux+Xvfb dan ditolak sebelum crawling bila tidak didukung. Factory Camoufox khusus modul Reddrix berlaku pada sesi awal/refresh. Plan menampilkan backend efektif dan mode display, sementara Sources/Contents mencatat provenance yang berbeda untuk yt-dlp dan Reddrix.
 
@@ -321,7 +340,7 @@ representatif per topik. Perbaikan crawler berikut dilakukan setelah verifikasi
 tersebut; crawling tetap berhenti dan tidak ada uji jaringan Instagram baru.
 
 `SocialCrawler` 1.5.2 menambahkan `instagram_pacing`. Preset
-`config/social_crawler_instagram_3h.json` dan preset pemulihan kini memakai:
+Bagian `instagram_pacing` dalam `config/social_crawler.json` memakai:
 
 - Jeda antaroperasi acak 5–10 detik.
 - Istirahat 120 detik setiap 20 operasi Instagram, hanya bila masih ada pekerjaan.

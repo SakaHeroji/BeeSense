@@ -13,6 +13,6 @@ tags:
 ## Connections
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer.prepare_excel()]] - `shares_data_with` [EXTRACTED]
-- [[scriptsmerge_social_datasets.py_1]] - `shares_data_with` [EXTRACTED]
+- [[scriptsmerge_social_datasets.py]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

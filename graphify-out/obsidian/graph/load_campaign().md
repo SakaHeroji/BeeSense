@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/export_browser_campaign.py"
 type: "code"
-community: "Parsing Identitas Reddit"
+community: "Kontrak Record Reddit"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # load_campaign()
@@ -16,6 +16,6 @@ tags:
 - [[export_browser_campaign.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
 - [[thread_id()]] - `calls` [EXTRACTED]
-- [[utc_datetime()]] - `calls` [EXTRACTED]
+- [[utc_datetime()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

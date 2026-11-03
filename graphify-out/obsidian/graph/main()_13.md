@@ -1,19 +1,24 @@
 ---
-source_file: "scripts/generate_topic_narratives.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
-location: "L95"
+community: "Kontrak Record Reddit"
+location: "L1398"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Kontrak_Record_Reddit
 ---
 
 # main()
 
 ## Connections
-- [[SocialNLPClusterer_2]] - `calls` [EXTRACTED]
-- [[enrich_run()]] - `calls` [EXTRACTED]
-- [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[dumps()_1]] - `calls` [EXTRACTED]
+- [[parser()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
+- [[run_self_tests()]] - `calls` [EXTRACTED]
+- [[schema_document()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
+- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

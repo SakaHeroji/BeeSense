@@ -1,23 +1,23 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L14"
+community: "Frontend dan Transaksi Sosmed"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # platforms
 
 ## Connections
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
+- [[ConfigReview.tsx]] - `imports` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
-- [[History.tsx]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
+- [[Shell.tsx]] - `imports` [EXTRACTED]
 - [[demo.ts]] - `imports` [EXTRACTED]
-- [[domain.test.ts]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
+- [[platform-workspace.test.tsx]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

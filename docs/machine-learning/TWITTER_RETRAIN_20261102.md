@@ -2,7 +2,7 @@
 
 [Input gabungan](../../outputs/social_20261102_combined_twitter_01/social_data.xlsx) memuat **34.764 record unik** dari YouTube, Reddit, Instagram dan Twitter, termasuk trial Twitter 31 Oktober serta seluruh hasil crawling hari ini. Verifikasi native ID: **0 duplikasi**. Conversation root X berasal dari audit terverifikasi/sidecar yang terikat checksum, bukan tebakan judul/tanggal.
 
-[Snapshot model](../../outputs/nlp_20261102_twitter_topics20_gemini_01/summary.json) dihasilkan SocialNLPClusterer 2.5.0. Konfigurasi aktif dan [preset bertanggal](../../config/social_nlp_twitter_20261102.json) memakai dataset ini, tepat **20 topik**, mean c_v minimum **0,4**, dan Gemini enabled.
+[Snapshot model](../../outputs/nlp_20261102_twitter_topics20_gemini_01/summary.json) dihasilkan SocialNLPClusterer 2.5.0. Konfigurasi eksperimen tersimpan pada bagian `config` di summary snapshot tersebut. [Konfigurasi NLP utama](CONFIGURATION.md) kini menjadi satu file untuk kustomisasi. Eksperimen ini memakai dataset tersebut, tepat **20 topik**, mean c_v minimum **0,4**, dan Gemini enabled.
 
 ## Fitting dan evaluasi
 

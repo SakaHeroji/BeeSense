@@ -97,9 +97,7 @@ class InstagramCrawlerTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.path = Path(self.temp.name)
-        self.config = json.loads(
-            (ig.ROOT / "config/instagram_crawler.json").read_text()
-        )
+        self.config = ig.standalone_config(None, "instagram", backend="instagrapi")
         self.config["exclude_existing_datasets"] = []
         self.config["platforms"]["instagram"].update(
             urls=[URL], hashtags=[], min_posts=1, min_comments_per_post=2
@@ -123,15 +121,21 @@ class InstagramCrawlerTests(unittest.TestCase):
             monotonic=self.clock.clock,
         )
 
-    def test_tracked_trial_is_30_minutes_and_main_remains_two_platforms(self):
+    def test_standalone_inherits_main_duration_and_keeps_combined_enabled_scope(self):
         crawler = ig.InstagramCrawler()
         plan = crawler.plan()
-        self.assertEqual(plan["config"]["total_seconds"], 1800)
+        main = SocialCrawler().config
+        self.assertEqual(plan["config"]["total_seconds"], main["total_seconds"])
         self.assertEqual(set(plan["config"]["platforms"]), {"instagram"})
         self.assertFalse(plan["trial_passed"])
         self.assertFalse(plan["integrated_into_social_crawler"])
         self.assertEqual(
-            set(SocialCrawler().config["platforms"]), {"youtube", "reddit"}
+            {
+                name
+                for name, settings in main["platforms"].items()
+                if settings["enabled"]
+            },
+            {"youtube", "reddit", "instagram", "twitter", "tiktok"},
         )
 
     def test_url_canonicalization_and_identity(self):
@@ -281,6 +285,7 @@ class InstagramCrawlerTests(unittest.TestCase):
         self.assertEqual(result["filtered_roots"], {"root_outside_date_window": 1})
         self.config["until"] = "2026-10-27T00:00:00Z"
         self.config["exclude_keywords"] = ["beasiswa"]
+        self.config["comment_exclude_keywords"] = None  # Explicit legacy inheritance.
         result = self.crawler().run(self.path / "exclude")
         self.assertEqual(result["posts_exported"], 1)
         self.assertEqual(result["qualified_posts"], 0)

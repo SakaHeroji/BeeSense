@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/test/api.test.ts"
 type: "code"
-community: "Tipe dan Client API"
+community: "Frontend dan Transaksi Sosmed"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Tipe_dan_Client_API
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # api.test.ts
@@ -19,4 +19,4 @@ tags:
 - [[initialConfig()]] - `imports` [EXTRACTED]
 - [[types.ts]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Tipe_dan_Client_API
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -1,20 +1,18 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L1365"
+community: "Capture Reddit Playwright"
+location: "L325"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Capture_Reddit_Playwright
 ---
 
 # parser()
 
 ## Connections
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - `calls` [EXTRACTED]
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[main()_12]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

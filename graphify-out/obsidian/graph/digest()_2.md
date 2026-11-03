@@ -1,20 +1,19 @@
 ---
-source_file: "MachineLearning/topic_narratives.py"
+source_file: "MachineLearning/context_relevance.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L147"
+community: "Penyaringan Relevansi dan Narasi Topik"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # digest()
 
 ## Connections
-- [[canonical()]] - `calls` [EXTRACTED]
-- [[generate()]] - `calls` [EXTRACTED]
-- [[topic_narratives.py]] - `contains` [EXTRACTED]
-- [[validate_rows()]] - `calls` [EXTRACTED]
+- [[.__init__()_6]] - `calls` [EXTRACTED]
+- [[._scores()]] - `calls` [EXTRACTED]
+- [[context_relevance.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

@@ -1,21 +1,21 @@
 ---
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
-community: "Tipe dan Client API"
-location: "L88"
+community: "Frontend dan Transaksi Sosmed"
+location: "L101"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Tipe_dan_Client_API
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # Plan
 
 ## Connections
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[api.test.ts]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports` [EXTRACTED]
+- [[platform-workspace.test.tsx]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Tipe_dan_Client_API
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

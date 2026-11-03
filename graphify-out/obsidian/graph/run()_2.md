@@ -1,29 +1,37 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L249"
+community: "Kontrak Record Reddit"
+location: "L972"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # run()
 
 ## Connections
-- [[.accept()_2]] - `calls` [EXTRACTED]
+- [[.abort()_1]] - `calls` [EXTRACTED]
+- [[.accept()_3]] - `calls` [EXTRACTED]
+- [[.finish()_1]] - `calls` [EXTRACTED]
+- [[.finish_relations()_1]] - `calls` [EXTRACTED]
+- [[.row()_1]] - `calls` [EXTRACTED]
+- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - `calls` [EXTRACTED]
+- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - `calls` [EXTRACTED]
+- [[.write()_2]] - `calls` [EXTRACTED]
 - [[BundleSink_1]] - `calls` [EXTRACTED]
 - [[Dataset_1]] - `calls` [EXTRACTED]
 - [[KeywordMatcher_1]] - `calls` [EXTRACTED]
-- [[RecordFactory_1]] - `calls` [EXTRACTED]
-- [[YouTubeAdapter]] - `calls` [EXTRACTED]
+- [[RedditAdapter]] - `calls` [EXTRACTED]
+- [[RedditRecordFactory]] - `calls` [EXTRACTED]
 - [[add_readme()_1]] - `calls` [EXTRACTED]
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[load_settings()_1]] - `calls` [EXTRACTED]
-- [[main()_1]] - `calls` [EXTRACTED]
+- [[main()_13]] - `calls` [EXTRACTED]
 - [[now_iso()_1]] - `calls` [EXTRACTED]
+- [[run_self_tests()]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 - [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

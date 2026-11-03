@@ -39,7 +39,7 @@ tags:
 - [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - `method` [EXTRACTED]
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - `method` [EXTRACTED]
 - [[.test_twitter_prepare_preserves_audited_roots_without_embedding_titles()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `uses` [INFERRED]
+- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

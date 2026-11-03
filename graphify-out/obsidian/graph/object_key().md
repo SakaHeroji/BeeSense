@@ -12,7 +12,8 @@ tags:
 # object_key()
 
 ## Connections
-- [[.accept()_1]] - `calls` [EXTRACTED]
+- [[.accept()_3]] - `calls` [EXTRACTED]
+- [[.key()_1]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[native_fullname()]] - `calls` [EXTRACTED]

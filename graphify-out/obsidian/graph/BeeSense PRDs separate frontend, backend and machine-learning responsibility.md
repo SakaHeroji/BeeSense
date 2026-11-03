@@ -18,7 +18,6 @@ tags:
 - [[Curated Crawler PRD statusfrontend implemented, backend pending]] - `references` [EXTRACTED]
 - [[Draft acceptance criteria are release requirements, not a React test report]] - `references` [EXTRACTED]
 - [[Frontend PRD index]] - `references` [EXTRACTED]
-- [[Implemented ReactJSTypeScriptVite Crawler workspace]] - `references` [EXTRACTED]
 - [[Reactdemo implementation exists while web acquisition backend is still required]] - `references` [EXTRACTED]
 - [[Three planned frontend experiences; shared versus separate deployment undecided]] - `references` [EXTRACTED]
 

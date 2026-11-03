@@ -1,29 +1,30 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Model dan Pengujian NLP"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # social_nlp.py
 
 ## Connections
-- [[ContextRelevanceFilter]] - `imports` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `contains` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `contains` [EXTRACTED]
 - [[app.py]] - `imports_from` [EXTRACTED]
 - [[file_hash()]] - `contains` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[json_write()]] - `contains` [EXTRACTED]
-- [[main()_11]] - `contains` [EXTRACTED]
+- [[load_config()]] - `contains` [EXTRACTED]
+- [[main()_6]] - `contains` [EXTRACTED]
 - [[relevance_dashboard.py]] - `imports_from` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports_from` [EXTRACTED]
 - [[test_dataset_merge.py]] - `imports_from` [EXTRACTED]
+- [[test_nlp_config.py]] - `imports_from` [EXTRACTED]
 - [[test_relevance_runtime.py]] - `imports_from` [EXTRACTED]
 - [[test_social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports_from` [EXTRACTED]
@@ -33,4 +34,4 @@ tags:
 - [[topic_sentence_export.py]] - `imports_from` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

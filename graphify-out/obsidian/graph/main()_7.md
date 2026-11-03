@@ -1,23 +1,18 @@
 ---
-source_file: "scripts/topic_sentence_export.py"
+source_file: "scripts/relevance_dashboard.py"
 type: "code"
-community: "topic_sentence_export.py"
-location: "L110"
+community: "Model dan Pengujian NLP"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Model_dan_Pengujian_NLP
 ---
 
 # main()
 
 ## Connections
 - [[.load_run()]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[export_payload()]] - `calls` [EXTRACTED]
-- [[file_hash()]] - `calls` [EXTRACTED]
-- [[json_write()]] - `calls` [EXTRACTED]
-- [[seal()]] - `calls` [EXTRACTED]
-- [[topic_sentence_export.py]] - `contains` [EXTRACTED]
+- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP

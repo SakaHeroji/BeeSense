@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Bundler Vite"
-location: "L46"
+community: "Frontend dan Transaksi Sosmed"
+location: "L50"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Bundler_Vite
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # vite
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[vite]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Bundler_Vite
+#graphify/concept #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

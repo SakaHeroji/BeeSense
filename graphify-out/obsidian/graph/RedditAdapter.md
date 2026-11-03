@@ -1,24 +1,23 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L923"
+community: "Pengujian Parser Reddit"
+location: "L924"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Pengujian_Parser_Reddit
 ---
 
 # RedditAdapter
 
 ## Connections
-- [[.__init__()_11]] - `method` [EXTRACTED]
-- [[.accept()_1]] - `method` [EXTRACTED]
+- [[.__init__()_30]] - `method` [EXTRACTED]
+- [[.accept()_3]] - `method` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
-- [[SourceAdapter]] - `inherits` [EXTRACTED]
-- [[Verified Reddit native identity and parentroot relationships]] - `conceptually_related_to` [INFERRED]
+- [[SourceAdapter_2]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

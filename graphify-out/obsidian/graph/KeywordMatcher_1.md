@@ -1,27 +1,29 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L123"
+community: "Capture Reddit Playwright"
+location: "L169"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Capture_Reddit_Playwright
 ---
 
 # KeywordMatcher
 
 ## Connections
-- [[.__init__()_15]] - `method` [EXTRACTED]
+- [[.__init__()_20]] - `method` [EXTRACTED]
 - [[.find()_1]] - `method` [EXTRACTED]
+- [[.setUp()_14]] - `calls` [EXTRACTED]
+- [[.test_04_unicode_offsets_boundary_and_casefold()]] - `calls` [EXTRACTED]
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
+- [[.validate()]] - `calls` [INFERRED]
 - [[.validate()_1]] - `calls` [EXTRACTED]
 - [[Aho-Corasick; offsets refer to Python Unicode code points in source._1]] - `rationale_for` [EXTRACTED]
-- [[SafeLogger]] - `uses` [INFERRED]
-- [[Settings_1]] - `uses` [INFERRED]
-- [[YouTubeAdapter]] - `uses` [INFERRED]
-- [[crawl_youtube.py]] - `imports` [EXTRACTED]
-- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [INFERRED]
 - [[run()_2]] - `calls` [EXTRACTED]
-- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

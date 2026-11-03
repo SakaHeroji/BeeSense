@@ -1,30 +1,30 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L299"
+community: "Kontrak Record Reddit"
+location: "L345"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Kontrak_Record_Reddit
 ---
 
 # BundleSink
 
 ## Connections
-- [[.__init__()_18]] - `method` [EXTRACTED]
+- [[.__init__()_23]] - `method` [EXTRACTED]
 - [[._cells()_1]] - `method` [EXTRACTED]
 - [[.abort()_1]] - `method` [EXTRACTED]
 - [[.chunks()_1]] - `method` [EXTRACTED]
 - [[.finish()_1]] - `method` [EXTRACTED]
-- [[.write()_2]] - `method` [EXTRACTED]
+- [[.test_13_excel_literal_ids_and_lossless_text()]] - `calls` [EXTRACTED]
+- [[.write()_1]] - `method` [EXTRACTED]
+- [[Async Reddrix to validated records to existing Excel pipeline]] - `references` [EXTRACTED]
 - [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel._1]] - `rationale_for` [EXTRACTED]
-- [[SafeLogger]] - `uses` [INFERRED]
-- [[Settings_1]] - `uses` [INFERRED]
-- [[YouTubeAdapter]] - `uses` [INFERRED]
-- [[crawl_youtube.py]] - `imports` [EXTRACTED]
-- [[import_pilot()]] - `calls` [EXTRACTED]
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[export_campaign()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [INFERRED]
 - [[run()_2]] - `calls` [EXTRACTED]
-- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

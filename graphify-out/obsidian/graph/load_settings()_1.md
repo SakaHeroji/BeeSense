@@ -1,12 +1,12 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L225"
+community: "Parsing Identitas Reddit"
+location: "L952"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Parsing_Identitas_Reddit
 ---
 
 # load_settings()
@@ -15,8 +15,8 @@ tags:
 - [[.validate()_1]] - `calls` [EXTRACTED]
 - [[Settings_1]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[run()_2]] - `calls` [EXTRACTED]
-- [[video_url()]] - `calls` [EXTRACTED]
+- [[thread_url()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

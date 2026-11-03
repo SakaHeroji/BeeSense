@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[DashboardTests]] - `contains` [EXTRACTED]
 - [[NLPTests]] - `contains` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[encoder()]] - `contains` [EXTRACTED]
 - [[file_hash()]] - `imports` [EXTRACTED]
 - [[fixture()]] - `contains` [EXTRACTED]

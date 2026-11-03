@@ -2,7 +2,7 @@
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
 community: "Pengujian Narasi Gemini"
-location: "L64"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -16,9 +16,7 @@ tags:
 - [[._reduce_embeddings()]] - `calls` [EXTRACTED]
 - [[.encode()_1]] - `calls` [EXTRACTED]
 - [[.explain_topics()]] - `calls` [EXTRACTED]
-- [[.export_compact()]] - `calls` [INFERRED]
 - [[.finish()]] - `calls` [INFERRED]
-- [[.finish()_1]] - `calls` [INFERRED]
 - [[.load_explanations()]] - `calls` [EXTRACTED]
 - [[.load_run()]] - `calls` [EXTRACTED]
 - [[.narrative_source()]] - `calls` [EXTRACTED]
@@ -34,7 +32,7 @@ tags:
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `calls` [EXTRACTED]
 - [[enrich_run()]] - `calls` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `imports` [EXTRACTED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[published_crawl_files()]] - `calls` [EXTRACTED]
 - [[published_source_files()]] - `calls` [EXTRACTED]
 - [[seal()]] - `calls` [EXTRACTED]

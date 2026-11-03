@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Testing Library React"
-location: "L34"
+community: "Frontend dan Transaksi Sosmed"
+location: "L39"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Testing_Library_React
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # @testing-library/react
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[@testing-libraryreact]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Testing_Library_React
+#graphify/concept #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

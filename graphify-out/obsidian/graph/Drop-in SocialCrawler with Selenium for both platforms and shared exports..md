@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "rationale"
 community: "Crawler Selenium"
-location: "L621"
+location: "L629"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

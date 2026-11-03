@@ -1,23 +1,20 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Pengambilan HTML Reddit"
-location: "L95"
+community: "Worker Instaloader"
+location: "L63"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Worker_Instaloader
 ---
 
 # error_receipt()
 
 ## Connections
-- [[.run()]] - `calls` [EXTRACTED]
-- [[Classify by exception typestatus; never write exception text or sessions.]] - `rationale_for` [EXTRACTED]
-- [[SessionInvalid]] - `indirect_call` [INFERRED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[instagram_worker()]] - `calls` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[AccessBarrier]] - `indirect_call` [INFERRED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
+- [[instaloader_worker()]] - `calls` [EXTRACTED]
 - [[upstream_version()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

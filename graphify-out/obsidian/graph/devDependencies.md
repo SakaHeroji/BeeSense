@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Dependency Pengembangan Frontend"
-location: "L31"
+community: "Frontend dan Transaksi Sosmed"
+location: "L36"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Dependency_Pengembangan_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # devDependencies
@@ -16,7 +16,6 @@ tags:
 - [[@testing-libraryjest-dom]] - `contains` [EXTRACTED]
 - [[@testing-libraryreact]] - `contains` [EXTRACTED]
 - [[@testing-libraryuser-event]] - `contains` [EXTRACTED]
-- [[@typespapaparse]] - `contains` [EXTRACTED]
 - [[@typesreact]] - `contains` [EXTRACTED]
 - [[@typesreact-dom]] - `contains` [EXTRACTED]
 - [[@vitejsplugin-react]] - `contains` [EXTRACTED]
@@ -30,4 +29,4 @@ tags:
 - [[vite]] - `contains` [EXTRACTED]
 - [[vitest]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Dependency_Pengembangan_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

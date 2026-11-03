@@ -13,6 +13,5 @@ tags:
 ## Connections
 - [[Gemini topic narratives]] - `references` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer.generate_topic_narratives()]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

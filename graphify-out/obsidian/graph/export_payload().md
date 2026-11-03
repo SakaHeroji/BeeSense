@@ -16,7 +16,7 @@ tags:
 - [[.test_unknown_or_empty_topic_membership_is_rejected()]] - `calls` [EXTRACTED]
 - [[Keep original variants; remove repeated occurrences of the same text.]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[main()_7]] - `calls` [EXTRACTED]
+- [[main()_1]] - `calls` [EXTRACTED]
 - [[seal()]] - `calls` [EXTRACTED]
 - [[test_topic_sentence_export.py]] - `imports` [EXTRACTED]
 - [[topic_sentence_export.py]] - `contains` [EXTRACTED]

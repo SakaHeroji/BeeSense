@@ -12,7 +12,7 @@ tags:
 # canonical()
 
 ## Connections
-- [[digest()_2]] - `calls` [EXTRACTED]
+- [[digest()_1]] - `calls` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 - [[request_topic()]] - `calls` [EXTRACTED]
 - [[topic_narratives.py]] - `contains` [EXTRACTED]

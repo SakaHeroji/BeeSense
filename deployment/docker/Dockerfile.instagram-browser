@@ -21,4 +21,4 @@ RUN mkdir -p /data /app/output/playwright /app/output/instagram_browser \
 USER beesense
 # Mount a dedicated Linux-created browser profile at runtime. Never bake sessions in.
 ENTRYPOINT ["python", "-m", "Crawler.Backend.social_crawler"]
-CMD ["--config", "config/social_crawler_instagram_3h.json", "--dry-run"]
+CMD ["--dry-run"]

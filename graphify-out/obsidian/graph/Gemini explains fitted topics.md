@@ -13,9 +13,9 @@ tags:
 ## Connections
 - [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[MachineLearningtopic_narratives.py_1]] - `implements` [EXTRACTED]
-- [[c-TF-IDF topic terms_1]] - `shares_data_with` [EXTRACTED]
-- [[outputsnlp_20261102_relevance_topics20_gemini_02_1]] - `shares_data_with` [EXTRACTED]
-- [[outputsnlp_20261102_twitter_topics20_gemini_01_1]] - `shares_data_with` [EXTRACTED]
+- [[c-TF-IDF topic terms]] - `shares_data_with` [EXTRACTED]
+- [[outputsnlp_20261102_relevance_topics20_gemini_02]] - `shares_data_with` [EXTRACTED]
+- [[outputsnlp_20261102_twitter_topics20_gemini_01]] - `shares_data_with` [EXTRACTED]
 - [[scriptsgenerate_topic_narratives.py]] - `implements` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

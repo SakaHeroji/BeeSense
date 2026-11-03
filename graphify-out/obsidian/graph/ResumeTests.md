@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.capture()_1]] - `method` [EXTRACTED]
 - [[.save_raw()]] - `method` [EXTRACTED]
-- [[.setUp()_1]] - `method` [EXTRACTED]
+- [[.setUp()]] - `method` [EXTRACTED]
 - [[.test_candidate_rejects_wrong_host_identity_and_window()]] - `method` [EXTRACTED]
 - [[.test_captcha_detected_but_user_post_discussing_captcha_is_not_a_barrier()]] - `method` [EXTRACTED]
 - [[.test_chrome_http_429_error_page_is_a_rate_limit()]] - `method` [EXTRACTED]

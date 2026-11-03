@@ -12,13 +12,14 @@ tags:
 # RedditCrawlerTests
 
 ## Connections
-- [[.setUp()_4]] - `method` [EXTRACTED]
+- [[.setUp()_11]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `method` [EXTRACTED]
 - [[.test_adaptive_display_matrix()]] - `method` [EXTRACTED]
 - [[.test_barrier_exports_partial_without_calling_it_success()]] - `method` [EXTRACTED]
 - [[.test_baseline_blocks_native_roots_across_runs()]] - `method` [EXTRACTED]
 - [[.test_browser_factory_overrides_initial_and_refreshed_sessions()]] - `method` [EXTRACTED]
 - [[.test_complete_excel_contract_formula_safety_relations_and_provenance()]] - `method` [EXTRACTED]
+- [[.test_default_config_inherits_shared_duration_and_reddit_scope()]] - `method` [EXTRACTED]
 - [[.test_display_config_and_override_reach_plan_and_worker()]] - `method` [EXTRACTED]
 - [[.test_display_mode_propagates_through_process_boundary()]] - `method` [EXTRACTED]
 - [[.test_dry_run_does_not_import_or_start_reddrix()]] - `method` [EXTRACTED]
@@ -27,7 +28,6 @@ tags:
 - [[.test_rejects_cross_thread_and_inconsistent_ids()]] - `method` [EXTRACTED]
 - [[.test_search_preserves_subreddit_scope_without_fetching_comments()]] - `method` [EXTRACTED]
 - [[.test_stream_enforces_duplicates_and_reply_budgets()]] - `method` [EXTRACTED]
-- [[.test_trial_config_changes_only_duration_and_platform_scope()]] - `method` [EXTRACTED]
 - [[.test_unknown_antibot_status_is_not_guessed_as_http429()]] - `method` [EXTRACTED]
 - [[.worker()_1]] - `method` [EXTRACTED]
 - [[RedditCrawler]] - `uses` [INFERRED]

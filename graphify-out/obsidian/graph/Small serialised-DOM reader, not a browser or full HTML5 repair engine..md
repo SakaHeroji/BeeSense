@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
 community: "Struktur DOM Reddit"
-location: "L669"
+location: "L670"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

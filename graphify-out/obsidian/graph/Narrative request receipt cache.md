@@ -4,7 +4,7 @@ type: "rationale"
 community: "Operasi dan Verifikasi BeeSense"
 tags:
   - graphify/rationale
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Verified embedding cache]] - `semantically_similar_to` [INFERRED]
-- [[topic_narratives.py_1]] - `implements` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/INFERRED #community/Operasi_dan_Verifikasi_BeeSense

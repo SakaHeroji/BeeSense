@@ -1,18 +1,19 @@
 ---
-source_file: "Crawler/Backend/instaloader_browser_patch.py"
+source_file: "scripts/generate_topic_narratives.py"
 type: "code"
-community: "Worker Instaloader"
-location: "L197"
+community: "Pengujian Narasi Gemini"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # main()
 
 ## Connections
-- [[browser_graphql_query()]] - `indirect_call` [INFERRED]
-- [[instaloader_browser_patch.py]] - `contains` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `calls` [EXTRACTED]
+- [[enrich_run()]] - `calls` [EXTRACTED]
+- [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

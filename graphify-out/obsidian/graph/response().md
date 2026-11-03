@@ -1,17 +1,19 @@
 ---
-source_file: "Crawler/Frontend/src/test/domain.test.ts"
+source_file: "tests/crawler/test_instaloader_browser_patch.py"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L16"
+community: "Worker Instaloader"
+location: "L14"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Worker_Instaloader
 ---
 
 # response()
 
 ## Connections
-- [[domain.test.ts]] - `contains` [EXTRACTED]
+- [[.test_no_retry_and_no_response_body_in_errors()]] - `calls` [EXTRACTED]
+- [[context()]] - `calls` [EXTRACTED]
+- [[test_instaloader_browser_patch.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

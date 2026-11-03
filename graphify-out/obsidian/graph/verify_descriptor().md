@@ -1,25 +1,20 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/social_common.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L126"
+community: "Akuisisi YouTube"
+location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # verify_descriptor()
 
 ## Connections
 - [[.__init__()_4]] - `calls` [EXTRACTED]
-- [[.test_01_frozen_header_fingerprint()]] - `calls` [EXTRACTED]
-- [[Validate the embedded contract; an external descriptor is optional.]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[main()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
 - [[schema_document()]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()]] - `calls` [EXTRACTED]
+- [[social_common.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

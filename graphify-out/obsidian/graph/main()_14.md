@@ -1,18 +1,19 @@
 ---
-source_file: "scripts/relevance_dashboard.py"
+source_file: "Crawler/Backend/reddit_crawler.py"
 type: "code"
-community: "topic_sentence_export.py"
-location: "L12"
+community: "Wrapper RedditCrawler"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Wrapper_RedditCrawler
 ---
 
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
+- [[.plan()_2]] - `calls` [EXTRACTED]
+- [[RedditCrawler]] - `calls` [EXTRACTED]
+- [[reddit_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

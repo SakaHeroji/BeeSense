@@ -1,26 +1,22 @@
 ---
-source_file: "MachineLearning/social_nlp.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
-location: "L2596"
+community: "Crawler Selenium"
+location: "L857"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Crawler_Selenium
 ---
 
 # main()
 
 ## Connections
-- [[._event()_1]] - `calls` [EXTRACTED]
-- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
-- [[.explain_artifacts()]] - `calls` [EXTRACTED]
-- [[.fit_excel()]] - `calls` [EXTRACTED]
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[.prepare_excel()]] - `calls` [EXTRACTED]
-- [[.save()]] - `calls` [EXTRACTED]
-- [[.save_explanations()]] - `calls` [EXTRACTED]
-- [[SocialNLPClusterer_2]] - `calls` [EXTRACTED]
-- [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[.error()]] - `indirect_call` [INFERRED]
+- [[.plan()_1]] - `calls` [EXTRACTED]
+- [[.run()_1]] - `calls` [EXTRACTED]
+- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

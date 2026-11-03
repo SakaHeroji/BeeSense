@@ -115,17 +115,16 @@ class RedditCrawlerTests(unittest.TestCase):
         self.assertFalse(crawler._synthetic)
         self.assertEqual(crawler.plan()["acquisition_backend"], "reddrix")
 
-    def test_trial_config_changes_only_duration_and_platform_scope(self):
+    def test_default_config_inherits_shared_duration_and_reddit_scope(self):
         original = SocialCrawler(
             json.loads(Path("config/social_crawler.json").read_text())
         ).config
         trial = RedditCrawler().config
-        self.assertEqual(trial["total_seconds"], 1800)
-        expected = deepcopy(original)
-        expected["total_seconds"] = 1800
-        expected["platforms"] = {"reddit": original["platforms"]["reddit"]}
+        self.assertEqual(trial["total_seconds"], original["total_seconds"])
+        self.assertEqual(
+            trial["platforms"], {"reddit": original["platforms"]["reddit"]}
+        )
         self.assertEqual(trial["reddrix"], {"display_mode": "auto"})
-        self.assertEqual(trial, expected)
 
     def test_complete_excel_contract_formula_safety_relations_and_provenance(self):
         result = RedditCrawler(CONFIG, workers={"reddit": self.worker}).run(

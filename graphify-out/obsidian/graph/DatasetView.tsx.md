@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/features/DatasetView.tsx"
 type: "code"
-community: "Monitor Job dan Dataset"
+community: "Frontend dan Transaksi Sosmed"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Job_dan_Dataset
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # DatasetView.tsx
@@ -29,7 +29,7 @@ tags:
 - [[domain.ts]] - `imports_from` [EXTRACTED]
 - [[download()]] - `imports` [EXTRACTED]
 - [[hooks.ts]] - `imports_from` [EXTRACTED]
-- [[number()]] - `imports` [EXTRACTED]
+- [[number()_1]] - `imports` [EXTRACTED]
 - [[platformName()]] - `imports` [EXTRACTED]
 - [[platforms]] - `imports` [EXTRACTED]
 - [[safeExternal()]] - `imports` [EXTRACTED]
@@ -39,4 +39,4 @@ tags:
 - [[useDebouncedValue()]] - `imports` [EXTRACTED]
 - [[useUrlState()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

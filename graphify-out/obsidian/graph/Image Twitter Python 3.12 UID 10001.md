@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[Allowlist Docker tanpa auth dan sesi]] - `rationale_for` [EXTRACTED]
-- [[Preset percobaan Twitter 30 menit]] - `references` [EXTRACTED]
 - [[Scweet 5.8.2]] - `references` [EXTRACTED]
 - [[openpyxl 3.1.5]] - `references` [EXTRACTED]
 

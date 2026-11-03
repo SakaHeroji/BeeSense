@@ -1,23 +1,21 @@
 ---
-source_file: "Crawler/Backend/Youtube/social_common.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi YouTube"
-location: "L293"
+community: "Parsing Identitas Reddit"
+location: "L339"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_YouTube
+  - community/Parsing_Identitas_Reddit
 ---
 
 # SourceAdapter
 
 ## Connections
-- [[.accept()_3]] - `method` [EXTRACTED]
-- [[ABC_1]] - `inherits` [EXTRACTED]
-- [[SafeLogger]] - `uses` [INFERRED]
-- [[Settings_1]] - `uses` [INFERRED]
-- [[YouTubeAdapter]] - `uses` [INFERRED]
-- [[crawl_youtube.py]] - `imports` [EXTRACTED]
-- [[social_common.py]] - `contains` [EXTRACTED]
+- [[.accept()_2]] - `method` [EXTRACTED]
+- [[ABC_2]] - `inherits` [EXTRACTED]
+- [[RedditAdapter]] - `inherits` [EXTRACTED]
+- [[YouTubeAdapter]] - `inherits` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

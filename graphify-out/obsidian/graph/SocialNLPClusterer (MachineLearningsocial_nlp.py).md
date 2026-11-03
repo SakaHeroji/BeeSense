@@ -1,24 +1,19 @@
 ---
-source_file: "docs/machine-learning/SOCIAL_NLP.md"
+source_file: "graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md"
 type: "code"
-community: "Panduan Pipeline BeeSense"
+community: "Penyaringan Relevansi dan Narasi Topik"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # SocialNLPClusterer (MachineLearning/social_nlp.py)
 
 ## Connections
-- [[Candidate quality gate]] - `implements` [EXTRACTED]
-- [[Class NLP BeeSense SBERT + UMAP + DBSCAN]] - `references` [EXTRACTED]
-- [[DBSCAN Euclidean density clustering]] - `implements` [EXTRACTED]
-- [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
-- [[Multilingual SBERT encoder]] - `implements` [EXTRACTED]
-- [[UMAP projection]] - `implements` [EXTRACTED]
-- [[Weighted Ward topic reduction]] - `implements` [EXTRACTED]
-- [[beesense-sentence-clusters2]] - `implements` [EXTRACTED]
-- [[c-TF-IDF topic terms]] - `implements` [EXTRACTED]
+- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer.fit_excel() pipeline]] - `implements` [EXTRACTED]
+- [[SocialNLPClusterer.prepare_excel()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

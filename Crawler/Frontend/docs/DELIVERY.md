@@ -1,63 +1,54 @@
-# Delivery dan Audit UI UX
+# Delivery frontend 1.2
 
-Tanggal 29 Oktober 2026. Implementasi berada di `Crawler/Frontend`, berdasarkan PRD frontend Crawler. **Frontend dan simulasi telah diverifikasi; integrasi akuisisi produksi belum tersedia karena API/worker web belum dibangun.**
+3 November 2026. Lingkup yang disetujui adalah frontend terlebih dahulu. **Migrasi dan penyimpanan akun hanya simulasi antarmuka; tidak ada penulisan PostgreSQL atau auth.json.** Runtime lokal tetap Vite pada 127.0.0.1:5173. Tidak ada perubahan runtime/database produksi.
 
-## Hasil implementasi
+## Rancangan dan koreksi
 
-ReactJS/TypeScript memisahkan shell, fitur otomatis/manual, domain validation, HTTP adapter, dan adapter simulasi. Dua menu utama tetap dipertahankan. Otomatis menggunakan wizard sumber, filter/target, baseline, dan review. Manual menyediakan URL serta respons survei melalui form atau CSV/XLSX dengan pilihan sheet dan mapping.
+Operator meninjau data satu sosmed menurut transaksi crawling. Tujuh sosmed menjadi satu-satunya navigasi utama. Rancangan warna tetap BeeSense: putih #FFFFFF, canvas #FAFAFA, teks #000000, aksi #FF8A24, pilihan #FFF3E8, garis #E6DDD5. Plus Jakarta Sans: heading 28–36 px, angka statistik 27–30 px, body/input 15 px, label 14 px, pendukung 13 px, badge minimal 12 px. Input mobile 16 px.
 
-Monitor memisahkan roots, qualified, komentar/reply, duplikasi, waktu, dan kendala akses. Hasil hanya dapat dibuka sesudah dataset terbit. Pemilihan input NLP menerima hasil parsial secara eksplisit, tanpa otomatis menjalankan training. Metadata survei tetap memiliki pertanyaan dan peran sumbernya; skema survei NLP yang belum didukung ditolak secara jelas.
+Tata letak rata kiri, mengikuti kepemilikan data:
 
-Tujuh sumber UI/simulasi meliputi YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter. Query, target, kartu, grafik, riwayat, dan filter preview menggunakan daftar sumber yang sama. Lima sumber baru default nonaktif. Backend hanya mengaktifkan adapter melalui capabilities; UI dan simulasi tidak menambahkan lima adapter pada Python.
+```text
+Menu sosmed | Konfigurasi / Hasil per tanggal
+            | Transaksi: Statistik | Lihat data | Migrasi ke PostgreSQL
+            | Data transaksi terpilih
+            |   Review target PostgreSQL / Progres migrasi
+            |   Preview post, komentar dan balasan
+```
 
-Semua contoh, angka, native ID baseline, dan unduhan dalam mode demo merupakan data sintetis. Browser tidak melakukan crawling tiga jam, dan refresh tidak memulai job baru. Survei demo disimpan dalam memori, bukan browser storage. Mode API gagal dengan pesan integrasi ketika backend belum tersedia, tanpa beralih ke data demo secara tersembunyi.
+Review rancangan menghapus halaman migrasi umum dan unggah file: operator sudah memilih sumber pada transaksi sehingga tidak perlu memilih file/sosmed lagi. Statistik berupa satu kisi angka dengan garis pemisah, bukan kartu identik berulang. Setelah render, ringkasan progres yang berulang disembunyikan pada tab statistik agar angka lengkap langsung terlihat. Form migrasi dipindahkan ke atas preview dan diberi fokus/scroll saat aksi migrasi dipilih.
 
-## Arah desain dan audit
+## Perubahan
 
-Skill frontend-design digunakan untuk memilih tampilan workspace riset: form utama dengan ringkasan konteks, tipe Plus Jakarta Sans yang dibundel lokal, dan tema putih–oranye sesuai PRD 1.1: `#FFFFFF`, `#FAFAFA`, `#FF8A24`, `#FF7608`, `#FFF3E8`, dan border `#E6DDD5`. Semua teks `#000000`, body/input 15 px, label/tombol 14 px, teks pendukung minimum 13 px. Tidak ada hijau pada logo, status, atau grafik. Status memiliki ikon dan keterangan tertulis. Label grafik memakai HTML agar tidak menyusut bersama viewBox SVG.
+- Hapus menu, route, frontend Migrasi Excel dan Crawler Manual termasuk URL/survei serta wizard/riwayat lama yang sudah tidak digunakan. Dependensi papaparse dihapus.
+- Hapus utility Python/SQL/tes database/CI/image migrasi Excel yang sempat dibuat. Tidak menghapus database atau data Excel yang ada. **No migration required**.
+- Tombol migrasi berada pada baris/data transaksi per sosmed, dengan review job/platform/dataset-version-checksum, PostgreSQL, kebijakan lewati ID, progres dan hitungan hasil. Tidak ada file upload. Pengulangan simulasi dataset/target yang sama menambahkan nol ID.
+- Statistik lengkap per transaksi memisahkan post, qualified, komentar, balasan, total konten unik, kandidat, duplikat, penolakan, target/persentase/gap, durasi, waktu WIB dan versi dataset. Route salah sosmed tidak menampilkan job.
+- Akun & sesi opsional untuk Instagram, X, TikTok, Threads dan Facebook. Input terpisah dari plan crawling. Form menyiapkan penyimpanan config/auth.json, menyembunyikan session ID dan membersihkannya setelah simulasi simpan. File asli tidak dibaca/diubah oleh frontend. Metadata saja disimpan di memori demo; token tidak masuk URL/localStorage atau snapshot job.
 
-Perbaikan hasil audit [Web Interface Guidelines](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) berikut sudah diterapkan. Lokasi memakai file:line agar dapat ditinjau langsung.
+## Audit pedoman web
 
-| Lokasi                            | Temuan dan perbaikan                                                                  |
-| --------------------------------- | ------------------------------------------------------------------------------------- |
-| `src/shared/ui.tsx:86`            | Field kini mempunyai name/autocomplete, hint/error terhubung, dan aria-invalid.       |
-| `src/shared/ui.tsx:157`           | Error memfokuskan field pertama; ringkasan dapat membuka field terkait.               |
-| `src/features/Automatic.tsx:424`  | Masukan diperiksa per langkah, sebelum review terakhir.                               |
-| `src/features/Automatic.tsx:472`  | Navigasi tab memakai tautan yang dapat dibuka langsung.                               |
-| `src/app/Shell.tsx:47`            | Drawer mobile mempunyai Escape, siklus fokus, dan pengembalian fokus.                 |
-| `src/app/Shell.tsx:92`            | Navigasi tersembunyi inert; isi utama inert saat drawer terbuka.                      |
-| `src/features/DatasetView.tsx:38` | Pencarian memakai debounce dan mempertahankan tabel saat memuat.                      |
-| `src/features/JobDetail.tsx:383`  | Sesi verifikasi dibuka lewat tautan pengguna, menghindari popup async yang terblokir. |
-| `src/styles.css:53`               | Fokus terlihat; warna teks ditingkatkan, reduced motion dan area aman tersedia.       |
+Diperiksa dengan [Web Interface Guidelines](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md) yang diambil ulang pada 3 November 2026.
 
-Submit untuk memulai akuisisi tetap memerlukan validasi rencana sesuai PRD. Isi jawaban/pencarian konten dataset tidak disimpan pada query URL; tab dan filter riwayat dapat ditautkan. Mode demo mempertahankan banner agar hasil simulasi tidak dianggap sebagai akuisisi sebenarnya.
+- `src/features/PlatformResults.tsx` — pass: aksi terkait transaksi, tautan statistik semantik, filter URL atomik, preview maksimal 50 baris, paging serta ID unik.
+- `src/features/TransactionMigration.tsx` — pass: fokus menuju aksi yang dipilih, label/error, review modal, snapshot expiry, respons lama ditolak, polling dan pemisahan processed/inserted, tanpa kredensial pada URL/review.
+- `src/shared/AuthSettings.tsx` — pass: username tanpa spellcheck, session password/show, label, feedback penyimpanan, izin/capability, input kosong mempertahankan nilai tersimpan.
+- `src/features/JobStatistics.tsx` — pass: dl semantik, Intl angka/waktu WIB, progress berlabel, statistik penuh dari snapshot per sumber.
+- `src/app/Shell.tsx` — pass: tujuh tautan sosmed, mobile drawer/fokus/Escape/inert, skip link, banner simulasi tetap.
+- `src/styles.css` — pass: font minimum 12 px, fokus terlihat, tabel horizontal mandiri, kisi statistik dua kolom mobile, reduced motion.
 
-Tambahan pemeriksaan state: respons validasi lama diabaikan ketika masukan telah berubah. Ini berlaku pada rencana, daftar URL, dan survei; regression test menahan respons URL lalu mengubah masukan sebelum respons diterima.
+## Verifikasi
 
-## Bukti verifikasi
+`npm run check`: lint, 38 Vitest + 1 tes Node proyeksi, typecheck dan build API lulus. Tes pembuatan manual/unggah Excel dihapus bersama fitur yang secara eksplisit dibatalkan; diganti cakupan navigasi tujuh sumber, statistik lengkap per sosmed, migrasi terikat transaksi/ID/role, auth opsional/rahasia serta kontrak HTTP yang direncanakan. Pemeriksaan format dan build demo juga dijalankan.
 
-| Pemeriksaan            | Hasil                                                                                                                                                                                                                |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run format:check` | Lulus.                                                                                                                                                                                                               |
-| `npm run lint`         | Lulus, tanpa menonaktifkan aturan purity/effect React.                                                                                                                                                               |
-| `npm run test`         | **50 tes lulus**, tiga file: domain, transport, dan workflow.                                                                                                                                                        |
-| `npm run build`        | Lulus TypeScript dan build produksi API.                                                                                                                                                                             |
-| Build demo Docker      | Berhasil pada Linux dengan lockfile yang sama; base image dikunci digest.                                                                                                                                            |
-| Runtime container      | UID 101, port host localhost 4174; health check sehat.                                                                                                                                                               |
-| HTTP lokal             | `/healthz` 200; `/crawler/manual` 200 dengan SPA root; API yang belum dirutekan mengembalikan JSON 503.                                                                                                              |
-| Browser                | Desktop dan layout sempit aktual 400 px diperiksa. Drawer/Escape/fokus field invalid diverifikasi melalui UI. Override yang diminta 360 px dibatasi browser menjadi 400 px; tampilan aktual 360 px belum dibuktikan. |
-| Tipografi browser      | Computed style pada konfigurasi: minimum 13 px, seluruh 96 elemen teks/input yang tampil hitam, tanpa pelanggaran.                                                                                                   |
-| Screenshot             | `output/crawler_frontend_final.png` pada root repository, artefak lokal yang diabaikan Git.                                                                                                                          |
-| Runtime lama           | Container Streamlit tetap sehat dan terpisah pada port 8501.                                                                                                                                                         |
+Browser pada runtime lokal yang sama memeriksa statistik, tombol migrasi transaksi, review/progres dan form akun. Screenshot lokal berada pada output/playwright. Tidak ada crawling atau sambungan PostgreSQL nyata. Hash auth.json tetap sama. Docker daemon tidak aktif; build image frontend belum diverifikasi. Perintah tersisa saat daemon tersedia: `docker build -t beesense-crawler-frontend:api Crawler/Frontend`.
 
-Pengujian mencakup target/baseline invalid, normalisasi dan host URL tujuh platform, alias Threads/Instagram/Facebook/X, capability gating, query/target/kartu monitor tujuh sumber, duplikasi, respons survei atomik, izin/konflik, CSV serta XLSX multi-sheet, idempotency header, penolakan akses, navigasi mobile, hasil parsial, dan respons validasi yang terlambat. Tes simulasi tidak membuktikan integrasi browser worker atau keberhasilan target 1.000 post.
+Status: **Not fully verified untuk deployment**. Frontend dapat ditinjau; layanan HTTP/worker, penyimpanan auth.json dan migrasi PostgreSQL adalah tahap berikutnya. Compose/env/infrastruktur produksi dipertahankan. Graphify dan Obsidian mencatat lingkup frontend serta penghapusan utility migrasi lama.
 
-Tidak ada tabel/database, skema persisten server, atau model yang diubah. **No migration required.** File CI frontend ditambahkan, namun hasil GitHub Actions baru dapat diketahui setelah perubahan dipublikasikan.
+## Koreksi tombol dan tabel hasil
 
-## Batas integrasi dan pekerjaan berikutnya
+Statistik sebelumnya berupa inline-link dan Migrasi memakai ghost button. Kini `PlatformResults.tsx` memakai tautan navigasi berbentuk tombol berbingkai dengan ikon grafik; migrasi menjadi tombol oranye dengan ikon database. `JobStatistics.tsx` memakai gaya migrasi yang sama. Latar putih #FFFFFF, teks #000000, border Statistik #737373, migrasi #FF8A24 dengan border #A44800; Plus Jakarta Sans 14 px dan tinggi nominal minimal 44 px. Hover/fokus memberi batas yang lebih tegas.
 
-Backend harus mengimplementasikan [kontrak API](API_CONTRACT.md), autentikasi/izin proyek, persistensi pekerjaan dan idempotensi, worker yang tetap berjalan sesudah tab ditutup, deduplikasi baseline nyata, browser CAPTCHA terotorisasi, serta ekspor final/checksum. Paginasi riwayat di server dan template survei dinamis perlu dirinci pada PRD Backend. Frontend awal membatasi tampilan riwayat menjadi 20 item per halaman dari koleksi yang dikirim server.
+Tabel kini mempunyai tujuh kolom berproporsi tetap. Angka rata kanan/tabular, komentar dan balasan terpisah, nama/waktu pada dua baris, label penyimpanan tidak membungkus, header Tindakan terlihat. Grid aksi menyusun Statistik/Lihat data pada baris pertama dan Migrasi pada baris penuh berikutnya. Border baris dan padding konsisten; scroller mobile berfokus dan mempunyai petunjuk geser.
 
-Berkas sosial delapan sheet dan verifikasi manifest sebenarnya berasal dari backend/exporter, bukan unduhan sintetis frontend. Handoff survei dan lima sumber sosial baru membutuhkan validasi adapter skema NLP; simulasi memblokirnya. Rilis akuisisi produksi belum dapat diterima sampai integrasi tersebut diuji dengan worker nyata; ini tidak menghalangi peninjauan UI melalui mode demo.
-
-Pemetaan arsitektur dan dependensi diperbarui melalui Graphify; catatan [Obsidian Frontend React Crawler](<../../../graphify-out/obsidian/Frontend React Crawler.md>) membedakan implementasi UI dari layanan yang masih direncanakan. Batas ekstraksi graf dan biaya token tersedia di laporan Graphify root.
+Audit terbaru terhadap pedoman web: `src/features/PlatformResults.tsx` pass (scope header, tabel semantik, link navigasi tetap link, aksi tetap button, ikon dekoratif tersembunyi); `src/features/JobStatistics.tsx` pass; `src/styles.css` pass (fokus, hit area, teks, hover dan overflow lokal). Pemeriksaan memakai npm run check, build:demo, format:check serta visual browser pada runtime Vite yang sama. Tidak ada perubahan perilaku backend atau database; No migration required.

@@ -1,5 +1,5 @@
 ---
-source_file: "docs/machine-learning/CONTEXT_RELEVANCE.md"
+source_file: "graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md"
 type: "concept"
 community: "Penyaringan Relevansi dan Narasi Topik"
 tags:
@@ -11,10 +11,11 @@ tags:
 # outputs/nlp_20261102_relevance_topics20_gemini_02/
 
 ## Connections
-- [[Explicit Gemini authorization]] - `rationale_for` [EXTRACTED]
-- [[Immutable narrative enrichment]] - `rationale_for` [EXTRACTED]
-- [[Penyaringan relevansi konteks sebelum clustering]] - `references` [EXTRACTED]
+- [[After-filtering clustering branch]] - `shares_data_with` [EXTRACTED]
+- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
+- [[Gemini explains fitted topics]] - `shares_data_with` [EXTRACTED]
+- [[Versioned snapshot bundle and manifest]] - `conceptually_related_to` [EXTRACTED]
 - [[configdashboard.json]] - `references` [EXTRACTED]
-- [[outputsnlp_20261102_relevance_topics20_01]] - `shares_data_with` [EXTRACTED]
+- [[scriptsgenerate_topic_narratives.py]] - `shares_data_with` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

@@ -1,25 +1,30 @@
 ---
 type: community
-cohesion: 0.22
-members: 10
+cohesion: 0.15
+members: 15
 ---
 
 # Model dan Pengujian NLP
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 10 nodes
+**Cohesion:** 0.15 - loosely connected
+**Members:** 15 nodes
 
 ## Members
-- [[._apply_context_relevance()]] - code - MachineLearning/social_nlp.py
-- [[._clean()]] - code - MachineLearning/social_nlp.py
-- [[._explanation_evidence()]] - code - MachineLearning/social_nlp.py
-- [[.load_decisions()]] - code - MachineLearning/context_relevance.py
-- [[.prepare_excel()]] - code - MachineLearning/social_nlp.py
-- [[.sentence_spans()]] - code - MachineLearning/social_nlp.py
-- [[.test_long_segments_cover_text_without_silent_truncation()]] - code - tests/nlp/test_social_nlp.py
-- [[.test_span_offsets_and_abbreviations_are_source_faithful()]] - code - tests/nlp/test_social_nlp.py
-- [[Extract real sentences using relevance plus MMR diversity.]] - rationale - MachineLearning/social_nlp.py
-- [[Rule-based segmentation preserving exact offsets in the original text.]] - rationale - MachineLearning/social_nlp.py
+- [[.test_shipped_dashboard_and_explanations_need_no_training_environment()]] - code - tests/cloud/test_dashboard_runtime.py
+- [[CloudRuntimeTests]] - code - tests/cloud/test_dashboard_runtime.py
+- [[DashboardTests]] - code - tests/nlp/test_social_nlp.py
+- [[No modelnetwork calls policy, provenance and integration regressions.]] - rationale - tests/nlp/test_context_relevance.py
+- [[Resolve one editable NLP config and optional legacy partial overrides.      Expl]] - rationale - MachineLearning/social_nlp.py
+- [[Run in an isolated Cloud environment, using only root requirements.txt.]] - rationale - tests/cloud/test_dashboard_runtime.py
+- [[Start the local relevance experiment, or its preserved baseline snapshot.]] - rationale - scripts/relevance_dashboard.py
+- [[load_config()]] - code - MachineLearning/social_nlp.py
+- [[main()_7]] - code - scripts/relevance_dashboard.py
+- [[relevance_dashboard.py]] - code - scripts/relevance_dashboard.py
+- [[social_nlp.py]] - code - MachineLearning/social_nlp.py
+- [[test_context_relevance.py]] - code - tests/nlp/test_context_relevance.py
+- [[test_dashboard_runtime.py]] - code - tests/cloud/test_dashboard_runtime.py
+- [[test_social_nlp.py]] - code - tests/nlp/test_social_nlp.py
+- [[test_streamlit_app.py]] - code - tests/nlp/test_streamlit_app.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,15 +34,23 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 8 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 5 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
-- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
+- 12 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 7 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 5 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 5 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 2 edges to [[_COMMUNITY_topic_sentence_export.py]]
+- 2 edges to [[_COMMUNITY_Arsip Data Harian]]
+- 1 edge to [[_COMMUNITY_Pengujian UI Streamlit]]
+- 1 edge to [[_COMMUNITY_Pengujian Penjelasan Topik]]
+- 1 edge to [[_COMMUNITY_thread_url]]
+- 1 edge to [[_COMMUNITY_thread_url_1]]
+- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
+- 1 edge to [[_COMMUNITY_app.py]]
 
 ## Top bridge nodes
-- [[.prepare_excel()]] - degree 10, connects to 4 communities
-- [[._apply_context_relevance()]] - degree 5, connects to 3 communities
-- [[.load_decisions()]] - degree 4, connects to 2 communities
-- [[.sentence_spans()]] - degree 5, connects to 1 community
-- [[._clean()]] - degree 4, connects to 1 community
+- [[social_nlp.py]] - degree 21, connects to 8 communities
+- [[test_social_nlp.py]] - degree 10, connects to 4 communities
+- [[test_context_relevance.py]] - degree 9, connects to 3 communities
+- [[test_streamlit_app.py]] - degree 6, connects to 3 communities
+- [[DashboardTests]] - degree 4, connects to 3 communities

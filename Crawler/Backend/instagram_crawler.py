@@ -27,12 +27,21 @@ from pathlib import Path
 from types import SimpleNamespace
 from urllib.parse import urlsplit
 
+from Crawler.Backend.crawler_config import DEFAULT_CONFIG_PATH, standalone_config
+from Crawler.Backend.crawler_limits import (
+    cap,
+    deadline_after,
+    reached,
+    remaining,
+    remaining_seconds,
+)
 from Crawler.Backend.Reddit import crawl_reddit_single as contract
 from Crawler.Backend.social_export import (
     COMPACT_COLUMNS,
     COMPACT_FILE,
     SocialExportMixin,
 )
+from Crawler.Backend.storage_config import require_excel_storage, storage_config
 
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = "1.0.0"
@@ -321,9 +330,9 @@ class InstagramSettings:
     session_file: str
     request_delay_seconds: float = 2
     search_results: int = 50
-    max_comments: int = 100
-    max_replies: int = 30
-    max_replies_per_thread: int = 10
+    max_comments: int | None = 100
+    max_replies: int | None = 30
+    max_replies_per_thread: int | None = 10
     search_tab: str = "recent"
     timeout_seconds: int = 90
 
@@ -524,10 +533,10 @@ def collect(operation, target, settings, emit, *, client=None):
         media_id = str(_value(media, "id") or pk)
         seen, parents, cursor, cursors = set(), [], None, set()
         # Calls may return more than requested. Export caps apply to unique IDs.
-        while len(parents) < settings["max_comments"]:
+        while not reached(len(parents), settings["max_comments"]):
             items, next_cursor = client.media_comments_chunk(
                 media_id,
-                max_amount=settings["max_comments"] - len(parents),
+                max_amount=remaining(settings["max_comments"], len(parents)) or 100,
                 min_id=cursor,
             )
             for item in items:
@@ -537,7 +546,7 @@ def collect(operation, target, settings, emit, *, client=None):
                 seen.add(native)
                 emit("record", normalize_item(item, url, media=media))
                 parents.append(native)
-                if len(parents) >= settings["max_comments"]:
+                if reached(len(parents), settings["max_comments"]):
                     break
             if not next_cursor or next_cursor in cursors or not items:
                 break
@@ -546,17 +555,21 @@ def collect(operation, target, settings, emit, *, client=None):
         replies = 0
         for parent in parents:
             if (
-                replies >= settings["max_replies"]
-                or not settings["max_replies_per_thread"]
+                reached(replies, settings["max_replies"])
+                or settings["max_replies_per_thread"] == 0
             ):
                 break
             cursor, cursors, count = None, set(), 0
-            cap = min(
-                settings["max_replies_per_thread"], settings["max_replies"] - replies
+            thread_limit = cap(
+                settings["max_replies_per_thread"],
+                remaining(settings["max_replies"], replies),
             )
-            while count < cap:
+            while not reached(count, thread_limit):
                 items, next_cursor = client.media_comment_replies_chunk(
-                    media_id, parent, max_amount=cap - count, min_id=cursor
+                    media_id,
+                    parent,
+                    max_amount=remaining(thread_limit, count) or 100,
+                    min_id=cursor,
                 )
                 for item in items:
                     native = native_pk(_value(item, "pk"))
@@ -568,7 +581,7 @@ def collect(operation, target, settings, emit, *, client=None):
                     )
                     count += 1
                     replies += 1
-                    if count >= cap:
+                    if reached(count, thread_limit):
                         break
                 if not next_cursor or next_cursor in cursors or not items:
                     break
@@ -628,11 +641,13 @@ def _configuration(value):
         raise ValueError("config must be an object")
     cfg = deepcopy(value)
     if set(cfg) - {
+        "storage",
         "project_id",
         "since",
         "until",
         "include_keywords",
         "exclude_keywords",
+        "comment_exclude_keywords",
         "include_mode",
         "delay",
         "timeout_seconds",
@@ -669,10 +684,20 @@ def _configuration(value):
         ):
             raise ValueError("Invalid " + key)
         cfg[key] = list(dict.fromkeys(s.strip() for s in items))
+    cfg["storage"] = storage_config(cfg.get("storage"))
+    cfg.setdefault("comment_exclude_keywords", None)
+    if cfg["comment_exclude_keywords"] is not None:
+        value = cfg["comment_exclude_keywords"]
+        if not isinstance(value, list) or any(
+            not isinstance(term, str) or not term.strip() for term in value
+        ):
+            raise ValueError("Invalid comment_exclude_keywords")
     cfg.setdefault("include_mode", "any")
     if cfg["include_mode"] not in {"any", "all"}:
         raise ValueError("include_mode must be any or all")
-    _integer(cfg.setdefault("total_seconds", 1800), "total_seconds", 1, 86400)
+    cfg.setdefault("total_seconds", 1800)
+    if cfg["total_seconds"] is not None:
+        _integer(cfg["total_seconds"], "total_seconds", 1, 86400)
     _integer(cfg.setdefault("timeout_seconds", 90), "timeout_seconds", 5, 600)
     delay = cfg.setdefault("delay", {"mode": "fixed", "seconds": 2})
     if (
@@ -756,10 +781,17 @@ def _configuration(value):
         ("rate_limit_cooldown_seconds", 1, 10800),
         ("rate_limit_max_retries", 0, 10),
     ]:
-        _integer(p[key], key, low, high)
-    if (
-        p["min_posts"] > min(p["max_posts"], p["max_candidates"])
-        or p["min_comments_per_post"] > p["max_comments"]
+        if p[key] is not None or key not in {
+            "max_posts",
+            "max_candidates",
+            "max_comments",
+            "max_replies",
+            "max_replies_per_thread",
+            "max_search_pages",
+        }:
+            _integer(p[key], key, low, high)
+    if reached(p["min_posts"] - 1, cap(p["max_posts"], p["max_candidates"])) or reached(
+        p["min_comments_per_post"] - 1, p["max_comments"]
     ):
         raise ValueError("Target exceeds acquisition caps")
     if p["search_tab"] not in {"recent", "top", "clips"}:
@@ -803,7 +835,7 @@ class InstagramCrawler(SocialExportMixin):
         monotonic=time.monotonic,
     ):
         self.config = _configuration(
-            ROOT / "config/instagram_crawler.json" if config is None else config
+            standalone_config(config, "instagram", backend="instagrapi")
         )
         self.method = METHOD
         self.backend_version = upstream_version()
@@ -906,6 +938,7 @@ class InstagramCrawler(SocialExportMixin):
         )
 
     def run(self, output_dir):
+        require_excel_storage(self.config)
         excluded_urls, excluded_keys, baselines = self._baseline()
         output = Path(output_dir).resolve()
         run_id = str(uuid.uuid4())
@@ -915,7 +948,7 @@ class InstagramCrawler(SocialExportMixin):
         sink = contract.BundleSink(output, self.config["project_id"], run_id)
         p = self.config["platforms"]["instagram"]
         began = self.clock()
-        deadline = began + self.config["total_seconds"]
+        deadline = deadline_after(began, self.config["total_seconds"])
         counts = dict(
             posts_attempted=0,
             posts_exported=0,
@@ -944,7 +977,7 @@ class InstagramCrawler(SocialExportMixin):
                 observed_at=contract.now_iso(),
                 platform="instagram",
                 elapsed_seconds=round(self.clock() - began, 2),
-                remaining_seconds=round(max(0, deadline - self.clock()), 2),
+                remaining_seconds=remaining_seconds(deadline, self.clock()),
                 **counts,
                 **extra,
             )
@@ -958,7 +991,7 @@ class InstagramCrawler(SocialExportMixin):
             if url in seen_urls:
                 counts["duplicate_posts_skipped"] += 1
                 return
-            if len(seen_urls) >= p["max_candidates"]:
+            if reached(len(seen_urls), p["max_candidates"]):
                 return
             seen_urls.add(url)
             if url in excluded_urls:
@@ -974,7 +1007,7 @@ class InstagramCrawler(SocialExportMixin):
                 if counts["qualified_posts"] >= p["min_posts"]:
                     stop = "TARGET_MET"
                     break
-                if counts["posts_attempted"] >= p["max_posts"]:
+                if reached(counts["posts_attempted"], p["max_posts"]):
                     stop = "POST_LIMIT"
                     break
                 if queue:
@@ -982,8 +1015,8 @@ class InstagramCrawler(SocialExportMixin):
                     counts["posts_attempted"] += 1
                 elif (
                     searches
-                    and counts["search_pages"] < p["max_search_pages"]
-                    and len(seen_urls) < p["max_candidates"]
+                    and not reached(counts["search_pages"], p["max_search_pages"])
+                    and not reached(len(seen_urls), p["max_candidates"])
                 ):
                     operation, origin = "search", None
                     tag, cursor = searches.popleft()
@@ -1006,7 +1039,13 @@ class InstagramCrawler(SocialExportMixin):
                         operation,
                         target,
                         self.settings,
-                        min(self.config["timeout_seconds"], deadline - self.clock()),
+                        (deadline - self.clock())
+                        if operation == "media"
+                        and p["max_comments"] is None
+                        and self.config["backend"] != "browser"
+                        else min(
+                            self.config["timeout_seconds"], deadline - self.clock()
+                        ),
                         lambda kind, row: events.append((kind, row)),
                     )
                 except (Exception, KeyboardInterrupt) as error:
@@ -1056,7 +1095,10 @@ class InstagramCrawler(SocialExportMixin):
                         selected, reason = [], "duplicate_root_in_run"
                         counts["duplicate_posts_skipped"] += 1
                     if selected:
-                        if sink.counts["Contents"] + len(selected) > 500000:
+                        if (
+                            sink.counts["Contents"] + len(selected) > 500000
+                            and p["max_comments"] is not None
+                        ):
                             selected, reason = [], "output_row_budget"
                             result = {**result, "status": "OUTPUT_ROW_BUDGET"}
                     if selected:
@@ -1281,9 +1323,7 @@ class InstagramCrawler(SocialExportMixin):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--config", type=Path, default=ROOT / "config/instagram_crawler.json"
-    )
+    parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG_PATH)
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument(
         "--auth-file",

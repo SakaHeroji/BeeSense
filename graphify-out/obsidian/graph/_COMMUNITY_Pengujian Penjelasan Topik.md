@@ -37,8 +37,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_topic_sentence_export.py]]
+- 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
 
 ## Top bridge nodes
 - [[test_topic_explanations.py]] - degree 5, connects to 2 communities

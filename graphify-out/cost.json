@@ -328,6 +328,134 @@
       "ast_tokens": 0,
       "files": 3,
       "scope": "Documentation-only scoped refresh of crawler coverage, two clustering branches and dashboard artifact flow"
+    },
+    {
+      "date": "2026-11-03T01:54:14.003642+00:00",
+      "files": 28,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "crawler configuration consolidation"
+    },
+    {
+      "date": "2026-11-03T02:32:04.276739+00:00",
+      "files": 28,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "crawler configuration consolidation"
+    },
+    {
+      "date": "2026-11-03T03:27:37.473242+00:00",
+      "files": 29,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "crawler nullable limits and complete comment pagination"
+    },
+    {
+      "date": "2026-11-03T04:56:29.732381+00:00",
+      "files": 49,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "frontend per platform and Excel PostgreSQL migration"
+    },
+    {
+      "date": "2026-11-03T05:21:48.775054+00:00",
+      "files": 45,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "frontend only, transaction migration/statistics and optional auth; retire manual/Excel backend"
+    },
+    {
+      "date": "2026-11-03T05:42:05.970505+00:00",
+      "files": 4,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "button affordance and results table layout"
+    },
+    {
+      "date": "2026-11-03T06:12:01.132843+00:00",
+      "files": 15,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "TikTok Omkar backend and blocked live trial"
+    },
+    {
+      "date": "2026-11-03T06:47:02.763131+00:00",
+      "files": 22,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "final TikTok-Api backend and three failed live trials"
+    },
+    {
+      "date": "2026-11-03T07:30:07.282726+00:00",
+      "files": 19,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "native TikTok browser backend, failed headless/headed trials and historical Pyktok trial"
+    },
+    {
+      "date": "2026-11-03T07:41:52.787740+00:00",
+      "files": 5,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "user TikWM probe HTTP403; documentation-only, native backend unchanged"
+    },
+    {
+      "date": "2026-11-03T08:11:13.342847+00:00",
+      "files": 10,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "existing Chrome public capture, offline import and cancelled manual Chromium"
+    },
+    {
+      "date": "2026-11-03T09:03:42.340129+00:00",
+      "files": 17,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "Chrome live bridge and optional local extension; installation awaits approval"
+    },
+    {
+      "date": "2026-11-03T09:26:44.257094+00:00",
+      "files": 17,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "TikTok2.4.1 user-installed extension preparation; manual pairing required"
+    },
+    {
+      "date": "2026-11-03T09:28:15.238244+00:00",
+      "files": 17,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "TikTok2.4.1 user-installed extension preparation; manual pairing required"
+    },
+    {
+      "date": "2026-11-03T09:30:49.536764+00:00",
+      "files": 17,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "TikTok2.4.1 user-installed extension preparation; manual pairing required"
+    },
+    {
+      "date": "2026-11-03T10:15:00.400999+00:00",
+      "files": 18,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "TikTok2.5.0 all-comment pagination fix; user stop, commit/push branch without Streamlit deploy"
     }
   ],
   "total_input_tokens": 0,

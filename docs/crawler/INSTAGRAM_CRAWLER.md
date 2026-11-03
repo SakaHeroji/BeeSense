@@ -1,12 +1,16 @@
 # InstagramCrawler: instagrapi dan Chrome
 
-## Integrasi dan run tiga jam
+> Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
+
+## Integrasi dan konfigurasi aktif
 
 Instruksi baru pengguna mengizinkan integrasi tanpa menunggu trial lama yang
 dihentikan. `SocialCrawler` 1.5 kini menggunakan worker dan `InstagramAdapter`
 dari modul ini, dengan kontrak Excel yang sama. Preset
-`config/social_crawler_instagram_3h.json` hanya mengaktifkan Instagram, 10.800 detik,
-target 1.000 post dengan minimum 10 komentar; YouTube/Reddit tidak di-crawl ulang.
+`config/social_crawler.json` menyediakan bagian Instagram; aktifkan hanya flag
+Instagram untuk menjalankan target minimal 1.000 post tanpa batas jam dan tanpa
+minimum komentar. Semua komentar/balasan yang tersedia diambil tanpa cap. Untuk
+Instagram-only, nonaktifkan platform lain dalam file utama.
 Run `outputs/social_instagram_20261030_1000_3h_01` mulai 30 Oktober **13.28 WIB**,
 deadline sekitar **16.28 WIB**. Hasil akhir belum ditetapkan selama proses berjalan.
 
@@ -21,7 +25,7 @@ Rencana akhir: [pipeline akuisisi sampai deployment](INSTAGRAM_PIPELINE_20261030
 
 Setelah instagrapi dan Instaloader tetap ditolak, pengguna memilih Chrome/Playwright
 dengan login manual. Class `InstagramCrawler` sekarang dapat memilih `backend:
-"browser"` lewat `config/instagram_browser_crawler.json`. Worker
+"browser"` pada `platforms.instagram.backend` di `config/social_crawler.json`. Worker
 `instagram_browser.py` memakai **@playwright/cli 0.1.22** dan Chrome terpasang.
 Instagrapi tetap tersedia melalui konfigurasi semula.
 
@@ -32,7 +36,7 @@ npx --yes --package @playwright/cli@0.1.22 playwright-cli -s=beesense-instagram 
   https://www.instagram.com/ --browser chrome --headed --persistent \
   --profile "$PWD/output/instagram_browser/chrome_profile"
 .venv-instagram/bin/python -m Crawler.Backend.instagram_crawler \
-  --config config/instagram_browser_crawler.json \
+  --config config/social_crawler.json \
   --output-dir outputs/instagram_browser_trial_baru
 ```
 
@@ -102,16 +106,16 @@ python3.12 -m venv .venv-instagram
 .venv-instagram/bin/python -m Crawler.Backend.instagram_crawler --dry-run
 ```
 
-`config/instagram_crawler.json` mempertahankan rentang tanggal, include/exclude
+`config/social_crawler.json` mempertahankan rentang tanggal, include/exclude
 keyword dan baseline `outputs/social_20261028_01` dari percobaan Reddit.
-Anggaran akuisisi **1800 detik (30 menit)**, timeout operasi 90 detik, target
-1000 root dengan minimum 10 komentar/balasan unik. Target adalah batas aspirasi,
+Durasi akuisisi **tanpa batas jam** (`total_seconds: null`), timeout request/operasi
+biasa 90 detik, target 1.000 root dengan minimum komentar nol. Target adalah batas aspirasi,
 bukan jaminan. Pencarian memakai hashtag kuliah/kampus/universitas/beasiswa/jurusan;
 pencarian hashtag bukan pencarian frasa Reddit. Pagination menyimpan cursor selama
 run dan berhenti pada cursor berulang, batas halaman/kandidat/post atau deadline.
 Hasil recent Instagram tidak dijamin lengkap atau kronologis; tanggal dan keyword
 root tetap diperiksa lokal. since inklusif, until eksklusif. Komentar dipertahankan
-sebagai konteks kecuali terkena exclude.
+sebagai konteks seluruhnya dengan `comment_exclude_keywords: []`; exclude root tetap berlaku.
 
 ## Login lokal
 
@@ -374,11 +378,11 @@ tercapai. Percobaan pemulihan kedua 25 detik menghasilkan0 record. Pengguna kemu
 mengonfirmasi HTTP 429 pada Chrome; error CLI sebelumnya hanya merekam kegagalan
 navigasi, sehingga tidak boleh diklaim sebagai status429 terukur oleh crawler lama.
 
-SocialCrawler 1.5.1 kini menetapkan jeda Instagram360 detik dan maksimum3 retry,
+Pada riwayat SocialCrawler 1.5.1, konfigurasi menetapkan jeda Instagram360 detik dan maksimum3 retry,
 seperti preset Reddit. Waktu tunggu memakai nilai terbesar antara konfigurasi dan
 Retry-After. Retry mempertahankan operasi/URL yang sama dan tidak melampaui deadline
 global awal16.28WIB. Konfigurasi resume mengecualikan seluruh post tersimpan dan
-memakai sisa anggaran; preset utama tetap10.800 detik/target 1.000. Tidak ada crawling
+memakai sisa anggaran; preset pada campaign tersebut memakai10.800 detik/target 1.000. Tidak ada crawling
 YouTube/Reddit baru, solver, rotasi identitas atau password login ulang.
 
 Browser mengamati status429 dari respons Instagram, termasuk respons main-document

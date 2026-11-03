@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "concept"
-community: "Compiler TypeScript"
-location: "L44"
+community: "Frontend dan Transaksi Sosmed"
+location: "L48"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Compiler_TypeScript
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # typescript
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[typescript]] - `imports` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Compiler_TypeScript
+#graphify/concept #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

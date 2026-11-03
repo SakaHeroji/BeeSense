@@ -1,18 +1,21 @@
 ---
-source_file: "scripts/merge_social_datasets.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Penggabungan Dataset"
-location: "L399"
+community: "Worker Instaloader"
+location: "L745"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penggabungan_Dataset
+  - community/Worker_Instaloader
 ---
 
 # main()
 
 ## Connections
-- [[merge()]] - `calls` [EXTRACTED]
-- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
+- [[.close()_3]] - `calls` [EXTRACTED]
+- [[.plan()]] - `calls` [EXTRACTED]
+- [[.run()]] - `calls` [EXTRACTED]
+- [[InstaloaderCrawler]] - `calls` [EXTRACTED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penggabungan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

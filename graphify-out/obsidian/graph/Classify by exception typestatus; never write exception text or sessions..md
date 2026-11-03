@@ -1,17 +1,17 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
-community: "Pengambilan HTML Reddit"
-location: "L96"
+community: "Batas Crawler Opsional"
+location: "L105"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengambilan_HTML_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # Classify by exception type/status; never write exception text or sessions.
 
 ## Connections
-- [[error_receipt()]] - `rationale_for` [EXTRACTED]
+- [[error_receipt()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengambilan_HTML_Reddit
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

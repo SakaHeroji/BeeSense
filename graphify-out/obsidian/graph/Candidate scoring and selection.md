@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Coherence c_v evaluation protocol]] - `references` [EXTRACTED]
-- [[Twenty topic mean coherence publication gate]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -12,16 +12,17 @@ tags:
 # test_instagram_crawler.py
 
 ## Connections
-- [[Clock]] - `contains` [EXTRACTED]
+- [[Clock_1]] - `contains` [EXTRACTED]
 - [[FakeClient]] - `contains` [EXTRACTED]
 - [[InstagramCrawlerTests]] - `contains` [EXTRACTED]
 - [[Offline contractdeadline tests; fixture data is always marked synthetic.]] - `rationale_for` [EXTRACTED]
 - [[SocialCrawler]] - `imports` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
-- [[records()]] - `contains` [EXTRACTED]
+- [[records()_1]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[spawn_fixture()]] - `contains` [EXTRACTED]
 - [[spawn_hanging()]] - `contains` [EXTRACTED]
 - [[test_social_crawler_instagram.py]] - `imports_from` [EXTRACTED]
+- [[test_unlimited_crawling.py]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram

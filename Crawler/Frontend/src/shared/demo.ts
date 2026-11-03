@@ -1,3 +1,4 @@
+import { transactionDemoApi } from './transaction-demo';
 import type {
   Api,
   Capabilities,
@@ -7,31 +8,18 @@ import type {
   Job,
   SeriesPoint,
   PreviewRow,
-  SurveyAnswer,
-  SurveyReview,
 } from './types';
-import {
-  initialConfig,
-  platforms,
-  queryLines,
-  reviewUrls,
-  surveyKey,
-  validateConfig,
-  validateSurvey,
-} from './domain';
+import { initialConfig, redactConfig, platforms, queryLines, validateConfig } from './domain';
 
-// This adapter NEVER contacts social networks. Only job metadata (never survey answers) persists.
-const storageKey = 'beesense:crawler:demo-jobs:v2';
+// This adapter NEVER contacts social networks. Only public job metadata persists; credentials never enter browser storage.
+const storageKey = 'beesense:crawler:demo-jobs:v3';
 const plans = new Map<string, { config: Config; expiresAt: string }>();
-const reviews = new Map<string, SurveyReview>();
-const surveyKnown = new Map<string, string>();
-const surveyDatasets = new Map<string, SurveyAnswer[]>();
-const committed = new Map<string, Job>();
 let jobCache: Job[] | undefined;
 const cap: Capabilities = {
+  migrationsAvailable: true,
+  authAvailable: true,
   platforms,
   verificationAvailable: false,
-  surveySchemaSupported: false,
   limits: {
     maxUrls: 100,
     maxRows: 10000,
@@ -159,9 +147,12 @@ function load(): Job[] {
   return (jobCache = seed());
 }
 function save(jobs: Job[]) {
-  jobCache = jobs;
+  jobCache = jobs.map((job) => ({
+    ...job,
+    config: job.config ? redactConfig(job.config) : undefined,
+  }));
   try {
-    localStorage.setItem(storageKey, JSON.stringify(jobs));
+    localStorage.setItem(storageKey, JSON.stringify(jobCache));
   } catch {
     /* UI still works in memory when storage is unavailable. */
   }
@@ -213,16 +204,15 @@ function advance(job: Job): Job {
         : 'RUNNING';
   if (job.status === 'RUNNING' && !job.startedAt) {
     job.startedAt = stamp();
-    job.deadlineAt = new Date(Date.now() + (job.config?.duration || 10800) * 1000).toISOString();
+    job.deadlineAt = job.config?.duration
+      ? new Date(Date.now() + job.config.duration * 1000).toISOString()
+      : undefined;
   }
   const ratio = Math.min(1, Math.max(0, (elapsed - 2) / 38));
   job.platforms = job.platforms.map((p) => {
     const waiting = p.platform === 'reddit' && blocked;
     const previous = p.counts;
-    const target =
-      job.config?.mode === 'url'
-        ? job.config.urls.filter((u) => reviewUrls([u])[0].platform === p.platform).length
-        : p.target;
+    const target = p.target;
     const qualified = waiting ? previous.qualified : Math.round(target * ratio);
     const extra = job.mode === 'url' ? 0 : Math.round(qualified * 0.12);
     const roots = Math.min(target + extra, qualified + extra);
@@ -267,6 +257,7 @@ function advance(job: Job): Job {
   return update(job);
 }
 export const demoApi: Api = {
+  ...transactionDemoApi,
   async session() {
     const observer = sessionStorage.getItem('beesense:demo-role') === 'observer';
     return {
@@ -288,17 +279,12 @@ export const demoApi: Api = {
     requireOperator();
     const errors = validateConfig(config, cap);
     if (errors.length) throw new Error(errors.map((e) => e.message).join(' '));
-    if (
-      config.mode === 'url' &&
-      reviewUrls(config.urls, new Set(['youtube:dQw4w9WgXcQ'])).some((r) => r.status !== 'valid')
-    )
-      throw new Error('Daftar URL harus valid dan unik; ulangi validasi URL.');
     const id = crypto.randomUUID(),
       expiresAt = new Date(Date.now() + 300000).toISOString();
-    plans.set(id, { config: structuredClone(config), expiresAt });
+    plans.set(id, { config: redactConfig(config), expiresAt });
     return {
       id,
-      config: structuredClone(config),
+      config: redactConfig(config),
       expiresAt,
       warnings: [
         'Mode simulasi: proses dipercepat menjadi sekitar 45 detik, tanpa mengakuisisi data sebenarnya.',
@@ -335,10 +321,7 @@ export const demoApi: Api = {
         .filter((p) => config.platforms[p].enabled)
         .map((p) => ({
           platform: p,
-          target:
-            config.mode === 'url'
-              ? config.urls.filter((u) => reviewUrls([u])[0].platform === p).length
-              : config.platforms[p].target,
+          target: config.platforms[p].target,
           status: 'PENDING',
           counts: emptyCounts(),
         })),
@@ -381,105 +364,26 @@ export const demoApi: Api = {
         'Simulasi tidak mempunyai browser worker. Pada mode API, tindakan ini harus membuka sesi worker yang terotorisasi; akses tidak ditandai pulih dari browser ini.',
     };
   },
-  async reviewUrls(urls, baselineIds) {
-    return reviewUrls(urls, new Set(baselineIds.length ? ['youtube:dQw4w9WgXcQ'] : []));
-  },
-  async validateSurvey(rows) {
-    requireOperator();
-    if (rows.length > cap.limits.maxRows) throw new Error('Batas 10.000 baris jawaban terlampaui.');
-    const result = validateSurvey(rows, surveyKnown);
-    reviews.set(result.id, structuredClone(result));
-    return result;
-  },
-  async commitSurvey(review, key) {
-    requireOperator();
-    if (committed.has(key)) return structuredClone(committed.get(key)!);
-    const current = reviews.get(review.id);
-    if (
-      !current ||
-      current.fingerprint !== review.fingerprint ||
-      Date.parse(current.expiresAt) <= Date.now()
-    )
-      throw new Error('Review survei kedaluwarsa; validasi ulang.');
-    const recheck = validateSurvey(current.validRows, surveyKnown);
-    if (recheck.validResponses !== current.validResponses || !current.validResponses)
-      throw new Error('Data berubah/duplikat sejak review. Validasi ulang.');
-    current.validRows.forEach((r) => surveyKnown.set(surveyKey(r), JSON.stringify(r)));
-    const id = `demo-survey-${key}`;
-    const datasetId = `demo-data-${key}`;
-    surveyDatasets.set(datasetId, structuredClone(current.validRows));
-    const job: Job = {
-      id,
-      name: 'Survei minat studi · batch manual',
-      mode: 'survey',
-      status: 'COMPLETED',
-      createdAt: stamp(),
-      startedAt: stamp(),
-      updatedAt: stamp(),
-      snapshotVersion: 1,
-      platforms: [],
-      series: [],
-      canStop: false,
-      demo: true,
-      events: [
-        {
-          id: crypto.randomUUID(),
-          at: stamp(),
-          message: 'Respons valid dikomit dalam memori demo, bukan ke server.',
-        },
-      ],
-      dataset: {
-        id: datasetId,
-        version: 1,
-        schema: 'survey.v1',
-        checksum: zeros,
-        partial: false,
-        rows: current.validRows.length,
-        responses: current.validResponses,
-        textRows: current.validRows.filter((r) => r.answer_text.trim()).length,
-        nlpSupported: false,
-      },
-    };
-    committed.set(key, job);
-    save([job, ...load()]);
-    return structuredClone(job);
-  },
   async dataset(job, page, search, source) {
     const ds = job.dataset!;
-    const survey = surveyDatasets.get(ds.id);
     let rows: PreviewRow[];
-    if (job.mode === 'survey')
-      rows = (survey || []).map((r, i) => ({
-        id: `${r.response_id}/${r.question_id}/${i}`,
-        source: 'survey',
-        kind: 'Jawaban survei',
-        text: r.answer_text || r.answer_value,
-        context:
-          r.question_id === 'Q01'
-            ? 'Apa pertimbangan utama memilih jurusan?'
-            : 'Seberapa penting biaya kuliah? (1–5)',
-        role: r.respondent_role === 'parent' ? 'Orang tua' : 'Calon mahasiswa',
-        date: r.submitted_at,
-        flag: `Template ${r.survey_id} v${r.survey_version}; izin ${r.usage_permission}; asal ${r.source_reference}`,
-      }));
-    else
-      rows = Array.from({ length: Math.min(ds.rows, 125) }, (_, i) => {
-        const platform = job.platforms[i % job.platforms.length]?.platform || 'youtube';
-        return {
-          id: `sintetis-${i + 1}`,
-          source: platform,
-          kind: ['Post', 'Komentar', 'Reply'][i % 3],
-          text: [
-            'Saya ingin memilih jurusan sesuai minat dan peluang kerja.',
-            'Informasi biaya kuliah dan beasiswa sangat membantu.',
-            'Lokasi kampus dan dukungan keluarga menjadi pertimbangan.',
-          ][i % 3],
-          context: 'Contoh sintetis percakapan pilihan kuliah',
-          date: job.createdAt,
-          role: 'Tidak diketahui',
-          flag: 'Data ilustrasi; bukan konten pengguna sebenarnya.',
-        };
-      });
+    rows = Array.from({ length: Math.min(ds.rows, 125) }, (_, i) => {
+      const platform = job.platforms[i % job.platforms.length]?.platform || 'youtube';
+      return {
+        id: `sintetis-${i + 1}`,
+        source: platform,
+        kind: ['Post', 'Komentar', 'Reply'][i % 3],
+        text: [
+          'Saya ingin memilih jurusan sesuai minat dan peluang kerja.',
+          'Informasi biaya kuliah dan beasiswa sangat membantu.',
+          'Lokasi kampus dan dukungan keluarga menjadi pertimbangan.',
+        ][i % 3],
+        context: 'Contoh sintetis percakapan pilihan kuliah',
+        date: job.createdAt,
+        role: 'Tidak diketahui',
+        flag: 'Data ilustrasi; bukan konten pengguna sebenarnya.',
+      };
+    });
     rows = rows.filter(
       (r) =>
         (!source || r.source === source) &&
@@ -502,12 +406,7 @@ export const demoApi: Api = {
           checksum: 'Tidak berlaku untuk simulasi',
         },
       ],
-      warning:
-        job.mode === 'survey' && !survey
-          ? 'Jawaban survei demo hanya disimpan dalam memori. Setelah refresh, impor ulang untuk melihat preview; jawaban tidak disimpan di browser storage.'
-          : job.mode !== 'survey'
-            ? 'Preview berisi maksimum 125 baris sintetis. Angka progres bukan jumlah data nyata.'
-            : undefined,
+      warning: 'Preview berisi maksimum 125 baris sintetis. Angka progres bukan jumlah data nyata.',
     };
   },
   async handoff(job, acceptPartial) {

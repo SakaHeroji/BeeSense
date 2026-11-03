@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
-community: "Validasi Konfigurasi Frontend"
-location: "L182"
+community: "Frontend dan Transaksi Sosmed"
+location: "L173"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Validasi_Konfigurasi_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # advance()
@@ -14,8 +14,7 @@ tags:
 ## Connections
 - [[dataset()]] - `calls` [EXTRACTED]
 - [[demo.ts]] - `contains` [EXTRACTED]
-- [[reviewUrls()]] - `calls` [EXTRACTED]
-- [[stamp()]] - `calls` [EXTRACTED]
+- [[stamp()_1]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Validasi_Konfigurasi_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

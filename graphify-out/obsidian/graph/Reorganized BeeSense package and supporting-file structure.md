@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Struktur Proyek.md"
 type: "document"
-community: "Alur Dataset Model Dashboard"
+community: "Wrapper RedditCrawler"
 location: "L7-L15"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Alur_Dataset_Model_Dashboard
+  - community/Wrapper_RedditCrawler
 ---
 
 # Reorganized BeeSense package and supporting-file structure
@@ -19,4 +19,4 @@ tags:
 - [[Reorganized Docker image remains unbuilt while local daemon is unavailable]] - `references` [EXTRACTED]
 - [[Root streamlit_apps.py delegates to Dashboard.app]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Alur_Dataset_Model_Dashboard
+#graphify/document #graphify/EXTRACTED #community/Wrapper_RedditCrawler

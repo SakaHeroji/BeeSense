@@ -1,32 +1,34 @@
 ---
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
-community: "Monitor Job dan Dataset"
-location: "L32"
+community: "Frontend dan Transaksi Sosmed"
+location: "L24"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Monitor_Job_dan_Dataset
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # platformName()
 
 ## Connections
-- [[Automatic()]] - `calls` [EXTRACTED]
-- [[Automatic.tsx]] - `imports` [EXTRACTED]
-- [[ConfigFields()]] - `calls` [EXTRACTED]
+- [[AuthSettings()]] - `calls` [EXTRACTED]
+- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[ConfigReview()]] - `calls` [EXTRACTED]
+- [[ConfigReview.tsx]] - `imports` [EXTRACTED]
 - [[DatasetView()]] - `calls` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
-- [[History()]] - `calls` [EXTRACTED]
-- [[History.tsx]] - `imports` [EXTRACTED]
 - [[JobDetail()]] - `calls` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
-- [[Manual.tsx]] - `imports` [EXTRACTED]
-- [[ManualUrl()]] - `calls` [EXTRACTED]
 - [[PlatformCard()]] - `calls` [EXTRACTED]
+- [[PlatformPage()]] - `calls` [EXTRACTED]
+- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[ProgressChart()]] - `calls` [EXTRACTED]
+- [[Shell()]] - `calls` [EXTRACTED]
+- [[Shell.tsx]] - `imports` [EXTRACTED]
+- [[TransactionMigration()]] - `calls` [EXTRACTED]
+- [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 - [[validateConfig()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Monitor_Job_dan_Dataset
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

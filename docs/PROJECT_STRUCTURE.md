@@ -1,5 +1,7 @@
 # Struktur proyek BeeSense
 
+Konfigurasi seluruh social crawler kini berada di **[config/social_crawler.json](../config/social_crawler.json)**; delapan preset duplikat sudah dihapus. [Panduan konfigurasi universal](crawler/CONFIGURATION.md) menjelaskan default bersama dan override per platform.
+
 Pemindahan folder dilakukan setelah integrasi Reddrix ke SocialCrawler 1.4.0 selesai. Kode dikelompokkan mengikuti komponen aplikasi; dataset, manifest, model tersimpan, dan isi workbook tidak dipindahkan atau diubah.
 
 ```text
@@ -21,7 +23,7 @@ BeeSense/
 │       └── Youtube/              # Adapter yt-dlp dan kontrak
 ├── MachineLearning/social_nlp.py
 ├── Dashboard/app.py
-├── config/                       # social_crawler.json, reddit_crawler.json, social_nlp.json
+├── config/                       # social_crawler.json, social_nlp.json, dashboard.json
 ├── requirements/                 # dashboard, crawler, reddrix, selenium, dev, nlp, sbert, coherence
 ├── deployment/docker/            # Dockerfile.dashboard, Dockerfile.crawler, Dockerfile.selenium
 ├── docs/                         # crawler/, machine-learning/, dashboard/, notes/
@@ -76,17 +78,21 @@ docker build -f deployment/docker/Dockerfile.selenium -t beesense-selenium:local
 
 Tidak ada perubahan schema database atau kontrak data: **No migration required**. Docker build/runtime setelah reorganisasi belum diverifikasi bila daemon lokal tidak tersedia; pemeriksaan path/COPY tidak menggantikan build image.
 
-Percobaan instagrapi memakai `config/instagram_crawler.json`, `requirements/instagram.txt`
+Percobaan instagrapi memakai `config/social_crawler.json`, `requirements/instagram.txt`
 dan `deployment/docker/Dockerfile.instagram`. Jalur Chrome memakai
-`config/instagram_browser_crawler.json`, `requirements/instagram-browser.txt` dan
+`config/social_crawler.json`, `requirements/instagram-browser.txt` dan
 `deployment/docker/Dockerfile.instagram-browser`, dengan Node/CLI/Chrome tersendiri. Lihat
 [panduan Instagram](crawler/INSTAGRAM_CRAWLER.md). `config/auth.json` berisi rahasia
 lokal dan diabaikan Git; sesi di `output/instagram/session.json` baru dibuat setelah
 login berhasil. Profil browser khusus berada di `output/instagram_browser/chrome_profile`.
 Trial Chrome lama mengambil 76 post/910 komentar sebelum dihentikan pengguna.
 Integrasi Instagram dalam SocialCrawler 1.5 kini tersedia; preset Instagram-only
-`config/social_crawler_instagram_3h.json` menjalankan target 1.000 post dalam tiga jam.
+`config/social_crawler.json` menjalankan target 1.000 post dalam tiga jam.
 Model/dashboard empat platform memakai snapshot Twitter 2 November yang lolos gate 20 topik/mean c_v ≥0,4; konfigurasi aktif mengarah ke artifact terverifikasi. Pemindahan tiga metode seleksi/Excel ke SocialExportMixin mempertahankan
 perilaku exporter YouTube/Reddit.
 
 `MachineLearning/topic_narratives.py` menangani transport/validasi Gemini untuk tahap `SocialNLPClusterer.generate_topic_narratives()`. CSV masuk direktori model versi baru; dashboard membaca hasil tanpa key. Panduan operasional: `docs/machine-learning/GEMINI_TOPIC_NARRATIVES.md`.
+
+NLP memakai satu `config/social_nlp.json`; lima preset bertanggal sudah dihapus. Konfigurasi historis tetap tersimpan dalam `summary.json` bundle model. Lihat [panduan kustomisasi NLP](machine-learning/CONFIGURATION.md).
+
+Output crawling terkurasi: `outputs/crawling/<platform>/<YYYY-MM-DD>/`. Audit mentah: `output/crawler_runs/`. Sumber terbit dan snapshot model tetap pada path historis. Lihat [struktur output](crawler/OUTPUTS.md).

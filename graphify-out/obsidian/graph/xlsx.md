@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Dependency Runtime Frontend"
-location: "L29"
+community: "Frontend dan Transaksi Sosmed"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Dependency_Runtime_Frontend
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # xlsx
@@ -15,4 +15,4 @@ tags:
 - [[dependencies]] - `contains` [EXTRACTED]
 - [[xlsx_1]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Dependency_Runtime_Frontend
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

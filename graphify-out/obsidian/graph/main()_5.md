@@ -1,19 +1,20 @@
 ---
-source_file: "Crawler/Backend/reddit_crawler.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Wrapper RedditCrawler"
-location: "L84"
+community: "app.py"
+location: "L2409"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wrapper_RedditCrawler
+  - community/apppy
 ---
 
 # main()
 
 ## Connections
-- [[.plan()_2]] - `calls` [EXTRACTED]
-- [[RedditCrawler]] - `calls` [EXTRACTED]
-- [[reddit_crawler.py]] - `contains` [EXTRACTED]
+- [[.render()]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler
+#graphify/code #graphify/EXTRACTED #community/apppy
