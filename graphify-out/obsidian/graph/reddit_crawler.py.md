@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/reddit_crawler.py"
 type: "code"
-community: "Konfigurasi Crawler Universal"
+community: "Wrapper RedditCrawler"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Wrapper_RedditCrawler
 ---
 
 # reddit_crawler.py
@@ -17,10 +17,10 @@ tags:
 - [[SocialCrawler]] - `imports` [EXTRACTED]
 - [[crawler_config.py]] - `imports_from` [EXTRACTED]
 - [[expand_config()]] - `imports` [EXTRACTED]
-- [[main()_14]] - `contains` [EXTRACTED]
+- [[main()_10]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[standalone_config()]] - `imports` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports_from` [EXTRACTED]
 - [[test_reddit_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_unlimited_crawling.py"
 type: "code"
-community: "Pengujian Client Instagram"
+community: "Kuota Harian Scweet"
 location: "L218"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Pengujian_Client_Instagram
+  - community/Kuota_Harian_Scweet
 ---
 
 # ScweetQuotaTests
@@ -19,4 +19,4 @@ tags:
 - [[SocialCrawlerSelenium]] - `uses` [INFERRED]
 - [[test_unlimited_crawling.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Pengujian_Client_Instagram
+#graphify/code #graphify/INFERRED #community/Kuota_Harian_Scweet

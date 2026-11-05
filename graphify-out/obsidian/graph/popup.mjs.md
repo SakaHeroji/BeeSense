@@ -5,14 +5,15 @@ community: "Konektor Chrome TikTok Lokal"
 location: "L1"
 tags:
   - graphify/code
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Konektor_Chrome_TikTok_Lokal
 ---
 
 # popup.mjs
 
 ## Connections
+- [[core.mjs]] - `imports_from` [EXTRACTED]
 - [[refresh()]] - `indirect_call` [INFERRED]
 - [[status]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Konektor_Chrome_TikTok_Lokal
+#graphify/code #graphify/EXTRACTED #community/Konektor_Chrome_TikTok_Lokal

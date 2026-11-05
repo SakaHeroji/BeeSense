@@ -17,7 +17,7 @@ tags:
 - [[Instaloader 1000 post, tanpa batas jam atau cap komentar]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler architecture note]] - `references` [EXTRACTED]
 - [[Iterator GraphQL balasan saat parent hanya preview]] - `references` [EXTRACTED]
-- [[One social_crawler.json business configuration shared by all runners]] - `references` [EXTRACTED]
+- [[Single social_crawler.json business configuration across all runners and Chrome transports]] - `references` [EXTRACTED]
 - [[SocialCrawler 1.10.0 dengan backend TikTok mandiri]] - `references` [EXTRACTED]
 - [[social_crawler.json sumber konfigurasi universal]] - `references` [EXTRACTED]
 

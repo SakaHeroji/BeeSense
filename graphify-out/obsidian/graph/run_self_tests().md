@@ -15,7 +15,7 @@ tags:
 - [[ContractTests]] - `indirect_call` [INFERRED]
 - [[RedditTests]] - `indirect_call` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[main()_13]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[run()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

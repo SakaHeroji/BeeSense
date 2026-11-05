@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Konfigurasi Crawler Universal"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # SocialExportMixin
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[TwitterCrawler]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

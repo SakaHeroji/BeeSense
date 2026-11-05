@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[main()_15]] - `calls` [EXTRACTED]
+- [[main()_11]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

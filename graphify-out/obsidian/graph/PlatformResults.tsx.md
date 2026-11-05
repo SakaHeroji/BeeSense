@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[PlatformResults()]] - `contains` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[TransactionPreview()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

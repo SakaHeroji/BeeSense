@@ -12,7 +12,7 @@ tags:
 # assert_accessible()
 
 ## Connections
-- [[.__init__()_29]] - `calls` [EXTRACTED]
+- [[.__init__()_27]] - `calls` [EXTRACTED]
 - [[SourceFailure]] - `calls` [EXTRACTED]
 - [[content_node()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]

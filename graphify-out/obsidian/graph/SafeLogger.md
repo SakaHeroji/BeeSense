@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Crawler Selenium"
+community: "Capture Reddit Playwright"
 location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium
+  - community/Capture_Reddit_Playwright
 ---
 
 # SafeLogger
 
 ## Connections
-- [[.__init__()_18]] - `method` [EXTRACTED]
+- [[.__init__()_16]] - `method` [EXTRACTED]
 - [[.debug()]] - `method` [EXTRACTED]
 - [[.error()]] - `method` [EXTRACTED]
 - [[.info()]] - `method` [EXTRACTED]
@@ -20,4 +20,4 @@ tags:
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium
+#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

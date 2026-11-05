@@ -12,7 +12,7 @@ tags:
 # RedditCrawler
 
 ## Connections
-- [[.__init__()_32]] - `method` [EXTRACTED]
+- [[.__init__()_30]] - `method` [EXTRACTED]
 - [[.plan()_2]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `calls` [EXTRACTED]
 - [[.test_barrier_exports_partial_without_calling_it_success()]] - `calls` [EXTRACTED]
@@ -28,7 +28,7 @@ tags:
 - [[Run only Reddit through the shared Reddrix implementation in SocialCrawler.]] - `rationale_for` [EXTRACTED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[UniversalConfigTests]] - `uses` [INFERRED]
-- [[main()_14]] - `calls` [EXTRACTED]
+- [[main()_10]] - `calls` [EXTRACTED]
 - [[reddit_crawler.py]] - `contains` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports` [EXTRACTED]
 - [[test_reddit_crawler.py]] - `imports` [EXTRACTED]

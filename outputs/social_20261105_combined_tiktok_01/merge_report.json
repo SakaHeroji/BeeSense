@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "output": "/Users/socs3/Documents/BeeSense/outputs/social_20261105_combined_tiktok_01/social_data.xlsx",
+  "rows": 36233,
+  "roots": 2552,
+  "comments": 33681,
+  "duplicate_native_ids": 0,
+  "duplicates_removed": 34764,
+  "duplicate_policy": "prefer_latest_supplied_observation",
+  "counts": {
+    "instagram/comment": 3680,
+    "instagram/post": 626,
+    "instagram/reply": 138,
+    "reddit/comment": 2409,
+    "reddit/post": 297,
+    "reddit/reply": 1808,
+    "tiktok/comment": 617,
+    "tiktok/post": 25,
+    "tiktok/reply": 806,
+    "twitter/comment": 198,
+    "twitter/post": 366,
+    "twitter/reply": 105,
+    "youtube/comment": 19770,
+    "youtube/reply": 4150,
+    "youtube/video": 1238
+  },
+  "source_workbooks": [
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/social_20261102_combined_twitter_01/social_data.xlsx",
+      "sha256": "de6caf9b30724cc3d990ce25c81859b895559cd4be28f7ccbf95528613ce5990",
+      "input_rows": 34764,
+      "retained_rows": 0
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/instagram/2026-10-30/social_data.xlsx",
+      "sha256": "91dcb3625bc976f82066a715573b6ac6dddf69bd425a500330947db238b9b994",
+      "input_rows": 4444,
+      "retained_rows": 4444
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/reddit/2026-10-27/social_data.xlsx",
+      "sha256": "b1f3cfab4b7071dccb2814616f40f92ee9f4c064255e1231dd38ae7ff9313076",
+      "input_rows": 2404,
+      "retained_rows": 2404
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/reddit/2026-10-28/social_data.xlsx",
+      "sha256": "7e5d9430aa171a6983590bcda29a7b23dab0d6f55122d9a4c79021226249c954",
+      "input_rows": 108,
+      "retained_rows": 108
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/reddit/2026-10-29/social_data.xlsx",
+      "sha256": "c25f858980093ee614e0c6b167011e935e6a1905a1aed5d85fddcd3c5f0a594a",
+      "input_rows": 1429,
+      "retained_rows": 1429
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/reddit/2026-10-30/social_data.xlsx",
+      "sha256": "4a692dfdbb4ebc776ed3ed003eecce3cb3bc193e33cd2ff80aa97969c66a4f5f",
+      "input_rows": 573,
+      "retained_rows": 573
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/tiktok/2026-11-03/social_data.xlsx",
+      "sha256": "3d83fd46bb2a0fdde8f7bde90772d6d4c5ec14f1041e1be419b232e0be193e48",
+      "input_rows": 412,
+      "retained_rows": 412
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/tiktok/2026-11-05/social_data.xlsx",
+      "sha256": "489706156bad2aadc23f4898dfda9ef0408938ae235eacad5f05f958d4228cc0",
+      "input_rows": 1036,
+      "retained_rows": 1036
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/twitter/2026-10-31/social_data.xlsx",
+      "sha256": "2ca805d256b042b66f5173f09806aae94e6063f8e6764b2cd75afe9b30a0f57e",
+      "input_rows": 45,
+      "retained_rows": 45
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/twitter/2026-11-02/social_data.xlsx",
+      "sha256": "d2110712a8720f774336919a1837f261c292fc45af5ca0530a27eb98c3ff5481",
+      "input_rows": 624,
+      "retained_rows": 624
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/youtube/2026-10-28/social_data.xlsx",
+      "sha256": "07320debec43d5c7f1090ddeb4300989baaf4d3ad4a1df5835fb11e61c73b2f1",
+      "input_rows": 5937,
+      "retained_rows": 5937
+    },
+    {
+      "path": "/Users/socs3/Documents/BeeSense/outputs/crawling/youtube/2026-10-29/social_data.xlsx",
+      "sha256": "bea92ce78d095c531389499af78697414cbbf32a27fbd4ee3a98ebb0c1923449",
+      "input_rows": 19221,
+      "retained_rows": 19221
+    }
+  ],
+  "output_sha256": "d6ced320451c6194694d72b6de9fe3861252ccc3b66c4b3983440ae8c87c8df5",
+  "row_order": "first native appearance; latest supplied record retained",
+  "source_observations_refreshed": false,
+  "synthetic": false,
+  "files_sha256": {
+    "record_lineage.jsonl": "07587086ecdea834ffcc7002abe821ff595856c5555dc528ada356e456771cbd",
+    "native_roots.json": "286a7c30531c54ee5217bcf281c230dab6762b3e8c9358c948f22b5c3fdf07b6",
+    "social_data.xlsx": "d6ced320451c6194694d72b6de9fe3861252ccc3b66c4b3983440ae8c87c8df5",
+    "duplicate_records.jsonl": "8c036c45e1c84d3b34e5dc87a269ea4cc8209d1d4ec0a12b7783b63a2846f295"
+  }
+}

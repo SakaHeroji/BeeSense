@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: "Render Dashboard Streamlit"
-location: "L507"
+community: "thread_url"
+location: "L514"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Render_Dashboard_Streamlit
+  - community/thread_url
 ---
 
 # Count evidence in the filter, keeping sentences/comments/parents distinct.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.topic_profile()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Render_Dashboard_Streamlit
+#graphify/rationale #graphify/EXTRACTED #community/thread_url

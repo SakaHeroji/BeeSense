@@ -1,24 +1,22 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L1398"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L2461"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # main()
 
 ## Connections
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[dumps()_1]] - `calls` [EXTRACTED]
-- [[parser()_1]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
-- [[run_self_tests()]] - `calls` [EXTRACTED]
-- [[schema_document()_1]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
-- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
+- [[.export_compact()]] - `calls` [EXTRACTED]
+- [[.plan()_5]] - `calls` [EXTRACTED]
+- [[.run()_4]] - `calls` [EXTRACTED]
+- [[SocialCrawler]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

@@ -20,7 +20,6 @@ tags:
 - [[FieldErrorsContext]] - `imports` [EXTRACTED]
 - [[Notice()]] - `imports` [EXTRACTED]
 - [[Platform]] - `imports` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[auth.ts]] - `imports_from` [EXTRACTED]
 - [[context.ts]] - `imports_from` [EXTRACTED]

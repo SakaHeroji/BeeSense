@@ -12,10 +12,10 @@ tags:
 # Dataset
 
 ## Connections
-- [[.__init__()_22]] - `method` [EXTRACTED]
+- [[.__init__()_20]] - `method` [EXTRACTED]
 - [[.add_content()_1]] - `method` [EXTRACTED]
 - [[.finish_relations()_1]] - `method` [EXTRACTED]
-- [[.setUp()_14]] - `calls` [EXTRACTED]
+- [[.setUp()_11]] - `calls` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
 - [[.test_13_excel_literal_ids_and_lossless_text()]] - `calls` [EXTRACTED]

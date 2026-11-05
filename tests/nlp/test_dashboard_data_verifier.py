@@ -332,6 +332,55 @@ class PublishedDataTests(unittest.TestCase):
         self.assertEqual(result["archived_runs"], ["outputs/nlp_previous"])
         self.assertEqual(result["published_data_files"], 6)
 
+    def test_old_relevance_dataset_remains_verified_and_tracked_after_switching_runs(
+        self,
+    ):
+        archive = self.root / "outputs/nlp_previous"
+        archive.mkdir()
+        (archive / "summary.json").write_text("{}")
+        (archive / "manifest.json").write_text(
+            json.dumps(
+                {
+                    "schema_version": "beesense-sentence-clusters:2",
+                    "files_sha256": {"summary.json": "verified by load_run"},
+                }
+            )
+        )
+        mask = self.root / "outputs/relevance_previous/decisions.parquet"
+        mask.parent.mkdir()
+        mask.write_bytes(b"historical decisions")
+        current = verifier.SocialNLPClusterer.load_run.return_value
+        archived = {
+            **current,
+            "summary": {
+                **current["summary"],
+                "config": {
+                    "relevance_artifact": "/another/clone/outputs/relevance_previous"
+                },
+            },
+        }
+        tracked = "\n".join(
+            str(path.relative_to(self.root))
+            for path in (self.root / "outputs").rglob("*")
+            if path.is_file()
+        )
+        with (
+            patch.object(
+                verifier.SocialNLPClusterer,
+                "load_run",
+                side_effect=lambda path: archived if path == archive else current,
+            ),
+            patch.object(
+                verifier, "published_relevance_files", return_value={mask}
+            ) as validate_mask,
+            patch.object(verifier, "published_crawl_files", return_value=set()),
+            patch.object(verifier.subprocess, "check_output", return_value=tracked),
+        ):
+            result = verifier.verify(check_git=True)
+        validate_mask.assert_called_once_with(mask.parent, archived)
+        self.assertEqual(result["status"], "PASS")
+        self.assertEqual(result["published_data_files"], 7)
+
     def test_preserved_baseline_hash_is_checked_after_switching_to_merged_input(self):
         merged = self.root / "outputs/social_combined/social_data.xlsx"
         merged.parent.mkdir()

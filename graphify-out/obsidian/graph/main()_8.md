@@ -1,18 +1,21 @@
 ---
-source_file: "scripts/merge_social_datasets.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Arsip Data Harian"
-location: "L320"
+community: "Capture Reddit Playwright"
+location: "L340"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Arsip_Data_Harian
+  - community/Capture_Reddit_Playwright
 ---
 
 # main()
 
 ## Connections
-- [[merge()]] - `calls` [EXTRACTED]
-- [[merge_social_datasets.py]] - `contains` [EXTRACTED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[parser()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [INFERRED]
+- [[verify_descriptor()_1]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian
+#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

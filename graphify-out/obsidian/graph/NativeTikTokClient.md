@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L402"
+location: "L407"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,7 +18,7 @@ tags:
 - [[.capture()_2]] - `method` [EXTRACTED]
 - [[.captured()]] - `method` [EXTRACTED]
 - [[.check()]] - `method` [EXTRACTED]
-- [[.close()_8]] - `method` [EXTRACTED]
+- [[.close()_9]] - `method` [EXTRACTED]
 - [[.collect()_1]] - `method` [EXTRACTED]
 - [[.comments_exhausted()]] - `method` [EXTRACTED]
 - [[.drain_comments()]] - `method` [EXTRACTED]
@@ -35,7 +35,7 @@ tags:
 - [[.route()]] - `method` [EXTRACTED]
 - [[.save_cooldown()]] - `method` [EXTRACTED]
 - [[.search()_1]] - `method` [EXTRACTED]
-- [[.start()_1]] - `method` [EXTRACTED]
+- [[.start()]] - `method` [EXTRACTED]
 - [[.thread()_1]] - `method` [EXTRACTED]
 - [[ChromeLiveWorker]] - `uses` [INFERRED]
 - [[One ordinary Playwright session; observe public UI traffic, never forge APIs.]] - `rationale_for` [EXTRACTED]

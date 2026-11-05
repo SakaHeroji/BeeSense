@@ -1,6 +1,7 @@
 """Verify the published relevance comparison in the minimal Cloud runtime."""
 
 import importlib.util
+import json
 import os
 import sys
 import unittest
@@ -23,6 +24,17 @@ class RelevanceRuntimeTests(unittest.TestCase):
             self.assertIsNone(importlib.util.find_spec(name), name + " installed")
         run = Path(os.environ["BEESENSE_RELEVANCE_RUN_DIR"])
         data = SocialNLPClusterer.load_run(run)
+        comparison = json.loads((ROOT / "config/dashboard.json").read_text())[
+            "snapshot_comparison"
+        ]
+        self.assertEqual(run.resolve(), (ROOT / comparison["after"]).resolve())
+        baseline = SocialNLPClusterer.load_run(ROOT / comparison["before"])
+        before_score = f"{baseline['summary']['coherence']['macro_mean']:.4f}".replace(
+            ".", ","
+        )
+        after_score = f"{data['summary']['coherence']['macro_mean']:.4f}".replace(
+            ".", ","
+        )
         self.assertEqual(len(data["topics"]), 20)
         self.assertEqual(len(data["topic_narratives"]), 20)
         self.assertTrue(data["summary"]["topic_narratives"]["clustering_unchanged"])
@@ -77,10 +89,10 @@ class RelevanceRuntimeTests(unittest.TestCase):
             self.assertFalse(app.exception)
             self.assertFalse(app.error)
             self.assertFalse(any("Model eksperimen" in item.value for item in app.info))
-            self.assertTrue(any("0,4243" in item.value for item in app.caption))
+            self.assertTrue(any(before_score in item.value for item in app.caption))
             app.radio(key="snapshot_comparison").set_value("Setelah penyaringan").run()
             self.assertFalse(app.exception)
-            self.assertTrue(any("0,4733" in item.value for item in app.caption))
+            self.assertTrue(any(after_score in item.value for item in app.caption))
         self.assertNotIn("torch", sys.modules)
 
 

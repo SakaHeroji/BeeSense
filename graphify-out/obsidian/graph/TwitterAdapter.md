@@ -12,7 +12,7 @@ tags:
 # TwitterAdapter
 
 ## Connections
-- [[.__init__()_36]] - `method` [EXTRACTED]
+- [[.__init__()_34]] - `method` [EXTRACTED]
 - [[.accept()_5]] - `method` [EXTRACTED]
 - [[Use the shared record contract without changing native X identity.]] - `rationale_for` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]

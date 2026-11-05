@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[AuthSettings.tsx]] - `contains` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[useApp()]] - `calls` [EXTRACTED]
 - [[validateAuth()]] - `calls` [EXTRACTED]

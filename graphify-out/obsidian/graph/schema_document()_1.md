@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.finish()_1]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[main()_13]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 - [[verify()]] - `calls` [EXTRACTED]
 - [[verify_descriptor()_1]] - `calls` [EXTRACTED]

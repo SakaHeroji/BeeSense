@@ -12,6 +12,5 @@ tags:
 
 ## Connections
 - [[Cara kerja BeeSense]] - `references` [EXTRACTED]
-- [[configdashboard.json]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

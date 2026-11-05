@@ -11,7 +11,6 @@ tags:
 # Historical Gemini publication 30 October 2026
 
 ## Connections
-- [[Historical earlier snapshot 30 October 2026]] - `references` [EXTRACTED]
 - [[Topik Gemini note]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

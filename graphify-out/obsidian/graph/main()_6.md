@@ -1,28 +1,21 @@
 ---
-source_file: "MachineLearning/social_nlp.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
-location: "L2627"
+community: "Worker Instaloader"
+location: "L745"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Worker_Instaloader
 ---
 
 # main()
 
 ## Connections
-- [[._event()]] - `calls` [EXTRACTED]
-- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
-- [[.explain_artifacts()]] - `calls` [EXTRACTED]
-- [[.fit_excel()]] - `calls` [EXTRACTED]
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[.prepare_excel()]] - `calls` [EXTRACTED]
-- [[.save()]] - `calls` [EXTRACTED]
-- [[.save_explanations()]] - `calls` [EXTRACTED]
-- [[.test_dry_run_shows_effective_paths_without_loading_data_or_fitting()]] - `calls` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `calls` [EXTRACTED]
-- [[social_nlp.py]] - `contains` [EXTRACTED]
-- [[test_nlp_config.py]] - `imports` [EXTRACTED]
+- [[.close()_3]] - `calls` [EXTRACTED]
+- [[.plan()]] - `calls` [EXTRACTED]
+- [[.run()]] - `calls` [EXTRACTED]
+- [[InstaloaderCrawler]] - `calls` [EXTRACTED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

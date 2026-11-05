@@ -1,4 +1,6 @@
 import {
+  COMMENT_PROTOCOL,
+  CONNECTOR_BUILD,
   parsePublicJson,
   sourceVideos,
   sourceComments,
@@ -38,6 +40,9 @@ async function bridge(path, body) {
     method: body ? "POST" : "GET",
     headers: {
       Authorization: "Bearer " + session.code,
+      "X-BeeSense-Comment-Policy": COMMENT_PROTOCOL,
+      "X-BeeSense-Connector-Version": chrome.runtime.getManifest().version,
+      "X-BeeSense-Connector-Build": CONNECTOR_BUILD,
       ...(body ? { "Content-Type": "application/json" } : {}),
     },
     ...(body ? { body: JSON.stringify(body) } : {}),
@@ -46,9 +51,11 @@ async function bridge(path, body) {
     throw new Error(
       response.status === 400
         ? "STALE_OPERATION"
-        : response.status === 403
-          ? "PAIRING_REJECTED"
-          : "BRIDGE_UNAVAILABLE",
+        : response.status === 409
+          ? "CONNECTOR_UPGRADE_REQUIRED"
+          : response.status === 403
+            ? "PAIRING_REJECTED"
+            : "BRIDGE_UNAVAILABLE",
     );
   return response.json();
 }
@@ -57,7 +64,7 @@ const page = async (action, extra = {}) => {
     expression: `(${pageOperation.toString()})(${JSON.stringify({ action, id: operation.task.video_id, ...extra })})`,
     returnByValue: true,
   });
-  if (out.exceptionDetails) throw new Error("PAGE_UNAVAILABLE");
+  if (out.exceptionDetails) throw new Error("COMMENT_CONTROL_ERROR");
   return out.result.value;
 };
 const requests = new Map();
@@ -118,10 +125,22 @@ chrome.debugger.onEvent.addListener((source, method, params) => {
           current.warnings.add("native_json_unavailable");
           return;
         }
+        if (
+          data?.type === "verify" ||
+          [2483, 2484].includes(data?.status_code)
+        ) {
+          current.barrier =
+            data.type === "verify"
+              ? "CAPTCHA_REQUIRED"
+              : data.status_code === 2483
+                ? "LOGIN_REQUIRED"
+                : "RATE_LIMITED";
+          return;
+        }
         if (request.path.startsWith("/api/comment/")) {
           if (
             current.task.operation !== "thread" ||
-            (request.root && request.root !== current.task.video_id)
+            request.root !== current.task.video_id
           )
             return;
           current.commentPages.set(request.parent, sourceHasMore(data));
@@ -207,6 +226,7 @@ async function flush(current, done = false) {
       done: done && last,
       status: current.barrier || "FINISHED_BEST_EFFORT",
       warnings: [...current.warnings],
+      collection_status: current.collectionStatus,
       ...(current.retryAfter
         ? { retry_after_seconds: current.retryAfter }
         : {}),
@@ -249,7 +269,11 @@ async function inspect(current) {
   if (
     !data.ready ||
     actual.origin !== expected.origin ||
-    actual.pathname !== expected.pathname ||
+    (current.task.operation === "thread"
+      ? !new RegExp(
+          "^/@[^/]+/(?:video|photo)/" + current.task.video_id + "/?$",
+        ).test(actual.pathname)
+      : actual.pathname !== expected.pathname) ||
     actual.searchParams.get("q") !== expected.searchParams.get("q")
   )
     throw new Error("PAGE_UNAVAILABLE");
@@ -278,6 +302,7 @@ async function runTask(task) {
     pending: new Set(),
     warnings: new Set(["comments_completeness_unverified"]),
     barrier: null,
+    collectionStatus: "pending",
     interval: Math.max(
       1000,
       (task.scroll_pause_seconds || 3) * 1000,
@@ -312,6 +337,8 @@ async function runTask(task) {
       const root = current.videos.get(task.video_id) || task.cached_root;
       if (!root?.created_at) {
         current.warnings.add("post_metadata_unavailable");
+        current.collectionStatus = "metadata_unavailable";
+        current.barrier = "SOURCE_ERROR";
         return;
       }
       const stamp = Date.parse(root.created_at),
@@ -320,19 +347,27 @@ async function runTask(task) {
         (policy.since && stamp < Date.parse(policy.since)) ||
         (policy.until && stamp >= Date.parse(policy.until)) ||
         task.max_comments === 0
-      )
+      ) {
+        current.collectionStatus = "root_filtered";
         return;
+      }
       await page("comments");
       await delay(current.interval);
     }
     let idle = 0;
-    const collectAll = task.operation === "thread" && task.max_comments == null;
-    const stuck = new Set();
+    const collectAll =
+      task.operation === "thread" &&
+      (task.collect_all_comments === true || task.max_comments == null);
+    const retryAfterRound = new Map();
+    let round = 0,
+      rewindNext = false,
+      unproductiveClicks = 0;
     while (
       !expired() &&
       !current.barrier &&
       (collectAll || idle < (task.idle_scroll_limit || 3))
     ) {
+      round++;
       if (current.pending.size) await Promise.allSettled([...current.pending]);
       await flush(current);
       if (
@@ -341,30 +376,67 @@ async function runTask(task) {
           current.commentPages,
           current.comments,
           task.max_replies !== 0 && task.max_replies_per_thread !== 0,
+          (current.videos.get(task.video_id) || task.cached_root)?.stats
+            ?.comment_count,
         )
-      )
+      ) {
+        current.collectionStatus = "exhausted";
         break;
+      }
       const before = current.sent.size;
       const expanded =
         task.operation === "thread" &&
         task.max_replies !== 0 &&
-        task.max_replies_per_thread !== 0
-          ? await page("expand", { blocked: [...stuck] })
+        task.max_replies_per_thread !== 0 &&
+        unproductiveClicks < 3
+          ? await page("expand", {
+              blocked: [...retryAfterRound]
+                .filter(([, retry]) => retry > round)
+                .map(([key]) => key),
+            })
           : { clicked: false };
-      await page("scroll");
+      let navigation = "membuka balasan";
+      // Finish the visible parent's reply pages before moving its controls offscreen.
+      if (!expanded.clicked) {
+        unproductiveClicks = 0;
+        const scroll = await page("scroll", {
+          rewind: rewindNext,
+        });
+        navigation = scroll?.scrolled
+          ? rewindNext
+            ? "meninjau balasan sebelumnya"
+            : "menggulir komentar"
+          : "mencari panel komentar";
+        // Traverse to the real bottom before revisiting earlier reply controls.
+        // Rewinding every few idle rounds can trap long, already-loaded lists.
+        rewindNext = collectAll && !rewindNext && scroll?.at_end === true;
+        if (scroll?.comment_pane_missing) await page("comments");
+      }
       await delay(Math.max(current.interval, Math.min(idle, 10) * 1000));
       await inspect(current);
       if (current.pending.size) await Promise.allSettled([...current.pending]);
       await flush(current);
+      if (task.operation === "thread") {
+        const parents = [...current.comments.values()].filter(
+          (row) => row.kind === "comment",
+        ).length;
+        await status(
+          `${parents} komentar · ${current.comments.size - parents} balasan · ${navigation}`,
+        );
+      }
       if (current.sent.size === before) {
         idle++;
-        if (expanded.clicked) stuck.add(expanded.key);
-        // Retry slow reply controls; one empty round is not an exhausted thread.
-        if (collectAll && idle % (task.idle_scroll_limit || 3) === 0)
-          stuck.clear();
+        // Cool down each unproductive control independently. Clearing all
+        // blocked controls every three idle rounds can cycle the same buttons
+        // forever and prevent any downward scroll.
+        if (expanded.clicked) {
+          unproductiveClicks++;
+          retryAfterRound.set(expanded.key, round + 6);
+        }
       } else {
         idle = 0;
-        stuck.clear();
+        unproductiveClicks = 0;
+        if (expanded.clicked) retryAfterRound.delete(expanded.key);
       }
       if (
         task.operation === "search" &&
@@ -377,6 +449,12 @@ async function runTask(task) {
       current.warnings.add("visible_pagination_idle");
   } catch (error) {
     current.barrier = expired() ? "INTERRUPTED" : "SOURCE_ERROR";
+    const reasons = {
+      COMMENT_CONTROL_ERROR: "comment_control_error",
+      PAGE_UNAVAILABLE: "tiktok_view_changed",
+      CHROME_TIMEOUT: "chrome_command_timeout",
+    };
+    if (reasons[error.message]) current.warnings.add(reasons[error.message]);
     await status(
       error.message === "STALE_OPERATION"
         ? "Crawler operation expired."
@@ -384,6 +462,22 @@ async function runTask(task) {
     );
   } finally {
     if (expired() && !current.barrier) current.barrier = "INTERRUPTED";
+    const expected = (current.videos.get(task.video_id) || task.cached_root)
+      ?.stats?.comment_count;
+    if (
+      task.operation === "thread" &&
+      expected != null &&
+      Number(expected) > current.comments.size
+    )
+      current.warnings.add("comments_count_below_source_total");
+    if (
+      task.operation === "thread" &&
+      task.max_comments == null &&
+      !["exhausted", "root_filtered"].includes(current.collectionStatus)
+    ) {
+      current.warnings.add("comments_pagination_not_exhausted");
+      if (!current.barrier) current.barrier = "COMMENTS_INCOMPLETE";
+    }
     try {
       await flush(current, true);
     } catch {}
@@ -432,11 +526,13 @@ async function start(message) {
     }
   } catch (error) {
     await status(
-      error.message === "PAIRING_REJECTED"
-        ? "Kode pasangan ditolak. Salin kode dari crawler yang sedang aktif."
-        : attached
-          ? "Local crawler disconnected; captured partial data stays in Python."
-          : "Connection failed. Check the pairing code and release any other debugger on this TikTok tab.",
+      error.message === "CONNECTOR_UPGRADE_REQUIRED"
+        ? "Konektor tidak cocok. Reload BeeSense TikTok Connector 1.2.1 dari folder proyek ini."
+        : error.message === "PAIRING_REJECTED"
+          ? "Kode pasangan ditolak. Salin kode dari crawler yang sedang aktif."
+          : attached
+            ? "Local crawler disconnected; captured partial data stays in Python."
+            : "Connection failed. Check the pairing code and release any other debugger on this TikTok tab.",
     );
   } finally {
     session.running = false;

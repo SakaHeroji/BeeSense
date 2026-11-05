@@ -12,8 +12,8 @@ tags:
 # read_config()
 
 ## Connections
-- [[.__init__()_17]] - `calls` [EXTRACTED]
-- [[.setUp()_12]] - `calls` [EXTRACTED]
+- [[.__init__()_15]] - `calls` [EXTRACTED]
+- [[.setUp()_9]] - `calls` [EXTRACTED]
 - [[.test_cli_rejects_unimplemented_database_output_before_network_or_export()]] - `calls` [EXTRACTED]
 - [[.test_custom_storage_reaches_coordinator_and_standalone_projections()]] - `calls` [EXTRACTED]
 - [[.test_every_runner_reads_changes_from_the_same_custom_file()]] - `calls` [EXTRACTED]

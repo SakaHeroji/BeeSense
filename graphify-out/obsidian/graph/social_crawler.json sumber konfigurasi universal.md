@@ -12,7 +12,6 @@ tags:
 # social_crawler.json sumber konfigurasi universal
 
 ## Connections
-- [[BeeSense]] - `references` [EXTRACTED]
 - [[InstagramCrawler instagrapi atau browser]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler_1]] - `references` [EXTRACTED]
 - [[Obsidian Target 1000 Post Tanpa Batas Waktu]] - `references` [EXTRACTED]

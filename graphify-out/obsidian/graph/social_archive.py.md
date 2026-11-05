@@ -29,6 +29,6 @@ tags:
 - [[stamp()]] - `contains` [EXTRACTED]
 - [[test_social_archive.py]] - `imports_from` [EXTRACTED]
 - [[test_tiktok_crawler.py]] - `imports_from` [EXTRACTED]
-- [[verify()_2]] - `contains` [EXTRACTED]
+- [[verify()_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

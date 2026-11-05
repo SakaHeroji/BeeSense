@@ -1,29 +1,22 @@
 ---
 type: community
-cohesion: 0.15
-members: 14
+members: 9
 ---
 
 # Integrasi Default Instaloader
 
-**Cohesion:** 0.15 - loosely connected
-**Members:** 14 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[BeeSense]] - document - README.md
-- [[Instagram backend browser ChromePlaywright]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instagram browser thread tersedia pada dokumen, kelengkapan tidak dijamin]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instagram 1000 post, semua komentar tersedia tanpa cap]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[InstagramCrawler instagrapi atau browser]] - concept - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Instaloader mempertahankan pacing dan berhenti pada hambatan akses]] - rationale - docs/crawler/INSTALOADER_CRAWLER.md
-- [[Instaloader 1000 post, tanpa batas jam atau cap komentar]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
-- [[InstaloaderCrawler_1]] - concept - docs/crawler/INSTALOADER_CRAWLER.md
-- [[InstaloaderCrawler architecture note]] - document - graphify-out/obsidian/InstaloaderCrawler.md
-- [[Iterator GraphQL balasan saat parent hanya preview]] - rationale - docs/crawler/INSTALOADER_CRAWLER.md
-- [[Komentar dipertahankan seluruhnya; filter root tetap berlaku]] - rationale - docs/crawler/INSTAGRAM_CRAWLER.md
-- [[Storage Excel default; PostgreSQL memakai nama env DSN]] - concept - config/social_crawler.json
-- [[Target 1000 per platform dengan durasi dan cap nullable]] - concept - config/social_crawler.json
-- [[social_crawler.json sumber konfigurasi universal]] - document - config/social_crawler.json
+- [[500 post1800 detik hanya override trial; tidak membuat preset JSON]] - concept - graphify-out/obsidian/TikTok Uji 500 Post 20261103.md
+- [[Fixture sintetis bukan data TikTok nyata atau keberhasilan target]] - concept - graphify-out/obsidian/TikTok Uji 500 Post 20261103.md
+- [[Obsidian Konfigurasi Universal Social Crawler]] - document - graphify-out/obsidian/Konfigurasi Universal Social Crawler.md
+- [[Obsidian TikTok Uji 500 Post 20261103]] - document - graphify-out/obsidian/TikTok Uji 500 Post 20261103.md
+- [[Run kosong menyimpan audit tanpa TikTok harian; 34785 ID lama tetap]] - concept - docs/crawler/TIKTOK_TRIAL_20261103.md
+- [[Satu HTTP200 tanpa bootstrap terbaca; berhenti setelah 0,61 detik]] - rationale - docs/crawler/TIKTOK_TRIAL_20261103.md
+- [[Satu social_crawler.json, lima platform dan override bersama]] - rationale - graphify-out/obsidian/Konfigurasi Universal Social Crawler.md
+- [[Trial PARTIAL ACCESS_BLOCKED 0500 post, 0 komentarbalasan]] - concept - docs/crawler/TIKTOK_TRIAL_20261103.md
+- [[Uji TikTok 3 November 2026]] - document - docs/crawler/TIKTOK_TRIAL_20261103.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -33,14 +26,8 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integrasi Default Instaloader_5]]
-- 3 edges to [[_COMMUNITY_Integrasi Default Instaloader]]
-- 3 edges to [[_COMMUNITY_Integrasi Default Instaloader_6]]
-- 2 edges to [[_COMMUNITY_Panduan Pipeline BeeSense]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Bersama]]
+- 1 edge to [[_COMMUNITY_Transport TikTok Native]]
 
 ## Top bridge nodes
-- [[social_crawler.json sumber konfigurasi universal]] - degree 9, connects to 3 communities
-- [[InstaloaderCrawler_1]] - degree 8, connects to 2 communities
-- [[InstagramCrawler instagrapi atau browser]] - degree 7, connects to 2 communities
-- [[BeeSense]] - degree 6, connects to 2 communities
+- [[Obsidian Konfigurasi Universal Social Crawler]] - degree 4, connects to 2 communities

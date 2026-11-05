@@ -1,19 +1,19 @@
 ---
 source_file: "Crawler/Backend/crawler_limits.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Worker Instaloader"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Worker_Instaloader
 ---
 
 # deadline_after()
 
 ## Connections
-- [[.__init__()_16]] - `calls` [EXTRACTED]
+- [[.__init__()_14]] - `calls` [EXTRACTED]
 - [[crawler_limits.py]] - `contains` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

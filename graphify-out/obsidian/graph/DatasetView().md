@@ -13,11 +13,10 @@ tags:
 
 ## Connections
 - [[DatasetView.tsx]] - `contains` [EXTRACTED]
-- [[JobDetail.tsx]] - `imports` [EXTRACTED]
 - [[csvCell()]] - `calls` [EXTRACTED]
 - [[dateTime()]] - `calls` [EXTRACTED]
 - [[download()]] - `calls` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[platformName()]] - `calls` [EXTRACTED]
 - [[safeExternal()]] - `calls` [EXTRACTED]
 - [[useApp()]] - `calls` [EXTRACTED]

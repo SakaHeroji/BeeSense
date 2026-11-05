@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.capture_worker()]] - `method` [EXTRACTED]
 - [[.client()]] - `method` [EXTRACTED]
-- [[.setUp()_18]] - `method` [EXTRACTED]
+- [[.setUp()_16]] - `method` [EXTRACTED]
 - [[.test_access_barrier_exports_partial_bundle_and_stops_searches()]] - `method` [EXTRACTED]
 - [[.test_all_comments_and_replies_are_paginated_and_deduplicated()]] - `method` [EXTRACTED]
 - [[.test_all_comments_survive_more_than_three_idle_rounds_and_wait_for_replies()]] - `method` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # BundleSink
 
 ## Connections
-- [[.__init__()_23]] - `method` [EXTRACTED]
+- [[.__init__()_21]] - `method` [EXTRACTED]
 - [[._cells()_1]] - `method` [EXTRACTED]
 - [[.abort()_1]] - `method` [EXTRACTED]
 - [[.chunks()_1]] - `method` [EXTRACTED]

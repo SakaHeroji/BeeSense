@@ -12,7 +12,7 @@ tags:
 # YouTubeAdapter
 
 ## Connections
-- [[.__init__()_19]] - `method` [EXTRACTED]
+- [[.__init__()_17]] - `method` [EXTRACTED]
 - [[.accept()_1]] - `method` [EXTRACTED]
 - [[SourceAdapter_2]] - `inherits` [EXTRACTED]
 - [[crawl_youtube.py]] - `contains` [EXTRACTED]

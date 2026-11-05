@@ -1,0 +1,2503 @@
+{
+  "schema_version": "beesense-sentence-clusters:2",
+  "producer_version": "2.6.1",
+  "created_at": "2026-11-05T09:55:25.494621+00:00",
+  "source_file": "/Users/socs3/Documents/BeeSense/outputs/social_20261105_combined_tiktok_01/social_data.xlsx",
+  "source_sha256": "d6ced320451c6194694d72b6de9fe3861252ccc3b66c4b3983440ae8c87c8df5",
+  "preparation": {
+    "input_rows": 36233,
+    "eligible_source_rows": 33681,
+    "sentence_occurrences": 11185,
+    "unique_sentences": 10795,
+    "duplicate_occurrences": 390,
+    "skipped_segments": 6136,
+    "included_kinds": [
+      "comment",
+      "reply"
+    ],
+    "source_timezone": "Asia/Jakarta",
+    "relevance_input_occurrences": 55257,
+    "relevance_excluded_occurrences": 44072,
+    "relevance_retained_source_rows": 6962
+  },
+  "selected": {
+    "candidate": "sbert_umap_dbscan_eps0.2_min5",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.2,
+      "min_samples": 5,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.8180639184807781,
+    "noise_fraction": 0.18193608151922191,
+    "largest_cluster_fraction": 0.12739214132034876,
+    "silhouette_cosine": 0.06278162449598312,
+    "stability_ari": 0.6411734604360597,
+    "selection_score": 0.3138185819273953,
+    "eligible": true,
+    "seconds": 0.6625130590000481,
+    "silhouette_sample_assigned": 1467,
+    "stability_union_points": 9266,
+    "dbscan_clusters": 154,
+    "alternate_dbscan_clusters": 148,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": 0.46660336200270897,
+    "coherence_status": "passed",
+    "coherence_topics": 20
+  },
+  "model": {
+    "family": "SBERT",
+    "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+    "tokenizer_sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+    "backend": "sentence-transformers-pytorch-cpu",
+    "pooling": "SBERT modules; mean of overflow windows then L2",
+    "test_encoder": false,
+    "max_tokens": 128,
+    "stride": 24,
+    "fine_tuned_on_source": false,
+    "cache_hit": false,
+    "dimensions": 384,
+    "long_sentence_windows": 88,
+    "reused_from": "/Users/socs3/Documents/BeeSense/outputs/nlp_20261105_all_social_topics20_01",
+    "reused_manifest_sha256": "ad43ce8fbbd285b72e16fdcfbdf9cba6713b1eba09541de627fd0474b6b9487a",
+    "reused_verified_subset": true
+  },
+  "fit_seconds": 51.71413064800072,
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": "3.4.1",
+    "torch": "2.2.2",
+    "transformers": "4.49.0",
+    "tokenizers": "0.21.4",
+    "gensim": "4.4.0"
+  },
+  "config": {
+    "input_file": "outputs/social_20261105_combined_tiktok_01/social_data.xlsx",
+    "output_dir": "/Users/socs3/Documents/BeeSense/outputs/nlp_20261105_relevance_topics20_gemini_01",
+    "relevance_artifact": "outputs/relevance_20261105_01",
+    "target_topics": 20,
+    "cache_dir": ".cache/social_nlp",
+    "seed": 42,
+    "include_kinds": [
+      "comment",
+      "reply"
+    ],
+    "min_words": 2,
+    "min_characters": 8,
+    "max_segment_characters": 1200,
+    "max_unique_sentences": 100000,
+    "model": {
+      "backend": "sentence-transformers",
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "max_tokens": 128,
+      "stride": 24,
+      "batch_size": 32,
+      "threads": 4
+    },
+    "dbscan": {
+      "eps": [
+        0.1,
+        0.15,
+        0.2,
+        0.25,
+        0.3
+      ],
+      "min_samples": [
+        3,
+        5,
+        10
+      ],
+      "neighborhood_batch_size": 256,
+      "max_neighbor_edges": 8000000
+    },
+    "evaluation": {
+      "sample_size": 1800,
+      "min_coverage": 0.4,
+      "max_largest_cluster": 0.5,
+      "score_tolerance": 0.005
+    },
+    "graph": {
+      "max_nodes": 180,
+      "neighbors": 3,
+      "min_similarity": 0.55
+    },
+    "explanation": {
+      "date_basis": "post_date",
+      "include_estimated_dates": true,
+      "window_months": 3,
+      "min_periods": 6,
+      "min_monthly_comments": 20,
+      "min_topic_comments": 20,
+      "min_window_topic_comments": 5,
+      "min_roots": 3,
+      "dominance_warning_threshold": 0.6,
+      "change_threshold_pp": 2.0,
+      "slope_threshold_pp": 0.25,
+      "kendall_threshold": 0.25,
+      "platform_shift_threshold_pp": 15.0,
+      "min_term_comments": 5,
+      "max_evidence": 3,
+      "mmr_lambda": 0.75
+    },
+    "umap": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0
+    },
+    "coherence": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    },
+    "gemini": {
+      "enabled": true,
+      "model": "gemini-3.5-flash-lite",
+      "auth_file": "config/auth.json",
+      "timeout_seconds": 60,
+      "max_attempts": 3,
+      "request_interval_seconds": 5
+    }
+  },
+  "clusters": 20,
+  "unclustered_unique": 1964,
+  "unclustered_occurrences": 1987,
+  "selection_rule": "0.60*max(cosine_silhouette,0)*coverage + 0.25*max(stability_ARI,0) + 0.15*coverage",
+  "selection_policy": {
+    "highest_composite_score": 0.3138185819273953,
+    "score_tolerance": 0.005,
+    "near_tie_candidates": [
+      "sbert_umap_dbscan_eps0.2_min5"
+    ],
+    "tie_break": "prefer larger cosine silhouette in original embedding space, then stability and coverage",
+    "interpretation": "heuristic operational tolerance, not statistical significance or labeled accuracy",
+    "candidate_family": "SBERT + UMAP + DBSCAN + optional centroid topic merging",
+    "target_topics": 20,
+    "stability_test": "final topic partitions on two seeded UMAP projections, after merging when configured",
+    "coherence_gate": {
+      "metric": "c_v",
+      "topn": 10,
+      "window_size": 110,
+      "min_score": 0.4
+    },
+    "coherence_search": "descending composite score; all candidates in the best passing score tolerance band are evaluated; lower scores are explicitly marked unevaluated"
+  },
+  "coherence": {
+    "metric": "c_v",
+    "topn": 10,
+    "window_size": 110,
+    "min_score": 0.4,
+    "macro_mean": 0.46660336200270897,
+    "target_met": true,
+    "topics_total": 20,
+    "topics_evaluated": 20,
+    "topics_below_target": 6,
+    "reference_documents": 10795,
+    "reference_sha256": "f90b40706e7ca94b9bf45cdac95ae8ffab8be792f5db1edc57169d53ed4cf9a7",
+    "tokenization": "c-TF-IDF CountVectorizer analyzer: stopword-filtered unigrams followed by bigrams; phrases remain single tokens",
+    "reference_scope": "all unique embedding_text sentences, including DBSCAN noise; no cluster concatenation",
+    "aggregation": "unweighted mean of all non-noise topics; any unscorable topic invalidates the mean",
+    "interpretation": "in-sample lexical coherence of topic terms, not accuracy or held-out generalization",
+    "gensim_version": "4.4.0",
+    "per_topic": [
+      {
+        "cluster_id": 0,
+        "terms": [
+          "kampus",
+          "kuliah",
+          "mahasiswa",
+          "semester",
+          "universitas",
+          "sama",
+          "kalo",
+          "tidak",
+          "alumni",
+          "sma"
+        ],
+        "score": 0.4443696275676179
+      },
+      {
+        "cluster_id": 1,
+        "terms": [
+          "muhammadiyah",
+          "semoga",
+          "universitas",
+          "muhammad",
+          "lolos",
+          "anak",
+          "org",
+          "kip",
+          "menteri",
+          "pendidikan"
+        ],
+        "score": 0.3376982042914864
+      },
+      {
+        "cluster_id": 2,
+        "terms": [
+          "kip",
+          "nilai",
+          "dokumen",
+          "kip kuliah",
+          "itb",
+          "sertifikat",
+          "ugm",
+          "daftar",
+          "kuliah",
+          "tes"
+        ],
+        "score": 0.24631307839063168
+      },
+      {
+        "cluster_id": 3,
+        "terms": [
+          "tahun",
+          "umur",
+          "usia",
+          "kip",
+          "pendaftaran",
+          "lulusan",
+          "waktu",
+          "kuliah",
+          "lulus",
+          "tahun depan"
+        ],
+        "score": 0.3453477831435466
+      },
+      {
+        "cluster_id": 4,
+        "terms": [
+          "swasta",
+          "pendidikan",
+          "kampus swasta",
+          "kampus",
+          "universitas",
+          "mahasiswa",
+          "worth",
+          "kualitas",
+          "pts",
+          "sekolah"
+        ],
+        "score": 0.4452325176768053
+      },
+      {
+        "cluster_id": 5,
+        "terms": [
+          "pajak",
+          "uang",
+          "bayar",
+          "mahal",
+          "biaya",
+          "juta",
+          "duit",
+          "ukt",
+          "gratis",
+          "kaya"
+        ],
+        "score": 0.5732647195023615
+      },
+      {
+        "cluster_id": 6,
+        "terms": [
+          "jurusan",
+          "ijazah",
+          "kuliah",
+          "kerja",
+          "psikologi",
+          "lulus",
+          "lulusan",
+          "ambil",
+          "sarjana",
+          "mdis"
+        ],
+        "score": 0.41997320421312
+      },
+      {
+        "cluster_id": 7,
+        "terms": [
+          "skill",
+          "seni",
+          "belajar",
+          "project",
+          "fokus",
+          "punya",
+          "lain",
+          "penting",
+          "orang",
+          "sama"
+        ],
+        "score": 0.4157589473496217
+      },
+      {
+        "cluster_id": 8,
+        "terms": [
+          "kerja",
+          "job",
+          "pekerjaan",
+          "perusahaan",
+          "gaji",
+          "cari",
+          "kerjaan",
+          "cv",
+          "time",
+          "karir"
+        ],
+        "score": 0.4065682887290542
+      },
+      {
+        "cluster_id": 9,
+        "terms": [
+          "negara",
+          "rakyat",
+          "uang",
+          "bangsa",
+          "kewarganegaraan",
+          "warga",
+          "penghianat",
+          "negeri",
+          "warga negara",
+          "cabut"
+        ],
+        "score": 0.4844486868710319
+      },
+      {
+        "cluster_id": 10,
+        "terms": [
+          "biaya",
+          "gratis",
+          "kuliah",
+          "uang",
+          "sekolah",
+          "pendidikan",
+          "biaya kuliah",
+          "bayar",
+          "mahal",
+          "kuliah gratis"
+        ],
+        "score": 0.6758089408165991
+      },
+      {
+        "cluster_id": 11,
+        "terms": [
+          "luar",
+          "negeri",
+          "luar negeri",
+          "bahasa",
+          "indo",
+          "kerja",
+          "visa",
+          "inggris",
+          "jepang",
+          "kuliah"
+        ],
+        "score": 0.5892912557578482
+      },
+      {
+        "cluster_id": 12,
+        "terms": [
+          "indonesia",
+          "rakyat indonesia",
+          "rakyat",
+          "negara",
+          "pendidikan",
+          "seluruh",
+          "luar",
+          "negeri",
+          "universitas",
+          "lpdp"
+        ],
+        "score": 0.6179361729942138
+      },
+      {
+        "cluster_id": 13,
+        "terms": [
+          "otak",
+          "orang",
+          "takut",
+          "tidak",
+          "malah",
+          "susah",
+          "kurang",
+          "agama",
+          "diri",
+          "kata"
+        ],
+        "score": 0.32251533343321476
+      },
+      {
+        "cluster_id": 14,
+        "terms": [
+          "online",
+          "teknik",
+          "engineer",
+          "data",
+          "engineering",
+          "bootcamp",
+          "industri",
+          "tech",
+          "software",
+          "jurusan"
+        ],
+        "score": 0.1489669398192944
+      },
+      {
+        "cluster_id": 15,
+        "terms": [
+          "s2",
+          "s1",
+          "s3",
+          "lanjut",
+          "s1 s2",
+          "s2 s3",
+          "lanjut s2",
+          "beasiswa s2",
+          "beasiswa",
+          "ambil"
+        ],
+        "score": 0.5210770448735348
+      },
+      {
+        "cluster_id": 16,
+        "terms": [
+          "snbp",
+          "snbt",
+          "pendaftaran",
+          "kip",
+          "akun",
+          "kip kuliah",
+          "seleksi",
+          "daftar",
+          "snpmb",
+          "jalur"
+        ],
+        "score": 0.9048954823999449
+      },
+      {
+        "cluster_id": 17,
+        "terms": [
+          "lpdp",
+          "beasiswa lpdp",
+          "penerima",
+          "beasiswa",
+          "pejabat",
+          "penerima lpdp",
+          "dapat",
+          "lpdprens",
+          "hai lpdprens",
+          "anak"
+        ],
+        "score": 0.5570718042163365
+      },
+      {
+        "cluster_id": 18,
+        "terms": [
+          "ai",
+          "jurusan",
+          "sama ai",
+          "sama",
+          "kerjaan",
+          "tergantikan ai",
+          "susah",
+          "tergantikan",
+          "skill",
+          "software"
+        ],
+        "score": 0.4794472831527468
+      },
+      {
+        "cluster_id": 19,
+        "terms": [
+          "beasiswa",
+          "daftar",
+          "beasiswanya",
+          "daftar beasiswa",
+          "dapat beasiswa",
+          "dapat",
+          "anak",
+          "orang",
+          "beasiswa lain",
+          "dapet"
+        ],
+        "score": 0.3960819248551705
+      }
+    ]
+  },
+  "coherence_baseline": null,
+  "evaluation_scope": "Internal comparison on this corpus; no labeled semantic ground truth or universal-best claim",
+  "stability_scope": "Final topic partitions on two seeded UMAP projections, including configured centroid merging; ARI uses union of assigned points, noise singletons and excludes shared noise. This is not labeled accuracy.",
+  "pipeline": "SBERT multilingual -> UMAP -> Euclidean DBSCAN -> optional SBERT centroid topic merging -> c-TF-IDF topic descriptions",
+  "reduction": {
+    "algorithm": "UMAP",
+    "parameters": {
+      "n_neighbors": 15,
+      "n_components": 10,
+      "min_dist": 0.0,
+      "metric": "cosine",
+      "n_jobs": 1
+    },
+    "seeds": [
+      42,
+      43
+    ],
+    "cache_hit": false,
+    "clustering_metric": "euclidean",
+    "original_dimensions": 384
+  },
+  "topic_reduction": {
+    "method": "sentence_weighted_ward",
+    "embedding_space": "original_normalized_SBERT",
+    "target_topics": 20,
+    "original_topics": 154,
+    "final_topics": 20,
+    "noise_preserved": true,
+    "mapping": {
+      "1": 0,
+      "5": 0,
+      "7": 0,
+      "66": 0,
+      "93": 0,
+      "96": 0,
+      "136": 0,
+      "146": 0,
+      "2": 1,
+      "74": 1,
+      "77": 1,
+      "79": 1,
+      "81": 1,
+      "3": 2,
+      "9": 2,
+      "16": 2,
+      "23": 2,
+      "30": 2,
+      "32": 2,
+      "33": 2,
+      "39": 2,
+      "40": 2,
+      "41": 2,
+      "51": 2,
+      "52": 2,
+      "65": 2,
+      "88": 2,
+      "89": 2,
+      "95": 2,
+      "100": 2,
+      "109": 2,
+      "117": 2,
+      "118": 2,
+      "119": 2,
+      "122": 2,
+      "131": 2,
+      "144": 2,
+      "145": 2,
+      "151": 2,
+      "152": 2,
+      "4": 3,
+      "17": 3,
+      "43": 3,
+      "105": 3,
+      "6": 4,
+      "20": 4,
+      "26": 4,
+      "47": 4,
+      "54": 4,
+      "59": 4,
+      "69": 4,
+      "76": 4,
+      "103": 4,
+      "108": 4,
+      "114": 4,
+      "127": 4,
+      "137": 4,
+      "141": 4,
+      "143": 4,
+      "150": 4,
+      "8": 5,
+      "37": 5,
+      "49": 5,
+      "11": 6,
+      "14": 6,
+      "45": 6,
+      "46": 6,
+      "57": 6,
+      "58": 6,
+      "60": 6,
+      "63": 6,
+      "71": 6,
+      "101": 6,
+      "104": 6,
+      "113": 6,
+      "116": 6,
+      "123": 6,
+      "125": 6,
+      "128": 6,
+      "129": 6,
+      "130": 6,
+      "134": 6,
+      "138": 6,
+      "140": 6,
+      "12": 7,
+      "53": 7,
+      "56": 7,
+      "62": 7,
+      "64": 7,
+      "78": 7,
+      "80": 7,
+      "83": 7,
+      "84": 7,
+      "87": 7,
+      "91": 7,
+      "94": 7,
+      "106": 7,
+      "110": 7,
+      "115": 7,
+      "120": 7,
+      "124": 7,
+      "126": 7,
+      "147": 7,
+      "149": 7,
+      "13": 8,
+      "35": 8,
+      "36": 8,
+      "72": 8,
+      "98": 8,
+      "102": 8,
+      "111": 8,
+      "112": 8,
+      "15": 9,
+      "18": 10,
+      "19": 10,
+      "48": 10,
+      "132": 10,
+      "139": 10,
+      "10": 11,
+      "21": 11,
+      "24": 11,
+      "25": 11,
+      "28": 11,
+      "29": 11,
+      "61": 11,
+      "68": 11,
+      "70": 11,
+      "73": 11,
+      "92": 11,
+      "22": 12,
+      "27": 13,
+      "55": 13,
+      "75": 13,
+      "82": 13,
+      "31": 14,
+      "34": 14,
+      "50": 14,
+      "85": 14,
+      "86": 14,
+      "97": 14,
+      "99": 14,
+      "107": 14,
+      "121": 14,
+      "133": 14,
+      "135": 14,
+      "142": 14,
+      "148": 14,
+      "38": 15,
+      "44": 15,
+      "42": 16,
+      "67": 17,
+      "90": 18,
+      "0": 19,
+      "153": 19
+    },
+    "merges": [
+      {
+        "left": [
+          1
+        ],
+        "right": [
+          146
+        ],
+        "squared_error_increase": 0.6739085286705615
+      },
+      {
+        "left": [
+          58
+        ],
+        "right": [
+          130
+        ],
+        "squared_error_increase": 0.7070737328620819
+      },
+      {
+        "left": [
+          23
+        ],
+        "right": [
+          117
+        ],
+        "squared_error_increase": 0.7528967309845231
+      },
+      {
+        "left": [
+          113
+        ],
+        "right": [
+          123
+        ],
+        "squared_error_increase": 0.7976347510687264
+      },
+      {
+        "left": [
+          140
+        ],
+        "right": [
+          101
+        ],
+        "squared_error_increase": 0.8344335192255602
+      },
+      {
+        "left": [
+          113,
+          123
+        ],
+        "right": [
+          125
+        ],
+        "squared_error_increase": 0.8452718441393124
+      },
+      {
+        "left": [
+          33
+        ],
+        "right": [
+          65
+        ],
+        "squared_error_increase": 0.8989458814046876
+      },
+      {
+        "left": [
+          104
+        ],
+        "right": [
+          101,
+          140
+        ],
+        "squared_error_increase": 1.0481291735830145
+      },
+      {
+        "left": [
+          151
+        ],
+        "right": [
+          118
+        ],
+        "squared_error_increase": 1.079655353304826
+      },
+      {
+        "left": [
+          91
+        ],
+        "right": [
+          124
+        ],
+        "squared_error_increase": 1.0815926488333933
+      },
+      {
+        "left": [
+          89
+        ],
+        "right": [
+          144
+        ],
+        "squared_error_increase": 1.106572075419099
+      },
+      {
+        "left": [
+          60
+        ],
+        "right": [
+          128
+        ],
+        "squared_error_increase": 1.1482343070805878
+      },
+      {
+        "left": [
+          78
+        ],
+        "right": [
+          120
+        ],
+        "squared_error_increase": 1.1952735099782947
+      },
+      {
+        "left": [
+          45
+        ],
+        "right": [
+          46
+        ],
+        "squared_error_increase": 1.2427671527027138
+      },
+      {
+        "left": [
+          59
+        ],
+        "right": [
+          150
+        ],
+        "squared_error_increase": 1.2938026582179056
+      },
+      {
+        "left": [
+          50
+        ],
+        "right": [
+          142
+        ],
+        "squared_error_increase": 1.3114409017378634
+      },
+      {
+        "left": [
+          131
+        ],
+        "right": [
+          152
+        ],
+        "squared_error_increase": 1.326777332341696
+      },
+      {
+        "left": [
+          58,
+          130
+        ],
+        "right": [
+          138
+        ],
+        "squared_error_increase": 1.3639714457389218
+      },
+      {
+        "left": [
+          94
+        ],
+        "right": [
+          126
+        ],
+        "squared_error_increase": 1.3653343583495128
+      },
+      {
+        "left": [
+          145
+        ],
+        "right": [
+          122
+        ],
+        "squared_error_increase": 1.3668530978725348
+      },
+      {
+        "left": [
+          103
+        ],
+        "right": [
+          127
+        ],
+        "squared_error_increase": 1.3989598531046035
+      },
+      {
+        "left": [
+          34
+        ],
+        "right": [
+          148
+        ],
+        "squared_error_increase": 1.4141397894933256
+      },
+      {
+        "left": [
+          132
+        ],
+        "right": [
+          139
+        ],
+        "squared_error_increase": 1.4546402280311805
+      },
+      {
+        "left": [
+          60,
+          128
+        ],
+        "right": [
+          134
+        ],
+        "squared_error_increase": 1.4584544794226135
+      },
+      {
+        "left": [
+          8
+        ],
+        "right": [
+          37
+        ],
+        "squared_error_increase": 1.4589971237745534
+      },
+      {
+        "left": [
+          13
+        ],
+        "right": [
+          112
+        ],
+        "squared_error_increase": 1.4692461691001233
+      },
+      {
+        "left": [
+          153
+        ],
+        "right": [
+          0
+        ],
+        "squared_error_increase": 1.4745928341934296
+      },
+      {
+        "left": [
+          101,
+          104,
+          140
+        ],
+        "right": [
+          113,
+          123,
+          125
+        ],
+        "squared_error_increase": 1.4875689018401776
+      },
+      {
+        "left": [
+          108
+        ],
+        "right": [
+          114
+        ],
+        "squared_error_increase": 1.4895303991060598
+      },
+      {
+        "left": [
+          17
+        ],
+        "right": [
+          105
+        ],
+        "squared_error_increase": 1.4958478040087884
+      },
+      {
+        "left": [
+          79
+        ],
+        "right": [
+          81
+        ],
+        "squared_error_increase": 1.4990991464124566
+      },
+      {
+        "left": [
+          50,
+          142
+        ],
+        "right": [
+          133
+        ],
+        "squared_error_increase": 1.5831366143747838
+      },
+      {
+        "left": [
+          97
+        ],
+        "right": [
+          99
+        ],
+        "squared_error_increase": 1.6142399280507271
+      },
+      {
+        "left": [
+          137
+        ],
+        "right": [
+          143
+        ],
+        "squared_error_increase": 1.6211178707036427
+      },
+      {
+        "left": [
+          74
+        ],
+        "right": [
+          79,
+          81
+        ],
+        "squared_error_increase": 1.6381835287680298
+      },
+      {
+        "left": [
+          48
+        ],
+        "right": [
+          132,
+          139
+        ],
+        "squared_error_increase": 1.649251933867973
+      },
+      {
+        "left": [
+          96
+        ],
+        "right": [
+          7
+        ],
+        "squared_error_increase": 1.7236666172376993
+      },
+      {
+        "left": [
+          94,
+          126
+        ],
+        "right": [
+          147
+        ],
+        "squared_error_increase": 1.7341301830284563
+      },
+      {
+        "left": [
+          64
+        ],
+        "right": [
+          80
+        ],
+        "squared_error_increase": 1.8291552506768574
+      },
+      {
+        "left": [
+          83
+        ],
+        "right": [
+          84
+        ],
+        "squared_error_increase": 1.855190772679518
+      },
+      {
+        "left": [
+          25
+        ],
+        "right": [
+          68
+        ],
+        "squared_error_increase": 1.856483488612887
+      },
+      {
+        "left": [
+          45,
+          46
+        ],
+        "right": [
+          58,
+          130,
+          138
+        ],
+        "squared_error_increase": 1.8695229716326132
+      },
+      {
+        "left": [
+          88
+        ],
+        "right": [
+          118,
+          151
+        ],
+        "squared_error_increase": 1.9201240443212295
+      },
+      {
+        "left": [
+          1,
+          146
+        ],
+        "right": [
+          93
+        ],
+        "squared_error_increase": 1.9273985044352864
+      },
+      {
+        "left": [
+          85
+        ],
+        "right": [
+          121
+        ],
+        "squared_error_increase": 1.9702355223724337
+      },
+      {
+        "left": [
+          78,
+          120
+        ],
+        "right": [
+          149
+        ],
+        "squared_error_increase": 2.010104566900569
+      },
+      {
+        "left": [
+          74,
+          79,
+          81
+        ],
+        "right": [
+          77
+        ],
+        "squared_error_increase": 2.079161256453599
+      },
+      {
+        "left": [
+          53
+        ],
+        "right": [
+          94,
+          126,
+          147
+        ],
+        "squared_error_increase": 2.0805097575367624
+      },
+      {
+        "left": [
+          16
+        ],
+        "right": [
+          122,
+          145
+        ],
+        "squared_error_increase": 2.089114927460309
+      },
+      {
+        "left": [
+          33,
+          65
+        ],
+        "right": [
+          88,
+          118,
+          151
+        ],
+        "squared_error_increase": 2.0895586448754657
+      },
+      {
+        "left": [
+          18
+        ],
+        "right": [
+          19
+        ],
+        "squared_error_increase": 2.113611392894931
+      },
+      {
+        "left": [
+          20
+        ],
+        "right": [
+          69
+        ],
+        "squared_error_increase": 2.1565017254928724
+      },
+      {
+        "left": [
+          50,
+          133,
+          142
+        ],
+        "right": [
+          85,
+          121
+        ],
+        "squared_error_increase": 2.165286950700912
+      },
+      {
+        "left": [
+          55
+        ],
+        "right": [
+          82
+        ],
+        "squared_error_increase": 2.270224846348114
+      },
+      {
+        "left": [
+          61
+        ],
+        "right": [
+          73
+        ],
+        "squared_error_increase": 2.28501692032033
+      },
+      {
+        "left": [
+          63
+        ],
+        "right": [
+          116
+        ],
+        "squared_error_increase": 2.3106300324441373
+      },
+      {
+        "left": [
+          18,
+          19
+        ],
+        "right": [
+          48,
+          132,
+          139
+        ],
+        "squared_error_increase": 2.326541097632033
+      },
+      {
+        "left": [
+          5
+        ],
+        "right": [
+          136
+        ],
+        "squared_error_increase": 2.461364569377611
+      },
+      {
+        "left": [
+          91,
+          124
+        ],
+        "right": [
+          110
+        ],
+        "squared_error_increase": 2.532203348921186
+      },
+      {
+        "left": [
+          76
+        ],
+        "right": [
+          103,
+          127
+        ],
+        "squared_error_increase": 2.548445698645146
+      },
+      {
+        "left": [
+          36
+        ],
+        "right": [
+          111
+        ],
+        "squared_error_increase": 2.549268986961823
+      },
+      {
+        "left": [
+          41
+        ],
+        "right": [
+          131,
+          152
+        ],
+        "squared_error_increase": 2.5858963447434506
+      },
+      {
+        "left": [
+          64,
+          80
+        ],
+        "right": [
+          78,
+          120,
+          149
+        ],
+        "squared_error_increase": 2.6117987846019415
+      },
+      {
+        "left": [
+          6
+        ],
+        "right": [
+          141
+        ],
+        "squared_error_increase": 2.694381325802506
+      },
+      {
+        "left": [
+          56
+        ],
+        "right": [
+          83,
+          84
+        ],
+        "squared_error_increase": 2.725360948970145
+      },
+      {
+        "left": [
+          32
+        ],
+        "right": [
+          89,
+          144
+        ],
+        "squared_error_increase": 2.809269456756443
+      },
+      {
+        "left": [
+          52
+        ],
+        "right": [
+          119
+        ],
+        "squared_error_increase": 2.868890472353805
+      },
+      {
+        "left": [
+          11
+        ],
+        "right": [
+          101,
+          104,
+          113,
+          123,
+          125,
+          140
+        ],
+        "squared_error_increase": 2.9033752330430684
+      },
+      {
+        "left": [
+          59,
+          150
+        ],
+        "right": [
+          137,
+          143
+        ],
+        "squared_error_increase": 2.9062164527130947
+      },
+      {
+        "left": [
+          57
+        ],
+        "right": [
+          60,
+          128,
+          134
+        ],
+        "squared_error_increase": 3.019328396896363
+      },
+      {
+        "left": [
+          20,
+          69
+        ],
+        "right": [
+          54
+        ],
+        "squared_error_increase": 3.1027865748381656
+      },
+      {
+        "left": [
+          62
+        ],
+        "right": [
+          115
+        ],
+        "squared_error_increase": 3.138790223523502
+      },
+      {
+        "left": [
+          33,
+          65,
+          88,
+          118,
+          151
+        ],
+        "right": [
+          41,
+          131,
+          152
+        ],
+        "squared_error_increase": 3.2073580877794026
+      },
+      {
+        "left": [
+          55,
+          82
+        ],
+        "right": [
+          75
+        ],
+        "squared_error_increase": 3.302832289370541
+      },
+      {
+        "left": [
+          36,
+          111
+        ],
+        "right": [
+          98
+        ],
+        "squared_error_increase": 3.4926448485367554
+      },
+      {
+        "left": [
+          12
+        ],
+        "right": [
+          53,
+          94,
+          126,
+          147
+        ],
+        "squared_error_increase": 3.5937413293808533
+      },
+      {
+        "left": [
+          32,
+          89,
+          144
+        ],
+        "right": [
+          95
+        ],
+        "squared_error_increase": 3.67381632493586
+      },
+      {
+        "left": [
+          62,
+          115
+        ],
+        "right": [
+          91,
+          110,
+          124
+        ],
+        "squared_error_increase": 3.6831626186352664
+      },
+      {
+        "left": [
+          45,
+          46,
+          58,
+          130,
+          138
+        ],
+        "right": [
+          57,
+          60,
+          128,
+          134
+        ],
+        "squared_error_increase": 3.6839505805228394
+      },
+      {
+        "left": [
+          34,
+          148
+        ],
+        "right": [
+          135
+        ],
+        "squared_error_increase": 3.7106369641263792
+      },
+      {
+        "left": [
+          92
+        ],
+        "right": [
+          10
+        ],
+        "squared_error_increase": 3.862104997722665
+      },
+      {
+        "left": [
+          51
+        ],
+        "right": [
+          100
+        ],
+        "squared_error_increase": 3.9951889522120445
+      },
+      {
+        "left": [
+          32,
+          89,
+          95,
+          144
+        ],
+        "right": [
+          52,
+          119
+        ],
+        "squared_error_increase": 4.109950129200963
+      },
+      {
+        "left": [
+          33,
+          41,
+          65,
+          88,
+          118,
+          131,
+          151,
+          152
+        ],
+        "right": [
+          39
+        ],
+        "squared_error_increase": 4.219286483980342
+      },
+      {
+        "left": [
+          76,
+          103,
+          127
+        ],
+        "right": [
+          108,
+          114
+        ],
+        "squared_error_increase": 4.244964167183089
+      },
+      {
+        "left": [
+          13,
+          112
+        ],
+        "right": [
+          36,
+          98,
+          111
+        ],
+        "squared_error_increase": 4.444797556548587
+      },
+      {
+        "left": [
+          61,
+          73
+        ],
+        "right": [
+          10,
+          92
+        ],
+        "squared_error_increase": 4.524167036477851
+      },
+      {
+        "left": [
+          23,
+          117
+        ],
+        "right": [
+          40
+        ],
+        "squared_error_increase": 4.575699495294771
+      },
+      {
+        "left": [
+          12,
+          53,
+          94,
+          126,
+          147
+        ],
+        "right": [
+          56,
+          83,
+          84
+        ],
+        "squared_error_increase": 4.645456770573804
+      },
+      {
+        "left": [
+          2
+        ],
+        "right": [
+          74,
+          77,
+          79,
+          81
+        ],
+        "squared_error_increase": 4.703964923619922
+      },
+      {
+        "left": [
+          59,
+          137,
+          143,
+          150
+        ],
+        "right": [
+          76,
+          103,
+          108,
+          114,
+          127
+        ],
+        "squared_error_increase": 4.785735896803975
+      },
+      {
+        "left": [
+          9
+        ],
+        "right": [
+          30
+        ],
+        "squared_error_increase": 4.934657249357968
+      },
+      {
+        "left": [
+          106
+        ],
+        "right": [
+          87
+        ],
+        "squared_error_increase": 5.036425309792023
+      },
+      {
+        "left": [
+          27
+        ],
+        "right": [
+          55,
+          75,
+          82
+        ],
+        "squared_error_increase": 5.046986891235801
+      },
+      {
+        "left": [
+          20,
+          54,
+          69
+        ],
+        "right": [
+          47
+        ],
+        "squared_error_increase": 5.373068407944211
+      },
+      {
+        "left": [
+          24
+        ],
+        "right": [
+          28
+        ],
+        "squared_error_increase": 5.423838987316616
+      },
+      {
+        "left": [
+          50,
+          85,
+          121,
+          133,
+          142
+        ],
+        "right": [
+          97,
+          99
+        ],
+        "squared_error_increase": 5.5691952694432585
+      },
+      {
+        "left": [
+          11,
+          101,
+          104,
+          113,
+          123,
+          125,
+          140
+        ],
+        "right": [
+          129
+        ],
+        "squared_error_increase": 6.165017158142617
+      },
+      {
+        "left": [
+          50,
+          85,
+          97,
+          99,
+          121,
+          133,
+          142
+        ],
+        "right": [
+          107
+        ],
+        "squared_error_increase": 6.217730877286288
+      },
+      {
+        "left": [
+          32,
+          52,
+          89,
+          95,
+          119,
+          144
+        ],
+        "right": [
+          109
+        ],
+        "squared_error_increase": 6.226021271639183
+      },
+      {
+        "left": [
+          62,
+          91,
+          110,
+          115,
+          124
+        ],
+        "right": [
+          64,
+          78,
+          80,
+          120,
+          149
+        ],
+        "squared_error_increase": 6.45260474507947
+      },
+      {
+        "left": [
+          3
+        ],
+        "right": [
+          33,
+          39,
+          41,
+          65,
+          88,
+          118,
+          131,
+          151,
+          152
+        ],
+        "squared_error_increase": 6.465280511375484
+      },
+      {
+        "left": [
+          14
+        ],
+        "right": [
+          71
+        ],
+        "squared_error_increase": 6.467677084644251
+      },
+      {
+        "left": [
+          13,
+          36,
+          98,
+          111,
+          112
+        ],
+        "right": [
+          102
+        ],
+        "squared_error_increase": 6.651822350774075
+      },
+      {
+        "left": [
+          62,
+          64,
+          78,
+          80,
+          91,
+          110,
+          115,
+          120,
+          124,
+          149
+        ],
+        "right": [
+          87,
+          106
+        ],
+        "squared_error_increase": 7.157631534694434
+      },
+      {
+        "left": [
+          26
+        ],
+        "right": [
+          59,
+          76,
+          103,
+          108,
+          114,
+          127,
+          137,
+          143,
+          150
+        ],
+        "squared_error_increase": 7.97554564847926
+      },
+      {
+        "left": [
+          17,
+          105
+        ],
+        "right": [
+          43
+        ],
+        "squared_error_increase": 8.083245163849313
+      },
+      {
+        "left": [
+          50,
+          85,
+          97,
+          99,
+          107,
+          121,
+          133,
+          142
+        ],
+        "right": [
+          86
+        ],
+        "squared_error_increase": 8.131025638695384
+      },
+      {
+        "left": [
+          24,
+          28
+        ],
+        "right": [
+          25,
+          68
+        ],
+        "squared_error_increase": 8.206522468253493
+      },
+      {
+        "left": [
+          14,
+          71
+        ],
+        "right": [
+          63,
+          116
+        ],
+        "squared_error_increase": 8.275560662037153
+      },
+      {
+        "left": [
+          31
+        ],
+        "right": [
+          34,
+          135,
+          148
+        ],
+        "squared_error_increase": 8.47787055118276
+      },
+      {
+        "left": [
+          32,
+          52,
+          89,
+          95,
+          109,
+          119,
+          144
+        ],
+        "right": [
+          51,
+          100
+        ],
+        "squared_error_increase": 8.619350499396187
+      },
+      {
+        "left": [
+          21
+        ],
+        "right": [
+          10,
+          61,
+          73,
+          92
+        ],
+        "squared_error_increase": 9.104650890737098
+      },
+      {
+        "left": [
+          13,
+          36,
+          98,
+          102,
+          111,
+          112
+        ],
+        "right": [
+          72
+        ],
+        "squared_error_increase": 9.773280790329071
+      },
+      {
+        "left": [
+          16,
+          122,
+          145
+        ],
+        "right": [
+          23,
+          40,
+          117
+        ],
+        "squared_error_increase": 9.790756469977216
+      },
+      {
+        "left": [
+          38
+        ],
+        "right": [
+          44
+        ],
+        "squared_error_increase": 10.37825798206048
+      },
+      {
+        "left": [
+          20,
+          47,
+          54,
+          69
+        ],
+        "right": [
+          26,
+          59,
+          76,
+          103,
+          108,
+          114,
+          127,
+          137,
+          143,
+          150
+        ],
+        "squared_error_increase": 10.61164134834917
+      },
+      {
+        "left": [
+          66
+        ],
+        "right": [
+          7,
+          96
+        ],
+        "squared_error_increase": 10.951004100923605
+      },
+      {
+        "left": [
+          3,
+          33,
+          39,
+          41,
+          65,
+          88,
+          118,
+          131,
+          151,
+          152
+        ],
+        "right": [
+          32,
+          51,
+          52,
+          89,
+          95,
+          100,
+          109,
+          119,
+          144
+        ],
+        "squared_error_increase": 11.443545284880884
+      },
+      {
+        "left": [
+          8,
+          37
+        ],
+        "right": [
+          49
+        ],
+        "squared_error_increase": 11.625671698714006
+      },
+      {
+        "left": [
+          13,
+          36,
+          72,
+          98,
+          102,
+          111,
+          112
+        ],
+        "right": [
+          35
+        ],
+        "squared_error_increase": 11.653264256151477
+      },
+      {
+        "left": [
+          12,
+          53,
+          56,
+          83,
+          84,
+          94,
+          126,
+          147
+        ],
+        "right": [
+          62,
+          64,
+          78,
+          80,
+          87,
+          91,
+          106,
+          110,
+          115,
+          120,
+          124,
+          149
+        ],
+        "squared_error_increase": 12.20964287524867
+      },
+      {
+        "left": [
+          29
+        ],
+        "right": [
+          70
+        ],
+        "squared_error_increase": 12.920118058479957
+      },
+      {
+        "left": [
+          11,
+          101,
+          104,
+          113,
+          123,
+          125,
+          129,
+          140
+        ],
+        "right": [
+          45,
+          46,
+          57,
+          58,
+          60,
+          128,
+          130,
+          134,
+          138
+        ],
+        "squared_error_increase": 13.367856986894125
+      },
+      {
+        "left": [
+          5,
+          136
+        ],
+        "right": [
+          7,
+          66,
+          96
+        ],
+        "squared_error_increase": 13.407972191200717
+      },
+      {
+        "left": [
+          3,
+          32,
+          33,
+          39,
+          41,
+          51,
+          52,
+          65,
+          88,
+          89,
+          95,
+          100,
+          109,
+          118,
+          119,
+          131,
+          144,
+          151,
+          152
+        ],
+        "right": [
+          16,
+          23,
+          40,
+          117,
+          122,
+          145
+        ],
+        "squared_error_increase": 14.142948915934616
+      },
+      {
+        "left": [
+          10,
+          21,
+          61,
+          73,
+          92
+        ],
+        "right": [
+          29,
+          70
+        ],
+        "squared_error_increase": 15.157583377322982
+      },
+      {
+        "left": [
+          6,
+          141
+        ],
+        "right": [
+          20,
+          26,
+          47,
+          54,
+          59,
+          69,
+          76,
+          103,
+          108,
+          114,
+          127,
+          137,
+          143,
+          150
+        ],
+        "squared_error_increase": 16.02440350308984
+      },
+      {
+        "left": [
+          1,
+          93,
+          146
+        ],
+        "right": [
+          5,
+          7,
+          66,
+          96,
+          136
+        ],
+        "squared_error_increase": 16.891958324918882
+      },
+      {
+        "left": [
+          11,
+          45,
+          46,
+          57,
+          58,
+          60,
+          101,
+          104,
+          113,
+          123,
+          125,
+          128,
+          129,
+          130,
+          134,
+          138,
+          140
+        ],
+        "right": [
+          14,
+          63,
+          71,
+          116
+        ],
+        "squared_error_increase": 17.34852881473244
+      },
+      {
+        "left": [
+          4
+        ],
+        "right": [
+          17,
+          43,
+          105
+        ],
+        "squared_error_increase": 17.559522641455665
+      },
+      {
+        "left": [
+          3,
+          16,
+          23,
+          32,
+          33,
+          39,
+          40,
+          41,
+          51,
+          52,
+          65,
+          88,
+          89,
+          95,
+          100,
+          109,
+          117,
+          118,
+          119,
+          122,
+          131,
+          144,
+          145,
+          151,
+          152
+        ],
+        "right": [
+          9,
+          30
+        ],
+        "squared_error_increase": 18.961660325264937
+      },
+      {
+        "left": [
+          31,
+          34,
+          135,
+          148
+        ],
+        "right": [
+          50,
+          85,
+          86,
+          97,
+          99,
+          107,
+          121,
+          133,
+          142
+        ],
+        "squared_error_increase": 19.980018891968076
+      },
+      {
+        "left": [
+          10,
+          21,
+          29,
+          61,
+          70,
+          73,
+          92
+        ],
+        "right": [
+          24,
+          25,
+          28,
+          68
+        ],
+        "squared_error_increase": 21.830260961875776
+      }
+    ]
+  },
+  "dates": "Original WIB values/accuracy preserved as source metadata, not clustering features",
+  "context_relevance": {
+    "schema": "beesense-context-relevance:1",
+    "version": "1.0.0",
+    "source_sha256": "d6ced320451c6194694d72b6de9fe3861252ccc3b66c4b3983440ae8c87c8df5",
+    "source_run_manifest_sha256": "ad43ce8fbbd285b72e16fdcfbdf9cba6713b1eba09541de627fd0474b6b9487a",
+    "configuration": {
+      "keywords": [
+        "kuliah",
+        "kampus",
+        "universitas",
+        "beasiswa",
+        "jurusan"
+      ],
+      "scope": "Pendidikan tinggi: pilihan kuliah, kampus dan universitas, jurusan, beasiswa, biaya kuliah, penerimaan mahasiswa, pengalaman mahasiswa dan prospek kerja lulusan.",
+      "references": {
+        "relevant": [
+          "Saya ingin daftar beasiswa kuliah tahun depan.",
+          "Biaya kuliah dan uang UKT di universitas ini mahal.",
+          "Orang tua saya tidak sanggup membayar biaya pendidikan kuliah.",
+          "Bagaimana syarat pendaftaran beasiswa KIP Kuliah?",
+          "Saya bingung memilih universitas swasta atau negeri.",
+          "Prospek kerja lulusan jurusan teknik informatika bagaimana?",
+          "Saya memilih jurusan kuliah sesuai minat dan peluang kerja.",
+          "Cara mendaftar penerimaan mahasiswa baru lewat SNBP SNBT UTBK.",
+          "Berapa nilai rapor dan skor ujian agar diterima di kampus?",
+          "Apakah ada batas usia untuk mendaftar kuliah atau beasiswa?",
+          "Kuliah sambil bekerja, kelas karyawan atau kuliah online.",
+          "Saya mau melanjutkan pendidikan sarjana, magister atau doktor.",
+          "Ibu tidak setuju saya kuliah di luar kota.",
+          "Kualitas dosen, akreditasi jurusan dan fasilitas kampus.",
+          "Saya sudah lulus SMA SMK dan ingin melanjutkan kuliah.",
+          "Memilih kampus karena biaya kos dan transportasi mahasiswa.",
+          "Kebijakan pemerintah tentang biaya pendidikan tinggi dan beasiswa.",
+          "Saya kesulitan mengerjakan tugas kuliah dan skripsi.",
+          "Pengalaman menjadi mahasiswa dan kehidupan perkuliahan.",
+          "Saya mencari beasiswa kuliah di luar negeri.",
+          "Setelah lulus sarjana saya mencari pekerjaan atau magang.",
+          "Jurusan psikologi, kedokteran, ekonomi atau teknik di universitas.",
+          "Saya ingin kuliah di BINUS, UI, UGM, ITB atau universitas lainnya.",
+          "Mental saya tertekan karena beban tugas kuliah dan skripsi."
+        ],
+        "generic": [
+          "Terima kasih kak atas informasinya.",
+          "Makasih banyak bang.",
+          "Semoga sehat selalu dan sukses.",
+          "Semangat ya, semoga sukses.",
+          "Aamiin, semoga dimudahkan semuanya.",
+          "Saya setuju sekali.",
+          "Betul sekali, sama seperti saya.",
+          "Wkwkwk lucu banget.",
+          "Saya baru tahu informasi ini.",
+          "Salam kenal dan salam sehat.",
+          "Mantap, keren, bagus sekali.",
+          "Saya suka video ini.",
+          "Saya menonton videonya sampai selesai.",
+          "Semoga bermanfaat bagi semua orang."
+        ],
+        "irrelevant": [
+          "Presiden dan pejabat korupsi harus dihukum berat.",
+          "Partai politik dan pemerintah sedang berebut kekuasaan.",
+          "MU kalah lagi semalam, pelatih sepak bolanya payah.",
+          "Pertandingan sepak bola dan pemain favorit saya.",
+          "Suami saya selingkuh dengan tetangga.",
+          "Istri dan suami bertengkar soal rumah tangga dan perceraian.",
+          "Saya sedang menonton drama film dan alur ceritanya menarik.",
+          "Saya ingin makan nasi goreng dan makanan enak.",
+          "Anak dan ibunya sedang bermain di rumah.",
+          "Saya bermain game online di telepon genggam.",
+          "Saya ingin membeli sabun dan produk perawatan kulit.",
+          "Dokter memberi obat untuk penyakit dan perawatan pasien.",
+          "Saya berobat ke psikolog atau psikiater karena gangguan mental.",
+          "Hubungan pacaran dan pernikahan yang tidak harmonis.",
+          "Artis dan selebriti terlibat skandal hiburan.",
+          "Saya melihat foto, video lucu dan konten di media sosial.",
+          "Pertikaian antarnegara, perang dan senjata nuklir.",
+          "Harga barang dan keadaan ekonomi negara memburuk.",
+          "Saya kecewa dengan presiden dan parlemen negara ini.",
+          "Resep masakan dan cara memasak makanan di rumah.",
+          "Saya membeli baju, sepatu dan barang belanjaan.",
+          "Anak saya masih balita dan belajar di sekolah dasar.",
+          "Cara mengedit foto dan video menggunakan aplikasi.",
+          "Saya sedang bercerita tentang pengalaman pribadi dan keluarga."
+        ]
+      },
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "model_cache_dir": ".cache/social_nlp/models",
+      "stride": 24,
+      "cache_dir": ".cache/context_relevance",
+      "batch_size": 32,
+      "threads": 4,
+      "max_tokens": 128,
+      "accept_score": 0.42,
+      "accept_margin": 0.035,
+      "other_score": 0.42,
+      "context_score": 0.5,
+      "context_direct_floor": 0.22,
+      "context_max_words": 14
+    },
+    "policy_sha256": "9a630d09b2ff733c433dbe9cdbbaa9b1c184f5509d5d3a890c8a5e6d6f818eeb",
+    "model": {
+      "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+      "weights_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+      "device": "cpu",
+      "score": "maximum cosine to reference examples; NOT probability",
+      "pooling": "SBERT overflow windows mean followed by L2 normalization",
+      "reused_source_manifest_sha256": "ad43ce8fbbd285b72e16fdcfbdf9cba6713b1eba09541de627fd0474b6b9487a"
+    },
+    "total_occurrences": 55257,
+    "accepted_occurrences": 11185,
+    "accepted_unique_sentences": 10795,
+    "decisions": {
+      "uncertain": 20500,
+      "generic": 19739,
+      "relevant": 11185,
+      "irrelevant": 3833
+    },
+    "per_platform": {
+      "instagram": {
+        "generic": 1582,
+        "irrelevant": 115,
+        "relevant": 665,
+        "uncertain": 1096
+      },
+      "reddit": {
+        "generic": 3544,
+        "irrelevant": 1054,
+        "relevant": 4033,
+        "uncertain": 6225
+      },
+      "tiktok": {
+        "generic": 738,
+        "irrelevant": 86,
+        "relevant": 770,
+        "uncertain": 310
+      },
+      "twitter": {
+        "generic": 201,
+        "irrelevant": 19,
+        "relevant": 23,
+        "uncertain": 228
+      },
+      "youtube": {
+        "generic": 13674,
+        "irrelevant": 2559,
+        "relevant": 5694,
+        "uncertain": 12641
+      }
+    },
+    "parent_context": {
+      "audited_parent_occurrences": 167,
+      "rule": "Native root from source URL; parent only from checksum-verified matching source audit. Missing/conflicting parents are not inferred."
+    },
+    "validation": "Automatic semantic prototype labels; cosine thresholds are provisional, not human-calibrated; no measured precision/recall."
+  },
+  "topic_narratives": {
+    "enabled": true,
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "beesense-topic-id:2",
+    "input_scope": "Top 10 positive c-TF-IDF keyword weights and up to 10 fitted sentences ranked by centroid cosine similarity per topic",
+    "interpretation": "AI-generated synthesis of keywords and representative sentences; not a quotation, population estimate or an additional coherence measurement",
+    "csv": "topic_narratives.csv",
+    "derived_from_run": "/Users/socs3/Documents/BeeSense/outputs/nlp_20261105_relevance_topics20_01",
+    "derived_from_manifest_sha256": "7e8374e1de807cd88ffacb5f39d3434aedb6990bba1ecb01a0f6b8ad2ccb0061",
+    "clustering_unchanged": true
+  },
+  "synthetic": false
+}

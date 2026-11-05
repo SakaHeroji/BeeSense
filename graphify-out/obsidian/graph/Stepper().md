@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/shared/ui.tsx"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L256"
+location: "L257"
 tags:
   - graphify/code
   - graphify/EXTRACTED

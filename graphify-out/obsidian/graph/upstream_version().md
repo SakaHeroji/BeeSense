@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.__call__()_1]] - `calls` [EXTRACTED]
-- [[.__init__()_15]] - `calls` [EXTRACTED]
+- [[.__init__()_13]] - `calls` [EXTRACTED]
 - [[.collect()]] - `calls` [EXTRACTED]
 - [[error_receipt()]] - `calls` [EXTRACTED]
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]

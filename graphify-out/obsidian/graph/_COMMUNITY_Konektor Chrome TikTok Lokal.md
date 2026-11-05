@@ -1,42 +1,16 @@
 ---
 type: community
-cohesion: 0.21
-members: 27
+members: 3
 ---
 
 # Konektor Chrome TikTok Lokal
 
-**Cohesion:** 0.21 - loosely connected
-**Members:** 27 nodes
+**Members:** 3 nodes
 
 ## Members
-- [[background.mjs]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[bridge()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[cdp()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[commentPaginationExhausted()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[core.mjs]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[delay()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[expired()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[flush()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[inspect()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[metric()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[nativeId()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[oid]] - code - tests/crawler/test_tiktok_chrome_extension.mjs
-- [[page()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[pageOperation()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[parsePublicJson()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[requests]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[retryAfter()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[runTask()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[sourceComments()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[sourceHasMore()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[sourceVideo()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[sourceVideos()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[start()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[status()]] - code - Crawler/Backend/Tiktok/chrome_extension/background.mjs
-- [[test_tiktok_chrome_extension.mjs]] - code - tests/crawler/test_tiktok_chrome_extension.mjs
-- [[tiktokUrl()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
-- [[validateTask()]] - code - Crawler/Backend/Tiktok/chrome_extension/core.mjs
+- [[ActiveTikTok-tab start uses local127.0.0.1bridge address and temporary password-style pairing-code field;statusbuild display]] - concept - Crawler/Backend/Tiktok/chrome_extension/popup.html
+- [[BeeSense TikTok Chrome connection popup]] - code - Crawler/Backend/Tiktok/chrome_extension/popup.html
+- [[Human CAPTCHA completion and Continue after manual validation;Stop acquisition;selected-tab public responses sent to localhost]] - concept - Crawler/Backend/Tiktok/chrome_extension/popup.html
 
 ## Live Query (requires Dataview plugin)
 

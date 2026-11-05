@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_unlimited_crawling.py"
 type: "code"
-community: "Pengujian Client Instagram"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Client_Instagram
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # UnlimitedCrawlingTests
@@ -23,4 +23,4 @@ tags:
 - [[SocialCrawlerSelenium]] - `uses` [INFERRED]
 - [[test_unlimited_crawling.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

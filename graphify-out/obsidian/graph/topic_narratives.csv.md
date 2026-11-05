@@ -11,7 +11,6 @@ tags:
 # topic_narratives.csv
 
 ## Connections
-- [[Dashboard BeeSense]] - `references` [EXTRACTED]
 - [[Gemini topic narratives]] - `shares_data_with` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 - [[Relevansi Konteks — 2 November 2026]] - `references` [EXTRACTED]

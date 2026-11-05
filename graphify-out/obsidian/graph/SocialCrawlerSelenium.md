@@ -12,7 +12,7 @@ tags:
 # SocialCrawlerSelenium
 
 ## Connections
-- [[.__init__()_17]] - `method` [EXTRACTED]
+- [[.__init__()_15]] - `method` [EXTRACTED]
 - [[._checkpoint_items()]] - `method` [EXTRACTED]
 - [[._execute()]] - `method` [EXTRACTED]
 - [[._legacy_settings()]] - `method` [EXTRACTED]
@@ -37,7 +37,7 @@ tags:
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[SocialCrawlerSeleniumTests]] - `uses` [INFERRED]
 - [[UnlimitedCrawlingTests]] - `uses` [INFERRED]
-- [[main()_11]] - `calls` [EXTRACTED]
+- [[main()_7]] - `calls` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_selenium.py]] - `imports` [EXTRACTED]
 - [[test_unlimited_crawling.py]] - `imports` [EXTRACTED]

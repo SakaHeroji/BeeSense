@@ -111,6 +111,29 @@ class AnalysisTests(unittest.TestCase):
         self.assertIn("X / Twitter 2", figure.data[-1].hovertext[0])
         self.assertEqual(figure.data[-1].marker.color[0], 3)
 
+    def test_tiktok_counts_noise_months_and_network_include_all_records(self):
+        frame = self.frame.copy()
+        frame.loc[frame.platform == "youtube", "platform"] = "tiktok"
+        table = App.topic_summary(self.topics, frame)
+        self.assertEqual(int(table.tiktok.sum()), 2)
+        coverage = App.platform_summary(frame).set_index("platform")
+        self.assertEqual(coverage.loc["tiktok", "total"], 3)
+        self.assertEqual(coverage.loc["tiktok", "assigned"], 2)
+        self.assertEqual(coverage.loc["tiktok", "noise"], 1)
+        months = App.monthly_summary(frame)
+        self.assertEqual(
+            int(
+                months[["youtube", "reddit", "instagram", "twitter", "tiktok"]]
+                .to_numpy()
+                .sum()
+            ),
+            len(frame),
+        )
+        figure, _ = App.topic_figure(self.topics, {"edges": []}, frame, 0.6)
+        self.assertIn("TikTok 2", figure.data[-1].hovertext[0])
+        self.assertIn("TikTok", figure.data[-1].marker.colorbar.ticktext)
+        self.assertEqual(figure.data[-1].marker.color[0], 3)
+
     def test_platform_coverage_includes_noise_and_preserves_zero_platforms(self):
         table = App.platform_summary(self.frame).set_index("platform")
         self.assertEqual(int(table.total.sum()), len(self.frame))

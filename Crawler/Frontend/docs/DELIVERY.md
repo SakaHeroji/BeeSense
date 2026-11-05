@@ -1,5 +1,71 @@
 # Delivery frontend 1.2
 
+## TikTok plugin Chrome — 5 November 2026
+
+Frontend TikTok kini mengikuti urutan konfigurasi → review → pairing Chrome →
+progres pada transaksi yang sama. Panel koneksi menampilkan alamat server dashboard,
+kode sementara tersembunyi dengan tombol salin, versi minimum plugin dari manifest,
+status menunggu/terhubung/putus/kedaluwarsa, serta arahan CAPTCHA manual. Form sesi
+TikTok diganti petunjuk penggunaan tab Chrome yang sudah login. Query dan hashtag
+dapat dipakai bergantian; tanggal, include/exclude, target, jam opsional dan storage
+tetap berasal dari konfigurasi universal. Statistik serta migrasi tetap pada hasil
+transaksi per sosmed.
+
+Keputusan desain: palet BeeSense dipertahankan, Plus Jakarta Sans, body/input
+baru 16 px dan label/petunjuk 14 px. Tiga langkah menjelaskan urutan nyata;
+panel koneksi menjadi fokus monitor, bukan menu baru. Angka post aktif dipisahkan
+dari operasi selesai, dengan aktivitas dan peringatan bila tidak ada ID baru.
+Review visual memperbaiki padding petunjuk Chrome dan menggelapkan indikator
+langkah #B84D00 agar angka putih kecil tetap terbaca.
+
+Kontrak API privat terikat job/proyek pada origin dashboard yang sama. Tidak ada
+hardcoded port bridge atau permintaan ke server kedua. Kode pairing hanya di
+memori halaman; Job publik hanya memuat ringkasan state/versi/lastSeenAt.
+Pengamat tidak meminta endpoint privat. Timer menunggu verifikasi koneksi;
+reconnect mempertahankan deadline. Tombol lanjut setelah CAPTCHA mempertahankan
+state yang dikembalikan server sampai worker memverifikasi pemulihan.
+
+**Batas implementasi:** tahap ini tetap frontend terlebih dahulu. Gateway HTTP
+dan worker terintegrasi belum dibuat; build API memerlukan capability
+`tiktokConnectorAvailable` dan endpoint pada API_CONTRACT.md. Preview demo berlabel
+tidak mengendalikan Chrome atau run CLI nyata. Tidak ada restart crawler aktif,
+perubahan auth.json, PostgreSQL, konfigurasi produksi atau redeploy Streamlit.
+No migration required.
+
+Verifikasi revisi ini: `npm run check` lulus lint, 45 Vitest, 2 tes Node proyeksi,
+TypeScript dan build API. Cakupan baru memeriksa alur konfigurasi/pairing/monitor,
+hashtag/validasi/fokus, role pengamat, expiry/rotasi, clock/reconnect, rahasia di
+memori, keterikatan origin/job dan CAPTCHA yang belum diverifikasi server.
+`npm run format:check` dan `npm run build:demo` menjadi bagian pemeriksaan akhir.
+
+Browser uji terisolasi memeriksa konfigurasi/review/pairing, status terhubung,
+CAPTCHA serta koneksi terputus pada runtime Vite proyek yang sama:
+http://127.0.0.1:5173. Desktop 1440×1080 dan mobile 390×844; mobile scrollWidth
+390 dan teks main terkecil 13 px, memenuhi minimum 12 px. Screenshot lokal
+`output/playwright/tiktok-plugin-*.png`. Console tanpa error aplikasi; Chrome
+memberi informasi nonfatal untuk input password readonly di luar form.
+
+Audit [pedoman web terbaru](https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md)
+diambil 5 November 2026:
+
+- `src/features/TikTokConnector.tsx` — pass: label, aksi button, status live,
+  kode tersembunyi, expiry, feedback clipboard, format Intl dan heading semantik.
+- `src/features/PlatformWorkspace.tsx` — pass: validasi inline/fokus pertama,
+  dirty guard, input bernama, review modal serta CTA sesuai langkah.
+- `src/features/JobDetail.tsx` — pass untuk perubahan TikTok: status menunggu
+  koneksi, waktu belum dimulai, route sumber dan pemisahan angka operasi/thread.
+- `src/styles.css` — pass untuk perubahan TikTok: fokus, hit area, type scale,
+  overflow lokal dan kolom bertumpuk pada mobile; tidak menambah animasi.
+
+Release guard lulus tanpa finding terhadap origin/main termasuk working tree.
+Docker daemon lokal tidak berjalan, sehingga build/start image belum diverifikasi;
+Dockerfile/Nginx/dependensi tidak berubah. Status deployment: **Not fully verified**.
+Perintah tersisa saat daemon tersedia:
+`docker build -t beesense-crawler-frontend:api Crawler/Frontend` dari root repo.
+Graphify/Obsidian mencatat kontrak gateway satu origin dan pemisahan simulasi/live.
+
+## Riwayat frontend per sosmed
+
 3 November 2026. Lingkup yang disetujui adalah frontend terlebih dahulu. **Migrasi dan penyimpanan akun hanya simulasi antarmuka; tidak ada penulisan PostgreSQL atau auth.json.** Runtime lokal tetap Vite pada 127.0.0.1:5173. Tidak ada perubahan runtime/database produksi.
 
 ## Rancangan dan koreksi

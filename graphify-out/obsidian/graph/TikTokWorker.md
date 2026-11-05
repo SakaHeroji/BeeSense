@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L1152"
+location: "L1168"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,10 +12,10 @@ tags:
 # TikTokWorker
 
 ## Connections
-- [[.__call__()_4]] - `method` [EXTRACTED]
-- [[.__init__()_45]] - `calls` [EXTRACTED]
+- [[.__call__()_5]] - `method` [EXTRACTED]
+- [[.__init__()_39]] - `calls` [EXTRACTED]
 - [[.__init__()_42]] - `method` [EXTRACTED]
-- [[.close()_9]] - `method` [EXTRACTED]
+- [[.close()_10]] - `method` [EXTRACTED]
 - [[ChromeLiveWorker]] - `uses` [INFERRED]
 - [[Keep a single library session; retain streamed rows on a hard deadline.]] - `rationale_for` [EXTRACTED]
 - [[SocialCrawler]] - `uses` [INFERRED]

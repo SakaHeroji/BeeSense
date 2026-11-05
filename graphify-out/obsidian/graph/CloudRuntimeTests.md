@@ -1,12 +1,12 @@
 ---
 source_file: "tests/cloud/test_dashboard_runtime.py"
 type: "code"
-community: "Model dan Pengujian NLP"
+community: "Narasi Gemini dan Pembandingan"
 location: "L29"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # CloudRuntimeTests
@@ -16,4 +16,4 @@ tags:
 - [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_dashboard_runtime.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Model dan Pengujian NLP"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # social_nlp.py
@@ -19,7 +19,7 @@ tags:
 - [[generate_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[json_write()]] - `contains` [EXTRACTED]
 - [[load_config()]] - `contains` [EXTRACTED]
-- [[main()_6]] - `contains` [EXTRACTED]
+- [[main()_16]] - `contains` [EXTRACTED]
 - [[relevance_dashboard.py]] - `imports_from` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports_from` [EXTRACTED]
@@ -34,4 +34,4 @@ tags:
 - [[topic_sentence_export.py]] - `imports_from` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

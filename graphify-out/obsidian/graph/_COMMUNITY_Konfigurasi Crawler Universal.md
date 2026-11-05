@@ -1,18 +1,16 @@
 ---
 type: community
-cohesion: 0.12
 members: 35
 ---
 
 # Konfigurasi Crawler Universal
 
-**Cohesion:** 0.12 - loosely connected
 **Members:** 35 nodes
 
 ## Members
-- [[.__init__()_32]] - code - Crawler/Backend/reddit_crawler.py
-- [[.__init__()_17]] - code - Crawler/Backend/social_crawler_selenium.py
-- [[.setUp()_12]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.__init__()_15]] - code - Crawler/Backend/social_crawler_selenium.py
+- [[.__init__()_30]] - code - Crawler/Backend/reddit_crawler.py
+- [[.setUp()_9]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_cli_rejects_unimplemented_database_output_before_network_or_export()]] - code - tests/crawler/test_storage_config.py
 - [[.test_custom_storage_reaches_coordinator_and_standalone_projections()]] - code - tests/crawler/test_storage_config.py
 - [[.test_every_runner_reads_changes_from_the_same_custom_file()]] - code - tests/crawler/test_crawler_config.py
@@ -25,25 +23,25 @@ members: 35
 - [[.test_shared_queries_limits_and_platform_overrides_are_independent()]] - code - tests/crawler/test_crawler_config.py
 - [[.test_standalone_selects_disabled_platform_without_mutating_input()]] - code - tests/crawler/test_crawler_config.py
 - [[Apply shared defaults; an explicit platform value always wins, even .]] - rationale - Crawler/Backend/crawler_config.py
+- [[Offline checks for the Chrome boundary, native identity, and provenance.]] - rationale - tests/crawler/test_instagram_browser.py
 - [[One editable crawler configuration, expanded before adapter validation.]] - rationale - Crawler/Backend/crawler_config.py
 - [[Project the versioned universal file to a legacy standalone adapter contract.]] - rationale - Crawler/Backend/crawler_config.py
 - [[Public storage configuration must be explicit and never silently ignored.]] - rationale - tests/crawler/test_storage_config.py
 - [[Read a bounded JSON object without touching authentication or runtime state.]] - rationale - Crawler/Backend/crawler_config.py
-- [[Reddit-only compatibility entry point for the integrated SocialCrawler Reddrix b]] - rationale - Crawler/Backend/reddit_crawler.py
-- [[Storage settings shared with the frontend; DSNs stay in server environment.]] - rationale - Crawler/Backend/storage_config.py
+- [[Scweet-only trial; uses the existing shared sink, filters and Excel format.]] - rationale - Crawler/Backend/twitter_crawler.py
+- [[SocialExportMixin_2]] - code
 - [[StorageConfigTests]] - code - tests/crawler/test_storage_config.py
+- [[TwitterCrawler]] - code - Crawler/Backend/twitter_crawler.py
 - [[Universal configuration contracts across the coordinator and standalone CLIs.]] - rationale - tests/crawler/test_crawler_config.py
 - [[UniversalConfigTests]] - code - tests/crawler/test_crawler_config.py
 - [[_config()]] - code - Crawler/Backend/social_crawler.py
 - [[crawler_config.py]] - code - Crawler/Backend/crawler_config.py
 - [[expand_config()]] - code - Crawler/Backend/crawler_config.py
 - [[read_config()]] - code - Crawler/Backend/crawler_config.py
-- [[reddit_crawler.py]] - code - Crawler/Backend/reddit_crawler.py
-- [[require_excel_storage()]] - code - Crawler/Backend/storage_config.py
 - [[standalone_config()]] - code - Crawler/Backend/crawler_config.py
 - [[storage_config()]] - code - Crawler/Backend/storage_config.py
-- [[storage_config.py]] - code - Crawler/Backend/storage_config.py
 - [[test_crawler_config.py]] - code - tests/crawler/test_crawler_config.py
+- [[test_instagram_browser.py]] - code - tests/crawler/test_instagram_browser.py
 - [[test_storage_config.py]] - code - tests/crawler/test_storage_config.py
 
 ## Live Query (requires Dataview plugin)
@@ -54,23 +52,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_1]]
-- 10 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 9 edges to [[_COMMUNITY_Batas Crawler Opsional]]
+- 18 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_7]]
 - 9 edges to [[_COMMUNITY_Kuota Harian Scweet]]
+- 9 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 8 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
+- 7 edges to [[_COMMUNITY_Batas Crawler Opsional_3]]
 - 7 edges to [[_COMMUNITY_Batas Crawler Opsional_1]]
-- 7 edges to [[_COMMUNITY_Worker Instaloader]]
-- 7 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
-- 6 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 5 edges to [[_COMMUNITY_Crawler Selenium]]
-- 4 edges to [[_COMMUNITY_Pengujian Client Instagram_1]]
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
-- 1 edge to [[_COMMUNITY_Konektor Chrome TikTok Lokal_1]]
+- 6 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader_1]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader_4]]
+- 3 edges to [[_COMMUNITY_Worker Instaloader_2]]
+- 3 edges to [[_COMMUNITY_Crawler Selenium]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
+- 1 edge to [[_COMMUNITY_Batas Crawler Opsional]]
+- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium_2]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium_1]]
+- 1 edge to [[_COMMUNITY_Konektor Chrome TikTok Lokal_2]]
 - 1 edge to [[_COMMUNITY_Arsip Data Harian_1]]
 
 ## Top bridge nodes
 - [[crawler_config.py]] - degree 19, connects to 10 communities
-- [[test_crawler_config.py]] - degree 17, connects to 7 communities
-- [[standalone_config()]] - degree 21, connects to 5 communities
-- [[UniversalConfigTests]] - degree 13, connects to 5 communities
-- [[.test_every_runner_reads_changes_from_the_same_custom_file()]] - degree 7, connects to 5 communities
+- [[test_crawler_config.py]] - degree 17, connects to 8 communities
+- [[standalone_config()]] - degree 21, connects to 7 communities
+- [[read_config()]] - degree 20, connects to 5 communities
+- [[_config()]] - degree 16, connects to 4 communities

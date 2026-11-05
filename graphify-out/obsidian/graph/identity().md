@@ -22,6 +22,6 @@ tags:
 - [[social_archive.py]] - `imports` [EXTRACTED]
 - [[social_identity.py]] - `contains` [EXTRACTED]
 - [[source_records()]] - `calls` [EXTRACTED]
-- [[verify()_2]] - `calls` [EXTRACTED]
+- [[verify()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

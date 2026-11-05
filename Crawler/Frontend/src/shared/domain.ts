@@ -26,7 +26,7 @@ export const platformDescription: Record<Platform, string> = {
   youtube: 'Video, komentar & reply',
   reddit: 'Post, diskusi & reply',
   instagram: 'Post, Reels & komentar',
-  tiktok: 'Video & komentar',
+  tiktok: 'Plugin Chrome, video, komentar & balasan',
   threads: 'Post & balasan',
   facebook: 'Post & komentar',
   x: 'Post & balasan',
@@ -213,7 +213,7 @@ export function validateConfig(c: Config, cap: Capabilities): FieldError[] {
     if (
       c.mode === 'automatic' &&
       p !== 'instagram' &&
-      (!q.length ||
+      ((!q.length && !(p === 'tiktok' && lines(v.hashtags).length)) ||
         q.length > cap.limits.maxQueries ||
         q.some(
           (x) =>
@@ -224,6 +224,12 @@ export function validateConfig(c: Config, cap: Capabilities): FieldError[] {
         `${p}.queries`,
         `Isi 1–${cap.limits.maxQueries} query, maksimum ${cap.limits.maxQueryLength} karakter per baris.`,
       );
+    if (
+      p === 'tiktok' &&
+      (lines(v.hashtags).length > cap.limits.maxQueries ||
+        lines(v.hashtags).some((tag) => !/^[A-Za-z0-9_]{1,100}$/.test(tag.replace(/^#/, ''))))
+    )
+      add('tiktok.hashtags', 'Isi hashtag TikTok tanpa spasi, maksimum 100 karakter per hashtag.');
     if (
       c.mode === 'automatic' &&
       p === 'instagram' &&

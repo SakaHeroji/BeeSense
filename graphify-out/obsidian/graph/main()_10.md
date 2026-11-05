@@ -1,21 +1,19 @@
 ---
-source_file: "Crawler/Backend/instaloader_crawler.py"
+source_file: "Crawler/Backend/reddit_crawler.py"
 type: "code"
-community: "Worker Instaloader"
-location: "L745"
+community: "Wrapper RedditCrawler"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Wrapper_RedditCrawler
 ---
 
 # main()
 
 ## Connections
-- [[.close()_3]] - `calls` [EXTRACTED]
-- [[.plan()]] - `calls` [EXTRACTED]
-- [[.run()]] - `calls` [EXTRACTED]
-- [[InstaloaderCrawler]] - `calls` [EXTRACTED]
-- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
+- [[.plan()_2]] - `calls` [EXTRACTED]
+- [[RedditCrawler]] - `calls` [EXTRACTED]
+- [[reddit_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

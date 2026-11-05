@@ -12,7 +12,6 @@ tags:
 # transactionDemoApi
 
 ## Connections
-- [[demo.ts]] - `imports` [EXTRACTED]
 - [[transaction-demo.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

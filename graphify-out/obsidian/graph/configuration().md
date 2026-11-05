@@ -12,7 +12,7 @@ tags:
 # configuration()
 
 ## Connections
-- [[.__init__()_39]] - `calls` [EXTRACTED]
+- [[.__init__()_37]] - `calls` [EXTRACTED]
 - [[_integer()_1]] - `calls` [EXTRACTED]
 - [[post_url()]] - `calls` [EXTRACTED]
 - [[read_json()]] - `calls` [EXTRACTED]

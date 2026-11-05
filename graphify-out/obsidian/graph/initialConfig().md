@@ -19,8 +19,10 @@ tags:
 - [[api.test.ts]] - `imports` [EXTRACTED]
 - [[demo.ts]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
+- [[newTikTokJob()]] - `calls` [EXTRACTED]
 - [[platform-workspace.test.tsx]] - `imports` [EXTRACTED]
 - [[seed()]] - `calls` [EXTRACTED]
+- [[tiktok-connector.test.tsx]] - `imports` [EXTRACTED]
 - [[transaction.test.ts]] - `imports` [EXTRACTED]
 - [[wibInput()]] - `calls` [EXTRACTED]
 

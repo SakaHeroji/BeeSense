@@ -1,0 +1,1707 @@
+[
+  {
+    "cluster_id": 0,
+    "label": "kampus / kuliah / mahasiswa",
+    "terms": [
+      "kampus",
+      "kuliah",
+      "mahasiswa",
+      "semester",
+      "universitas",
+      "sama",
+      "kalo",
+      "tidak",
+      "alumni",
+      "sma",
+      "dulu",
+      "dosen"
+    ],
+    "term_weights": [
+      {
+        "term": "kampus",
+        "weight": 0.05674377322630488
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.04577824172886293
+      },
+      {
+        "term": "mahasiswa",
+        "weight": 0.04073368561703713
+      },
+      {
+        "term": "semester",
+        "weight": 0.03373401428841071
+      },
+      {
+        "term": "universitas",
+        "weight": 0.021097787711622178
+      },
+      {
+        "term": "sama",
+        "weight": 0.01637829718313741
+      },
+      {
+        "term": "kalo",
+        "weight": 0.015866022139191267
+      },
+      {
+        "term": "tidak",
+        "weight": 0.015694658177440753
+      },
+      {
+        "term": "alumni",
+        "weight": 0.015315827486894569
+      },
+      {
+        "term": "sma",
+        "weight": 0.01528588952742043
+      },
+      {
+        "term": "dulu",
+        "weight": 0.01467355375586763
+      },
+      {
+        "term": "dosen",
+        "weight": 0.013500674428607123
+      }
+    ],
+    "coherence_cv": 0.4443696275676179,
+    "unique_sentences": 1125,
+    "occurrences": 1149,
+    "platform_counts": {
+      "youtube": 590,
+      "reddit": 341,
+      "instagram": 136,
+      "tiktok": 77,
+      "twitter": 5
+    },
+    "mean_centroid_similarity": 0.647343635559082,
+    "representative_ids": [
+      "6f4cb4c6ec3c8ff1d36f114e",
+      "e570cc12e0071c4e2a33bda2",
+      "c37e1d8a5cbd23a5c57fb5a6",
+      "b443ffddf5f7e393f36b7118",
+      "484b4736e8a7c4d5d0320ade"
+    ]
+  },
+  {
+    "cluster_id": 1,
+    "label": "muhammadiyah / semoga / universitas",
+    "terms": [
+      "muhammadiyah",
+      "semoga",
+      "universitas",
+      "muhammad",
+      "lolos",
+      "anak",
+      "org",
+      "kip",
+      "menteri",
+      "pendidikan",
+      "kaya",
+      "islam"
+    ],
+    "term_weights": [
+      {
+        "term": "muhammadiyah",
+        "weight": 0.023668901181880607
+      },
+      {
+        "term": "semoga",
+        "weight": 0.020240716558030388
+      },
+      {
+        "term": "universitas",
+        "weight": 0.01953687287155822
+      },
+      {
+        "term": "muhammad",
+        "weight": 0.01763508743222804
+      },
+      {
+        "term": "lolos",
+        "weight": 0.016962188955187408
+      },
+      {
+        "term": "anak",
+        "weight": 0.016884496465059077
+      },
+      {
+        "term": "org",
+        "weight": 0.016089392506708298
+      },
+      {
+        "term": "kip",
+        "weight": 0.01525720540721352
+      },
+      {
+        "term": "menteri",
+        "weight": 0.01495265759307444
+      },
+      {
+        "term": "pendidikan",
+        "weight": 0.014366600862332848
+      },
+      {
+        "term": "kaya",
+        "weight": 0.014310152419260948
+      },
+      {
+        "term": "islam",
+        "weight": 0.014269112333233181
+      }
+    ],
+    "coherence_cv": 0.3376982042914864,
+    "unique_sentences": 476,
+    "occurrences": 546,
+    "platform_counts": {
+      "youtube": 333,
+      "tiktok": 93,
+      "instagram": 73,
+      "reddit": 41,
+      "twitter": 6
+    },
+    "mean_centroid_similarity": 0.6194247603416443,
+    "representative_ids": [
+      "86fb94137fcd7d06347b3a1a",
+      "5a3bb3c6b687c821198229a0",
+      "1efc8c3e5e78c3b4918da164",
+      "4686ec0d4617b7e95fe8046f",
+      "57ee423deedb1d5210b2a7cc"
+    ]
+  },
+  {
+    "cluster_id": 2,
+    "label": "kip / nilai / dokumen",
+    "terms": [
+      "kip",
+      "nilai",
+      "dokumen",
+      "kip kuliah",
+      "itb",
+      "sertifikat",
+      "ugm",
+      "daftar",
+      "kuliah",
+      "tes",
+      "smk",
+      "sma"
+    ],
+    "term_weights": [
+      {
+        "term": "kip",
+        "weight": 0.04004328301991457
+      },
+      {
+        "term": "nilai",
+        "weight": 0.03305462142917416
+      },
+      {
+        "term": "dokumen",
+        "weight": 0.029896148987935554
+      },
+      {
+        "term": "kip kuliah",
+        "weight": 0.028540867943015455
+      },
+      {
+        "term": "itb",
+        "weight": 0.023938883042344358
+      },
+      {
+        "term": "sertifikat",
+        "weight": 0.023825636930620224
+      },
+      {
+        "term": "ugm",
+        "weight": 0.022501201846278233
+      },
+      {
+        "term": "daftar",
+        "weight": 0.021250821408144497
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.021009583034084678
+      },
+      {
+        "term": "tes",
+        "weight": 0.01927508816215731
+      },
+      {
+        "term": "smk",
+        "weight": 0.017824696894672896
+      },
+      {
+        "term": "sma",
+        "weight": 0.016878763132670137
+      }
+    ],
+    "coherence_cv": 0.24631307839063168,
+    "unique_sentences": 526,
+    "occurrences": 701,
+    "platform_counts": {
+      "youtube": 343,
+      "tiktok": 168,
+      "reddit": 143,
+      "instagram": 47
+    },
+    "mean_centroid_similarity": 0.5058656334877014,
+    "representative_ids": [
+      "e95541f6d3b87a014497f65d",
+      "fc2e559d0b255b6fb873a7ac",
+      "e1e333746f5804db61f3a025",
+      "b07c5d6a38aa97e3a8d22b3d",
+      "1f3eaf396373457050c129b3"
+    ]
+  },
+  {
+    "cluster_id": 3,
+    "label": "tahun / umur / usia",
+    "terms": [
+      "tahun",
+      "umur",
+      "usia",
+      "kip",
+      "pendaftaran",
+      "lulusan",
+      "waktu",
+      "kuliah",
+      "lulus",
+      "tahun depan",
+      "mulai",
+      "daftar"
+    ],
+    "term_weights": [
+      {
+        "term": "tahun",
+        "weight": 0.11377976167967202
+      },
+      {
+        "term": "umur",
+        "weight": 0.08626690129462475
+      },
+      {
+        "term": "usia",
+        "weight": 0.05220936124278959
+      },
+      {
+        "term": "kip",
+        "weight": 0.02698317951333459
+      },
+      {
+        "term": "pendaftaran",
+        "weight": 0.02474561412906273
+      },
+      {
+        "term": "lulusan",
+        "weight": 0.023662448973285094
+      },
+      {
+        "term": "waktu",
+        "weight": 0.0235108051470564
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.022531815572781357
+      },
+      {
+        "term": "lulus",
+        "weight": 0.022296411264569126
+      },
+      {
+        "term": "tahun depan",
+        "weight": 0.021477190230887448
+      },
+      {
+        "term": "mulai",
+        "weight": 0.0208695698821378
+      },
+      {
+        "term": "daftar",
+        "weight": 0.01998449111908867
+      }
+    ],
+    "coherence_cv": 0.3453477831435466,
+    "unique_sentences": 268,
+    "occurrences": 284,
+    "platform_counts": {
+      "youtube": 126,
+      "reddit": 114,
+      "tiktok": 32,
+      "instagram": 12
+    },
+    "mean_centroid_similarity": 0.5849563479423523,
+    "representative_ids": [
+      "ed3f9ed80a330a954ca47e64",
+      "d9236368255d682e6f1e0fe1",
+      "aca90df71d0461b8fe5642f4",
+      "de63c4e8b3d8b8cf07cc8288",
+      "bf1bf33c4d67a76f0475c223"
+    ]
+  },
+  {
+    "cluster_id": 4,
+    "label": "swasta / pendidikan / kampus",
+    "terms": [
+      "swasta",
+      "pendidikan",
+      "kampus swasta",
+      "kampus",
+      "universitas",
+      "mahasiswa",
+      "worth",
+      "kualitas",
+      "pts",
+      "sekolah",
+      "kuliah",
+      "ptn"
+    ],
+    "term_weights": [
+      {
+        "term": "swasta",
+        "weight": 0.06996077178625146
+      },
+      {
+        "term": "pendidikan",
+        "weight": 0.05026529808732485
+      },
+      {
+        "term": "kampus swasta",
+        "weight": 0.03325323961459479
+      },
+      {
+        "term": "kampus",
+        "weight": 0.03242646440537629
+      },
+      {
+        "term": "universitas",
+        "weight": 0.024079546774519116
+      },
+      {
+        "term": "mahasiswa",
+        "weight": 0.02287909214497696
+      },
+      {
+        "term": "worth",
+        "weight": 0.022546573999001025
+      },
+      {
+        "term": "kualitas",
+        "weight": 0.02218463990898436
+      },
+      {
+        "term": "pts",
+        "weight": 0.02062567193277007
+      },
+      {
+        "term": "sekolah",
+        "weight": 0.020149166215105964
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.02002965948741695
+      },
+      {
+        "term": "ptn",
+        "weight": 0.019797854322480646
+      }
+    ],
+    "coherence_cv": 0.4452325176768053,
+    "unique_sentences": 313,
+    "occurrences": 322,
+    "platform_counts": {
+      "youtube": 222,
+      "reddit": 82,
+      "instagram": 12,
+      "tiktok": 6
+    },
+    "mean_centroid_similarity": 0.5964182019233704,
+    "representative_ids": [
+      "161606e37dd2948429f0242a",
+      "d81d72eb21ba501d0d208d34",
+      "294e7eb9ba032f7054342cae",
+      "958f97ee5b0c1282a50e45d0",
+      "c2f3af41c70e46b7aa45ad48"
+    ]
+  },
+  {
+    "cluster_id": 5,
+    "label": "pajak / uang / bayar",
+    "terms": [
+      "pajak",
+      "uang",
+      "bayar",
+      "mahal",
+      "biaya",
+      "juta",
+      "duit",
+      "ukt",
+      "gratis",
+      "kaya",
+      "rakyat",
+      "negara"
+    ],
+    "term_weights": [
+      {
+        "term": "pajak",
+        "weight": 0.08416306743444876
+      },
+      {
+        "term": "uang",
+        "weight": 0.07772936084798757
+      },
+      {
+        "term": "bayar",
+        "weight": 0.05661678710215273
+      },
+      {
+        "term": "mahal",
+        "weight": 0.05598134063158976
+      },
+      {
+        "term": "biaya",
+        "weight": 0.054040905497175454
+      },
+      {
+        "term": "juta",
+        "weight": 0.04757555518311399
+      },
+      {
+        "term": "duit",
+        "weight": 0.045146242444830446
+      },
+      {
+        "term": "ukt",
+        "weight": 0.03825593974293126
+      },
+      {
+        "term": "gratis",
+        "weight": 0.033347637489954784
+      },
+      {
+        "term": "kaya",
+        "weight": 0.032263874171963636
+      },
+      {
+        "term": "rakyat",
+        "weight": 0.02827338589610892
+      },
+      {
+        "term": "negara",
+        "weight": 0.025539098693564407
+      }
+    ],
+    "coherence_cv": 0.5732647195023615,
+    "unique_sentences": 354,
+    "occurrences": 355,
+    "platform_counts": {
+      "youtube": 244,
+      "reddit": 99,
+      "tiktok": 8,
+      "instagram": 4
+    },
+    "mean_centroid_similarity": 0.5996671319007874,
+    "representative_ids": [
+      "cb15c6a5e52f722883f7411a",
+      "a7f9e0b098a416a9f3926a6c",
+      "88d1bd87c5bbd0f6f8bde4a3",
+      "d64545735bf8694101ea30ba",
+      "43c91097016d5f67f285f02b"
+    ]
+  },
+  {
+    "cluster_id": 6,
+    "label": "jurusan / ijazah / kuliah",
+    "terms": [
+      "jurusan",
+      "ijazah",
+      "kuliah",
+      "kerja",
+      "psikologi",
+      "lulus",
+      "lulusan",
+      "ambil",
+      "sarjana",
+      "mdis",
+      "sma",
+      "kedokteran"
+    ],
+    "term_weights": [
+      {
+        "term": "jurusan",
+        "weight": 0.060142275313474096
+      },
+      {
+        "term": "ijazah",
+        "weight": 0.044266180175711135
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.038404786903415554
+      },
+      {
+        "term": "kerja",
+        "weight": 0.03759861365344224
+      },
+      {
+        "term": "psikologi",
+        "weight": 0.023234995661947096
+      },
+      {
+        "term": "lulus",
+        "weight": 0.020984816001665907
+      },
+      {
+        "term": "lulusan",
+        "weight": 0.01935932005116686
+      },
+      {
+        "term": "ambil",
+        "weight": 0.01887148598970785
+      },
+      {
+        "term": "sarjana",
+        "weight": 0.018756758781512655
+      },
+      {
+        "term": "mdis",
+        "weight": 0.018164163218070555
+      },
+      {
+        "term": "sma",
+        "weight": 0.017926682720644453
+      },
+      {
+        "term": "kedokteran",
+        "weight": 0.01700217476057315
+      }
+    ],
+    "coherence_cv": 0.41997320421312,
+    "unique_sentences": 546,
+    "occurrences": 549,
+    "platform_counts": {
+      "youtube": 311,
+      "reddit": 185,
+      "instagram": 40,
+      "tiktok": 11,
+      "twitter": 2
+    },
+    "mean_centroid_similarity": 0.6440382599830627,
+    "representative_ids": [
+      "5e7072aa6b45b8100ef527d6",
+      "c8478dbbb29bf53e7519d4ec",
+      "9d5a41c9f9c387e9e9d6e4a2",
+      "bbe181d80c96567824af2c53",
+      "e8fbf3fc2144ece610acd5ba"
+    ]
+  },
+  {
+    "cluster_id": 7,
+    "label": "skill / seni / belajar",
+    "terms": [
+      "skill",
+      "seni",
+      "belajar",
+      "project",
+      "fokus",
+      "punya",
+      "lain",
+      "penting",
+      "orang",
+      "sama",
+      "sendiri",
+      "dulu"
+    ],
+    "term_weights": [
+      {
+        "term": "skill",
+        "weight": 0.0676805961762273
+      },
+      {
+        "term": "seni",
+        "weight": 0.033924405915239576
+      },
+      {
+        "term": "belajar",
+        "weight": 0.032839372491679515
+      },
+      {
+        "term": "project",
+        "weight": 0.028948071244431873
+      },
+      {
+        "term": "fokus",
+        "weight": 0.026510978262674737
+      },
+      {
+        "term": "punya",
+        "weight": 0.02376075459082265
+      },
+      {
+        "term": "lain",
+        "weight": 0.023611364444379522
+      },
+      {
+        "term": "penting",
+        "weight": 0.0226172500552021
+      },
+      {
+        "term": "orang",
+        "weight": 0.021734048218599852
+      },
+      {
+        "term": "sama",
+        "weight": 0.020546909329543638
+      },
+      {
+        "term": "sendiri",
+        "weight": 0.020031717236703328
+      },
+      {
+        "term": "dulu",
+        "weight": 0.018207456245837535
+      }
+    ],
+    "coherence_cv": 0.4157589473496217,
+    "unique_sentences": 366,
+    "occurrences": 369,
+    "platform_counts": {
+      "reddit": 250,
+      "youtube": 93,
+      "instagram": 20,
+      "tiktok": 6
+    },
+    "mean_centroid_similarity": 0.5259854197502136,
+    "representative_ids": [
+      "3c4d14323a82fe4cae70b781",
+      "6cd76b020b0df14823413bd4",
+      "21dd699565796db67f0037b3",
+      "69a0929d89f472b188de15a4",
+      "4eaec9727baf798738011bdb"
+    ]
+  },
+  {
+    "cluster_id": 8,
+    "label": "kerja / job / pekerjaan",
+    "terms": [
+      "kerja",
+      "job",
+      "pekerjaan",
+      "perusahaan",
+      "gaji",
+      "cari",
+      "kerjaan",
+      "cv",
+      "time",
+      "karir",
+      "kalo",
+      "sekarang"
+    ],
+    "term_weights": [
+      {
+        "term": "kerja",
+        "weight": 0.056432956785839455
+      },
+      {
+        "term": "job",
+        "weight": 0.0341359910514871
+      },
+      {
+        "term": "pekerjaan",
+        "weight": 0.02287496136869648
+      },
+      {
+        "term": "perusahaan",
+        "weight": 0.02089165417855653
+      },
+      {
+        "term": "gaji",
+        "weight": 0.020277620768648055
+      },
+      {
+        "term": "cari",
+        "weight": 0.019483430320818684
+      },
+      {
+        "term": "kerjaan",
+        "weight": 0.018787208918758777
+      },
+      {
+        "term": "cv",
+        "weight": 0.01748477558891157
+      },
+      {
+        "term": "time",
+        "weight": 0.017221468962082088
+      },
+      {
+        "term": "karir",
+        "weight": 0.017172245238705655
+      },
+      {
+        "term": "kalo",
+        "weight": 0.016835043282471127
+      },
+      {
+        "term": "sekarang",
+        "weight": 0.016323196944746047
+      }
+    ],
+    "coherence_cv": 0.4065682887290542,
+    "unique_sentences": 871,
+    "occurrences": 874,
+    "platform_counts": {
+      "reddit": 661,
+      "youtube": 191,
+      "instagram": 19,
+      "tiktok": 2,
+      "twitter": 1
+    },
+    "mean_centroid_similarity": 0.5926341414451599,
+    "representative_ids": [
+      "d77f2453706ef4c4555b4029",
+      "241cd90af97c16586618c857",
+      "3d7d0d2d254e5fe53426b66b",
+      "c95f9cfd02bdd40ce9d20a5b",
+      "c1d9980b6395ab16633f59e5"
+    ]
+  },
+  {
+    "cluster_id": 9,
+    "label": "negara / rakyat / uang",
+    "terms": [
+      "negara",
+      "rakyat",
+      "uang",
+      "bangsa",
+      "kewarganegaraan",
+      "warga",
+      "penghianat",
+      "negeri",
+      "warga negara",
+      "cabut",
+      "sendiri",
+      "luar negeri"
+    ],
+    "term_weights": [
+      {
+        "term": "negara",
+        "weight": 0.14763400939532473
+      },
+      {
+        "term": "rakyat",
+        "weight": 0.0480706231131616
+      },
+      {
+        "term": "uang",
+        "weight": 0.04771284665039025
+      },
+      {
+        "term": "bangsa",
+        "weight": 0.04265764750229363
+      },
+      {
+        "term": "kewarganegaraan",
+        "weight": 0.04216258101003666
+      },
+      {
+        "term": "warga",
+        "weight": 0.04208047324904667
+      },
+      {
+        "term": "penghianat",
+        "weight": 0.039072276812956344
+      },
+      {
+        "term": "negeri",
+        "weight": 0.03876918493022925
+      },
+      {
+        "term": "warga negara",
+        "weight": 0.03621381391002417
+      },
+      {
+        "term": "cabut",
+        "weight": 0.03347360353312938
+      },
+      {
+        "term": "sendiri",
+        "weight": 0.032430758917232974
+      },
+      {
+        "term": "luar negeri",
+        "weight": 0.032321266238249866
+      }
+    ],
+    "coherence_cv": 0.4844486868710319,
+    "unique_sentences": 147,
+    "occurrences": 149,
+    "platform_counts": {
+      "youtube": 130,
+      "reddit": 19
+    },
+    "mean_centroid_similarity": 0.5872146487236023,
+    "representative_ids": [
+      "bc5bb07effd24f5b38ab790f",
+      "0550b6b5f148800923a42e32",
+      "1c4d4a3ea0b7ce744eed8be4",
+      "4905c4cd1be217116dafff1e",
+      "2b5ba2a2525b9b3e5384bdba"
+    ]
+  },
+  {
+    "cluster_id": 10,
+    "label": "biaya / gratis / kuliah",
+    "terms": [
+      "biaya",
+      "gratis",
+      "kuliah",
+      "uang",
+      "sekolah",
+      "pendidikan",
+      "biaya kuliah",
+      "bayar",
+      "mahal",
+      "kuliah gratis",
+      "anak",
+      "ukt"
+    ],
+    "term_weights": [
+      {
+        "term": "biaya",
+        "weight": 0.06047444863871234
+      },
+      {
+        "term": "gratis",
+        "weight": 0.05218254029346527
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.045578921225623285
+      },
+      {
+        "term": "uang",
+        "weight": 0.03746510263119064
+      },
+      {
+        "term": "sekolah",
+        "weight": 0.03382267760102851
+      },
+      {
+        "term": "pendidikan",
+        "weight": 0.0319706111101042
+      },
+      {
+        "term": "biaya kuliah",
+        "weight": 0.027494375471855036
+      },
+      {
+        "term": "bayar",
+        "weight": 0.024039096576830395
+      },
+      {
+        "term": "mahal",
+        "weight": 0.023814393414247736
+      },
+      {
+        "term": "kuliah gratis",
+        "weight": 0.01887881292969812
+      },
+      {
+        "term": "anak",
+        "weight": 0.017779763356029182
+      },
+      {
+        "term": "ukt",
+        "weight": 0.01629098180328453
+      }
+    ],
+    "coherence_cv": 0.6758089408165991,
+    "unique_sentences": 534,
+    "occurrences": 537,
+    "platform_counts": {
+      "youtube": 400,
+      "reddit": 118,
+      "tiktok": 12,
+      "instagram": 6,
+      "twitter": 1
+    },
+    "mean_centroid_similarity": 0.6785075068473816,
+    "representative_ids": [
+      "f9f5434f7f36f73250bd83d1",
+      "b61264c8481d36482813862a",
+      "ae3732aa92fe45fe84ae5937",
+      "3a0e9aba6634f3cfbf151eee",
+      "8f4abd5820b5af0458dee635"
+    ]
+  },
+  {
+    "cluster_id": 11,
+    "label": "luar / negeri / bahasa",
+    "terms": [
+      "luar",
+      "negeri",
+      "luar negeri",
+      "bahasa",
+      "indo",
+      "kerja",
+      "visa",
+      "inggris",
+      "jepang",
+      "kuliah",
+      "china",
+      "negara"
+    ],
+    "term_weights": [
+      {
+        "term": "luar",
+        "weight": 0.048693753710903044
+      },
+      {
+        "term": "negeri",
+        "weight": 0.04777704472507094
+      },
+      {
+        "term": "luar negeri",
+        "weight": 0.04777640219842075
+      },
+      {
+        "term": "bahasa",
+        "weight": 0.03741429141270959
+      },
+      {
+        "term": "indo",
+        "weight": 0.03710636901377993
+      },
+      {
+        "term": "kerja",
+        "weight": 0.028249802090123177
+      },
+      {
+        "term": "visa",
+        "weight": 0.026378286588234642
+      },
+      {
+        "term": "inggris",
+        "weight": 0.02249269692667745
+      },
+      {
+        "term": "jepang",
+        "weight": 0.02162907017390985
+      },
+      {
+        "term": "kuliah",
+        "weight": 0.02099807093379203
+      },
+      {
+        "term": "china",
+        "weight": 0.020013362506140716
+      },
+      {
+        "term": "negara",
+        "weight": 0.01785279010329376
+      }
+    ],
+    "coherence_cv": 0.5892912557578482,
+    "unique_sentences": 513,
+    "occurrences": 514,
+    "platform_counts": {
+      "youtube": 260,
+      "reddit": 242,
+      "instagram": 8,
+      "tiktok": 3,
+      "twitter": 1
+    },
+    "mean_centroid_similarity": 0.5551033020019531,
+    "representative_ids": [
+      "7f7145b27420a29578d4db1a",
+      "344130906e2e7b3db948074b",
+      "d606a69a62ecc8c88a0c4c8d",
+      "6b59990e4d65334f70b079d8",
+      "c0ac81e366f716ac8dd577bb"
+    ]
+  },
+  {
+    "cluster_id": 12,
+    "label": "indonesia / rakyat / negara",
+    "terms": [
+      "indonesia",
+      "rakyat indonesia",
+      "rakyat",
+      "negara",
+      "pendidikan",
+      "seluruh",
+      "luar",
+      "negeri",
+      "universitas",
+      "lpdp",
+      "tinggi",
+      "orang"
+    ],
+    "term_weights": [
+      {
+        "term": "indonesia",
+        "weight": 0.16929911702330833
+      },
+      {
+        "term": "rakyat indonesia",
+        "weight": 0.025163532167181292
+      },
+      {
+        "term": "rakyat",
+        "weight": 0.02445279211725804
+      },
+      {
+        "term": "negara",
+        "weight": 0.021903923636808962
+      },
+      {
+        "term": "pendidikan",
+        "weight": 0.02141819951841935
+      },
+      {
+        "term": "seluruh",
+        "weight": 0.020410508666116805
+      },
+      {
+        "term": "luar",
+        "weight": 0.018848955851859868
+      },
+      {
+        "term": "negeri",
+        "weight": 0.01873522788651188
+      },
+      {
+        "term": "universitas",
+        "weight": 0.018690616374501146
+      },
+      {
+        "term": "lpdp",
+        "weight": 0.01607040572231005
+      },
+      {
+        "term": "tinggi",
+        "weight": 0.015445414750613912
+      },
+      {
+        "term": "orang",
+        "weight": 0.015289042189100627
+      }
+    ],
+    "coherence_cv": 0.6179361729942138,
+    "unique_sentences": 468,
+    "occurrences": 469,
+    "platform_counts": {
+      "youtube": 362,
+      "reddit": 84,
+      "instagram": 13,
+      "tiktok": 9,
+      "twitter": 1
+    },
+    "mean_centroid_similarity": 0.7019513845443726,
+    "representative_ids": [
+      "bd5883a020d561c9f2501c02",
+      "1781d875c4236819a9c87a2f",
+      "5bee5f551043fb347a64f5ef",
+      "750c77d829c83350a35b7b32",
+      "1a8a4f01e44b784e42ea2fc3"
+    ]
+  },
+  {
+    "cluster_id": 13,
+    "label": "otak / orang / takut",
+    "terms": [
+      "otak",
+      "orang",
+      "takut",
+      "tidak",
+      "malah",
+      "susah",
+      "kurang",
+      "agama",
+      "diri",
+      "kata",
+      "jangan",
+      "hati"
+    ],
+    "term_weights": [
+      {
+        "term": "otak",
+        "weight": 0.045927300068975316
+      },
+      {
+        "term": "orang",
+        "weight": 0.038570987362880914
+      },
+      {
+        "term": "takut",
+        "weight": 0.031894933928631665
+      },
+      {
+        "term": "tidak",
+        "weight": 0.03008733342372275
+      },
+      {
+        "term": "malah",
+        "weight": 0.02625982046961598
+      },
+      {
+        "term": "susah",
+        "weight": 0.02601887249520142
+      },
+      {
+        "term": "kurang",
+        "weight": 0.025872516518965726
+      },
+      {
+        "term": "agama",
+        "weight": 0.02381027199436967
+      },
+      {
+        "term": "diri",
+        "weight": 0.02342897458815695
+      },
+      {
+        "term": "kata",
+        "weight": 0.020552407686828065
+      },
+      {
+        "term": "jangan",
+        "weight": 0.020550028028204353
+      },
+      {
+        "term": "hati",
+        "weight": 0.019939070412113166
+      }
+    ],
+    "coherence_cv": 0.32251533343321476,
+    "unique_sentences": 310,
+    "occurrences": 311,
+    "platform_counts": {
+      "reddit": 168,
+      "youtube": 133,
+      "instagram": 8,
+      "twitter": 1,
+      "tiktok": 1
+    },
+    "mean_centroid_similarity": 0.5406795144081116,
+    "representative_ids": [
+      "d59a92a4ebb84c119da332fc",
+      "812a2c72e11572658a3af84a",
+      "f738df043e0d74623f761e3c",
+      "a159814d1cfb48e056941807",
+      "f3fb689936fed14247851d88"
+    ]
+  },
+  {
+    "cluster_id": 14,
+    "label": "online / teknik / engineer",
+    "terms": [
+      "online",
+      "teknik",
+      "engineer",
+      "data",
+      "engineering",
+      "bootcamp",
+      "industri",
+      "tech",
+      "software",
+      "jurusan",
+      "networking",
+      "kerja"
+    ],
+    "term_weights": [
+      {
+        "term": "online",
+        "weight": 0.05500456495118538
+      },
+      {
+        "term": "teknik",
+        "weight": 0.05243940911018753
+      },
+      {
+        "term": "engineer",
+        "weight": 0.03170235972769185
+      },
+      {
+        "term": "data",
+        "weight": 0.030384590830879382
+      },
+      {
+        "term": "engineering",
+        "weight": 0.029607495792458506
+      },
+      {
+        "term": "bootcamp",
+        "weight": 0.023350333953539235
+      },
+      {
+        "term": "industri",
+        "weight": 0.023071202696128695
+      },
+      {
+        "term": "tech",
+        "weight": 0.02286924844177175
+      },
+      {
+        "term": "software",
+        "weight": 0.02102415273689788
+      },
+      {
+        "term": "jurusan",
+        "weight": 0.02085969072654464
+      },
+      {
+        "term": "networking",
+        "weight": 0.019597696726638893
+      },
+      {
+        "term": "kerja",
+        "weight": 0.018694664093188037
+      }
+    ],
+    "coherence_cv": 0.1489669398192944,
+    "unique_sentences": 508,
+    "occurrences": 510,
+    "platform_counts": {
+      "reddit": 338,
+      "youtube": 131,
+      "instagram": 39,
+      "tiktok": 2
+    },
+    "mean_centroid_similarity": 0.5514217615127563,
+    "representative_ids": [
+      "8548c3af8f9a36d460bd8ffe",
+      "f9e69b258d237caf9858e5d6",
+      "c1be8ebb3ebf802def7d2dc0",
+      "c53c5d28fe5a7bd4cc83dff0",
+      "8f9e9186312e174fa5572ecf"
+    ]
+  },
+  {
+    "cluster_id": 15,
+    "label": "s2 / s1 / s3",
+    "terms": [
+      "s2",
+      "s1",
+      "s3",
+      "lanjut",
+      "s1 s2",
+      "s2 s3",
+      "lanjut s2",
+      "beasiswa s2",
+      "beasiswa",
+      "ambil",
+      "lulusan",
+      "lulusan s1"
+    ],
+    "term_weights": [
+      {
+        "term": "s2",
+        "weight": 0.18856874171763027
+      },
+      {
+        "term": "s1",
+        "weight": 0.14535866293434127
+      },
+      {
+        "term": "s3",
+        "weight": 0.0731502369081182
+      },
+      {
+        "term": "lanjut",
+        "weight": 0.03447086465233509
+      },
+      {
+        "term": "s1 s2",
+        "weight": 0.03312610840161906
+      },
+      {
+        "term": "s2 s3",
+        "weight": 0.03158206432620219
+      },
+      {
+        "term": "lanjut s2",
+        "weight": 0.030892668522047338
+      },
+      {
+        "term": "beasiswa s2",
+        "weight": 0.030577946216879127
+      },
+      {
+        "term": "beasiswa",
+        "weight": 0.027814747594372864
+      },
+      {
+        "term": "ambil",
+        "weight": 0.025774728543435255
+      },
+      {
+        "term": "lulusan",
+        "weight": 0.025330046712996112
+      },
+      {
+        "term": "lulusan s1",
+        "weight": 0.023686548244651644
+      }
+    ],
+    "coherence_cv": 0.5210770448735348,
+    "unique_sentences": 203,
+    "occurrences": 205,
+    "platform_counts": {
+      "reddit": 91,
+      "youtube": 79,
+      "instagram": 22,
+      "tiktok": 13
+    },
+    "mean_centroid_similarity": 0.6511927843093872,
+    "representative_ids": [
+      "ac80bf3e8f222eaf0abf1d2e",
+      "d8ed494803cee473422d1198",
+      "0b55ef6a7f16e069d91dbd65",
+      "f34821680425d035f20a0548",
+      "0b13c32372e48b3069baafa1"
+    ]
+  },
+  {
+    "cluster_id": 16,
+    "label": "snbp / snbt / pendaftaran",
+    "terms": [
+      "snbp",
+      "snbt",
+      "pendaftaran",
+      "kip",
+      "akun",
+      "kip kuliah",
+      "seleksi",
+      "daftar",
+      "snpmb",
+      "jalur",
+      "finalisasi",
+      "portal"
+    ],
+    "term_weights": [
+      {
+        "term": "snbp",
+        "weight": 0.12379406819215708
+      },
+      {
+        "term": "snbt",
+        "weight": 0.0917372517463343
+      },
+      {
+        "term": "pendaftaran",
+        "weight": 0.08830527022793364
+      },
+      {
+        "term": "kip",
+        "weight": 0.08206540200967055
+      },
+      {
+        "term": "akun",
+        "weight": 0.07186808837497934
+      },
+      {
+        "term": "kip kuliah",
+        "weight": 0.062471618186879324
+      },
+      {
+        "term": "seleksi",
+        "weight": 0.0601510584391525
+      },
+      {
+        "term": "daftar",
+        "weight": 0.04902912965147627
+      },
+      {
+        "term": "snpmb",
+        "weight": 0.04059912811957828
+      },
+      {
+        "term": "jalur",
+        "weight": 0.04035720192239414
+      },
+      {
+        "term": "finalisasi",
+        "weight": 0.03397810427989486
+      },
+      {
+        "term": "portal",
+        "weight": 0.03364737189660788
+      }
+    ],
+    "coherence_cv": 0.9048954823999449,
+    "unique_sentences": 238,
+    "occurrences": 240,
+    "platform_counts": {
+      "youtube": 181,
+      "instagram": 28,
+      "tiktok": 21,
+      "reddit": 10
+    },
+    "mean_centroid_similarity": 0.5966999530792236,
+    "representative_ids": [
+      "1f970689b13156316fabe518",
+      "765eb157f2330844a98c0530",
+      "ff0c2f4701270b9069971ce3",
+      "385909427b3a6a0079a6fd8a",
+      "d854513ea363ba67a198e9d1"
+    ]
+  },
+  {
+    "cluster_id": 17,
+    "label": "lpdp / penerima / beasiswa",
+    "terms": [
+      "lpdp",
+      "beasiswa lpdp",
+      "penerima",
+      "beasiswa",
+      "pejabat",
+      "penerima lpdp",
+      "dapat",
+      "lpdprens",
+      "hai lpdprens",
+      "anak",
+      "hai",
+      "anak2"
+    ],
+    "term_weights": [
+      {
+        "term": "lpdp",
+        "weight": 0.27355326675981817
+      },
+      {
+        "term": "beasiswa lpdp",
+        "weight": 0.08579687256244395
+      },
+      {
+        "term": "penerima",
+        "weight": 0.05583119433061407
+      },
+      {
+        "term": "beasiswa",
+        "weight": 0.053327230836642446
+      },
+      {
+        "term": "pejabat",
+        "weight": 0.04267140751564046
+      },
+      {
+        "term": "penerima lpdp",
+        "weight": 0.039186612370627025
+      },
+      {
+        "term": "dapat",
+        "weight": 0.034838281152374334
+      },
+      {
+        "term": "lpdprens",
+        "weight": 0.03342482443470556
+      },
+      {
+        "term": "hai lpdprens",
+        "weight": 0.03342482443470556
+      },
+      {
+        "term": "anak",
+        "weight": 0.030997202758975505
+      },
+      {
+        "term": "hai",
+        "weight": 0.030822361492512988
+      },
+      {
+        "term": "anak2",
+        "weight": 0.029527960058837937
+      }
+    ],
+    "coherence_cv": 0.5570718042163365,
+    "unique_sentences": 169,
+    "occurrences": 175,
+    "platform_counts": {
+      "youtube": 160,
+      "reddit": 12,
+      "instagram": 2,
+      "tiktok": 1
+    },
+    "mean_centroid_similarity": 0.6817851662635803,
+    "representative_ids": [
+      "1f7a9fc76dd24045555c1fe5",
+      "171451accd4069108222a7f9",
+      "21c29a852e64479fad86b106",
+      "72a512ad9a0aad79c3ca9dd1",
+      "3fa6740f6f9fc8c603422872"
+    ]
+  },
+  {
+    "cluster_id": 18,
+    "label": "ai / jurusan / sama",
+    "terms": [
+      "ai",
+      "jurusan",
+      "sama ai",
+      "sama",
+      "kerjaan",
+      "tergantikan ai",
+      "susah",
+      "tergantikan",
+      "skill",
+      "software",
+      "semakin",
+      "bakal"
+    ],
+    "term_weights": [
+      {
+        "term": "ai",
+        "weight": 0.32147340661066576
+      },
+      {
+        "term": "jurusan",
+        "weight": 0.033489436560499915
+      },
+      {
+        "term": "sama ai",
+        "weight": 0.028838420681034475
+      },
+      {
+        "term": "sama",
+        "weight": 0.026804851257323424
+      },
+      {
+        "term": "kerjaan",
+        "weight": 0.024903439958617567
+      },
+      {
+        "term": "tergantikan ai",
+        "weight": 0.024692282178013173
+      },
+      {
+        "term": "susah",
+        "weight": 0.02467344410210432
+      },
+      {
+        "term": "tergantikan",
+        "weight": 0.0240320172341954
+      },
+      {
+        "term": "skill",
+        "weight": 0.023167515495643658
+      },
+      {
+        "term": "software",
+        "weight": 0.021317983601175178
+      },
+      {
+        "term": "semakin",
+        "weight": 0.02107119479943416
+      },
+      {
+        "term": "bakal",
+        "weight": 0.020276167797724662
+      }
+    ],
+    "coherence_cv": 0.4794472831527468,
+    "unique_sentences": 125,
+    "occurrences": 127,
+    "platform_counts": {
+      "reddit": 109,
+      "youtube": 18
+    },
+    "mean_centroid_similarity": 0.7261250019073486,
+    "representative_ids": [
+      "760ce720067e4e6033f824c5",
+      "dd1d34b30f67b6da96813e86",
+      "349afce2648b256a8695534a",
+      "548e7f972f8c4b970b31dff6",
+      "b3ef5bdab03554f45e9155ab"
+    ]
+  },
+  {
+    "cluster_id": 19,
+    "label": "beasiswa / daftar / beasiswanya",
+    "terms": [
+      "beasiswa",
+      "daftar",
+      "beasiswanya",
+      "daftar beasiswa",
+      "dapat beasiswa",
+      "dapat",
+      "anak",
+      "orang",
+      "beasiswa lain",
+      "dapet",
+      "dapet beasiswa",
+      "boleh"
+    ],
+    "term_weights": [
+      {
+        "term": "beasiswa",
+        "weight": 0.15514846426882287
+      },
+      {
+        "term": "daftar",
+        "weight": 0.03081005511043731
+      },
+      {
+        "term": "beasiswanya",
+        "weight": 0.025575261825940457
+      },
+      {
+        "term": "daftar beasiswa",
+        "weight": 0.025006922674252887
+      },
+      {
+        "term": "dapat beasiswa",
+        "weight": 0.02430029804436343
+      },
+      {
+        "term": "dapat",
+        "weight": 0.023608504147104317
+      },
+      {
+        "term": "anak",
+        "weight": 0.023038355651793522
+      },
+      {
+        "term": "orang",
+        "weight": 0.017491406113231876
+      },
+      {
+        "term": "beasiswa lain",
+        "weight": 0.016319474386992355
+      },
+      {
+        "term": "dapet",
+        "weight": 0.015966317216998958
+      },
+      {
+        "term": "dapet beasiswa",
+        "weight": 0.015870196979636975
+      },
+      {
+        "term": "boleh",
+        "weight": 0.01545805284519815
+      }
+    ],
+    "coherence_cv": 0.3960819248551705,
+    "unique_sentences": 771,
+    "occurrences": 812,
+    "platform_counts": {
+      "youtube": 384,
+      "tiktok": 257,
+      "reddit": 105,
+      "instagram": 64,
+      "twitter": 2
+    },
+    "mean_centroid_similarity": 0.7303418517112732,
+    "representative_ids": [
+      "fdcd9df9167921309c27c7e7",
+      "9fcc95b1917c8522d729137f",
+      "ad86ca5ff2f73f2a240846a0",
+      "f85897cee081183dfb6ace0f",
+      "2787030caf104d6375c8c5a5"
+    ]
+  }
+]

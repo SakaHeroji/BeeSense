@@ -12,7 +12,7 @@ tags:
 # AccessBarrier
 
 ## Connections
-- [[.__init__()_12]] - `method` [EXTRACTED]
+- [[.__init__()_10]] - `method` [EXTRACTED]
 - [[.collect()]] - `calls` [EXTRACTED]
 - [[RuntimeError_1]] - `inherits` [EXTRACTED]
 - [[error_receipt()]] - `indirect_call` [INFERRED]

@@ -15,6 +15,6 @@ tags:
 - [[organize()]] - `calls` [EXTRACTED]
 - [[social_archive.py]] - `contains` [EXTRACTED]
 - [[stamp()]] - `calls` [EXTRACTED]
-- [[verify()_2]] - `calls` [EXTRACTED]
+- [[verify()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

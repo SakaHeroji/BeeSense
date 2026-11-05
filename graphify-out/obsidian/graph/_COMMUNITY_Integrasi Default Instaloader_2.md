@@ -1,32 +1,56 @@
 ---
 type: community
-cohesion: 0.12
-members: 17
+members: 43
 ---
 
 # Integrasi Default Instaloader
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 17 nodes
+**Members:** 43 nodes
 
 ## Members
-- [[Audit berheader tanpa data TikTok; arsip tetap 34785 ID unik]] - concept - graphify-out/obsidian/TikTok-Api Uji 500 Post 20261103.md
-- [[Obsidian TikTokCrawler Omkar — riwayat yang sudah diganti]] - document - graphify-out/obsidian/TikTokCrawler Omkar.md
-- [[Obsidian TikTokCrawler PyTok — riwayat]] - document - graphify-out/obsidian/TikTokCrawler PyTok.md
-- [[Obsidian trial PyTok 0500 CAPTCHA_REQUIRED 159,81 detik — riwayat]] - document - graphify-out/obsidian/TikTok PyTok Uji 500 Post 20261103.md
-- [[Obsidian uji TikTok-Api aktif 0500 ACCESS_BLOCKED 33,27 detik]] - document - graphify-out/obsidian/TikTok-Api Uji 500 Post 20261103.md
-- [[Omkar gagal memperoleh target dan bukan implementasi aktif]] - concept - graphify-out/obsidian/TikTokCrawler Omkar.md
-- [[Pengguna kembali ke TikTok-Api; PyTok tidak lagi aktif]] - concept - Crawler/Backend/Tiktok/PYTOK.md
-- [[Provenance PyTok historis, dependency sudah tidak aktif]] - document - Crawler/Backend/Tiktok/PYTOK.md
-- [[PyTok 0.3.0 revision dipin dan Camoufox 0.5.9 adalah backend trial lama]] - concept - graphify-out/obsidian/TikTokCrawler PyTok.md
-- [[PyTok historis 0500, PARTIAL CAPTCHA_REQUIRED, 159,81 detik]] - concept - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
-- [[PyTok timeout pertama, CAPTCHA worker kedua, telemetry HTTP tidak lengkap]] - rationale - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
-- [[Riwayat PyTok 0.3.0 PolyForm Noncommercial 1.0.0 AND MIT]] - concept - Crawler/Backend/Tiktok/PYTOK.md
-- [[Riwayat uji PyTok 3 November 2026]] - document - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
-- [[Tiga HTTP200, pencarian kosong; bukan bukti token kedaluwarsa]] - rationale - docs/crawler/TIKTOK_API_TRIAL_20261103.md
-- [[TikTok-Api 0500, PARTIAL ACCESS_BLOCKED setelah 33,27 detik]] - concept - docs/crawler/TIKTOK_API_TRIAL_20261103.md
-- [[Trial PyTok berhenti setelah timeout dan CAPTCHA, tanpa solverrotasi]] - concept - graphify-out/obsidian/TikTok PyTok Uji 500 Post 20261103.md
-- [[Uji backend aktif TikTok-Api 3 November 2026]] - document - docs/crawler/TIKTOK_API_TRIAL_20261103.md
+- [[--output-dir mempertahankan bundle eksplisit legacy]] - rationale - docs/crawler/OUTPUTS.md
+- [[1058 ID Instagram tanggal campaign terverifikasi, jam null]] - rationale - docs/crawler/OUTPUTS.md
+- [[Artifact relevansi terikat korpus sumber]] - concept - config/social_nlp.json
+- [[Baca ulang nilai baris tanggal checksum dan ID global]] - concept - docs/crawler/OUTPUTS.md
+- [[Bundle audit mentah pada outputcrawler_runs]] - concept - docs/crawler/OUTPUTS.md
+- [[Grid DBSCAN dan batas memori tetangga]] - concept - config/social_nlp.json
+- [[Hari pertama akuisisi dengan nilai observasi terbaru]] - rationale - docs/crawler/OUTPUTS.md
+- [[Indeks output BeeSense]] - document - outputs/README.md
+- [[Indeks sembilan partisi crawling]] - document - outputs/crawling/README.md
+- [[Input NLP workbook gabungan Twitter historis]] - concept - config/social_nlp.json
+- [[Konsolidasi awal 34785 native ID, empat platform, sembilan partisi]] - concept - docs/crawler/OUTPUTS.md
+- [[Loader NLP load_config]] - concept - graphify-out/obsidian/Konfigurasi Universal NLP.md
+- [[Narasi Gemini tersimpan]] - concept - config/social_nlp.json
+- [[Native ID unik global lintas seluruh tanggal]] - rationale - docs/crawler/OUTPUTS.md
+- [[Obsidian Konfigurasi Universal NLP]] - document - graphify-out/obsidian/Konfigurasi Universal NLP.md
+- [[Obsidian Output Social Media Per Tanggal]] - document - graphify-out/obsidian/Output Social Media Per Tanggal.md
+- [[Opsi graf kemiripan bukti dan tren]] - concept - config/social_nlp.json
+- [[Panduan output per platform dan tanggal WIB]] - document - docs/crawler/OUTPUTS.md
+- [[Partisi menurut pengamatan pertama WIB]] - rationale - docs/crawler/OUTPUTS.md
+- [[Proyeksi UMAP]] - concept - config/social_nlp.json
+- [[Publikasi partisi dengan lock dan rollback]] - rationale - docs/crawler/OUTPUTS.md
+- [[Relokasi bundle belum terbit dan relocation map]] - rationale - docs/crawler/OUTPUTS.md
+- [[SBERT multilingual dengan revision tetap]] - concept - config/social_nlp.json
+- [[Seleksi commentreply dan segmentasi kalimat]] - concept - config/social_nlp.json
+- [[Skema filesystem beesense-social-archive1]] - concept - docs/crawler/OUTPUTS.md
+- [[Snapshot aktif NLP relevansi 20 topik Gemini]] - concept - config/social_nlp.json
+- [[Struktur proyek BeeSense]] - document - docs/PROJECT_STRUCTURE.md
+- [[Sumber terbit dan snapshot model tetap pada path lama]] - rationale - outputs/README.md
+- [[configsocial_nlp.json — konfigurasi aktif NLP]] - document - config/social_nlp.json
+- [[instagram 2026-10-30 4444 record unik]] - concept - outputs/crawling/README.md
+- [[native_roots.json mempertahankan root Twitter]] - rationale - docs/crawler/OUTPUTS.md
+- [[outputscrawlingplatformYYYY-MM-DDsocial_data.xlsx]] - concept - docs/crawler/OUTPUTS.md
+- [[record_lineage.jsonl native ID dan sumber baris]] - concept - docs/crawler/OUTPUTS.md
+- [[reddit 2026-10-27 2404 record unik]] - concept - outputs/crawling/README.md
+- [[reddit 2026-10-28 108 record unik]] - concept - outputs/crawling/README.md
+- [[reddit 2026-10-29 1429 record unik]] - concept - outputs/crawling/README.md
+- [[reddit 2026-10-30 573 record unik]] - concept - outputs/crawling/README.md
+- [[scripts.organize_social_outputs dan social_archive.organize]] - concept - docs/crawler/OUTPUTS.md
+- [[social_identity.identity bersama organizer dan merge]] - concept - graphify-out/obsidian/Output Social Media Per Tanggal.md
+- [[twitter 2026-10-31 45 record unik]] - concept - outputs/crawling/README.md
+- [[twitter 2026-11-02 624 record unik]] - concept - outputs/crawling/README.md
+- [[youtube 2026-10-28 5937 record unik]] - concept - outputs/crawling/README.md
+- [[youtube 2026-10-29 19221 record unik]] - concept - outputs/crawling/README.md
 
 ## Live Query (requires Dataview plugin)
 

@@ -1,64 +1,60 @@
 ---
 type: community
-cohesion: 0.09
-members: 49
+members: 47
 ---
 
 # Encoding dan Penyimpanan Model
 
-**Cohesion:** 0.09 - loosely connected
-**Members:** 49 nodes
+**Members:** 47 nodes
 
 ## Members
-- [[.__init__()_10]] - code - MachineLearning/social_nlp.py
-- [[._apply_context_relevance()]] - code - MachineLearning/social_nlp.py
-- [[._cache_dir()]] - code - MachineLearning/social_nlp.py
-- [[._ctfidf_terms()]] - code - MachineLearning/social_nlp.py
-- [[._encode_sbert()]] - code - MachineLearning/social_nlp.py
-- [[._evaluate()]] - code - MachineLearning/social_nlp.py
-- [[._event()]] - code - MachineLearning/social_nlp.py
-- [[._filter_radius()]] - code - MachineLearning/social_nlp.py
-- [[._merge_topics()]] - code - MachineLearning/social_nlp.py
-- [[._radius_graph()]] - code - MachineLearning/social_nlp.py
-- [[._reduce_embeddings()]] - code - MachineLearning/social_nlp.py
-- [[._reuse_embeddings()]] - code - MachineLearning/social_nlp.py
-- [[._topic_vectorizer()]] - code - MachineLearning/social_nlp.py
+- [[.__init__()_46]] - code - MachineLearning/social_nlp.py
 - [[._validate_config()]] - code - MachineLearning/social_nlp.py
 - [[._validate_explanation_options()]] - code - MachineLearning/social_nlp.py
-- [[.build_topic_graph()]] - code - MachineLearning/social_nlp.py
-- [[.compare()]] - code - MachineLearning/social_nlp.py
-- [[.describe_topics()]] - code - MachineLearning/social_nlp.py
-- [[.encode()_1]] - code - MachineLearning/social_nlp.py
-- [[.evaluate_run_coherence()]] - code - MachineLearning/social_nlp.py
-- [[.fit_excel()]] - code - MachineLearning/social_nlp.py
-- [[.generate_topic_narratives()]] - code - MachineLearning/social_nlp.py
-- [[.prepare_excel()]] - code - MachineLearning/social_nlp.py
-- [[.save()]] - code - MachineLearning/social_nlp.py
-- [[.save_explanations()]] - code - MachineLearning/social_nlp.py
-- [[.score_coherence()]] - code - MachineLearning/social_nlp.py
-- [[.stability()]] - code - MachineLearning/social_nlp.py
+- [[.select_candidate()]] - code - MachineLearning/social_nlp.py
+- [[.setUpClass()_1]] - code - tests/nlp/test_streamlit_app.py
+- [[.setUpClass()_3]] - code - tests/nlp/test_social_nlp.py
+- [[.tearDownClass()_3]] - code - tests/nlp/test_social_nlp.py
+- [[.test_bad_input_and_configuration_are_rejected()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_close_scores_prefer_separation_without_hardcoding_algorithm()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_coherence_gate_rejects_below_target_and_blocks_publication()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_coherence_search_evaluates_all_near_ties_and_skips_lower_scores()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_ctfidf_never_pads_short_topics_with_zero_weight_terms()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_custom_file_remains_a_partial_override_with_explicit_mask()]] - code - tests/nlp/test_nlp_config.py
+- [[.test_cv_distinguishes_coherent_terms_and_rejects_missing_topics()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_dashboard_launcher_follows_new_snapshot_pair_and_drops_stale_comparison()]] - code - tests/nlp/test_nlp_config.py
 - [[.test_dashboard_launcher_reads_the_single_primary_file()]] - code - tests/nlp/test_nlp_config.py
+- [[.test_dbscan_memory_guard_and_no_eligible_candidate_are_explicit()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_dedup_preserves_both_occurrences_and_original_dates()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_default_and_primary_path_load_configuration_once()]] - code - tests/nlp/test_nlp_config.py
 - [[.test_dry_run_shows_effective_paths_without_loading_data_or_fitting()]] - code - tests/nlp/test_nlp_config.py
+- [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_explanation_validation_does_not_reread_the_editable_file()]] - code - tests/nlp/test_nlp_config.py
 - [[.test_falsey_non_objects_and_unknown_settings_are_rejected()]] - code - tests/nlp/test_nlp_config.py
-- [[.test_noise_is_not_counted_as_a_coherent_cluster_or_shared_stability()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_graph_links_are_scored_inferences_not_social_relationships()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_partial_overrides_preserve_siblings_and_do_not_mutate_input()]] - code - tests/nlp/test_nlp_config.py
+- [[.test_real_umap_projections_and_cache_are_validated()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_retraining_reduces_topics_and_persists_original_dbscan_ids()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_saved_embeddings_require_matching_source_model_and_sentence_order()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_scores_are_in_original_embedding_geometry_and_coverage_penalized()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_sparse_dbscan_preserves_zero_distance_neighbors()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_tiktok_prepare_preserves_native_roots_and_original_comment_text()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - code - tests/nlp/test_social_nlp.py
+- [[.test_twitter_prepare_preserves_audited_roots_without_embedding_titles()]] - code - tests/nlp/test_social_nlp.py
 - [[Configuration consolidation without fitting, model downloads or API requests.]] - rationale - tests/nlp/test_nlp_config.py
-- [[Derive Indonesian Gemini labels after topic count and coherence pass.]] - rationale - MachineLearning/social_nlp.py
+- [[DashboardTests]] - code - tests/nlp/test_social_nlp.py
 - [[Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.]] - rationale - MachineLearning/social_nlp.py
-- [[Macro c_v on ALL non-noise topics and a fixed full-corpus reference.          Un]] - rationale - MachineLearning/social_nlp.py
-- [[Merge entire DBSCAN groups using sentence-weighted Ward linkage.          Minimi]] - rationale - MachineLearning/social_nlp.py
 - [[NLPConfigTests]] - code - tests/nlp/test_nlp_config.py
-- [[Preserve explicit zero distances, including identical sentence vectors.]] - rationale - MachineLearning/social_nlp.py
-- [[Publish a new versioned sidecar; never modify the original run.]] - rationale - MachineLearning/social_nlp.py
-- [[Reuse immutable SBERT features only after verifying datamodel identity.]] - rationale - MachineLearning/social_nlp.py
-- [[Select DBSCAN parameters on UMAP; evaluate in original SBERT geometry.]] - rationale - MachineLearning/social_nlp.py
+- [[NLPTests]] - code - tests/nlp/test_social_nlp.py
+- [[No modelnetwork calls policy, provenance and integration regressions.]] - rationale - tests/nlp/test_context_relevance.py
 - [[SocialNLPClusterer_1]] - code - MachineLearning/social_nlp.py
-- [[Use the same class TF-IDF vocabulary for selection and publication.]] - rationale - MachineLearning/social_nlp.py
-- [[main()_6]] - code - MachineLearning/social_nlp.py
+- [[encoder()]] - code - tests/nlp/test_social_nlp.py
+- [[fixture()_1]] - code - tests/nlp/test_social_nlp.py
+- [[test_context_relevance.py]] - code - tests/nlp/test_context_relevance.py
 - [[test_nlp_config.py]] - code - tests/nlp/test_nlp_config.py
+- [[test_social_nlp.py]] - code - tests/nlp/test_social_nlp.py
+- [[test_streamlit_app.py]] - code - tests/nlp/test_streamlit_app.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -68,25 +64,28 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 19 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 28 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
+- 28 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_2]]
 - 13 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
-- 12 edges to [[_COMMUNITY_Model dan Pengujian NLP_1]]
-- 7 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
-- 5 edges to [[_COMMUNITY_topic_sentence_export.py]]
-- 5 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
+- 11 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
+- 4 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 4 edges to [[_COMMUNITY_Pengujian UI Streamlit]]
+- 3 edges to [[_COMMUNITY_thread_url]]
 - 3 edges to [[_COMMUNITY_Pengujian Penjelasan Topik]]
-- 3 edges to [[_COMMUNITY_Pengujian Narasi Gemini_1]]
-- 2 edges to [[_COMMUNITY_Pengujian UI Streamlit]]
-- 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi]]
-- 2 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
+- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi_1]]
+- 2 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 2 edges to [[_COMMUNITY_Arsip Data Harian]]
-- 1 edge to [[_COMMUNITY_thread_url]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
+- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini_1]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
+- 1 edge to [[_COMMUNITY_thread_url_1]]
+- 1 edge to [[_COMMUNITY_app.py]]
+- 1 edge to [[_COMMUNITY_Verifikasi Dataset Publik]]
+- 1 edge to [[_COMMUNITY_app.py_1]]
 
 ## Top bridge nodes
-- [[SocialNLPClusterer_1]] - degree 109, connects to 15 communities
-- [[.encode()_1]] - degree 13, connects to 3 communities
-- [[main()_6]] - degree 12, connects to 3 communities
-- [[.prepare_excel()]] - degree 10, connects to 3 communities
-- [[.compare()]] - degree 13, connects to 2 communities
+- [[SocialNLPClusterer_1]] - degree 115, connects to 15 communities
+- [[NLPTests]] - degree 30, connects to 3 communities
+- [[test_context_relevance.py]] - degree 9, connects to 3 communities
+- [[test_streamlit_app.py]] - degree 6, connects to 2 communities
+- [[.select_candidate()]] - degree 5, connects to 2 communities

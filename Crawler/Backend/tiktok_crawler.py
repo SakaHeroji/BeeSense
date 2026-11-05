@@ -31,8 +31,8 @@ from Crawler.Backend.crawler_limits import reached
 from Crawler.Backend.Reddit import crawl_reddit_single as contract
 from Crawler.Backend.social_export import SocialExportMixin
 
-VERSION = "2.5.0"
-SOURCE_VERSION = "BeeSenseNative:1.2.0;Playwright:1.64.1"
+VERSION = "2.6.1"
+SOURCE_VERSION = "BeeSenseNative:1.3.0;Playwright:1.64.1"
 METHOD = "beesense_native_browser"
 CHROME_METHOD = "beesense_existing_chrome_capture"
 CHROME_VERSION = "BeeSenseChromeCapture:1.0.0"
@@ -285,7 +285,12 @@ class TikTokAdapter:
     def __init__(self, factory, dataset, version=None):
         self.dataset, self.seen = dataset, set()
         self.method = CHROME_METHOD if version == CHROME_VERSION else METHOD
-        if version in {"BeeSenseChromeLive:1.0.0", "BeeSenseChromeLive:1.1.0"}:
+        if version in {
+            "BeeSenseChromeLive:1.0.0",
+            "BeeSenseChromeLive:1.1.0",
+            "BeeSenseChromeLive:1.2.0",
+            "BeeSenseChromeLive:1.2.1",
+        }:
             self.method = "beesense_existing_chrome_live"
 
     def accept(self, kind, item, url, origin):
@@ -916,7 +921,11 @@ class NativeTikTokClient(SocialExportMixin):
         if target.get("cached_root") is not None:
             await self.navigate(url)
         button = self.page.locator('[data-e2e="comment-icon"]')
-        if await button.count() and await button.first.is_visible():
+        pane = self.page.locator(
+            '[data-e2e="comment-list"],[class*="DivCommentListContainer"],[data-e2e="comment-level-1"]'
+        )
+        pane_open = await pane.count() and await pane.first.is_visible()
+        if not pane_open and await button.count() and await button.first.is_visible():
             await button.first.click(timeout=min(3000, self.remaining() * 1000))
             await self.pause(self.settings["scroll_pause_seconds"])
         idle = 0
@@ -929,6 +938,7 @@ class NativeTikTokClient(SocialExportMixin):
             if self.comments_exhausted():
                 self.operation_warnings.append("source_comment_pagination_exhausted")
                 break
+            expanded = False
             if (
                 self.options.max_comments is not None
                 and idle >= self.settings["idle_scroll_limit"]
@@ -950,10 +960,16 @@ class NativeTikTokClient(SocialExportMixin):
                     reply_control += 1
                     if await control.is_visible():
                         await control.click(timeout=min(3000, self.remaining() * 1000))
-            await self.page.locator(
-                '[data-e2e="comment-list"],[class*="DivCommentListContainer"]'
-            ).evaluate_all("els => els.forEach(el => {el.scrollTop = el.scrollHeight})")
-            await self.page.mouse.wheel(0, 700)
+                        expanded = True
+            if not expanded:
+                # Scroll the comments, never the video/feed under the panel.
+                await self.page.locator(
+                    '[data-e2e="comment-list"],[class*="DivCommentListContainer"]'
+                ).evaluate_all(
+                    "els => els.forEach(el => {el.scrollTop = "
+                    + ("0" if idle and idle % 6 == 0 else "el.scrollHeight")
+                    + "})"
+                )
             await self.pause(max(self.settings["scroll_pause_seconds"], min(idle, 10)))
             await self.inspect()
         self.drain_comments()
@@ -1326,7 +1342,7 @@ class ChromeCaptureWorker:
 
 def live_chrome_plan(extension=False):
     """Describe the selected transport without starting a browser or reading auth."""
-    from Crawler.Backend.Tiktok.chrome_bridge import LIVE_VERSION
+    from Crawler.Backend.Tiktok.chrome_bridge import COMMENT_PROTOCOL, LIVE_VERSION
 
     manifest = json.loads(
         (ROOT / "Crawler/Backend/Tiktok/chrome_extension/manifest.json").read_text()
@@ -1343,6 +1359,8 @@ def live_chrome_plan(extension=False):
         extension_pairing_required=extension,
         run_clock_starts_after_extension_pairing=extension,
         comment_stop_policy="source_pagination_exhausted_or_run_deadline",
+        required_connector_version="1.2.1" if extension else None,
+        required_comment_protocol=COMMENT_PROTOCOL if extension else None,
     )
 
 
@@ -1526,6 +1544,7 @@ def main():
                             platform="tiktok",
                             run_clock="starts_now",
                             total_seconds=config.get("total_seconds"),
+                            connector=getattr(live_worker, "client_info", None),
                         )
                     ),
                     flush=True,
@@ -1539,6 +1558,11 @@ def main():
             else None,
             progress=lambda e: print(json.dumps(e, ensure_ascii=False), flush=True),
         )
+        # The shared runner treats injected workers as test fixtures. This CLI
+        # creates a real live bridge; its observed records are not synthetic.
+        # Keep fixture injection behavior unchanged for library/offline tests.
+        if live_worker is not None:
+            crawler._synthetic = False
         result = crawler.plan() if args.dry_run else crawler.run(args.output_dir)
         if args.dry_run and args.chrome_live:
             result.update(live_chrome_plan(extension=args.chrome_extension))

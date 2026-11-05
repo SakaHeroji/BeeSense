@@ -1,17 +1,14 @@
 ---
 type: community
-cohesion: 1.00
-members: 2
+members: 1
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 1.00 - tightly connected
-**Members:** 2 nodes
+**Members:** 1 nodes
 
 ## Members
-- [[Narrative CSV schema compatibility]] - rationale - graphify-out/obsidian/Topik Gemini.md
-- [[Narrative evidence validation]] - rationale - graphify-out/obsidian/Topik Gemini.md
+- [[MMR diverse source evidence]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
 
 ## Live Query (requires Dataview plugin)
 

@@ -13,6 +13,7 @@ import hmac
 import json
 import math
 import queue
+import re
 import secrets
 import threading
 import time
@@ -25,7 +26,8 @@ from pathlib import Path
 from urllib.parse import parse_qs
 
 LIVE_METHOD = "beesense_existing_chrome_live"
-LIVE_VERSION = "BeeSenseChromeLive:1.1.0"
+LIVE_VERSION = "BeeSenseChromeLive:1.2.1"
+COMMENT_PROTOCOL = "source-pagination-v3"
 STATUSES = {
     "FINISHED_BEST_EFFORT",
     "CAPTCHA_REQUIRED",
@@ -34,6 +36,8 @@ STATUSES = {
     "RATE_LIMITED",
     "SOURCE_ERROR",
     "INTERRUPTED",
+    "COMMENTS_INCOMPLETE",
+    "CLIENT_UPGRADE_REQUIRED",
 }
 WARNINGS = {
     "comments_completeness_unverified",
@@ -43,6 +47,13 @@ WARNINGS = {
     "reply_parent_not_observed",
     "human_validation_required",
     "native_json_unavailable",
+    "comments_pagination_not_exhausted",
+    "uncapped_comments_stopped_on_idle",
+    "source_comment_pagination_exhausted",
+    "comments_count_below_source_total",
+    "comment_control_error",
+    "tiktok_view_changed",
+    "chrome_command_timeout",
 }
 FIELDS = {
     "id",
@@ -82,6 +93,8 @@ class ChromeLiveWorker:
             )
         self.progress = progress or (lambda event: None)
         self.connected = threading.Event()
+        self.client_info = None
+        self.client_error = None
         self.cooldown_file = (
             Path(__file__).resolve().parents[3] / ".cache/tiktok/native_cooldown.json"
         )
@@ -110,7 +123,8 @@ class ChromeLiveWorker:
                         "Access-Control-Allow-Origin", worker.extension_origin
                     )
                     self.send_header(
-                        "Access-Control-Allow-Headers", "Authorization,Content-Type"
+                        "Access-Control-Allow-Headers",
+                        "Authorization,Content-Type,X-BeeSense-Comment-Policy,X-BeeSense-Connector-Version,X-BeeSense-Connector-Build",
                     )
                     self.send_header("Access-Control-Allow-Methods", "GET,POST,OPTIONS")
                     self.send_header("Vary", "Origin")
@@ -136,6 +150,17 @@ class ChromeLiveWorker:
                     )
                 )
 
+            def compatible_client(self):
+                version = self.headers.get("X-BeeSense-Connector-Version", "")
+                build = self.headers.get("X-BeeSense-Connector-Build", "")
+                return (
+                    re.fullmatch(r"\d{1,3}\.\d{1,3}\.\d{1,3}", version) is not None
+                    and tuple(map(int, version.split("."))) >= (1, 2, 1)
+                    and self.headers.get("X-BeeSense-Comment-Policy")
+                    == COMMENT_PROTOCOL
+                    and re.fullmatch(r"[a-zA-Z0-9._-]{1,80}", build) is not None
+                )
+
             def do_OPTIONS(self):
                 if (
                     self.host_allowed()
@@ -149,6 +174,25 @@ class ChromeLiveWorker:
                 if self.path == "/api/task":
                     if not self.extension_allowed():
                         return self.send(403, "Rejected client")
+                    if not self.compatible_client():
+                        if worker.client_error is None:
+                            worker.client_error = "Reload BeeSense TikTok Connector 1.2.1 from this project"
+                            worker.progress(
+                                dict(
+                                    stage="connector_upgrade_required",
+                                    minimum_version="1.2.1",
+                                    crawling_started=False,
+                                )
+                            )
+                        return self.send(
+                            409, "Reload connector 1.2.1: comment protocol required"
+                        )
+                    worker.client_info = {
+                        "version": self.headers["X-BeeSense-Connector-Version"],
+                        "build": self.headers["X-BeeSense-Connector-Build"],
+                        "comment_policy": COMMENT_PROTOCOL,
+                    }
+                    worker.client_error = None
                     worker.connected.set()
                     with worker.lock:
                         task = (
@@ -167,6 +211,10 @@ class ChromeLiveWorker:
                 if self.path in {"/api/result", "/api/progress"}:
                     if not self.extension_allowed():
                         return self.send(403, "Rejected client")
+                    if not self.compatible_client():
+                        return self.send(
+                            409, "Reload connector 1.2.1: comment protocol required"
+                        )
                     try:
                         size = int(self.headers.get("Content-Length", "0"))
                         if not 0 < size <= 4_000_000:
@@ -238,6 +286,8 @@ class ChromeLiveWorker:
 <style>body{{font:16px system-ui;max-width:900px;margin:36px auto;padding:0 24px}}textarea{{width:100%;min-height:160px;font:14px monospace}}button{{font:inherit;padding:12px 20px}}pre{{white-space:pre-wrap;overflow-wrap:anywhere}}</style>
 <h1>Live Chrome bridge</h1><p>Connected browser agent required. This process never launches or closes Chrome.</p>
 <p role="status">{escape(notice)} · {count} events accepted</p>
+<p>{escape(self.client_error or "")}</p>
+<p>Verified connector: {escape(json.dumps(self.client_info))}</p>
 <h2>Current task</h2><pre id="task">{escape(json.dumps(task, ensure_ascii=False))}</pre>
 {('<details><summary>Connect BeeSense extension</summary><p>Use this URL and the temporary pairing code in the extension popup. The code is local and expires when this process stops.</p><label>Pairing code <input readonly value="' + escape(self.nonce) + '"></label></details>') if self.extension_mode else ""}
 <form method="post" action="/result"><input type="hidden" name="nonce" value="{escape(self.nonce)}">
@@ -271,6 +321,22 @@ class ChromeLiveWorker:
             ):
                 raise ValueError("Stale live operation")
             task = active["task"]
+        if (
+            self.extension_mode
+            and data["done"]
+            and task["operation"] == "thread"
+            and task["collect_all_comments"]
+            and status == "FINISHED_BEST_EFFORT"
+        ):
+            collection_status = data.get("collection_status")
+            if "visible_pagination_idle" in warnings:
+                status = "CLIENT_UPGRADE_REQUIRED"
+                warnings = [*warnings, "uncapped_comments_stopped_on_idle"]
+            elif collection_status not in {"exhausted", "root_filtered"}:
+                status = "COMMENTS_INCOMPLETE"
+                warnings = [*warnings, "comments_pagination_not_exhausted"]
+            elif collection_status == "exhausted":
+                warnings = [*warnings, "source_comment_pagination_exhausted"]
         events = []
         for event in data["events"]:
             if not isinstance(event, dict) or not isinstance(
@@ -393,6 +459,7 @@ class ChromeLiveWorker:
         deadline = time.monotonic() + seconds
         seen, parents, per_parent = set(), set(), {}
         comments = replies = candidates = 0
+        root_observed = False
         try:
             while time.monotonic() < deadline:
                 try:
@@ -416,6 +483,8 @@ class ChromeLiveWorker:
                         if ident in seen:
                             continue
                         content_kind = item.get("kind", "post")
+                        if content_kind == "post":
+                            root_observed = True
                         if content_kind == "comment":
                             if reached(comments, settings.max_comments):
                                 continue
@@ -436,6 +505,20 @@ class ChromeLiveWorker:
                             per_parent[parent] = per_parent.get(parent, 0) + 1
                         seen.add(ident)
                     emit(kind, item)
+                if events:
+                    self.progress(
+                        dict(
+                            stage="chrome_capture_progress",
+                            platform="tiktok",
+                            operation=operation,
+                            operation_id=task["operation_id"],
+                            video_id=task.get("video_id"),
+                            posts_observed=int(root_observed),
+                            comments_observed=comments,
+                            replies_observed=replies,
+                            candidates_observed=candidates,
+                        )
+                    )
                 if done:
                     return dict(
                         status=status,

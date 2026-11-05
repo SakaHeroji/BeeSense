@@ -12,7 +12,7 @@ tags:
 # browser_configuration()
 
 ## Connections
-- [[.__init__()_11]] - `calls` [EXTRACTED]
+- [[.__init__()_9]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]
 - [[instagram_browser.py]] - `contains` [EXTRACTED]
 

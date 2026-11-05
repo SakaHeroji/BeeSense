@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/shared/types.ts"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L187"
+location: "L215"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -20,11 +20,14 @@ tags:
 - [[.job()]] - `method` [EXTRACTED]
 - [[.jobs()]] - `method` [EXTRACTED]
 - [[.prepareTransactionMigration()]] - `method` [EXTRACTED]
+- [[.renewTikTokConnector()]] - `method` [EXTRACTED]
+- [[.resumeTikTokConnector()]] - `method` [EXTRACTED]
 - [[.saveAuth()]] - `method` [EXTRACTED]
 - [[.session()]] - `method` [EXTRACTED]
-- [[.start()]] - `method` [EXTRACTED]
+- [[.start()_1]] - `method` [EXTRACTED]
 - [[.startTransactionMigration()]] - `method` [EXTRACTED]
 - [[.stop()]] - `method` [EXTRACTED]
+- [[.tiktokConnector()]] - `method` [EXTRACTED]
 - [[.transactionMigration()]] - `method` [EXTRACTED]
 - [[.validate()_2]] - `method` [EXTRACTED]
 - [[.verification()]] - `method` [EXTRACTED]

@@ -33,6 +33,7 @@ import PlatformResults from './PlatformResults';
 import { StorageSettings } from '../shared/StorageSettings';
 import { AuthSettings } from '../shared/AuthSettings';
 import type { AuthInput } from '../shared/types';
+import { TikTokChromePreparation, TikTokWorkflow } from './TikTokConnector';
 
 export default function PlatformWorkspace() {
   const { platform = 'youtube' } = useParams();
@@ -56,8 +57,10 @@ function PlatformPage({ platform }: { platform: Platform }) {
   const now = useClock();
   const client = useQueryClient();
   const navigate = useNavigate();
-  const supported = cap.platforms.includes(platform);
-  const backendAvailable = ['youtube', 'reddit', 'instagram', 'x'].includes(platform);
+  const isTikTok = platform === 'tiktok';
+  const supported =
+    cap.platforms.includes(platform) && (!isTikTok || cap.tiktokConnectorAvailable === true);
+  const backendAvailable = ['youtube', 'reddit', 'instagram', 'x', 'tiktok'].includes(platform);
   const change = (next: Config) => {
     revision.current += 1;
     setConfig(next);
@@ -125,12 +128,16 @@ function PlatformPage({ platform }: { platform: Platform }) {
             <h1 id="main-title" tabIndex={-1}>
               {platformName(platform)}
             </h1>
-            <p>{platformDescription[platform]}. Konfigurasi dan hasil dalam satu tempat.</p>
+            <p>
+              {isTikTok
+                ? 'Crawling melalui plugin Chrome. Pengaturan, koneksi, dan hasil dalam satu transaksi.'
+                : `${platformDescription[platform]}. Konfigurasi dan hasil dalam satu tempat.`}
+            </p>
           </div>
         </div>
         <span className={`source-readiness ${backendAvailable ? 'available' : ''}`}>
           <span />
-          {backendAvailable ? 'Siap dikonfigurasi' : 'Segera tersedia'}
+          {isTikTok ? 'Plugin Chrome' : backendAvailable ? 'Siap dikonfigurasi' : 'Segera tersedia'}
         </span>
       </header>
       <nav className="page-tabs social-tabs" aria-label={`Halaman ${platformName(platform)}`}>
@@ -155,6 +162,13 @@ function PlatformPage({ platform }: { platform: Platform }) {
         <PlatformResults platform={platform} />
       ) : (
         <>
+          {isTikTok && <TikTokWorkflow />}
+          {isTikTok && !cap.tiktokConnectorAvailable && (
+            <Notice>
+              Server dashboard belum mengaktifkan penghubung plugin TikTok. Konfigurasi tetap dapat
+              dilihat; pembuatan koneksi tersedia setelah layanan di server yang sama diaktifkan.
+            </Notice>
+          )}
           {!backendAvailable && (
             <Notice>
               Pengaturan {platformName(platform)} dapat ditinjau di sini.{' '}
@@ -170,7 +184,11 @@ function PlatformPage({ platform }: { platform: Platform }) {
             </Notice>
           ) : (
             <FieldErrorsContext.Provider value={errors}>
-              <form className="social-config-layout" onSubmit={submit} noValidate>
+              <form
+                className={`social-config-layout ${isTikTok ? 'tiktok-config' : ''}`}
+                onSubmit={submit}
+                noValidate
+              >
                 <section className="panel social-form">
                   <div className="social-section-heading">
                     <div>
@@ -288,8 +306,12 @@ function PlatformPage({ platform }: { platform: Platform }) {
                       <Field
                         name={`${platform}.queries`}
                         label="Queries pencarian"
-                        required
-                        hint="Satu query per baris. Hashtag dapat ditulis langsung dalam query jika platform mendukungnya."
+                        required={!isTikTok || !settings.hashtags.trim()}
+                        hint={
+                          isTikTok
+                            ? 'Satu query per baris. Query dan hashtag diproses bergiliran.'
+                            : 'Satu query per baris. Hashtag dapat ditulis langsung dalam query jika platform mendukungnya.'
+                        }
                       >
                         {(id) => (
                           <textarea
@@ -298,6 +320,24 @@ function PlatformPage({ platform }: { platform: Platform }) {
                             value={settings.queries}
                             onChange={(e) => platformField('queries', e.target.value)}
                             placeholder="biaya kuliah beasiswa…"
+                            spellCheck={false}
+                          />
+                        )}
+                      </Field>
+                    )}
+                    {isTikTok && (
+                      <Field
+                        name="tiktok.hashtags"
+                        label="Hashtag TikTok"
+                        hint="Opsional. Satu hashtag per baris, tanpa spasi; tanda # boleh disertakan."
+                      >
+                        {(id) => (
+                          <textarea
+                            id={id}
+                            rows={3}
+                            value={settings.hashtags}
+                            onChange={(e) => platformField('hashtags', e.target.value)}
+                            placeholder="beasiswa…"
                             spellCheck={false}
                           />
                         )}
@@ -322,12 +362,15 @@ function PlatformPage({ platform }: { platform: Platform }) {
                     <div className="context-preserved">
                       <Check size={17} aria-hidden="true" />
                       <span>
-                        Seluruh komentar dan balasan yang tersedia ikut diambil, tanpa batas jumlah.
+                        {isTikTok
+                          ? 'Seluruh komentar dan balasan dicoba sampai akhir pagination atau batas waktu. Hasil parsial tetap disimpan.'
+                          : 'Seluruh komentar dan balasan yang tersedia ikut diambil, tanpa batas jumlah.'}
                       </span>
                     </div>
                   </fieldset>
                 </section>
                 <aside className="social-controls">
+                  {isTikTok && <TikTokChromePreparation />}
                   <section className="panel run-settings">
                     <div className="social-section-heading">
                       <div>
@@ -372,7 +415,11 @@ function PlatformPage({ platform }: { platform: Platform }) {
                         name="duration"
                         label="Limit waktu (jam)"
                         required
-                        hint="Termasuk waktu tunggu selama pengambilan."
+                        hint={
+                          isTikTok
+                            ? 'Dimulai setelah plugin terhubung; termasuk jeda dan validasi selama crawling.'
+                            : 'Termasuk waktu tunggu selama pengambilan.'
+                        }
                       >
                         {(id) => (
                           <input
@@ -408,13 +455,15 @@ function PlatformPage({ platform }: { platform: Platform }) {
                       change={(storage) => field('storage', storage)}
                     />
                   </section>
-                  <AuthSettings
-                    platform={platform}
-                    value={credentials}
-                    change={(value) => {
-                      setCredentials(value);
-                    }}
-                  />
+                  {!isTikTok && (
+                    <AuthSettings
+                      platform={platform}
+                      value={credentials}
+                      change={(value) => {
+                        setCredentials(value);
+                      }}
+                    />
+                  )}
                   <div className="run-action">
                     <div>
                       <span>{number(settings.target || 0)} post</span>
@@ -427,9 +476,13 @@ function PlatformPage({ platform }: { platform: Platform }) {
                     </div>
                     <Button type="submit" loading={validate.isPending} disabled={!supported}>
                       <Play size={17} aria-hidden="true" />
-                      Tinjau & mulai crawling
+                      {isTikTok ? 'Tinjau & siapkan koneksi Chrome' : 'Tinjau & mulai crawling'}
                     </Button>
-                    <p>Konfigurasi ditinjau sekali lagi sebelum proses dimulai.</p>
+                    <p>
+                      {isTikTok
+                        ? 'Setelah ditinjau, pairing dan progres tampil dalam transaksi yang sama.'
+                        : 'Konfigurasi ditinjau sekali lagi sebelum proses dimulai.'}
+                    </p>
                   </div>
                 </aside>
               </form>
@@ -437,7 +490,11 @@ function PlatformPage({ platform }: { platform: Platform }) {
           )}
           <Dialog
             open={!!plan}
-            title={`Mulai crawling ${platformName(platform)}?`}
+            title={
+              isTikTok
+                ? 'Siapkan crawling TikTok melalui Chrome?'
+                : `Mulai crawling ${platformName(platform)}?`
+            }
             onClose={() => !start.isPending && setPlan(null)}
           >
             <dl className="start-summary">
@@ -469,6 +526,12 @@ function PlatformPage({ platform }: { platform: Platform }) {
             {plan?.warnings.map((warning) => (
               <Notice key={warning}>{warning}</Notice>
             ))}
+            {isTikTok && (
+              <Notice>
+                Transaksi akan menunggu koneksi plugin. Waktu crawling baru dihitung setelah server
+                memverifikasi konektor; tidak perlu menjalankan server penghubung lain.
+              </Notice>
+            )}
             {plan && Date.parse(plan.expiresAt) <= now && (
               <Notice tone="error">
                 Rencana kedaluwarsa. Tutup dialog dan tinjau ulang konfigurasi.
@@ -484,7 +547,13 @@ function PlatformPage({ platform }: { platform: Platform }) {
                 disabled={!plan || Date.parse(plan.expiresAt) <= now}
               >
                 <Play size={16} aria-hidden="true" />
-                {demoMode ? 'Mulai simulasi' : 'Mulai crawling'}
+                {isTikTok
+                  ? demoMode
+                    ? 'Siapkan koneksi simulasi'
+                    : 'Siapkan koneksi Chrome'
+                  : demoMode
+                    ? 'Mulai simulasi'
+                    : 'Mulai crawling'}
               </Button>
             </div>
           </Dialog>

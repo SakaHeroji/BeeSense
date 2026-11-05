@@ -12,7 +12,7 @@ tags:
 # response()
 
 ## Connections
-- [[.setUpClass()_3]] - `calls` [EXTRACTED]
+- [[.setUpClass()_2]] - `calls` [EXTRACTED]
 - [[.test_changed_representative_sentence_invalidates_cache_and_tampering_fails()]] - `calls` [EXTRACTED]
 - [[.test_invalid_generated_text_and_changed_keyword_receipt_are_rejected()]] - `calls` [EXTRACTED]
 - [[.test_prompt_revision_refreshes_cache_and_preserves_legacy_csv()]] - `calls` [EXTRACTED]

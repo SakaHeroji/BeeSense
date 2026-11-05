@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_narratives.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # test_topic_narratives.py
@@ -23,4 +23,4 @@ tags:
 - [[topic()]] - `contains` [EXTRACTED]
 - [[topic_narratives.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

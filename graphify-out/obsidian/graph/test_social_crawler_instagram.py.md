@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "code"
-community: "Pengujian Client Instagram"
+community: "Worker Instaloader"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Client_Instagram
+  - community/Worker_Instaloader
 ---
 
 # test_social_crawler_instagram.py
@@ -25,4 +25,4 @@ tags:
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

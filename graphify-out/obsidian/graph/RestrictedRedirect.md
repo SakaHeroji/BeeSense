@@ -12,7 +12,7 @@ tags:
 # RestrictedRedirect
 
 ## Connections
-- [[.__init__()_25]] - `calls` [EXTRACTED]
+- [[.__init__()_23]] - `calls` [EXTRACTED]
 - [[.redirect_request()]] - `method` [EXTRACTED]
 - [[.test_15_redirect_checks_before_following()]] - `calls` [EXTRACTED]
 - [[HTTPRedirectHandler]] - `inherits` [EXTRACTED]

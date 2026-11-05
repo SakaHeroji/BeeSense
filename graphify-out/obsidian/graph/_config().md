@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Konfigurasi Crawler Universal"
-location: "L451"
+location: "L452"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # _config()
 
 ## Connections
-- [[.__init__()_45]] - `calls` [EXTRACTED]
+- [[.__init__()_39]] - `calls` [EXTRACTED]
 - [[.test_custom_storage_reaches_coordinator_and_standalone_projections()]] - `calls` [EXTRACTED]
 - [[.test_invalid_schema_defaults_queries_and_limits_are_rejected()]] - `calls` [EXTRACTED]
 - [[.test_legacy_coordinator_configuration_does_not_require_version()]] - `calls` [EXTRACTED]

@@ -1,18 +1,16 @@
 ---
 type: community
-cohesion: 0.08
-members: 48
+members: 47
 ---
 
 # Arsip Data Harian
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 48 nodes
+**Members:** 47 nodes
 
 ## Members
 - [[.capture_worker()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.client()]] - code - tests/crawler/test_tiktok_crawler.py
-- [[.setUp()_18]] - code - tests/crawler/test_tiktok_crawler.py
+- [[.setUp()_16]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_access_barrier_exports_partial_bundle_and_stops_searches()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_all_comments_and_replies_are_paginated_and_deduplicated()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_all_comments_survive_more_than_three_idle_rounds_and_wait_for_replies()]] - code - tests/crawler/test_tiktok_crawler.py
@@ -30,7 +28,6 @@ members: 48
 - [[.test_empty_default_run_never_republishes_the_archive()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_empty_search_response_has_a_specific_redacted_diagnosis()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_explicit_video_lookup_uses_embedded_metadata_and_keeps_author_url()]] - code - tests/crawler/test_tiktok_crawler.py
-- [[.test_export_reuses_search_root_and_deduplicates_native_ids_across_days()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_extension_plan_reports_real_transport_without_browser_or_auth()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_filtered_roots_do_not_fetch_comments()]] - code - tests/crawler/test_tiktok_crawler.py
 - [[.test_finite_comment_cap_and_zero_replies_are_honored()]] - code - tests/crawler/test_tiktok_crawler.py
@@ -68,15 +65,16 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 4 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
-- 2 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 2 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
 - 2 edges to [[_COMMUNITY_Arsip Data Harian]]
-- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_1]]
 - 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
-- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
+- 1 edge to [[_COMMUNITY_Verifikasi Dataset Publik]]
 
 ## Top bridge nodes
 - [[test_tiktok_crawler.py]] - degree 14, connects to 6 communities
-- [[TikTokTests]] - degree 44, connects to 1 community
+- [[TikTokTests]] - degree 44, connects to 2 communities
 - [[.test_empty_search_response_has_a_specific_redacted_diagnosis()]] - degree 3, connects to 1 community
 - [[.test_local_auth_error_is_distinct_from_a_source_parse_error()]] - degree 2, connects to 1 community

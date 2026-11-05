@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/shared/demo.ts"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L173"
+location: "L175"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,8 @@ tags:
 ## Connections
 - [[dataset()]] - `calls` [EXTRACTED]
 - [[demo.ts]] - `contains` [EXTRACTED]
+- [[demoConnection()]] - `calls` [EXTRACTED]
+- [[isTikTokJob()]] - `calls` [EXTRACTED]
 - [[stamp()_1]] - `calls` [EXTRACTED]
 - [[update()]] - `calls` [EXTRACTED]
 

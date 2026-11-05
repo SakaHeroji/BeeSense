@@ -12,7 +12,6 @@ tags:
 # StorageSettings()
 
 ## Connections
-- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[StorageSettings.tsx]] - `contains` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 

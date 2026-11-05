@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[1000 qualified-root targets per platform within shared three-hour budget]] - `references` [EXTRACTED]
-- [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Before 04 cumulative qualified YouTube77Reddit26; evidence32547]] - `references` [EXTRACTED]
 - [[Before segment 03 qualified YouTube6Reddit17; exported evidence831]] - `references` [EXTRACTED]
 - [[Campaign descriptor records finalized PARTIAL status and five-segment accounting]] - `references` [EXTRACTED]

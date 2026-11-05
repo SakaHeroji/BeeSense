@@ -12,7 +12,7 @@ tags:
 # RedditCrawlerTests
 
 ## Connections
-- [[.setUp()_11]] - `method` [EXTRACTED]
+- [[.setUp()_8]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `method` [EXTRACTED]
 - [[.test_adaptive_display_matrix()]] - `method` [EXTRACTED]
 - [[.test_barrier_exports_partial_without_calling_it_success()]] - `method` [EXTRACTED]

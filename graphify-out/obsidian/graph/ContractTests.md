@@ -12,7 +12,7 @@ tags:
 # ContractTests
 
 ## Connections
-- [[.setUp()_14]] - `method` [EXTRACTED]
+- [[.setUp()_11]] - `method` [EXTRACTED]
 - [[.test_01_frozen_header_fingerprint()]] - `method` [EXTRACTED]
 - [[.test_02_cross_source_identical_columns_and_types()]] - `method` [EXTRACTED]
 - [[.test_03_unknown_columns_rejected()]] - `method` [EXTRACTED]

@@ -79,6 +79,7 @@ jobs:
           python -m ruff format --isolated --check Crawler/Backend/tiktok_crawler.py Crawler/Backend/Tiktok/chrome_bridge.py tests/crawler/test_tiktok_crawler.py tests/crawler/test_tiktok_chrome_bridge.py
           python -m unittest discover -s tests/crawler -p test_tiktok_crawler.py -v
           python -m unittest discover -s tests/crawler -p test_tiktok_chrome_bridge.py -v
+          python -m unittest discover -s tests/crawler -p test_tiktok_comment_dom.py -v
           node --test tests/crawler/test_tiktok_chrome_extension.mjs
           node --check Crawler/Backend/Tiktok/chrome_extension/background.mjs
           node --check Crawler/Backend/Tiktok/chrome_extension/popup.mjs
@@ -120,5 +121,5 @@ jobs:
         run: python -m pip check
       - name: Open shipped artifacts and all dashboard views without training
         env:
-          BEESENSE_RELEVANCE_RUN_DIR: outputs/nlp_20261102_relevance_topics20_gemini_02
+          BEESENSE_RELEVANCE_RUN_DIR: outputs/nlp_20261105_relevance_topics20_gemini_01
         run: python -m unittest discover -s tests/cloud -v

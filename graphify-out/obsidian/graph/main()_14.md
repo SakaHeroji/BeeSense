@@ -1,19 +1,25 @@
 ---
-source_file: "Crawler/Backend/reddit_crawler.py"
+source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
-community: "Wrapper RedditCrawler"
-location: "L83"
+community: "Akuisisi TikTok dan Ekspor"
+location: "L1413"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wrapper_RedditCrawler
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # main()
 
 ## Connections
-- [[.plan()_2]] - `calls` [EXTRACTED]
-- [[RedditCrawler]] - `calls` [EXTRACTED]
-- [[reddit_crawler.py]] - `contains` [EXTRACTED]
+- [[.close()_10]] - `calls` [EXTRACTED]
+- [[.plan()_6]] - `calls` [EXTRACTED]
+- [[ChromeCaptureWorker]] - `calls` [EXTRACTED]
+- [[ChromeLiveWorker]] - `calls` [EXTRACTED]
+- [[TikTokCrawler]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [EXTRACTED]
+- [[live_chrome_plan()]] - `calls` [EXTRACTED]
+- [[platform_configuration()]] - `calls` [EXTRACTED]
+- [[tiktok_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

@@ -1,30 +1,34 @@
 ---
 type: community
-cohesion: 0.18
-members: 15
+members: 21
 ---
 
 # Konektor Chrome TikTok Lokal
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 15 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[--chrome-extension desktop transport inherits universal querydatetargetcapspacing;pairing starts timer,without profileauth read]] - concept - docs/crawler/CONFIGURATION.md
-- [[2.5.0native1.2.0connector1.1.0 uncapped comments await source pagination end and all observed-parent replies;slow controls back offretry]] - rationale - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[39crawler+10HTTPbridge+10Node tests passed;latest pagination not live-retested;Docker buildstart unverified due denied socket]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[After installed-extension rundaily TikTok Excel and combined archive35197unique native IDs,0duplicates]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[Authenticated task GET gates connected state,pairing errors preserved;reload next use,no live retest after userStop,no authmigrationStreamlit change,separate branch]] - concept - Crawler/Backend/Tiktok/chrome_extension/README.md
-- [[BeeSense TikTok Connector1.1.0previous1.0.0installedlive-tested;reload current offline-tested package before next use]] - document - Crawler/Backend/Tiktok/chrome_extension/README.md
-- [[ChromeLiveWorkerBeeSenseChromeLive1.1.0 with CLI2.5.0 and shared native defaultconfigurationexport]] - document - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[Connected status only after authenticated GET task;pairing errors survive normal debugger detach;extension IDpermissions unchanged]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[Connector1.1.0 no three-idle termination for uncapped comments;waits sourceparent reply exhaustion,retries slow controls,retainsStopdeadlinebarriers]] - concept - Crawler/Backend/Tiktok/chrome_extension/README.md
-- [[Installed extension1.0.0CLI2.4.1 trial13posts+93comments+261replies=367unique in656.6s INTERRUPTED;500target shortfall487,comments_complete false]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[Installed-extension trial excluded12out-of-date candidates and2without include keyword;TikTok counts are not captured-comment totals]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[Local ManifestV3,Chrome118+,debuggeractiveTabstorage,TikTokloopback hosts;no remote codeprofilecookieauth read,pairing code not stored]] - concept - Crawler/Backend/Tiktok/chrome_extension/README.md
-- [[Long native IDs preserved as strings before JSON.parse;epochvideorootparent checks;max500event batches acknowledged before sent marking]] - rationale - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[Selected-tab debugger and localhost task bridge;public fields only,no cookieprofileauthpasswordheader reads;pairing before crawl timer]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
-- [[User stopped crawler;reload connector1.1.0 next use,no live retest,no authdatabase change or Streamlit redeploy;publish on branch separate from main]] - concept - docs/crawler/TIKTOK_CHROME_LIVE.md
+- [[.api()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.begin()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.send()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_caps_parent_relations_and_duplicate_records()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_extension_api_is_disabled_in_agent_mode()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_extension_pairing_auth_and_live_json_result()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_http_rejects_foreign_origin_and_bad_nonce()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_http_streams_real_batch_and_retains_rows_on_deadline()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_live_progress_counts_data_before_thread_finishes()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_old_or_manifest_only_connector_cannot_start_crawl_clock()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_pairing_timeout_does_not_create_a_crawl_task()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_rate_limit_survives_next_operation_without_browser_task()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_reconnected_connector_resumes_same_task_without_duplicate_ids()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_stale_and_wrong_post_batches_are_rejected_atomically()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_streamed_live_worker_uses_common_excel_and_live_provenance()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_uncapped_idle_or_missing_completion_evidence_never_counts_as_success()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_unlimited_time_task_is_valid_json()]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[ChromeBridgeTests]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[Task isolation, real loopback transport and streamed export contracts.]] - rationale - tests/crawler/test_tiktok_chrome_bridge.py
+- [[post()_1]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[test_tiktok_chrome_bridge.py]] - code - tests/crawler/test_tiktok_chrome_bridge.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -34,11 +38,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Integrasi Default Instaloader_3]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_5]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
 
 ## Top bridge nodes
-- [[ChromeLiveWorkerBeeSenseChromeLive1.1.0 with CLI2.5.0 and shared native defaultconfigurationexport]] - degree 14, connects to 2 communities
-- [[BeeSense TikTok Connector1.1.0previous1.0.0installedlive-tested;reload current offline-tested package before next use]] - degree 6, connects to 1 community
-- [[--chrome-extension desktop transport inherits universal querydatetargetcapspacing;pairing starts timer,without profileauth read]] - degree 2, connects to 1 community
+- [[test_tiktok_chrome_bridge.py]] - degree 7, connects to 3 communities
+- [[ChromeBridgeTests]] - degree 20, connects to 1 community
+- [[.test_extension_pairing_auth_and_live_json_result()]] - degree 5, connects to 1 community
+- [[.test_reconnected_connector_resumes_same_task_without_duplicate_ids()]] - degree 5, connects to 1 community
+- [[.test_old_or_manifest_only_connector_cannot_start_crawl_clock()]] - degree 3, connects to 1 community

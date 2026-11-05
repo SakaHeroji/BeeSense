@@ -10,9 +10,9 @@ tags: [beesense, react, crawler, frontend]
 
 [[Frontend Social Media Per Platform]] memuat formulir, hasil transaksi menurut tanggal eksekusi WIB, statistik lengkap dan [[Migrasi Transaksi per Sosmed]]. Mulai crawling tetap membuka monitor job dengan progres, aktivitas, konfigurasi dan dataset.
 
-Development memakai simulasi berlabel, tanpa crawling/database/file nyata. Build API tidak fallback ke demo. Typed adapter di api.ts hanya menyiapkan [kontrak HTTP](../../Crawler/Frontend/docs/API_CONTRACT.md); layanan HTTP dan worker belum tersedia. Python SocialCrawler tetap CLI/library empat adapter, tiga sumber lain UI/rencana.
+Development memakai simulasi berlabel, tanpa crawling/database/file nyata. Build API tidak fallback ke demo. Typed adapter di api.ts hanya menyiapkan [kontrak HTTP](../../Crawler/Frontend/docs/API_CONTRACT.md); gateway HTTP dan worker dashboard belum tersedia. Python SocialCrawler tetap CLI/library; TikTok memiliki transport Chrome/plugin nyata yang belum terhubung ke gateway frontend.
 
-Form akun & sesi opsional menyiapkan penyimpanan config/auth.json untuk Instagram, X, TikTok, Threads dan Facebook. Session ID disembunyikan, tidak dikembalikan server, tidak disimpan ke URL/localStorage/bundle dan dibersihkan setelah simulasi simpan. Metadata username/hasSession berada di memori demo. Frontend tidak membaca atau menulis file auth.json asli.
+Form akun & sesi opsional menyiapkan penyimpanan config/auth.json untuk Instagram, X, Threads dan Facebook. Session ID disembunyikan, tidak dikembalikan server, tidak disimpan ke URL/localStorage/bundle dan dibersihkan setelah simulasi simpan. Metadata username/hasSession berada di memori demo. Frontend tidak membaca atau menulis file auth.json asli. TikTok memakai sesi Chrome melalui [[Frontend TikTok Plugin Chrome]].
 
 Tema: #FFFFFF/#FAFAFA, teks #000000, aksen #FF8A24, pilihan #FFF3E8, garis #E6DDD5. Plus Jakarta Sans; teks minimum 12 px, pendukung 13 px, body/input 15 px, input mobile 16 px. [Audit dan delivery](../../Crawler/Frontend/docs/DELIVERY.md) mencatat bukti dan batas.
 

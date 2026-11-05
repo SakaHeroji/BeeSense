@@ -14,12 +14,11 @@ tags:
 ## Connections
 - [[Config]] - `imports` [EXTRACTED]
 - [[ConfigReview()]] - `contains` [EXTRACTED]
-- [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
 - [[dateTime()]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `imports_from` [EXTRACTED]
 - [[isoWib()]] - `imports` [EXTRACTED]
 - [[lines()]] - `imports` [EXTRACTED]
-- [[number()_1]] - `imports` [EXTRACTED]
+- [[number()]] - `imports` [EXTRACTED]
 - [[platformName()]] - `imports` [EXTRACTED]
 - [[platforms]] - `imports` [EXTRACTED]
 - [[storageLabels]] - `imports` [EXTRACTED]

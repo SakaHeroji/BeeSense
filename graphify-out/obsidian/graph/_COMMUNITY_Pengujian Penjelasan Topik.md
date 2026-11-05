@@ -1,13 +1,11 @@
 ---
 type: community
-cohesion: 0.25
-members: 18
+members: 19
 ---
 
 # Pengujian Penjelasan Topik
 
-**Cohesion:** 0.25 - loosely connected
-**Members:** 18 nodes
+**Members:** 19 nodes
 
 ## Members
 - [[.explain()]] - code - tests/nlp/test_topic_explanations.py
@@ -23,6 +21,7 @@ members: 18
 - [[.test_sidecar_roundtrip_checksum_and_source_binding()]] - code - tests/nlp/test_topic_explanations.py
 - [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - code - tests/nlp/test_topic_explanations.py
 - [[.test_stable_and_episodic_patterns()]] - code - tests/nlp/test_topic_explanations.py
+- [[.test_tiktok_native_roots_and_explanations_include_comments_and_replies()]] - code - tests/nlp/test_topic_explanations.py
 - [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - code - tests/nlp/test_topic_explanations.py
 - [[ExplanationTests]] - code - tests/nlp/test_topic_explanations.py
 - [[model_from_counts()]] - code - tests/nlp/test_topic_explanations.py
@@ -38,9 +37,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes
 - [[test_topic_explanations.py]] - degree 5, connects to 2 communities
-- [[ExplanationTests]] - degree 16, connects to 1 community
-- [[model_from_counts()]] - degree 6, connects to 1 community
+- [[ExplanationTests]] - degree 17, connects to 1 community
+- [[model_from_counts()]] - degree 7, connects to 1 community

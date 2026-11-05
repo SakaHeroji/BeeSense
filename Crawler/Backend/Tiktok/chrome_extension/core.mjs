@@ -1,3 +1,6 @@
+export const COMMENT_PROTOCOL = "source-pagination-v3";
+export const CONNECTOR_BUILD = "20261105-comment-viewport-v5";
+
 export function tiktokUrl(value) {
   const u = new URL(value);
   if (
@@ -144,8 +147,11 @@ export function commentPaginationExhausted(
   pages,
   comments,
   includeReplies = true,
+  expectedTotal = null,
 ) {
   if (pages.get(null) !== false) return false;
+  if (expectedTotal != null && Number(expectedTotal) > 0 && comments.size === 0)
+    return false;
   if (!includeReplies) return true;
   const counts = new Map();
   for (const row of comments.values())
@@ -205,8 +211,73 @@ export function validateTask(task) {
 
 // Executed in the selected TikTok document. No cookies, storage, credentials or
 // synthetic API requests are read or created. Only public DOM/UI is accessed.
-export function pageOperation({ action, id, blocked = [] }) {
-  const visible = (e) => !!e && !!e.getClientRects().length;
+export function pageOperation({ action, id, blocked = [], rewind = false }) {
+  const visible = (e) =>
+    !!e &&
+    !!e.getClientRects().length &&
+    getComputedStyle(e).visibility !== "hidden" &&
+    getComputedStyle(e).display !== "none";
+  const inViewport = (e) => {
+    if (!visible(e)) return false;
+    const rect = e.getBoundingClientRect();
+    let top = Math.max(0, rect.top),
+      bottom = Math.min(innerHeight, rect.bottom),
+      left = Math.max(0, rect.left),
+      right = Math.min(innerWidth, rect.right);
+    for (let parent = e.parentElement; parent; parent = parent.parentElement) {
+      const style = getComputedStyle(parent),
+        bounds = parent.getBoundingClientRect();
+      if (/(auto|scroll|hidden|clip)/.test(style.overflowY)) {
+        top = Math.max(top, bounds.top);
+        bottom = Math.min(bottom, bounds.bottom);
+      }
+      if (/(auto|scroll|hidden|clip)/.test(style.overflowX)) {
+        left = Math.max(left, bounds.left);
+        right = Math.min(right, bounds.right);
+      }
+    }
+    return bottom > top && right > left;
+  };
+  const commentPane = () => {
+    // Prefer the real list to broad class matches that may select a single item
+    // or an inactive layout wrapper earlier in document order.
+    for (const selector of [
+      '[data-e2e="comment-list"]',
+      '[class*="CommentListContainer"]',
+      '[class*="DivCommentList"]',
+      '[data-e2e="comment-level-1"]',
+    ]) {
+      const pane = [...document.querySelectorAll(selector)].find(visible);
+      if (pane) return pane;
+    }
+  };
+  const commentTab = () => {
+    const candidates = [
+      ...document.querySelectorAll(
+        '[role="tab"],button,[role="button"],[data-e2e*="comment"],h2,h3,p,span',
+      ),
+    ];
+    const label = (e) =>
+      (e.getAttribute("aria-label") || e.textContent || "")
+        .replace(/\s+/g, " ")
+        .trim();
+    const recommendations = candidates.some(
+      (e) =>
+        visible(e) &&
+        /^(?:you may like|anda mungkin menyukai|rekomendasi|related videos)$/i.test(
+          label(e),
+        ),
+    );
+    return candidates.find(
+      (e) =>
+        visible(e) &&
+        (e.closest('[role="tab"],[data-e2e*="comment-tab"]') ||
+          recommendations) &&
+        /^(?:comments?|komentar)(?:\s*[([]?\s*[\d.,kmb]+\s*[)\]]?)?$/i.test(
+          label(e),
+        ),
+    );
+  };
   const challenge = [
     ...document.querySelectorAll(
       'iframe[src*="captcha"],[id*="captcha"],[class*="captcha_verify"]',
@@ -254,12 +325,23 @@ export function pageOperation({ action, id, blocked = [] }) {
     };
   }
   if (action === "comments") {
+    // A visible wrapper can contain the inactive "You may like" tab. Select
+    // Comments explicitly before considering the separate comment-icon toggle.
+    const tab = commentTab();
+    if (tab) {
+      if (tab.getAttribute("aria-selected") !== "true") tab.click();
+      return { clicked: true, tab_selected: true };
+    }
+    // The comment control is a toggle on some layouts. Never close an open pane.
+    if (commentPane()) return { clicked: false, already_open: true };
     const button = [
-      ...document.querySelectorAll('button,[role="button"]'),
+      ...document.querySelectorAll(
+        'button,[role="button"],[data-e2e="comment-icon"],[data-e2e="browse-comment"]',
+      ),
     ].find(
       (e) =>
         visible(e) &&
-        /^(Read or add comments|Comments$)/i.test(
+        /^(Read or add comments|Comments?\b|Komentar\b|Baca.*komentar)/i.test(
           e.getAttribute("aria-label") || e.textContent?.trim() || "",
         ),
     );
@@ -267,43 +349,51 @@ export function pageOperation({ action, id, blocked = [] }) {
       button.click();
       return { clicked: true };
     }
-    return { clicked: false };
+    return { clicked: false, already_open: false };
   }
   if (action === "expand") {
-    for (const button of document.querySelectorAll(
-      'button,[role="button"],[data-e2e^="view-more"],p,span',
-    )) {
-      const text = (button.textContent || "").trim();
+    const pane = commentPane();
+    if (!pane) return { clicked: false, comment_pane_missing: true };
+    for (const [index, button] of [
+      ...pane.querySelectorAll(
+        'button,[role="button"],[data-e2e^="view-more"],p,span',
+      ),
+    ].entries()) {
+      const text = (button.textContent || "").replace(/\s+/g, " ").trim();
       if (
-        !visible(button) ||
-        !/^(?:View\s+(?:\d+\s+)?(?:repl|more)|Lihat\s+(?:\d+\s+)?balasan)/i.test(
+        // A laid-out element may be clipped above the scrollable comment pane.
+        // Clicking it would scroll back up before reaching the next page.
+        !inViewport(button) ||
+        !/^(?:View\s+(?:\d+\s+)?(?:more(?:\s+replies)?|repl(?:y|ies))|Lihat\s+(?:\d+\s+)?balasan(?:\s+lainnya)?)$/i.test(
           text,
         )
       )
         continue;
       let wrapper = button.parentElement;
-      while (wrapper && !wrapper.querySelector('[data-e2e="comment-level-1"]'))
+      while (
+        wrapper &&
+        !wrapper.matches('[data-e2e="comment-level-1"]') &&
+        !wrapper.querySelector('[data-e2e="comment-level-1"]')
+      )
         wrapper = wrapper.parentElement;
+      const parent = wrapper?.matches('[data-e2e="comment-level-1"]')
+        ? wrapper
+        : wrapper?.querySelector('[data-e2e="comment-level-1"]');
       const key =
-        (
-          wrapper?.querySelector('[data-e2e="comment-level-1"]')?.textContent ||
-          ""
-        ).slice(0, 160) +
-        "|" +
-        text;
+        (parent?.textContent || "").slice(0, 160) + "|" + text + "|" + index;
       if (blocked.includes(key)) continue;
+      button.scrollIntoView({ block: "nearest" });
       button.click();
       return { clicked: true, key };
     }
     return { clicked: false };
   }
   if (action === "scroll") {
-    const comment = document.querySelector('[data-e2e="comment-level-1"]');
+    const comment = commentPane();
+    // A thread must scroll its comment pane, never the video/feed underneath it.
+    if (id && !comment) return { scrolled: false, comment_pane_missing: true };
     let el =
-      comment ||
-      document.querySelector(
-        '[data-e2e="comment-list"],[class*="CommentListContainer"],[data-e2e="search_top-item-list"]',
-      );
+      comment || document.querySelector('[data-e2e="search_top-item-list"]');
     while (
       el &&
       !(
@@ -312,9 +402,26 @@ export function pageOperation({ action, id, blocked = [] }) {
       )
     )
       el = el.parentElement;
-    el = el || document.scrollingElement;
-    el?.scrollBy(0, Math.max(500, (el.clientHeight || 700) * 0.8));
-    return { scrolled: !!el };
+    if (
+      id &&
+      [
+        document.body,
+        document.documentElement,
+        document.scrollingElement,
+      ].includes(el)
+    )
+      el = null;
+    el = el || (!id ? document.scrollingElement : null);
+    if (!el) return { scrolled: false, comment_pane_missing: !!id };
+    const before = el.scrollTop;
+    if (rewind) el.scrollTo(0, 0);
+    else el.scrollBy(0, Math.max(500, (el.clientHeight || 700) * 0.8));
+    return {
+      scrolled: true,
+      before,
+      after: el.scrollTop,
+      at_end: el.scrollTop + el.clientHeight >= el.scrollHeight - 2,
+    };
   }
   return { invalid: true };
 }

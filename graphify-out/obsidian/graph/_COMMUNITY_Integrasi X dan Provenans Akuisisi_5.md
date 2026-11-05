@@ -1,19 +1,14 @@
 ---
 type: community
-cohesion: 0.50
-members: 4
+members: 1
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Cohesion:** 0.50 - moderately connected
-**Members:** 4 nodes
+**Members:** 1 nodes
 
 ## Members
-- [[Allowlist Docker tanpa auth dan sesi]] - rationale - deployment/docker/Dockerfile.twitter.dockerignore
-- [[Image Twitter Python 3.12 UID 10001]] - concept - deployment/docker/Dockerfile.twitter
-- [[Scweet 5.8.2]] - concept - requirements/twitter.txt
-- [[openpyxl 3.1.5]] - concept - requirements/twitter.txt
+- [[RuntimeError_2]] - code
 
 ## Live Query (requires Dataview plugin)
 

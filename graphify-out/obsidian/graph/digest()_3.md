@@ -12,7 +12,7 @@ tags:
 # digest()
 
 ## Connections
-- [[.__init__()_20]] - `calls` [EXTRACTED]
+- [[.__init__()_18]] - `calls` [EXTRACTED]
 - [[.accept()_3]] - `calls` [EXTRACTED]
 - [[.add_content()_1]] - `calls` [EXTRACTED]
 - [[.content()_1]] - `calls` [EXTRACTED]

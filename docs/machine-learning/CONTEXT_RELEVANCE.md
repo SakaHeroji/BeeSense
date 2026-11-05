@@ -4,6 +4,23 @@ Penjelasan langkah demi langkah dengan contoh dan bahasa sehari-hari tersedia di
 
 `ContextRelevanceFilter` pada `MachineLearning/context_relevance.py` membuat keputusan otomatis per kemunculan kalimat. Backend `LocalSemanticBackend` pada `MachineLearning/relevance_semantic.py` memakai encoder SBERT multibahasa pralatih yang sama dengan pipeline NLP. Tidak ada pelabelan setiap record oleh pengguna, training classifier berlabel, atau permintaan API per komentar.
 
+## Snapshot aktif — 5 November 2026
+
+Sumber baru berisi 36.233 record unik dari lima platform termasuk TikTok. Sebanyak
+55.257 kemunculan diseleksi: 11.185 relevan, 19.739 interaksi umum, 3.833 di luar
+lingkup dan 20.500 meragukan. Korpus tersaring memuat 10.795 kalimat unik. Kedua
+model baru memiliki 20 topik: c_v rata-rata 0,4346102845 sebelum dan 0,4666033620
+sesudah filter. Enam topik tersaring masih di bawah 0,4 individual.
+
+`config/dashboard.json` menunjuk `outputs/nlp_20261105_all_social_topics20_gemini_01`
+dan `outputs/nlp_20261105_relevance_topics20_gemini_01`; mask baru berada di
+`outputs/relevance_20261105_01`. Pengguna mengizinkan 40 narasi Gemini dari
+400 keyword dan 400 kalimat representatif. Fitting lokal dan narasi dilakukan
+terpisah; checksum file fitted tetap sama. [Audit lengkap](TIKTOK_RETRAIN_20261105.md).
+Contoh perintah bertanggal 2 November di bawah merupakan riwayat; untuk percobaan
+baru gunakan sumber/mask yang cocok dan nama output baru, lalu ubah pasangan
+config bila hendak menjadikannya aktif.
+
 ## Ruang lingkup dan algoritma
 
 `config/context_relevance.json` menyimpan keyword pencarian, definisi ruang lingkup, contoh konteks relevan/interaksi umum/di luar lingkup, revision model tetap, dan ambang cosine. Setiap keyword wajib memiliki contoh konteks relevan. Mengganti keyword ke domain lain membutuhkan pembaruan contoh konteks, bukan hanya mengganti daftar kata.
@@ -22,7 +39,7 @@ Ambang bersifat sementara dan belum dikalibrasi dengan label manusia. Uji contoh
 
 ## Menjalankan eksperimen
 
-Lingkungan pemrosesan memakai `requirements/sbert.txt`; dashboard memakai `requirements.txt`. Setelah persetujuan pengguna untuk publikasi, `config/social_nlp.json` mengarah ke snapshot tersaring `outputs/nlp_20261102_relevance_topics20_gemini_02/`. Konfigurasi historis tersimpan dalam `summary.json` setiap snapshot; snapshot sebelum penyaringan tetap tersedia untuk pembandingan. Entry point Streamlit Cloud tetap `streamlit_apps.py`; runtime tidak memakai API key.
+Lingkungan pemrosesan memakai `requirements/sbert.txt`; dashboard memakai `requirements.txt`. Pada eksperimen 2 November, setelah persetujuan pengguna untuk publikasi, `config/social_nlp.json` mengarah ke snapshot tersaring `outputs/nlp_20261102_relevance_topics20_gemini_02/`. Konfigurasi historis tersimpan dalam `summary.json` setiap snapshot; snapshot sebelum penyaringan tetap tersedia untuk pembandingan. Entry point Streamlit Cloud tetap `streamlit_apps.py`; runtime tidak memakai API key.
 
 ```bash
 .venv-sbert/bin/python -m scripts.filter_context_relevance \

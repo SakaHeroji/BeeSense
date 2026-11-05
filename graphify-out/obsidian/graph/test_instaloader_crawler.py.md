@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instaloader_crawler.py"
 type: "code"
-community: "Pengujian Client Instagram"
+community: "Pengujian Worker Instaloader"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Client_Instagram
+  - community/Pengujian_Worker_Instaloader
 ---
 
 # test_instaloader_crawler.py
@@ -20,4 +20,4 @@ tags:
 - [[persistent_fixture()]] - `contains` [EXTRACTED]
 - [[test_unlimited_crawling.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Worker_Instaloader

@@ -12,7 +12,7 @@ tags:
 # configure_web_graphql()
 
 ## Connections
-- [[.__init__()_13]] - `calls` [EXTRACTED]
+- [[.__init__()_11]] - `calls` [EXTRACTED]
 - [[Apply the supplied runtime patch to this worker's context only.]] - `rationale_for` [EXTRACTED]
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 

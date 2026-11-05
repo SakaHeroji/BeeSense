@@ -1,37 +1,34 @@
 ---
 type: community
-cohesion: 0.26
-members: 22
+members: 21
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Cohesion:** 0.26 - loosely connected
-**Members:** 22 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[Config]] - code - Crawler/Frontend/src/shared/types.ts
-- [[ConfigReview()]] - code - Crawler/Frontend/src/shared/ConfigReview.tsx
-- [[ConfigReview.tsx]] - code - Crawler/Frontend/src/shared/ConfigReview.tsx
-- [[PlatformPage()]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
-- [[ProgressChart()]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[TransactionMigration()]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
-- [[TransactionMigration.tsx]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
-- [[crawlDateLabel()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[dateTime()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[domain.ts]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[initialConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[isoWib()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[lines()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[number()_1]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platformLabels]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platformName()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[queryLines()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[storageLabels]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[useClock()]] - code - Crawler/Frontend/src/shared/hooks.ts
-- [[validateConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[validateStorage()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[wibInput()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[@eslintjs]] - code - Crawler/Frontend/package.json
+- [[@eslintjs_1]] - concept - Crawler/Frontend/package.json
+- [[@testing-libraryreact]] - code - Crawler/Frontend/package.json
+- [[@testing-libraryreact_1]] - concept - Crawler/Frontend/package.json
+- [[@vitejsplugin-react]] - code - Crawler/Frontend/package.json
+- [[@vitejsplugin-react_1]] - concept - Crawler/Frontend/package.json
+- [[devDependencies]] - code - Crawler/Frontend/package.json
+- [[eslint]] - code - Crawler/Frontend/package.json
+- [[eslint_1]] - concept - Crawler/Frontend/package.json
+- [[jsdom]] - code - Crawler/Frontend/package.json
+- [[jsdom_1]] - concept - Crawler/Frontend/package.json
+- [[prettier]] - code - Crawler/Frontend/package.json
+- [[prettier_1]] - concept - Crawler/Frontend/package.json
+- [[typescript]] - code - Crawler/Frontend/package.json
+- [[typescript_1]] - concept - Crawler/Frontend/package.json
+- [[typescript-eslint]] - code - Crawler/Frontend/package.json
+- [[typescript-eslint_1]] - concept - Crawler/Frontend/package.json
+- [[vite]] - code - Crawler/Frontend/package.json
+- [[vite_1]] - concept - Crawler/Frontend/package.json
+- [[vitest]] - code - Crawler/Frontend/package.json
+- [[vitest_1]] - concept - Crawler/Frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -41,16 +38,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 36 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_3]]
-- 27 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed]]
-- 11 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_2]]
-- 9 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_4]]
-- 8 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_2]]
+- 1 edge to [[_COMMUNITY_Aturan React Hooks]]
+- 1 edge to [[_COMMUNITY_Dependency Pengembangan Frontend]]
+- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform]]
+- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_1]]
+- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_2]]
 
 ## Top bridge nodes
-- [[domain.ts]] - degree 42, connects to 5 communities
-- [[TransactionMigration.tsx]] - degree 25, connects to 4 communities
-- [[Config]] - degree 6, connects to 4 communities
-- [[ConfigReview.tsx]] - degree 12, connects to 3 communities
-- [[PlatformPage()]] - degree 11, connects to 3 communities
+- [[devDependencies]] - degree 16, connects to 6 communities

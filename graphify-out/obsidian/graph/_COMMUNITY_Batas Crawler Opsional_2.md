@@ -1,25 +1,23 @@
 ---
 type: community
-cohesion: 0.27
 members: 10
 ---
 
 # Batas Crawler Opsional
 
-**Cohesion:** 0.27 - loosely connected
 **Members:** 10 nodes
 
 ## Members
-- [[.__init__()_11]] - code - Crawler/Backend/instagram_browser.py
-- [[.call()_1]] - code - Crawler/Backend/instagram_browser.py
-- [[.close()_1]] - code - Crawler/Backend/instagram_browser.py
-- [[Historical interruptedChrome trial before1.5integration]] - concept - graphify-out/obsidian/InstagramCrawler instagrapi.md
-- [[InstagramBrowserWorker]] - code - Crawler/Backend/instagram_browser.py
-- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - document - graphify-out/obsidian/InstagramCrawler instagrapi.md
-- [[Serial Chrome acquisition using a persistent profile and manual login.  The same]] - rationale - Crawler/Backend/instagram_browser.py
-- [[browser_configuration()]] - code - Crawler/Backend/instagram_browser.py
-- [[browser_script()]] - code - Crawler/Backend/instagram_browser.py
-- [[instagram_browser.py]] - code - Crawler/Backend/instagram_browser.py
+- [[._calendar_date()]] - code - Crawler/Backend/social_export.py
+- [[._select()]] - code - Crawler/Backend/social_export.py
+- [[._write_compact()]] - code - Crawler/Backend/social_export.py
+- [[.comment_exclude()]] - code - Crawler/Backend/social_export.py
+- [[Project the full audit rows into one sheet, applying current filters.]] - rationale - Crawler/Backend/social_export.py
+- [[Requires config, include and exclude matchers; performs no acquisition.]] - rationale - Crawler/Backend/social_export.py
+- [[Return a local date for display; relative source dates stay estimates.]] - rationale - Crawler/Backend/social_export.py
+- [[Shared root selection and formula-safe Excel projection for social crawlers.]] - rationale - Crawler/Backend/social_export.py
+- [[SocialExportMixin_4]] - code - Crawler/Backend/social_export.py
+- [[social_export.py]] - code - Crawler/Backend/social_export.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,16 +27,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Batas Crawler Opsional]]
-- 2 edges to [[_COMMUNITY_Crawler Selenium]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Batas Crawler Opsional]]
+- 1 edge to [[_COMMUNITY_Arsip Data Harian]]
 - 1 edge to [[_COMMUNITY_Batas Crawler Opsional_3]]
-- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_1]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_7]]
+- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 
 ## Top bridge nodes
-- [[instagram_browser.py]] - degree 8, connects to 4 communities
-- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - degree 4, connects to 3 communities
-- [[.call()_1]] - degree 5, connects to 2 communities
-- [[browser_configuration()]] - degree 3, connects to 1 community
+- [[social_export.py]] - degree 8, connects to 6 communities
+- [[SocialExportMixin_4]] - degree 7, connects to 1 community
+- [[._write_compact()]] - degree 5, connects to 1 community

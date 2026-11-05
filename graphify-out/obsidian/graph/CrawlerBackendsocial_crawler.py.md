@@ -11,9 +11,7 @@ tags:
 # Crawler/Backend/social_crawler.py
 
 ## Connections
-- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[Cara kerja BeeSense]] - `references` [EXTRACTED]
-- [[CrawlerBackendsocial_export.py]] - `shares_data_with` [EXTRACTED]
 - [[Instagram — implemented Instaloader backend]] - `references` [EXTRACTED]
 - [[Reddit — implemented Reddrix backend]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]

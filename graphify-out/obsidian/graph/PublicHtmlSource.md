@@ -12,7 +12,7 @@ tags:
 # PublicHtmlSource
 
 ## Connections
-- [[.__init__()_25]] - `method` [EXTRACTED]
+- [[.__init__()_23]] - `method` [EXTRACTED]
 - [[.fetch()_1]] - `method` [EXTRACTED]
 - [[HtmlSource]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]

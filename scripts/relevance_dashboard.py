@@ -23,7 +23,7 @@ def main():
     parser.add_argument(
         "--baseline-run",
         type=Path,
-        default=ROOT / "outputs/nlp_20261102_twitter_topics20_gemini_01",
+        help="Override the matching before snapshot in config/dashboard.json",
     )
     args = parser.parse_args()
     if not 1024 <= args.port <= 65535:
@@ -31,15 +31,33 @@ def main():
     config = json.loads(args.config.read_text())
     filtered = Path(config["output_dir"])
     filtered = filtered if filtered.is_absolute() else ROOT / filtered
-    directory = args.baseline_run if args.baseline else filtered
+    baseline = args.baseline_run
+    if baseline is None:
+        comparison_path = ROOT / "config/dashboard.json"
+        comparison = (
+            json.loads(comparison_path.read_text()).get("snapshot_comparison", {})
+            if comparison_path.exists()
+            else {}
+        )
+        if (
+            comparison.get("after")
+            and comparison.get("before")
+            and (ROOT / comparison["after"]).resolve() == filtered.resolve()
+        ):
+            baseline = Path(comparison["before"])
+    if baseline is not None and not baseline.is_absolute():
+        baseline = ROOT / baseline
+    if args.baseline and baseline is None:
+        parser.error("No matching baseline configured; pass --baseline-run explicitly")
+    directory = baseline if args.baseline else filtered
     SocialNLPClusterer.load_run(directory)
     env = dict(os.environ)
     env["BEESENSE_NLP_RUN_DIR"] = str(directory.resolve())
-    if args.baseline:
+    if args.baseline or baseline is None:
         env.pop("BEESENSE_BASELINE_RUN_DIR", None)
     else:
-        SocialNLPClusterer.load_run(args.baseline_run)
-        env["BEESENSE_BASELINE_RUN_DIR"] = str(args.baseline_run.resolve())
+        SocialNLPClusterer.load_run(baseline)
+        env["BEESENSE_BASELINE_RUN_DIR"] = str(baseline.resolve())
     command = [
         sys.executable,
         "-m",

@@ -12,7 +12,6 @@ tags:
 
 ## Connections
 - [[AI synthesis interpretation]] - `rationale_for` [EXTRACTED]
-- [[Dashboard BeeSense]] - `references` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 - [[Top keywords and representative sentences]] - `references` [EXTRACTED]
 - [[beesense-topic-id2]] - `references` [EXTRACTED]

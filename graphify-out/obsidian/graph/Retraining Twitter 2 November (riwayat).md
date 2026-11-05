@@ -11,8 +11,4 @@ tags:
 
 # Retraining Twitter 2 November (riwayat)
 
-## Connections
-- [[Konfigurasi fitted historis dalam summary.json]] - `references` [EXTRACTED]
-- [[Panduan satu konfigurasi NLP]] - `references` [EXTRACTED]
-
 #graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

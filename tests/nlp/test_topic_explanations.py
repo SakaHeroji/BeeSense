@@ -89,6 +89,43 @@ def profile(values):
 
 
 class ExplanationTests(unittest.TestCase):
+    def test_tiktok_native_roots_and_explanations_include_comments_and_replies(self):
+        ident = "7615256610599898389"
+        first = Model.parent_post_key(
+            {
+                "platform": "tiktok",
+                "url": f"https://www.tiktok.com/@campus/video/{ident}?comment_id=101",
+            }
+        )
+        self.assertEqual(first, ("tiktok:" + ident, "native_url"))
+        self.assertEqual(
+            Model.parent_post_key(
+                {
+                    "platform": "tiktok",
+                    "url": f"https://www.tiktok.com/@renamed/photo/{ident}?comment_id=102",
+                }
+            ),
+            first,
+        )
+        self.assertEqual(
+            Model.parent_post_key(
+                {
+                    "platform": "tiktok",
+                    "url": f"https://www.tiktok.com.evil/@campus/video/{ident}",
+                }
+            )[1],
+            "context_fallback",
+        )
+        model = model_from_counts([{"tiktok": 30}] * 6, [{"tiktok": 10}] * 6)
+        model.occurrences["url"] = [
+            f"https://www.tiktok.com/@campus/video/{int(ident) + index % 3}?comment_id={index + 1}"
+            for index in range(len(model.occurrences))
+        ]
+        model.occurrences.loc[::2, "kind"] = "reply"
+        topic = model.explain_topics()["topics"][0]
+        self.assertEqual(topic["platform_comments"]["tiktok"], 60)
+        self.assertEqual(topic["monthly"][0]["platforms"]["tiktok"]["all_comments"], 30)
+
     def test_instagram_parent_identity_and_explanation_counts(self):
         first = Model.parent_post_key(
             {

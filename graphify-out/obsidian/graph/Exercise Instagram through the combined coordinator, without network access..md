@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "rationale"
-community: "Pengujian Client Instagram"
+community: "Worker Instaloader"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengujian_Client_Instagram
+  - community/Worker_Instaloader
 ---
 
 # Exercise Instagram through the combined coordinator, without network access.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_social_crawler_instagram.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Client_Instagram
+#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader

@@ -12,9 +12,9 @@ tags:
 # KeywordMatcher
 
 ## Connections
-- [[.__init__()_20]] - `method` [EXTRACTED]
+- [[.__init__()_18]] - `method` [EXTRACTED]
 - [[.find()_1]] - `method` [EXTRACTED]
-- [[.setUp()_14]] - `calls` [EXTRACTED]
+- [[.setUp()_11]] - `calls` [EXTRACTED]
 - [[.test_04_unicode_offsets_boundary_and_casefold()]] - `calls` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]

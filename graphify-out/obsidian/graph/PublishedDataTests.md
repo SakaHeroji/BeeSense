@@ -12,13 +12,14 @@ tags:
 # PublishedDataTests
 
 ## Connections
-- [[.setUp()_7]] - `method` [EXTRACTED]
+- [[.setUp()_19]] - `method` [EXTRACTED]
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - `method` [EXTRACTED]
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - `method` [EXTRACTED]
 - [[.test_input_integrity_remains_enforced()]] - `method` [EXTRACTED]
 - [[.test_merged_input_preserves_and_checks_both_baseline_workbooks()]] - `method` [EXTRACTED]
 - [[.test_missing_baseline_compact_is_rejected_for_merged_input()]] - `method` [EXTRACTED]
 - [[.test_missing_preserved_audit_is_rejected()]] - `method` [EXTRACTED]
+- [[.test_old_relevance_dataset_remains_verified_and_tracked_after_switching_runs()]] - `method` [EXTRACTED]
 - [[.test_preserved_audit_and_excel_owner_files_are_supported()]] - `method` [EXTRACTED]
 - [[.test_preserved_baseline_hash_is_checked_after_switching_to_merged_input()]] - `method` [EXTRACTED]
 - [[.test_unexpected_file_in_archive_is_rejected()]] - `method` [EXTRACTED]

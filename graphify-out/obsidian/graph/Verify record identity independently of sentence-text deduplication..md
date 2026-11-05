@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Pengujian Narasi Gemini"
+community: "Verifikasi Dataset Publik"
 location: "L15"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Verifikasi_Dataset_Publik
 ---
 
 # Verify record identity independently of sentence-text deduplication.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_native_dataset()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik

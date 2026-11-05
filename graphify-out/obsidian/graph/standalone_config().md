@@ -12,10 +12,10 @@ tags:
 # standalone_config()
 
 ## Connections
-- [[.__init__()_15]] - `calls` [EXTRACTED]
+- [[.__init__()_13]] - `calls` [EXTRACTED]
+- [[.__init__()_30]] - `calls` [EXTRACTED]
 - [[.__init__()_32]] - `calls` [EXTRACTED]
-- [[.__init__()_34]] - `calls` [EXTRACTED]
-- [[.__init__()_39]] - `calls` [EXTRACTED]
+- [[.__init__()_37]] - `calls` [EXTRACTED]
 - [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - `calls` [EXTRACTED]
 - [[.test_browser_is_real_backend_but_injected_workers_remain_synthetic()]] - `calls` [EXTRACTED]
 - [[.test_custom_storage_reaches_coordinator_and_standalone_projections()]] - `calls` [EXTRACTED]

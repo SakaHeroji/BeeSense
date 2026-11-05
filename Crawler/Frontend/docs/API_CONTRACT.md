@@ -25,9 +25,27 @@ Endpoint pembuatan URL manual/survei dan migrasi Excel umum dikeluarkan dari kon
 
 ## Akun dan sesi opsional
 
-GET `/crawler/platforms/:platform/auth` mengembalikan `AuthStatus`: platform, username, hasSession, file `config/auth.json`; **tidak mengembalikan session ID**. POST pada route sama menerima `{username, sessionid}` dan mengembalikan metadata yang sama. Izin operator wajib; platform dibatasi Instagram, X, TikTok, Threads dan Facebook. Nilai kosong berarti mempertahankan nilai lama, bukan menghapusnya. Simpan setidaknya satu nilai baru yang valid.
+GET `/crawler/platforms/:platform/auth` mengembalikan `AuthStatus`: platform, username, hasSession, file `config/auth.json`; **tidak mengembalikan session ID**. POST pada route sama menerima `{username, sessionid}` dan mengembalikan metadata yang sama. Izin operator wajib; form aktif untuk Instagram, X, Threads dan Facebook. TikTok memakai sesi Chrome melalui plugin. Nilai kosong berarti mempertahankan nilai lama, bukan menghapusnya. Simpan setidaknya satu nilai baru yang valid.
 
 Server tahap berikutnya harus melakukan update atomik pada entri `{sosmed, username, sessionid}` yang sesuai, memetakan x ke twitter, menjaga semua entri/field lain termasuk kredensial provider lain, dan tidak mengambil path arbitrer dari klien. Terapkan permission file privat, serialization terhadap update bersamaan, pembatasan ukuran dan error tanpa token. Jangan membuka isi auth.json melalui static assets atau bundel frontend. Form kini hanya simulasi dan file nyata tidak berubah.
+
+## TikTok Connector dalam server dashboard
+
+Ini kontrak frontend untuk gateway/worker berikutnya, bukan endpoint bridge CLI yang sudah tersedia. `tiktokConnectorAvailable` default tidak tersedia; server mengaktifkannya setelah seluruh transport plugin siap. Dashboard, API proyek dan HTTP penghubung plugin dilayani origin yang sama. Gateway mengadaptasi protokol Connector yang ada, dengan job/server-side ownership dan single active owner per tab; tidak meminta operator menjalankan bridge kedua atau memasukkan port secara manual.
+
+| Endpoint                                            | Perilaku                                                                                                      |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| GET /acquisition-jobs/:id/tiktok-connector          | Operator proyek menerima TikTokConnectorSession privat, `Cache-Control: no-store`.                            |
+| POST /acquisition-jobs/:id/tiktok-connector/pairing | Rotasi kode hanya saat menunggu, terputus atau kedaluwarsa. Tolak transaksi final/terhubung/menunggu CAPTCHA. |
+| POST /acquisition-jobs/:id/tiktok-connector/resume  | Minta worker memeriksa halaman setelah validasi manual. Tetap VALIDATION_REQUIRED bila belum terverifikasi.   |
+
+DTO privat memuat jobId, state, bridgeUrl, minimumVersion; pairingCode/pairingExpiresAt hanya bila diperlukan; version/build/lastSeenAt setelah handshake. State: WAITING, CONNECTED, VALIDATION_REQUIRED, DISCONNECTED, EXPIRED, FINISHED. `bridgeUrl` harus origin dashboard dengan path `/`, tanpa query, fragment atau userinfo. Kode acak berumur pendek (32–128 karakter base64url) terikat sesi/proyek/job, dirotasi server, tidak dimasukkan URL/log/error atau Job publik. Pastikan pemeriksaan CSRF/origin, izin operator dan batas percobaan pairing pada server.
+
+`thread` opsional berisi postId, comments, replies, sourceTotal?, lastActivityAt, activity (comments/replies/scrolling/waiting) dan pagination (pending/exhausted/unverified). Hitungan menggunakan native ID unik yang diterima server. Ini data sementara operasi aktif, terpisah dari PlatformProgress.counts; sourceTotal bukan bukti lengkap. Akhir pagination terverifikasi diperlukan sebelum menandai seluruh komentar/balasan tersedia telah ditelusuri; batas waktu/stop menghasilkan data parsial.
+
+Job publik hanya membawa connector.state/version/lastSeenAt. Job TikTok dibuat WAITING_CONNECTOR dengan startedAt/deadlineAt kosong. Handshake versi/build/policy yang sesuai memulai waktu tepat sekali. Reconnect tidak mereset startedAt, deadline atau dedup. Sesi kedaluwarsa/putus tidak menambah hitungan; deadline yang sudah dimulai tetap berjalan. Finalisasi menutup pairing sambil mempertahankan data parsial. Endpoint privat wajib memeriksa job benar-benar milik proyek, sumber TikTok, izin operator dan transisi state secara atomik.
+
+Demo menyimpan pairing dalam Map memori; metadata job saja tersimpan lokal. Tombol pengujian demo tidak mengakses Chrome/bridge nyata. Tidak ada implementasi gateway/backend baru atau perubahan proses crawling aktif pada perubahan frontend ini.
 
 ## Migrasi per transaksi dan sosmed
 

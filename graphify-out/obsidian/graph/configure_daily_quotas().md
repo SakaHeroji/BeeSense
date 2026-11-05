@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/scweet_limits.py"
 type: "code"
-community: "Pengujian Client Instagram"
+community: "Kuota Harian Scweet"
 location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Client_Instagram
+  - community/Kuota_Harian_Scweet
 ---
 
 # configure_daily_quotas()
@@ -17,4 +17,4 @@ tags:
 - [[scweet_limits.py]] - `contains` [EXTRACTED]
 - [[test_unlimited_crawling.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

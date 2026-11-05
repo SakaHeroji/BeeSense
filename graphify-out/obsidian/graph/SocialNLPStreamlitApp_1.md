@@ -2,7 +2,7 @@
 source_file: "Dashboard/app.py"
 type: "code"
 community: "thread_url"
-location: "L144"
+location: "L146"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_8]] - `method` [EXTRACTED]
+- [[.__init__()_45]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -44,7 +44,7 @@ tags:
 - [[.monthly_summary()]] - `method` [EXTRACTED]
 - [[.platform_summary()]] - `method` [EXTRACTED]
 - [[.ranking_figure()]] - `method` [EXTRACTED]
-- [[.render()]] - `method` [EXTRACTED]
+- [[.render()_1]] - `method` [EXTRACTED]
 - [[.selected_cluster()]] - `method` [EXTRACTED]
 - [[.sentence_figure()]] - `method` [EXTRACTED]
 - [[.source_figure()]] - `method` [EXTRACTED]
@@ -55,12 +55,12 @@ tags:
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
-- [[Dashboardapp.py]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
 - [[Read-only exploration of completed NLP runs; no training on page reruns.]] - `rationale_for` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_15]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/thread_url

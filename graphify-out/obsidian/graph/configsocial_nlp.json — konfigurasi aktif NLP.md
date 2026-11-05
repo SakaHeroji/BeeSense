@@ -20,7 +20,6 @@ tags:
 - [[Narasi Gemini tersimpan]] - `references` [EXTRACTED]
 - [[Obsidian Konfigurasi Universal NLP]] - `references` [EXTRACTED]
 - [[Opsi graf kemiripan bukti dan tren]] - `references` [EXTRACTED]
-- [[Panduan satu konfigurasi NLP]] - `references` [EXTRACTED]
 - [[Proyeksi UMAP]] - `references` [EXTRACTED]
 - [[SBERT multilingual dengan revision tetap]] - `references` [EXTRACTED]
 - [[Seleksi commentreply dan segmentasi kalimat]] - `references` [EXTRACTED]

@@ -12,7 +12,6 @@ tags:
 # JobStatistics.tsx
 
 ## Connections
-- [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
 - [[JobStatistics()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/storage_config.py"
 type: "code"
-community: "Konfigurasi Crawler Universal"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # storage_config.py
@@ -20,4 +20,4 @@ tags:
 - [[test_storage_config.py]] - `imports_from` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

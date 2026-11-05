@@ -12,7 +12,6 @@ tags:
 # Artifact relevansi terikat korpus sumber
 
 ## Connections
-- [[Mask relevansi membutuhkan opt-in pada override eksplisit]] - `references` [EXTRACTED]
 - [[configsocial_nlp.json — konfigurasi aktif NLP]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

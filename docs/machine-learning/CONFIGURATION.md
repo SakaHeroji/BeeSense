@@ -3,8 +3,9 @@
 Semua pengaturan `SocialNLPClusterer` berada di
 [`config/social_nlp.json`](../../config/social_nlp.json). Lima salinan preset
 Instagram/Twitter/relevansi bertanggal sudah dihapus. Launcher dashboard relevansi
-juga membaca file utama ini. Tidak ada parameter fitting atau snapshot aktif yang
-diubah oleh perapian konfigurasi.
+juga membaca file utama ini. Riwayat konfigurasi tetap berada dalam setiap summary. Snapshot aktif 5 November
+memakai gabungan lima platform dan pasangan model baru; lihat
+[hasil retraining TikTok](TIKTOK_RETRAIN_20261105.md).
 
 ## Bagian yang dikustom
 
@@ -25,6 +26,9 @@ penyaringan. Tahap narasi Gemini tetap memerlukan 20 topik dan gate coherence;
 ambang tidak diturunkan otomatis. API key tetap di auth lokal yang diabaikan Git.
 `config/context_relevance.json` mengatur proses penyaringan yang terpisah;
 `config/dashboard.json` memilih pasangan snapshot sebelum/sesudah untuk dibaca UI.
+Launcher `scripts.relevance_dashboard` mengikuti pasangan tersebut. Snapshot custom
+yang tidak cocok tidak mewarisi baseline lama; gunakan `--baseline-run` untuk
+pembanding eksplisit.
 
 ## Memeriksa dan menjalankan
 

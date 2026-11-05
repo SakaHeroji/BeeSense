@@ -14,10 +14,6 @@ tags:
 ## Connections
 - [[DatasetView()]] - `calls` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
-- [[JobDetail()]] - `calls` [EXTRACTED]
-- [[JobDetail.tsx]] - `imports` [EXTRACTED]
-- [[PlatformPage()]] - `calls` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[hooks.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

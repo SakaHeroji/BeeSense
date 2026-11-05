@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[.clock()_1]] - `method` [EXTRACTED]
-- [[.setUp()_16]] - `calls` [EXTRACTED]
-- [[.setUp()_17]] - `calls` [INFERRED]
+- [[.setUp()_13]] - `calls` [EXTRACTED]
+- [[.setUp()_14]] - `calls` [INFERRED]
 - [[.sleep()_1]] - `method` [EXTRACTED]
 - [[.test_instagram_429_honors_server_wait_and_retries_same_post()]] - `calls` [EXTRACTED]
 - [[.test_instagram_batch_pause_is_bounded_by_global_deadline()]] - `calls` [EXTRACTED]

@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/features/JobDetail.tsx"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L32"
+location: "L33"
 tags:
   - graphify/code
   - graphify/EXTRACTED

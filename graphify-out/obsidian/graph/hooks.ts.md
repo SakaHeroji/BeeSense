@@ -13,8 +13,6 @@ tags:
 
 ## Connections
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
-- [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[Shell.tsx]] - `imports_from` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]
 - [[useClock()]] - `contains` [EXTRACTED]

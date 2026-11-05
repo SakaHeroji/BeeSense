@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Kontrak Record Reddit"
+community: "Parsing Identitas Reddit"
 location: "L498"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # thread_id()
@@ -22,4 +22,4 @@ tags:
 - [[verify()]] - `calls` [EXTRACTED]
 - [[worker()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

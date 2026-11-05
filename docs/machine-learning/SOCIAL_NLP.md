@@ -2,11 +2,15 @@
 
 Seluruh pengaturan memakai **[satu config NLP](CONFIGURATION.md)**; preset bertanggal sudah dihapus. Snapshot dan konfigurasi efektif dalam `summary.json` tetap dipertahankan.
 
-Snapshot aktif setelah persetujuan publikasi 2 November 2026: `outputs/nlp_20261102_relevance_topics20_gemini_02/`, **20 topik**, mean **c_v 0,4733391691**, **10.496 kemunculan/10.380 kalimat unik** setelah penyaringan, dan CSV **20 deskripsi Gemini**. Data mentah 34.764 record unik serta snapshot lama dipertahankan. Tujuh topik masih <0,4 individual; gate berlaku pada rata-rata. [Algoritma, audit, reproduksi dan rollback](CONTEXT_RELEVANCE.md). Bagian berikut merupakan riwayat dan penjelasan metode.
+Snapshot aktif 5 November 2026: `outputs/nlp_20261105_relevance_topics20_gemini_01/`, **20 topik**, mean **c_v 0,4666033620**, **11.185 kemunculan/10.795 kalimat unik** dan 20 narasi Gemini. Sumber gabungan lima platform memuat **36.233 record unik**. Baseline sebelum penyaringan yang baru di-fit juga memiliki 20 topik, mean **c_v 0,4346102845**. Enam topik tersaring masih <0,4 individual; gate berlaku pada rata-rata. [Hasil dan audit TikTok](TIKTOK_RETRAIN_20261105.md). Bagian bertanggal berikut adalah riwayat.
 
 [SocialNLPClusterer](../../MachineLearning/social_nlp.py) memakai **SBERT multilingual → normalisasi L2 →
 UMAP → DBSCAN Euclidean pada ruang UMAP → penggabungan Ward berbobot kalimat → c-TF-IDF → artifact terverifikasi**.
 [SocialNLPStreamlitApp](../../Dashboard/app.py) membaca hasil tersimpan tanpa training pada rerun.
+
+## Input TikTok
+
+SocialNLP 2.6.1 menerima komentar dan balasan TikTok. Native ID dari URL HTTPS `tiktok.com/@akun/video/<id>` atau `/photo/<id>` menyatukan root walau username berubah. Query komentar tidak membentuk root baru. Dashboard mengenali TikTok pada filter, tabel, noise, jaringan dan tren.
 
 ## Input Twitter/X
 

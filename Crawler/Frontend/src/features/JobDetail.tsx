@@ -28,8 +28,9 @@ import { useApp } from '../shared/context';
 import { ConfigReview } from '../shared/ConfigReview';
 import JobStatistics from './JobStatistics';
 import DatasetView from './DatasetView';
+import TikTokConnector, { TikTokWorkflow } from './TikTokConnector';
 
-const liveStates = ['QUEUED', 'RUNNING', 'STOP_REQUESTED', 'FINALIZING'];
+const liveStates = ['QUEUED', 'WAITING_CONNECTOR', 'RUNNING', 'STOP_REQUESTED', 'FINALIZING'];
 export default function JobDetail() {
   const { jobId = '', platform: routePlatform } = useParams();
   const client = useQueryClient();
@@ -168,11 +169,13 @@ export default function JobDetail() {
         <span>
           <Hourglass size={16} />
           <b>Deadline</b>{' '}
-          {job.deadlineAt
-            ? dateTime(job.deadlineAt)
-            : job.config?.duration === null
-              ? 'Tanpa batas waktu'
-              : 'Menunggu worker'}
+          {currentPlatform === 'tiktok' && !job.startedAt
+            ? 'Dimulai setelah plugin terhubung'
+            : job.deadlineAt
+              ? dateTime(job.deadlineAt)
+              : job.config?.duration === null
+                ? 'Tanpa batas waktu'
+                : 'Menunggu worker'}
         </span>
         {live && job.deadlineAt && (
           <span className="time-remaining">
@@ -181,6 +184,12 @@ export default function JobDetail() {
         )}
         <span className="last-update">Pembaruan {dateTime(job.updatedAt)}</span>
       </div>
+      {currentPlatform === 'tiktok' && tab === 'progress' && (
+        <>
+          <TikTokWorkflow step={job.startedAt ? 3 : 2} />
+          <TikTokConnector key={job.id} job={job} />
+        </>
+      )}
       <div aria-live="polite" aria-atomic="true" className="job-status-notices">
         {stale && (
           <Notice tone="warning">
@@ -215,7 +224,7 @@ export default function JobDetail() {
           ))}
         </div>
       )}
-      {demoMode && live && session.role === 'operator' && (
+      {demoMode && live && session.role === 'operator' && currentPlatform !== 'tiktok' && (
         <details className="simulation-tools">
           <summary>Uji skenario simulasi</summary>
           <p>
@@ -417,6 +426,7 @@ function PlatformCard({
   const { cap, session } = useApp();
   const labels = {
     PENDING: 'Menunggu',
+    WAITING_CONNECTOR: 'Menunggu plugin Chrome',
     FETCHING: 'Mengambil data',
     WAITING_CAPTCHA: 'Perlu verifikasi',
     RATE_LIMITED: 'Menunggu HTTP 429',
@@ -491,7 +501,7 @@ function PlatformCard({
           </div>
         </div>
       )}
-      {p.status === 'WAITING_CAPTCHA' && (
+      {p.status === 'WAITING_CAPTCHA' && p.platform !== 'tiktok' && (
         <div className="platform-alert">
           <ShieldAlert size={19} />
           <div>

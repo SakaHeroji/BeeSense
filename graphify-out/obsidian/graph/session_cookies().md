@@ -12,7 +12,7 @@ tags:
 # session_cookies()
 
 ## Connections
-- [[.__init__()_13]] - `calls` [EXTRACTED]
+- [[.__init__()_11]] - `calls` [EXTRACTED]
 - [[Load JSON cookies only; never unpickle a session or replay a password.]] - `rationale_for` [EXTRACTED]
 - [[_json()]] - `calls` [EXTRACTED]
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]

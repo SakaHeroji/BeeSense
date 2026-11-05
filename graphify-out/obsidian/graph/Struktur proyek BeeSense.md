@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[Panduan output per platform dan tanggal WIB]] - `references` [EXTRACTED]
-- [[Panduan satu konfigurasi NLP]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

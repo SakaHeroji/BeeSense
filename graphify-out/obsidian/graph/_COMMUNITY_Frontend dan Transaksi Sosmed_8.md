@@ -1,32 +1,50 @@
 ---
 type: community
-cohesion: 0.12
-members: 17
+members: 37
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 17 nodes
+**Members:** 37 nodes
 
 ## Members
-- [[.authStatus()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.capabilities()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.dataset()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.demoScenario()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.handoff()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.job()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.jobs()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.prepareTransactionMigration()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.saveAuth()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.session()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.start()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.startTransactionMigration()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.stop()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.transactionMigration()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.validate()_2]] - code - Crawler/Frontend/src/shared/types.ts
-- [[.verification()]] - code - Crawler/Frontend/src/shared/types.ts
-- [[Api]] - code - Crawler/Frontend/src/shared/types.ts
+- [[AppContext]] - code - Crawler/Frontend/src/shared/context.ts
+- [[AuthInput]] - code - Crawler/Frontend/src/shared/types.ts
+- [[AuthSettings()]] - code - Crawler/Frontend/src/shared/AuthSettings.tsx
+- [[AuthSettings.tsx]] - code - Crawler/Frontend/src/shared/AuthSettings.tsx
+- [[AuthStatus]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Baseline]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Capabilities]] - code - Crawler/Frontend/src/shared/types.ts
+- [[DatasetDetail]] - code - Crawler/Frontend/src/shared/types.ts
+- [[DatasetFile]] - code - Crawler/Frontend/src/shared/types.ts
+- [[FieldError]] - code - Crawler/Frontend/src/shared/types.ts
+- [[FieldErrorsContext]] - code - Crawler/Frontend/src/shared/context.ts
+- [[JobEvent]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Limits]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Mode]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Platform]] - code - Crawler/Frontend/src/shared/types.ts
+- [[PlatformConfig]] - code - Crawler/Frontend/src/shared/types.ts
+- [[PlatformStatus]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Session]] - code - Crawler/Frontend/src/shared/types.ts
+- [[StorageDestination]] - code - Crawler/Frontend/src/shared/types.ts
+- [[TransactionMigration]] - code - Crawler/Frontend/src/shared/types.ts
+- [[TransactionMigrationPlan]] - code - Crawler/Frontend/src/shared/types.ts
+- [[accounts]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[auth.ts]] - code - Crawler/Frontend/src/shared/auth.ts
+- [[completed]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[context.ts]] - code - Crawler/Frontend/src/shared/context.ts
+- [[crawlDate()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[destinationKey()]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[migrations]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[mount()]] - code - Crawler/Frontend/src/test/platform-workspace.test.tsx
+- [[operator()]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[plans]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[platform-workspace.test.tsx]] - code - Crawler/Frontend/src/test/platform-workspace.test.tsx
+- [[sessionPlatforms]] - code - Crawler/Frontend/src/shared/auth.ts
+- [[transaction-demo.ts]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[transactionDemoApi]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[types.ts]] - code - Crawler/Frontend/src/shared/types.ts
+- [[validateAuth()]] - code - Crawler/Frontend/src/shared/auth.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,11 +54,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_4]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_5]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_2]]
+- 25 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
+- 22 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
+- 16 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
+- 9 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_17]]
+- 2 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_18]]
 
 ## Top bridge nodes
-- [[Api]] - degree 20, connects to 3 communities
-- [[.job()]] - degree 2, connects to 1 community
+- [[types.ts]] - degree 51, connects to 5 communities
+- [[AuthSettings.tsx]] - degree 18, connects to 3 communities
+- [[platform-workspace.test.tsx]] - degree 13, connects to 3 communities
+- [[transaction-demo.ts]] - degree 17, connects to 2 communities
+- [[Platform]] - degree 8, connects to 2 communities

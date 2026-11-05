@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.__aenter__()]] - `method` [EXTRACTED]
 - [[.__aexit__()]] - `method` [EXTRACTED]
-- [[.__init__()_9]] - `method` [EXTRACTED]
+- [[.__init__()_8]] - `method` [EXTRACTED]
 - [[.get_items()]] - `method` [EXTRACTED]
 - [[.test_browser_factory_overrides_initial_and_refreshed_sessions()]] - `indirect_call` [INFERRED]
 - [[.test_search_preserves_subreddit_scope_without_fetching_comments()]] - `indirect_call` [INFERRED]

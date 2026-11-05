@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.__call__()_2]] - `method` [EXTRACTED]
-- [[.__init__()_37]] - `method` [EXTRACTED]
+- [[.__init__()_35]] - `method` [EXTRACTED]
 - [[._wants_replies()]] - `method` [EXTRACTED]
 - [[.close()_4]] - `method` [EXTRACTED]
 - [[.requires_network()]] - `method` [EXTRACTED]

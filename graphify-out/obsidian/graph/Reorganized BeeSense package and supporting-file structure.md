@@ -12,7 +12,6 @@ tags:
 # Reorganized BeeSense package and supporting-file structure
 
 ## Connections
-- [[BeeSense startup, verification and coherence training runbook]] - `references` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
 - [[Folder moves preserve data paths, artifact bytes and historical crawl results]] - `references` [EXTRACTED]
 - [[Package module CLIs retain repository-root path semantics]] - `references` [EXTRACTED]

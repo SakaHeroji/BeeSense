@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[Obsidian TikTok Uji 500 Post 20261103]] - `references` [EXTRACTED]
-- [[One social_crawler.json business configuration shared by all runners]] - `references` [EXTRACTED]
 - [[Satu social_crawler.json, lima platform dan override bersama]] - `references` [EXTRACTED]
-- [[TikTokCrawler Mandiri2.5.0  NativeTikTokClient  BeeSenseNative1.2.0]] - `references` [EXTRACTED]
+- [[Single social_crawler.json business configuration across all runners and Chrome transports]] - `references` [EXTRACTED]
+- [[TikTokCrawler Mandiri2.6.1native1.3.0 and connectorlivebridge1.2.1]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

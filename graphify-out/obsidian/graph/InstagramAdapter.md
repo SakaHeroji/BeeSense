@@ -12,7 +12,7 @@ tags:
 # InstagramAdapter
 
 ## Connections
-- [[.__init__()_33]] - `method` [EXTRACTED]
+- [[.__init__()_31]] - `method` [EXTRACTED]
 - [[.accept()_4]] - `method` [EXTRACTED]
 - [[.run()_2]] - `calls` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]

@@ -27,13 +27,13 @@ else:
     import topic_narratives
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "2.6.0"
+VERSION = "2.6.1"
 RELEVANCE_EXTENSION = "beesense-context-relevance:1"
 TOPIC_SENTENCES_EXTENSION = "beesense-topic-sentences-excel:1"
 TOPIC_SENTENCES_FILE = "topic_sentences.xlsx"
 DEFAULT_TARGET_TOPICS = 20
 DEFAULT_MIN_COHERENCE_CV = 0.4
-SUPPORTED_PLATFORMS = ("youtube", "reddit", "instagram", "twitter")
+SUPPORTED_PLATFORMS = ("youtube", "reddit", "instagram", "twitter", "tiktok")
 ENCODER_CACHE_VERSION = "2.0.0"  # Coherence changes do not change SBERT encoding.
 SCHEMA_VERSION = "beesense-sentence-clusters:2"
 LEGACY_SCHEMA_VERSION = "beesense-sentence-clusters:1"
@@ -1442,6 +1442,17 @@ class SocialNLPClusterer:
             ):
                 return root, "source_audit"
             raise ValueError("Twitter explanation requires audited conversation root")
+        if (
+            platform == "tiktok"
+            and parsed.scheme == "https"
+            and host in {"tiktok.com", "www.tiktok.com"}
+        ):
+            found = re.fullmatch(
+                r"/@[A-Za-z0-9_.]{1,40}/(?:video|photo)/([1-9][0-9]{0,24})/?",
+                parsed.path,
+            )
+            if found:
+                return "tiktok:" + found[1], "native_url"
         if platform == "youtube" and (
             host == "youtube.com" or host.endswith(".youtube.com")
         ):

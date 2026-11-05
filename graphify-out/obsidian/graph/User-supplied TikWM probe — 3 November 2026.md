@@ -12,7 +12,7 @@ tags:
 # User-supplied TikWM probe — 3 November 2026
 
 ## Connections
-- [[Active TikTokCrawler2.5.0  NativeTikTokClient  BeeSenseNative1.2.0  Playwright1.64.1]] - `references` [EXTRACTED]
+- [[Active TikTokCrawler2.6.1  NativeTikTokClient  BeeSenseNative1.3.0 with Playwright1.62.0]] - `references` [EXTRACTED]
 - [[First search HTTP403; exit 2; zero videoscomments; no CSV or archive changes]] - `references` [EXTRACTED]
 - [[HTTP403 origin unspecified provider application, network protection or local network path]] - `references` [EXTRACTED]
 - [[Native backend retained; probe changed no application, dependencies, config, auth or runtime]] - `references` [EXTRACTED]

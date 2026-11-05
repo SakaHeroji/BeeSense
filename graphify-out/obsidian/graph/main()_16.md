@@ -1,21 +1,29 @@
 ---
-source_file: "Crawler/Backend/twitter_crawler.py"
+source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L1294"
+community: "Encoding dan Penyimpanan Model"
+location: "L2638"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # main()
 
 ## Connections
-- [[.close()_6]] - `calls` [EXTRACTED]
-- [[.plan()_4]] - `calls` [EXTRACTED]
-- [[.run()_3]] - `calls` [EXTRACTED]
-- [[TwitterCrawler]] - `calls` [EXTRACTED]
-- [[twitter_crawler.py]] - `contains` [EXTRACTED]
+- [[._event()_1]] - `calls` [EXTRACTED]
+- [[.evaluate_run_coherence()]] - `calls` [EXTRACTED]
+- [[.explain_artifacts()]] - `calls` [EXTRACTED]
+- [[.fit_excel()]] - `calls` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[.prepare_excel()]] - `calls` [EXTRACTED]
+- [[.save()]] - `calls` [EXTRACTED]
+- [[.save_explanations()]] - `calls` [EXTRACTED]
+- [[.test_dry_run_shows_effective_paths_without_loading_data_or_fitting()]] - `calls` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[test_nlp_config.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

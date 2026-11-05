@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Merge compact crawl workbooks, rejecting repeated native content identities.]] - `rationale_for` [EXTRACTED]
 - [[identity()]] - `imports` [EXTRACTED]
-- [[main()_8]] - `contains` [EXTRACTED]
+- [[main()_4]] - `contains` [EXTRACTED]
 - [[merge()]] - `contains` [EXTRACTED]
 - [[merge_unique()]] - `contains` [EXTRACTED]
 - [[sha()]] - `contains` [EXTRACTED]

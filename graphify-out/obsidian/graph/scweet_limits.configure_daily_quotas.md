@@ -1,12 +1,12 @@
 ---
 source_file: "docs/crawler/TWITTER_CRAWLER.md"
 type: "concept"
-community: "Integrasi Default Instaloader"
+community: "Konfigurasi Crawler Bersama"
 location: "64"
 tags:
   - graphify/concept
   - graphify/EXTRACTED
-  - community/Integrasi_Default_Instaloader
+  - community/Konfigurasi_Crawler_Bersama
 ---
 
 # scweet_limits.configure_daily_quotas
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TwitterCrawler Scweet]] - `references` [EXTRACTED]
 
-#graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader
+#graphify/concept #graphify/EXTRACTED #community/Konfigurasi_Crawler_Bersama

@@ -10,12 +10,14 @@ import type {
   PreviewRow,
 } from './types';
 import { initialConfig, redactConfig, platforms, queryLines, validateConfig } from './domain';
+import { changeDemoConnection, demoConnection, isTikTokJob } from './connector-demo';
 
 // This adapter NEVER contacts social networks. Only public job metadata persists; credentials never enter browser storage.
 const storageKey = 'beesense:crawler:demo-jobs:v3';
 const plans = new Map<string, { config: Config; expiresAt: string }>();
 let jobCache: Job[] | undefined;
 const cap: Capabilities = {
+  tiktokConnectorAvailable: true,
   migrationsAvailable: true,
   authAvailable: true,
   platforms,
@@ -171,8 +173,16 @@ function update(job: Job): Job {
   return structuredClone(job);
 }
 function advance(job: Job): Job {
-  if (!['QUEUED', 'RUNNING', 'STOP_REQUESTED', 'FINALIZING'].includes(job.status)) return job;
-  const elapsed = Math.max(0, (Date.now() - Date.parse(job.createdAt)) / 1000);
+  if (
+    !['QUEUED', 'WAITING_CONNECTOR', 'RUNNING', 'STOP_REQUESTED', 'FINALIZING'].includes(job.status)
+  )
+    return job;
+  const plugin = isTikTokJob(job);
+  const elapsed = Math.max(
+    0,
+    (Date.now() - Date.parse(plugin ? job.startedAt || new Date().toISOString() : job.createdAt)) /
+      1000,
+  );
   if (
     job.status === 'STOP_REQUESTED' ||
     (job.status === 'FINALIZING' && job.reason === 'Dihentikan operator.')
@@ -187,11 +197,22 @@ function advance(job: Job): Job {
     return update(next);
   }
   const deadlineReached = job.deadlineAt ? Date.now() >= Date.parse(job.deadlineAt) : false;
+  if (plugin && !deadlineReached && demoConnection(job).state !== 'CONNECTED') {
+    const connection = demoConnection(job);
+    job.status = job.startedAt ? 'RUNNING' : 'WAITING_CONNECTOR';
+    job.platforms = job.platforms.map((p) => ({
+      ...p,
+      status: connection.state === 'VALIDATION_REQUIRED' ? 'WAITING_CAPTCHA' : 'WAITING_CONNECTOR',
+    }));
+    job.updatedAt = stamp();
+    job.snapshotVersion++;
+    return update(job);
+  }
   const scenario = job.scenario;
   const blocked = ['captcha', '429'].includes(scenario || '');
   const finish = (elapsed >= 40 && !blocked) || deadlineReached;
   job.status =
-    elapsed < 2
+    elapsed < 2 && !plugin
       ? 'QUEUED'
       : finish
         ? elapsed < 44 && !deadlineReached
@@ -254,10 +275,46 @@ function advance(job: Job): Job {
     job.reason = 'Simulasi kegagalan ekspor. Tidak ada berkas final yang diterbitkan.';
   if (job.status === 'PARTIAL')
     job.reason = 'Deadline simulasi tercapai. Target belum seluruhnya terpenuhi.';
+  if (plugin) demoConnection(job);
   return update(job);
 }
 export const demoApi: Api = {
   ...transactionDemoApi,
+  async tiktokConnector(id) {
+    requireOperator();
+    const job = get(id);
+    if (!isTikTokJob(job)) throw new Error('Transaksi ini bukan pengambilan TikTok.');
+    return demoConnection(job);
+  },
+  async renewTikTokConnector(id) {
+    requireOperator();
+    const job = get(id);
+    const current = demoConnection(job);
+    if (
+      !isTikTokJob(job) ||
+      !job.canStop ||
+      ['CONNECTED', 'VALIDATION_REQUIRED'].includes(current.state)
+    )
+      throw new Error('Pairing hanya dapat diperbarui saat menunggu atau terputus.');
+    const result = changeDemoConnection(job, 'WAITING');
+    update(job);
+    return result;
+  },
+  async resumeTikTokConnector(id) {
+    requireOperator();
+    const job = get(id);
+    if (!isTikTokJob(job) || demoConnection(job).state !== 'VALIDATION_REQUIRED')
+      throw new Error('Tidak ada validasi TikTok yang sedang menunggu.');
+    const result = changeDemoConnection(job, 'CONNECTED');
+    if (!job.startedAt) {
+      job.startedAt = stamp();
+      job.deadlineAt = job.config?.duration
+        ? new Date(Date.now() + job.config.duration * 1000).toISOString()
+        : undefined;
+    }
+    update(job);
+    return result;
+  },
   async session() {
     const observer = sessionStorage.getItem('beesense:demo-role') === 'observer';
     return {
@@ -335,6 +392,12 @@ export const demoApi: Api = {
       series: [],
     };
     save([job, ...load()].slice(0, 60));
+    if (isTikTokJob(job)) {
+      demoConnection(job);
+      job.status = 'WAITING_CONNECTOR';
+      job.platforms = job.platforms.map((p) => ({ ...p, status: 'WAITING_CONNECTOR' }));
+      update(job);
+    }
     return structuredClone(job);
   },
   async stop(id) {
@@ -418,6 +481,30 @@ export const demoApi: Api = {
   async demoScenario(id, scenario) {
     requireOperator();
     const job = get(id);
+    if (isTikTokJob(job) && scenario.startsWith('connector-')) {
+      const state =
+        scenario === 'connector-ready'
+          ? 'CONNECTED'
+          : scenario === 'connector-captcha'
+            ? 'VALIDATION_REQUIRED'
+            : 'DISCONNECTED';
+      changeDemoConnection(job, state);
+      if (state === 'CONNECTED' && !job.startedAt) {
+        job.startedAt = stamp();
+        job.deadlineAt = job.config?.duration
+          ? new Date(Date.now() + job.config.duration * 1000).toISOString()
+          : undefined;
+      }
+      job.status = job.startedAt ? 'RUNNING' : 'WAITING_CONNECTOR';
+      job.events.push({
+        id: crypto.randomUUID(),
+        at: stamp(),
+        message: `Koneksi Chrome simulasi: ${state}. Tidak ada koneksi plugin nyata.`,
+      });
+      job.updatedAt = stamp();
+      job.snapshotVersion++;
+      return update(job);
+    }
     const next = {
       ...job,
       scenario,

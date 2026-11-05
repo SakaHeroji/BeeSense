@@ -38,6 +38,10 @@ test("pagination requires explicit source end and every parent's replies", () =>
   assert.equal(commentPaginationExhausted(pages, comments), true);
   pages.set(null, true);
   assert.equal(commentPaginationExhausted(pages, comments), false);
+  assert.equal(
+    commentPaginationExhausted(new Map([[null, false]]), new Map(), true, 73),
+    false,
+  );
 });
 
 test("native integers survive JSON parsing without rounding or changing quoted text", () => {
@@ -155,7 +159,7 @@ test("Retry-After honors server wait including HTTP dates", () => {
   assert.equal(retryAfter(undefined), 60);
 });
 
-test("uncapped controller keeps scrolling after idle rounds until delayed replies end", async () => {
+test("uncapped controller scrolls past unresponsive reply controls until delayed replies end", async () => {
   const priorChrome = globalThis.chrome,
     priorFetch = globalThis.fetch,
     priorTimeout = globalThis.setTimeout;
@@ -167,7 +171,8 @@ test("uncapped controller keeps scrolling after idle rounds until delayed replie
     rounds = 0;
   const bodies = new Map(),
     batches = [],
-    statuses = [];
+    statuses = [],
+    scrollRewinds = [];
   globalThis.setTimeout = (fn, ms, ...args) =>
     priorTimeout(fn, ms >= 1000 ? 5 : ms, ...args);
   const respond = (name, endpoint, body) => {
@@ -181,6 +186,7 @@ test("uncapped controller keeps scrolling after idle rounds until delayed replie
   globalThis.chrome = {
     runtime: {
       id: "thread-test",
+      getManifest: () => ({ version: "1.2.1" }),
       onMessage: { addListener: (f) => (listener = f) },
     },
     storage: { session: { set: async (value) => statuses.push(value.status) } },
@@ -210,7 +216,28 @@ test("uncapped controller keeps scrolling after idle rounds until delayed replie
         if (method === "Network.getResponseBody")
           return { body: JSON.stringify(bodies.get(params.requestId)) };
         if (method === "Runtime.evaluate") {
+          if (params.expression.includes('"action":"expand"')) {
+            const controls = Array.from(
+              { length: 12 },
+              (_, i) => `stalled-${i}`,
+            );
+            const args = JSON.parse(
+              params.expression.slice(
+                params.expression.lastIndexOf(")(") + 2,
+                -1,
+              ),
+            );
+            const key = controls.find((value) => !args.blocked.includes(value));
+            return { result: { value: { clicked: !!key, key } } };
+          }
           if (params.expression.includes('"action":"scroll"')) {
+            const args = JSON.parse(
+              params.expression.slice(
+                params.expression.lastIndexOf(")(") + 2,
+                -1,
+              ),
+            );
+            scrollRewinds.push(args.rewind);
             rounds++;
             if (rounds === 6)
               respond(
@@ -279,6 +306,7 @@ test("uncapped controller keeps scrolling after idle rounds until delayed replie
       await new Promise((resolve) => priorTimeout(resolve, 10));
     assert.ok(detached);
     assert.equal(rounds, 6);
+    assert.deepEqual(scrollRewinds, Array(6).fill(false));
     const events = batches.flatMap((batch) => batch.events);
     assert.deepEqual(
       events.map((event) => event.payload.id),
@@ -308,7 +336,11 @@ test("failed debugger attachment clears the session and permits another attempt"
     attempts = 0;
   const statuses = [];
   globalThis.chrome = {
-    runtime: { id: "test", onMessage: { addListener: (f) => (listener = f) } },
+    runtime: {
+      id: "test",
+      getManifest: () => ({ version: "1.2.1" }),
+      onMessage: { addListener: (f) => (listener = f) },
+    },
     storage: { session: { set: async (value) => statuses.push(value.status) } },
     tabs: { get: async () => ({ url }) },
     debugger: {
@@ -422,5 +454,164 @@ test("failed debugger attachment clears the session and permits another attempt"
   } finally {
     globalThis.fetch = priorFetch;
     listener({ action: "stop" }, { id: "test" }, () => {});
+  }
+});
+
+test("all-comment controller collects 1200 comments and 100 replies across slow pages", async () => {
+  const prior = {
+    chrome: globalThis.chrome,
+    fetch: globalThis.fetch,
+    timeout: globalThis.setTimeout,
+  };
+  let listener,
+    network,
+    detached = false,
+    taskSent = false,
+    scrolls = 0,
+    replyPages = 0,
+    firstScrollReplies;
+  const bodies = new Map(),
+    batches = [];
+  globalThis.setTimeout = (fn, ms, ...args) =>
+    prior.timeout(fn, ms >= 1000 ? 5 : ms, ...args);
+  const respond = (name, endpoint, body) => {
+    bodies.set(name, body);
+    network({ tabId: 1 }, "Network.requestWillBeSent", {
+      requestId: name,
+      request: { url: endpoint },
+    });
+    network({ tabId: 1 }, "Network.loadingFinished", { requestId: name });
+  };
+  const parents = (page) =>
+    respond(
+      "parents" + page,
+      `https://www.tiktok.com/api/comment/list/?aweme_id=${root}&cursor=${page * 400}`,
+      {
+        has_more: page < 2 ? 1 : 0,
+        comments: Array.from({ length: 400 }, (_, i) => ({
+          cid: String(1000 + page * 400 + i),
+          aweme_id: root,
+          text: "comment " + i,
+          reply_comment_total: page === 0 && i === 0 ? 100 : 0,
+        })),
+      },
+    );
+  globalThis.chrome = {
+    runtime: {
+      id: "large-test",
+      getManifest: () => ({ version: "1.2.1" }),
+      onMessage: { addListener: (f) => (listener = f) },
+    },
+    storage: { session: { set: async () => {} } },
+    tabs: { get: async () => ({ url }), update: async () => parents(0) },
+    debugger: {
+      attach: async () => {},
+      detach: async () => {
+        detached = true;
+      },
+      onEvent: { addListener: (f) => (network = f) },
+      onDetach: { addListener: () => {} },
+      sendCommand: async (_, method, params) => {
+        if (method === "Network.getResponseBody")
+          return { body: JSON.stringify(bodies.get(params.requestId)) };
+        if (method !== "Runtime.evaluate") return {};
+        const args = JSON.parse(
+          params.expression.slice(params.expression.lastIndexOf(")(") + 2, -1),
+        );
+        if (args.action === "expand" && replyPages < 5) {
+          const page = replyPages++;
+          respond(
+            "replies" + page,
+            `https://www.tiktok.com/api/comment/list/reply/?item_id=${root}&comment_id=1000&cursor=${page * 20}`,
+            {
+              has_more: page < 4 ? 1 : 0,
+              comments: Array.from({ length: 20 }, (_, i) => ({
+                cid: String(3000 + page * 20 + i),
+                aweme_id: root,
+                text: "reply",
+              })),
+            },
+          );
+          return {
+            result: { value: { clicked: true, key: "reply-page-" + page } },
+          };
+        }
+        if (args.action === "scroll") {
+          firstScrollReplies ??= replyPages;
+          scrolls++;
+          if (scrolls === 4) parents(1);
+          if (scrolls === 8) parents(2);
+        }
+        return {
+          result: {
+            value: { ready: true, url, candidates: [], clicked: false },
+          },
+        };
+      },
+    },
+  };
+  globalThis.fetch = async (value, options) => {
+    assert.equal(
+      options.headers["X-BeeSense-Comment-Policy"],
+      "source-pagination-v3",
+    );
+    if (new URL(value).pathname === "/api/task") {
+      if (taskSent) throw new Error("Test complete");
+      taskSent = true;
+      return {
+        ok: true,
+        json: async () => ({
+          operation_id: oid,
+          operation: "thread",
+          video_id: root,
+          url,
+          max_comments: null,
+          collect_all_comments: true,
+          max_replies: null,
+          max_replies_per_thread: null,
+          idle_scroll_limit: 3,
+          expires_at_unix: Date.now() / 1000 + 3,
+          cached_root: {
+            id: root,
+            link: url,
+            created_at: "2026-09-13T12:50:35Z",
+            description: "kampus",
+          },
+        }),
+      };
+    }
+    batches.push(JSON.parse(options.body));
+    return { ok: true, json: async () => ({ accepted: true }) };
+  };
+  try {
+    await import("../../Crawler/Backend/Tiktok/chrome_extension/background.mjs?large-pagination");
+    listener(
+      {
+        action: "start",
+        origin: "http://127.0.0.1:54321/",
+        code: "a".repeat(43),
+        tabId: 1,
+      },
+      { id: "large-test" },
+      () => {},
+    );
+    const deadline = Date.now() + 3000;
+    while (!detached && Date.now() < deadline)
+      await new Promise((r) => prior.timeout(r, 10));
+    assert.ok(detached);
+    const rows = batches.flatMap((b) => b.events).map((e) => e.payload);
+    assert.equal(rows.filter((r) => r.kind === "comment").length, 1200);
+    assert.equal(rows.filter((r) => r.kind === "reply").length, 100);
+    assert.equal(new Set(rows.map((r) => r.id)).size, 1301);
+    assert.equal(firstScrollReplies, 5);
+    assert.equal(scrolls, 8);
+    assert.ok(batches.every((b) => b.events.length <= 500));
+    assert.equal(batches.at(-1).collection_status, "exhausted");
+    assert.equal(batches.at(-1).status, "FINISHED_BEST_EFFORT");
+  } finally {
+    listener?.({ action: "stop" }, { id: "large-test" }, () => {});
+    globalThis.chrome = prior.chrome;
+    globalThis.fetch = prior.fetch;
+    globalThis.setTimeout = prior.timeout;
   }
 });

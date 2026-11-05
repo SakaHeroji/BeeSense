@@ -1,23 +1,23 @@
 {
   "scripts/verify_dashboard_data.py": {
-    "mtime": 1793602148.708302,
-    "ast_hash": "53ab650f7488964300f3e1d00efa70ab",
-    "semantic_hash": ""
+    "mtime": 1793871733.8936443,
+    "ast_hash": "1872fbe52037e8e632099d804d03bc28",
+    "semantic_hash": "1872fbe52037e8e632099d804d03bc28"
   },
   "tests/nlp/test_dashboard_analysis.py": {
-    "mtime": 1793603205.3131754,
-    "ast_hash": "5228fc13dc6ce0bb30531c8431fbfda3",
-    "semantic_hash": ""
+    "mtime": 1793867379.7570817,
+    "ast_hash": "efab0ae25e7624cdedbefd47aed97b41",
+    "semantic_hash": "efab0ae25e7624cdedbefd47aed97b41"
   },
   "tests/nlp/test_dashboard_data_verifier.py": {
-    "mtime": 1793602148.710971,
-    "ast_hash": "d9a078ac36dfa0cc25c1d2e6b795297f",
-    "semantic_hash": ""
+    "mtime": 1793871733.8936334,
+    "ast_hash": "709e9ff0fb428b7df31843734e0bc3ed",
+    "semantic_hash": "709e9ff0fb428b7df31843734e0bc3ed"
   },
   "tests/nlp/test_social_nlp.py": {
-    "mtime": 1793585675.1622458,
-    "ast_hash": "094b154d7c44413a82b6d533e0bf5aa2",
-    "semantic_hash": ""
+    "mtime": 1793867379.7603116,
+    "ast_hash": "4782c183b932b1aecec8c05fb37dee2e",
+    "semantic_hash": "4782c183b932b1aecec8c05fb37dee2e"
   },
   "tests/nlp/test_streamlit_app.py": {
     "mtime": 1793374262.9455583,
@@ -25,9 +25,9 @@
     "semantic_hash": ""
   },
   "tests/nlp/test_topic_explanations.py": {
-    "mtime": 1793364715.2625728,
-    "ast_hash": "aefebc828a47c301ab7523693bfad41e",
-    "semantic_hash": "aefebc828a47c301ab7523693bfad41e"
+    "mtime": 1793867379.2331934,
+    "ast_hash": "6b36a4f966df8101d56ff341a10fcd5d",
+    "semantic_hash": "6b36a4f966df8101d56ff341a10fcd5d"
   },
   ".github/workflows/ci.yml": {
     "mtime": 1793683014.1675863,
@@ -35,9 +35,9 @@
     "semantic_hash": "5a9b99cf5c08261c1fa16015818fd869"
   },
   "README.md": {
-    "mtime": 1793672737.455067,
-    "ast_hash": "f06673c981c8dde24eda9d67e2fc60e0",
-    "semantic_hash": "f06673c981c8dde24eda9d67e2fc60e0"
+    "mtime": 1793872690.5743585,
+    "ast_hash": "96905e57f252321cbd6719faeb5059f8",
+    "semantic_hash": "96905e57f252321cbd6719faeb5059f8"
   },
   "graphify-out/memory/query_20261028_132041_jalankan_dashboard_streamlitnya.md": {
     "mtime": 1793193641.26462,
@@ -75,9 +75,9 @@
     "semantic_hash": ""
   },
   "tests/cloud/test_dashboard_runtime.py": {
-    "mtime": 1793586922.4011867,
-    "ast_hash": "91c40480c58ffe0dfd05314c499320b5",
-    "semantic_hash": ""
+    "mtime": 1793867408.4151173,
+    "ast_hash": "8ceceeacde43ddf501751e52bcb803a6",
+    "semantic_hash": "8ceceeacde43ddf501751e52bcb803a6"
   },
   "Crawler/Frontend/.prettierrc.json": {
     "mtime": 1793277028.2993784,
@@ -110,9 +110,9 @@
     "semantic_hash": "b4fc237cba93858e10799eb303f42ead"
   },
   "Crawler/Frontend/src/features/JobDetail.tsx": {
-    "mtime": 1793682780.987171,
-    "ast_hash": "33012c32d819cd16497085be88f4e77c",
-    "semantic_hash": "33012c32d819cd16497085be88f4e77c"
+    "mtime": 1793858328.2051637,
+    "ast_hash": "5c3eb36bd3aa0880fb95b18b2bc9f77e",
+    "semantic_hash": "5c3eb36bd3aa0880fb95b18b2bc9f77e"
   },
   "Crawler/Frontend/src/main.tsx": {
     "mtime": 1793277634.6434157,
@@ -120,9 +120,9 @@
     "semantic_hash": "7c89ce8519ea1a3d8d3f6e9f34bbd595"
   },
   "Crawler/Frontend/src/shared/api.ts": {
-    "mtime": 1793682695.6246111,
-    "ast_hash": "b7d7df509852eb46439e7220af8e1b7b",
-    "semantic_hash": "b7d7df509852eb46439e7220af8e1b7b"
+    "mtime": 1793857589.300617,
+    "ast_hash": "f1558fe78ccf18b453f012249f46fb63",
+    "semantic_hash": "f1558fe78ccf18b453f012249f46fb63"
   },
   "Crawler/Frontend/src/shared/context.ts": {
     "mtime": 1793277634.3711393,
@@ -130,14 +130,14 @@
     "semantic_hash": "d0ffe95a2012bc470ce2d4cb723431ec"
   },
   "Crawler/Frontend/src/shared/demo.ts": {
-    "mtime": 1793682695.8738124,
-    "ast_hash": "9150bebf6cdc59e971def3d810b32f3f",
-    "semantic_hash": "9150bebf6cdc59e971def3d810b32f3f"
+    "mtime": 1793858328.357675,
+    "ast_hash": "9e97a1e3353a918ab2a52625319612a6",
+    "semantic_hash": "9e97a1e3353a918ab2a52625319612a6"
   },
   "Crawler/Frontend/src/shared/domain.ts": {
-    "mtime": 1793682695.9684958,
-    "ast_hash": "0f2630bd114e83322f3d9e48ec97ef79",
-    "semantic_hash": "0f2630bd114e83322f3d9e48ec97ef79"
+    "mtime": 1793858328.4398608,
+    "ast_hash": "787aac27b815427edaf1d2f0368c7949",
+    "semantic_hash": "787aac27b815427edaf1d2f0368c7949"
   },
   "Crawler/Frontend/src/shared/hooks.ts": {
     "mtime": 1793277790.3643115,
@@ -145,14 +145,14 @@
     "semantic_hash": "fe39ce0188f8b139487fa3178ed8dcc7"
   },
   "Crawler/Frontend/src/shared/types.ts": {
-    "mtime": 1793682696.2197297,
-    "ast_hash": "534b38e1c290283a9b5a32c9ae154eb7",
-    "semantic_hash": "534b38e1c290283a9b5a32c9ae154eb7"
+    "mtime": 1793858328.2627623,
+    "ast_hash": "1f737446fd48ef4ea76a23f8a67201f1",
+    "semantic_hash": "1f737446fd48ef4ea76a23f8a67201f1"
   },
   "Crawler/Frontend/src/shared/ui.tsx": {
-    "mtime": 1793678603.0262604,
-    "ast_hash": "2ad5b214da150d86b184ec8064f6cbad",
-    "semantic_hash": "2ad5b214da150d86b184ec8064f6cbad"
+    "mtime": 1793857589.2593648,
+    "ast_hash": "128cfcfdb9abec529edafdecc963eaeb",
+    "semantic_hash": "128cfcfdb9abec529edafdecc963eaeb"
   },
   "Crawler/Frontend/src/test/api.test.ts": {
     "mtime": 1793679191.3998997,
@@ -225,19 +225,19 @@
     "semantic_hash": "ee887c825b8b169cf864142fa04ab643"
   },
   "Crawler/Frontend/docs/API_CONTRACT.md": {
-    "mtime": 1793682956.6028566,
-    "ast_hash": "39b03ea3f62acb3cc3d02d6351e3190f",
-    "semantic_hash": "39b03ea3f62acb3cc3d02d6351e3190f"
+    "mtime": 1793858805.7757876,
+    "ast_hash": "f3046c79c885839bd1a189f3c45f2ce8",
+    "semantic_hash": "f3046c79c885839bd1a189f3c45f2ce8"
   },
   "Crawler/Frontend/docs/DELIVERY.md": {
-    "mtime": 1793684239.8480563,
-    "ast_hash": "a7e9fc9a8cc84eab5286c129d8a1f02f",
-    "semantic_hash": "a7e9fc9a8cc84eab5286c129d8a1f02f"
+    "mtime": 1793859184.8541162,
+    "ast_hash": "c55564597cd284a2c67537b03273eeae",
+    "semantic_hash": "c55564597cd284a2c67537b03273eeae"
   },
   "Crawler/Frontend/README.md": {
-    "mtime": 1793682854.5571723,
-    "ast_hash": "7a4c0daa2cab2435807f398adbf08a20",
-    "semantic_hash": "7a4c0daa2cab2435807f398adbf08a20"
+    "mtime": 1793864436.4490614,
+    "ast_hash": "ae5c0f84499804d916050c80a33dc5a7",
+    "semantic_hash": "ae5c0f84499804d916050c80a33dc5a7"
   },
   "Crawler/Backend/Reddit/__init__.py": {
     "mtime": 1793364712.4354377,
@@ -300,9 +300,9 @@
     "semantic_hash": "8e6f1f16b519a234a96f4b7da39838e8"
   },
   "Crawler/Backend/social_crawler.py": {
-    "mtime": 1793694593.8445048,
-    "ast_hash": "60aecfaa3d825bb8713660cd8c146140",
-    "semantic_hash": "60aecfaa3d825bb8713660cd8c146140"
+    "mtime": 1793851426.4842672,
+    "ast_hash": "d0fc480a96100fb7cb3112648450cfc4",
+    "semantic_hash": "d0fc480a96100fb7cb3112648450cfc4"
   },
   "Crawler/Backend/social_crawler_selenium.py": {
     "mtime": 1793675873.2465055,
@@ -320,9 +320,9 @@
     "semantic_hash": "565e7bee9efc4a4f8c7f7186376b2e63"
   },
   "Dashboard/app.py": {
-    "mtime": 1793603205.318612,
-    "ast_hash": "f61ba32304266182f786bfca2b12d259",
-    "semantic_hash": ""
+    "mtime": 1793867320.5637298,
+    "ast_hash": "d585fcdcd608304f38047c0df827f8f5",
+    "semantic_hash": "d585fcdcd608304f38047c0df827f8f5"
   },
   "MachineLearning/__init__.py": {
     "mtime": 1793364712.4626808,
@@ -330,9 +330,9 @@
     "semantic_hash": "565e7bee9efc4a4f8c7f7186376b2e63"
   },
   "MachineLearning/social_nlp.py": {
-    "mtime": 1793671290.8156233,
-    "ast_hash": "b2476a78cf9338247d3e258aab7bce05",
-    "semantic_hash": "b2476a78cf9338247d3e258aab7bce05"
+    "mtime": 1793867320.4876525,
+    "ast_hash": "996ba9a6f543467b7887aa06c9b2a64c",
+    "semantic_hash": "996ba9a6f543467b7887aa06c9b2a64c"
   },
   "streamlit_apps.py": {
     "mtime": 1793364715.2554839,
@@ -395,9 +395,9 @@
     "semantic_hash": "ea1efed8ae9b173a3a64d807b144b356"
   },
   "config/social_nlp.json": {
-    "mtime": 1793671290.693876,
-    "ast_hash": "88c45b8343338df5de7ed81de4ccc2a7",
-    "semantic_hash": "88c45b8343338df5de7ed81de4ccc2a7"
+    "mtime": 1793872552.2222595,
+    "ast_hash": "c15fc4f3be4362d1b9d8dc0a5e1248ab",
+    "semantic_hash": "c15fc4f3be4362d1b9d8dc0a5e1248ab"
   },
   "docs/PROJECT_STRUCTURE.md": {
     "mtime": 1793672737.4583461,
@@ -420,9 +420,9 @@
     "semantic_hash": "2b615a9d6961ae7590b290147dfd2994"
   },
   "docs/dashboard/DASHBOARD_DESIGN.md": {
-    "mtime": 1793602215.4466202,
-    "ast_hash": "",
-    "semantic_hash": "1d2122598f4e3f7d5949fe2a97184456"
+    "mtime": 1793872083.5672786,
+    "ast_hash": "32a22f7b55a2bb0126da500b3e32ad46",
+    "semantic_hash": "32a22f7b55a2bb0126da500b3e32ad46"
   },
   "docs/machine-learning/EXPLAINABLE_TOPICS.md": {
     "mtime": 1793364712.4778159,
@@ -430,9 +430,9 @@
     "semantic_hash": "a59553803ffd0ec55eb49d33c5ebc7fb"
   },
   "docs/machine-learning/SOCIAL_NLP.md": {
-    "mtime": 1793671436.8781884,
-    "ast_hash": "8bad7d06e8c664e346b010533113ee8b",
-    "semantic_hash": "8bad7d06e8c664e346b010533113ee8b"
+    "mtime": 1793872083.559816,
+    "ast_hash": "bdc72d335d9c7b1df2df007c56b95c7f",
+    "semantic_hash": "bdc72d335d9c7b1df2df007c56b95c7f"
   },
   "requirements/coherence.txt": {
     "mtime": 1793364715.2504964,
@@ -715,9 +715,9 @@
     "semantic_hash": ""
   },
   "scripts/relevance_dashboard.py": {
-    "mtime": 1793671290.0577123,
-    "ast_hash": "999c9673ccb5b333757e5612bc53f428",
-    "semantic_hash": "999c9673ccb5b333757e5612bc53f428"
+    "mtime": 1793867861.070776,
+    "ast_hash": "d7ae02130f9b6a0aa259a5199c1946f4",
+    "semantic_hash": "d7ae02130f9b6a0aa259a5199c1946f4"
   },
   "scripts/generate_topic_narratives.py": {
     "mtime": 1793601181.6113243,
@@ -730,14 +730,14 @@
     "semantic_hash": ""
   },
   "tests/cloud/test_relevance_runtime.py": {
-    "mtime": 1793603205.3129494,
-    "ast_hash": "b23520e5d7d39f72bb72232e6964be27",
-    "semantic_hash": ""
+    "mtime": 1793872028.5031526,
+    "ast_hash": "23b63cd952dfbe954b54fbbc5464e0e1",
+    "semantic_hash": "23b63cd952dfbe954b54fbbc5464e0e1"
   },
   "docs/machine-learning/CONTEXT_RELEVANCE.md": {
-    "mtime": 1793671436.8756535,
-    "ast_hash": "516140aab9295ce9943a93a9c1cf9a10",
-    "semantic_hash": "516140aab9295ce9943a93a9c1cf9a10"
+    "mtime": 1793872083.56504,
+    "ast_hash": "c4ab3f1fe8c9be51196dea49e1dc6989",
+    "semantic_hash": "c4ab3f1fe8c9be51196dea49e1dc6989"
   },
   "Crawler/Backend/crawler_config.py": {
     "mtime": 1793686162.250427,
@@ -750,9 +750,9 @@
     "semantic_hash": "ab7dd945aceb883853dc66db0eefdc42"
   },
   "docs/crawler/CONFIGURATION.md": {
-    "mtime": 1793700681.0181062,
-    "ast_hash": "6fcf2011a9d48d684237ea60bc3563bd",
-    "semantic_hash": "6fcf2011a9d48d684237ea60bc3563bd"
+    "mtime": 1793852623.6903608,
+    "ast_hash": "f3067ee398b432a15a9190f81b70f9a2",
+    "semantic_hash": "f3067ee398b432a15a9190f81b70f9a2"
   },
   "scripts/organize_social_outputs.py": {
     "mtime": 1793672617.273419,
@@ -770,9 +770,9 @@
     "semantic_hash": "d21416085be8384def2f3faf3a25ec54"
   },
   "tests/nlp/test_nlp_config.py": {
-    "mtime": 1793671354.452391,
-    "ast_hash": "7b92d4f9feda9c3eed098e7910813e5b",
-    "semantic_hash": "7b92d4f9feda9c3eed098e7910813e5b"
+    "mtime": 1793867922.3612194,
+    "ast_hash": "8583c58c8a2e7e5c5a72f2433877e9cb",
+    "semantic_hash": "8583c58c8a2e7e5c5a72f2433877e9cb"
   },
   "tests/crawler/test_social_archive.py": {
     "mtime": 1793672737.5603106,
@@ -780,9 +780,9 @@
     "semantic_hash": "56a6e95e92c6c8ccadcf9f0617c47d70"
   },
   "docs/machine-learning/CONFIGURATION.md": {
-    "mtime": 1793671436.471503,
-    "ast_hash": "ae3b1d983ea61868329daabe8d8a92b5",
-    "semantic_hash": "ae3b1d983ea61868329daabe8d8a92b5"
+    "mtime": 1793872083.5621183,
+    "ast_hash": "51617ad947821b771b262adb838f1e01",
+    "semantic_hash": "51617ad947821b771b262adb838f1e01"
   },
   "docs/crawler/OUTPUTS.md": {
     "mtime": 1793672737.086753,
@@ -810,14 +810,14 @@
     "semantic_hash": "918068beaf1bcb65459609c4da509083"
   },
   "Crawler/Frontend/scripts/sync-config.mjs": {
-    "mtime": 1793679336.644741,
-    "ast_hash": "d7a4fb61621a6c2d978f8bb8becbecd0",
-    "semantic_hash": "d7a4fb61621a6c2d978f8bb8becbecd0"
+    "mtime": 1793858328.8510208,
+    "ast_hash": "d720d22fef1000dfc59477a7edcec247",
+    "semantic_hash": "d720d22fef1000dfc59477a7edcec247"
   },
   "Crawler/Frontend/scripts/sync-config.test.mjs": {
-    "mtime": 1793678819.9907115,
-    "ast_hash": "986e27cb5cfbb57c6cb07faf9849eb39",
-    "semantic_hash": "986e27cb5cfbb57c6cb07faf9849eb39"
+    "mtime": 1793858328.8584578,
+    "ast_hash": "09b85ecfa7f47ba8a0bf68f24ebad399",
+    "semantic_hash": "09b85ecfa7f47ba8a0bf68f24ebad399"
   },
   "Crawler/Frontend/src/features/PlatformResults.tsx": {
     "mtime": 1793684159.2920961,
@@ -825,9 +825,9 @@
     "semantic_hash": "ff1e0cfccdd242a3fc24c87b4e690b9c"
   },
   "Crawler/Frontend/src/features/PlatformWorkspace.tsx": {
-    "mtime": 1793682695.5637822,
-    "ast_hash": "3c7d2f903781d49f23afe83bd5701f35",
-    "semantic_hash": "3c7d2f903781d49f23afe83bd5701f35"
+    "mtime": 1793858328.1156433,
+    "ast_hash": "6881da4238c67e27e3532b410ceb0ab6",
+    "semantic_hash": "6881da4238c67e27e3532b410ceb0ab6"
   },
   "Crawler/Frontend/src/shared/StorageSettings.tsx": {
     "mtime": 1793680237.0752563,
@@ -845,9 +845,9 @@
     "semantic_hash": "b6e4070a745528284278f8245fb47198"
   },
   "Crawler/Frontend/src/shared/crawler-defaults.json": {
-    "mtime": 1793683285.3852067,
-    "ast_hash": "1d0306ad69533d5bb3669b12a3ec3746",
-    "semantic_hash": "1d0306ad69533d5bb3669b12a3ec3746"
+    "mtime": 1793864526.9794047,
+    "ast_hash": "dddcbdccb7d360e65ff42900574b6d5d",
+    "semantic_hash": "dddcbdccb7d360e65ff42900574b6d5d"
   },
   "Crawler/Frontend/src/features/JobStatistics.tsx": {
     "mtime": 1793683952.3675213,
@@ -885,29 +885,24 @@
     "semantic_hash": "23eebd83b168f2b5f9809c286fd3a494"
   },
   "Crawler/Backend/tiktok_crawler.py": {
-    "mtime": 1793700580.5535238,
-    "ast_hash": "d85a3d4b0fc5fd88dac4a2a030ee1671",
-    "semantic_hash": "d85a3d4b0fc5fd88dac4a2a030ee1671"
+    "mtime": 1793863614.3667767,
+    "ast_hash": "7d1479b0ed77bdf41752b92aaa8f3329",
+    "semantic_hash": "7d1479b0ed77bdf41752b92aaa8f3329"
   },
   "tests/crawler/test_tiktok_crawler.py": {
-    "mtime": 1793700580.5536373,
-    "ast_hash": "b626c9e6a41720d63b79c4a97a940391",
-    "semantic_hash": "b626c9e6a41720d63b79c4a97a940391"
+    "mtime": 1793863614.4319513,
+    "ast_hash": "78d36ff437aeb631567b5c836105b574",
+    "semantic_hash": "78d36ff437aeb631567b5c836105b574"
   },
   "docs/crawler/TIKTOK_CRAWLER.md": {
-    "mtime": 1793700681.0159037,
-    "ast_hash": "f290fda10902e0a3abea00d15654ead5",
-    "semantic_hash": "f290fda10902e0a3abea00d15654ead5"
+    "mtime": 1793873041.1690514,
+    "ast_hash": "80891b49cc9a554a14b6fb6b15eb5f41",
+    "semantic_hash": "80891b49cc9a554a14b6fb6b15eb5f41"
   },
   "docs/crawler/TIKTOK_TRIAL_20261103.md": {
     "mtime": 1793685935.21714,
     "ast_hash": "37bcae9c7ea4163a9b299127bd1ad5b5",
     "semantic_hash": "37bcae9c7ea4163a9b299127bd1ad5b5"
-  },
-  "graphify-out/obsidian/HOME.md": {
-    "mtime": 1793700681.0213122,
-    "ast_hash": "f26c15360f918f02f318223feee3af10",
-    "semantic_hash": "f26c15360f918f02f318223feee3af10"
   },
   "Crawler/Backend/Tiktok/browser_runtime.py": {
     "mtime": 1793690156.5484786,
@@ -950,19 +945,14 @@
     "semantic_hash": "3f927c96f546ec5eb41eb758f8556d94"
   },
   "Crawler/Backend/Tiktok/NATIVE.md": {
-    "mtime": 1793700681.0188215,
-    "ast_hash": "cd2aa4c21e65be7dc790c0d7315c77b8",
-    "semantic_hash": "cd2aa4c21e65be7dc790c0d7315c77b8"
+    "mtime": 1793873041.17032,
+    "ast_hash": "143c38ce638a22d185c9213cc517a3f1",
+    "semantic_hash": "143c38ce638a22d185c9213cc517a3f1"
   },
   "Crawler/Backend/Tiktok/PYKTOK.md": {
     "mtime": 1793690698.012547,
     "ast_hash": "d43eec05b8cd94e8be94706697049a7f",
     "semantic_hash": "d43eec05b8cd94e8be94706697049a7f"
-  },
-  "graphify-out/obsidian/TikTokCrawler Mandiri.md": {
-    "mtime": 1793700718.4281156,
-    "ast_hash": "7ded6f8e7a349f3a7b6840999a1edf70",
-    "semantic_hash": "7ded6f8e7a349f3a7b6840999a1edf70"
   },
   "docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md": {
     "mtime": 1793691448.4057777,
@@ -975,48 +965,148 @@
     "semantic_hash": "92fb3e546d574054d4a51b2dc71b72a5"
   },
   "Crawler/Backend/Tiktok/chrome_bridge.py": {
-    "mtime": 1793700546.503544,
-    "ast_hash": "c049cdd3cdc14a56449bb55b4a03d087",
-    "semantic_hash": "c049cdd3cdc14a56449bb55b4a03d087"
+    "mtime": 1793852547.5120955,
+    "ast_hash": "4a58d25ea2ce357a2ae2d2ea31ad0bcd",
+    "semantic_hash": "4a58d25ea2ce357a2ae2d2ea31ad0bcd"
   },
   "tests/crawler/test_tiktok_chrome_bridge.py": {
-    "mtime": 1793700626.6905677,
-    "ast_hash": "c20917d4fa29b8f7eb781d8bf17eefa6",
-    "semantic_hash": "c20917d4fa29b8f7eb781d8bf17eefa6"
+    "mtime": 1793855136.5840378,
+    "ast_hash": "4d44898d0e3f29a8bfe9b229c8602479",
+    "semantic_hash": "4d44898d0e3f29a8bfe9b229c8602479"
   },
   "Crawler/Backend/Tiktok/chrome_extension/core.mjs": {
-    "mtime": 1793700581.7948055,
-    "ast_hash": "8575ade44508bfc606ad62f36a9f7eaf",
-    "semantic_hash": "8575ade44508bfc606ad62f36a9f7eaf"
+    "mtime": 1793855136.4187417,
+    "ast_hash": "0b691e73151da2f7784c7675abb4da13",
+    "semantic_hash": "0b691e73151da2f7784c7675abb4da13"
   },
   "Crawler/Backend/Tiktok/chrome_extension/background.mjs": {
-    "mtime": 1793700581.9044478,
-    "ast_hash": "b3d22aed7a4175251eef16a8e077ac11",
-    "semantic_hash": "b3d22aed7a4175251eef16a8e077ac11"
+    "mtime": 1793855136.463727,
+    "ast_hash": "01dab4c5016ca88f2f54fbeaa11d6c49",
+    "semantic_hash": "01dab4c5016ca88f2f54fbeaa11d6c49"
   },
   "Crawler/Backend/Tiktok/chrome_extension/popup.mjs": {
-    "mtime": 1793700581.9334476,
-    "ast_hash": "8b59cbf2204fd726df143e91aaea9e6b",
-    "semantic_hash": "8b59cbf2204fd726df143e91aaea9e6b"
+    "mtime": 1793851537.213403,
+    "ast_hash": "3531cadbef908d0492fffe7fbf9d7541",
+    "semantic_hash": "3531cadbef908d0492fffe7fbf9d7541"
   },
   "tests/crawler/test_tiktok_chrome_extension.mjs": {
-    "mtime": 1793700627.3510354,
-    "ast_hash": "cf7b803b06a1920e98d801f495745289",
-    "semantic_hash": "cf7b803b06a1920e98d801f495745289"
+    "mtime": 1793854300.1996808,
+    "ast_hash": "e180f67c2d158d27ffd0def0a05ae48e",
+    "semantic_hash": "e180f67c2d158d27ffd0def0a05ae48e"
   },
   "docs/crawler/TIKTOK_CHROME_LIVE.md": {
-    "mtime": 1793700681.0167618,
-    "ast_hash": "a5c76334546369d82ce253b7821ea17d",
-    "semantic_hash": "a5c76334546369d82ce253b7821ea17d"
+    "mtime": 1793864436.4552243,
+    "ast_hash": "755b8eb891a5c1d39cf7a48122415d41",
+    "semantic_hash": "755b8eb891a5c1d39cf7a48122415d41"
   },
   "Crawler/Backend/Tiktok/chrome_extension/README.md": {
-    "mtime": 1793700681.0195298,
-    "ast_hash": "1e786b28e5ec8e06c7d654a84e39b068",
-    "semantic_hash": "1e786b28e5ec8e06c7d654a84e39b068"
+    "mtime": 1793855210.6816807,
+    "ast_hash": "97f5fea0862dac5c9a6d69a21c5bf7f3",
+    "semantic_hash": "97f5fea0862dac5c9a6d69a21c5bf7f3"
   },
   "graphify-out/obsidian/TikTok Chrome Live Connector.md": {
-    "mtime": 1793700718.42858,
-    "ast_hash": "1decca4c59d739b2410b0f03cf8a8939",
-    "semantic_hash": "1decca4c59d739b2410b0f03cf8a8939"
+    "mtime": 1793864436.4564264,
+    "ast_hash": "e09dbae3e24aa8c5a091c2d3f50d4a39",
+    "semantic_hash": "e09dbae3e24aa8c5a091c2d3f50d4a39"
+  },
+  "tests/crawler/test_tiktok_comment_dom.py": {
+    "mtime": 1793855078.0535405,
+    "ast_hash": "4cf9766bd85c2ae19c82b2d0e8bd8146",
+    "semantic_hash": "4cf9766bd85c2ae19c82b2d0e8bd8146"
+  },
+  "Crawler/Backend/Tiktok/chrome_extension/popup.html": {
+    "mtime": 1793851532.7733798,
+    "ast_hash": "c10d8616f3d25db732e079195b6ca250",
+    "semantic_hash": "c10d8616f3d25db732e079195b6ca250"
+  },
+  "Crawler/Frontend/src/features/TikTokConnector.tsx": {
+    "mtime": 1793864436.8745966,
+    "ast_hash": "67a3ae2ca9d1c6a6a33270a8e26d6e65",
+    "semantic_hash": "67a3ae2ca9d1c6a6a33270a8e26d6e65"
+  },
+  "Crawler/Frontend/src/shared/connector-demo.ts": {
+    "mtime": 1793857680.3594906,
+    "ast_hash": "76d82a276c493ca868b616e4314650e7",
+    "semantic_hash": "76d82a276c493ca868b616e4314650e7"
+  },
+  "Crawler/Frontend/src/shared/tiktok-connector.ts": {
+    "mtime": 1793859151.9810789,
+    "ast_hash": "9cf669c59f6a853a71cc507f3166a6f9",
+    "semantic_hash": "9cf669c59f6a853a71cc507f3166a6f9"
+  },
+  "Crawler/Frontend/src/test/tiktok-connector.test.tsx": {
+    "mtime": 1793859150.0883768,
+    "ast_hash": "95accb835ea675b2fedef2cdc3bf41ef",
+    "semantic_hash": "95accb835ea675b2fedef2cdc3bf41ef"
+  },
+  "graphify-out/obsidian/Frontend React Crawler.md": {
+    "mtime": 1793859304.6741958,
+    "ast_hash": "3a3addc9752cf56a238c7a78408991dd",
+    "semantic_hash": "3a3addc9752cf56a238c7a78408991dd"
+  },
+  "graphify-out/obsidian/Frontend Social Media Per Platform.md": {
+    "mtime": 1793858948.4633505,
+    "ast_hash": "0878d9a5b302e51130d42402e97a5aa7",
+    "semantic_hash": "0878d9a5b302e51130d42402e97a5aa7"
+  },
+  "graphify-out/obsidian/Frontend TikTok Plugin Chrome.md": {
+    "mtime": 1793864436.4511654,
+    "ast_hash": "bb7ee08d24cb756793b7b27f3ec6e31e",
+    "semantic_hash": "bb7ee08d24cb756793b7b27f3ec6e31e"
+  },
+  "graphify-out/obsidian/Pemantauan TikTok 1000 Post 20261105.md": {
+    "mtime": 1793870096.7945256,
+    "ast_hash": "f0c622b9cda46cf3c91546a5ae3beb99",
+    "semantic_hash": "f0c622b9cda46cf3c91546a5ae3beb99"
+  },
+  "graphify-out/obsidian/HOME.md": {
+    "mtime": 1793870096.7967064,
+    "ast_hash": "e2fe98a48b2cfc3e33a743a31f4026e4",
+    "semantic_hash": "e2fe98a48b2cfc3e33a743a31f4026e4"
+  },
+  "Crawler/Backend/Tiktok/chrome_extension/manifest.json": {
+    "mtime": 1793855136.504697,
+    "ast_hash": "232f1de7f2115e6a515161e5d1d90672",
+    "semantic_hash": "232f1de7f2115e6a515161e5d1d90672"
+  },
+  "config/dashboard.json": {
+    "mtime": 1793872552.2226226,
+    "ast_hash": "7e58c378df878704612bb4728daa111a",
+    "semantic_hash": "7e58c378df878704612bb4728daa111a"
+  },
+  "docs/machine-learning/TIKTOK_RETRAIN_20261105.md": {
+    "mtime": 1793872552.5192199,
+    "ast_hash": "7f972f944ffa5b8517cba7a338593f91",
+    "semantic_hash": "7f972f944ffa5b8517cba7a338593f91"
+  },
+  "graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md": {
+    "mtime": 1793872083.5729868,
+    "ast_hash": "5fd9d0fe6bfac7342169bac90119082f",
+    "semantic_hash": "5fd9d0fe6bfac7342169bac90119082f"
+  },
+  "graphify-out/obsidian/Dataset Dashboard.md": {
+    "mtime": 1793872083.569521,
+    "ast_hash": "bf5926a1cf88fee926a9d97d600acb44",
+    "semantic_hash": "bf5926a1cf88fee926a9d97d600acb44"
+  },
+  "graphify-out/obsidian/Menjalankan BeeSense.md": {
+    "mtime": 1793872083.5741472,
+    "ast_hash": "69945ad26e19ce1e72a541740e1acc3f",
+    "semantic_hash": "69945ad26e19ce1e72a541740e1acc3f"
+  },
+  "graphify-out/obsidian/Metodologi Machine Learning Social NLP.md": {
+    "mtime": 1793872083.5712976,
+    "ast_hash": "81717f773f6f0d072f3316d3e1d693e8",
+    "semantic_hash": "81717f773f6f0d072f3316d3e1d693e8"
+  },
+  "graphify-out/obsidian/Retraining Gabungan TikTok 20261105.md": {
+    "mtime": 1793872552.5199084,
+    "ast_hash": "bcfabe09b2040b1454b6d40a9184aeaf",
+    "semantic_hash": "bcfabe09b2040b1454b6d40a9184aeaf"
+  },
+  "graphify-out/obsidian/TikTokCrawler Mandiri.md": {
+    "mtime": 1793852623.6946301,
+    "ast_hash": "52ae0ec3c3d80ad59cc4b5b77fa98160",
+    "semantic_hash": "52ae0ec3c3d80ad59cc4b5b77fa98160"
   }
 }

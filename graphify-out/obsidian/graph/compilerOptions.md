@@ -25,7 +25,7 @@ tags:
 - [[resolveJsonModule]] - `contains` [EXTRACTED]
 - [[skipLibCheck]] - `contains` [EXTRACTED]
 - [[strict]] - `contains` [EXTRACTED]
-- [[target_1]] - `contains` [EXTRACTED]
+- [[target]] - `contains` [EXTRACTED]
 - [[tsconfig.json]] - `contains` [EXTRACTED]
 - [[types]] - `contains` [EXTRACTED]
 

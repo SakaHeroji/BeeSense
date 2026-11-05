@@ -1,17 +1,15 @@
 ---
 type: community
-cohesion: 0.18
 members: 31
 ---
 
 # Pengujian Parser Reddit
 
-**Cohesion:** 0.18 - loosely connected
 **Members:** 31 nodes
 
 ## Members
-- [[.__init__()_30]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.__init__()_29]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.__init__()_27]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.__init__()_28]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.has_class()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -50,16 +48,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 29 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
-- 7 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 6 edges to [[_COMMUNITY_Kontrak Record Reddit_2]]
-- 5 edges to [[_COMMUNITY_Struktur DOM Reddit]]
+- 23 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 13 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 6 edges to [[_COMMUNITY_Parsing Identitas Reddit_3]]
+- 5 edges to [[_COMMUNITY_Parsing Identitas Reddit_2]]
 - 4 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 2 edges to [[_COMMUNITY_Capture Reddit Playwright_1]]
 
 ## Top bridge nodes
-- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 4 communities
-- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 4 communities
+- [[RedditTests]] - degree 20, connects to 3 communities
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 3 communities
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 3 communities
 - [[RedditAdapter]] - degree 7, connects to 3 communities
-- [[RedditTests]] - degree 20, connects to 2 communities
-- [[fixture_page()]] - degree 15, connects to 2 communities
+- [[.thread()]] - degree 22, connects to 2 communities

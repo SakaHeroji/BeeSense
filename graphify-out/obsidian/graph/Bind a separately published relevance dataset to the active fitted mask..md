@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Penyaringan Relevansi dan Narasi Topik"
+community: "Verifikasi Dataset Publik"
 location: "L132"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Verifikasi_Dataset_Publik
 ---
 
 # Bind a separately published relevance dataset to the active fitted mask.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[published_relevance_files()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik

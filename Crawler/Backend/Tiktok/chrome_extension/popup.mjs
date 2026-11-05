@@ -1,4 +1,7 @@
+import { CONNECTOR_BUILD } from "./core.mjs";
 const status = document.querySelector("#status");
+document.querySelector("#build").textContent =
+  `Connector ${chrome.runtime.getManifest().version} · ${CONNECTOR_BUILD}`;
 const refresh = async () => {
   status.textContent =
     (await chrome.storage.session.get("status")).status || "Belum terhubung.";

@@ -25,6 +25,7 @@ tags:
 - [[.test_sidecar_roundtrip_checksum_and_source_binding()]] - `method` [EXTRACTED]
 - [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - `method` [EXTRACTED]
 - [[.test_stable_and_episodic_patterns()]] - `method` [EXTRACTED]
+- [[.test_tiktok_native_roots_and_explanations_include_comments_and_replies()]] - `method` [EXTRACTED]
 - [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - `method` [EXTRACTED]
 - [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]

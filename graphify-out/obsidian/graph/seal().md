@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/topic_sentence_export.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Pengujian Narasi Gemini"
 location: "L60"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # seal()
@@ -21,4 +21,4 @@ tags:
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[topic_sentence_export.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

@@ -18,7 +18,7 @@ tags:
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[load_client()]] - `calls` [EXTRACTED]
 - [[login_with_saved_password()]] - `calls` [EXTRACTED]
-- [[main()_15]] - `calls` [EXTRACTED]
+- [[main()_11]] - `calls` [EXTRACTED]
 - [[save_session()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

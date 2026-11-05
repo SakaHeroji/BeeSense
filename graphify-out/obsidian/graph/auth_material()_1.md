@@ -12,7 +12,7 @@ tags:
 # auth_material()
 
 ## Connections
-- [[.start()_1]] - `calls` [EXTRACTED]
+- [[.start()]] - `calls` [EXTRACTED]
 - [[AuthError]] - `calls` [EXTRACTED]
 - [[Read exactly one TikTok token without serializing any authentication data.]] - `rationale_for` [EXTRACTED]
 - [[tiktok_crawler.py]] - `contains` [EXTRACTED]

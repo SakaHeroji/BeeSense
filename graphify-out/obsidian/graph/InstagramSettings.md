@@ -12,7 +12,7 @@ tags:
 # InstagramSettings
 
 ## Connections
-- [[.__init__()_34]] - `calls` [EXTRACTED]
+- [[.__init__()_32]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

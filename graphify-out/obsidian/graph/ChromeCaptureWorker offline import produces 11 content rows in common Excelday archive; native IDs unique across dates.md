@@ -12,8 +12,6 @@ tags:
 # ChromeCaptureWorker offline import produces 11 content rows in common Excel/day archive; native IDs unique across dates
 
 ## Connections
-- [[ChromeCaptureWorker imports saved public observations offline; no browser attachment,authcookie read or network acquisition]] - `references` [EXTRACTED]
-- [[Shared ContentInputDatasetExcel with string native IDs unique across WIB acquisition dates]] - `references` [EXTRACTED]
 - [[TikTok existing-Chrome observation and offline import — 3 November 2026]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

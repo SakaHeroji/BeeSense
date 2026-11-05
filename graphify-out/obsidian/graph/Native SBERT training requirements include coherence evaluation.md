@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[NLP, Streamlit and Plotly dependency ranges]] - `references` [EXTRACTED]
-- [[New-corpus native SBERT encoding or exact verified cache reuse]] - `references` [EXTRACTED]
 - [[Platform-specific macOS Intel Torch and numerical compatibility]] - `references` [EXTRACTED]
 - [[Trainingevaluation-only Gensim coherence requirements]] - `references` [EXTRACTED]
 

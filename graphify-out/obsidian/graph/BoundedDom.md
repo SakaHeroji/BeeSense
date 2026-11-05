@@ -1,19 +1,19 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Struktur DOM Reddit"
+community: "Parsing Identitas Reddit"
 location: "L669"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Struktur_DOM_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # BoundedDom
 
 ## Connections
-- [[.__init__()_28]] - `method` [EXTRACTED]
-- [[.__init__()_29]] - `calls` [EXTRACTED]
+- [[.__init__()_26]] - `method` [EXTRACTED]
+- [[.__init__()_27]] - `calls` [EXTRACTED]
 - [[.handle_data()]] - `method` [EXTRACTED]
 - [[.handle_endtag()]] - `method` [EXTRACTED]
 - [[.handle_startendtag()]] - `method` [EXTRACTED]
@@ -22,4 +22,4 @@ tags:
 - [[Small serialised-DOM reader, not a browser or full HTML5 repair engine.]] - `rationale_for` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Struktur_DOM_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

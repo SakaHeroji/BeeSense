@@ -14,7 +14,11 @@ from urllib.request import Request, urlopen
 
 from Crawler.Backend import tiktok_crawler as t
 from Crawler.Backend.crawler_config import read_config
-from Crawler.Backend.Tiktok.chrome_bridge import LIVE_METHOD, ChromeLiveWorker
+from Crawler.Backend.Tiktok.chrome_bridge import (
+    COMMENT_PROTOCOL,
+    LIVE_METHOD,
+    ChromeLiveWorker,
+)
 
 
 def post():
@@ -39,12 +43,29 @@ class ChromeBridgeTests(unittest.TestCase):
         )
         self.rows = []
 
-    def api(self, path, data=None, *, origin=None, code=None, method=None):
+    def api(
+        self,
+        path,
+        data=None,
+        *,
+        origin=None,
+        code=None,
+        method=None,
+        client_headers=None,
+    ):
         headers = {
             "Origin": origin or self.worker.extension_origin,
             "Authorization": "Bearer " + (code or self.worker.nonce),
             "Content-Type": "application/json",
+            "X-BeeSense-Connector-Version": "1.2.1",
+            "X-BeeSense-Connector-Build": "test-comments-v2",
+            "X-BeeSense-Comment-Policy": COMMENT_PROTOCOL,
         }
+        if client_headers is not None:
+            headers = {
+                k: v for k, v in headers.items() if not k.startswith("X-BeeSense-")
+            }
+            headers.update(client_headers)
         return urlopen(
             Request(
                 self.worker.origin + path,
@@ -79,6 +100,7 @@ class ChromeBridgeTests(unittest.TestCase):
             dict(
                 operation_id=oid,
                 done=True,
+                collection_status="exhausted",
                 events=[dict(kind="record", payload=post())],
             ),
         ) as response:
@@ -86,10 +108,104 @@ class ChromeBridgeTests(unittest.TestCase):
         self.runner.join(2)
         self.assertEqual(self.rows[0][1]["id"], "100")
 
+    def test_reconnected_connector_resumes_same_task_without_duplicate_ids(self):
+        self.worker.extension_mode = True
+        oid = self.begin()
+        events = [dict(kind="record", payload=post())]
+        with self.api(
+            "/api/result", dict(operation_id=oid, done=False, events=events)
+        ) as response:
+            self.assertEqual(response.status, 200)
+        headers = {
+            "X-BeeSense-Connector-Version": "1.2.3",
+            "X-BeeSense-Connector-Build": "20261105-comment-viewport-v5",
+            "X-BeeSense-Comment-Policy": COMMENT_PROTOCOL,
+        }
+        with self.api("/api/task", client_headers=headers) as response:
+            self.assertEqual(json.load(response)["operation_id"], oid)
+        with self.api(
+            "/api/result",
+            dict(
+                operation_id=oid,
+                done=True,
+                events=events,
+                collection_status="exhausted",
+            ),
+            client_headers=headers,
+        ) as response:
+            self.assertEqual(response.status, 200)
+        self.runner.join(2)
+        self.assertEqual([row[1]["id"] for row in self.rows], ["100"])
+        self.assertEqual(self.result[0]["status"], "FINISHED_BEST_EFFORT")
+        self.assertEqual(self.worker.client_info["version"], "1.2.3")
+
+    def test_old_or_manifest_only_connector_cannot_start_crawl_clock(self):
+        self.worker.extension_mode = True
+        for headers in (
+            {},
+            {"X-BeeSense-Connector-Version": "1.1.0"},
+            {"X-BeeSense-Connector-Version": "1.2.1"},
+        ):
+            with self.assertRaises(HTTPError) as error:
+                self.api("/api/task", client_headers=headers)
+            self.assertEqual(error.exception.code, 409)
+            self.assertFalse(self.worker.connected.is_set())
+        with self.api("/api/task") as response:
+            self.assertIsNone(json.load(response))
+        self.assertTrue(self.worker.connected.is_set())
+        self.assertEqual(self.worker.client_info["comment_policy"], COMMENT_PROTOCOL)
+
+    def test_uncapped_idle_or_missing_completion_evidence_never_counts_as_success(self):
+        self.worker.extension_mode = True
+        for warnings, evidence, expected in (
+            (["visible_pagination_idle"], "exhausted", "CLIENT_UPGRADE_REQUIRED"),
+            ([], "pending", "COMMENTS_INCOMPLETE"),
+            ([], "exhausted", "FINISHED_BEST_EFFORT"),
+        ):
+            oid = self.begin()
+            self.send(
+                oid,
+                warnings=warnings,
+                collection_status=evidence,
+                events=[dict(kind="record", payload=post())],
+            )
+            self.runner.join(2)
+            self.assertEqual(self.result[0]["status"], expected)
+            self.assertEqual(self.rows[-1][1]["id"], "100")
+
     def test_extension_api_is_disabled_in_agent_mode(self):
         with self.assertRaises(HTTPError) as error:
             self.api("/api/task")
         self.assertEqual(error.exception.code, 403)
+
+    def test_live_progress_counts_data_before_thread_finishes(self):
+        progress = []
+        self.worker.progress = progress.append
+        oid = self.begin()
+        child = dict(
+            id="200",
+            video_id="100",
+            kind="comment",
+            text="comment",
+            link=post()["link"] + "?comment_id=200",
+        )
+        self.send(
+            oid,
+            done=False,
+            events=[
+                dict(kind="record", payload=post()),
+                dict(kind="record", payload=child),
+            ],
+        )
+        deadline = time.monotonic() + 1
+        while not progress and time.monotonic() < deadline:
+            time.sleep(0.005)
+        self.assertEqual(progress[-1]["posts_observed"], 1)
+        self.assertEqual(progress[-1]["comments_observed"], 1)
+        self.assertEqual(progress[-1]["replies_observed"], 0)
+        self.assertIsNotNone(self.worker.active)
+        self.send(oid)
+        self.runner.join(2)
 
     def test_rate_limit_survives_next_operation_without_browser_task(self):
         oid = self.begin()

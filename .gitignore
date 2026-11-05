@@ -416,3 +416,91 @@ outputs/nlp_20261102_relevance_topics20_gemini_02/*
 !graphify-out/obsidian/TikTok Mandiri Uji 500 Post 20261103.md
 
 !graphify-out/obsidian/TikWM Probe TikTok 20261103.md
+
+
+# Verified all-social/TikTok source, before/after models and relevance audit — 5 November 2026.
+!outputs/social_20261105_combined_tiktok_01/
+outputs/social_20261105_combined_tiktok_01/*
+!outputs/social_20261105_combined_tiktok_01/duplicate_records.jsonl
+!outputs/social_20261105_combined_tiktok_01/merge_report.json
+!outputs/social_20261105_combined_tiktok_01/native_roots.json
+!outputs/social_20261105_combined_tiktok_01/record_lineage.jsonl
+!outputs/social_20261105_combined_tiktok_01/social_data.xlsx
+!outputs/nlp_20261105_all_social_topics20_01/
+outputs/nlp_20261105_all_social_topics20_01/*
+!outputs/nlp_20261105_all_social_topics20_01/centroids.npy
+!outputs/nlp_20261105_all_social_topics20_01/comparison.json
+!outputs/nlp_20261105_all_social_topics20_01/embeddings.npy
+!outputs/nlp_20261105_all_social_topics20_01/graph.json
+!outputs/nlp_20261105_all_social_topics20_01/manifest.json
+!outputs/nlp_20261105_all_social_topics20_01/occurrences.parquet
+!outputs/nlp_20261105_all_social_topics20_01/sentences.parquet
+!outputs/nlp_20261105_all_social_topics20_01/skipped.parquet
+!outputs/nlp_20261105_all_social_topics20_01/social_data.parquet
+!outputs/nlp_20261105_all_social_topics20_01/summary.json
+!outputs/nlp_20261105_all_social_topics20_01/topics.json
+!outputs/nlp_20261105_all_social_topics20_01/umap_embeddings.npz
+!outputs/nlp_20261105_relevance_topics20_01/
+outputs/nlp_20261105_relevance_topics20_01/*
+!outputs/nlp_20261105_relevance_topics20_01/centroids.npy
+!outputs/nlp_20261105_relevance_topics20_01/comparison.json
+!outputs/nlp_20261105_relevance_topics20_01/embeddings.npy
+!outputs/nlp_20261105_relevance_topics20_01/graph.json
+!outputs/nlp_20261105_relevance_topics20_01/manifest.json
+!outputs/nlp_20261105_relevance_topics20_01/occurrences.parquet
+!outputs/nlp_20261105_relevance_topics20_01/relevance_decisions.parquet
+!outputs/nlp_20261105_relevance_topics20_01/relevance_report.json
+!outputs/nlp_20261105_relevance_topics20_01/sentences.parquet
+!outputs/nlp_20261105_relevance_topics20_01/skipped.parquet
+!outputs/nlp_20261105_relevance_topics20_01/social_data.parquet
+!outputs/nlp_20261105_relevance_topics20_01/summary.json
+!outputs/nlp_20261105_relevance_topics20_01/topics.json
+!outputs/nlp_20261105_relevance_topics20_01/umap_embeddings.npz
+!outputs/relevance_20261105_01/
+outputs/relevance_20261105_01/*
+!outputs/relevance_20261105_01/filtered_sentences.parquet
+!outputs/relevance_20261105_01/manifest.json
+!outputs/relevance_20261105_01/relevance_decisions.parquet
+!outputs/relevance_20261105_01/relevance_report.json
+!graphify-out/obsidian/Frontend TikTok Plugin Chrome.md
+!graphify-out/obsidian/Frontend Social Media Per Platform.md
+!graphify-out/obsidian/TikTok Chrome Live Connector.md
+!graphify-out/obsidian/Pemantauan TikTok 1000 Post 20261105.md
+!graphify-out/obsidian/Retraining Gabungan TikTok 20261105.md
+!graphify-out/graph_health.json
+!graphify-out/graph_health_extraction.json
+!graphify-out/graph_health_frontend_extraction_20261105.json
+
+# Gemini narrative clones from explicitly approved export — 5 November 2026.
+!outputs/nlp_20261105_all_social_topics20_gemini_01/
+outputs/nlp_20261105_all_social_topics20_gemini_01/*
+!outputs/nlp_20261105_all_social_topics20_gemini_01/centroids.npy
+!outputs/nlp_20261105_all_social_topics20_gemini_01/comparison.json
+!outputs/nlp_20261105_all_social_topics20_gemini_01/embeddings.npy
+!outputs/nlp_20261105_all_social_topics20_gemini_01/graph.json
+!outputs/nlp_20261105_all_social_topics20_gemini_01/manifest.json
+!outputs/nlp_20261105_all_social_topics20_gemini_01/occurrences.parquet
+!outputs/nlp_20261105_all_social_topics20_gemini_01/sentences.parquet
+!outputs/nlp_20261105_all_social_topics20_gemini_01/skipped.parquet
+!outputs/nlp_20261105_all_social_topics20_gemini_01/social_data.parquet
+!outputs/nlp_20261105_all_social_topics20_gemini_01/summary.json
+!outputs/nlp_20261105_all_social_topics20_gemini_01/topic_narratives.csv
+!outputs/nlp_20261105_all_social_topics20_gemini_01/topics.json
+!outputs/nlp_20261105_all_social_topics20_gemini_01/umap_embeddings.npz
+!outputs/nlp_20261105_relevance_topics20_gemini_01/
+outputs/nlp_20261105_relevance_topics20_gemini_01/*
+!outputs/nlp_20261105_relevance_topics20_gemini_01/centroids.npy
+!outputs/nlp_20261105_relevance_topics20_gemini_01/comparison.json
+!outputs/nlp_20261105_relevance_topics20_gemini_01/embeddings.npy
+!outputs/nlp_20261105_relevance_topics20_gemini_01/graph.json
+!outputs/nlp_20261105_relevance_topics20_gemini_01/manifest.json
+!outputs/nlp_20261105_relevance_topics20_gemini_01/occurrences.parquet
+!outputs/nlp_20261105_relevance_topics20_gemini_01/relevance_decisions.parquet
+!outputs/nlp_20261105_relevance_topics20_gemini_01/relevance_report.json
+!outputs/nlp_20261105_relevance_topics20_gemini_01/sentences.parquet
+!outputs/nlp_20261105_relevance_topics20_gemini_01/skipped.parquet
+!outputs/nlp_20261105_relevance_topics20_gemini_01/social_data.parquet
+!outputs/nlp_20261105_relevance_topics20_gemini_01/summary.json
+!outputs/nlp_20261105_relevance_topics20_gemini_01/topic_narratives.csv
+!outputs/nlp_20261105_relevance_topics20_gemini_01/topics.json
+!outputs/nlp_20261105_relevance_topics20_gemini_01/umap_embeddings.npz

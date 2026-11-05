@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[.__call__()_3]] - `method` [EXTRACTED]
+- [[.__init__()_35]] - `calls` [EXTRACTED]
+- [[.__init__()_36]] - `method` [EXTRACTED]
 - [[.__init__()_37]] - `calls` [EXTRACTED]
-- [[.__init__()_38]] - `method` [EXTRACTED]
-- [[.__init__()_39]] - `calls` [EXTRACTED]
 - [[.close()_5]] - `method` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 

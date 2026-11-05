@@ -1,19 +1,24 @@
 ---
-source_file: "scripts/organize_social_outputs.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Arsip Data Harian"
-location: "L100"
+community: "Kontrak Record Reddit"
+location: "L1398"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Arsip_Data_Harian
+  - community/Kontrak_Record_Reddit
 ---
 
 # main()
 
 ## Connections
-- [[consolidate()]] - `calls` [EXTRACTED]
-- [[discover()]] - `calls` [EXTRACTED]
-- [[organize_social_outputs.py]] - `contains` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[dumps()_1]] - `calls` [EXTRACTED]
+- [[parser()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [EXTRACTED]
+- [[run_self_tests()]] - `calls` [EXTRACTED]
+- [[schema_document()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
+- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

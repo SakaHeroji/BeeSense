@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L837"
+location: "L838"
 tags:
   - graphify/code
   - graphify/EXTRACTED

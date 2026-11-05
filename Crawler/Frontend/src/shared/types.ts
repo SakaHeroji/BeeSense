@@ -2,6 +2,7 @@ export type Platform = 'youtube' | 'reddit' | 'instagram' | 'tiktok' | 'threads'
 export type Mode = 'automatic' | 'url' | 'survey';
 export type JobStatus =
   | 'QUEUED'
+  | 'WAITING_CONNECTOR'
   | 'RUNNING'
   | 'STOP_REQUESTED'
   | 'FINALIZING'
@@ -11,6 +12,7 @@ export type JobStatus =
   | 'CANCELLED';
 export type PlatformStatus =
   | 'PENDING'
+  | 'WAITING_CONNECTOR'
   | 'FETCHING'
   | 'WAITING_CAPTCHA'
   | 'RATE_LIMITED'
@@ -42,6 +44,7 @@ export interface Baseline {
   required: boolean;
 }
 export interface Capabilities {
+  tiktokConnectorAvailable?: boolean;
   migrationsAvailable?: boolean;
   authAvailable?: boolean;
   platforms: Platform[];
@@ -159,6 +162,31 @@ export interface Job {
   canStop: boolean;
   demo?: boolean;
   scenario?: string;
+  connector?: Pick<TikTokConnectorSession, 'state' | 'version' | 'lastSeenAt'>;
+}
+export type TikTokConnectorState =
+  'WAITING' | 'CONNECTED' | 'VALIDATION_REQUIRED' | 'DISCONNECTED' | 'EXPIRED' | 'FINISHED';
+// Private operator response: pairing material never belongs to Job or a dataset.
+export interface TikTokConnectorSession {
+  jobId: string;
+  state: TikTokConnectorState;
+  bridgeUrl: string;
+  minimumVersion: string;
+  pairingCode?: string;
+  pairingExpiresAt?: string;
+  version?: string;
+  build?: string;
+  lastSeenAt?: string;
+  demo?: boolean;
+  thread?: {
+    postId: string;
+    comments: number;
+    replies: number;
+    sourceTotal?: number;
+    lastActivityAt: string;
+    activity: 'comments' | 'replies' | 'scrolling' | 'waiting';
+    pagination: 'pending' | 'exhausted' | 'unverified';
+  };
 }
 export interface PreviewRow {
   id: string;
@@ -185,6 +213,9 @@ export interface DatasetDetail {
   warning?: string;
 }
 export interface Api {
+  tiktokConnector(jobId: string): Promise<TikTokConnectorSession>;
+  renewTikTokConnector(jobId: string): Promise<TikTokConnectorSession>;
+  resumeTikTokConnector(jobId: string): Promise<TikTokConnectorSession>;
   prepareTransactionMigration(
     job: Job,
     platform: Platform,

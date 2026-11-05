@@ -17,7 +17,7 @@ tags:
 - [[SessionInvalid]] - `indirect_call` [INFERRED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[instagram_worker()]] - `calls` [EXTRACTED]
-- [[main()_15]] - `calls` [EXTRACTED]
+- [[main()_11]] - `calls` [EXTRACTED]
 - [[upstream_version()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

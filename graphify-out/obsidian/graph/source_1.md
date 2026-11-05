@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/scripts/sync-config.mjs"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L59"
+location: "L62"
 tags:
   - graphify/code
   - graphify/EXTRACTED

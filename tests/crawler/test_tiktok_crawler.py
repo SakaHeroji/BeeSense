@@ -113,6 +113,7 @@ class TikTokTests(unittest.TestCase):
             supplied = constructor.call_args.args[0]
             self.assertEqual(supplied["total_seconds"], 1800)
             self.assertEqual(supplied["platforms"]["tiktok"]["min_posts"], 500)
+            self.assertFalse(constructor.return_value._synthetic)
         worker.wait_for_extension.assert_called_once_with(seconds=3600)
         worker.close.assert_called_once()
 
@@ -151,7 +152,7 @@ class TikTokTests(unittest.TestCase):
         with patch.object(t, "auth_material", side_effect=AssertionError("auth read")):
             plan = t.live_chrome_plan(extension=True)
         self.assertEqual(plan["browser_acquisition"], "existing_chrome_extension")
-        self.assertIn("ChromeExtension:1.1.0", plan["browser_backend_version"])
+        self.assertIn("ChromeExtension:1.2.3", plan["browser_backend_version"])
         self.assertNotIn("Playwright", plan["browser_backend_version"])
         self.assertTrue(plan["run_clock_starts_after_extension_pairing"])
         self.assertTrue(plan["extension_pairing_required"])
@@ -345,7 +346,8 @@ class TikTokTests(unittest.TestCase):
         )
         self.assertEqual([r["id"] for r in events], ["100", "200", "201", "203", "202"])
         self.assertEqual(events[2]["parent_comment_id"], "200")
-        self.assertGreater(client.page.mouse.wheel.await_count, 0)
+        self.assertGreater(client.page.locator.return_value.evaluate_all.await_count, 0)
+        client.page.mouse.wheel.assert_not_awaited()
         self.assertIn("source_comment_pagination_exhausted", client.operation_warnings)
 
     def test_all_comments_survive_more_than_three_idle_rounds_and_wait_for_replies(

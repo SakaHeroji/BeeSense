@@ -11,7 +11,6 @@ tags:
 # AI synthesis interpretation
 
 ## Connections
-- [[Filters preserve full-model memberships and scores]] - `conceptually_related_to` [INFERRED]
 - [[Gemini topic narratives]] - `rationale_for` [EXTRACTED]
 - [[Kalimat dan deskripsi topik melalui Gemini]] - `references` [EXTRACTED]
 

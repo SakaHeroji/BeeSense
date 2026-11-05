@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.09
 members: 34
 ---
 
 # Rencana Produk dan Survei
 
-**Cohesion:** 0.09 - loosely connected
 **Members:** 34 nodes
 
 ## Members

@@ -12,8 +12,6 @@ tags:
 # useClock()
 
 ## Connections
-- [[PlatformPage()]] - `calls` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[TransactionMigration()]] - `calls` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[hooks.ts]] - `contains` [EXTRACTED]

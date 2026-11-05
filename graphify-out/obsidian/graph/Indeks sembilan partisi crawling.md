@@ -12,7 +12,6 @@ tags:
 # Indeks sembilan partisi crawling
 
 ## Connections
-- [[BeeSense]] - `references` [EXTRACTED]
 - [[Indeks output BeeSense]] - `references` [EXTRACTED]
 - [[Native ID unik global lintas seluruh tanggal]] - `references` [EXTRACTED]
 - [[Obsidian Output Social Media Per Tanggal]] - `references` [EXTRACTED]

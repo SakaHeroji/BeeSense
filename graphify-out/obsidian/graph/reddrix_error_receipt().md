@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Kuota Harian Scweet"
-location: "L220"
+location: "L221"
 tags:
   - graphify/code
   - graphify/EXTRACTED

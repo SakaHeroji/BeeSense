@@ -1,8 +1,8 @@
 ---
-source_file: "Crawler/Frontend/scripts/sync-config.mjs"
+source_file: "Crawler/Frontend/tsconfig.json"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L60"
+location: "L3"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # target
 
 ## Connections
-- [[sync-config.mjs]] - `contains` [EXTRACTED]
+- [[compilerOptions]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -1,20 +1,20 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Penyaringan Relevansi dan Narasi Topik"
+community: "Verifikasi Dataset Publik"
 location: "L131"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Verifikasi_Dataset_Publik
 ---
 
 # published_relevance_files()
 
 ## Connections
-- [[.load_decisions()]] - `calls` [EXTRACTED]
 - [[Bind a separately published relevance dataset to the active fitted mask.]] - `rationale_for` [EXTRACTED]
-- [[verify()_1]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[verify()_2]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/code #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik

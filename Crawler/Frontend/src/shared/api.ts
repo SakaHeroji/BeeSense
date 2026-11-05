@@ -1,6 +1,7 @@
-import type { Api, Config, Job, Plan } from './types';
+import type { Api, Config, Job, Plan, TikTokConnectorSession } from './types';
 import { demoMode, projectId, redactConfig } from './domain';
 import { demoApi } from './demo';
+import { validateConnectorSession } from './tiktok-connector';
 
 export class ApiError extends Error {
   constructor(
@@ -52,7 +53,17 @@ const post = <T>(path: string, data: unknown, key?: string) =>
     headers: key ? { 'Idempotency-Key': key } : {},
   });
 const jobPath = (id: string) => `/acquisition-jobs/${encodeURIComponent(id)}`;
+const connectorPath = (id: string) => `${jobPath(id)}/tiktok-connector`;
+const connection = async (id: string, suffix = '', action = false) => {
+  const result = action
+    ? await post<TikTokConnectorSession>(connectorPath(id) + suffix, {})
+    : await request<TikTokConnectorSession>(connectorPath(id));
+  return validateConnectorSession(result, id, window.location.origin);
+};
 export const httpApi: Api = {
+  tiktokConnector: (id) => connection(id),
+  renewTikTokConnector: (id) => connection(id, '/pairing', true),
+  resumeTikTokConnector: (id) => connection(id, '/resume', true),
   prepareTransactionMigration: (job, platform, target) =>
     post(`${jobPath(job.id)}/platforms/${platform}/migration-plans`, {
       dataset_id: job.dataset!.id,

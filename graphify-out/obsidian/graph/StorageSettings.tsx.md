@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Button()]] - `imports` [EXTRACTED]
 - [[Field()]] - `imports` [EXTRACTED]
-- [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[StorageConfig]] - `imports` [EXTRACTED]
 - [[StorageSettings()]] - `contains` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]

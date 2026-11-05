@@ -18,6 +18,7 @@ tags:
 - [[nativeId()]] - `contains` [EXTRACTED]
 - [[pageOperation()]] - `contains` [EXTRACTED]
 - [[parsePublicJson()]] - `contains` [EXTRACTED]
+- [[popup.mjs]] - `imports_from` [EXTRACTED]
 - [[retryAfter()]] - `contains` [EXTRACTED]
 - [[sourceComments()]] - `contains` [EXTRACTED]
 - [[sourceHasMore()]] - `contains` [EXTRACTED]

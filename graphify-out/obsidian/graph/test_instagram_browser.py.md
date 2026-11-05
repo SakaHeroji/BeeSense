@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_browser.py"
 type: "code"
-community: "Batas Crawler Opsional"
+community: "Konfigurasi Crawler Universal"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # test_instagram_browser.py
@@ -21,4 +21,4 @@ tags:
 - [[records()_1]] - `imports` [EXTRACTED]
 - [[standalone_config()]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

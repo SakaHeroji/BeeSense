@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Pengujian Narasi Gemini"
 location: "L87"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # json_write()
@@ -23,4 +23,4 @@ tags:
 - [[social_nlp.py]] - `contains` [EXTRACTED]
 - [[topic_sentence_export.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

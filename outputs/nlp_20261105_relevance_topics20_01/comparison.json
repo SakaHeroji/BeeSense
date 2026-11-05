@@ -1,0 +1,618 @@
+[
+  {
+    "candidate": "sbert_umap_dbscan_eps0.1_min3",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.1,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.566373320981936,
+    "noise_fraction": 0.43362667901806395,
+    "largest_cluster_fraction": 0.09699051357540071,
+    "silhouette_cosine": 0.059795498847961426,
+    "stability_ari": 0.46605145087451555,
+    "selection_score": 0.22178880602329415,
+    "eligible": false,
+    "seconds": 1.1532194550018176,
+    "silhouette_sample_assigned": 1010,
+    "stability_union_points": 6901,
+    "dbscan_clusters": 511,
+    "alternate_dbscan_clusters": 501,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.1_min5",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.1,
+      "min_samples": 5,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.4456692913385827,
+    "noise_fraction": 0.5543307086614173,
+    "largest_cluster_fraction": 0.09249636250259821,
+    "silhouette_cosine": 0.07544519752264023,
+    "stability_ari": 0.5313073351829531,
+    "selection_score": 0.21985139212541438,
+    "eligible": false,
+    "seconds": 0.4628340989984281,
+    "silhouette_sample_assigned": 789,
+    "stability_union_points": 5460,
+    "dbscan_clusters": 236,
+    "alternate_dbscan_clusters": 235,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.1_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.1,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.2933765632237147,
+    "noise_fraction": 0.7066234367762854,
+    "largest_cluster_fraction": 0.0947268708556994,
+    "silhouette_cosine": 0.13389727473258972,
+    "stability_ari": 0.5590762593301086,
+    "selection_score": null,
+    "eligible": false,
+    "seconds": 0.6288517169996339,
+    "silhouette_sample_assigned": 511,
+    "stability_union_points": 3655,
+    "dbscan_clusters": 109,
+    "alternate_dbscan_clusters": 111,
+    "topic_count_eligible": true,
+    "geometry_eligible": false,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_geometry_constraints"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.15_min3",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.15,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.7714682723483094,
+    "noise_fraction": 0.2285317276516906,
+    "largest_cluster_fraction": 0.10458693563880883,
+    "silhouette_cosine": 0.06015321612358093,
+    "stability_ari": 0.6051692604534176,
+    "selection_score": 0.29485633459703287,
+    "eligible": false,
+    "seconds": 2.1870665560018097,
+    "silhouette_sample_assigned": 1392,
+    "stability_union_points": 8907,
+    "dbscan_clusters": 400,
+    "alternate_dbscan_clusters": 389,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.15_min5",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.15,
+      "min_samples": 5,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.6790180639184807,
+    "noise_fraction": 0.32098193608151926,
+    "largest_cluster_fraction": 0.09208731241473397,
+    "silhouette_cosine": 0.06447654962539673,
+    "stability_ari": 0.6685452118967595,
+    "selection_score": 0.29525745769883044,
+    "eligible": false,
+    "seconds": 0.6174853230004373,
+    "silhouette_sample_assigned": 1220,
+    "stability_union_points": 7889,
+    "dbscan_clusters": 222,
+    "alternate_dbscan_clusters": 223,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.15_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.15,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.5159796201945345,
+    "noise_fraction": 0.48402037980546553,
+    "largest_cluster_fraction": 0.10215439856373429,
+    "silhouette_cosine": 0.08879873156547546,
+    "stability_ari": 0.6557853941686391,
+    "selection_score": 0.2688342930434862,
+    "eligible": false,
+    "seconds": 0.43716700799996033,
+    "silhouette_sample_assigned": 925,
+    "stability_union_points": 6041,
+    "dbscan_clusters": 122,
+    "alternate_dbscan_clusters": 114,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.2_min3",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.2,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.8840203798054654,
+    "noise_fraction": 0.11597962019453456,
+    "largest_cluster_fraction": 0.16661427224143352,
+    "silhouette_cosine": 0.03952789679169655,
+    "stability_ari": 0.4836200995543861,
+    "selection_score": 0.2744741616602404,
+    "eligible": false,
+    "seconds": 0.7755698399996618,
+    "silhouette_sample_assigned": 1591,
+    "stability_union_points": 9945,
+    "dbscan_clusters": 261,
+    "alternate_dbscan_clusters": 252,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.2_min5",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.2,
+      "min_samples": 5,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.8180639184807781,
+    "noise_fraction": 0.18193608151922191,
+    "largest_cluster_fraction": 0.12739214132034876,
+    "silhouette_cosine": 0.06278162449598312,
+    "stability_ari": 0.6411734604360597,
+    "selection_score": 0.3138185819273953,
+    "eligible": true,
+    "seconds": 0.6625130590000481,
+    "silhouette_sample_assigned": 1467,
+    "stability_union_points": 9266,
+    "dbscan_clusters": 154,
+    "alternate_dbscan_clusters": 148,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": 0.46660336200270897,
+    "coherence_status": "passed",
+    "coherence_topics": 20
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.2_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.2,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.7008800370541918,
+    "noise_fraction": 0.2991199629458082,
+    "largest_cluster_fraction": 0.10401797515199578,
+    "silhouette_cosine": 0.07318034768104553,
+    "stability_ari": 0.6710034457323331,
+    "selection_score": 0.30365725386780995,
+    "eligible": false,
+    "seconds": 0.5582947470029467,
+    "silhouette_sample_assigned": 1252,
+    "stability_union_points": 8062,
+    "dbscan_clusters": 106,
+    "alternate_dbscan_clusters": 97,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.25_min3",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.25,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.944048170449282,
+    "noise_fraction": 0.05595182955071798,
+    "largest_cluster_fraction": 0.5995486213325484,
+    "silhouette_cosine": -0.06419585645198822,
+    "stability_ari": 0.6781760893278479,
+    "selection_score": null,
+    "eligible": false,
+    "seconds": 0.7377060990002065,
+    "silhouette_sample_assigned": 1703,
+    "stability_union_points": 10442,
+    "dbscan_clusters": 138,
+    "alternate_dbscan_clusters": 141,
+    "topic_count_eligible": true,
+    "geometry_eligible": false,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_geometry_constraints"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.25_min5",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.25,
+      "min_samples": 5,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.9075497915701713,
+    "noise_fraction": 0.09245020842982865,
+    "largest_cluster_fraction": 0.6072267020516484,
+    "silhouette_cosine": -0.03361331671476364,
+    "stability_ari": 0.673975585829737,
+    "selection_score": null,
+    "eligible": false,
+    "seconds": 0.7241919219995907,
+    "silhouette_sample_assigned": 1641,
+    "stability_union_points": 10127,
+    "dbscan_clusters": 92,
+    "alternate_dbscan_clusters": 84,
+    "topic_count_eligible": true,
+    "geometry_eligible": false,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_geometry_constraints"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.25_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.25,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.8239925891616489,
+    "noise_fraction": 0.17600741083835114,
+    "largest_cluster_fraction": 0.1996627318718381,
+    "silhouette_cosine": 0.051804088056087494,
+    "stability_ari": 0.6271822202445066,
+    "selection_score": 0.30600615422327015,
+    "eligible": false,
+    "seconds": 0.6833989570004633,
+    "silhouette_sample_assigned": 1493,
+    "stability_union_points": 9279,
+    "dbscan_clusters": 72,
+    "alternate_dbscan_clusters": 68,
+    "topic_count_eligible": true,
+    "geometry_eligible": true,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_below_passing_score_band"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.3_min3",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.3,
+      "min_samples": 3,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.9748957850856879,
+    "noise_fraction": 0.02510421491431214,
+    "largest_cluster_fraction": 0.8190801976434816,
+    "silhouette_cosine": -0.10985497385263443,
+    "stability_ari": 0.7551480816202839,
+    "selection_score": null,
+    "eligible": false,
+    "seconds": 0.7456256740006211,
+    "silhouette_sample_assigned": 1759,
+    "stability_union_points": 10641,
+    "dbscan_clusters": 82,
+    "alternate_dbscan_clusters": 80,
+    "topic_count_eligible": true,
+    "geometry_eligible": false,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_geometry_constraints"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.3_min5",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.3,
+      "min_samples": 5,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.9566465956461324,
+    "noise_fraction": 0.043353404353867586,
+    "largest_cluster_fraction": 0.6602110971240438,
+    "silhouette_cosine": -0.063935786485672,
+    "stability_ari": 0.4771036713752331,
+    "selection_score": null,
+    "eligible": false,
+    "seconds": 0.7226311890008219,
+    "silhouette_sample_assigned": 1725,
+    "stability_union_points": 10480,
+    "dbscan_clusters": 57,
+    "alternate_dbscan_clusters": 46,
+    "topic_count_eligible": true,
+    "geometry_eligible": false,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_geometry_constraints"
+  },
+  {
+    "candidate": "sbert_umap_dbscan_eps0.3_min10",
+    "parameters": {
+      "algorithm": "DBSCAN",
+      "eps": 0.3,
+      "min_samples": 10,
+      "metric": "euclidean",
+      "fit_space": "UMAP_of_normalized_Sbert_embeddings",
+      "umap": {
+        "n_neighbors": 15,
+        "n_components": 10,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "umap_seeds": [
+        42,
+        43
+      ],
+      "neighborhood": "sparse_radius_graph",
+      "topic_reduction": "sentence_weighted_ward",
+      "target_topics": 20
+    },
+    "clusters": 20,
+    "coverage": 0.9061602593793423,
+    "noise_fraction": 0.0938397406206577,
+    "largest_cluster_fraction": 0.6216520139030873,
+    "silhouette_cosine": -0.05501005798578262,
+    "stability_ari": 0.6467454834991413,
+    "selection_score": null,
+    "eligible": false,
+    "seconds": 0.6992145969998091,
+    "silhouette_sample_assigned": 1638,
+    "stability_union_points": 10035,
+    "dbscan_clusters": 43,
+    "alternate_dbscan_clusters": 37,
+    "topic_count_eligible": true,
+    "geometry_eligible": false,
+    "coherence_cv": null,
+    "coherence_status": "not_evaluated_geometry_constraints"
+  }
+]

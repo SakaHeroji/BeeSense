@@ -15,6 +15,7 @@ tags:
 - [[.test_instagram_parent_identity_and_explanation_counts()]] - `calls` [EXTRACTED]
 - [[.test_platform_composition_can_reverse_pooled_direction()]] - `calls` [EXTRACTED]
 - [[.test_single_thread_and_small_sample_are_not_declared_a_trend()]] - `calls` [EXTRACTED]
+- [[.test_tiktok_native_roots_and_explanations_include_comments_and_replies()]] - `calls` [EXTRACTED]
 - [[SocialNLPClusterer_1]] - `calls` [EXTRACTED]
 - [[profile()]] - `calls` [EXTRACTED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]

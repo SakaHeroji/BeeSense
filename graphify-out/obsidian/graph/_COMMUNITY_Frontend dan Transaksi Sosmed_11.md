@@ -1,28 +1,40 @@
 ---
 type: community
-cohesion: 0.22
-members: 13
+members: 27
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 13 nodes
+**Members:** 27 nodes
 
 ## Members
-- [[.constructor()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[ApiError]] - code - Crawler/Frontend/src/shared/api.ts
-- [[Job]] - code - Crawler/Frontend/src/shared/types.ts
-- [[Plan]] - code - Crawler/Frontend/src/shared/types.ts
-- [[api.test.ts]] - code - Crawler/Frontend/src/test/api.test.ts
-- [[api.ts]] - code - Crawler/Frontend/src/shared/api.ts
-- [[base]] - code - Crawler/Frontend/src/shared/api.ts
-- [[fixture()_1]] - code - Crawler/Frontend/src/test/transaction.test.ts
-- [[httpApi]] - code - Crawler/Frontend/src/shared/api.ts
-- [[jobPath()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[post()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[request()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[transaction.test.ts]] - code - Crawler/Frontend/src/test/transaction.test.ts
+- [[@testing-libraryjest-dom_2]] - concept - Crawler/Frontend/tsconfig.json
+- [[DOM]] - concept - Crawler/Frontend/tsconfig.json
+- [[DOM.Iterable]] - concept - Crawler/Frontend/tsconfig.json
+- [[ES2022]] - concept - Crawler/Frontend/tsconfig.json
+- [[allowImportingTsExtensions]] - code - Crawler/Frontend/tsconfig.json
+- [[compilerOptions]] - code - Crawler/Frontend/tsconfig.json
+- [[esModuleInterop]] - code - Crawler/Frontend/tsconfig.json
+- [[include]] - code - Crawler/Frontend/tsconfig.json
+- [[isolatedModules]] - code - Crawler/Frontend/tsconfig.json
+- [[jsx]] - code - Crawler/Frontend/tsconfig.json
+- [[lib]] - code - Crawler/Frontend/tsconfig.json
+- [[module]] - code - Crawler/Frontend/tsconfig.json
+- [[moduleResolution]] - code - Crawler/Frontend/tsconfig.json
+- [[noEmit]] - code - Crawler/Frontend/tsconfig.json
+- [[noUnusedLocals]] - code - Crawler/Frontend/tsconfig.json
+- [[noUnusedParameters]] - code - Crawler/Frontend/tsconfig.json
+- [[resolveJsonModule]] - code - Crawler/Frontend/tsconfig.json
+- [[skipLibCheck]] - code - Crawler/Frontend/tsconfig.json
+- [[src]] - concept - Crawler/Frontend/tsconfig.json
+- [[strict]] - code - Crawler/Frontend/tsconfig.json
+- [[target]] - code - Crawler/Frontend/tsconfig.json
+- [[tsconfig.json]] - code - Crawler/Frontend/tsconfig.json
+- [[types]] - code - Crawler/Frontend/tsconfig.json
+- [[vite.config.ts]] - concept - Crawler/Frontend/tsconfig.json
+- [[viteclient]] - concept - Crawler/Frontend/tsconfig.json
+- [[vitest.config.ts]] - concept - Crawler/Frontend/tsconfig.json
+- [[vitestglobals]] - concept - Crawler/Frontend/tsconfig.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,18 +42,3 @@ members: 13
 TABLE source_file, type FROM #community/Frontend_dan_Transaksi_Sosmed
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 8 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_5]]
-- 8 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_2]]
-- 6 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed]]
-- 6 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_4]]
-- 5 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_3]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
-
-## Top bridge nodes
-- [[api.ts]] - degree 23, connects to 6 communities
-- [[transaction.test.ts]] - degree 12, connects to 4 communities
-- [[Job]] - degree 8, connects to 4 communities
-- [[Plan]] - degree 5, connects to 3 communities
-- [[api.test.ts]] - degree 6, connects to 2 communities

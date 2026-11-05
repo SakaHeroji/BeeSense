@@ -26,6 +26,7 @@ import type { FieldError, JobStatus, Platform } from './types';
 
 export const statusLabels: Record<JobStatus, string> = {
   QUEUED: 'Dalam antrean',
+  WAITING_CONNECTOR: 'Menunggu plugin',
   RUNNING: 'Berjalan',
   STOP_REQUESTED: 'Menghentikan',
   FINALIZING: 'Finalisasi',

@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/generate_topic_narratives.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L15"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # enrich_run()
@@ -22,4 +22,4 @@ tags:
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[test_topic_narratives.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

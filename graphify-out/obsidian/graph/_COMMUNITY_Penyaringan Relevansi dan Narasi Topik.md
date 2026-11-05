@@ -1,71 +1,55 @@
 ---
 type: community
-cohesion: 0.08
-members: 56
+members: 42
 ---
 
 # Penyaringan Relevansi dan Narasi Topik
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 56 nodes
+**Members:** 42 nodes
 
 ## Members
-- [[After-filtering clustering branch]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Alur clustering sebelum dan setelah penyaringan]] - document - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Before-filtering clustering branch]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Candidate selection and publication gate]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Cara kerja BeeSense]] - document - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Coherence c_v protocol]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[CrawlerBackendsocial_crawler.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[CrawlerBackendsocial_export.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[CrawlerFrontend simulation]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[CrawlerFrontendsrcsharedapi.ts]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Cross-corpus comparison limits]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[DBSCAN parameter grid]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Dashboardapp.py]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Facebook — UIsimulation only]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Fitting without neural fine-tuning]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Floorplan health limits]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Floorplan 139 files, six workflows, seven introduction stops]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Frontend backend connection unimplemented]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Gemini explains fitted topics]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Instagram — implemented Instaloader backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[MachineLearningsource_roots.py and build_units()]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[MachineLearningtopic_narratives.py_1]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Native-identity merge and source audit]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Noise remains outside topics]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Operator-run artifact workflow]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Prepared corpus 53,332 occurrences, 52,450 unique texts]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Pretrained multilingual SBERT]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Reddit — implemented Reddrix backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Saved-snapshot dashboard runtime]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[SocialNLPClusterer (MachineLearningsocial_nlp.py)]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[SocialNLPClusterer.fit_excel() pipeline]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[SocialNLPClusterer.prepare_excel()]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Threads — UIsimulation only]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[TikTok — UIsimulation only]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Two-seed UMAP projection]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Verified Cloud release]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[Verified embedding-subset reuse]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Verified native context selection]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Versioned snapshot bundle and manifest]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[Weighted Ward topic reduction]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[XTwitter — implemented Scweet backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[YouTube — implemented yt-dlp backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[_apply_context_relevance()]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[c-TF-IDF topic terms]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[configdashboard.json]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[outputsnlp_20261102_relevance_topics20_01]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[outputsnlp_20261102_relevance_topics20_gemini_02]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[outputsnlp_20261102_twitter_topics20_gemini_01]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[outputsrelevance_20261102_01]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[outputssocial_20261102_combined_twitter_01social_data.xlsx]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[scriptsfilter_context_relevance.py]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[scriptsgenerate_topic_narratives.py]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
-- [[scriptsmerge_social_datasets.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
-- [[streamlit_apps.py_1]] - code - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[.__call__()]] - code - MachineLearning/relevance_semantic.py
+- [[.__init__()_6]] - code - MachineLearning/context_relevance.py
+- [[.__init__()_7]] - code - MachineLearning/relevance_semantic.py
+- [[._scores()]] - code - MachineLearning/context_relevance.py
+- [[._validate()]] - code - MachineLearning/context_relevance.py
+- [[.build_units()]] - code - MachineLearning/context_relevance.py
+- [[.classify_many()]] - code - MachineLearning/context_relevance.py
+- [[.close()]] - code - MachineLearning/context_relevance.py
+- [[.encode()]] - code - MachineLearning/relevance_semantic.py
+- [[.filter_snapshot()]] - code - MachineLearning/context_relevance.py
+- [[.load_decisions()]] - code - MachineLearning/context_relevance.py
+- [[.make()]] - code - tests/nlp/test_context_relevance.py
+- [[.predictor()]] - code - tests/nlp/test_context_relevance.py
+- [[.setUp()_5]] - code - tests/nlp/test_context_relevance.py
+- [[.snapshot()]] - code - tests/nlp/test_context_relevance.py
+- [[.tearDown()_1]] - code - tests/nlp/test_context_relevance.py
+- [[.test_cache_resumes_and_configuration_changes_invalidate_it()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_checksum_tampering_is_rejected()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_direct_relevance_and_unrelated_target_never_inherit_root()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_explicit_configuration_does_not_inherit_another_corpus_mask()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_filter_dataset_is_immutable_and_bound_to_entire_source()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_invalid_configuration_and_scores_fail_closed()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_same_ambiguous_sentence_can_have_different_context_decisions()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_training_consumes_mask_without_modifying_source_text()]] - code - tests/nlp/test_context_relevance.py
+- [[.test_weak_short_match_requires_context()]] - code - tests/nlp/test_context_relevance.py
+- [[Classify target sentences; parent context may rescue only ambiguous text.      U]] - rationale - MachineLearning/context_relevance.py
+- [[ContextRelevanceFilter]] - code - MachineLearning/context_relevance.py
+- [[Filter a verified existing corpus into a new auditable relevance dataset.]] - rationale - scripts/filter_context_relevance.py
+- [[Local, auditable zero-shot relevance decisions before topic clustering.  Model s]] - rationale - MachineLearning/context_relevance.py
+- [[LocalSemanticBackend]] - code - MachineLearning/relevance_semantic.py
+- [[Reference profile and lazy local SBERT backend for relevance filtering.]] - rationale - MachineLearning/relevance_semantic.py
+- [[RelevanceTests]] - code - tests/nlp/test_context_relevance.py
+- [[Resolve roots from native URLs; never match conversations by title.]] - rationale - MachineLearning/context_relevance.py
+- [[SBERT prototypes; scores are cosine similarities, never probabilities.]] - rationale - MachineLearning/relevance_semantic.py
+- [[Units contain target ``sentence`` and optional audited parentpost text.]] - rationale - MachineLearning/context_relevance.py
+- [[Write a new, checksum-bound decision dataset; never overwrite input.]] - rationale - MachineLearning/context_relevance.py
+- [[checksum()_1]] - code - MachineLearning/context_relevance.py
+- [[context_relevance.py]] - code - MachineLearning/context_relevance.py
+- [[digest()_2]] - code - MachineLearning/context_relevance.py
+- [[filter_context_relevance.py]] - code - scripts/filter_context_relevance.py
+- [[main()_2]] - code - scripts/filter_context_relevance.py
+- [[relevance_semantic.py]] - code - MachineLearning/relevance_semantic.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -75,15 +59,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
-- 1 edge to [[_COMMUNITY_thread_url]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_3]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 11 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 2 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
+- 1 edge to [[_COMMUNITY_thread_url_1]]
 
 ## Top bridge nodes
-- [[Alur clustering sebelum dan setelah penyaringan]] - degree 43, connects to 1 community
-- [[CrawlerBackendsocial_crawler.py]] - degree 8, connects to 1 community
-- [[Candidate selection and publication gate]] - degree 6, connects to 1 community
-- [[Weighted Ward topic reduction]] - degree 6, connects to 1 community
-- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)]] - degree 5, connects to 1 community
+- [[RelevanceTests]] - degree 18, connects to 2 communities
+- [[filter_context_relevance.py]] - degree 8, connects to 2 communities
+- [[ContextRelevanceFilter]] - degree 17, connects to 1 community
+- [[LocalSemanticBackend]] - degree 11, connects to 1 community
+- [[context_relevance.py]] - degree 8, connects to 1 community

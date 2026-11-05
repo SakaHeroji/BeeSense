@@ -12,8 +12,7 @@ tags:
 
 ## Connections
 - [[AI synthesis interpretation]] - `references` [EXTRACTED]
-- [[BeeSense]] - `references` [EXTRACTED]
-- [[Dashboard BeeSense]] - `references` [EXTRACTED]
+- [[BeeSense separate crawler, NLP and artifact-reading Streamlit dashboard]] - `references` [EXTRACTED]
 - [[Fingerprinted receipt cache]] - `references` [EXTRACTED]
 - [[Gemini generateContent transport]] - `references` [EXTRACTED]
 - [[Gemini model documentation]] - `cites` [EXTRACTED]
@@ -23,7 +22,6 @@ tags:
 - [[MachineLearningtopic_narratives.py]] - `references` [EXTRACTED]
 - [[Offline narrative validation]] - `references` [EXTRACTED]
 - [[Publication failure and retry policy]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer dan metode clustering]] - `references` [EXTRACTED]
 - [[SocialNLPClusterer.save()]] - `references` [EXTRACTED]
 - [[Top keywords and representative sentences]] - `references` [EXTRACTED]
 - [[beesense-topic-id2]] - `references` [EXTRACTED]

@@ -1,28 +1,30 @@
 ---
 type: community
-cohesion: 0.17
-members: 13
+members: 17
 ---
 
 # Integrasi Default Instaloader
 
-**Cohesion:** 0.17 - loosely connected
-**Members:** 13 nodes
+**Members:** 17 nodes
 
 ## Members
-- [[2.5.0pagination waits for has_morefalse and observed-parent reply exhaustion;search idleexplicit caps persist;user stop prevents new live test]] - concept - docs/crawler/CONFIGURATION.md
-- [[Akuisisi Twitter 2 November (riwayat)]] - document - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[Display Reddrix adaptif]] - concept - docs/crawler/REDDIT_CRAWLER.md
-- [[Five enabled platforms,target1000each,null durationcount caps,root filters and preserved available-comment context]] - concept - docs/crawler/CONFIGURATION.md
-- [[Jeda HTTP, window pacing dan cooldown tetap berlaku]] - rationale - graphify-out/obsidian/Target 1000 Post Tanpa Batas Waktu.md
-- [[One social_crawler.json business configuration shared by all runners]] - document - docs/crawler/CONFIGURATION.md
-- [[Pipeline Instagram 30 Oktober (riwayat)]] - document - docs/crawler/INSTAGRAM_PIPELINE_20261030.md
-- [[Reddit 1000 post, durasi dan cap jumlah null]] - concept - docs/crawler/REDDIT_CRAWLER.md
-- [[RedditCrawler pembungkus Reddrix]] - concept - docs/crawler/REDDIT_CRAWLER.md
-- [[Reddrix teks render dan kelengkapan tidak diklaim]] - rationale - docs/crawler/REDDIT_CRAWLER.md
-- [[Riwayat X 333 post dari lima batch]] - concept - docs/crawler/TWITTER_ACQUISITION_20261102.md
-- [[TwitterCrawler Scweet]] - concept - docs/crawler/TWITTER_CRAWLER.md
-- [[scweet_limits.configure_daily_quotas]] - concept - docs/crawler/TWITTER_CRAWLER.md
+- [[Audit berheader tanpa data TikTok; arsip tetap 34785 ID unik]] - concept - graphify-out/obsidian/TikTok-Api Uji 500 Post 20261103.md
+- [[Obsidian TikTokCrawler Omkar — riwayat yang sudah diganti]] - document - graphify-out/obsidian/TikTokCrawler Omkar.md
+- [[Obsidian TikTokCrawler PyTok — riwayat]] - document - graphify-out/obsidian/TikTokCrawler PyTok.md
+- [[Obsidian trial PyTok 0500 CAPTCHA_REQUIRED 159,81 detik — riwayat]] - document - graphify-out/obsidian/TikTok PyTok Uji 500 Post 20261103.md
+- [[Obsidian uji TikTok-Api aktif 0500 ACCESS_BLOCKED 33,27 detik]] - document - graphify-out/obsidian/TikTok-Api Uji 500 Post 20261103.md
+- [[Omkar gagal memperoleh target dan bukan implementasi aktif]] - concept - graphify-out/obsidian/TikTokCrawler Omkar.md
+- [[Pengguna kembali ke TikTok-Api; PyTok tidak lagi aktif]] - concept - Crawler/Backend/Tiktok/PYTOK.md
+- [[Provenance PyTok historis, dependency sudah tidak aktif]] - document - Crawler/Backend/Tiktok/PYTOK.md
+- [[PyTok 0.3.0 revision dipin dan Camoufox 0.5.9 adalah backend trial lama]] - concept - graphify-out/obsidian/TikTokCrawler PyTok.md
+- [[PyTok historis 0500, PARTIAL CAPTCHA_REQUIRED, 159,81 detik]] - concept - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
+- [[PyTok timeout pertama, CAPTCHA worker kedua, telemetry HTTP tidak lengkap]] - rationale - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
+- [[Riwayat PyTok 0.3.0 PolyForm Noncommercial 1.0.0 AND MIT]] - concept - Crawler/Backend/Tiktok/PYTOK.md
+- [[Riwayat uji PyTok 3 November 2026]] - document - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
+- [[Tiga HTTP200, pencarian kosong; bukan bukti token kedaluwarsa]] - rationale - docs/crawler/TIKTOK_API_TRIAL_20261103.md
+- [[TikTok-Api 0500, PARTIAL ACCESS_BLOCKED setelah 33,27 detik]] - concept - docs/crawler/TIKTOK_API_TRIAL_20261103.md
+- [[Trial PyTok berhenti setelah timeout dan CAPTCHA, tanpa solverrotasi]] - concept - graphify-out/obsidian/TikTok PyTok Uji 500 Post 20261103.md
+- [[Uji backend aktif TikTok-Api 3 November 2026]] - document - docs/crawler/TIKTOK_API_TRIAL_20261103.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -30,17 +32,3 @@ members: 13
 TABLE source_file, type FROM #community/Integrasi_Default_Instaloader
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 4 edges to [[_COMMUNITY_Integrasi Default Instaloader_4]]
-- 2 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_1]]
-- 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_6]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_8]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Konektor Chrome TikTok Lokal_2]]
-
-## Top bridge nodes
-- [[One social_crawler.json business configuration shared by all runners]] - degree 13, connects to 6 communities
-- [[RedditCrawler pembungkus Reddrix]] - degree 6, connects to 2 communities
-- [[TwitterCrawler Scweet]] - degree 5, connects to 1 community
-- [[Jeda HTTP, window pacing dan cooldown tetap berlaku]] - degree 2, connects to 1 community

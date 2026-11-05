@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L276"
+location: "L282"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,7 @@ tags:
 - [[TransactionMigration()]] - `calls` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
-- [[number()_1]] - `calls` [EXTRACTED]
+- [[number()]] - `calls` [EXTRACTED]
 - [[transaction-demo.ts]] - `imports` [EXTRACTED]
 - [[validateConfig()]] - `calls` [EXTRACTED]
 

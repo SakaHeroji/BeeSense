@@ -12,7 +12,7 @@ tags:
 # _configuration()
 
 ## Connections
-- [[.__init__()_34]] - `calls` [EXTRACTED]
+- [[.__init__()_32]] - `calls` [EXTRACTED]
 - [[ValueError_2]] - `calls` [EXTRACTED]
 - [[_integer()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]

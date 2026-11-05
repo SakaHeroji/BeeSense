@@ -1,27 +1,33 @@
 ---
 type: community
-cohesion: 0.18
-members: 15
+members: 23
 ---
 
 # Capture Reddit Playwright
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 15 nodes
+**Members:** 23 nodes
 
 ## Members
-- [[.__init__()_19]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.__init__()_16]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.__init__()_17]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.accept()_1]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.debug()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[.find()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[.info()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[.test_04_unicode_offsets_boundary_and_casefold()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.validate()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.warning()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[Aho-Corasick; offsets refer to Python Unicode code points in source._1]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[KeywordMatcher_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[SafeLogger]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[Settings]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[YouTubeAdapter]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[crawl_youtube.py]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[error_code()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[load_settings()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[main()_8]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[parser()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[run()_1]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[run_worker()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[video_url()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[worker()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
@@ -34,20 +40,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 7 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 3 edges to [[_COMMUNITY_Crawler Selenium]]
-- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 9 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 6 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 4 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 2 edges to [[_COMMUNITY_Kuota Harian Scweet]]
+- 2 edges to [[_COMMUNITY_Worker Instaloader_1]]
 - 2 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
-- 1 edge to [[_COMMUNITY_Pengujian Client Instagram_1]]
-- 1 edge to [[_COMMUNITY_Struktur DOM Reddit]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_3]]
 
 ## Top bridge nodes
-- [[crawl_youtube.py]] - degree 14, connects to 5 communities
 - [[KeywordMatcher_1]] - degree 13, connects to 5 communities
-- [[YouTubeAdapter]] - degree 5, connects to 3 communities
-- [[load_settings()]] - degree 6, connects to 2 communities
-- [[.validate()]] - degree 4, connects to 1 community
+- [[run()_1]] - degree 13, connects to 3 communities
+- [[crawl_youtube.py]] - degree 14, connects to 2 communities
+- [[.accept()_1]] - degree 4, connects to 2 communities
+- [[SafeLogger]] - degree 7, connects to 1 community

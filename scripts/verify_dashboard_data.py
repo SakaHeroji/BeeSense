@@ -198,6 +198,17 @@ def verify(check_git=False):
                     "Preserved baseline checksum differs from its fitted run"
                 )
             runs[path.parent] = descriptor
+            # Keep separately published relevance decisions for historical models
+            # when the active snapshot moves to a different corpus/mask. Stored
+            # paths may point at another clone; use the outputs/<run> suffix.
+            archived_mask = (
+                archived["summary"].get("config", {}).get("relevance_artifact")
+            )
+            mask_parts = Path(archived_mask).parts if archived_mask else ()
+            if len(mask_parts) >= 2 and mask_parts[-2] == "outputs":
+                relevance_files.update(
+                    published_relevance_files(ROOT.joinpath(*mask_parts[-2:]), archived)
+                )
             # Source paths in old summaries can belong to another clone. Retain
             # versioned inputs using their repository outputs/<run>/<file> suffix.
             parts = archived_source.parts

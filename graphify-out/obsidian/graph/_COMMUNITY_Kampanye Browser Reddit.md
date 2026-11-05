@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.27
 members: 13
 ---
 
 # Kampanye Browser Reddit
 
-**Cohesion:** 0.27 - loosely connected
 **Members:** 13 nodes
 
 ## Members

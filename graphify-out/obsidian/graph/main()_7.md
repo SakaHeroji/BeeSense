@@ -1,18 +1,22 @@
 ---
-source_file: "scripts/relevance_dashboard.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Model dan Pengujian NLP"
-location: "L12"
+community: "Crawler Selenium"
+location: "L857"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Model_dan_Pengujian_NLP
+  - community/Crawler_Selenium
 ---
 
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
+- [[.error()]] - `indirect_call` [INFERRED]
+- [[.plan()_1]] - `calls` [EXTRACTED]
+- [[.run()_1]] - `calls` [EXTRACTED]
+- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Model_dan_Pengujian_NLP
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

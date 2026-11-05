@@ -12,6 +12,6 @@ tags:
 # Read every exported row back; fail on repeated IDs, wrong days or lost rows.
 
 ## Connections
-- [[verify()_2]] - `rationale_for` [EXTRACTED]
+- [[verify()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Arsip_Data_Harian

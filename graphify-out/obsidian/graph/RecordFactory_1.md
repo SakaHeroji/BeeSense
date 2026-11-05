@@ -12,11 +12,11 @@ tags:
 # RecordFactory
 
 ## Connections
-- [[.__init__()_21]] - `method` [EXTRACTED]
+- [[.__init__()_19]] - `method` [EXTRACTED]
 - [[.content()_1]] - `method` [EXTRACTED]
 - [[.key()_1]] - `method` [EXTRACTED]
 - [[.row()_1]] - `method` [EXTRACTED]
-- [[.setUp()_14]] - `calls` [EXTRACTED]
+- [[.setUp()_11]] - `calls` [EXTRACTED]
 - [[.validate()_1]] - `calls` [EXTRACTED]
 - [[RedditRecordFactory]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]

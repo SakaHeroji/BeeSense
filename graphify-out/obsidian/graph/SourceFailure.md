@@ -12,7 +12,7 @@ tags:
 # SourceFailure
 
 ## Connections
-- [[.__init__()_24]] - `method` [EXTRACTED]
+- [[.__init__()_22]] - `method` [EXTRACTED]
 - [[.fetch()_2]] - `calls` [EXTRACTED]
 - [[.fetch()_1]] - `calls` [EXTRACTED]
 - [[.handle_starttag()]] - `calls` [EXTRACTED]

@@ -1,36 +1,23 @@
 ---
 type: community
-cohesion: 0.10
-members: 21
+members: 10
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Cohesion:** 0.10 - loosely connected
-**Members:** 21 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[@eslintjs]] - code - Crawler/Frontend/package.json
-- [[@eslintjs_1]] - concept - Crawler/Frontend/package.json
-- [[@testing-libraryreact]] - code - Crawler/Frontend/package.json
-- [[@testing-libraryreact_1]] - concept - Crawler/Frontend/package.json
-- [[@vitejsplugin-react]] - code - Crawler/Frontend/package.json
-- [[@vitejsplugin-react_1]] - concept - Crawler/Frontend/package.json
-- [[devDependencies]] - code - Crawler/Frontend/package.json
-- [[eslint]] - code - Crawler/Frontend/package.json
-- [[eslint_1]] - concept - Crawler/Frontend/package.json
-- [[jsdom]] - code - Crawler/Frontend/package.json
-- [[jsdom_1]] - concept - Crawler/Frontend/package.json
-- [[prettier]] - code - Crawler/Frontend/package.json
-- [[prettier_1]] - concept - Crawler/Frontend/package.json
-- [[typescript]] - code - Crawler/Frontend/package.json
-- [[typescript_1]] - concept - Crawler/Frontend/package.json
-- [[typescript-eslint]] - code - Crawler/Frontend/package.json
-- [[typescript-eslint_1]] - concept - Crawler/Frontend/package.json
-- [[vite]] - code - Crawler/Frontend/package.json
-- [[vite_1]] - concept - Crawler/Frontend/package.json
-- [[vitest]] - code - Crawler/Frontend/package.json
-- [[vitest_1]] - concept - Crawler/Frontend/package.json
+- [[.getDerivedStateFromError()]] - code - Crawler/Frontend/src/app/App.tsx
+- [[.render()]] - code - Crawler/Frontend/src/app/App.tsx
+- [[App()]] - code - Crawler/Frontend/src/app/App.tsx
+- [[App.tsx]] - code - Crawler/Frontend/src/app/App.tsx
+- [[ErrorBoundary]] - code - Crawler/Frontend/src/app/App.tsx
+- [[JobDetail]] - code - Crawler/Frontend/src/app/App.tsx
+- [[PlatformWorkspace]] - code - Crawler/Frontend/src/app/App.tsx
+- [[client]] - code - Crawler/Frontend/src/app/App.tsx
+- [[main.tsx]] - code - Crawler/Frontend/src/main.tsx
+- [[router]] - code - Crawler/Frontend/src/app/App.tsx
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,12 +27,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_14]]
-- 1 edge to [[_COMMUNITY_Aturan React Hooks]]
-- 1 edge to [[_COMMUNITY_Dependency Pengembangan Frontend]]
-- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform]]
-- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_1]]
-- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_2]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
 
 ## Top bridge nodes
-- [[devDependencies]] - degree 16, connects to 6 communities
+- [[App.tsx]] - degree 8, connects to 1 community

@@ -12,7 +12,7 @@ tags:
 # RedditAdapter
 
 ## Connections
-- [[.__init__()_30]] - `method` [EXTRACTED]
+- [[.__init__()_28]] - `method` [EXTRACTED]
 - [[.accept()_3]] - `method` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]

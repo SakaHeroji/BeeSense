@@ -9,7 +9,7 @@ Kode dikelompokkan per komponen. `streamlit_apps.py` tetap entry point Streamlit
 | Folder | Isi |
 | --- | --- |
 | `Crawler/Frontend/` | Frontend React |
-| `Crawler/Backend/` | SocialCrawler, Reddrix, Selenium, adapter Reddit/YouTube/Instagram/Twitter |
+| `Crawler/Backend/` | SocialCrawler, Reddrix, Selenium, adapter Reddit/YouTube/Instagram/Twitter/TikTok |
 | `MachineLearning/` | Pipeline NLP dan pemuatan artifact |
 | `Dashboard/` | Implementasi dashboard Streamlit |
 | `config/` | Konfigurasi crawler dan NLP |
@@ -21,11 +21,11 @@ Kode dikelompokkan per komponen. `streamlit_apps.py` tetap entry point Streamlit
 
 Lihat [peta lokasi dan perintah](docs/PROJECT_STRUCTURE.md). Jalankan perintah dari root repository.
 
-[`SocialCrawler`](Crawler/Backend/social_crawler.py) kini memakai **Reddrix untuk Reddit** dan yt-dlp untuk YouTube, dengan display adaptif macOS/Linux dan satu kontrak Excel. [`RedditCrawler`](Crawler/Backend/reddit_crawler.py) tetap tersedia sebagai pembungkus Reddit-only dari implementasi yang sama. [Konfigurasi utama](config/social_crawler.json) tetap 3 jam; [runner Reddit mandiri](docs/crawler/REDDIT_CRAWLER.md) mewarisi durasi yang sama. Lihat [panduan gabungan](docs/crawler/SOCIAL_CRAWLER.md) dan [batas Reddrix/hasil percobaan](docs/crawler/REDDIT_CRAWLER.md).
+[`SocialCrawler`](Crawler/Backend/social_crawler.py) kini memakai **Reddrix untuk Reddit** dan yt-dlp untuk YouTube, dengan display adaptif macOS/Linux dan satu kontrak Excel. [`RedditCrawler`](Crawler/Backend/reddit_crawler.py) tetap tersedia sebagai pembungkus Reddit-only dari implementasi yang sama. [Konfigurasi utama](config/social_crawler.json) memakai `total_seconds: null` (tanpa deadline global); [runner Reddit mandiri](docs/crawler/REDDIT_CRAWLER.md) mewarisi pengaturan yang sama. Lihat [panduan gabungan](docs/crawler/SOCIAL_CRAWLER.md) dan [batas Reddrix/hasil percobaan](docs/crawler/REDDIT_CRAWLER.md).
 
 [`InstaloaderCrawler`](Crawler/Backend/instaloader_crawler.py) kini menjadi backend Instagram default **SocialCrawler 1.6.0**, dengan patch GraphQL web dan komentar NodeIterator yang sudah diuji pada 1 post/20 komentar nyata. [Pengaturan Instagram](config/social_crawler.json) tetap menargetkan 1.000 post; minimum jeda, deadline, dedup dan ekspor Excel dipertahankan. [Panduan Instaloader](docs/crawler/INSTALOADER_CRAWLER.md) memuat setup auth lokal, hasil uji dan batasnya. `InstagramCrawler` lama tetap menjadi coordinator/export adapter bersama dan tersedia untuk backend eksplisit sebelumnya.
 
-Clustering dan penelusuran percakapan YouTube/Reddit/Instagram melalui dashboard Streamlit. SocialCrawler, class NLP, dan class UI terpisah. Dashboard membaca hasil clustering tersimpan sehingga dapat dibuka tanpa crawling, login Reddit, download model, atau training ulang.
+Clustering dan penelusuran percakapan YouTube/Reddit/Instagram/X/TikTok melalui dashboard Streamlit. SocialCrawler, class NLP, dan class UI terpisah. Dashboard membaca hasil clustering tersimpan sehingga dapat dibuka tanpa crawling, login Reddit, download model, atau training ulang.
 
 `TwitterCrawler` berbasis **Scweet 5.8.2** tersedia sebagai percobaan terpisah untuk X/Twitter, dengan [konfigurasi universal](config/social_crawler.json), auth lokal, deduplikasi native ID, dan format Excel BeeSense yang sama. Lihat [panduan TwitterCrawler](docs/crawler/TWITTER_CRAWLER.md). Kini tersedia dalam **SocialCrawler 1.7.0**, memakai [bagian Twitter pada konfigurasi utama](config/social_crawler.json), root audit untuk dedup/penggabungan, serta dukungan X pada NLP dan dashboard.
 
@@ -58,7 +58,7 @@ Entry point berada di root repository: **`streamlit_apps.py`**. Setelah perubaha
 
 Pengaturan ini mengikuti [panduan deployment resmi Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy). Cloud memasang dependency dari `requirements.txt` di root, yang hanya menyertakan `requirements/dashboard.txt`; keduanya harus ikut GitHub. Runtime dashboard dipisahkan dari dependency training/crawler dan diuji pada Python 3.12 serta 3.14. Lihat [aturan dependency Cloud](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/app-dependencies).
 
-Sertakan `streamlit_apps.py`, package `Dashboard/`, `MachineLearning/__init__.py`, `MachineLearning/social_nlp.py`, `MachineLearning/topic_narratives.py`, `config/social_nlp.json`, `.streamlit/config.toml`, dan **seluruh isi snapshot aktif** `outputs/nlp_20261102_relevance_topics20_gemini_02/`, termasuk manifest, Parquet, JSON, array NumPy, dan `topic_narratives.csv`. Bundle ini juga memuat audit keputusan relevansi; dataset penyaringan terpisah dan snapshot sebelum Gemini disertakan untuk reproduksi. Excel topik–kalimat milik snapshot arsip tetap dipertahankan. `.gitignore` sudah mengizinkan file snapshot tersebut. Jalankan `python -m scripts.verify_dashboard_data --check-git` setelah staging untuk memastikan seluruh dataset yang diterbitkan masuk Git dan checksum valid. Workbook baseline/gabungan dan snapshot arsip tetap disertakan untuk audit serta CI.
+Sertakan `streamlit_apps.py`, package `Dashboard/`, `MachineLearning/__init__.py`, `MachineLearning/social_nlp.py`, `MachineLearning/topic_narratives.py`, `config/social_nlp.json`, `.streamlit/config.toml`, dan **seluruh isi snapshot aktif** `outputs/nlp_20261105_relevance_topics20_gemini_01/`, termasuk manifest, Parquet, JSON, array NumPy, dan `topic_narratives.csv`. Bundle ini juga memuat audit keputusan relevansi; dataset penyaringan terpisah dan snapshot sebelum Gemini disertakan untuk reproduksi. Excel topik–kalimat milik snapshot arsip tetap dipertahankan. `.gitignore` sudah mengizinkan file snapshot tersebut. Jalankan `python -m scripts.verify_dashboard_data --check-git` setelah staging untuk memastikan seluruh dataset yang diterbitkan masuk Git dan checksum valid. Workbook baseline/gabungan dan snapshot arsip tetap disertakan untuk audit serta CI.
 
 Cloud memakai `output_dir` relatif pada `config/social_nlp.json`. Biarkan `BEESENSE_NLP_RUN_DIR` tidak diatur agar app memakai snapshot repository; `/data/nlp_run` hanya digunakan oleh container Docker lokal. Dashboard dapat dibuka tanpa secrets, API key, model download, atau training. Dockerfile tidak digunakan oleh Community Cloud.
 
@@ -88,8 +88,13 @@ Workbook gabungan, baseline asli, run 20 topik aktif dan seluruh snapshot sebelu
 
 | Lokasi | Fungsi |
 |---|---|
-| `outputs/social_20261102_combined_twitter_01/social_data.xlsx` | Aktif: 34.764 record unik; empat platform, 0 duplikasi native ID |
-| `outputs/nlp_20261102_relevance_topics20_gemini_02/` | Aktif: 20 topik tersaring, mean c_v 0.4733; 20 deskripsi Gemini dan audit relevansi |
+| `outputs/social_20261105_combined_tiktok_01/social_data.xlsx` | Aktif: 36.233 record unik; lima platform, nol duplikat native ID |
+| `outputs/nlp_20261105_relevance_topics20_gemini_01/` | Aktif: 20 topik tersaring, mean c_v 0,4666; 20 narasi Gemini dan audit relevansi |
+| `outputs/nlp_20261105_all_social_topics20_gemini_01/` | Sebelum penyaringan: 20 topik, mean c_v 0,4346; 20 narasi Gemini |
+| `outputs/relevance_20261105_01/` | 55.257 keputusan; 11.185 kemunculan diterima, terikat checksum sumber |
+| `outputs/nlp_20261105_all_social_topics20_01/`, `outputs/nlp_20261105_relevance_topics20_01/` | Dua clustering asli sebelum penambahan narasi; file fitted dipertahankan identik |
+| `outputs/social_20261102_combined_twitter_01/social_data.xlsx` | Arsip: 34.764 record unik; empat platform, 0 duplikasi native ID |
+| `outputs/nlp_20261102_relevance_topics20_gemini_02/` | Arsip: 20 topik tersaring, mean c_v 0.4733; 20 deskripsi Gemini dan audit relevansi |
 | `outputs/relevance_20261102_01/` | 53.332 keputusan; 10.496 kemunculan diterima, terikat checksum sumber |
 | `outputs/nlp_20261102_relevance_topics20_01/` | Clustering tersaring identik sebelum penambahan Gemini |
 | `outputs/nlp_20261102_twitter_topics20_gemini_01/` | Arsip sebelum penyaringan: mean c_v 0.4243; 20 deskripsi Gemini dan Excel 48.850 kalimat |
@@ -107,7 +112,7 @@ Workbook gabungan, baseline asli, run 20 topik aktif dan seluruh snapshot sebelu
 | `outputs/nlp_20261028_sbert_dbscan_01/` | Arsip SBERT/UMAP/DBSCAN sebelum evaluasi coherence |
 | `outputs/nlp_20261028_02/` | Arsip ONNX/UMAP/HDBSCAN untuk audit/kompatibilitas |
 
-Snapshot aktif memakai **10.496 kemunculan/10.380 kalimat unik** hasil penyaringan dari 53.332 kemunculan, dengan **20 topik**, coverage **82,17%**, dan rata-rata **c_v 0.4733391691**. Sebanyak 7/20 topik masih <0,4 individual; gate berlaku pada rata-rata. CSV memuat 20 kalimat topik dan deskripsi Gemini dari 10 keyword c-TF-IDF serta 10 kalimat representatif per topik. Dashboard menyediakan audit penyaringan pada Metode & data. Keputusan meragukan tetap disimpan dan tidak masuk clustering; ambang otomatis belum dikalibrasi dengan label manusia. [Algoritma, hasil, reproduksi dan rollback](docs/machine-learning/CONTEXT_RELEVANCE.md). Hasil sebelum penyaringan tetap ada pada [arsip Twitter](docs/machine-learning/TWITTER_RETRAIN_20261102.md); skor pada korpus berbeda tidak menjadi perbandingan kualitas langsung.
+Snapshot aktif memakai **11.185 kemunculan/10.795 kalimat unik** hasil penyaringan dari 55.257 kemunculan, dengan **20 topik**, coverage **81,81%**, dan mean **c_v 0,4666033620**. Enam dari 20 topik masih <0,4 individual; gate berlaku pada rata-rata. Snapshot sebelum penyaringan memiliki 20 topik dan mean c_v **0,4346102845**. Kedua model dilatih ulang secara lokal; bobot encoder SBERT tetap pralatih. Pengguna menyetujui pengiriman 400 keyword dan 400 kalimat representatif ke Google Gemini untuk 40 narasi tersimpan. UI tidak memanggil API pada rerun. [Hasil, audit crawling parsial dan validasi](docs/machine-learning/TIKTOK_RETRAIN_20261105.md). Ambang relevansi belum dikalibrasi dengan label manusia; skor sebelum/sesudah memakai korpus berbeda dan bukan bukti kenaikan kualitas langsung.
 
 Akuisisi 29 Oktober dibatasi tiga jam: YouTube 1.188 post tersimpan/300 qualified; Reddit 98/58. Qualified memerlukan ≥10 komentar/balasan unik. Target 1.000 qualified per platform belum tercapai. [Bundle audit hari ini](outputs/social_20261029_1000_3h/summary.json) dan segmen mentah disimpan lokal, di luar allowlist dataset dashboard. Data baru tidak bertumpang tindih dengan 50 video +181 thread baseline. [Script merge](scripts/merge_social_datasets.py) mempertahankan baris sumber dan menolak duplikasi ID; provenans lokal tersedia pada `output/combined_dataset_20261029.json`.
 
@@ -146,7 +151,7 @@ python -m Crawler.Backend.social_crawler --output-dir outputs/social_run_baru
 python -m streamlit run streamlit_apps.py -- --run-dir outputs/nlp_run_baru
 ```
 
-Konfigurasi crawling aktif menargetkan **1.000 post baru per platform dalam batas pengambilan 3 jam**, bergantian YouTube/Reddit. Post dari `outputs/social_20261028_01/dataset.xlsx` dikecualikan berdasarkan ID. Reddit kini memakai backend Reddrix/headless atau virtual display; tantangan akses dilaporkan tanpa solver CAPTCHA. Progres tersedia pada `<output-dir>.progress.json`. Untuk HTTP 429 yang terverifikasi, cooldown awal 360 detik mengikuti Retry-After yang lebih lama dan maksimal 3 retry dalam deadline yang sama. CAPTCHA manual di Chrome hanya berlaku bila backend Playwright dipilih eksplisit. Lihat [panduan dan batas backend](docs/crawler/SOCIAL_CRAWLER.md#reddit) serta [dasar pengamatan cooldown](docs/crawler/SOCIAL_CRAWLER.md#cooldown-http-429-untuk-crawl-berikutnya).
+Konfigurasi crawling aktif menargetkan **minimal 1.000 post per platform tanpa deadline global** (`total_seconds: null`); semua komentar/balasan yang tersedia diminta tanpa cap jumlah. Deadline dapat dipasang per run. Jeda dan penanganan batas dari platform tetap berlaku. Penjadwalan default bergantian YouTube/Reddit. Post dari `outputs/social_20261028_01/dataset.xlsx` dikecualikan berdasarkan ID. Reddit kini memakai backend Reddrix/headless atau virtual display; tantangan akses dilaporkan tanpa solver CAPTCHA. Progres tersedia pada `<output-dir>.progress.json`. Untuk HTTP 429 yang terverifikasi, cooldown awal 360 detik mengikuti Retry-After yang lebih lama dan maksimal 3 retry dalam deadline yang sama. CAPTCHA manual di Chrome hanya berlaku bila backend Playwright dipilih eksplisit. Lihat [panduan dan batas backend](docs/crawler/SOCIAL_CRAWLER.md#reddit) serta [dasar pengamatan cooldown](docs/crawler/SOCIAL_CRAWLER.md#cooldown-http-429-untuk-crawl-berikutnya).
 
 Untuk training SBERT native, gunakan environment tersendiri:
 

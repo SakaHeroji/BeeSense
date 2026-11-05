@@ -12,7 +12,7 @@ tags:
 # InstagramBrowserWorker
 
 ## Connections
-- [[.__init__()_11]] - `method` [EXTRACTED]
+- [[.__init__()_9]] - `method` [EXTRACTED]
 - [[.call()_1]] - `method` [EXTRACTED]
 - [[.close()_1]] - `method` [EXTRACTED]
 - [[Historical interruptedChrome trial before1.5integration]] - `references` [EXTRACTED]

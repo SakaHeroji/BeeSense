@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L855"
+location: "L856"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,13 +12,13 @@ tags:
 # SocialCrawler
 
 ## Connections
-- [[.__init__()_16]] - `calls` [EXTRACTED]
-- [[.__init__()_45]] - `method` [EXTRACTED]
+- [[.__init__()_14]] - `calls` [EXTRACTED]
+- [[.__init__()_39]] - `method` [EXTRACTED]
 - [[._browser_call()]] - `method` [EXTRACTED]
 - [[._checkpoint_items()_1]] - `method` [EXTRACTED]
 - [[._delay()]] - `method` [EXTRACTED]
 - [[._dom_events()]] - `method` [EXTRACTED]
-- [[._event()_1]] - `method` [EXTRACTED]
+- [[._event()]] - `method` [EXTRACTED]
 - [[._execute()_1]] - `method` [EXTRACTED]
 - [[._existing_posts()]] - `method` [EXTRACTED]
 - [[._legacy_settings()_1]] - `method` [EXTRACTED]
@@ -30,7 +30,7 @@ tags:
 - [[.crawler()_1]] - `calls` [EXTRACTED]
 - [[.crawler()_3]] - `calls` [EXTRACTED]
 - [[.export_compact()]] - `method` [EXTRACTED]
-- [[.plan()_6]] - `method` [EXTRACTED]
+- [[.plan()_5]] - `method` [EXTRACTED]
 - [[.run()_4]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `calls` [EXTRACTED]
 - [[.test_browser_navigation_error_checks_current_page_and_stops_on_429()]] - `calls` [EXTRACTED]
@@ -107,7 +107,7 @@ tags:
 - [[UniversalConfigTests]] - `uses` [INFERRED]
 - [[UnlimitedCrawlingTests]] - `uses` [INFERRED]
 - [[_SeleniumSource]] - `uses` [INFERRED]
-- [[main()_18]] - `calls` [EXTRACTED]
+- [[main()_13]] - `calls` [EXTRACTED]
 - [[reddit_crawler.py]] - `imports` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `imports` [EXTRACTED]

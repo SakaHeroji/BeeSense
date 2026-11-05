@@ -1,12 +1,10 @@
 ---
 type: community
-cohesion: 0.23
 members: 15
 ---
 
 # Pengujian UI Streamlit
 
-**Cohesion:** 0.23 - loosely connected
 **Members:** 15 nodes
 
 ## Members
@@ -34,12 +32,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP_1]]
-- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
-- 1 edge to [[_COMMUNITY_Pengujian Narasi Gemini]]
+- 4 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes
-- [[StreamlitTests]] - degree 17, connects to 3 communities
+- [[StreamlitTests]] - degree 17, connects to 1 community
 - [[.test_complete_excel_download_is_available_without_training()]] - degree 3, connects to 1 community
 - [[.setUp()_3]] - degree 2, connects to 1 community

@@ -12,7 +12,6 @@ tags:
 # Loader NLP load_config
 
 ## Connections
-- [[Mask relevansi membutuhkan opt-in pada override eksplisit]] - `references` [EXTRACTED]
 - [[Obsidian Konfigurasi Universal NLP]] - `references` [EXTRACTED]
 - [[configsocial_nlp.json — konfigurasi aktif NLP]] - `references` [EXTRACTED]
 

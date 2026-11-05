@@ -1,38 +1,57 @@
 ---
 source_file: ""
 type: "code"
-community: "Kontrak Record Reddit"
+community: "Akuisisi YouTube"
 tags:
   - graphify/code
   - graphify/INFERRED
-  - community/Kontrak_Record_Reddit
+  - community/Akuisisi_YouTube
 ---
 
 # ValueError
 
 ## Connections
-- [[.__call__()_6]] - `calls` [INFERRED]
+- [[.__call__()_4]] - `calls` [INFERRED]
 - [[.__init__()_1]] - `calls` [INFERRED]
 - [[.__init__()_2]] - `calls` [INFERRED]
+- [[.__init__()_13]] - `calls` [INFERRED]
+- [[.__init__()_18]] - `calls` [INFERRED]
+- [[.__init__()_19]] - `calls` [INFERRED]
+- [[.__init__()_30]] - `calls` [INFERRED]
 - [[.__init__()_15]] - `calls` [INFERRED]
-- [[.__init__()_20]] - `calls` [INFERRED]
-- [[.__init__()_21]] - `calls` [INFERRED]
-- [[.__init__()_32]] - `calls` [INFERRED]
-- [[.__init__()_17]] - `calls` [INFERRED]
-- [[.__init__()_45]] - `calls` [INFERRED]
-- [[.__init__()_46]] - `calls` [INFERRED]
+- [[.__init__()_39]] - `calls` [INFERRED]
+- [[.__init__()_38]] - `calls` [INFERRED]
 - [[.__init__()_43]] - `calls` [EXTRACTED]
 - [[.__init__()_44]] - `calls` [EXTRACTED]
+- [[._apply_context_relevance()]] - `calls` [INFERRED]
 - [[._dom_events()]] - `calls` [INFERRED]
+- [[._encode_sbert()]] - `calls` [INFERRED]
 - [[._existing_posts()]] - `calls` [INFERRED]
+- [[._explanation_evidence()]] - `calls` [INFERRED]
+- [[._merge_topics()]] - `calls` [INFERRED]
 - [[._normalize()]] - `calls` [INFERRED]
+- [[._radius_graph()]] - `calls` [INFERRED]
+- [[._reuse_embeddings()]] - `calls` [INFERRED]
+- [[._validate_config()]] - `calls` [INFERRED]
+- [[._validate_explanation_options()]] - `calls` [INFERRED]
 - [[.accept()_3]] - `calls` [INFERRED]
 - [[.accept()_6]] - `calls` [EXTRACTED]
 - [[.accept()_1]] - `calls` [INFERRED]
 - [[.capture()_2]] - `calls` [EXTRACTED]
 - [[.collect()]] - `calls` [INFERRED]
+- [[.describe_topics()]] - `calls` [INFERRED]
+- [[.encode()_1]] - `calls` [INFERRED]
+- [[.explain_topics()]] - `calls` [INFERRED]
 - [[.export_compact()]] - `calls` [INFERRED]
+- [[.generate_topic_narratives()]] - `calls` [INFERRED]
+- [[.load_explanations()]] - `calls` [INFERRED]
+- [[.load_run()]] - `calls` [INFERRED]
 - [[.navigate()_1]] - `calls` [EXTRACTED]
+- [[.parent_post_key()]] - `calls` [INFERRED]
+- [[.prepare_excel()]] - `calls` [INFERRED]
+- [[.save()]] - `calls` [INFERRED]
+- [[.save_explanations()]] - `calls` [INFERRED]
+- [[.select_candidate()]] - `calls` [INFERRED]
 - [[.submit()]] - `calls` [INFERRED]
 - [[.test_empty_search_response_has_a_specific_redacted_diagnosis()]] - `calls` [INFERRED]
 - [[.test_local_auth_error_is_distinct_from_a_source_parse_error()]] - `calls` [INFERRED]
@@ -59,12 +78,14 @@ tags:
 - [[install_browser()]] - `calls` [INFERRED]
 - [[instaloader_options()]] - `calls` [INFERRED]
 - [[load_campaign()]] - `calls` [INFERRED]
+- [[load_config()]] - `calls` [INFERRED]
 - [[load_key()]] - `calls` [INFERRED]
 - [[load_settings()_1]] - `calls` [INFERRED]
 - [[load_settings()]] - `calls` [INFERRED]
-- [[main()_18]] - `calls` [INFERRED]
-- [[main()_11]] - `calls` [INFERRED]
-- [[main()_17]] - `calls` [EXTRACTED]
+- [[main()_13]] - `calls` [INFERRED]
+- [[main()_7]] - `calls` [INFERRED]
+- [[main()_14]] - `calls` [EXTRACTED]
+- [[main()_16]] - `calls` [INFERRED]
 - [[main()_1]] - `calls` [INFERRED]
 - [[native_id()_1]] - `calls` [EXTRACTED]
 - [[normalize_item()_2]] - `calls` [EXTRACTED]
@@ -75,6 +96,9 @@ tags:
 - [[post_url()_1]] - `calls` [EXTRACTED]
 - [[project_comment()]] - `calls` [EXTRACTED]
 - [[project_video()]] - `calls` [EXTRACTED]
+- [[published_crawl_files()]] - `calls` [INFERRED]
+- [[published_relevance_files()]] - `calls` [INFERRED]
+- [[published_source_files()]] - `calls` [INFERRED]
 - [[read_config()]] - `calls` [INFERRED]
 - [[read_csv()]] - `calls` [INFERRED]
 - [[request_topic()]] - `calls` [INFERRED]
@@ -95,8 +119,10 @@ tags:
 - [[validate_row()_1]] - `calls` [INFERRED]
 - [[validate_rows()]] - `calls` [INFERRED]
 - [[validate_text()]] - `calls` [INFERRED]
+- [[verify()_2]] - `calls` [INFERRED]
 - [[verify_descriptor()]] - `calls` [INFERRED]
 - [[verify_descriptor()_1]] - `calls` [INFERRED]
+- [[verify_native_dataset()]] - `calls` [INFERRED]
 - [[video_url()]] - `calls` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/INFERRED #community/Akuisisi_YouTube

@@ -1,7 +1,7 @@
 {
-  "input_file": "outputs/social_20261102_combined_twitter_01/social_data.xlsx",
-  "output_dir": "outputs/nlp_20261102_relevance_topics20_gemini_02",
-  "relevance_artifact": "outputs/relevance_20261102_01",
+  "input_file": "outputs/social_20261105_combined_tiktok_01/social_data.xlsx",
+  "output_dir": "outputs/nlp_20261105_relevance_topics20_gemini_01",
+  "relevance_artifact": "outputs/relevance_20261105_01",
   "target_topics": 20,
   "cache_dir": ".cache/social_nlp",
   "seed": 42,

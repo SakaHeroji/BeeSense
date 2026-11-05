@@ -66,6 +66,7 @@ class CloudRuntimeTests(unittest.TestCase):
                     "reddit": "Reddit",
                     "instagram": "Instagram",
                     "twitter": "X / Twitter",
+                    "tiktok": "TikTok",
                 }.items()
                 if key in set(saved["occurrences"].platform)
             ]
@@ -110,13 +111,14 @@ class CloudRuntimeTests(unittest.TestCase):
                             "Unduh Excel topik dan kalimat",
                             [item.label for item in app.get("download_button")],
                         )
-            if "twitter" in set(saved["occurrences"].platform):
-                app.multiselect(key="platforms").set_value(["X / Twitter"]).run()
-                for view in app.radio(key="view").options:
-                    with self.subTest(twitter_only_view=view):
-                        app.radio(key="view").set_value(view).run()
-                        self.assertFalse(app.exception)
-                        self.assertFalse(app.error)
+            for platform, label in [("twitter", "X / Twitter"), ("tiktok", "TikTok")]:
+                if platform in set(saved["occurrences"].platform):
+                    app.multiselect(key="platforms").set_value([label]).run()
+                    for view in app.radio(key="view").options:
+                        with self.subTest(platform=platform, view=view):
+                            app.radio(key="view").set_value(view).run()
+                            self.assertFalse(app.exception)
+                            self.assertFalse(app.error)
         for name in TRAINING_MODULES:
             self.assertNotIn(name, sys.modules, name + " imported")
 

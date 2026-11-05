@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L82"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # file_hash()
@@ -16,11 +16,13 @@ tags:
 - [[._reduce_embeddings()]] - `calls` [EXTRACTED]
 - [[.encode()_1]] - `calls` [EXTRACTED]
 - [[.explain_topics()]] - `calls` [EXTRACTED]
+- [[.export_compact()]] - `calls` [INFERRED]
 - [[.finish()]] - `calls` [INFERRED]
 - [[.load_explanations()]] - `calls` [EXTRACTED]
 - [[.load_run()]] - `calls` [EXTRACTED]
 - [[.narrative_source()]] - `calls` [EXTRACTED]
 - [[.prepare_excel()]] - `calls` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
 - [[.save()]] - `calls` [EXTRACTED]
 - [[.save_explanations()]] - `calls` [EXTRACTED]
 - [[.test_artifacts_roundtrip_without_pickle_and_verify_checksums()]] - `calls` [EXTRACTED]
@@ -30,6 +32,7 @@ tags:
 - [[.test_narrative_snapshot_preserves_fitted_files_and_original_bundle()]] - `calls` [EXTRACTED]
 - [[.test_saved_run_coherence_reproduces_the_published_score()]] - `calls` [EXTRACTED]
 - [[.test_selected_candidate_has_semantic_separation_and_full_provenance()]] - `calls` [EXTRACTED]
+- [[app.py]] - `imports` [EXTRACTED]
 - [[enrich_run()]] - `calls` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `imports` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
@@ -37,10 +40,11 @@ tags:
 - [[published_source_files()]] - `calls` [EXTRACTED]
 - [[seal()]] - `calls` [EXTRACTED]
 - [[social_nlp.py]] - `contains` [EXTRACTED]
+- [[stream()]] - `indirect_call` [INFERRED]
 - [[test_social_nlp.py]] - `imports` [EXTRACTED]
 - [[test_topic_narratives.py]] - `imports` [EXTRACTED]
 - [[topic_sentence_export.py]] - `imports` [EXTRACTED]
-- [[verify()_1]] - `calls` [EXTRACTED]
+- [[verify()_2]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

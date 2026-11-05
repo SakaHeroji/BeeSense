@@ -12,17 +12,18 @@ tags:
 # app.py
 
 ## Connections
-- [[Obsidian Cloud runbook streamlit_apps.py, Python 3.12 and complete artifact publication]] - `references` [EXTRACTED]
 - [[Relocated dashboard image uses root Streamlit shim and runtime-only wheels]] - `references` [EXTRACTED]
 - [[Root Docker context allowlist for relocated dashboard runtime]] - `references` [EXTRACTED]
 - [[Root streamlit_apps.py delegates to Dashboard.app]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[SocialNLPStreamlitApp_1]] - `contains` [EXTRACTED]
 - [[Streamlit entry point for local and Community Cloud dashboards.  Training lives]] - `rationale_for` [EXTRACTED]
 - [[_explain_filtered()]] - `contains` [EXTRACTED]
 - [[_graph_positions()]] - `contains` [EXTRACTED]
 - [[_load_artifacts()]] - `contains` [EXTRACTED]
-- [[main()_5]] - `contains` [EXTRACTED]
-- [[number()]] - `contains` [EXTRACTED]
+- [[file_hash()]] - `imports` [EXTRACTED]
+- [[main()_15]] - `contains` [EXTRACTED]
+- [[number()_1]] - `contains` [EXTRACTED]
 - [[percent()]] - `contains` [EXTRACTED]
 - [[relevance_csv()]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]

@@ -1,22 +1,18 @@
 ---
-source_file: "Crawler/Backend/social_crawler.py"
+source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L2460"
+community: "Verifikasi Dataset Publik"
+location: "L285"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Verifikasi_Dataset_Publik
 ---
 
 # main()
 
 ## Connections
-- [[.export_compact()]] - `calls` [EXTRACTED]
-- [[.plan()_6]] - `calls` [EXTRACTED]
-- [[.run()_4]] - `calls` [EXTRACTED]
-- [[SocialCrawler]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[social_crawler.py]] - `contains` [EXTRACTED]
+- [[verify()_2]] - `calls` [EXTRACTED]
+- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik

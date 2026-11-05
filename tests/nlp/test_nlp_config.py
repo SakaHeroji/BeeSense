@@ -113,3 +113,52 @@ class NLPConfigTests(unittest.TestCase):
         self.assertEqual(
             env["BEESENSE_NLP_RUN_DIR"], str((ROOT / active["output_dir"]).resolve())
         )
+
+    def test_dashboard_launcher_follows_new_snapshot_pair_and_drops_stale_comparison(
+        self,
+    ):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "config").mkdir()
+            primary = root / "config/social_nlp.json"
+            (root / "config/dashboard.json").write_text(
+                json.dumps(
+                    {
+                        "snapshot_comparison": {
+                            "after": "outputs/new_after",
+                            "before": "outputs/new_before",
+                        }
+                    }
+                )
+            )
+            cases = [
+                ("outputs/new_after", [], "outputs/new_after", "outputs/new_before"),
+                ("outputs/new_after", ["--baseline"], "outputs/new_before", None),
+                ("outputs/custom", [], "outputs/custom", None),
+            ]
+            for configured, flags, expected, comparison in cases:
+                primary.write_text(json.dumps({"output_dir": configured}))
+                with (
+                    self.subTest(configured=configured, flags=flags),
+                    patch.object(relevance_dashboard, "ROOT", root),
+                    patch.object(sys, "argv", ["relevance_dashboard", *flags]),
+                    patch.object(SocialNLPClusterer, "load_run") as load,
+                    patch.object(relevance_dashboard.os, "execvpe") as launch,
+                    patch.dict(
+                        relevance_dashboard.os.environ,
+                        {"BEESENSE_BASELINE_RUN_DIR": "outputs/stale"},
+                    ),
+                ):
+                    relevance_dashboard.main()
+                    self.assertEqual(load.call_args_list[0].args[0], root / expected)
+                    env = launch.call_args.args[2]
+                    self.assertEqual(
+                        env["BEESENSE_NLP_RUN_DIR"], str((root / expected).resolve())
+                    )
+                    if comparison:
+                        self.assertEqual(
+                            env["BEESENSE_BASELINE_RUN_DIR"],
+                            str((root / comparison).resolve()),
+                        )
+                    else:
+                        self.assertNotIn("BEESENSE_BASELINE_RUN_DIR", env)

@@ -12,7 +12,7 @@ tags:
 # InstagramCrawler
 
 ## Connections
-- [[.__init__()_34]] - `method` [EXTRACTED]
+- [[.__init__()_32]] - `method` [EXTRACTED]
 - [[._baseline()]] - `method` [EXTRACTED]
 - [[.check_session()]] - `method` [EXTRACTED]
 - [[.plan()_3]] - `method` [EXTRACTED]
@@ -25,7 +25,7 @@ tags:
 - [[Standalone trial. The production SocialCrawler backend stays unchanged.]] - `rationale_for` [EXTRACTED]
 - [[UniversalConfigTests]] - `uses` [INFERRED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[main()_15]] - `calls` [EXTRACTED]
+- [[main()_11]] - `calls` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports` [EXTRACTED]
 - [[test_instagram_browser.py]] - `imports` [EXTRACTED]
 

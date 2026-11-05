@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_sentence_export.py"
 type: "code"
-community: "topic_sentence_export.py"
+community: "Pengujian Narasi Gemini"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/topic_sentence_exportpy
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # test_topic_sentence_export.py
@@ -16,4 +16,4 @@ tags:
 - [[export_payload()]] - `imports` [EXTRACTED]
 - [[topic_sentence_export.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/topic_sentence_exportpy
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

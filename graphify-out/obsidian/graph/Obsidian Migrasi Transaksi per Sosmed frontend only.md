@@ -12,8 +12,6 @@ tags:
 # Obsidian Migrasi Transaksi per Sosmed: frontend only
 
 ## Connections
-- [[Kontrak HTTP 1.2 masih rancangan integrasi]] - `references` [EXTRACTED]
-- [[Obsidian Frontend React Crawler]] - `references` [EXTRACTED]
 - [[Review dan progres inline adalah simulasi memori]] - `references` [EXTRACTED]
 - [[Sumber migrasi terikat job platform dataset versi dan checksum]] - `references` [EXTRACTED]
 

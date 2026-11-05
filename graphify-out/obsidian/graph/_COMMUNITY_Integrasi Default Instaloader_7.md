@@ -1,25 +1,17 @@
 ---
 type: community
-cohesion: 0.22
-members: 10
+members: 4
 ---
 
 # Integrasi Default Instaloader
 
-**Cohesion:** 0.22 - loosely connected
-**Members:** 10 nodes
+**Members:** 4 nodes
 
 ## Members
-- [[Headed dokumen dan apisearch HTTP200, native_api_empty_or_invalid_json]] - rationale - graphify-out/obsidian/TikTok Mandiri Uji 500 Post 20261103.md
-- [[Obsidian TikTokCrawler Pyktok — riwayat yang diganti mandiri]] - document - graphify-out/obsidian/TikTokCrawler Pyktok.md
-- [[Obsidian dua trial mandiri gagal 0500 headless dan headed]] - document - graphify-out/obsidian/TikTok Mandiri Uji 500 Post 20261103.md
-- [[Obsidian trial Pyktok historis 0500, 2,69 detik]] - document - graphify-out/obsidian/TikTok Pyktok Uji 500 Post 20261103.md
-- [[Provenance dfreelonPyktok — historis]] - document - Crawler/Backend/Tiktok/PYKTOK.md
-- [[Pyktok dan TikTokApi tidak lagi requirements aktif]] - concept - Crawler/Backend/Tiktok/PYKTOK.md
-- [[Pyktok historis HTTP200 hydration tanpa video pada satu halaman keyword]] - concept - docs/crawler/TIKTOK_PYKTOK_TRIAL_20261103.md
-- [[Riwayat Pyktok 0500, 2,69 detik, CLIENT_UPGRADE_REQUIRED]] - document - docs/crawler/TIKTOK_PYKTOK_TRIAL_20261103.md
-- [[Riwayat Pyktok keyword satu halaman embedded tanpa pagination]] - concept - graphify-out/obsidian/TikTokCrawler Pyktok.md
-- [[Trial Pyktok lama hanya Excel berheaderaudit, tanpa partisi atau data sintetis baru]] - concept - graphify-out/obsidian/TikTok Pyktok Uji 500 Post 20261103.md
+- [[Obsidian TikTokCrawler TikTok-Api — riwayat backend langsung]] - document - graphify-out/obsidian/TikTokCrawler TikTok-Api.md
+- [[Provenance TikTok-Api langsung — historis]] - document - Crawler/Backend/Tiktok/TIKTOK_API.md
+- [[Riwayat TikTok-Api 0500, ACCESS_BLOCKED, 33,27 detik]] - concept - graphify-out/obsidian/TikTokCrawler TikTok-Api.md
+- [[TikTokApi tidak lagi diimpor, termasuk secara transitif]] - concept - Crawler/Backend/Tiktok/TIKTOK_API.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -27,10 +19,3 @@ members: 10
 TABLE source_file, type FROM #community/Integrasi_Default_Instaloader
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_6]]
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_3]]
-
-## Top bridge nodes
-- [[Obsidian dua trial mandiri gagal 0500 headless dan headed]] - degree 4, connects to 2 communities

@@ -20,6 +20,6 @@ tags:
 - [[social_archive.py]] - `imports_from` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
-- [[verify()_2]] - `imports` [EXTRACTED]
+- [[verify()_1]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

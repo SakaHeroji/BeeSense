@@ -2,7 +2,7 @@
 
 ## Snapshot terbaru
 
-Konfigurasi aktif kini memakai `outputs/nlp_20261102_relevance_topics20_gemini_02/`: 20 topik tersaring, mean c_v 0,4733391691 dan 20 narasi Gemini dari 10 keyword serta 10 kalimat representatif per topik. Lihat [README](../../README.md) dan [runbook relevansi](../machine-learning/CONTEXT_RELEVANCE.md) untuk audit serta rollback. Snapshot sebelumnya tetap tersedia; bagian berikut merupakan riwayat.
+Konfigurasi aktif 5 November memakai `outputs/nlp_20261105_relevance_topics20_gemini_01/`: 20 topik tersaring, mean c_v 0,4666033620 dan 20 narasi Gemini. Pasangan sebelum penyaringan juga baru di-fit: 20 topik, mean c_v 0,4346102845. UI mendukung YouTube, Reddit, Instagram, X dan TikTok pada filter, cakupan/noise, tabel, jaringan dan tren. [Audit](../machine-learning/TIKTOK_RETRAIN_20261105.md). Snapshot lama tetap tersedia; angka bertanggal sebelumnya di bawah adalah riwayat.
 
 
 [SocialNLPStreamlitApp](../../Dashboard/app.py) membaca snapshot aktif dari [social_nlp.json](../../config/social_nlp.json). Dashboard tidak melakukan crawling atau training. Jumlah topik, coherence, volume, tanggal, dan bukti selalu dibaca dari artifact terverifikasi, bukan angka yang ditulis di UI.

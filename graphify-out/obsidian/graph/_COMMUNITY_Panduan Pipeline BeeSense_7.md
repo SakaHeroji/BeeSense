@@ -1,16 +1,14 @@
 ---
 type: community
-cohesion: 1.00
 members: 1
 ---
 
 # Panduan Pipeline BeeSense
 
-**Cohesion:** 1.00 - tightly connected
 **Members:** 1 nodes
 
 ## Members
-- [[Historical Instagram Export Query Memory]] - document - graphify-out/memory/query_20261030_041128_bagaimana_instagramcrawler_dapat_memakai_kontrak_e.md
+- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
 
 ## Live Query (requires Dataview plugin)
 

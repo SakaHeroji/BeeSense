@@ -4,7 +4,7 @@ import { URL, fileURLToPath } from 'node:url';
 
 // This public projection contains form defaults only. Authentication material
 // and PostgreSQL connection strings never enter a browser bundle.
-export function publicDefaults(config) {
+export function publicDefaults(config, connector) {
   const platformKeys = [
     'enabled',
     'queries',
@@ -23,6 +23,9 @@ export function publicDefaults(config) {
   const select = (source, keys) =>
     Object.fromEntries(keys.filter((key) => key in source).map((key) => [key, source[key]]));
   return {
+    ...(connector
+      ? { tiktok_connector: { name: connector.name, version: connector.version } }
+      : {}),
     ...select(config, [
       'project_id',
       'since',
@@ -59,7 +62,13 @@ export function publicDefaults(config) {
 const source = fileURLToPath(new URL('../../../config/social_crawler.json', import.meta.url));
 const target = fileURLToPath(new URL('../src/shared/crawler-defaults.json', import.meta.url));
 if (existsSync(source)) {
-  const data = publicDefaults(JSON.parse(readFileSync(source, 'utf8')));
+  const manifest = fileURLToPath(
+    new URL('../../Backend/Tiktok/chrome_extension/manifest.json', import.meta.url),
+  );
+  const data = publicDefaults(
+    JSON.parse(readFileSync(source, 'utf8')),
+    JSON.parse(readFileSync(manifest, 'utf8')),
+  );
   writeFileSync(
     target,
     await format(JSON.stringify(data), { ...(await resolveConfig(target)), parser: 'json' }),

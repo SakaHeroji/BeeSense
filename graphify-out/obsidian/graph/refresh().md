@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Tiktok/chrome_extension/popup.mjs"
 type: "code"
 community: "Konektor Chrome TikTok Lokal"
-location: "L2"
+location: "L5"
 tags:
   - graphify/code
   - graphify/INFERRED

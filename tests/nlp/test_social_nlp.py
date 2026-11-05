@@ -203,6 +203,37 @@ class NLPTests(unittest.TestCase):
                 ).any()
             )
 
+    def test_tiktok_prepare_preserves_native_roots_and_original_comment_text(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "social_data.xlsx"
+            fixture(path)
+            book = load_workbook(path)
+            for index, row in enumerate(book["Data"].iter_rows(min_row=2), 101):
+                row[0].value = "tiktok"
+                row[1].value = "reply" if index % 2 else "comment"
+                row[8].value = (
+                    "https://www.tiktok.com/@campus/video/7615256610599898389"
+                    f"?comment_id={index}"
+                )
+            book.save(path)
+            book.close()
+            model = SocialNLPClusterer(self.config).prepare_excel(path)
+            self.assertEqual(len(model.occurrences), 36)
+            self.assertEqual(set(model.occurrences.platform), {"tiktok"})
+            self.assertEqual(set(model.occurrences.kind), {"comment", "reply"})
+            self.assertEqual(
+                {
+                    model.parent_post_key(row)
+                    for row in model.occurrences.to_dict("records")
+                },
+                {("tiktok:7615256610599898389", "native_url")},
+            )
+            self.assertFalse(
+                model.sentences.embedding_text.str.contains(
+                    "TITLE_NOT_EMBEDDING_FEATURE"
+                ).any()
+            )
+
     def test_selected_candidate_has_semantic_separation_and_full_provenance(self):
         p = self.pipeline
         self.assertTrue(p.selected["eligible"])

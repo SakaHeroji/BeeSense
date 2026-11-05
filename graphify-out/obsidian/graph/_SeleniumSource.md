@@ -12,7 +12,7 @@ tags:
 # _SeleniumSource
 
 ## Connections
-- [[.__init__()_16]] - `method` [EXTRACTED]
+- [[.__init__()_14]] - `method` [EXTRACTED]
 - [[._youtube_reply()]] - `method` [EXTRACTED]
 - [[._youtube_sort()]] - `method` [EXTRACTED]
 - [[.navigate()]] - `method` [EXTRACTED]

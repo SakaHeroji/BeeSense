@@ -5,6 +5,17 @@ tags: [beesense, provenance, sbert, dbscan, merged]
 
 # Dataset Dashboard
 
+## Snapshot aktif — 5 November 2026
+
+Gabungan lima platform termasuk TikTok: **36.233 record unik**, nol duplikat native ID.
+Model sebelum/sesudah memiliki masing-masing **20 topik**, mean c_v **0,4346102845**
+dan **0,4666033620**. Mask relevansi diulang dengan checksum sumber baru; 11.185
+kemunculan/10.795 kalimat unik diterima. Pengguna menyetujui 40 narasi Google Gemini.
+Pasangan aktif dipilih melalui config/dashboard.json; tidak ada API atau training
+pada rerun UI. Runtime lokal sesi ini di http://127.0.0.1:8502; Docker daemon mati,
+sehingga hasil verifikasi Docker sesi lama tidak berlaku untuk image baru.
+Lihat [[Retraining Gabungan TikTok 20261105]]. Bagian bertanggal sebelumnya adalah riwayat.
+
 Snapshot aktif 2 November: **34.764 record unik, 20 topik, mean c_v 0.424321**, dengan CSV Gemini/Excel dan dukungan X. Rincian: [[Twitter 20 Topik 20261102]]. Bagian bertanggal sebelumnya di bawah adalah riwayat.
 
 

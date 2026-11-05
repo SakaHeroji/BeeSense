@@ -12,7 +12,7 @@ tags:
 # content_node()
 
 ## Connections
-- [[.__init__()_29]] - `calls` [EXTRACTED]
+- [[.__init__()_27]] - `calls` [EXTRACTED]
 - [[.has_class()]] - `calls` [EXTRACTED]
 - [[assert_accessible()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]

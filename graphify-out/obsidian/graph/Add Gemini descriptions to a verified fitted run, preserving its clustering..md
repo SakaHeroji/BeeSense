@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/generate_topic_narratives.py"
 type: "rationale"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Add Gemini descriptions to a verified fitted run, preserving its clustering.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[generate_topic_narratives.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

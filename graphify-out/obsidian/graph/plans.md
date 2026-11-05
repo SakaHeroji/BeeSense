@@ -1,8 +1,8 @@
 ---
-source_file: "Crawler/Frontend/src/shared/demo.ts"
+source_file: "Crawler/Frontend/src/shared/transaction-demo.ts"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L16"
+location: "L6"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # plans
 
 ## Connections
-- [[demo.ts]] - `contains` [EXTRACTED]
+- [[transaction-demo.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

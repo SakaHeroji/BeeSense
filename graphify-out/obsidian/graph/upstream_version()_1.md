@@ -12,7 +12,7 @@ tags:
 # upstream_version()
 
 ## Connections
-- [[.__init__()_34]] - `calls` [EXTRACTED]
+- [[.__init__()_32]] - `calls` [EXTRACTED]
 - [[collect()]] - `calls` [EXTRACTED]
 - [[error_receipt()_1]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]

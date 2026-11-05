@@ -27,9 +27,21 @@ Build produksi memakai mode API dan tidak fallback diam-diam ke simulasi. Konfig
 
 `config/social_crawler.json` adalah sumber nilai awal. `scripts/sync-config.mjs` membuat proyeksi publik `src/shared/crawler-defaults.json` sebelum dev/test/build. Edit JSON root, bukan snapshot; regenerasikan sebelum membangun dari context Docker frontend terisolasi. Proyeksi tidak membaca auth.json atau menyertakan rahasia.
 
-Form menyediakan tanggal publikasi WIB dari/sampai sebelum, include/exclude keywords, query atau hashtag Instagram, subreddit Reddit, target post dan batas waktu jam opsional. Hanya sumber halaman yang aktif. Default 1.000 post, komentar/balasan tanpa cap, tanpa batas durasi. Excel lokal default; PostgreSQL/keduanya menyediakan host/IP, port dan URI sementara.
+Form menyediakan tanggal publikasi WIB dari/sampai sebelum, include/exclude keywords, query atau hashtag Instagram/TikTok, subreddit Reddit, target post dan batas waktu jam opsional. Hanya sumber halaman yang aktif. Default 1.000 post, komentar/balasan tanpa cap, tanpa batas durasi. Excel lokal default; PostgreSQL/keduanya menyediakan host/IP, port dan URI sementara.
 
-Akun & sesi opsional ditampilkan untuk Instagram, X/Twitter, TikTok, Threads dan Facebook. Username/session ID disiapkan untuk `config/auth.json` melalui kontrak HTTP tersendiri; bukan bagian konfigurasi crawling. Session ID disembunyikan, bisa ditampilkan dengan tombol, tidak disimpan ke URL/localStorage dan dibersihkan setelah simulasi simpan. Isian kosong mempertahankan nilai yang ada. Simpan perubahan akun sebelum meninjau crawling. Demo hanya menyimpan metadata akun di memori, tanpa menyimpan session ID atau mengubah file nyata.
+Akun & sesi opsional ditampilkan untuk Instagram, X/Twitter, Threads dan Facebook. Username/session ID disiapkan untuk `config/auth.json` melalui kontrak HTTP tersendiri; bukan bagian konfigurasi crawling. Session ID disembunyikan, bisa ditampilkan dengan tombol, tidak disimpan ke URL/localStorage dan dibersihkan setelah simulasi simpan. Isian kosong mempertahankan nilai yang ada. Simpan perubahan akun sebelum meninjau crawling. Demo hanya menyimpan metadata akun di memori, tanpa menyimpan session ID atau mengubah file nyata. TikTok memakai sesi pada tab Chrome melalui plugin.
+
+## TikTok melalui plugin Chrome
+
+Konfigurasi → tinjau → hubungkan Chrome → pantau hasil berada pada menu TikTok dan transaksi yang sama. Setelah review, monitor menampilkan alamat server dashboard, kode pairing sementara yang tersembunyi, versi minimum plugin, status koneksi dan petunjuk validasi manual. Versi minimum diproyeksikan dari manifest publik Connector, tanpa menyalin key atau permissions.
+
+Waktu pengambilan baru dimulai setelah server memverifikasi plugin. Koneksi ulang mempertahankan deadline. CAPTCHA/login diselesaikan pengguna pada tab TikTok; tombol lanjut meminta server memeriksa ulang, bukan menandai validasi selesai dari browser. Jumlah komentar/balasan post aktif dipisahkan dari operasi selesai; kelengkapan memerlukan akhir pagination yang terverifikasi, bukan kesamaan dengan statistik sumber.
+
+Chrome dan tab TikTok harus tetap terbuka. Untuk penelusuran UI yang paling andal, biarkan tab TikTok aktif dan jendela tidak diminimalkan; popup Connector boleh ditutup. Biarkan plugin menggulir, membuka balasan dan berpindah post; hindari navigasi/refresh manual kecuali menyelesaikan CAPTCHA atau login ketika diminta. Aktivitas halaman latar dapat diperlambat browser. Ini pertimbangan operasi, bukan bukti penyebab stagnasi run tertentu.
+
+Adapter HTTP menggunakan API proyek yang sama. Respons pairing wajib terikat job dan origin dashboard; tidak ada port bridge tetap, server kedua atau menu plugin terpisah. Kode pairing hanya berada di memori halaman, tidak di URL/localStorage/snapshot publik job. Pengamat tidak meminta endpoint privat. Mode demo menyediakan tombol simulasi berlabel yang **tidak mengendalikan crawler nyata**.
+
+Integrasi gateway HTTP/worker masih tahap berikutnya. Server nantinya harus melayani dashboard dan penghubung plugin pada origin yang sama, menyediakan endpoint dalam [kontrak API](docs/API_CONTRACT.md), dan mengiklankan `tiktokConnectorAvailable` hanya setelah siap. Bridge CLI desktop yang sedang berjalan tetap independen pada tahap frontend ini; preview tidak menghubungkannya diam-diam.
 
 ## Data, statistik dan migrasi transaksi
 
@@ -43,7 +55,7 @@ Mulai crawling membuka monitor job untuk progres, aktivitas, konfigurasi dan dat
 
 ## Batas backend dan database
 
-[Kontrak API](docs/API_CONTRACT.md) adalah rancangan untuk tahap berikutnya. HTTP server/worker, penyimpanan auth.json dan migrasi transaksi PostgreSQL **belum diimplementasikan**. Tombol API hanya aktif bila capability tersedia. SocialCrawler Python tetap CLI/library dengan empat adapter; tiga sumber lainnya masih UI/rencana. Penulisan langsung PostgreSQL belum tersedia dan runner menolak opsi tersebut sebelum crawling.
+[Kontrak API](docs/API_CONTRACT.md) adalah rancangan untuk tahap berikutnya. HTTP server/worker, penyimpanan auth.json dan migrasi transaksi PostgreSQL **belum diimplementasikan**. Tombol API hanya aktif bila capability tersedia. SocialCrawler Python tetap CLI/library; TikTok memiliki transport Chrome/plugin nyata yang belum terhubung ke gateway frontend. Penulisan langsung PostgreSQL belum tersedia dan runner menolak opsi tersebut sebelum crawling.
 
 Utility `excel_postgresql.py`, SQL, tes database khusus, job CI dan image utility migrasi Excel telah dihapus. Database serta sumber Excel yang sudah ada tidak disentuh. **No migration required** untuk perubahan frontend ini.
 

@@ -1,35 +1,45 @@
 ---
 type: community
-cohesion: 0.18
-members: 20
+members: 32
 ---
 
 # Worker Instaloader
 
-**Cohesion:** 0.18 - loosely connected
-**Members:** 20 nodes
+**Members:** 32 nodes
 
 ## Members
-- [[.test_no_retry_and_no_response_body_in_errors()]] - code - tests/crawler/test_instaloader_browser_patch.py
-- [[.test_required_web_tokens_headers_endpoint_and_four_argument_signature()]] - code - tests/crawler/test_instaloader_browser_patch.py
-- [[.test_token_cache_is_scoped_to_context_and_invalidated_by_cookie_change()]] - code - tests/crawler/test_instaloader_browser_patch.py
-- [[BrowserPatchTests]] - code - tests/crawler/test_instaloader_browser_patch.py
-- [[Keep server response bodies out of upstream CLI exception messages.]] - rationale - Crawler/Backend/instaloader_browser_patch.py
-- [[Runtime web GraphQL compatibility patch, adapted from the user's reference.  No]] - rationale - Crawler/Backend/instaloader_browser_patch.py
-- [[Signature accepts the fourth argument added by Instaloader 4.16.]] - rationale - Crawler/Backend/instaloader_browser_patch.py
-- [[Verify the supplied browser-style patch without sending network requests.]] - rationale - tests/crawler/test_instaloader_browser_patch.py
-- [[_check()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[_cookie()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[_hints()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[_load_tokens()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[_pace()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[apply_browser_patch()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[browser_graphql_query()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[context()]] - code - tests/crawler/test_instaloader_browser_patch.py
-- [[instaloader_browser_patch.py]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[main()]] - code - Crawler/Backend/instaloader_browser_patch.py
-- [[response()]] - code - tests/crawler/test_instaloader_browser_patch.py
-- [[test_instaloader_browser_patch.py]] - code - tests/crawler/test_instaloader_browser_patch.py
+- [[.__call__()_1]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.__init__()_10]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.__init__()_11]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.collect()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.comment()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.error()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.legacy_comments()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.web_comment()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.web_comments()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[AccessBarrier]] - code - Crawler/Backend/instaloader_crawler.py
+- [[Apply the supplied runtime patch to this worker's context only.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[Bounded web comments through Instaloader's patched context.          Query shape]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[InstaloaderAdapter]] - code - Crawler/Backend/instaloader_crawler.py
+- [[Load JSON cookies only; never unpickle a session or replay a password.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[Observe all upstream sessions inside the dedicated, single-thread worker.      I]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[Prefer the library's GraphQL iterator, as upstream PR 2692 does.          Avoid]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[RuntimeError_1]] - code
+- [[Standalone Instaloader experiment using BeeSense's shared Excel contract.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[Validate shared Instaloader settings without loading credentials or networking.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[_json()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[_utc()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[cap()]] - code - Crawler/Backend/crawler_limits.py
+- [[configure_web_graphql()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[error_receipt()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[instaloader_crawler.py]] - code - Crawler/Backend/instaloader_crawler.py
+- [[instaloader_options()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[instaloader_worker()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[observe_requests()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[retry_after_seconds()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[save_session()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[session_cookies()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[upstream_version()]] - code - Crawler/Backend/instaloader_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -37,3 +47,25 @@ members: 20
 TABLE source_file, type FROM #community/Worker_Instaloader
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 7 edges to [[_COMMUNITY_Worker Instaloader_2]]
+- 4 edges to [[_COMMUNITY_Worker Instaloader_3]]
+- 4 edges to [[_COMMUNITY_Crawler Selenium_2]]
+- 4 edges to [[_COMMUNITY_Worker Instaloader_4]]
+- 3 edges to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 2 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 2 edges to [[_COMMUNITY_Capture Reddit Playwright_1]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Pengujian Worker Instaloader]]
+- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_3]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium_1]]
+
+## Top bridge nodes
+- [[instaloader_crawler.py]] - degree 29, connects to 8 communities
+- [[.error()]] - degree 6, connects to 4 communities
+- [[.collect()]] - degree 11, connects to 3 communities
+- [[instaloader_worker()]] - degree 9, connects to 3 communities
+- [[instaloader_options()]] - degree 4, connects to 2 communities

@@ -12,7 +12,7 @@ tags:
 # InstaloaderCrawler
 
 ## Connections
-- [[.__init__()_15]] - `method` [EXTRACTED]
+- [[.__init__()_13]] - `method` [EXTRACTED]
 - [[._operation()]] - `method` [EXTRACTED]
 - [[.close()_3]] - `method` [EXTRACTED]
 - [[.plan()]] - `method` [EXTRACTED]
@@ -21,7 +21,7 @@ tags:
 - [[Separate backend; preserves the existing export and native-ID dedup logic.]] - `rationale_for` [EXTRACTED]
 - [[UniversalConfigTests]] - `uses` [INFERRED]
 - [[instaloader_crawler.py]] - `contains` [EXTRACTED]
-- [[main()_10]] - `calls` [EXTRACTED]
+- [[main()_6]] - `calls` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

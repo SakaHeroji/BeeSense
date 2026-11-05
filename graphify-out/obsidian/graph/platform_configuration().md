@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[ValueError]] - `calls` [EXTRACTED]
 - [[_config()]] - `calls` [EXTRACTED]
-- [[main()_17]] - `calls` [EXTRACTED]
+- [[main()_14]] - `calls` [EXTRACTED]
 - [[post_url()_1]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[tiktok_crawler.py]] - `contains` [EXTRACTED]

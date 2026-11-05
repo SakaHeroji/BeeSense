@@ -1,59 +1,31 @@
 ---
 type: community
-cohesion: 0.08
-members: 44
+members: 18
 ---
 
 # Penyaringan Relevansi dan Narasi Topik
 
-**Cohesion:** 0.08 - loosely connected
-**Members:** 44 nodes
+**Members:** 18 nodes
 
 ## Members
-- [[.__call__()]] - code - MachineLearning/relevance_semantic.py
-- [[.__init__()_6]] - code - MachineLearning/context_relevance.py
-- [[.__init__()_7]] - code - MachineLearning/relevance_semantic.py
-- [[._scores()]] - code - MachineLearning/context_relevance.py
-- [[._validate()]] - code - MachineLearning/context_relevance.py
-- [[.build_units()]] - code - MachineLearning/context_relevance.py
-- [[.classify_many()]] - code - MachineLearning/context_relevance.py
-- [[.close()]] - code - MachineLearning/context_relevance.py
-- [[.encode()]] - code - MachineLearning/relevance_semantic.py
-- [[.filter_snapshot()]] - code - MachineLearning/context_relevance.py
-- [[.load_decisions()]] - code - MachineLearning/context_relevance.py
-- [[.make()]] - code - tests/nlp/test_context_relevance.py
-- [[.predictor()]] - code - tests/nlp/test_context_relevance.py
-- [[.setUp()_5]] - code - tests/nlp/test_context_relevance.py
-- [[.snapshot()]] - code - tests/nlp/test_context_relevance.py
-- [[.tearDown()_1]] - code - tests/nlp/test_context_relevance.py
-- [[.test_cache_resumes_and_configuration_changes_invalidate_it()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_checksum_tampering_is_rejected()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_direct_relevance_and_unrelated_target_never_inherit_root()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_explicit_configuration_does_not_inherit_another_corpus_mask()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_filter_dataset_is_immutable_and_bound_to_entire_source()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_invalid_configuration_and_scores_fail_closed()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_same_ambiguous_sentence_can_have_different_context_decisions()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_training_consumes_mask_without_modifying_source_text()]] - code - tests/nlp/test_context_relevance.py
-- [[.test_weak_short_match_requires_context()]] - code - tests/nlp/test_context_relevance.py
-- [[Bind a separately published relevance dataset to the active fitted mask.]] - rationale - scripts/verify_dashboard_data.py
-- [[Classify target sentences; parent context may rescue only ambiguous text.      U]] - rationale - MachineLearning/context_relevance.py
-- [[ContextRelevanceFilter]] - code - MachineLearning/context_relevance.py
-- [[Filter a verified existing corpus into a new auditable relevance dataset.]] - rationale - scripts/filter_context_relevance.py
-- [[Local, auditable zero-shot relevance decisions before topic clustering.  Model s]] - rationale - MachineLearning/context_relevance.py
-- [[LocalSemanticBackend]] - code - MachineLearning/relevance_semantic.py
-- [[Reference profile and lazy local SBERT backend for relevance filtering.]] - rationale - MachineLearning/relevance_semantic.py
-- [[RelevanceTests]] - code - tests/nlp/test_context_relevance.py
-- [[Resolve roots from native URLs; never match conversations by title.]] - rationale - MachineLearning/context_relevance.py
-- [[SBERT prototypes; scores are cosine similarities, never probabilities.]] - rationale - MachineLearning/relevance_semantic.py
-- [[Units contain target ``sentence`` and optional audited parentpost text.]] - rationale - MachineLearning/context_relevance.py
-- [[Write a new, checksum-bound decision dataset; never overwrite input.]] - rationale - MachineLearning/context_relevance.py
-- [[checksum()_1]] - code - MachineLearning/context_relevance.py
-- [[context_relevance.py]] - code - MachineLearning/context_relevance.py
-- [[digest()_2]] - code - MachineLearning/context_relevance.py
-- [[filter_context_relevance.py]] - code - scripts/filter_context_relevance.py
-- [[main()_2]] - code - scripts/filter_context_relevance.py
-- [[published_relevance_files()]] - code - scripts/verify_dashboard_data.py
-- [[relevance_semantic.py]] - code - MachineLearning/relevance_semantic.py
+- [[Cara kerja BeeSense]] - document - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerBackendsocial_crawler.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerBackendsocial_export.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerFrontend simulation]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[CrawlerFrontendsrcsharedapi.ts]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Facebook — UIsimulation only]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Floorplan health limits]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Floorplan 139 files, six workflows, seven introduction stops]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Frontend backend connection unimplemented]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Instagram — implemented Instaloader backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Operator-run artifact workflow]] - rationale - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Reddit — implemented Reddrix backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Threads — UIsimulation only]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[TikTok — UIsimulation only]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[Verified Cloud release]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[XTwitter — implemented Scweet backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[YouTube — implemented yt-dlp backend]] - concept - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
+- [[scriptsmerge_social_datasets.py]] - code - graphify-out/obsidian/Peta Cara Kerja BeeSense.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -63,15 +35,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 5 edges to [[_COMMUNITY_Model dan Pengujian NLP_1]]
-- 4 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
-- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
-- 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_2]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 
 ## Top bridge nodes
-- [[ContextRelevanceFilter]] - degree 19, connects to 3 communities
-- [[RelevanceTests]] - degree 18, connects to 3 communities
-- [[LocalSemanticBackend]] - degree 12, connects to 2 communities
-- [[filter_context_relevance.py]] - degree 8, connects to 2 communities
-- [[context_relevance.py]] - degree 8, connects to 1 community
+- [[CrawlerBackendsocial_crawler.py]] - degree 6, connects to 1 community

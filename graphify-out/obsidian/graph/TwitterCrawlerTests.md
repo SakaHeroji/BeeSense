@@ -12,7 +12,7 @@ tags:
 # TwitterCrawlerTests
 
 ## Connections
-- [[.setUp()_15]] - `method` [EXTRACTED]
+- [[.setUp()_12]] - `method` [EXTRACTED]
 - [[.test_429_retry_headers_and_http200_challenge()]] - `method` [EXTRACTED]
 - [[.test_auth_alias_and_local_secret_errors_are_not_values()]] - `method` [EXTRACTED]
 - [[.test_barrier_keeps_partial_records_and_stops_remaining_operations()]] - `method` [EXTRACTED]

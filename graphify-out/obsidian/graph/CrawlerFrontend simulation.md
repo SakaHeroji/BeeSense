@@ -11,7 +11,6 @@ tags:
 # Crawler/Frontend simulation
 
 ## Connections
-- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[Cara kerja BeeSense]] - `references` [EXTRACTED]
 - [[CrawlerFrontendsrcsharedapi.ts]] - `references` [EXTRACTED]
 - [[Facebook — UIsimulation only]] - `references` [EXTRACTED]

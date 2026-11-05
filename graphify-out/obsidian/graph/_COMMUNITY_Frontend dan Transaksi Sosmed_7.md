@@ -1,32 +1,44 @@
 ---
 type: community
-cohesion: 0.12
-members: 17
+members: 31
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Cohesion:** 0.12 - loosely connected
-**Members:** 17 nodes
+**Members:** 31 nodes
 
 ## Members
-- [[build]] - code - Crawler/Frontend/package.json
-- [[builddemo]] - code - Crawler/Frontend/package.json
-- [[check]] - code - Crawler/Frontend/package.json
-- [[dev]] - code - Crawler/Frontend/package.json
-- [[format]] - code - Crawler/Frontend/package.json
-- [[formatcheck]] - code - Crawler/Frontend/package.json
-- [[lint]] - code - Crawler/Frontend/package.json
-- [[prebuild]] - code - Crawler/Frontend/package.json
-- [[prebuilddemo]] - code - Crawler/Frontend/package.json
-- [[predev]] - code - Crawler/Frontend/package.json
-- [[pretest]] - code - Crawler/Frontend/package.json
-- [[pretypecheck]] - code - Crawler/Frontend/package.json
-- [[preview]] - code - Crawler/Frontend/package.json
-- [[scripts]] - code - Crawler/Frontend/package.json
-- [[syncconfig]] - code - Crawler/Frontend/package.json
-- [[test]] - code - Crawler/Frontend/package.json
-- [[typecheck]] - code - Crawler/Frontend/package.json
+- [[Badge()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[Button()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[DatasetView()]] - code - Crawler/Frontend/src/features/DatasetView.tsx
+- [[DatasetView.tsx]] - code - Crawler/Frontend/src/features/DatasetView.tsx
+- [[Dialog()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[Empty()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[Errors()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[Field()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[JobStatus]] - code - Crawler/Frontend/src/shared/types.ts
+- [[PlatformMark()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[Shell()]] - code - Crawler/Frontend/src/app/Shell.tsx
+- [[Shell.tsx]] - code - Crawler/Frontend/src/app/Shell.tsx
+- [[Spinner()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[Stepper()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[StorageConfig]] - code - Crawler/Frontend/src/shared/types.ts
+- [[StorageSettings()]] - code - Crawler/Frontend/src/shared/StorageSettings.tsx
+- [[StorageSettings.tsx]] - code - Crawler/Frontend/src/shared/StorageSettings.tsx
+- [[TransactionMigration()]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
+- [[TransactionMigration.tsx]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
+- [[UnsavedGuard()]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[crawlDateLabel()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[csvCell()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[download()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[hooks.ts]] - code - Crawler/Frontend/src/shared/hooks.ts
+- [[statusLabels]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[ui.tsx]] - code - Crawler/Frontend/src/shared/ui.tsx
+- [[useApp()]] - code - Crawler/Frontend/src/shared/context.ts
+- [[useClock()]] - code - Crawler/Frontend/src/shared/hooks.ts
+- [[useDebouncedValue()]] - code - Crawler/Frontend/src/shared/hooks.ts
+- [[useMediaQuery()]] - code - Crawler/Frontend/src/shared/hooks.ts
+- [[useUrlState()]] - code - Crawler/Frontend/src/shared/hooks.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,7 +48,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_14]]
+- 48 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
+- 22 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
+- 8 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_6]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_17]]
 
 ## Top bridge nodes
-- [[scripts]] - degree 17, connects to 1 community
+- [[DatasetView.tsx]] - degree 25, connects to 4 communities
+- [[Shell.tsx]] - degree 17, connects to 4 communities
+- [[TransactionMigration.tsx]] - degree 25, connects to 3 communities
+- [[ui.tsx]] - degree 24, connects to 2 communities
+- [[Button()]] - degree 9, connects to 2 communities

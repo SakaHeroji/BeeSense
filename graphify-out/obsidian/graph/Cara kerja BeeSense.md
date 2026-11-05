@@ -11,7 +11,6 @@ tags:
 # Cara kerja BeeSense
 
 ## Connections
-- [[Alur clustering sebelum dan setelah penyaringan]] - `references` [EXTRACTED]
 - [[CrawlerBackendsocial_crawler.py]] - `references` [EXTRACTED]
 - [[CrawlerBackendsocial_export.py]] - `references` [EXTRACTED]
 - [[CrawlerFrontend simulation]] - `references` [EXTRACTED]

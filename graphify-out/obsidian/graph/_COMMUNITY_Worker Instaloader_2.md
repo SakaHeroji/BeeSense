@@ -1,0 +1,43 @@
+---
+type: community
+members: 9
+---
+
+# Worker Instaloader
+
+**Members:** 9 nodes
+
+## Members
+- [[.__init__()_12]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.__init__()_13]] - code - Crawler/Backend/instaloader_crawler.py
+- [[.ig()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[.test_instaloader_is_default_and_owns_one_persistent_worker()]] - code - tests/crawler/test_social_crawler_instagram.py
+- [[Exercise Instagram through the combined coordinator, without network access.]] - rationale - tests/crawler/test_social_crawler_instagram.py
+- [[InstaloaderSettings]] - code - Crawler/Backend/instaloader_crawler.py
+- [[InstaloaderWorker]] - code - Crawler/Backend/instaloader_crawler.py
+- [[One subprocess and rate controller, with killable per-operation deadlines.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[test_social_crawler_instagram.py]] - code - tests/crawler/test_social_crawler_instagram.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Worker_Instaloader
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 7 edges to [[_COMMUNITY_Worker Instaloader_1]]
+- 7 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 3 edges to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 3 edges to [[_COMMUNITY_Pengujian Client Instagram]]
+- 2 edges to [[_COMMUNITY_Worker Instaloader_4]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+
+## Top bridge nodes
+- [[test_social_crawler_instagram.py]] - degree 12, connects to 6 communities
+- [[.__init__()_13]] - degree 7, connects to 4 communities
+- [[InstaloaderWorker]] - degree 9, connects to 3 communities
+- [[InstaloaderSettings]] - degree 7, connects to 2 communities
+- [[.ig()]] - degree 3, connects to 2 communities

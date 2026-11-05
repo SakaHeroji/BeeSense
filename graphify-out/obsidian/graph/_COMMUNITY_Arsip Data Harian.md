@@ -1,21 +1,19 @@
 ---
 type: community
-cohesion: 0.07
 members: 67
 ---
 
 # Arsip Data Harian
 
-**Cohesion:** 0.07 - loosely connected
 **Members:** 67 nodes
 
 ## Members
 - [[.crawler()_1]] - code - tests/crawler/test_social_archive.py
 - [[.run_merge()]] - code - tests/nlp/test_dataset_merge.py
-- [[.setUp()_13]] - code - tests/crawler/test_social_archive.py
 - [[.setUp()_4]] - code - tests/nlp/test_dataset_merge.py
-- [[.source()_1]] - code - tests/crawler/test_social_archive.py
+- [[.setUp()_10]] - code - tests/crawler/test_social_archive.py
 - [[.source()]] - code - tests/nlp/test_dataset_merge.py
+- [[.source()_1]] - code - tests/crawler/test_social_archive.py
 - [[.test_dates_use_audit_wib_midnight_instead_of_publication_dates()]] - code - tests/crawler/test_social_archive.py
 - [[.test_default_crawler_writes_private_bundle_and_organized_outputs()]] - code - tests/crawler/test_social_archive.py
 - [[.test_global_dedup_keeps_first_wib_day_and_latest_observation()]] - code - tests/crawler/test_social_archive.py
@@ -57,16 +55,16 @@ members: 67
 - [[discover()]] - code - scripts/organize_social_outputs.py
 - [[historical_records()]] - code - Crawler/Backend/social_archive.py
 - [[identity()]] - code - Crawler/Backend/social_identity.py
-- [[main()_8]] - code - scripts/merge_social_datasets.py
-- [[main()_9]] - code - scripts/organize_social_outputs.py
+- [[main()_4]] - code - scripts/merge_social_datasets.py
+- [[main()_5]] - code - scripts/organize_social_outputs.py
 - [[merge()]] - code - scripts/merge_social_datasets.py
 - [[merge_social_datasets.py]] - code - scripts/merge_social_datasets.py
 - [[merge_unique()]] - code - scripts/merge_social_datasets.py
 - [[native()]] - code - MachineLearning/source_roots.py
 - [[organize()]] - code - Crawler/Backend/social_archive.py
 - [[organize_social_outputs.py]] - code - scripts/organize_social_outputs.py
-- [[sha()_1]] - code - Crawler/Backend/social_archive.py
 - [[sha()]] - code - scripts/merge_social_datasets.py
+- [[sha()_1]] - code - Crawler/Backend/social_archive.py
 - [[social_archive.py]] - code - Crawler/Backend/social_archive.py
 - [[social_identity.py]] - code - Crawler/Backend/social_identity.py
 - [[source_records()]] - code - Crawler/Backend/social_archive.py
@@ -75,7 +73,7 @@ members: 67
 - [[test_dataset_merge.py]] - code - tests/nlp/test_dataset_merge.py
 - [[test_social_archive.py]] - code - tests/crawler/test_social_archive.py
 - [[twitter_roots()]] - code - MachineLearning/source_roots.py
-- [[verify()_2]] - code - Crawler/Backend/social_archive.py
+- [[verify()_1]] - code - Crawler/Backend/social_archive.py
 - [[write_roots()]] - code - MachineLearning/source_roots.py
 
 ## Live Query (requires Dataview plugin)
@@ -87,15 +85,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 2 edges to [[_COMMUNITY_Model dan Pengujian NLP_1]]
 - 2 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 - 2 edges to [[_COMMUNITY_Arsip Data Harian_1]]
 - 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Model dan Pengujian NLP]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 - 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
-- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_3]]
+- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_2]]
 - 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
 
 ## Top bridge nodes
@@ -103,4 +100,4 @@ SORT file.name ASC
 - [[social_archive.py]] - degree 18, connects to 2 communities
 - [[identity()]] - degree 11, connects to 2 communities
 - [[test_dataset_merge.py]] - degree 8, connects to 2 communities
-- [[write_roots()]] - degree 7, connects to 2 communities
+- [[social_identity.py]] - degree 6, connects to 2 communities

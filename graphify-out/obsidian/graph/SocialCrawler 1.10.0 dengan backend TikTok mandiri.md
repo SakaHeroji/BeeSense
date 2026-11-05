@@ -12,7 +12,7 @@ tags:
 # SocialCrawler 1.10.0 dengan backend TikTok mandiri
 
 ## Connections
-- [[Active TikTokCrawler2.5.0  NativeTikTokClient  BeeSenseNative1.2.0  Playwright1.64.1]] - `references` [EXTRACTED]
+- [[Active TikTokCrawler2.6.1  NativeTikTokClient  BeeSenseNative1.3.0 with Playwright1.62.0]] - `references` [EXTRACTED]
 - [[Dua uji live native 3 November 2026 — keduanya gagal target]] - `references` [EXTRACTED]
 - [[InstagramCrawler instagrapi atau browser]] - `references` [EXTRACTED]
 - [[InstaloaderCrawler_1]] - `references` [EXTRACTED]

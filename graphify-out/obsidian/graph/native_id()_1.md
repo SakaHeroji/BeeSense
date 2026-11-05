@@ -12,7 +12,7 @@ tags:
 # native_id()
 
 ## Connections
-- [[.__call__()_5]] - `calls` [EXTRACTED]
+- [[.__call__()_6]] - `calls` [EXTRACTED]
 - [[.accept()_6]] - `calls` [EXTRACTED]
 - [[.submit()]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [EXTRACTED]

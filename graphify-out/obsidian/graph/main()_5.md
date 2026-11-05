@@ -1,20 +1,19 @@
 ---
-source_file: "Dashboard/app.py"
+source_file: "scripts/organize_social_outputs.py"
 type: "code"
-community: "app.py"
-location: "L2409"
+community: "Arsip Data Harian"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/apppy
+  - community/Arsip_Data_Harian
 ---
 
 # main()
 
 ## Connections
-- [[.render()]] - `calls` [EXTRACTED]
-- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
-- [[app.py]] - `contains` [EXTRACTED]
-- [[streamlit_apps.py]] - `imports` [EXTRACTED]
+- [[consolidate()]] - `calls` [EXTRACTED]
+- [[discover()]] - `calls` [EXTRACTED]
+- [[organize_social_outputs.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/apppy
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/shared/domain.ts"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L324"
+location: "L330"
 tags:
   - graphify/code
   - graphify/EXTRACTED

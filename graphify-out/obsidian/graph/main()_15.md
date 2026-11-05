@@ -1,24 +1,20 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Batas Crawler Opsional"
-location: "L1324"
+community: "app.py"
+location: "L2419"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/apppy
 ---
 
 # main()
 
 ## Connections
-- [[.check_session()]] - `calls` [EXTRACTED]
-- [[.plan()_3]] - `calls` [EXTRACTED]
-- [[.run()_2]] - `calls` [EXTRACTED]
-- [[InstagramCrawler]] - `calls` [EXTRACTED]
-- [[error_receipt()_1]] - `calls` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[login_local()]] - `calls` [EXTRACTED]
-- [[run_instagram_worker()]] - `calls` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/apppy

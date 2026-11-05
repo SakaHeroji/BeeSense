@@ -1,22 +1,16 @@
 ---
 type: community
-cohesion: 0.29
-members: 7
+members: 3
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 0.29 - loosely connected
-**Members:** 7 nodes
+**Members:** 3 nodes
 
 ## Members
-- [[Dataset Dashboard note]] - document - graphify-out/obsidian/Dataset Dashboard.md
-- [[Historical Gemini publication 30 October 2026]] - concept - graphify-out/obsidian/Topik Gemini.md
-- [[Historical Instagram 500 snapshot 30 October 2026]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[Historical earlier snapshot 30 October 2026]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[Historical merged snapshot 29 October 2026]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[Original baseline preservation]] - rationale - graphify-out/obsidian/Dataset Dashboard.md
-- [[Topik Gemini note]] - document - graphify-out/obsidian/Topik Gemini.md
+- [[Native thread root explainability]] - rationale - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[Twitter twenty topic result note]] - document - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[X Twitter dashboard support]] - concept - graphify-out/obsidian/Twitter 20 Topik 20261102.md
 
 ## Live Query (requires Dataview plugin)
 

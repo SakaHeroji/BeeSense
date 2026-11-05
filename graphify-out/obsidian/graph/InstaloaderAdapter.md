@@ -12,7 +12,7 @@ tags:
 # InstaloaderAdapter
 
 ## Connections
-- [[.__init__()_13]] - `method` [EXTRACTED]
+- [[.__init__()_11]] - `method` [EXTRACTED]
 - [[.collect()]] - `method` [EXTRACTED]
 - [[.comment()]] - `method` [EXTRACTED]
 - [[.legacy_comments()]] - `method` [EXTRACTED]

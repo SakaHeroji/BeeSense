@@ -1,21 +1,21 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L340"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L1294"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # main()
 
 ## Connections
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[parser()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [INFERRED]
-- [[verify_descriptor()_1]] - `calls` [INFERRED]
+- [[.close()_6]] - `calls` [EXTRACTED]
+- [[.plan()_4]] - `calls` [EXTRACTED]
+- [[.run()_3]] - `calls` [EXTRACTED]
+- [[TwitterCrawler]] - `calls` [EXTRACTED]
+- [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

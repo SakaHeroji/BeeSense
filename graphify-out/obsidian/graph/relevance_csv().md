@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "code"
-community: "Penyaringan Relevansi dan Narasi Topik"
-location: "L64"
+community: "thread_url"
+location: "L66"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/thread_url
 ---
 
 # relevance_csv()
@@ -18,4 +18,4 @@ tags:
 - [[app.py]] - `contains` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/code #graphify/EXTRACTED #community/thread_url

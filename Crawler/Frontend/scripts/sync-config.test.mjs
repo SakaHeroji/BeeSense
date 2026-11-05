@@ -20,3 +20,16 @@ test('public projection excludes authentication and connection secrets at every 
   assert.equal(defaults.total_seconds, null);
   assert.equal(defaults.storage.postgresql.connection_string_env, 'BEESENSE_POSTGRESQL_DSN');
 });
+test('connector version follows the extension manifest without bundling its other fields', () => {
+  const value = publicDefaults(
+    { platforms: {} },
+    {
+      name: 'BeeSense TikTok Connector',
+      version: '1.2.3',
+      key: 'excluded-marker',
+      permissions: ['debugger'],
+    },
+  );
+  assert.deepEqual(value.tiktok_connector, { name: 'BeeSense TikTok Connector', version: '1.2.3' });
+  assert.equal(JSON.stringify(value).includes('excluded-marker'), false);
+});

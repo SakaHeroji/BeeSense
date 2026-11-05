@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[.__call__()_1]] - `method` [EXTRACTED]
-- [[.__init__()_15]] - `calls` [EXTRACTED]
-- [[.__init__()_14]] - `method` [EXTRACTED]
+- [[.__init__()_13]] - `calls` [EXTRACTED]
+- [[.__init__()_12]] - `method` [EXTRACTED]
 - [[.close()_2]] - `method` [EXTRACTED]
 - [[.test_instaloader_is_default_and_owns_one_persistent_worker()]] - `indirect_call` [INFERRED]
 - [[InstagramIntegrationTests]] - `uses` [INFERRED]

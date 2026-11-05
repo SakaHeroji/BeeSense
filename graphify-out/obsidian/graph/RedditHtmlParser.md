@@ -12,7 +12,7 @@ tags:
 # RedditHtmlParser
 
 ## Connections
-- [[.__init__()_29]] - `method` [EXTRACTED]
+- [[.__init__()_27]] - `method` [EXTRACTED]
 - [[.discover()]] - `method` [EXTRACTED]
 - [[.fullname()]] - `method` [EXTRACTED]
 - [[.own_body()]] - `method` [EXTRACTED]

@@ -17,7 +17,6 @@ tags:
 - [[._scores()]] - `calls` [EXTRACTED]
 - [[.encode()]] - `method` [EXTRACTED]
 - [[ContextRelevanceFilter]] - `uses` [INFERRED]
-- [[LocalSemanticBackend (MachineLearningrelevance_semantic.py)]] - `references` [EXTRACTED]
 - [[SBERT prototypes; scores are cosine similarities, never probabilities.]] - `rationale_for` [EXTRACTED]
 - [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[context_relevance.py]] - `imports` [EXTRACTED]

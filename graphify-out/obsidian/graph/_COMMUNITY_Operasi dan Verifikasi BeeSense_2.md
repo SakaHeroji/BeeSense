@@ -1,19 +1,14 @@
 ---
 type: community
-cohesion: 0.50
-members: 4
+members: 1
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Cohesion:** 0.50 - moderately connected
-**Members:** 4 nodes
+**Members:** 1 nodes
 
 ## Members
-- [[BeeSense architecture note]] - document - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Dashboard URL state binding]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Extracted evidence and inferred cosine edges]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[SocialNLPStreamlitApp]] - code - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[Narrative request receipt cache]] - rationale - graphify-out/obsidian/Topik Gemini.md
 
 ## Live Query (requires Dataview plugin)
 

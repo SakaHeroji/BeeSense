@@ -23,13 +23,11 @@ tags:
 - [[.make()]] - `calls` [EXTRACTED]
 - [[.test_weak_short_match_requires_context()]] - `calls` [EXTRACTED]
 - [[Classify target sentences; parent context may rescue only ambiguous text.      U]] - `rationale_for` [EXTRACTED]
-- [[ContextRelevanceFilter (MachineLearningcontext_relevance.py)]] - `references` [EXTRACTED]
 - [[LocalSemanticBackend]] - `uses` [INFERRED]
 - [[RelevanceTests]] - `uses` [INFERRED]
 - [[context_relevance.py]] - `contains` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

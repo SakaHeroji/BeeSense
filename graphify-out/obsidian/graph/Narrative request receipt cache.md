@@ -4,13 +4,10 @@ type: "rationale"
 community: "Operasi dan Verifikasi BeeSense"
 tags:
   - graphify/rationale
-  - graphify/INFERRED
+  - graphify/EXTRACTED
   - community/Operasi_dan_Verifikasi_BeeSense
 ---
 
 # Narrative request receipt cache
 
-## Connections
-- [[Verified embedding cache]] - `semantically_similar_to` [INFERRED]
-
-#graphify/rationale #graphify/INFERRED #community/Operasi_dan_Verifikasi_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Operasi_dan_Verifikasi_BeeSense

@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Konfigurasi Crawler Universal"
 location: "L863"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # TwitterCrawler
 
 ## Connections
-- [[.__init__()_39]] - `method` [EXTRACTED]
+- [[.__init__()_37]] - `method` [EXTRACTED]
 - [[._baseline()_1]] - `method` [EXTRACTED]
 - [[._searches()]] - `method` [EXTRACTED]
 - [[.close()_6]] - `method` [EXTRACTED]
@@ -23,8 +23,8 @@ tags:
 - [[Scweet-only trial; uses the existing shared sink, filters and Excel format.]] - `rationale_for` [EXTRACTED]
 - [[SocialExportMixin_2]] - `inherits` [EXTRACTED]
 - [[UniversalConfigTests]] - `uses` [INFERRED]
-- [[main()_16]] - `calls` [EXTRACTED]
+- [[main()_12]] - `calls` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

@@ -12,7 +12,7 @@ tags:
 # walk()
 
 ## Connections
-- [[.__init__()_29]] - `calls` [EXTRACTED]
+- [[.__init__()_27]] - `calls` [EXTRACTED]
 - [[.discover()]] - `calls` [EXTRACTED]
 - [[.thread()]] - `calls` [EXTRACTED]
 - [[Node]] - `indirect_call` [INFERRED]
