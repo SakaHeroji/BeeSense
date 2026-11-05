@@ -133,6 +133,9 @@ def _graph_positions(ids, edges):
 def _load_artifacts(path, manifest_version):
     # Includes immutable manifest identity used by the explanation export.
     data = SocialNLPClusterer.load_run(path, verify=True)
+    data["occurrences"] = SocialNLPStreamlitApp.with_source_titles(
+        data["occurrences"], data.get("social_data")
+    )
     return data
 
 
@@ -164,6 +167,46 @@ class SocialNLPStreamlitApp:
         self.baseline_dir = Path(baseline) if baseline else None
         if self.baseline_dir is not None and not self.baseline_dir.is_absolute():
             self.baseline_dir = ROOT / self.baseline_dir
+
+    @staticmethod
+    def with_source_titles(occurrences, social_data=None):
+        """Resolve display captions from verified roots, leaving fitted files intact."""
+        frame = occurrences.copy()
+        required = {"platform", "jenis", "url", "teks"}
+        if (
+            "post_title" not in frame
+            or social_data is None
+            or not required <= set(social_data.columns)
+        ):
+            return frame
+
+        def text(value):
+            return value.strip() if isinstance(value, str) else ""
+
+        labels = {}
+        for row in social_data[social_data.jenis.isin(["post", "video"])].to_dict(
+            "records"
+        ):
+            label = text(row.get("judul_post")) or text(row.get("teks"))
+            if not label:
+                continue
+            try:
+                key, method = SocialNLPClusterer.parent_post_key(row)
+            except ValueError:
+                continue  # A legacy X row may lack an audited conversation root.
+            if method in {"native_url", "source_audit"}:
+                labels.setdefault(key, set()).add(label)
+        resolved = {
+            key: next(iter(values))
+            for key, values in labels.items()
+            if len(values) == 1
+        }
+        missing = ~frame.post_title.map(lambda value: bool(text(value)))
+        for index, row in frame.loc[missing].iterrows():
+            key, method = SocialNLPClusterer.parent_post_key(row)
+            if method in {"native_url", "source_audit"} and key in resolved:
+                frame.at[index, "post_title"] = resolved[key]
+        return frame
 
     @staticmethod
     def filter_occurrences(

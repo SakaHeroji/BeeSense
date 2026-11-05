@@ -28,10 +28,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_12]]
+- 2 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_12]]
 - 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_12]]
 - 1 edge to [[_COMMUNITY_Retraining Lima Platform]]
-- 1 edge to [[_COMMUNITY_Arsip dan Metode NLP]]
 
 ## Top bridge nodes
-- [[SocialNLPClustererSBERT→L2→UMAP→DBSCAN→weightedWard→c-TF-IDF→verified artifacts]] - degree 14, connects to 4 communities
+- [[SocialNLPClustererSBERT→L2→UMAP→DBSCAN→weightedWard→c-TF-IDF→verified artifacts]] - degree 14, connects to 3 communities

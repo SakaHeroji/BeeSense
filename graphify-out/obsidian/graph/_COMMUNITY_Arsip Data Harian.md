@@ -90,10 +90,10 @@ SORT file.name ASC
 - 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
 - 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
-- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
-- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_2]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
+- 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model_2]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
 
 ## Top bridge nodes
 - [[test_social_archive.py]] - degree 9, connects to 3 communities

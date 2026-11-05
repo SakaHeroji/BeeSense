@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/topic_sentence_export.py"
 type: "rationale"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Prepare an original-sentence export and seal it into a new NLP snapshot.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[topic_sentence_export.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

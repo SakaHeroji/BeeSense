@@ -1,11 +1,11 @@
 ---
 type: community
-members: 24
+members: 23
 ---
 
 # Capture Reddit Playwright
 
-**Members:** 24 nodes
+**Members:** 23 nodes
 
 ## Members
 - [[.__init__()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
@@ -14,7 +14,6 @@ members: 24
 - [[.evidence()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
 - [[.inspect()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
 - [[.test_missing_login_is_reported_without_credentials_or_exception_message()]] - code - tests/crawler/test_instagram_crawler.py
-- [[.test_worker_sanitizes_errors_and_closes_browser()]] - code - tests/crawler/test_social_crawler_selenium.py
 - [[BeeSense application package.]] - rationale - Crawler/Backend/Reddit/__init__.py
 - [[PlaywrightCLI]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
 - [[Reddit__init__.py]] - code - Crawler/Backend/Reddit/__init__.py
@@ -41,21 +40,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 2 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
 - 2 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
-- 2 edges to [[_COMMUNITY_Crawler Selenium_2]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_3]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_1]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_7]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium_1]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_3]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium_2]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
 
 ## Top bridge nodes
+- [[crawl_reddit_playwright.py]] - degree 17, connects to 3 communities
 - [[run()]] - degree 15, connects to 3 communities
-- [[crawl_reddit_playwright.py]] - degree 17, connects to 2 communities
-- [[RuntimeError]] - degree 8, connects to 2 communities
+- [[RuntimeError]] - degree 8, connects to 3 communities
 - [[validate_capture()]] - degree 5, connects to 2 communities
-- [[.test_worker_sanitizes_errors_and_closes_browser()]] - degree 4, connects to 2 communities
+- [[.inspect()]] - degree 4, connects to 1 community

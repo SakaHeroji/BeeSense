@@ -34,15 +34,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 17 edges to [[_COMMUNITY_thread_url]]
-- 11 edges to [[_COMMUNITY_thread_url_1]]
-- 4 edges to [[_COMMUNITY_app.py]]
-- 1 edge to [[_COMMUNITY_app.py_1]]
+- 21 edges to [[_COMMUNITY_thread_url]]
+- 7 edges to [[_COMMUNITY_app.py]]
+- 3 edges to [[_COMMUNITY_app.py_1]]
+- 2 edges to [[_COMMUNITY_thread_url_1]]
 - 1 edge to [[_COMMUNITY_Pengujian Analisis Dashboard]]
 
 ## Top bridge nodes
 - [[number()_1]] - degree 18, connects to 4 communities
-- [[._overview()]] - degree 11, connects to 2 communities
-- [[._topic_detail()]] - degree 11, connects to 2 communities
+- [[._overview()]] - degree 11, connects to 3 communities
 - [[percent()]] - degree 9, connects to 2 communities
 - [[._metrics()]] - degree 4, connects to 2 communities
+- [[._topic_detail()]] - degree 11, connects to 1 community

@@ -1,19 +1,22 @@
 ---
 type: community
-members: 6
+members: 9
 ---
 
 # Akuisisi TikTok dan Ekspor
 
-**Members:** 6 nodes
+**Members:** 9 nodes
 
 ## Members
-- [[.__call__()_5]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.__init__()_42]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.close()_9]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.close()_10]] - code - Crawler/Backend/tiktok_crawler.py
-- [[Keep a single library session; retain streamed rows on a hard deadline.]] - rationale - Crawler/Backend/tiktok_crawler.py
-- [[TikTokWorker]] - code - Crawler/Backend/tiktok_crawler.py
+- [[.capture()_2]] - code - Crawler/Backend/tiktok_crawler.py
+- [[.response()]] - code - Crawler/Backend/tiktok_crawler.py
+- [[.save_cooldown()]] - code - Crawler/Backend/tiktok_crawler.py
+- [[Find video objects in hydration and browser response JSON.]] - rationale - Crawler/Backend/tiktok_crawler.py
+- [[Honor server seconds or an HTTP date; never put headers in receipts.]] - rationale - Crawler/Backend/tiktok_crawler.py
+- [[Missing pagination metadata never proves that all comments were loaded.]] - rationale - Crawler/Backend/tiktok_crawler.py
+- [[embedded_videos()]] - code - Crawler/Backend/tiktok_crawler.py
+- [[retry_after()]] - code - Crawler/Backend/tiktok_crawler.py
+- [[source_has_more()]] - code - Crawler/Backend/tiktok_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -23,14 +26,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
-- 2 edges to [[_COMMUNITY_Kuota Harian Scweet]]
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 5 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
+- 3 edges to [[_COMMUNITY_Konektor Chrome TikTok Lokal_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
 
 ## Top bridge nodes
-- [[TikTokWorker]] - degree 9, connects to 4 communities
-- [[.close()_10]] - degree 5, connects to 2 communities
-- [[.__call__()_5]] - degree 3, connects to 1 community
-- [[.close()_9]] - degree 2, connects to 1 community
+- [[.response()]] - degree 8, connects to 2 communities
+- [[.capture()_2]] - degree 6, connects to 2 communities
+- [[embedded_videos()]] - degree 4, connects to 2 communities
+- [[source_has_more()]] - degree 3, connects to 1 community
+- [[retry_after()]] - degree 3, connects to 1 community

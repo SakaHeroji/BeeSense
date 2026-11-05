@@ -504,6 +504,14 @@
       "output_tokens": 0,
       "usage_available": false,
       "scope": "All-social TikTok merge and20-topic before/after refit,40approved Gemini narratives, final campaign audit, dashboard publishing and historical relevance allowlist"
+    },
+    {
+      "date": "2026-11-05T10:52:40.044958+00:00",
+      "files": 5,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "usage_available": false,
+      "scope": "Caption-derived native-root labels for dashboard sources and evidence; artifacts unchanged"
     }
   ],
   "total_input_tokens": 0,

@@ -27,10 +27,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_12]]
 - 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_12]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_12]]
 - 1 edge to [[_COMMUNITY_Frontend TikTok dan Koneksi Chrome_2]]
 - 1 edge to [[_COMMUNITY_Arsip dan Metode NLP]]
 
 ## Top bridge nodes
-- [[November5TikTok combined retrainingboth local fits20topicsmean c_v=0.4,40authorized Gemini narratives complete,activepair updated]] - degree 15, connects to 4 communities
+- [[November5TikTok combined retrainingboth local fits20topicsmean c_v=0.4,40authorized Gemini narratives complete,activepair updated]] - degree 14, connects to 4 communities

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Kuota Harian Scweet"
+community: "Wrapper RedditCrawler"
 location: "L268"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kuota_Harian_Scweet
+  - community/Wrapper_RedditCrawler
 ---
 
 # load_reddrix()
@@ -18,4 +18,4 @@ tags:
 - [[resolve_reddrix_display()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

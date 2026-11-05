@@ -39,9 +39,9 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
-- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_5]]
 - 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
 
 ## Top bridge nodes
 - [[test_tiktok_chrome_bridge.py]] - degree 7, connects to 3 communities

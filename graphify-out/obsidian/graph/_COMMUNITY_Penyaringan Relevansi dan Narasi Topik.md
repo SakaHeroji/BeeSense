@@ -59,12 +59,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 2 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
+- 7 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 5 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 - 1 edge to [[_COMMUNITY_thread_url_1]]
 
 ## Top bridge nodes
-- [[RelevanceTests]] - degree 18, connects to 2 communities
+- [[RelevanceTests]] - degree 18, connects to 3 communities
 - [[filter_context_relevance.py]] - degree 8, connects to 2 communities
 - [[ContextRelevanceFilter]] - degree 17, connects to 1 community
 - [[LocalSemanticBackend]] - degree 11, connects to 1 community

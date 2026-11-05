@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/storage_config.py"
 type: "rationale"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Konfigurasi Crawler Universal"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # Storage settings shared with the frontend; DSNs stay in server environment.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[storage_config.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

@@ -15,6 +15,101 @@ from streamlit_apps import number, percent
 
 
 class AnalysisTests(unittest.TestCase):
+    def test_tiktok_captions_label_comments_replies_and_separate_native_posts(self):
+        first, second = "7615256610599898389", "7642218587217775880"
+        frame = self.frame.iloc[:3].copy()
+        frame["platform"] = "tiktok"
+        frame["post_title"] = ["", None, pd.NA]
+        frame["sentence"] = "Kalimat komentar tentang kuliah"
+        frame["url"] = [
+            f"https://www.tiktok.com/@renamed/video/{first}?comment_id=11",
+            f"https://www.tiktok.com/@renamed/photo/{first}?comment_id=12",
+            f"https://www.tiktok.com/@other/video/{second}?comment_id=13",
+        ]
+        frame["kind"] = ["comment", "reply", "comment"]
+        sources = pd.DataFrame(
+            [
+                dict(
+                    platform="tiktok",
+                    jenis="post",
+                    judul_post=None,
+                    teks="Beasiswa <kampus> untuk biaya kuliah.",
+                    url=f"https://www.tiktok.com/@original/video/{first}",
+                ),
+                dict(
+                    platform="tiktok",
+                    jenis="post",
+                    judul_post=None,
+                    teks="Beasiswa <kampus> untuk biaya kuliah.",
+                    url=f"https://www.tiktok.com/@other/video/{second}",
+                ),
+            ]
+        )
+        original = frame.copy(deep=True)
+        original_sources = sources.copy(deep=True)
+        shown = App.with_source_titles(frame, sources)
+        self.assertEqual(shown.post_title.tolist(), [sources.iloc[0].teks] * 3)
+        profile = App.topic_profile(shown, 0, ["kuliah"])
+        self.assertEqual(profile["sources"].comments.tolist(), [2, 1])
+        figure = App.source_figure(profile["sources"])
+        self.assertEqual(len(set(figure.data[0].y)), 2)
+        self.assertIn("&lt;kampus&gt;", figure.data[0].customdata[0][0])
+        pd.testing.assert_frame_equal(frame, original)
+        pd.testing.assert_frame_equal(sources, original_sources)
+
+    def test_source_caption_fallback_keeps_titles_and_ignores_unverified_matches(self):
+        frame = self.frame.iloc[:3].copy()
+        frame["platform"] = "tiktok"
+        frame["post_title"] = ["Judul asli", "", ""]
+        frame["url"] = [
+            "https://www.tiktok.com/@a/video/100?comment_id=1",
+            "https://www.tiktok.com/@b/video/200?comment_id=2",
+            "https://www.tiktok.com/@c/video/300?comment_id=3",
+        ]
+        sources = pd.DataFrame(
+            [
+                dict(
+                    platform="tiktok",
+                    jenis="post",
+                    teks="Caption baru",
+                    url="https://www.tiktok.com/@a/video/100",
+                ),
+                dict(
+                    platform="tiktok",
+                    jenis="comment",
+                    teks="Bukan caption",
+                    url="https://www.tiktok.com/@b/video/200",
+                ),
+                dict(
+                    platform="tiktok",
+                    jenis="post",
+                    teks="Host palsu",
+                    url="https://example.com/@c/video/300",
+                ),
+            ]
+        )
+        shown = App.with_source_titles(frame, sources)
+        self.assertEqual(shown.post_title.tolist(), ["Judul asli", "", ""])
+        pd.testing.assert_frame_equal(App.with_source_titles(frame), frame)
+
+    def test_conflicting_root_captions_are_not_guessed(self):
+        frame = self.frame.iloc[:1].copy()
+        frame["platform"] = "tiktok"
+        frame["post_title"] = ""
+        frame["url"] = "https://www.tiktok.com/@a/video/100?comment_id=1"
+        sources = pd.DataFrame(
+            [
+                dict(
+                    platform="tiktok",
+                    jenis="post",
+                    teks=caption,
+                    url="https://www.tiktok.com/@a/video/100",
+                )
+                for caption in ["Caption pertama", "Caption berbeda"]
+            ]
+        )
+        self.assertEqual(App.with_source_titles(frame, sources).post_title.iloc[0], "")
+
     def test_snapshot_comparison_uses_published_settings_without_local_environment(
         self,
     ):

@@ -45,13 +45,12 @@ SORT file.name ASC
 ## Connections to other communities
 - 9 edges to [[_COMMUNITY_Crawler Selenium]]
 - 5 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 3 edges to [[_COMMUNITY_Crawler Selenium_2]]
+- 4 edges to [[_COMMUNITY_Crawler Selenium_2]]
 - 2 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 2 edges to [[_COMMUNITY_Kuota Harian Scweet]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 2 edges to [[_COMMUNITY_Kuota Harian Scweet_1]]
 - 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_3]]
 
 ## Top bridge nodes
 - [[SocialCrawlerSelenium]] - degree 29, connects to 4 communities

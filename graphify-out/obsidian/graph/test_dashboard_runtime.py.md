@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[CloudRuntimeTests]] - `contains` [EXTRACTED]
 - [[Run in an isolated Cloud environment, using only root requirements.txt.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[topic_narratives.py]] - `imports_from` [EXTRACTED]
 

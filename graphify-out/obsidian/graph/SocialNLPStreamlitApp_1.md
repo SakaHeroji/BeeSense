@@ -2,7 +2,7 @@
 source_file: "Dashboard/app.py"
 type: "code"
 community: "thread_url"
-location: "L146"
+location: "L149"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_45]] - `method` [EXTRACTED]
+- [[.__init__()_46]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -54,13 +54,13 @@ tags:
 - [[.topic_profile()]] - `method` [EXTRACTED]
 - [[.topic_summary()]] - `method` [EXTRACTED]
 - [[.trend_figure()]] - `method` [EXTRACTED]
+- [[.with_source_titles()]] - `method` [EXTRACTED]
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
 - [[Read-only exploration of completed NLP runs; no training on page reruns.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_15]] - `calls` [EXTRACTED]
+- [[main()_18]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/thread_url

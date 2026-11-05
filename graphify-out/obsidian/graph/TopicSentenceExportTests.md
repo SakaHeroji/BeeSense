@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_topic_sentence_export.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L9"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # TopicSentenceExportTests
@@ -17,4 +17,4 @@ tags:
 - [[.test_unknown_or_empty_topic_membership_is_rejected()]] - `method` [EXTRACTED]
 - [[test_topic_sentence_export.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

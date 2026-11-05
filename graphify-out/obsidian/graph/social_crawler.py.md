@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Kuota Harian Scweet"
+community: "Konfigurasi Crawler Universal"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kuota_Harian_Scweet
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # social_crawler.py
@@ -54,4 +54,4 @@ tags:
 - [[test_unlimited_crawling.py]] - `imports_from` [EXTRACTED]
 - [[tiktok_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

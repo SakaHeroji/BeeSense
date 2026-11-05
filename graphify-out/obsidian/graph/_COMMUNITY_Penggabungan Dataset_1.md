@@ -8,8 +8,8 @@ members: 22
 **Members:** 22 nodes
 
 ## Members
+- [[.setUp()_17]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[.setUp()_18]] - code - tests/nlp/test_dashboard_data_verifier.py
-- [[.setUp()_19]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[.test_active_topic_count_and_coherence_threshold_are_enforced()]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[.test_append_only_merge_sidecars_are_required_and_checksum_bound()]] - code - tests/nlp/test_dashboard_data_verifier.py
 - [[.test_archived_nlp_snapshot_and_separate_crawl_output_are_supported()]] - code - tests/nlp/test_dashboard_data_verifier.py

@@ -1,14 +1,14 @@
 ---
 type: community
-members: 47
+members: 43
 ---
 
 # Encoding dan Penyimpanan Model
 
-**Members:** 47 nodes
+**Members:** 43 nodes
 
 ## Members
-- [[.__init__()_46]] - code - MachineLearning/social_nlp.py
+- [[.__init__()_45]] - code - MachineLearning/social_nlp.py
 - [[._validate_config()]] - code - MachineLearning/social_nlp.py
 - [[._validate_explanation_options()]] - code - MachineLearning/social_nlp.py
 - [[.select_candidate()]] - code - MachineLearning/social_nlp.py
@@ -28,6 +28,7 @@ members: 47
 - [[.test_dedup_preserves_both_occurrences_and_original_dates()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_default_and_primary_path_load_configuration_once()]] - code - tests/nlp/test_nlp_config.py
 - [[.test_dry_run_shows_effective_paths_without_loading_data_or_fitting()]] - code - tests/nlp/test_nlp_config.py
+- [[.test_excel_extension_loads_without_gemini_and_binds_membership_and_bytes()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_existing_artifact_directory_and_source_input_are_preserved()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_explanation_validation_does_not_reread_the_editable_file()]] - code - tests/nlp/test_nlp_config.py
 - [[.test_falsey_non_objects_and_unknown_settings_are_rejected()]] - code - tests/nlp/test_nlp_config.py
@@ -43,18 +44,13 @@ members: 47
 - [[.test_topic_reduction_preserves_groups_noise_and_uses_sentence_weights()]] - code - tests/nlp/test_social_nlp.py
 - [[.test_twitter_prepare_preserves_audited_roots_without_embedding_titles()]] - code - tests/nlp/test_social_nlp.py
 - [[Configuration consolidation without fitting, model downloads or API requests.]] - rationale - tests/nlp/test_nlp_config.py
-- [[DashboardTests]] - code - tests/nlp/test_social_nlp.py
 - [[Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.]] - rationale - MachineLearning/social_nlp.py
 - [[NLPConfigTests]] - code - tests/nlp/test_nlp_config.py
 - [[NLPTests]] - code - tests/nlp/test_social_nlp.py
-- [[No modelnetwork calls policy, provenance and integration regressions.]] - rationale - tests/nlp/test_context_relevance.py
 - [[SocialNLPClusterer_1]] - code - MachineLearning/social_nlp.py
 - [[encoder()]] - code - tests/nlp/test_social_nlp.py
 - [[fixture()_1]] - code - tests/nlp/test_social_nlp.py
-- [[test_context_relevance.py]] - code - tests/nlp/test_context_relevance.py
 - [[test_nlp_config.py]] - code - tests/nlp/test_nlp_config.py
-- [[test_social_nlp.py]] - code - tests/nlp/test_social_nlp.py
-- [[test_streamlit_app.py]] - code - tests/nlp/test_streamlit_app.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -64,28 +60,26 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 28 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
-- 28 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_2]]
-- 13 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
-- 11 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
+- 30 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_1]]
+- 15 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
+- 15 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
+- 11 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model_2]]
+- 7 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
 - 4 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 4 edges to [[_COMMUNITY_Pengujian UI Streamlit]]
-- 3 edges to [[_COMMUNITY_thread_url]]
+- 3 edges to [[_COMMUNITY_Pengujian UI Streamlit]]
+- 3 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
 - 3 edges to [[_COMMUNITY_Pengujian Penjelasan Topik]]
-- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini]]
 - 2 edges to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi_1]]
 - 2 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 2 edges to [[_COMMUNITY_Arsip Data Harian]]
-- 2 edges to [[_COMMUNITY_Pengujian Narasi Gemini_1]]
+- 1 edge to [[_COMMUNITY_thread_url]]
 - 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
-- 1 edge to [[_COMMUNITY_thread_url_1]]
-- 1 edge to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_Verifikasi Dataset Publik]]
 - 1 edge to [[_COMMUNITY_app.py_1]]
 
 ## Top bridge nodes
-- [[SocialNLPClusterer_1]] - degree 115, connects to 15 communities
-- [[NLPTests]] - degree 30, connects to 3 communities
-- [[test_context_relevance.py]] - degree 9, connects to 3 communities
-- [[test_streamlit_app.py]] - degree 6, connects to 2 communities
+- [[SocialNLPClusterer_1]] - degree 110, connects to 16 communities
+- [[NLPTests]] - degree 30, connects to 4 communities
+- [[encoder()]] - degree 10, connects to 2 communities
 - [[.select_candidate()]] - degree 5, connects to 2 communities
+- [[._validate_explanation_options()]] - degree 5, connects to 2 communities

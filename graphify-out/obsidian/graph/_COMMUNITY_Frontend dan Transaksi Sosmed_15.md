@@ -1,14 +1,16 @@
 ---
 type: community
-members: 1
+members: 3
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 1 nodes
+**Members:** 3 nodes
 
 ## Members
-- [[domain.test.ts]] - code - Crawler/Frontend/src/test/domain.test.ts
+- [[PlatformResults()]] - code - Crawler/Frontend/src/features/PlatformResults.tsx
+- [[PlatformResults.tsx]] - code - Crawler/Frontend/src/features/PlatformResults.tsx
+- [[TransactionPreview()]] - code - Crawler/Frontend/src/features/PlatformResults.tsx
 
 ## Live Query (requires Dataview plugin)
 

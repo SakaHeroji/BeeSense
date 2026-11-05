@@ -27,13 +27,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Batas Crawler Opsional_3]]
+- 3 edges to [[_COMMUNITY_Batas Crawler Opsional_2]]
 - 2 edges to [[_COMMUNITY_Crawler Selenium_2]]
 - 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_2]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_3]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
+- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_1]]
+- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
 
 ## Top bridge nodes
 - [[instagram_browser.py]] - degree 8, connects to 4 communities

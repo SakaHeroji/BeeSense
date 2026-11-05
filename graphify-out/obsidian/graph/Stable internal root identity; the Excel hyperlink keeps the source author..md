@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "rationale"
-community: "Akuisisi TikTok dan Ekspor"
+community: "Konfigurasi Crawler Universal"
 location: "L99"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_TikTok_dan_Ekspor
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # Stable internal root identity; the Excel hyperlink keeps the source author.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[post_url()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor
+#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

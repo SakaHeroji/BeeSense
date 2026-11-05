@@ -43,13 +43,14 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 8 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
-- 5 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
-- 4 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
+- 5 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_5]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
 - 2 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_5]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_6]]
+- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
 
 ## Top bridge nodes
-- [[NativeTikTokClient]] - degree 30, connects to 4 communities
+- [[NativeTikTokClient]] - degree 30, connects to 5 communities
 - [[.thread()_1]] - degree 13, connects to 2 communities
 - [[.start()]] - degree 6, connects to 2 communities
 - [[.navigate()_1]] - degree 8, connects to 1 community

@@ -20,7 +20,6 @@ tags:
 - [[ContextRelevanceFilterLocalSemanticBackend local pinned-SBERT reference-based occurrence filtering,not human-labeled classifier or per-comment API]] - `references` [EXTRACTED]
 - [[Current afterfilter20topics,c_v0.4666033620;10,795unique11,185occurrences,81.81%coverage,silhouette0.062782,ARI0.641173,DBSCAN154groups→Ward20]] - `references` [EXTRACTED]
 - [[Current beforefilter20topics,c_v0.4346102845;53,967unique55,257occurrences,95.75%coverage,silhouette-0.011752,ARI0.803763,DBSCAN508groups→Ward20]] - `references` [EXTRACTED]
-- [[Dashboard BeeSense design and artifact-derived evidence]] - `references` [EXTRACTED]
 - [[Native dashboard8502,productionDockerenvunchanged,noDBmigration;newDockerimage unverified because daemon unavailable;requestedcommitfast-forwardmainpush is not proof remoteCIproductiondeployment]] - `references` [EXTRACTED]
 - [[Newmask55,257decisions11,185relevant19,739general3,833out20,500uncertain;verifiedsubsetreuse only aftersourcemodeltextsentenceID checks,then projectionclusteringevaluation refitted]] - `references` [EXTRACTED]
 - [[Nov5combinedTikTokretrainingboth20topicfitsmeetmean0.4gate,40narrativescomplete]] - `references` [EXTRACTED]

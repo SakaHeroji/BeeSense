@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/export_browser_campaign.py"
 type: "code"
-community: "Kontrak Record Reddit"
+community: "Capture Reddit Playwright"
 location: "L20"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Capture_Reddit_Playwright
 ---
 
 # load_campaign()
@@ -18,4 +18,4 @@ tags:
 - [[thread_id()]] - `calls` [EXTRACTED]
 - [[utc_datetime()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright

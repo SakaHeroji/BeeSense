@@ -1,15 +1,14 @@
 ---
 type: community
-members: 55
+members: 53
 ---
 
 # Integrasi X dan Provenans Akuisisi
 
-**Members:** 55 nodes
+**Members:** 53 nodes
 
 ## Members
 - [[._browser_call()]] - code - Crawler/Backend/social_crawler.py
-- [[._checkpoint_items()_1]] - code - Crawler/Backend/social_crawler.py
 - [[._delay()]] - code - Crawler/Backend/social_crawler.py
 - [[._dom_events()]] - code - Crawler/Backend/social_crawler.py
 - [[._event()]] - code - Crawler/Backend/social_crawler.py
@@ -23,8 +22,6 @@ members: 55
 - [[.export_compact()]] - code - Crawler/Backend/social_crawler.py
 - [[.plan()_5]] - code - Crawler/Backend/social_crawler.py
 - [[.run()_4]] - code - Crawler/Backend/social_crawler.py
-- [[.setUp()_13]] - code - tests/crawler/test_instagram_crawler.py
-- [[.setUp()_14]] - code - tests/crawler/test_social_crawler_reddrix.py
 - [[.test_calendar_month_boundary_date_only_and_unrecognized_dates()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_default_uses_one_json_and_plan_does_not_access_sources()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_discovery_retains_bounded_cursor()]] - code - tests/crawler/test_social_crawler_instagram.py
@@ -39,12 +36,14 @@ members: 55
 - [[.test_instagram_retry_cap_and_global_deadline_stop_additional_requests()]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_instagram_server_wait_is_not_shortened_by_backoff_cap()]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_instaloader_fetches_full_answer_iterator_when_previews_are_partial()]] - code - tests/crawler/test_unlimited_crawling.py
+- [[.test_instaloader_is_default_and_owns_one_persistent_worker()]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_invalid_config_is_rejected_before_output_or_requests()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_main_plan_applies_target_and_unlimited_caps_to_every_runner()]] - code - tests/crawler/test_unlimited_crawling.py
 - [[.test_mixed_export_keeps_native_platform_provenance()]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_native_baseline_skips_instagram_before_worker()]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_owned_instaloader_worker_is_closed_when_combined_run_finishes()]] - code - tests/crawler/test_social_crawler_instagram.py
 - [[.test_reddit_cooldown_rejects_invalid_config_values()]] - code - tests/crawler/test_social_crawler.py
+- [[.test_reddrix_unlimited_preserves_native_replies_and_zero_disables_them()]] - code - tests/crawler/test_unlimited_crawling.py
 - [[.test_relative_calendar_dates_use_source_capture_timezone_and_edit_suffix()]] - code - tests/crawler/test_social_crawler.py
 - [[.test_thousand_unique_posts_finish_beyond_old_hours_and_keep_all_comments()]] - code - tests/crawler/test_unlimited_crawling.py
 - [[.test_unused_instagram_settings_cannot_leak_credentials_in_other_platform_runs()]] - code - tests/crawler/test_social_crawler_instagram.py
@@ -61,7 +60,6 @@ members: 55
 - [[UnlimitedCrawlingTests]] - code - tests/crawler/test_unlimited_crawling.py
 - [[Validate and return the effective plan without browsernetwork access.]] - rationale - Crawler/Backend/social_crawler.py
 - [[Write an audit bundle; default runs also publish platformday partitions.]] - rationale - Crawler/Backend/social_crawler.py
-- [[_url()]] - code - Crawler/Backend/social_crawler.py
 - [[main()_13]] - code - Crawler/Backend/social_crawler.py
 
 ## Live Query (requires Dataview plugin)
@@ -72,32 +70,34 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 21 edges to [[_COMMUNITY_Kuota Harian Scweet]]
-- 16 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
+- 16 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_7]]
 - 12 edges to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 10 edges to [[_COMMUNITY_Pengujian Client Instagram]]
-- 9 edges to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 8 edges to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
 - 7 edges to [[_COMMUNITY_Wrapper RedditCrawler_1]]
 - 7 edges to [[_COMMUNITY_Worker Instaloader_2]]
+- 7 edges to [[_COMMUNITY_Kuota Harian Scweet_1]]
+- 7 edges to [[_COMMUNITY_Pengujian Client Instagram]]
+- 7 edges to [[_COMMUNITY_Kuota Harian Scweet_2]]
+- 6 edges to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 5 edges to [[_COMMUNITY_Crawler Selenium]]
 - 5 edges to [[_COMMUNITY_Crawler Selenium_1]]
+- 5 edges to [[_COMMUNITY_Kuota Harian Scweet]]
 - 4 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 3 edges to [[_COMMUNITY_Crawler Selenium]]
 - 3 edges to [[_COMMUNITY_Wrapper RedditCrawler]]
 - 3 edges to [[_COMMUNITY_Arsip Data Harian]]
-- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
 - 2 edges to [[_COMMUNITY_Panduan Pipeline BeeSense_6]]
-- 2 edges to [[_COMMUNITY_Worker Instaloader_3]]
+- 2 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler_1]]
 - 1 edge to [[_COMMUNITY_Penjadwalan dan Riwayat Akuisisi_1]]
 - 1 edge to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik_1]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium_2]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
-- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_5]]
+- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_6]]
 - 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes
-- [[SocialCrawler]] - degree 110, connects to 19 communities
-- [[Clock_1]] - degree 15, connects to 3 communities
-- [[UnlimitedCrawlingTests]] - degree 10, connects to 3 communities
-- [[_url()]] - degree 5, connects to 3 communities
+- [[SocialCrawler]] - degree 110, connects to 21 communities
+- [[Clock_1]] - degree 15, connects to 4 communities
+- [[._existing_posts()]] - degree 6, connects to 3 communities
+- [[.test_reddrix_unlimited_preserves_native_replies_and_zero_disables_them()]] - degree 5, connects to 3 communities
 - [[InstagramIntegrationTests]] - degree 20, connects to 2 communities

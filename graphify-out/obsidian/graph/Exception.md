@@ -1,11 +1,11 @@
 ---
 source_file: ""
 type: "code"
-community: "Parsing Identitas Reddit"
+community: "Pengujian Parser Reddit"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Pengujian_Parser_Reddit
 ---
 
 # Exception
@@ -13,4 +13,4 @@ tags:
 ## Connections
 - [[SourceFailure]] - `inherits` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

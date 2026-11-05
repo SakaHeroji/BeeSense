@@ -1,18 +1,18 @@
 ---
-source_file: "scripts/relevance_dashboard.py"
+source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Narasi Gemini dan Pembandingan"
-location: "L12"
+community: "Verifikasi Dataset Publik"
+location: "L285"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Narasi_Gemini_dan_Pembandingan
+  - community/Verifikasi_Dataset_Publik
 ---
 
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
+- [[verify()_2]] - `calls` [EXTRACTED]
+- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan
+#graphify/code #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik

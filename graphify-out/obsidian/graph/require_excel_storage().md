@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/storage_config.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Konfigurasi Crawler Universal"
 location: "L49"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # require_excel_storage()
@@ -20,4 +20,4 @@ tags:
 - [[test_storage_config.py]] - `imports` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

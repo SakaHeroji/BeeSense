@@ -57,15 +57,17 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 12 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 3 edges to [[_COMMUNITY_Kuota Harian Scweet]]
 - 3 edges to [[_COMMUNITY_Pengujian Koordinator Crawler_1]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
 - 1 edge to [[_COMMUNITY_Arsip Data Harian]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
 - 1 edge to [[_COMMUNITY_Worker Instaloader_2]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet_1]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
 
 ## Top bridge nodes
-- [[test_social_crawler.py]] - degree 12, connects to 5 communities
+- [[test_social_crawler.py]] - degree 12, connects to 7 communities
 - [[SocialCrawlerTests]] - degree 42, connects to 2 communities
 - [[.crawler()]] - degree 32, connects to 2 communities
 - [[.test_random_and_fixed_delays_are_between_operations()]] - degree 5, connects to 1 community

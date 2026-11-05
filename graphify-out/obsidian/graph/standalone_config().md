@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/crawler_config.py"
 type: "code"
-community: "Konfigurasi Crawler Universal"
+community: "Batas Crawler Opsional"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Batas_Crawler_Opsional
 ---
 
 # standalone_config()
@@ -34,4 +34,4 @@ tags:
 - [[test_storage_config.py]] - `imports` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

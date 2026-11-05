@@ -1,25 +1,25 @@
 {
-  "node_count": 845,
+  "node_count": 103,
   "unverified_node_count": 0,
-  "raw_edge_count": 1965,
+  "raw_edge_count": 224,
   "non_object_edges": 0,
   "missing_endpoint_edges": 0,
-  "dangling_endpoint_edges": 287,
+  "dangling_endpoint_edges": 39,
   "self_loop_edges": 0,
-  "valid_candidate_edges": 1678,
-  "exact_duplicate_edges": 1,
-  "directed_unique_endpoint_pairs": 1672,
-  "directed_same_endpoint_collapsed_edges": 6,
-  "undirected_unique_endpoint_pairs": 1663,
-  "undirected_same_endpoint_collapsed_edges": 15,
-  "same_endpoint_group_count": 6,
-  "relation_variant_groups": 3,
+  "valid_candidate_edges": 185,
+  "exact_duplicate_edges": 0,
+  "directed_unique_endpoint_pairs": 185,
+  "directed_same_endpoint_collapsed_edges": 0,
+  "undirected_unique_endpoint_pairs": 185,
+  "undirected_same_endpoint_collapsed_edges": 0,
+  "same_endpoint_group_count": 0,
+  "relation_variant_groups": 0,
   "source_file_variant_groups": 0,
-  "source_location_variant_groups": 2,
+  "source_location_variant_groups": 0,
   "context_variant_groups": 0,
   "post_build_graph_type": "Graph",
-  "post_build_node_count": 845,
-  "post_build_edge_count": 1661,
+  "post_build_node_count": 103,
+  "post_build_edge_count": 185,
   "post_build_error": "",
   "producer_suppression": {
     "path": "/Users/socs3/.pyenv/versions/3.12.0/lib/python3.12/site-packages/graphify/extract.py",
@@ -88,103 +88,7 @@
     ],
     "error": ""
   },
-  "examples": [
-    {
-      "source": "crawler_backend_tiktok_chrome_extension_popup",
-      "target": "crawler_backend_tiktok_chrome_extension_popup_refresh",
-      "edge_count": 2,
-      "relations": [
-        "contains",
-        "indirect_call"
-      ],
-      "source_files": [
-        "Crawler/Backend/Tiktok/chrome_extension/popup.mjs"
-      ],
-      "source_locations": [
-        "L33",
-        "L5"
-      ],
-      "contexts": [
-        "",
-        "argument"
-      ]
-    },
-    {
-      "source": "crawler_frontend_src_features_platformworkspace",
-      "target": "crawler_frontend_src_shared_types",
-      "edge_count": 2,
-      "relations": [
-        "imports_from"
-      ],
-      "source_files": [
-        "Crawler/Frontend/src/features/PlatformWorkspace.tsx"
-      ],
-      "source_locations": [
-        "L30",
-        "L35"
-      ],
-      "contexts": [
-        "import"
-      ]
-    },
-    {
-      "source": "tests_crawler_test_tiktok_crawler_tiktoktests",
-      "target": "crawler_backend_tiktok_chrome_bridge_chromeliveworker",
-      "edge_count": 2,
-      "relations": [
-        "uses"
-      ],
-      "source_files": [
-        "tests/crawler/test_tiktok_crawler.py"
-      ],
-      "source_locations": [
-        "L121",
-        "L80"
-      ],
-      "contexts": [
-        ""
-      ]
-    },
-    {
-      "source": "tests_nlp_test_nlp_config_nlpconfigtests_test_dashboard_launcher_reads_the_single_primary_file",
-      "target": "machinelearning_social_nlp_socialnlpclusterer",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "indirect_call"
-      ],
-      "source_files": [
-        "tests/nlp/test_nlp_config.py"
-      ],
-      "source_locations": [
-        "L104",
-        "L107"
-      ],
-      "contexts": [
-        "argument",
-        "call"
-      ]
-    },
-    {
-      "source": "tests_nlp_test_social_nlp_nlptests_setupclass",
-      "target": "machinelearning_social_nlp_socialnlpclusterer",
-      "edge_count": 2,
-      "relations": [
-        "calls",
-        "indirect_call"
-      ],
-      "source_files": [
-        "tests/nlp/test_social_nlp.py"
-      ],
-      "source_locations": [
-        "L134",
-        "L135"
-      ],
-      "contexts": [
-        "argument",
-        "call"
-      ]
-    }
-  ],
-  "references_unresolved_after_merge": 265
+  "examples": [],
+  "references_unresolved_after_merge": 34,
+  "previous_scope_unresolved_references": 265
 }

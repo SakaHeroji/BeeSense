@@ -1,5 +1,22 @@
 # Dashboard BeeSense
 
+## Caption sebagai label post asal — 5 November 2026
+
+Caption TikTok tersimpan pada `teks` di baris `jenis=post`; `judul_post` kosong
+karena sumber tidak menyediakan judul terpisah. Dataset gabungan memuat 25 post
+TikTok dan semuanya memiliki caption. Dashboard melengkapi label kosong dari
+`social_data` yang lolos verifikasi manifest, melalui `with_source_titles`.
+Pencocokan memakai native ID dari URL atau root audit X, bukan kemiripan caption,
+username, urutan baris atau teks komentar. Caption yang sama pada dua post tetap
+menjadi dua sumber. Judul asli dipertahankan; root yang tidak terverifikasi atau
+caption yang berkonflik tidak ditebak.
+
+Pengayaan hanya pada salinan occurrence untuk tampilan: grafik post penyumbang,
+tabel sumber dan caption bukti kalimat. Label grafik dibatasi dua baris dan caption
+lengkap tersedia pada hover/tabel. Workbook, file fitted, keanggotaan cluster,
+coherence dan narasi Gemini tidak diubah. Tidak perlu crawling/training ulang
+atau migrasi database.
+
 ## Snapshot terbaru
 
 Konfigurasi aktif 5 November memakai `outputs/nlp_20261105_relevance_topics20_gemini_01/`: 20 topik tersaring, mean c_v 0,4666033620 dan 20 narasi Gemini. Pasangan sebelum penyaringan juga baru di-fit: 20 topik, mean c_v 0,4346102845. UI mendukung YouTube, Reddit, Instagram, X dan TikTok pada filter, cakupan/noise, tabel, jaringan dan tren. [Audit](../machine-learning/TIKTOK_RETRAIN_20261105.md). Snapshot lama tetap tersedia; angka bertanggal sebelumnya di bawah adalah riwayat.

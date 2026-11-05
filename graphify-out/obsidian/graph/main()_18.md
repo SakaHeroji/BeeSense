@@ -1,18 +1,20 @@
 ---
-source_file: "scripts/verify_dashboard_data.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Verifikasi Dataset Publik"
-location: "L285"
+community: "app.py"
+location: "L2462"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Verifikasi_Dataset_Publik
+  - community/apppy
 ---
 
 # main()
 
 ## Connections
-- [[verify()_2]] - `calls` [EXTRACTED]
-- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik
+#graphify/code #graphify/EXTRACTED #community/apppy

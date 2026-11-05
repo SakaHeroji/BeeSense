@@ -1,36 +1,23 @@
 ---
 type: community
-members: 23
+members: 10
 ---
 
 # Capture Reddit Playwright
 
-**Members:** 23 nodes
+**Members:** 10 nodes
 
 ## Members
-- [[.__init__()_16]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[.__init__()_17]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[.accept()_1]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[.debug()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[.__init__()_18]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.find()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.info()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[.test_04_unicode_offsets_boundary_and_casefold()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.validate()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[.warning()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
 - [[Aho-Corasick; offsets refer to Python Unicode code points in source._1]] - rationale - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[KeywordMatcher_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[SafeLogger]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[Settings]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[YouTubeAdapter]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[crawl_youtube.py]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[error_code()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[load_settings()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[main()_8]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[parser()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[run()_1]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[run_worker()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[video_url()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
-- [[worker()]] - code - Crawler/Backend/Youtube/crawl_youtube.py
+- [[export_browser_campaign.py]] - code - Crawler/Backend/Reddit/export_browser_campaign.py
+- [[export_campaign()]] - code - Crawler/Backend/Reddit/export_browser_campaign.py
+- [[load_campaign()]] - code - Crawler/Backend/Reddit/export_browser_campaign.py
+- [[test_crawl_reddit_playwright.py]] - code - Crawler/Backend/Reddit/test_crawl_reddit_playwright.py
+- [[verify_browser_campaign.py]] - code - Crawler/Backend/Reddit/verify_browser_campaign.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,19 +27,19 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 9 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 6 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 4 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
-- 2 edges to [[_COMMUNITY_Kuota Harian Scweet]]
-- 2 edges to [[_COMMUNITY_Worker Instaloader_1]]
+- 9 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 8 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 4 edges to [[_COMMUNITY_Parsing Identitas Reddit_3]]
+- 3 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
 - 2 edges to [[_COMMUNITY_Pengujian Parser Reddit]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube_1]]
-- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_3]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 1 edge to [[_COMMUNITY_Pengujian Resume Capture]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_2]]
 
 ## Top bridge nodes
 - [[KeywordMatcher_1]] - degree 13, connects to 5 communities
-- [[run()_1]] - degree 13, connects to 3 communities
-- [[crawl_youtube.py]] - degree 14, connects to 2 communities
-- [[.accept()_1]] - degree 4, connects to 2 communities
-- [[SafeLogger]] - degree 7, connects to 1 community
+- [[export_campaign()]] - degree 12, connects to 3 communities
+- [[load_campaign()]] - degree 5, connects to 3 communities
+- [[.__init__()_18]] - degree 4, connects to 3 communities
+- [[test_crawl_reddit_playwright.py]] - degree 4, connects to 2 communities

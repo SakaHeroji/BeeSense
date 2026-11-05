@@ -34,7 +34,7 @@ SORT file.name ASC
 - 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 2 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 - 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
-- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
 - 1 edge to [[_COMMUNITY_app.py]]
 - 1 edge to [[_COMMUNITY_thread_url]]
 

@@ -1,15 +1,16 @@
 ---
 type: community
-members: 2
+members: 3
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 2 nodes
+**Members:** 3 nodes
 
 ## Members
-- [[JobStatistics()]] - code - Crawler/Frontend/src/features/JobStatistics.tsx
-- [[JobStatistics.tsx]] - code - Crawler/Frontend/src/features/JobStatistics.tsx
+- [[Obsidian Migrasi Transaksi per Sosmed frontend only]] - document - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
+- [[Review dan progres inline adalah simulasi memori]] - rationale - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
+- [[Sumber migrasi terikat job platform dataset versi dan checksum]] - rationale - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
 
 ## Live Query (requires Dataview plugin)
 

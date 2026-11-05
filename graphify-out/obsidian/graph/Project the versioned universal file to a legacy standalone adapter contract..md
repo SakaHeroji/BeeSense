@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/crawler_config.py"
 type: "rationale"
-community: "Konfigurasi Crawler Universal"
+community: "Batas Crawler Opsional"
 location: "L87"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Batas_Crawler_Opsional
 ---
 
 # Project the versioned universal file to a legacy standalone adapter contract.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[standalone_config()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

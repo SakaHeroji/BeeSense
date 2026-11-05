@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/social_nlp.py"
 type: "rationale"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L2227"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Publish a new versioned sidecar; never modify the original run.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[.save_explanations()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

@@ -1,48 +1,53 @@
 ---
 type: community
-members: 35
+members: 40
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 35 nodes
+**Members:** 40 nodes
 
 ## Members
-- [[Composition()]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[Config]] - code - Crawler/Frontend/src/shared/types.ts
-- [[ConfigReview()]] - code - Crawler/Frontend/src/shared/ConfigReview.tsx
-- [[ConfigReview.tsx]] - code - Crawler/Frontend/src/shared/ConfigReview.tsx
-- [[CopyField()]] - code - Crawler/Frontend/src/features/TikTokConnector.tsx
-- [[JobDetail()]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[JobDetail.tsx]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[Notice()]] - code - Crawler/Frontend/src/shared/ui.tsx
-- [[PlatformCard()]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[PlatformPage()]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
-- [[PlatformProgress]] - code - Crawler/Frontend/src/shared/types.ts
-- [[PlatformWorkspace()]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
-- [[PlatformWorkspace.tsx]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
-- [[ProgressChart()]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[TikTokChromePreparation()]] - code - Crawler/Frontend/src/features/TikTokConnector.tsx
-- [[TikTokConnector()]] - code - Crawler/Frontend/src/features/TikTokConnector.tsx
-- [[TikTokConnector.tsx]] - code - Crawler/Frontend/src/features/TikTokConnector.tsx
-- [[TikTokWorkflow()]] - code - Crawler/Frontend/src/features/TikTokConnector.tsx
-- [[dateTime()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[domain.ts]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[duration()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[isoWib()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[lines()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[liveStates]] - code - Crawler/Frontend/src/features/JobDetail.tsx
-- [[number()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platformChartColors]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platformDescription]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platformLabels]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platformName()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[platforms]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[queryLines()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[safeExternal()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[storageLabels]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[validateConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[validateStorage()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[AppContext]] - code - Crawler/Frontend/src/shared/context.ts
+- [[AuthInput]] - code - Crawler/Frontend/src/shared/types.ts
+- [[AuthSettings()]] - code - Crawler/Frontend/src/shared/AuthSettings.tsx
+- [[AuthSettings.tsx]] - code - Crawler/Frontend/src/shared/AuthSettings.tsx
+- [[AuthStatus]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Baseline]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Capabilities]] - code - Crawler/Frontend/src/shared/types.ts
+- [[DatasetDetail]] - code - Crawler/Frontend/src/shared/types.ts
+- [[DatasetFile]] - code - Crawler/Frontend/src/shared/types.ts
+- [[FieldError]] - code - Crawler/Frontend/src/shared/types.ts
+- [[FieldErrorsContext]] - code - Crawler/Frontend/src/shared/context.ts
+- [[Job]] - code - Crawler/Frontend/src/shared/types.ts
+- [[JobEvent]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Limits]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Mode]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Platform]] - code - Crawler/Frontend/src/shared/types.ts
+- [[PlatformConfig]] - code - Crawler/Frontend/src/shared/types.ts
+- [[PlatformStatus]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Session]] - code - Crawler/Frontend/src/shared/types.ts
+- [[StorageDestination]] - code - Crawler/Frontend/src/shared/types.ts
+- [[TransactionMigration]] - code - Crawler/Frontend/src/shared/types.ts
+- [[TransactionMigrationPlan]] - code - Crawler/Frontend/src/shared/types.ts
+- [[accounts]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[auth.ts]] - code - Crawler/Frontend/src/shared/auth.ts
+- [[completed]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[context.ts]] - code - Crawler/Frontend/src/shared/context.ts
+- [[crawlDate()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[destinationKey()]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[fixture()]] - code - Crawler/Frontend/src/test/transaction.test.ts
+- [[migrations]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[mount()]] - code - Crawler/Frontend/src/test/platform-workspace.test.tsx
+- [[operator()]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[plans]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[platform-workspace.test.tsx]] - code - Crawler/Frontend/src/test/platform-workspace.test.tsx
+- [[sessionPlatforms]] - code - Crawler/Frontend/src/shared/auth.ts
+- [[transaction-demo.ts]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[transaction.test.ts]] - code - Crawler/Frontend/src/test/transaction.test.ts
+- [[transactionDemoApi]] - code - Crawler/Frontend/src/shared/transaction-demo.ts
+- [[types.ts]] - code - Crawler/Frontend/src/shared/types.ts
+- [[validateAuth()]] - code - Crawler/Frontend/src/shared/auth.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -52,15 +57,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 48 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
-- 25 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
-- 22 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
-- 7 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_17]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_18]]
+- 20 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
+- 19 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
+- 14 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_12]]
+- 13 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
+- 13 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
+- 2 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_19]]
 
 ## Top bridge nodes
-- [[domain.ts]] - degree 44, connects to 4 communities
-- [[PlatformWorkspace.tsx]] - degree 34, connects to 3 communities
-- [[JobDetail.tsx]] - degree 30, connects to 3 communities
-- [[TikTokConnector.tsx]] - degree 19, connects to 3 communities
-- [[platforms]] - degree 7, connects to 3 communities
+- [[types.ts]] - degree 51, connects to 6 communities
+- [[AuthSettings.tsx]] - degree 18, connects to 4 communities
+- [[platform-workspace.test.tsx]] - degree 13, connects to 4 communities
+- [[Job]] - degree 10, connects to 4 communities
+- [[transaction.test.ts]] - degree 12, connects to 3 communities

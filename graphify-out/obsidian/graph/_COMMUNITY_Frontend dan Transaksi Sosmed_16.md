@@ -1,18 +1,15 @@
 ---
 type: community
-members: 5
+members: 2
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 5 nodes
+**Members:** 2 nodes
 
 ## Members
-- [[publicDefaults()]] - code - Crawler/Frontend/scripts/sync-config.mjs
-- [[source_1]] - code - Crawler/Frontend/scripts/sync-config.mjs
-- [[sync-config.mjs]] - code - Crawler/Frontend/scripts/sync-config.mjs
-- [[sync-config.test.mjs]] - code - Crawler/Frontend/scripts/sync-config.test.mjs
-- [[target_1]] - code - Crawler/Frontend/scripts/sync-config.mjs
+- [[JobStatistics()]] - code - Crawler/Frontend/src/features/JobStatistics.tsx
+- [[JobStatistics.tsx]] - code - Crawler/Frontend/src/features/JobStatistics.tsx
 
 ## Live Query (requires Dataview plugin)
 

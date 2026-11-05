@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/topic_sentence_export.py"
 type: "code"
-community: "Pengujian Narasi Gemini"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Narasi_Gemini
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # topic_sentence_export.py
@@ -22,4 +22,4 @@ tags:
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 - [[test_topic_sentence_export.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

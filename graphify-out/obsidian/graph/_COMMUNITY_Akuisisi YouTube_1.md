@@ -59,7 +59,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_1]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_2]]
 - 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes

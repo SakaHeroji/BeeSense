@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md"
 type: "document"
-community: "Frontend TikTok dan Koneksi Chrome"
+community: "Arsip dan Metode NLP"
 location: "6"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Frontend_TikTok_dan_Koneksi_Chrome
+  - community/Arsip_dan_Metode_NLP
 ---
 
 # Before/after clustering architecture:shared workbook,selected sentence cohorts,local fitting and stored Gemini/dashboard artifacts
@@ -21,4 +21,4 @@ tags:
 - [[Nov5combinedTikTokretrainingboth20topicfitsmeetmean0.4gate,40narrativescomplete]] - `references` [EXTRACTED]
 - [[Training means fitUMAPDBSCANWard and selectparameters;SBERTstayspretrained,not supervisedclassifier or neuralfine-tuning]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Frontend_TikTok_dan_Koneksi_Chrome
+#graphify/document #graphify/EXTRACTED #community/Arsip_dan_Metode_NLP

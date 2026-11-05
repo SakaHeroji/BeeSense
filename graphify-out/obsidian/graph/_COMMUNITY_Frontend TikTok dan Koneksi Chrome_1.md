@@ -28,7 +28,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_19]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_20]]
 
 ## Top bridge nodes
 - [[BeeSense Crawler Frontend ReactTypeScriptVite, seven platform menus, frontend-first scope]] - degree 11, connects to 1 community

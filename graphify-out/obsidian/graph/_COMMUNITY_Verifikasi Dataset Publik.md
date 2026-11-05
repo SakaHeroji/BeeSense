@@ -14,7 +14,7 @@ members: 13
 - [[Validate separately published X evidence without treating it as an NLP run.]] - rationale - scripts/verify_dashboard_data.py
 - [[Verify published source workbooks and the dashboard artifact bundle.]] - rationale - scripts/verify_dashboard_data.py
 - [[Verify record identity independently of sentence-text deduplication.]] - rationale - scripts/verify_dashboard_data.py
-- [[main()_18]] - code - scripts/verify_dashboard_data.py
+- [[main()_17]] - code - scripts/verify_dashboard_data.py
 - [[published_crawl_files()]] - code - scripts/verify_dashboard_data.py
 - [[published_relevance_files()]] - code - scripts/verify_dashboard_data.py
 - [[published_source_files()]] - code - scripts/verify_dashboard_data.py
@@ -30,13 +30,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 6 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 - 5 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 5 edges to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
 - 1 edge to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
 - 1 edge to [[_COMMUNITY_Arsip Data Harian_1]]
 
 ## Top bridge nodes
-- [[verify_dashboard_data.py]] - degree 10, connects to 2 communities
+- [[verify_dashboard_data.py]] - degree 10, connects to 3 communities
 - [[verify()_2]] - degree 10, connects to 2 communities
 - [[published_source_files()]] - degree 5, connects to 2 communities
 - [[published_crawl_files()]] - degree 5, connects to 2 communities

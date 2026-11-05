@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
-community: "Akuisisi TikTok dan Ekspor"
+community: "Konfigurasi Crawler Universal"
 location: "L98"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_TikTok_dan_Ekspor
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # post_url()
@@ -20,4 +20,4 @@ tags:
 - [[social_crawler.py]] - `imports` [EXTRACTED]
 - [[tiktok_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

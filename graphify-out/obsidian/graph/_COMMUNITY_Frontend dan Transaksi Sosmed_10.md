@@ -1,40 +1,34 @@
 ---
 type: community
-members: 27
+members: 21
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 27 nodes
+**Members:** 21 nodes
 
 ## Members
-- [[.constructor()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[ApiError]] - code - Crawler/Frontend/src/shared/api.ts
-- [[Job]] - code - Crawler/Frontend/src/shared/types.ts
-- [[Plan]] - code - Crawler/Frontend/src/shared/types.ts
-- [[TikTokConnectorSession]] - code - Crawler/Frontend/src/shared/types.ts
-- [[api.test.ts]] - code - Crawler/Frontend/src/test/api.test.ts
-- [[api.ts]] - code - Crawler/Frontend/src/shared/api.ts
-- [[base]] - code - Crawler/Frontend/src/shared/api.ts
-- [[connection()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[connectorPath()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[connectorStates]] - code - Crawler/Frontend/src/shared/tiktok-connector.ts
-- [[demoApi]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[fixture()]] - code - Crawler/Frontend/src/test/transaction.test.ts
-- [[httpApi]] - code - Crawler/Frontend/src/shared/api.ts
-- [[initialConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[jobPath()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[mount()_1]] - code - Crawler/Frontend/src/test/workflows.test.tsx
-- [[mount()_2]] - code - Crawler/Frontend/src/test/tiktok-connector.test.tsx
-- [[newTikTokJob()]] - code - Crawler/Frontend/src/test/tiktok-connector.test.tsx
-- [[post()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[request()]] - code - Crawler/Frontend/src/shared/api.ts
-- [[tiktok-connector.test.tsx]] - code - Crawler/Frontend/src/test/tiktok-connector.test.tsx
-- [[tiktok-connector.ts]] - code - Crawler/Frontend/src/shared/tiktok-connector.ts
-- [[transaction.test.ts]] - code - Crawler/Frontend/src/test/transaction.test.ts
-- [[validateConnectorSession()]] - code - Crawler/Frontend/src/shared/tiktok-connector.ts
-- [[wibInput()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[workflows.test.tsx]] - code - Crawler/Frontend/src/test/workflows.test.tsx
+- [[Config]] - code - Crawler/Frontend/src/shared/types.ts
+- [[ConfigReview()]] - code - Crawler/Frontend/src/shared/ConfigReview.tsx
+- [[ConfigReview.tsx]] - code - Crawler/Frontend/src/shared/ConfigReview.tsx
+- [[PlatformPage()]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
+- [[PlatformWorkspace()]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
+- [[PlatformWorkspace.tsx]] - code - Crawler/Frontend/src/features/PlatformWorkspace.tsx
+- [[ProgressChart()]] - code - Crawler/Frontend/src/features/JobDetail.tsx
+- [[TikTokConnector()]] - code - Crawler/Frontend/src/features/TikTokConnector.tsx
+- [[dateTime()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[domain.ts]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[isoWib()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[lines()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[number()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[platformDescription]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[platformLabels]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[platformName()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[platforms]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[queryLines()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[storageLabels]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[validateConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[validateStorage()]] - code - Crawler/Frontend/src/shared/domain.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -44,15 +38,16 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 22 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
-- 16 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
-- 12 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_17]]
-- 8 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_18]]
+- 34 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
+- 20 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
+- 18 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
+- 12 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
+- 7 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_12]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_19]]
 
 ## Top bridge nodes
-- [[api.ts]] - degree 30, connects to 5 communities
-- [[initialConfig()]] - degree 13, connects to 4 communities
-- [[Job]] - degree 10, connects to 4 communities
-- [[tiktok-connector.test.tsx]] - degree 14, connects to 3 communities
-- [[transaction.test.ts]] - degree 12, connects to 3 communities
+- [[domain.ts]] - degree 44, connects to 5 communities
+- [[PlatformWorkspace.tsx]] - degree 34, connects to 4 communities
+- [[platforms]] - degree 7, connects to 4 communities
+- [[platformName()]] - degree 18, connects to 3 communities
+- [[Config]] - degree 6, connects to 3 communities

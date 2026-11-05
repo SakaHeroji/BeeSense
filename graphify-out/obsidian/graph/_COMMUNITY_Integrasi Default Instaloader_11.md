@@ -41,7 +41,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_19]]
+- 2 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_20]]
 - 2 edges to [[_COMMUNITY_Arsip dan Metode NLP]]
 - 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_10]]
 - 1 edge to [[_COMMUNITY_Transport TikTok Native]]

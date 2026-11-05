@@ -5,6 +5,19 @@ tags: [beesense, provenance, sbert, dbscan, merged]
 
 # Dataset Dashboard
 
+## Caption post TikTok pada dashboard
+
+Seluruh 25 post TikTok pada gabungan 5 November memiliki caption di kolom `teks`
+baris `jenis=post`; kolom `judul_post` kosong. `SocialNLPStreamlitApp.with_source_titles`
+melengkapi label tampilan dari root pada artifact `social_data` terverifikasi,
+berdasarkan native ID URL atau root audit X. Username yang berubah dan URL komentar
+tetap menuju root yang sama; caption identik tidak menggabungkan post berbeda.
+Judul asli tetap digunakan. Root yang tidak terverifikasi serta konflik caption
+tidak ditebak. Grafik, tabel sumber dan bukti kalimat memakai label yang sama.
+Perubahan hanya pada salinan data untuk UI; workbook, membership, coherence serta
+narasi tersimpan tetap identik dan tidak ada training/API baru atau migrasi DB.
+Lihat [desain dashboard](../../docs/dashboard/DASHBOARD_DESIGN.md).
+
 ## Snapshot aktif — 5 November 2026
 
 Gabungan lima platform termasuk TikTok: **36.233 record unik**, nol duplikat native ID.

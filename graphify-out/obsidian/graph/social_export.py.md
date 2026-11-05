@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "code"
-community: "Batas Crawler Opsional"
+community: "Integrasi X dan Provenans Akuisisi"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # social_export.py
@@ -21,4 +21,4 @@ tags:
 - [[tiktok_crawler.py]] - `imports_from` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

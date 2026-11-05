@@ -1,16 +1,41 @@
 ---
 type: community
-members: 3
+members: 28
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 3 nodes
+**Members:** 28 nodes
 
 ## Members
-- [[Obsidian Migrasi Transaksi per Sosmed frontend only]] - document - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
-- [[Review dan progres inline adalah simulasi memori]] - rationale - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
-- [[Sumber migrasi terikat job platform dataset versi dan checksum]] - rationale - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
+- [[Counts]] - code - Crawler/Frontend/src/shared/types.ts
+- [[Dataset_2]] - code - Crawler/Frontend/src/shared/types.ts
+- [[PreviewRow]] - code - Crawler/Frontend/src/shared/types.ts
+- [[SeriesPoint]] - code - Crawler/Frontend/src/shared/types.ts
+- [[TikTokConnectorState]] - code - Crawler/Frontend/src/shared/types.ts
+- [[advance()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[cap]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[changeDemoConnection()]] - code - Crawler/Frontend/src/shared/connector-demo.ts
+- [[connections]] - code - Crawler/Frontend/src/shared/connector-demo.ts
+- [[connector-demo.ts]] - code - Crawler/Frontend/src/shared/connector-demo.ts
+- [[dataset()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[demo.ts]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[demoApi]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[demoConnection()]] - code - Crawler/Frontend/src/shared/connector-demo.ts
+- [[emptyCounts()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[get()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[isTikTokJob()]] - code - Crawler/Frontend/src/shared/connector-demo.ts
+- [[load()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[mount()_1]] - code - Crawler/Frontend/src/test/workflows.test.tsx
+- [[plans_1]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[redactConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[requireOperator()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[save()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[seed()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[stamp()_1]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[update()]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[workflows.test.tsx]] - code - Crawler/Frontend/src/test/workflows.test.tsx
+- [[zeros]] - code - Crawler/Frontend/src/shared/demo.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -18,3 +43,18 @@ members: 3
 TABLE source_file, type FROM #community/Frontend_dan_Transaksi_Sosmed
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 14 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
+- 9 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
+- 7 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
+- 3 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_19]]
+
+## Top bridge nodes
+- [[demo.ts]] - degree 38, connects to 4 communities
+- [[connector-demo.ts]] - degree 10, connects to 2 communities
+- [[workflows.test.tsx]] - degree 6, connects to 2 communities
+- [[demoApi]] - degree 6, connects to 2 communities
+- [[redactConfig()]] - degree 4, connects to 2 communities

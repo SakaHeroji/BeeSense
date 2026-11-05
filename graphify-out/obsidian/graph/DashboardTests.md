@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
+community: "app.py"
 location: "L716"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/apppy
 ---
 
 # DashboardTests
@@ -17,4 +17,4 @@ tags:
 - [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[test_social_nlp.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/apppy

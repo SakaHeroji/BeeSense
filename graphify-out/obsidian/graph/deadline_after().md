@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/crawler_limits.py"
 type: "code"
-community: "Worker Instaloader"
+community: "Crawler Selenium"
 location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Crawler_Selenium
 ---
 
 # deadline_after()
@@ -16,4 +16,4 @@ tags:
 - [[crawler_limits.py]] - `contains` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

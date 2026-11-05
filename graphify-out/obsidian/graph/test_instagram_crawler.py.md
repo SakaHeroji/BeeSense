@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_instagram_crawler.py"
 type: "code"
-community: "Pengujian Client Instagram"
+community: "Kuota Harian Scweet"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Client_Instagram
+  - community/Kuota_Harian_Scweet
 ---
 
 # test_instagram_crawler.py
@@ -25,4 +25,4 @@ tags:
 - [[test_social_crawler_instagram.py]] - `imports_from` [EXTRACTED]
 - [[test_unlimited_crawling.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

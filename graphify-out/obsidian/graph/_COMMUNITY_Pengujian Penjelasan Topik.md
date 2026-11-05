@@ -37,7 +37,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
 
 ## Top bridge nodes
 - [[test_topic_explanations.py]] - degree 5, connects to 2 communities

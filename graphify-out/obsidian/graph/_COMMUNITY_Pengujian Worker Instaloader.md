@@ -45,7 +45,7 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet_1]]
 
 ## Top bridge nodes
 - [[test_instaloader_crawler.py]] - degree 7, connects to 2 communities

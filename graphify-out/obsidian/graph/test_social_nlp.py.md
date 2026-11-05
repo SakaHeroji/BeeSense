@@ -1,12 +1,12 @@
 ---
 source_file: "tests/nlp/test_social_nlp.py"
 type: "code"
-community: "Encoding dan Penyimpanan Model"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Encoding_dan_Penyimpanan_Model
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # test_social_nlp.py
@@ -22,4 +22,4 @@ tags:
 - [[test_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[test_streamlit_app.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

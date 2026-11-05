@@ -32,10 +32,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 4 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
 - 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes
-- [[StreamlitTests]] - degree 17, connects to 1 community
+- [[StreamlitTests]] - degree 17, connects to 2 communities
 - [[.test_complete_excel_download_is_available_without_training()]] - degree 3, connects to 1 community
 - [[.setUp()_3]] - degree 2, connects to 1 community

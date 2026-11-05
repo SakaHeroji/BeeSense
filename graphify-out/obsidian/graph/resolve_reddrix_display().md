@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Kuota Harian Scweet"
+community: "Konfigurasi Crawler Universal"
 location: "L246"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kuota_Harian_Scweet
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # resolve_reddrix_display()
@@ -18,4 +18,4 @@ tags:
 - [[load_reddrix()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
