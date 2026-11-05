@@ -1,2 +1,3 @@
 # Streamlit Community Cloud installs this file. Training has a separate environment.
+# Rebuild Community Cloud for the verified all-social release (2026-11-05).
 -r requirements/dashboard.txt
