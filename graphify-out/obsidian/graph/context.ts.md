@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[AppContext]] - `contains` [EXTRACTED]
-- [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
 - [[Capabilities]] - `imports` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
 - [[FieldError]] - `imports` [EXTRACTED]

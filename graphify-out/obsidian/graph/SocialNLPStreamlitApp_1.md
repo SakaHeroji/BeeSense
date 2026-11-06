@@ -12,7 +12,7 @@ tags:
 # SocialNLPStreamlitApp
 
 ## Connections
-- [[.__init__()_46]] - `method` [EXTRACTED]
+- [[.__init__()_11]] - `method` [EXTRACTED]
 - [[._chart_selection()]] - `method` [EXTRACTED]
 - [[._chart_style()]] - `method` [EXTRACTED]
 - [[._css()]] - `method` [EXTRACTED]
@@ -58,9 +58,10 @@ tags:
 - [[Crawler, MachineLearning and Dashboard packages with grouped supporting folders]] - `references` [EXTRACTED]
 - [[Historical 28 October 2026 coherence retrain 52 topics, c_v 0.40970330118194137]] - `references` [EXTRACTED]
 - [[Read-only exploration of completed NLP runs; no training on page reruns.]] - `rationale_for` [EXTRACTED]
+- [[Saved Gemini narratives, 30 October 2026]] - `references` [EXTRACTED]
 - [[Traceable extractive topic explanations]] - `references` [EXTRACTED]
 - [[app.py]] - `contains` [EXTRACTED]
-- [[main()_18]] - `calls` [EXTRACTED]
+- [[main()_8]] - `calls` [EXTRACTED]
 - [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/thread_url

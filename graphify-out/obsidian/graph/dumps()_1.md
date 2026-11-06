@@ -12,15 +12,15 @@ tags:
 # dumps()
 
 ## Connections
-- [[.__init__()_18]] - `calls` [EXTRACTED]
-- [[.accept()_3]] - `calls` [EXTRACTED]
+- [[.__init__()_31]] - `calls` [EXTRACTED]
+- [[.accept()_5]] - `calls` [EXTRACTED]
 - [[.add_content()_1]] - `calls` [EXTRACTED]
 - [[.content()_1]] - `calls` [EXTRACTED]
 - [[.finish()_1]] - `calls` [EXTRACTED]
 - [[.finish_relations()_1]] - `calls` [EXTRACTED]
 - [[.write()_1]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[main()_9]] - `calls` [EXTRACTED]
+- [[main()_16]] - `calls` [EXTRACTED]
 - [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 - [[validate_row()_1]] - `calls` [EXTRACTED]
 - [[verify()]] - `calls` [EXTRACTED]

@@ -12,7 +12,7 @@ tags:
 # RedditCrawlerTests
 
 ## Connections
-- [[.setUp()_8]] - `method` [EXTRACTED]
+- [[.setUp()_19]] - `method` [EXTRACTED]
 - [[.test_active_configuration_keeps_every_reddit_rule_and_never_runs_youtube()]] - `method` [EXTRACTED]
 - [[.test_adaptive_display_matrix()]] - `method` [EXTRACTED]
 - [[.test_barrier_exports_partial_without_calling_it_success()]] - `method` [EXTRACTED]
@@ -29,8 +29,7 @@ tags:
 - [[.test_search_preserves_subreddit_scope_without_fetching_comments()]] - `method` [EXTRACTED]
 - [[.test_stream_enforces_duplicates_and_reply_budgets()]] - `method` [EXTRACTED]
 - [[.test_unknown_antibot_status_is_not_guessed_as_http429()]] - `method` [EXTRACTED]
-- [[.worker()_1]] - `method` [EXTRACTED]
-- [[RedditCrawler]] - `uses` [INFERRED]
+- [[.worker()_2]] - `method` [EXTRACTED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_reddit_crawler.py]] - `contains` [EXTRACTED]
 

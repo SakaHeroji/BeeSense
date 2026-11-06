@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Tiktok/chrome_bridge.py"
 type: "rationale"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L75"
+location: "L79"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

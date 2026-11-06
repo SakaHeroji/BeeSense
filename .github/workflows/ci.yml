@@ -58,6 +58,11 @@ jobs:
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/crawler_config.py Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_crawler_config.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
           python -m ruff format --isolated --check Crawler/Backend/crawler_config.py Crawler/Backend/social_crawler.py Crawler/Backend/reddit_crawler.py tests/crawler/test_crawler_config.py tests/crawler/test_reddit_crawler.py tests/crawler/test_social_crawler_reddrix.py
           python -m unittest discover -s tests/crawler -p test_reddit_crawler.py -v
+      - name: YouTube and Reddit performance boundaries
+        run: |
+          python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/crawler_network.py Crawler/Backend/Youtube/youtube_runtime.py tests/crawler/test_youtube_reddit_performance.py
+          python -m ruff format --isolated --check Crawler/Backend/crawler_network.py Crawler/Backend/Youtube/youtube_runtime.py tests/crawler/test_youtube_reddit_performance.py
+          python -m unittest discover -s tests/crawler -p test_youtube_reddit_performance.py -v
       - name: InstagramCrawler offline contract tests
         run: |
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/instagram_crawler.py Crawler/Backend/instagram_browser.py Crawler/Backend/social_export.py tests/crawler/test_instagram_crawler.py tests/crawler/test_instagram_browser.py
@@ -82,7 +87,7 @@ jobs:
           python -m unittest discover -s tests/crawler -p test_tiktok_comment_dom.py -v
           node --test tests/crawler/test_tiktok_chrome_extension.mjs
           node --check Crawler/Backend/Tiktok/chrome_extension/background.mjs
-          node --check Crawler/Backend/Tiktok/chrome_extension/popup.mjs
+          node --check Crawler/Backend/Tiktok/chrome_extension/sidepanel.mjs
       - name: Selenium crawler lint
         run: |
           python -m ruff check --isolated --select E4,E7,E9,F,I Crawler/Backend/social_crawler_selenium.py tests/crawler/test_social_crawler_selenium.py

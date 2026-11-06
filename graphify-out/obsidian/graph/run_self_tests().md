@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Kontrak Record Reddit"
-location: "L1357"
+location: "L1358"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -15,7 +15,7 @@ tags:
 - [[ContractTests]] - `indirect_call` [INFERRED]
 - [[RedditTests]] - `indirect_call` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[main()_9]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[main()_16]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

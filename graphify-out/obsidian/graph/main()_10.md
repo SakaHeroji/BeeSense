@@ -1,19 +1,18 @@
 ---
-source_file: "Crawler/Backend/reddit_crawler.py"
+source_file: "scripts/generate_topic_narratives.py"
 type: "code"
-community: "Wrapper RedditCrawler"
-location: "L83"
+community: "Pengujian Narasi Gemini"
+location: "L95"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wrapper_RedditCrawler
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # main()
 
 ## Connections
-- [[.plan()_2]] - `calls` [EXTRACTED]
-- [[RedditCrawler]] - `calls` [EXTRACTED]
-- [[reddit_crawler.py]] - `contains` [EXTRACTED]
+- [[enrich_run()]] - `calls` [EXTRACTED]
+- [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

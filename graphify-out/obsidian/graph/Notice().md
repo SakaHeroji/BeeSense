@@ -12,12 +12,10 @@ tags:
 # Notice()
 
 ## Connections
-- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
 - [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[Shell.tsx]] - `imports` [EXTRACTED]
-- [[TikTokConnector.tsx]] - `imports` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[ui.tsx]] - `contains` [EXTRACTED]
 

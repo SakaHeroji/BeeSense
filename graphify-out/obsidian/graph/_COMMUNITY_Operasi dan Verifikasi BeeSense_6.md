@@ -1,14 +1,16 @@
 ---
 type: community
+cohesion: 1.00
 members: 1
 ---
 
 # Operasi dan Verifikasi BeeSense
 
+**Cohesion:** 1.00 - tightly connected
 **Members:** 1 nodes
 
 ## Members
-- [[Theil Sen Kendall descriptive trends]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[Narrative request receipt cache]] - rationale - graphify-out/obsidian/Topik Gemini.md
 
 ## Live Query (requires Dataview plugin)
 

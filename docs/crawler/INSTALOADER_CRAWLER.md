@@ -1,5 +1,11 @@
 # InstaloaderCrawler
 
+## Optimasi request — 6 November 2026
+
+Pemeriksaan root sebelum anak, pagination dan cooldown diperbarui tanpa menurunkan
+pacing atau kuota. Hasil pengukuran adalah fixture offline, bukan kecepatan live.
+Lihat [audit X/Instagram](PERFORMANCE_X_INSTAGRAM_20261106.md).
+
 > Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
 
 Implementasi di `Crawler/Backend/instaloader_crawler.py`, memakai

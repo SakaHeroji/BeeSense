@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "rationale"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L661"
+community: "Optimasi Crawler Sosial"
+location: "L666"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Optimasi_Crawler_Sosial
 ---
 
 # Bounded newest-first date windows, shared by both entry points.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[search_targets()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Optimasi_Crawler_Sosial

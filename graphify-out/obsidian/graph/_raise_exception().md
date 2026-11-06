@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
 community: "Batas Crawler Opsional"
-location: "L161"
+location: "L162"
 tags:
   - graphify/code
   - graphify/EXTRACTED

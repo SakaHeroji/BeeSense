@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Reorganized BeeSense package and supporting-file structure]] - `references` [EXTRACTED]
 - [[SocialCrawler]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer]] - `references` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Wrapper_RedditCrawler

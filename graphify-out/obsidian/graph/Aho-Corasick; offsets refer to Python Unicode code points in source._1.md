@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
-community: "Capture Reddit Playwright"
+community: "Kontrak Record Reddit"
 location: "L170"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Capture_Reddit_Playwright
+  - community/Kontrak_Record_Reddit
 ---
 
 # Aho-Corasick; offsets refer to Python Unicode code points in source.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[KeywordMatcher_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Capture_Reddit_Playwright
+#graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit

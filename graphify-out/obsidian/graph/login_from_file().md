@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
 community: "Batas Crawler Opsional"
-location: "L260"
+location: "L261"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,12 +13,12 @@ tags:
 
 ## Connections
 - [[SessionInvalid]] - `calls` [EXTRACTED]
-- [[ValueError_2]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [EXTRACTED]
 - [[collect()]] - `calls` [EXTRACTED]
 - [[create_client()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[load_client()]] - `calls` [EXTRACTED]
 - [[login_with_saved_password()]] - `calls` [EXTRACTED]
-- [[save_session()_1]] - `calls` [EXTRACTED]
+- [[save_session()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

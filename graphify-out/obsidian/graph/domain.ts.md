@@ -12,7 +12,6 @@ tags:
 # domain.ts
 
 ## Connections
-- [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
 - [[Capabilities]] - `imports` [EXTRACTED]
 - [[Config]] - `imports` [EXTRACTED]
 - [[ConfigReview.tsx]] - `imports_from` [EXTRACTED]
@@ -24,7 +23,6 @@ tags:
 - [[Shell.tsx]] - `imports_from` [EXTRACTED]
 - [[StorageConfig]] - `imports` [EXTRACTED]
 - [[StorageSettings.tsx]] - `imports_from` [EXTRACTED]
-- [[TikTokConnector.tsx]] - `imports_from` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]
 - [[api.test.ts]] - `imports_from` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]

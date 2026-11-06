@@ -1,36 +1,55 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Konfigurasi Crawler Universal"
+community: "Kuota Harian Scweet"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Kuota_Harian_Scweet
 ---
 
 # social_crawler.py
 
 ## Connections
 - [[SocialCrawler]] - `contains` [EXTRACTED]
-- [[TikTokAdapter]] - `imports` [EXTRACTED]
-- [[TikTokWorker]] - `imports` [EXTRACTED]
+- [[SourceBarrier]] - `imports` [EXTRACTED]
 - [[_config()]] - `contains` [EXTRACTED]
 - [[_keywords()]] - `contains` [EXTRACTED]
 - [[_number()]] - `contains` [EXTRACTED]
 - [[_url()]] - `contains` [EXTRACTED]
+- [[argparse]] - `imports` [EXTRACTED]
+- [[asyncio]] - `imports` [EXTRACTED]
+- [[benchmark_youtube_reddit.py]] - `imports_from` [EXTRACTED]
 - [[collect_reddrix()]] - `contains` [EXTRACTED]
+- [[collections]] - `imports_from` [EXTRACTED]
+- [[contextlib]] - `imports_from` [EXTRACTED]
+- [[controlled_reddrix()]] - `imports` [EXTRACTED]
+- [[copy]] - `imports_from` [EXTRACTED]
 - [[crawl_reddit_playwright.py]] - `imports_from` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `imports_from` [EXTRACTED]
 - [[crawl_youtube.py]] - `imports_from` [EXTRACTED]
+- [[crawler_backend_reddit]] - `imports_from` [EXTRACTED]
+- [[crawler_backend_youtube]] - `imports_from` [EXTRACTED]
 - [[crawler_config.py]] - `imports_from` [EXTRACTED]
 - [[crawler_limits.py]] - `imports_from` [EXTRACTED]
+- [[dataclasses]] - `imports_from` [EXTRACTED]
+- [[datetime]] - `imports_from` [EXTRACTED]
+- [[functools]] - `imports_from` [EXTRACTED]
+- [[hashlib]] - `imports_from` [EXTRACTED]
+- [[http_barrier()]] - `imports` [EXTRACTED]
+- [[importlib_metadata]] - `imports` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
+- [[json]] - `imports` [EXTRACTED]
 - [[load_reddrix()]] - `contains` [EXTRACTED]
-- [[main()_13]] - `contains` [EXTRACTED]
+- [[main()_18]] - `contains` [EXTRACTED]
+- [[math]] - `imports` [EXTRACTED]
+- [[multiprocessing]] - `imports` [EXTRACTED]
 - [[normalize_reddrix_item()]] - `contains` [EXTRACTED]
-- [[platform_configuration()]] - `imports` [EXTRACTED]
-- [[post_url()_1]] - `imports` [EXTRACTED]
+- [[os]] - `imports` [EXTRACTED]
+- [[pathlib]] - `imports_from` [EXTRACTED]
+- [[random]] - `imports` [EXTRACTED]
+- [[re]] - `imports` [EXTRACTED]
 - [[reddit_crawler.py]] - `imports_from` [EXTRACTED]
 - [[reddrix_error_receipt()]] - `contains` [EXTRACTED]
 - [[reddrix_receipt()]] - `contains` [EXTRACTED]
@@ -38,9 +57,12 @@ tags:
 - [[reddrix_worker()]] - `contains` [EXTRACTED]
 - [[resolve_reddrix_display()]] - `contains` [EXTRACTED]
 - [[run_reddrix_worker()]] - `contains` [EXTRACTED]
+- [[shutil]] - `imports` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `imports_from` [EXTRACTED]
 - [[social_export.py]] - `imports_from` [EXTRACTED]
 - [[storage_config.py]] - `imports_from` [EXTRACTED]
+- [[sys]] - `imports` [EXTRACTED]
+- [[tempfile]] - `imports` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports_from` [EXTRACTED]
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_reddit_crawler.py]] - `imports_from` [EXTRACTED]
@@ -52,6 +74,11 @@ tags:
 - [[test_storage_config.py]] - `imports_from` [EXTRACTED]
 - [[test_twitter_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_unlimited_crawling.py]] - `imports_from` [EXTRACTED]
+- [[test_youtube_reddit_performance.py]] - `imports_from` [EXTRACTED]
 - [[tiktok_crawler.py]] - `imports_from` [EXTRACTED]
+- [[time]] - `imports` [EXTRACTED]
+- [[types_1]] - `imports_from` [EXTRACTED]
+- [[urllib_parse]] - `imports_from` [EXTRACTED]
+- [[uuid]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

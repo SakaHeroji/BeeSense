@@ -12,11 +12,9 @@ tags:
 # Platform
 
 ## Connections
-- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
 - [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
-- [[auth.ts]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 - [[ui.tsx]] - `imports` [EXTRACTED]

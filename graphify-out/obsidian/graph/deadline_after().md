@@ -12,7 +12,7 @@ tags:
 # deadline_after()
 
 ## Connections
-- [[.__init__()_14]] - `calls` [EXTRACTED]
+- [[.__init__()_7]] - `calls` [EXTRACTED]
 - [[crawler_limits.py]] - `contains` [EXTRACTED]
 - [[social_crawler_selenium.py]] - `imports` [EXTRACTED]
 

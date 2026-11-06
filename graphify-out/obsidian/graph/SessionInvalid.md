@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
 community: "Batas Crawler Opsional"
-location: "L157"
+location: "L158"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,9 +12,10 @@ tags:
 # SessionInvalid
 
 ## Connections
+- [[SocialExportMixin_5]] - `uses` [INFERRED]
 - [[The supplied settings do not contain an authenticated mobile session.]] - `rationale_for` [EXTRACTED]
-- [[ValueError_2]] - `inherits` [EXTRACTED]
-- [[error_receipt()_1]] - `indirect_call` [INFERRED]
+- [[ValueError]] - `inherits` [EXTRACTED]
+- [[error_receipt()]] - `indirect_call` [INFERRED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[load_client()]] - `calls` [EXTRACTED]
 - [[login_from_file()]] - `calls` [EXTRACTED]

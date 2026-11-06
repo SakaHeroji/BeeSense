@@ -21,7 +21,6 @@ tags:
 - [[Shared export contract for every source script. Python 3.12+.  This is a tabular]] - `rationale_for` [EXTRACTED]
 - [[SourceAdapter_1]] - `contains` [EXTRACTED]
 - [[add_readme()]] - `contains` [EXTRACTED]
-- [[crawl_youtube.py]] - `imports_from` [EXTRACTED]
 - [[digest()]] - `contains` [EXTRACTED]
 - [[dumps()]] - `contains` [EXTRACTED]
 - [[fields()]] - `contains` [EXTRACTED]

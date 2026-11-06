@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Kuota Harian Scweet"
-location: "L221"
+location: "L224"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,15 @@ tags:
 # reddrix_error_receipt()
 
 ## Connections
+- [[.test_http_status_and_retry_after_survive_sdk()]] - `calls` [EXTRACTED]
 - [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - `calls` [EXTRACTED]
 - [[Reddrix anti-bot exceptions do not expose an authoritative HTTP status.]] - `rationale_for` [EXTRACTED]
+- [[SourceBarrier]] - `indirect_call` [INFERRED]
+- [[http_barrier()]] - `calls` [EXTRACTED]
 - [[reddrix_receipt()]] - `calls` [EXTRACTED]
 - [[reddrix_worker()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 - [[test_social_crawler_reddrix.py]] - `imports` [EXTRACTED]
+- [[test_youtube_reddit_performance.py]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

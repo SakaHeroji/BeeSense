@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Parsing Identitas Reddit"
-location: "L569"
+location: "L570"
 tags:
   - graphify/code
   - graphify/EXTRACTED

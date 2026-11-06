@@ -12,14 +12,13 @@ tags:
 # thread_id()
 
 ## Connections
-- [[.accept()_3]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
+- [[.accept()_5]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[import_sections()]] - `calls` [EXTRACTED]
 - [[load_campaign()]] - `calls` [EXTRACTED]
 - [[safe_web_url()]] - `calls` [EXTRACTED]
 - [[thread_url()]] - `calls` [EXTRACTED]
 - [[verify()]] - `calls` [EXTRACTED]
-- [[worker()_1]] - `calls` [EXTRACTED]
+- [[worker()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

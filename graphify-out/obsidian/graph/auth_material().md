@@ -12,6 +12,8 @@ tags:
 # auth_material()
 
 ## Connections
+- [[ValueError]] - `calls` [INFERRED]
+- [[X cookie auth_token dimasukkan ke field sessionid]] - `references` [EXTRACTED]
 - [[create_client()_1]] - `calls` [EXTRACTED]
 - [[read_json()]] - `calls` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]

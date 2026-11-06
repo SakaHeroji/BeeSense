@@ -1,21 +1,21 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Batas Crawler Opsional"
-location: "L98"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L83"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # object_key()
 
 ## Connections
-- [[._baseline()]] - `calls` [EXTRACTED]
-- [[.accept()_4]] - `calls` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[native_pk()]] - `calls` [EXTRACTED]
-- [[normalize_item()]] - `calls` [EXTRACTED]
+- [[._baseline()_1]] - `calls` [EXTRACTED]
+- [[.accept()_2]] - `calls` [EXTRACTED]
+- [[native_id()]] - `calls` [EXTRACTED]
+- [[normalize_item()_1]] - `calls` [EXTRACTED]
+- [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

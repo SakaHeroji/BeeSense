@@ -16,8 +16,8 @@ tags:
 - [[.write()_2]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [INFERRED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [INFERRED]
 - [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

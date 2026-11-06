@@ -1,23 +1,25 @@
 ---
 type: community
+cohesion: 0.31
 members: 10
 ---
 
 # Kuota Harian Scweet
 
+**Cohesion:** 0.31 - loosely connected
 **Members:** 10 nodes
 
 ## Members
-- [[.test_either_finite_daily_quota_still_blocks_independently()]] - code - tests/crawler/test_unlimited_crawling.py
-- [[.test_unlimited_quotas_preserve_counters_and_all_other_eligibility_gates()]] - code - tests/crawler/test_unlimited_crawling.py
-- [[Offline contractdeadline tests; fixture data is always marked synthetic.]] - rationale - tests/crawler/test_instagram_crawler.py
-- [[Offline evidence for target-based runs and nullable commentdaily limits.]] - rationale - tests/crawler/test_unlimited_crawling.py
-- [[Optional daily quotas for the pinned Scweet account repository.  Scweet's public]] - rationale - Crawler/Backend/scweet_limits.py
-- [[ScweetQuotaTests]] - code - tests/crawler/test_unlimited_crawling.py
-- [[configure_daily_quotas()]] - code - Crawler/Backend/scweet_limits.py
-- [[scweet_limits.py]] - code - Crawler/Backend/scweet_limits.py
-- [[test_instagram_crawler.py]] - code - tests/crawler/test_instagram_crawler.py
-- [[test_unlimited_crawling.py]] - code - tests/crawler/test_unlimited_crawling.py
+- [[.crawler()_3]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_default_config_selects_reddrix_without_loading_browser()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_mixed_baseline_skips_both_platforms_before_worker_requests()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_reddrix_retry_uses_coordinator_cooldown_and_same_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.test_spawned_worker_imports_shared_implementation_without_live_access()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[.youtube_worker()]] - code - tests/crawler/test_social_crawler_reddrix.py
+- [[SocialCrawlerReddrixTests]] - code - tests/crawler/test_social_crawler_reddrix.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -28,21 +30,11 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 7 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 5 edges to [[_COMMUNITY_Pengujian Client Instagram]]
-- 3 edges to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
-- 2 edges to [[_COMMUNITY_Crawler Selenium_1]]
-- 2 edges to [[_COMMUNITY_Batas Crawler Opsional_2]]
-- 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Pengujian Worker Instaloader]]
-- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_2]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_2]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
+- 5 edges to [[_COMMUNITY_Kuota Harian Scweet]]
 
 ## Top bridge nodes
-- [[test_unlimited_crawling.py]] - degree 20, connects to 12 communities
-- [[test_instagram_crawler.py]] - degree 12, connects to 5 communities
-- [[ScweetQuotaTests]] - degree 6, connects to 2 communities
+- [[SocialCrawlerReddrixTests]] - degree 13, connects to 2 communities
+- [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - degree 4, connects to 2 communities
+- [[.test_default_config_selects_reddrix_without_loading_browser()]] - degree 3, connects to 2 communities
+- [[.crawler()_3]] - degree 7, connects to 1 community
+- [[.test_mixed_default_workers_publish_one_bundle_with_correct_provenance()]] - degree 3, connects to 1 community

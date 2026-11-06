@@ -12,8 +12,6 @@ tags:
 # platformName()
 
 ## Connections
-- [[AuthSettings()]] - `calls` [EXTRACTED]
-- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[ConfigReview()]] - `calls` [EXTRACTED]
 - [[ConfigReview.tsx]] - `imports` [EXTRACTED]
 - [[DatasetView()]] - `calls` [EXTRACTED]

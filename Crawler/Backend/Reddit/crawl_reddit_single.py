@@ -533,9 +533,10 @@ class Settings:
     since:str|None=None
     until:str|None=None
     captured_at:str|None=None
+    selection:dict|None=None
 
     def validate(self):
-        limits={"max_posts":(1,20),"search_results":(1,50),"max_comments":(1,2000),
+        limits={"max_posts":(1,20),"search_results":(1,50),"max_comments":(0,2000),
             "max_replies":(0,2000),"max_replies_per_thread":(0,100),"timeout_seconds":(5,300),
             "total_seconds":(10,1800),"max_html_bytes":(10000,20_000_000)}
         for name,(low,high) in limits.items():

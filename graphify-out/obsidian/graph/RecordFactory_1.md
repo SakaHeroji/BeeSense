@@ -12,14 +12,14 @@ tags:
 # RecordFactory
 
 ## Connections
-- [[.__init__()_19]] - `method` [EXTRACTED]
+- [[.__init__()_32]] - `method` [EXTRACTED]
 - [[.content()_1]] - `method` [EXTRACTED]
 - [[.key()_1]] - `method` [EXTRACTED]
 - [[.row()_1]] - `method` [EXTRACTED]
-- [[.setUp()_11]] - `calls` [EXTRACTED]
+- [[.setUp()_18]] - `calls` [EXTRACTED]
 - [[.validate()_1]] - `calls` [EXTRACTED]
 - [[RedditRecordFactory]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[run()_1]] - `calls` [INFERRED]
+- [[run()_2]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

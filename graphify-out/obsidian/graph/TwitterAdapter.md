@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L688"
+location: "L695"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # TwitterAdapter
 
 ## Connections
-- [[.__init__()_34]] - `method` [EXTRACTED]
-- [[.accept()_5]] - `method` [EXTRACTED]
+- [[.__init__()_21]] - `method` [EXTRACTED]
+- [[.accept()_2]] - `method` [EXTRACTED]
+- [[SocialExportMixin_5]] - `uses` [INFERRED]
 - [[Use the shared record contract without changing native X identity.]] - `rationale_for` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 

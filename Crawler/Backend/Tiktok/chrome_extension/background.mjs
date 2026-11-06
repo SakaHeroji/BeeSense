@@ -10,13 +10,42 @@ import {
   validateTask,
   pageOperation,
   retryAfter,
+  NetworkPacing,
 } from "./core.mjs";
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 let session = null,
   operation = null,
-  resumeHuman = null;
-const status = async (text) => chrome.storage.session.set({ status: text });
+  resumeHuman = null,
+  starting = false;
+let connectorState = { phase: "idle", running: false };
+const status = async (text, details = {}) => {
+  connectorState = {
+    ...connectorState,
+    ...details,
+    message: text,
+    updatedAt: Date.now(),
+  };
+  await chrome.storage.session.set({ status: text, connectorState });
+};
+// A toolbar click opens Chrome's persistent side panel, including after Reload.
+chrome.sidePanel
+  ?.setPanelBehavior({ openPanelOnActionClick: true })
+  .catch(() => {});
+if (chrome.storage.session.get)
+  chrome.storage.session
+    .get("connectorState")
+    .then(({ connectorState: saved }) => {
+      if (!session && saved) {
+        connectorState = saved;
+        if (saved.running)
+          status(
+            "Koneksi terputus saat pengendali dimuat ulang. Hubungkan kembali ke crawler aktif.",
+            { running: false, phase: "stopped", target: null },
+          );
+      }
+    })
+    .catch(() => {});
 const cdp = async (method, params = {}) => {
   let timer;
   try {
@@ -68,6 +97,51 @@ const page = async (action, extra = {}) => {
   return out.result.value;
 };
 const requests = new Map();
+const relevant = (request, current) =>
+  request?.epoch === current.task.operation_id &&
+  (current.task.operation === "search" ||
+    request.root === current.task.video_id);
+const inFlight = (current) =>
+  [...requests.values()].some((request) => relevant(request, current));
+
+// Keep UI pacing as a minimum, then wait for the actual response body rather
+// than adding an idle penalty. Missing/failed requests have a bounded wait.
+async function waitForNetwork(current, started = Date.now()) {
+  let remaining = Math.max(
+    0,
+    Math.max(current.interval, current.pacing.backoff) - (Date.now() - started),
+  );
+  while (remaining > 0 && !expired() && !current.barrier) {
+    if (stagnated(current)) return;
+    const part = Math.min(1000, remaining);
+    await delay(part);
+    remaining -= part;
+  }
+  const timeout = Date.now() + 10000;
+  while (!expired() && !current.barrier) {
+    const now = Date.now();
+    if (
+      now >= current.pacing.pauseUntil &&
+      (!(inFlight(current) || current.pending.size) || now >= timeout)
+    )
+      return;
+    if (stagnated(current)) return;
+    await delay(100);
+  }
+}
+function stagnated(current) {
+  if (
+    current.task.operation !== "thread" ||
+    current.lastNewCommentAt == null ||
+    Date.now() - current.lastNewCommentAt <
+      (current.task.comment_stagnation_seconds || 75) * 1000
+  )
+    return false;
+  current.barrier = "PARTIAL";
+  current.collectionStatus = "stagnated";
+  current.warnings.add("comment_stagnation_timeout");
+  return true;
+}
 chrome.debugger.onEvent.addListener((source, method, params) => {
   if (source.tabId !== session?.tabId || !operation) return;
   if (method === "Network.requestWillBeSent") {
@@ -85,8 +159,13 @@ chrome.debugger.onEvent.addListener((source, method, params) => {
     } catch {}
   } else if (method === "Network.responseReceived") {
     const request = requests.get(params.requestId);
-    if (!request || request.epoch !== operation.task.operation_id) return;
+    if (!relevant(request, operation)) return;
     const code = params.response.status;
+    request.status = code;
+    const header = Object.entries(params.response.headers || {}).find(
+      ([k]) => k.toLowerCase() === "retry-after",
+    );
+    operation.pacing.observe(code, header ? retryAfter(header[1]) : null);
     if ([401, 403, 429].includes(code)) {
       operation.barrier =
         code === 429
@@ -95,18 +174,18 @@ chrome.debugger.onEvent.addListener((source, method, params) => {
             ? "LOGIN_REQUIRED"
             : "ACCESS_BLOCKED";
       if (code === 429) {
-        const header = Object.entries(params.response.headers || {}).find(
-          ([k]) => k.toLowerCase() === "retry-after",
-        );
         operation.retryAfter = retryAfter(header?.[1]);
       }
-    } else if (code >= 500)
-      operation.interval = Math.max(5000, operation.interval * 2);
+    } else if (code >= 500 && code <= 599)
+      operation.warnings.add("server_error_backoff");
+  } else if (method === "Network.loadingFailed") {
+    requests.delete(params.requestId);
   } else if (method === "Network.loadingFinished") {
     const request = requests.get(params.requestId);
     requests.delete(params.requestId);
     const current = operation;
-    if (!request || request.epoch !== current.task.operation_id) return;
+    if (!relevant(request, current)) return;
+    if (request.status >= 400) return;
     const pending = cdp("Network.getResponseBody", {
       requestId: params.requestId,
     })
@@ -144,19 +223,26 @@ chrome.debugger.onEvent.addListener((source, method, params) => {
           )
             return;
           current.commentPages.set(request.parent, sourceHasMore(data));
+          let added = false;
           for (const row of sourceComments(
             data,
             current.task.video_id,
             current.task.url,
             request.parent,
-          ))
+          )) {
+            if (!current.comments.has(row.id)) added = true;
             current.comments.set(row.id, row);
+          }
+          if (added) current.lastNewCommentAt = Date.now();
         } else
           for (const video of sourceVideos(data))
             current.videos.set(video.id, video);
       })
       .catch(() => current.warnings.add("native_json_unavailable"))
-      .finally(() => current.pending.delete(pending));
+      .finally(() => {
+        current.pending.delete(pending);
+        current.networkVersion++;
+      });
     current.pending.add(pending);
   }
 });
@@ -165,7 +251,11 @@ chrome.debugger.onDetach.addListener((source) => {
     if (operation) operation.barrier = "INTERRUPTED";
     if (session) session.running = false;
     if (!session?.detaching)
-      status("Chrome connection detached. No tab was closed.");
+      status("Koneksi tab terlepas. Hubungkan kembali untuk melanjutkan.", {
+        running: false,
+        phase: "error",
+        target: null,
+      });
     if (resumeHuman) resumeHuman();
   }
 });
@@ -231,19 +321,34 @@ async function flush(current, done = false) {
         ? { retry_after_seconds: current.retryAfter }
         : {}),
     });
-    for (const event of batch)
+    for (const event of batch) {
       current.sent.add(
         event.payload.id ||
           event.payload.cached_root?.id ||
           new URL(event.payload.url).pathname.split("/").pop(),
       );
+      if (event.kind === "record" && !session.sentIds.has(event.payload.id)) {
+        session.sentIds.add(event.payload.id);
+        const key =
+          event.payload.kind === "reply"
+            ? "replies"
+            : event.payload.kind === "comment"
+              ? "comments"
+              : "posts";
+        session.counts[key]++;
+      }
+    }
+    await status(connectorState.message, { counts: { ...session.counts } });
   }
   return events.length;
 }
 async function inspect(current) {
   const data = await page("read");
   if (data.captcha) {
-    await status("CAPTCHA: selesaikan manual di TikTok, lalu tekan Lanjutkan.");
+    await status(
+      "Selesaikan CAPTCHA di tab TikTok, lalu tekan tombol lanjut di sidebar.",
+      { phase: "human" },
+    );
     await bridge("/api/progress", {
       operation_id: current.task.operation_id,
       stage: "captcha_required",
@@ -257,6 +362,10 @@ async function inspect(current) {
     } finally {
       resumeHuman = null;
     }
+    if (!expired())
+      await status("Validasi diterima. Melanjutkan pengambilan…", {
+        phase: "running",
+      });
     if (expired()) {
       current.barrier = "CAPTCHA_REQUIRED";
       current.warnings.add("human_validation_required");
@@ -303,6 +412,9 @@ async function runTask(task) {
     warnings: new Set(["comments_completeness_unverified"]),
     barrier: null,
     collectionStatus: "pending",
+    lastNewCommentAt: null,
+    networkVersion: 0,
+    pacing: session.pacing,
     interval: Math.max(
       1000,
       (task.scroll_pause_seconds || 3) * 1000,
@@ -312,16 +424,21 @@ async function runTask(task) {
   operation = current;
   requests.clear();
   await status(
-    "Crawling " +
-      task.operation +
-      " · " +
-      (task.video_id || JSON.parse(task.target).query || "hashtag"),
+    task.operation === "search"
+      ? "Mencari kandidat post sesuai konfigurasi crawler…"
+      : "Mengumpulkan komentar utama, lalu balasan…",
+    {
+      phase: "running",
+      target: task.video_id || JSON.parse(task.target).query || "hashtag",
+    },
   );
   try {
+    await waitForNetwork(current, Date.now() - current.interval);
+    if (expired() || current.barrier) return;
     await chrome.tabs.update(session.tabId, { url });
     let ready = false;
     for (let attempt = 0; attempt < 6 && !expired(); attempt++) {
-      await delay(current.interval);
+      await waitForNetwork(current);
       try {
         await inspect(current);
         ready = true;
@@ -352,7 +469,8 @@ async function runTask(task) {
         return;
       }
       await page("comments");
-      await delay(current.interval);
+      current.lastNewCommentAt = Date.now();
+      await waitForNetwork(current);
     }
     let idle = 0;
     const collectAll =
@@ -360,6 +478,7 @@ async function runTask(task) {
       (task.collect_all_comments === true || task.max_comments == null);
     const retryAfterRound = new Map();
     let round = 0,
+      phase = "comments",
       rewindNext = false,
       unproductiveClicks = 0;
     while (
@@ -368,10 +487,24 @@ async function runTask(task) {
       (collectAll || idle < (task.idle_scroll_limit || 3))
     ) {
       round++;
-      if (current.pending.size) await Promise.allSettled([...current.pending]);
+      if (stagnated(current)) break;
       await flush(current);
       if (
         task.operation === "thread" &&
+        phase === "comments" &&
+        (current.commentPages.get(null) === false ||
+          (task.max_comments != null &&
+            [...current.comments.values()].filter(
+              (row) => row.kind === "comment",
+            ).length >= task.max_comments))
+      ) {
+        phase = "replies";
+        // Earlier controls are now offscreen after collecting the main list.
+        await page("scroll", { rewind: true });
+      }
+      if (
+        task.operation === "thread" &&
+        phase === "replies" &&
         commentPaginationExhausted(
           current.commentPages,
           current.comments,
@@ -386,6 +519,7 @@ async function runTask(task) {
       const before = current.sent.size;
       const expanded =
         task.operation === "thread" &&
+        phase === "replies" &&
         task.max_replies !== 0 &&
         task.max_replies_per_thread !== 0 &&
         unproductiveClicks < 3
@@ -409,19 +543,27 @@ async function runTask(task) {
           : "mencari panel komentar";
         // Traverse to the real bottom before revisiting earlier reply controls.
         // Rewinding every few idle rounds can trap long, already-loaded lists.
-        rewindNext = collectAll && !rewindNext && scroll?.at_end === true;
+        rewindNext =
+          phase === "replies" &&
+          collectAll &&
+          !rewindNext &&
+          scroll?.at_end === true;
         if (scroll?.comment_pane_missing) await page("comments");
       }
-      await delay(Math.max(current.interval, Math.min(idle, 10) * 1000));
+      await waitForNetwork(current);
+      if (current.barrier || expired()) break;
       await inspect(current);
-      if (current.pending.size) await Promise.allSettled([...current.pending]);
+      await waitForNetwork(
+        current,
+        Date.now() - Math.max(current.interval, current.pacing.backoff),
+      );
       await flush(current);
       if (task.operation === "thread") {
         const parents = [...current.comments.values()].filter(
           (row) => row.kind === "comment",
         ).length;
         await status(
-          `${parents} komentar · ${current.comments.size - parents} balasan · ${navigation}`,
+          `${parents} komentar · ${current.comments.size - parents} balasan · ${phase === "comments" ? "komentar utama" : navigation}`,
         );
       }
       if (current.sent.size === before) {
@@ -457,8 +599,8 @@ async function runTask(task) {
     if (reasons[error.message]) current.warnings.add(reasons[error.message]);
     await status(
       error.message === "STALE_OPERATION"
-        ? "Crawler operation expired."
-        : "Operation failed; partial rows retained.",
+        ? "Waktu operasi berakhir. Crawler mempertahankan data parsial."
+        : "Operasi terhenti. Crawler mempertahankan data parsial.",
     );
   } finally {
     if (expired() && !current.barrier) current.barrier = "INTERRUPTED";
@@ -507,9 +649,19 @@ async function start(message) {
     code: message.code,
     tabId: message.tabId,
     running: true,
+    pacing: new NetworkPacing(),
+    counts: { posts: 0, comments: 0, replies: 0 },
+    sentIds: new Set(),
   };
   let attached = false;
   try {
+    await status("Menyambungkan ke crawler lokal…", {
+      phase: "connecting",
+      running: true,
+      target: null,
+      tabTitle: tab.title || "TikTok",
+      counts: { posts: 0, comments: 0, replies: 0 },
+    });
     await chrome.debugger.attach({ tabId: message.tabId }, "1.3");
     attached = true;
     await cdp("Network.enable");
@@ -518,7 +670,9 @@ async function start(message) {
       const task = await bridge("/api/task");
       if (!paired) {
         paired = true;
-        await status("Terhubung ke crawler lokal.");
+        await status("Terhubung. Menunggu tugas dari crawler lokal…", {
+          phase: "running",
+        });
       }
       if (task) {
         await runTask(task);
@@ -527,12 +681,13 @@ async function start(message) {
   } catch (error) {
     await status(
       error.message === "CONNECTOR_UPGRADE_REQUIRED"
-        ? "Konektor tidak cocok. Reload BeeSense TikTok Connector 1.2.1 dari folder proyek ini."
+        ? "Konektor tidak cocok. Reload ekstensi BeeSense dari folder proyek ini."
         : error.message === "PAIRING_REJECTED"
           ? "Kode pasangan ditolak. Salin kode dari crawler yang sedang aktif."
           : attached
-            ? "Local crawler disconnected; captured partial data stays in Python."
-            : "Connection failed. Check the pairing code and release any other debugger on this TikTok tab.",
+            ? "Crawler lokal terputus atau selesai. Periksa hasil di terminal; data yang diterima tetap tersimpan."
+            : "Tab belum terhubung. Tutup debugger lain pada tab TikTok, lalu coba hubungkan lagi.",
+      { phase: "error" },
     );
   } finally {
     session.running = false;
@@ -543,22 +698,47 @@ async function start(message) {
       } catch {}
     }
     session.code = "";
+    await status(
+      session.stopping
+        ? "Pengambilan dihentikan. Data yang diterima tetap tersimpan di crawler."
+        : connectorState.message,
+      {
+        running: false,
+        phase: session.stopping ? "stopped" : connectorState.phase,
+        target: null,
+      },
+    );
   }
 }
 chrome.runtime.onMessage.addListener((message, sender, reply) => {
   if (sender.id !== chrome.runtime.id) return;
   if (message.action === "start") {
-    start(message).catch(() =>
-      status(
-        "Connection failed. Check the pairing code and release any other debugger on this TikTok tab.",
-      ),
-    );
+    if (starting || session?.running) {
+      reply({ started: false, reason: "ALREADY_RUNNING" });
+      return;
+    }
+    starting = true;
+    start(message)
+      .catch((error) => {
+        if (error.message !== "ALREADY_RUNNING")
+          status(
+            "Belum tersambung. Periksa alamat lokal, kode pasangan dan tab TikTok pilihan Anda.",
+            { running: false, phase: "error" },
+          );
+      })
+      .finally(() => {
+        starting = false;
+      });
     reply({ started: true });
   } else if (message.action === "continue") {
     if (resumeHuman) resumeHuman();
     reply({ continued: true });
   } else if (message.action === "stop") {
-    if (session) session.running = false;
+    if (session) {
+      session.running = false;
+      session.stopping = true;
+    }
+    status("Menghentikan pengambilan dan melepas tab…", { phase: "stopping" });
     if (resumeHuman) resumeHuman();
     reply({ stopping: true });
   }

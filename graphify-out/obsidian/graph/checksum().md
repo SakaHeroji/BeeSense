@@ -1,19 +1,23 @@
 ---
-source_file: "MachineLearning/source_roots.py"
+source_file: "MachineLearning/context_relevance.py"
 type: "code"
-community: "Arsip Data Harian"
-location: "L12"
+community: "Penyaringan Relevansi dan Narasi Topik"
+location: "L31"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Arsip_Data_Harian
+  - community/Penyaringan_Relevansi_dan_Narasi_Topik
 ---
 
 # checksum()
 
 ## Connections
-- [[source_roots.py]] - `contains` [EXTRACTED]
-- [[twitter_roots()]] - `calls` [EXTRACTED]
-- [[write_roots()]] - `calls` [EXTRACTED]
+- [[.build_units()]] - `calls` [EXTRACTED]
+- [[.filter_snapshot()]] - `calls` [EXTRACTED]
+- [[.load_decisions()]] - `calls` [EXTRACTED]
+- [[.test_training_consumes_mask_without_modifying_source_text()]] - `calls` [EXTRACTED]
+- [[context_relevance.py]] - `contains` [EXTRACTED]
+- [[stream()]] - `indirect_call` [INFERRED]
+- [[test_context_relevance.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian
+#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

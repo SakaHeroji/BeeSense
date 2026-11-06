@@ -1,12 +1,12 @@
 ---
 source_file: "tests/cloud/test_relevance_runtime.py"
 type: "rationale"
-community: "Narasi Gemini dan Pembandingan"
+community: "Encoding dan Penyimpanan Model"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Narasi_Gemini_dan_Pembandingan
+  - community/Encoding_dan_Penyimpanan_Model
 ---
 
 # Verify the published relevance comparison in the minimal Cloud runtime.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_relevance_runtime.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan
+#graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

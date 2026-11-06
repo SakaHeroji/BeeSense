@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Active36,233records,20topicsbeforeafter,c_v0.43461028450.4666033620,11,185accepted10,795unique,40authorizedGemini narratives;newDockerunverified]] - `references` [EXTRACTED]
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[Both branches useSBERT384D,UMAPseeds4243,DBSCANgrid,weightedWard20 and unchangedqualitygates;filteredsubsetreuse savesencoding but refitsallclusteringevaluation]] - `references` [EXTRACTED]
 - [[Gemini receives10keywordsup-to10representatives pertopic but doesnotchoosemembers orraise coherence;newCSVderivative preservesfits,configdashboardselectspair,no reruntrainingAPI]] - `references` [EXTRACTED]
 - [[Native-ID merge retains distinctsame-text recordslatestobservationlineage;sentencepreparation tracksoriginalspanoccurrences;verifiedrootparent context aidsrelevance but not targetembedding]] - `references` [EXTRACTED]

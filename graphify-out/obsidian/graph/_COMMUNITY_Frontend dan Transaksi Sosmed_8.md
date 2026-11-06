@@ -1,25 +1,36 @@
 ---
 type: community
-members: 12
+cohesion: 0.10
+members: 21
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 12 nodes
+**Cohesion:** 0.10 - loosely connected
+**Members:** 21 nodes
 
 ## Members
-- [[DatasetView()]] - code - Crawler/Frontend/src/features/DatasetView.tsx
-- [[DatasetView.tsx]] - code - Crawler/Frontend/src/features/DatasetView.tsx
-- [[TransactionMigration()]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
-- [[TransactionMigration.tsx]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
-- [[crawlDateLabel()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[csvCell()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[download()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[hooks.ts]] - code - Crawler/Frontend/src/shared/hooks.ts
-- [[useApp()]] - code - Crawler/Frontend/src/shared/context.ts
-- [[useClock()]] - code - Crawler/Frontend/src/shared/hooks.ts
-- [[useDebouncedValue()]] - code - Crawler/Frontend/src/shared/hooks.ts
-- [[useUrlState()]] - code - Crawler/Frontend/src/shared/hooks.ts
+- [[@eslintjs]] - code - Crawler/Frontend/package.json
+- [[@eslintjs_1]] - concept - Crawler/Frontend/package.json
+- [[@testing-libraryreact]] - code - Crawler/Frontend/package.json
+- [[@testing-libraryreact_1]] - concept - Crawler/Frontend/package.json
+- [[@vitejsplugin-react]] - code - Crawler/Frontend/package.json
+- [[@vitejsplugin-react_1]] - concept - Crawler/Frontend/package.json
+- [[devDependencies]] - code - Crawler/Frontend/package.json
+- [[eslint]] - code - Crawler/Frontend/package.json
+- [[eslint_1]] - concept - Crawler/Frontend/package.json
+- [[jsdom]] - code - Crawler/Frontend/package.json
+- [[jsdom_1]] - concept - Crawler/Frontend/package.json
+- [[prettier]] - code - Crawler/Frontend/package.json
+- [[prettier_1]] - concept - Crawler/Frontend/package.json
+- [[typescript]] - code - Crawler/Frontend/package.json
+- [[typescript_1]] - concept - Crawler/Frontend/package.json
+- [[typescript-eslint]] - code - Crawler/Frontend/package.json
+- [[typescript-eslint_1]] - concept - Crawler/Frontend/package.json
+- [[vite]] - code - Crawler/Frontend/package.json
+- [[vite_1]] - concept - Crawler/Frontend/package.json
+- [[vitest]] - code - Crawler/Frontend/package.json
+- [[vitest_1]] - concept - Crawler/Frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -29,15 +40,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 18 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
-- 18 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
-- 13 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
-- 4 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_12]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_14]]
+- 1 edge to [[_COMMUNITY_Aturan React Hooks]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_20]]
+- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform]]
+- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_1]]
+- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_2]]
 
 ## Top bridge nodes
-- [[DatasetView.tsx]] - degree 25, connects to 5 communities
-- [[TransactionMigration.tsx]] - degree 25, connects to 4 communities
-- [[DatasetView()]] - degree 10, connects to 2 communities
-- [[TransactionMigration()]] - degree 8, connects to 2 communities
-- [[useApp()]] - degree 7, connects to 1 community
+- [[devDependencies]] - degree 16, connects to 6 communities

@@ -1,16 +1,22 @@
 ---
 type: community
-members: 3
+cohesion: 0.29
+members: 7
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 3 nodes
+**Cohesion:** 0.29 - loosely connected
+**Members:** 7 nodes
 
 ## Members
-- [[Obsidian Migrasi Transaksi per Sosmed frontend only]] - document - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
-- [[Review dan progres inline adalah simulasi memori]] - rationale - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
-- [[Sumber migrasi terikat job platform dataset versi dan checksum]] - rationale - graphify-out/obsidian/Migrasi Transaksi per Sosmed.md
+- [[engines]] - code - Crawler/Frontend/package.json
+- [[name]] - code - Crawler/Frontend/package.json
+- [[node]] - code - Crawler/Frontend/package.json
+- [[package.json]] - code - Crawler/Frontend/package.json
+- [[private]] - code - Crawler/Frontend/package.json
+- [[type]] - code - Crawler/Frontend/package.json
+- [[version]] - code - Crawler/Frontend/package.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -18,3 +24,11 @@ members: 3
 TABLE source_file, type FROM #community/Frontend_dan_Transaksi_Sosmed
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
+
+## Top bridge nodes
+- [[package.json]] - degree 8, connects to 3 communities

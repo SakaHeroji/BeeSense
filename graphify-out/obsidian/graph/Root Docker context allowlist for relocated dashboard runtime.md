@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Relocated dashboard image uses root Streamlit shim and runtime-only wheels]] - `references` [EXTRACTED]
-- [[Root Cloud requirements include relocated dashboard-only runtime]] - `references` [EXTRACTED]
 - [[app.py]] - `references` [EXTRACTED]
 - [[streamlit_apps.py]] - `references` [EXTRACTED]
 

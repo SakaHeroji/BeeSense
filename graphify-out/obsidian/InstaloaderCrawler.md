@@ -5,6 +5,9 @@ tags: [beesense, crawler, instagram, instaloader, experiment]
 
 # InstaloaderCrawler
 
+Pembaruan 6 November: [[Optimasi Crawler X dan Instagram 20261106]] menjelaskan
+penghematan request, pemeriksaan root, pagination dan cooldown antarrun.
+
 Class standalone baru di `Crawler/Backend/instaloader_crawler.py`, Instaloader 4.16,
 mewarisi coordinator dan exporter [[InstagramCrawler instagrapi]]. Kontrak Excel,
 native ID/parent, dedup baseline dan filter tetap sama. Preset eksperimen maksimal

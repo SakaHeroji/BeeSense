@@ -12,6 +12,7 @@ tags:
 # _integer()
 
 ## Connections
+- [[ValueError]] - `calls` [INFERRED]
 - [[configuration()]] - `calls` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 

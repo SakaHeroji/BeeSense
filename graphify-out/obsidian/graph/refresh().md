@@ -1,17 +1,18 @@
 ---
-source_file: "Crawler/Backend/Tiktok/chrome_extension/popup.mjs"
+source_file: "Crawler/Backend/Tiktok/chrome_extension/sidepanel.mjs"
 type: "code"
-community: "Konektor Chrome TikTok Lokal"
-location: "L5"
+community: "Sidebar TikTok Chrome"
+location: "L81"
 tags:
   - graphify/code
-  - graphify/INFERRED
-  - community/Konektor_Chrome_TikTok_Lokal
+  - graphify/EXTRACTED
+  - community/Sidebar_TikTok_Chrome
 ---
 
 # refresh()
 
 ## Connections
-- [[popup.mjs]] - `indirect_call` [INFERRED]
+- [[render()]] - `calls` [EXTRACTED]
+- [[sidepanel.mjs]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Konektor_Chrome_TikTok_Lokal
+#graphify/code #graphify/EXTRACTED #community/Sidebar_TikTok_Chrome

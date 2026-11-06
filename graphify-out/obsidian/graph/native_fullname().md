@@ -12,10 +12,10 @@ tags:
 # native_fullname()
 
 ## Connections
-- [[.accept()_3]] - `calls` [EXTRACTED]
+- [[.accept()_5]] - `calls` [EXTRACTED]
 - [[.fullname()]] - `calls` [EXTRACTED]
 - [[.parent()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[object_key()]] - `calls` [EXTRACTED]
+- [[object_key()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

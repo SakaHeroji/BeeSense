@@ -12,23 +12,13 @@ tags:
 # AuthSettings.tsx
 
 ## Connections
-- [[AuthInput]] - `imports` [EXTRACTED]
 - [[AuthSettings()]] - `contains` [EXTRACTED]
-- [[Button()]] - `imports` [EXTRACTED]
-- [[Field()]] - `imports` [EXTRACTED]
-- [[FieldError]] - `imports` [EXTRACTED]
-- [[FieldErrorsContext]] - `imports` [EXTRACTED]
-- [[Notice()]] - `imports` [EXTRACTED]
-- [[Platform]] - `imports` [EXTRACTED]
-- [[api.ts]] - `imports_from` [EXTRACTED]
+- [[SessionGuide()]] - `imports` [EXTRACTED]
+- [[SessionGuide.tsx]] - `imports_from` [EXTRACTED]
 - [[auth.ts]] - `imports_from` [EXTRACTED]
-- [[context.ts]] - `imports_from` [EXTRACTED]
-- [[domain.ts]] - `imports_from` [EXTRACTED]
-- [[platformName()]] - `imports` [EXTRACTED]
+- [[sessionCookies]] - `imports` [EXTRACTED]
 - [[sessionPlatforms]] - `imports` [EXTRACTED]
-- [[types.ts]] - `imports_from` [EXTRACTED]
-- [[ui.tsx]] - `imports_from` [EXTRACTED]
-- [[useApp()]] - `imports` [EXTRACTED]
+- [[users_socs3_documents_beesense_crawler_frontend_src_shared_ui_tsx]] - `imports_from` [EXTRACTED]
 - [[validateAuth()]] - `imports` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

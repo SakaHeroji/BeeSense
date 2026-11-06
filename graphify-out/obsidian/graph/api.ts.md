@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Api]] - `imports` [EXTRACTED]
 - [[ApiError]] - `contains` [EXTRACTED]
-- [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
 - [[Config]] - `imports` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
 - [[Job]] - `imports` [EXTRACTED]
@@ -22,7 +21,6 @@ tags:
 - [[Plan]] - `imports` [EXTRACTED]
 - [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
 - [[Shell.tsx]] - `imports_from` [EXTRACTED]
-- [[TikTokConnector.tsx]] - `imports_from` [EXTRACTED]
 - [[TikTokConnectorSession]] - `imports` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]
 - [[api.test.ts]] - `imports_from` [EXTRACTED]

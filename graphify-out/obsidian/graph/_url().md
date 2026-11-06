@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Konfigurasi Crawler Universal"
-location: "L838"
+community: "Kuota Harian Scweet"
+location: "L913"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Kuota_Harian_Scweet
 ---
 
 # _url()
@@ -15,7 +15,6 @@ tags:
 - [[._checkpoint_items()_1]] - `calls` [EXTRACTED]
 - [[._existing_posts()]] - `calls` [EXTRACTED]
 - [[_config()]] - `calls` [EXTRACTED]
-- [[post_url()_1]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

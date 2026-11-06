@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Kuota Harian Scweet"
-location: "L388"
+location: "L463"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

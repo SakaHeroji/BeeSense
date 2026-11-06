@@ -12,7 +12,7 @@ tags:
 # action
 
 ## Connections
-- [[default_popup]] - `contains` [EXTRACTED]
+- [[default_title]] - `contains` [EXTRACTED]
 - [[manifest.json]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_TikTok_dan_Koneksi_Chrome

@@ -13,5 +13,6 @@ tags:
 
 ## Connections
 - [[PlatformResults.tsx]] - `contains` [EXTRACTED]
+- [[Results table action visibility]] - `references` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

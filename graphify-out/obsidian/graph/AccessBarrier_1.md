@@ -12,8 +12,9 @@ tags:
 # AccessBarrier
 
 ## Connections
-- [[.__init__()_33]] - `method` [EXTRACTED]
-- [[RuntimeError]] - `inherits` [EXTRACTED]
+- [[.__init__()_20]] - `method` [EXTRACTED]
+- [[RuntimeError_2]] - `inherits` [EXTRACTED]
+- [[SocialExportMixin_5]] - `uses` [INFERRED]
 - [[create_client()_1]] - `calls` [EXTRACTED]
 - [[error_receipt()_2]] - `indirect_call` [INFERRED]
 - [[response_barrier()]] - `calls` [EXTRACTED]

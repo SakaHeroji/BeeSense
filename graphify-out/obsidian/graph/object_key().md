@@ -1,21 +1,21 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L512"
+community: "Batas Crawler Opsional"
+location: "L99"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/Batas_Crawler_Opsional
 ---
 
 # object_key()
 
 ## Connections
-- [[.accept()_3]] - `calls` [EXTRACTED]
-- [[.key()_1]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[native_fullname()]] - `calls` [EXTRACTED]
+- [[._baseline()]] - `calls` [EXTRACTED]
+- [[.accept()_1]] - `calls` [EXTRACTED]
+- [[instagram_crawler.py]] - `contains` [EXTRACTED]
+- [[native_pk()]] - `calls` [EXTRACTED]
+- [[normalize_item()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

@@ -5,6 +5,16 @@ tags: [beesense, dashboard]
 
 # BeeSense
 
+- [[Optimasi Crawler YouTube dan Reddit 20261106]] — streaming komentar, filter awal, cap pagination dan request berurutan dengan barrier.
+
+- [[Panduan Session ID Frontend 20261106]] — cara mengambil sesi Instagram/X, sesi Chrome TikTok, serta status integrasi Threads/Facebook.
+
+- [[Sidebar TikTok Connector 20261106]] — sidebar Chrome 1.4.0, pilihan tab, pairing, progres dan kontrol validasi manual.
+
+- [[Optimasi Crawler X dan Instagram 20261106]] — analisis dan penghematan request terukur melalui fixture offline.
+
+- [[TikTok Throughput 20261106]] — stagnasi 75 detik, komentar utama sebelum replies, retry parsial dan backoff terbatas; hasil uji 1 jam: 10 post, 1.348 komentar, 481 balasan; target 50 belum tercapai.
+
 ## Frontend TikTok melalui plugin Chrome
 
 [[Frontend TikTok Plugin Chrome]] menyatukan konfigurasi, pairing dan progres

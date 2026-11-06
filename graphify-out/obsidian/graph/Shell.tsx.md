@@ -28,6 +28,5 @@ tags:
 - [[platforms]] - `imports` [EXTRACTED]
 - [[ui.tsx]] - `imports_from` [EXTRACTED]
 - [[useMediaQuery()]] - `imports` [EXTRACTED]
-- [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

@@ -16,7 +16,7 @@ tags:
 - [[Capabilities]] - `imports` [EXTRACTED]
 - [[Config]] - `imports` [EXTRACTED]
 - [[Counts]] - `imports` [EXTRACTED]
-- [[Dataset_2]] - `imports` [EXTRACTED]
+- [[Dataset_1]] - `imports` [EXTRACTED]
 - [[Job]] - `imports` [EXTRACTED]
 - [[PreviewRow]] - `imports` [EXTRACTED]
 - [[SeriesPoint]] - `imports` [EXTRACTED]
@@ -48,7 +48,6 @@ tags:
 - [[types.ts]] - `imports_from` [EXTRACTED]
 - [[update()]] - `contains` [EXTRACTED]
 - [[validateConfig()]] - `imports` [EXTRACTED]
-- [[workflows.test.tsx]] - `imports_from` [EXTRACTED]
 - [[zeros]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

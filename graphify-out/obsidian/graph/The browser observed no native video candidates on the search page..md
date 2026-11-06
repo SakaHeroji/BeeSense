@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "rationale"
-community: "Akuisisi TikTok dan Ekspor"
-location: "L336"
+community: "Capture Reddit Playwright"
+location: "L346"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Akuisisi_TikTok_dan_Ekspor
+  - community/Capture_Reddit_Playwright
 ---
 
 # The browser observed no native video candidates on the search page.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[SearchUnavailable]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor
+#graphify/rationale #graphify/EXTRACTED #community/Capture_Reddit_Playwright

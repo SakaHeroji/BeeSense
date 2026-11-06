@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/TikTokCrawler Mandiri.md"
 type: "document"
-community: "Transport TikTok Native"
+community: "Integrasi Default Instaloader"
 location: "8"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Transport_TikTok_Native
+  - community/Integrasi_Default_Instaloader
 ---
 
 # TikTokCrawler Mandiri2.6.1/native1.3.0 and connector/livebridge1.2.1
@@ -19,7 +19,6 @@ tags:
 - [[Comments tab and scoped replies;source-pagination-v3build20261105-comment-tab-v3 validates runtime capabilities and pagination end]] - `references` [EXTRACTED]
 - [[Obsidian Konfigurasi Universal Social Crawler]] - `references` [EXTRACTED]
 - [[Obsidian dua trial mandiri gagal 0500 headless dan headed]] - `references` [EXTRACTED]
-- [[TikTok Chrome Live Connector architecture and audited restart history]] - `references` [EXTRACTED]
 - [[TikTok Chrome Uji 20261103]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Transport_TikTok_Native
+#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -12,8 +12,8 @@ tags:
 # expand_config()
 
 ## Connections
-- [[.__init__()_15]] - `calls` [EXTRACTED]
-- [[.__init__()_30]] - `calls` [EXTRACTED]
+- [[.__init__()_8]] - `calls` [EXTRACTED]
+- [[.__init__()_9]] - `calls` [EXTRACTED]
 - [[.test_expansion_rejects_non_object_and_oversized_files()]] - `calls` [EXTRACTED]
 - [[Apply shared defaults; an explicit platform value always wins, even .]] - `rationale_for` [EXTRACTED]
 - [[ValueError]] - `calls` [INFERRED]

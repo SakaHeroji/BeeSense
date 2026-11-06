@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "rationale"
-community: "Batas Crawler Opsional"
+community: "Crawler Selenium"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Crawler_Selenium
 ---
 
 # Serial Chrome acquisition using a persistent profile and manual login.  The same
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[instagram_browser.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/rationale #graphify/EXTRACTED #community/Crawler_Selenium

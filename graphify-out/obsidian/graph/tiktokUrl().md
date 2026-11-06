@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Tiktok/chrome_extension/core.mjs"
 type: "code"
 community: "Konektor Chrome TikTok Lokal"
-location: "L4"
+location: "L34"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[background.mjs]] - `imports` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
+- [[sidepanel.mjs]] - `imports` [EXTRACTED]
 - [[start()]] - `calls` [EXTRACTED]
 - [[test_tiktok_chrome_extension.mjs]] - `imports` [EXTRACTED]
 - [[validateTask()]] - `calls` [EXTRACTED]

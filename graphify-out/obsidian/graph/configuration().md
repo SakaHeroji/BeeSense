@@ -12,11 +12,11 @@ tags:
 # configuration()
 
 ## Connections
-- [[.__init__()_37]] - `calls` [EXTRACTED]
+- [[.__init__()_24]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
 - [[_integer()_1]] - `calls` [EXTRACTED]
 - [[post_url()]] - `calls` [EXTRACTED]
 - [[read_json()]] - `calls` [EXTRACTED]
-- [[storage_config()]] - `calls` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

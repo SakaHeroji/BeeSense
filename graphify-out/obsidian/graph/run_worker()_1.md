@@ -1,18 +1,17 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L888"
+community: "Kontrak Record Reddit"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # run_worker()
 
 ## Connections
-- [[.test_16_hard_timeout_keeps_already_received_event()]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

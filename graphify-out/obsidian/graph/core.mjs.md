@@ -12,14 +12,15 @@ tags:
 # core.mjs
 
 ## Connections
+- [[NetworkPacing]] - `contains` [EXTRACTED]
 - [[background.mjs]] - `imports_from` [EXTRACTED]
 - [[commentPaginationExhausted()]] - `contains` [EXTRACTED]
 - [[metric()]] - `contains` [EXTRACTED]
 - [[nativeId()]] - `contains` [EXTRACTED]
 - [[pageOperation()]] - `contains` [EXTRACTED]
 - [[parsePublicJson()]] - `contains` [EXTRACTED]
-- [[popup.mjs]] - `imports_from` [EXTRACTED]
 - [[retryAfter()]] - `contains` [EXTRACTED]
+- [[sidepanel.mjs]] - `imports_from` [EXTRACTED]
 - [[sourceComments()]] - `contains` [EXTRACTED]
 - [[sourceHasMore()]] - `contains` [EXTRACTED]
 - [[sourceVideo()]] - `contains` [EXTRACTED]

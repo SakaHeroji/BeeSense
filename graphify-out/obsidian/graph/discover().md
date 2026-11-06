@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[consolidate()]] - `calls` [EXTRACTED]
-- [[main()_5]] - `calls` [EXTRACTED]
+- [[main()_2]] - `calls` [EXTRACTED]
 - [[organize_social_outputs.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

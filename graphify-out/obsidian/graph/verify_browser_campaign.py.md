@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/Reddit/verify_browser_campaign.py"
 type: "code"
-community: "Capture Reddit Playwright"
+community: "Kontrak Record Reddit"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capture_Reddit_Playwright
+  - community/Kontrak_Record_Reddit
 ---
 
 # verify_browser_campaign.py
@@ -16,4 +16,4 @@ tags:
 - [[test_crawl_reddit_playwright.py]] - `imports_from` [EXTRACTED]
 - [[verify()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

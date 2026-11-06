@@ -10,7 +10,4 @@ tags:
 
 # SocialExportMixin
 
-## Connections
-- [[InstagramCrawler]] - `inherits` [EXTRACTED]
-
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

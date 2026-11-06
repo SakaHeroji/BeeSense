@@ -10,4 +10,8 @@ tags:
 
 # SocialExportMixin
 
+## Connections
+- [[NativeTikTokClient]] - `inherits` [EXTRACTED]
+- [[SocialCrawler]] - `inherits` [EXTRACTED]
+
 #graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

@@ -1,22 +1,18 @@
 ---
-source_file: "Crawler/Backend/social_crawler_selenium.py"
+source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Crawler Selenium"
-location: "L857"
+community: "Narasi Gemini dan Pembandingan"
+location: "L285"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Crawler_Selenium
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # main()
 
 ## Connections
-- [[.error()]] - `indirect_call` [INFERRED]
-- [[.plan()_1]] - `calls` [EXTRACTED]
-- [[.run()_1]] - `calls` [EXTRACTED]
-- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
+- [[verify()_2]] - `calls` [EXTRACTED]
+- [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

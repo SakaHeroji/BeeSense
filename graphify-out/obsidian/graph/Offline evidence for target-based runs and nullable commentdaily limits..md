@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_unlimited_crawling.py"
 type: "rationale"
-community: "Kuota Harian Scweet"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Kuota_Harian_Scweet
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Offline evidence for target-based runs and nullable comment/daily limits.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[test_unlimited_crawling.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Kuota_Harian_Scweet
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

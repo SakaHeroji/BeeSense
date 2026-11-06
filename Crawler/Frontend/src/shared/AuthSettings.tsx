@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { Eye, EyeOff, KeyRound } from 'lucide-react';
 import { api } from './api';
-import { sessionPlatforms, validateAuth } from './auth';
+import { sessionCookies, sessionPlatforms, validateAuth } from './auth';
+import { SessionGuide } from './SessionGuide';
 import { demoMode, platformName } from './domain';
 import { FieldErrorsContext, useApp } from './context';
 import type { AuthInput, FieldError, Platform } from './types';
@@ -22,6 +23,7 @@ export function AuthSettings({
   const [show, setShow] = useState(false);
   const [errors, setErrors] = useState<FieldError[]>([]);
   const supported = sessionPlatforms.includes(platform);
+  const cookie = sessionCookies[platform];
   const available = demoMode || cap.authAvailable === true;
   const query = useQuery({
     queryKey: ['platform-auth', platform],
@@ -68,6 +70,7 @@ export function AuthSettings({
             : 'Belum ada session ID.'}
         </p>
       )}
+      <SessionGuide platform={platform} />
       <FieldErrorsContext.Provider value={errors}>
         <Field
           name="username"
@@ -95,7 +98,11 @@ export function AuthSettings({
         <Field
           name="sessionid"
           label="Session ID"
-          hint="Kosongkan untuk memakai sesi yang tersimpan di auth.json."
+          hint={
+            cookie
+              ? `Isi nilai cookie ${cookie.name}. Kosongkan untuk memakai sesi yang tersimpan.`
+              : 'Opsional; format sesi menunggu integrasi backend. Isian boleh dikosongkan.'
+          }
         >
           {(id) => (
             <input

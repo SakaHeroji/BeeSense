@@ -12,7 +12,6 @@ tags:
 # connectorStates
 
 ## Connections
-- [[TikTokConnector.tsx]] - `imports` [EXTRACTED]
 - [[tiktok-connector.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

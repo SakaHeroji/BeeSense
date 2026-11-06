@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.crawler()_3]] - `method` [EXTRACTED]
 - [[.runner()]] - `method` [EXTRACTED]
-- [[.setUp()_14]] - `method` [EXTRACTED]
+- [[.setUp()_6]] - `method` [EXTRACTED]
 - [[.test_default_config_selects_reddrix_without_loading_browser()]] - `method` [EXTRACTED]
 - [[.test_invalid_display_and_checkpoint_mix_fail_before_acquisition()]] - `method` [EXTRACTED]
 - [[.test_missing_reddrix_exports_partial_and_keeps_youtube_running()]] - `method` [EXTRACTED]

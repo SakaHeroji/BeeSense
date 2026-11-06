@@ -152,7 +152,7 @@ class TikTokTests(unittest.TestCase):
         with patch.object(t, "auth_material", side_effect=AssertionError("auth read")):
             plan = t.live_chrome_plan(extension=True)
         self.assertEqual(plan["browser_acquisition"], "existing_chrome_extension")
-        self.assertIn("ChromeExtension:1.2.3", plan["browser_backend_version"])
+        self.assertIn("ChromeExtension:1.4.0", plan["browser_backend_version"])
         self.assertNotIn("Playwright", plan["browser_backend_version"])
         self.assertTrue(plan["run_clock_starts_after_extension_pairing"])
         self.assertTrue(plan["extension_pairing_required"])
@@ -311,6 +311,73 @@ class TikTokTests(unittest.TestCase):
         second = organize([output / "social_data.xlsx"], archive, allow_synthetic=True)
         self.assertEqual(second["rows"], 3)
         self.assertEqual(verify(archive)["duplicate_native_ids"], 0)
+
+    def test_partial_posts_retry_after_fresh_posts_and_merge_only_new_ids(self):
+        for finish_retry in (True, False):
+            with self.subTest(finish_retry=finish_retry):
+                config = deepcopy(self.config)
+                config["platforms"]["tiktok"].update(
+                    min_posts=2,
+                    max_posts=2,
+                    min_comments_per_post=1,
+                    partial_retry_limit=1,
+                )
+                calls, attempts = [], {}
+
+                def worker(operation, target, settings, seconds, emit):
+                    status = "FINISHED_BEST_EFFORT"
+                    if operation == "search":
+                        for ident in ("100", "101"):
+                            item = video(ident)
+                            emit("candidate", dict(url=item["link"], cached_root=item))
+                    else:
+                        ident = target["video_id"]
+                        calls.append(ident)
+                        attempts[ident] = attempts.get(ident, 0) + 1
+                        emit("record", video(ident))
+                        emit(
+                            "record",
+                            comment("200" if ident == "100" else "210", root=ident),
+                        )
+                        if ident == "100":
+                            status = "PARTIAL"
+                            if attempts[ident] == 2:
+                                emit("record", comment("201"))
+                                if finish_retry:
+                                    status = "FINISHED_BEST_EFFORT"
+                    return dict(status=status, reason="fixture", warnings=[])
+
+                output = self.path / ("retry-ok" if finish_retry else "retry-partial")
+                report = t.TikTokCrawler(config, workers={"tiktok": worker}).run(output)
+                self.assertEqual(calls, ["100", "101", "100"])
+                summary = report["platforms"]["tiktok"]
+                self.assertEqual(summary["posts_attempted"], 2)
+                self.assertEqual(summary["posts_exported"], 2)
+                self.assertEqual(summary["qualified_posts"], 2)
+                self.assertEqual(summary["comments"], 3)
+                self.assertEqual(summary["partial_post_retries"], 1)
+                rows = [
+                    json.loads(line)
+                    for line in (output / "Contents.jsonl").read_text().splitlines()
+                ]
+                self.assertEqual(len(rows), 5)
+                self.assertEqual(len({row["object_key"] for row in rows}), 5)
+                pending = json.loads((output / "tiktok_retry_queue.json").read_text())
+                self.assertEqual(len(pending), int(not finish_retry))
+                if pending:
+                    self.assertEqual(pending[0]["attempts"], 2)
+                    self.assertEqual(pending[0]["status"], "PARTIAL")
+                manifest = json.loads((output / "manifest.json").read_text())
+                self.assertIn("tiktok_retry_queue.json", manifest["files_sha256"])
+
+    def test_stagnation_and_retry_settings_are_bounded(self):
+        for key, values in {
+            "comment_stagnation_seconds": (0, 59, 91, True),
+            "partial_retry_limit": (-1, 4, True),
+        }.items():
+            for value in values:
+                with self.subTest(key=key, value=value), self.assertRaises(ValueError):
+                    t.platform_configuration({key: value})
 
     def test_all_comments_and_replies_are_paginated_and_deduplicated(self):
         client = self.client()

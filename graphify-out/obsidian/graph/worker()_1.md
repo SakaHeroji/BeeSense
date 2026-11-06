@@ -1,26 +1,24 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L852"
+community: "Kontrak Record Reddit"
+location: "L108"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # worker()
 
 ## Connections
-- [[.discover()]] - `calls` [EXTRACTED]
-- [[.fetch()_2]] - `calls` [EXTRACTED]
-- [[.thread()]] - `calls` [EXTRACTED]
-- [[LocalHtmlSource]] - `calls` [EXTRACTED]
-- [[PublicHtmlSource]] - `calls` [EXTRACTED]
-- [[RedditHtmlParser]] - `calls` [EXTRACTED]
-- [[Settings_1]] - `calls` [EXTRACTED]
-- [[bounded_events()]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[thread_id()]] - `calls` [EXTRACTED]
+- [[.row()_1]] - `indirect_call` [INFERRED]
+- [[SafeLogger]] - `calls` [EXTRACTED]
+- [[SourceBarrier]] - `indirect_call` [INFERRED]
+- [[controlled_youtube_dl()]] - `calls` [EXTRACTED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
+- [[error_code()]] - `calls` [EXTRACTED]
+- [[root_filter()]] - `calls` [EXTRACTED]
+- [[youtube_case()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

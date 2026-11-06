@@ -13,8 +13,8 @@ tags:
 
 ## Connections
 - [[.crawler()_1]] - `method` [EXTRACTED]
-- [[.setUp()_10]] - `method` [EXTRACTED]
-- [[.source()_1]] - `method` [EXTRACTED]
+- [[.setUp()_4]] - `method` [EXTRACTED]
+- [[.source()]] - `method` [EXTRACTED]
 - [[.test_dates_use_audit_wib_midnight_instead_of_publication_dates()]] - `method` [EXTRACTED]
 - [[.test_default_crawler_writes_private_bundle_and_organized_outputs()]] - `method` [EXTRACTED]
 - [[.test_global_dedup_keeps_first_wib_day_and_latest_observation()]] - `method` [EXTRACTED]

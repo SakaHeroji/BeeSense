@@ -12,7 +12,7 @@ tags:
 # BundleSink
 
 ## Connections
-- [[.__init__()_21]] - `method` [EXTRACTED]
+- [[.__init__()_34]] - `method` [EXTRACTED]
 - [[._cells()_1]] - `method` [EXTRACTED]
 - [[.abort()_1]] - `method` [EXTRACTED]
 - [[.chunks()_1]] - `method` [EXTRACTED]
@@ -22,9 +22,10 @@ tags:
 - [[Async Reddrix to validated records to existing Excel pipeline]] - `references` [EXTRACTED]
 - [[Atomic new directory; streaming JSONL + streaming, formula-safe Excel._1]] - `rationale_for` [EXTRACTED]
 - [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
+- [[Shared Twitter export contract]] - `references` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [INFERRED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
+- [[run()_2]] - `calls` [INFERRED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

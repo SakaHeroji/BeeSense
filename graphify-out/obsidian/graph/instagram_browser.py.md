@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instagram_browser.py"
 type: "code"
-community: "Batas Crawler Opsional"
+community: "Crawler Selenium"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Crawler_Selenium
 ---
 
 # instagram_browser.py
@@ -21,4 +21,4 @@ tags:
 - [[reached()]] - `imports` [EXTRACTED]
 - [[test_instagram_browser.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

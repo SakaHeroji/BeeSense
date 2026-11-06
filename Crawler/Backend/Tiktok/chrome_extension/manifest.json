@@ -1,17 +1,18 @@
 {
   "manifest_version": 3,
   "name": "BeeSense TikTok Connector",
-  "version": "1.2.3",
+  "version": "1.4.0",
   "minimum_chrome_version": "118",
   "description": "Drive one selected TikTok tab through a local BeeSense crawler. Human CAPTCHA validation only.",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmRXd9EMF2G88rI7wCOj+qFIGNjMx3l2Y5r1lmlW+1Ynx7RZXVrvsDYGGvs0sFE0bepGGGrh5xg57UuENrXBLarx7qZvq6P2T4v2icwoe+l4xTDYtzXbVEOsLgpka1R5TPvQiSA8YyXhotQC67N3KKY/jj7NkNVWIVYPjPOoii+KOEs5eln8+pueDg/58f9WptZbGPSXA7TkGfVItU2nxI1XLpuUe1xT8yVxlXzCOQ11Qjeomh8ZrIoz8f6FYsaA76JkDTL0lAsipCaXDYMf8QEzvxnJMKVA1GH6vHGpPZ/hTBicTMMBqE/P9VxbRtZ4CimtoepqhmPCfpEG2v+WZGQIDAQAB",
-  "permissions": ["debugger", "activeTab", "storage"],
+  "permissions": ["debugger", "activeTab", "storage", "sidePanel"],
   "host_permissions": ["https://www.tiktok.com/*", "http://127.0.0.1/*"],
   "background": {
     "service_worker": "background.mjs",
     "type": "module"
   },
   "action": {
-    "default_popup": "popup.html"
-  }
+    "default_title": "Buka sidebar BeeSense"
+  },
+  "side_panel": { "default_path": "sidepanel.html" }
 }

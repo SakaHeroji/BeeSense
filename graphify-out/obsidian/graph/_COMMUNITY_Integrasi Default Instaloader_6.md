@@ -1,27 +1,24 @@
 ---
 type: community
-members: 14
+cohesion: 0.22
+members: 9
 ---
 
 # Integrasi Default Instaloader
 
-**Members:** 14 nodes
+**Cohesion:** 0.22 - loosely connected
+**Members:** 9 nodes
 
 ## Members
-- [[Dua uji live native 3 November 2026 — keduanya gagal target]] - document - docs/crawler/TIKTOK_NATIVE_TRIAL_20261103.md
-- [[Fixture browser dicegat post komentar reply dan statistik berhasil, bukan live]] - rationale - docs/crawler/TIKTOK_NATIVE_TRIAL_20261103.md
-- [[Headed 0500, 11,05 detik, PARTIAL  ACCESS_BLOCKED]] - concept - docs/crawler/TIKTOK_NATIVE_TRIAL_20261103.md
-- [[Headed dokumen dan apisearch HTTP200, native_api_empty_or_invalid_json]] - rationale - graphify-out/obsidian/TikTok Mandiri Uji 500 Post 20261103.md
-- [[Headless 0500, 4,79 detik, PARTIAL  ACCESS_BLOCKED]] - concept - docs/crawler/TIKTOK_NATIVE_TRIAL_20261103.md
-- [[Obsidian TikTokCrawler Pyktok — riwayat yang diganti mandiri]] - document - graphify-out/obsidian/TikTokCrawler Pyktok.md
-- [[Obsidian dua trial mandiri gagal 0500 headless dan headed]] - document - graphify-out/obsidian/TikTok Mandiri Uji 500 Post 20261103.md
-- [[Obsidian trial Pyktok historis 0500, 2,69 detik]] - document - graphify-out/obsidian/TikTok Pyktok Uji 500 Post 20261103.md
-- [[Provenance dfreelonPyktok — historis]] - document - Crawler/Backend/Tiktok/PYKTOK.md
-- [[Pyktok dan TikTokApi tidak lagi requirements aktif]] - concept - Crawler/Backend/Tiktok/PYKTOK.md
-- [[Pyktok historis HTTP200 hydration tanpa video pada satu halaman keyword]] - concept - docs/crawler/TIKTOK_PYKTOK_TRIAL_20261103.md
-- [[Riwayat Pyktok 0500, 2,69 detik, CLIENT_UPGRADE_REQUIRED]] - document - docs/crawler/TIKTOK_PYKTOK_TRIAL_20261103.md
-- [[Riwayat Pyktok keyword satu halaman embedded tanpa pagination]] - concept - graphify-out/obsidian/TikTokCrawler Pyktok.md
-- [[Trial Pyktok lama hanya Excel berheaderaudit, tanpa partisi atau data sintetis baru]] - concept - graphify-out/obsidian/TikTok Pyktok Uji 500 Post 20261103.md
+- [[Bounded native-ID evidence and explicit uncertainty]] - rationale - graphify-out/obsidian/Crawler Selenium.md
+- [[Kontrak exporter Excel dan JSONL diwarisi SocialCrawler]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Obsidian Crawler Selenium architecture]] - document - graphify-out/obsidian/Crawler Selenium.md
+- [[Selenium 500 root dan 3600 detik adalah riwayat implementasi]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Selenium hanya YouTubeReddit 1000 post, tanpa cap durasikomentar]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Selenium snapshot non-exhaustive dan balasan tersembunyi terbatas]] - concept - docs/crawler/SELENIUM_CRAWLER.md
+- [[Shared BundleSink and dual-workbook export path]] - concept - graphify-out/obsidian/Crawler Selenium.md
+- [[Shared rendered_thread_dom.mjs extraction]] - concept - Crawler/Backend/Reddit/README_playwright.md
+- [[SocialCrawlerSelenium_1]] - concept - docs/crawler/SELENIUM_CRAWLER.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -31,9 +28,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Transport TikTok Native]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_4]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_8]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Bersama]]
 
 ## Top bridge nodes
-- [[Dua uji live native 3 November 2026 — keduanya gagal target]] - degree 5, connects to 1 community
-- [[Obsidian dua trial mandiri gagal 0500 headless dan headed]] - degree 4, connects to 1 community
+- [[SocialCrawlerSelenium_1]] - degree 7, connects to 2 communities
+- [[Obsidian Crawler Selenium architecture]] - degree 5, connects to 1 community
+- [[Shared rendered_thread_dom.mjs extraction]] - degree 2, connects to 1 community

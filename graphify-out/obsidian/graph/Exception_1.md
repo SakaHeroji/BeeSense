@@ -1,0 +1,16 @@
+---
+source_file: ""
+type: "code"
+community: "Parsing Identitas Reddit"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Parsing_Identitas_Reddit
+---
+
+# Exception
+
+## Connections
+- [[SourceFailure]] - `inherits` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

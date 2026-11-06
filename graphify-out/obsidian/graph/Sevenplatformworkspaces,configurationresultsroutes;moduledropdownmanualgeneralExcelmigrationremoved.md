@@ -12,7 +12,6 @@ tags:
 # Sevenplatformworkspaces,configuration/resultsroutes;moduledropdown/manual/generalExcelmigrationremoved
 
 ## Connections
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[Frontend API contract1.2integration design,not implemented HTTP service]] - `references` [EXTRACTED]
 - [[Frontend TikTok Plugin Chrome one transaction for configuration, review, pairing and progress]] - `references` [EXTRACTED]
 - [[Frontend1.2delivery and UI verification evidence]] - `references` [EXTRACTED]

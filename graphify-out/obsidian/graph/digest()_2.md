@@ -12,7 +12,7 @@ tags:
 # digest()
 
 ## Connections
-- [[.__init__()_6]] - `calls` [EXTRACTED]
+- [[.__init__()_12]] - `calls` [EXTRACTED]
 - [[._scores()]] - `calls` [EXTRACTED]
 - [[context_relevance.py]] - `contains` [EXTRACTED]
 

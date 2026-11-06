@@ -1,21 +1,20 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Dashboard/app.py"
 type: "code"
-community: "Kontrak Record Reddit"
-location: "L340"
+community: "app.py"
+location: "L2462"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Kontrak_Record_Reddit
+  - community/apppy
 ---
 
 # main()
 
 ## Connections
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[parser()]] - `calls` [EXTRACTED]
-- [[run()_1]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [INFERRED]
-- [[verify_descriptor()_1]] - `calls` [INFERRED]
+- [[.render()_1]] - `calls` [EXTRACTED]
+- [[SocialNLPStreamlitApp_1]] - `calls` [EXTRACTED]
+- [[app.py]] - `contains` [EXTRACTED]
+- [[streamlit_apps.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/EXTRACTED #community/apppy

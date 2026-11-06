@@ -22,7 +22,6 @@ tags:
 - [[Serial pacing5xxbackoff,429Retry-After persists between processes;accesschallengeinvalidJSON stops;local auth unchanged,profile cookies and raw debug data not exported]] - `references` [EXTRACTED]
 - [[Shared ContentInputDatasetExcel with string IDs and cross-WIB-day uniqueness;partial rows survive deadline,old roots dedup,but not exact comment cursor resume]] - `references` [EXTRACTED]
 - [[Single social_crawler.json business configuration across all runners and Chrome transports]] - `references` [EXTRACTED]
-- [[SocialCrawler 1.10.0 dengan backend TikTok mandiri]] - `references` [EXTRACTED]
 - [[TikTokCrawler Mandiri2.6.1native1.3.0 and connectorlivebridge1.2.1]] - `references` [EXTRACTED]
 - [[User-supplied TikWM probe — 3 November 2026]] - `references` [EXTRACTED]
 

@@ -12,14 +12,14 @@ tags:
 # social_nlp.py
 
 ## Connections
-- [[SocialNLPClusterer_1]] - `contains` [EXTRACTED]
+- [[SocialNLPClusterer]] - `contains` [EXTRACTED]
 - [[app.py]] - `imports_from` [EXTRACTED]
 - [[file_hash()]] - `contains` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[generate_topic_narratives.py]] - `imports_from` [EXTRACTED]
 - [[json_write()]] - `contains` [EXTRACTED]
 - [[load_config()]] - `contains` [EXTRACTED]
-- [[main()_15]] - `contains` [EXTRACTED]
+- [[main()_5]] - `contains` [EXTRACTED]
 - [[relevance_dashboard.py]] - `imports_from` [EXTRACTED]
 - [[test_context_relevance.py]] - `imports_from` [EXTRACTED]
 - [[test_dashboard_runtime.py]] - `imports_from` [EXTRACTED]

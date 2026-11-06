@@ -13,6 +13,7 @@ tags:
 
 ## Connections
 - [[AuthSettings.tsx]] - `imports` [EXTRACTED]
+- [[SessionGuide.tsx]] - `imports` [EXTRACTED]
 - [[auth.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

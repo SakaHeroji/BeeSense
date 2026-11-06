@@ -12,6 +12,6 @@ tags:
 # Encode with SBERT, fit UMAP + DBSCAN and optionally merge to a topic count.
 
 ## Connections
-- [[SocialNLPClusterer_1]] - `rationale_for` [EXTRACTED]
+- [[SocialNLPClusterer]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

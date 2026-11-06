@@ -1,18 +1,18 @@
 ---
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Pengujian Parser Reddit"
+community: "Parsing Identitas Reddit"
 location: "L482"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Pengujian_Parser_Reddit
+  - community/Parsing_Identitas_Reddit
 ---
 
 # SourceFailure
 
 ## Connections
-- [[.__init__()_22]] - `method` [EXTRACTED]
+- [[.__init__()_35]] - `method` [EXTRACTED]
 - [[.fetch()_2]] - `calls` [EXTRACTED]
 - [[.fetch()_1]] - `calls` [EXTRACTED]
 - [[.handle_starttag()]] - `calls` [EXTRACTED]
@@ -21,9 +21,9 @@ tags:
 - [[.test_06_block_login_and_legitimate_quoted_error()]] - `indirect_call` [INFERRED]
 - [[.test_07_wrong_thread_is_rejected_not_relabelled()]] - `indirect_call` [INFERRED]
 - [[.test_15_redirect_checks_before_following()]] - `indirect_call` [INFERRED]
-- [[.thread()]] - `calls` [EXTRACTED]
-- [[Exception]] - `inherits` [EXTRACTED]
+- [[.thread()_1]] - `calls` [EXTRACTED]
+- [[Exception_1]] - `inherits` [EXTRACTED]
 - [[assert_accessible()]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

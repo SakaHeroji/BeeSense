@@ -1,14 +1,18 @@
 ---
 type: community
-members: 1
+cohesion: 0.67
+members: 3
 ---
 
 # Panduan Pipeline BeeSense
 
-**Members:** 1 nodes
+**Cohesion:** 0.67 - moderately connected
+**Members:** 3 nodes
 
 ## Members
-- [[Pinned Selenium 4.51.0 plus crawler requirements]] - document - requirements/selenium.txt
+- [[Education keyword profile kuliah, kampus, universitas, beasiswa, jurusan]] - concept - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Filtered Gemini repository default and rollback]] - rationale - graphify-out/obsidian/Relevansi Konteks 20261102.md
+- [[Relevansi Konteks — 2 November 2026]] - document - graphify-out/obsidian/Relevansi Konteks 20261102.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -16,3 +20,9 @@ members: 1
 TABLE source_file, type FROM #community/Panduan_Pipeline_BeeSense
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense]]
+
+## Top bridge nodes
+- [[Relevansi Konteks — 2 November 2026]] - degree 3, connects to 1 community

@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
 community: "Batas Crawler Opsional"
-location: "L89"
+location: "L90"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[._baseline()]] - `calls` [EXTRACTED]
-- [[.accept()_4]] - `calls` [EXTRACTED]
+- [[.accept()_1]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 - [[media_url()]] - `calls` [EXTRACTED]
 - [[native_pk()]] - `calls` [EXTRACTED]

@@ -57,6 +57,8 @@ DEFAULTS = dict(
     request_interval_seconds=3,
     scroll_pause_seconds=3,
     idle_scroll_limit=3,
+    comment_stagnation_seconds=75,
+    partial_retry_limit=1,
     manual_wait_seconds=0,
     manual_poll_seconds=2,
     manual_profile_dir=".cache/tiktok/chromium-profile",
@@ -109,6 +111,12 @@ def platform_configuration(value):
             "TikTok settings must contain known fields; credentials belong in auth.json"
         )
     p = {**deepcopy(DEFAULTS), **deepcopy(value)}
+    for key, low, high in (
+        ("comment_stagnation_seconds", 60, 90),
+        ("partial_retry_limit", 0, 3),
+    ):
+        if type(p[key]) is not int or not low <= p[key] <= high:
+            raise ValueError("Invalid tiktok." + key)
     if (
         type(p["manual_wait_seconds"]) is not int
         or not 0 <= p["manual_wait_seconds"] <= 3600
@@ -290,6 +298,8 @@ class TikTokAdapter:
             "BeeSenseChromeLive:1.1.0",
             "BeeSenseChromeLive:1.2.0",
             "BeeSenseChromeLive:1.2.1",
+            "BeeSenseChromeLive:1.3.0",
+            "BeeSenseChromeLive:1.4.0",
         }:
             self.method = "beesense_existing_chrome_live"
 
@@ -1342,7 +1352,11 @@ class ChromeCaptureWorker:
 
 def live_chrome_plan(extension=False):
     """Describe the selected transport without starting a browser or reading auth."""
-    from Crawler.Backend.Tiktok.chrome_bridge import COMMENT_PROTOCOL, LIVE_VERSION
+    from Crawler.Backend.Tiktok.chrome_bridge import (
+        COMMENT_PROTOCOL,
+        LIVE_VERSION,
+        MIN_CONNECTOR_VERSION,
+    )
 
     manifest = json.loads(
         (ROOT / "Crawler/Backend/Tiktok/chrome_extension/manifest.json").read_text()
@@ -1358,8 +1372,9 @@ def live_chrome_plan(extension=False):
         manual_validation=False,
         extension_pairing_required=extension,
         run_clock_starts_after_extension_pairing=extension,
-        comment_stop_policy="source_pagination_exhausted_or_run_deadline",
-        required_connector_version="1.2.1" if extension else None,
+        comment_stop_policy="source_pagination_exhausted_or_stagnation_or_run_deadline",
+        comment_phase_policy="main_comments_then_replies",
+        required_connector_version=MIN_CONNECTOR_VERSION if extension else None,
         required_comment_protocol=COMMENT_PROTOCOL if extension else None,
     )
 

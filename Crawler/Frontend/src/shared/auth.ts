@@ -1,6 +1,10 @@
 import type { AuthInput, FieldError, Platform } from './types';
 
 export const sessionPlatforms: Platform[] = ['instagram', 'x', 'tiktok', 'threads', 'facebook'];
+export const sessionCookies: Partial<Record<Platform, { name: string; origin: string }>> = {
+  instagram: { name: 'sessionid', origin: 'https://www.instagram.com' },
+  x: { name: 'auth_token', origin: 'https://x.com' },
+};
 export function validateAuth(platform: Platform, value: AuthInput): FieldError[] {
   const errors: FieldError[] = [];
   const username = value.username.replace(/^@/, '');

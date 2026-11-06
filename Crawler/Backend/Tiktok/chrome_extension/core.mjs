@@ -1,5 +1,35 @@
 export const COMMENT_PROTOCOL = "source-pagination-v3";
-export const CONNECTOR_BUILD = "20261105-comment-viewport-v5";
+export const CONNECTOR_BUILD = "20261106-sidebar-v7";
+
+// Shared across tasks so navigating to another post cannot bypass a server pause.
+export class NetworkPacing {
+  constructor() {
+    this.failures = 0;
+    this.backoff = 0;
+    this.pauseUntil = 0;
+  }
+  observe(code, retrySeconds = null, now = Date.now()) {
+    if (code >= 500 && code <= 599) {
+      this.failures++;
+      this.backoff = Math.min(
+        15000,
+        5000 * 2 ** Math.min(this.failures - 1, 2),
+      );
+      if (this.failures >= 3)
+        this.pauseUntil = Math.max(
+          this.pauseUntil,
+          now + Math.max(30, retrySeconds || 0) * 1000,
+        );
+    } else if (code >= 200 && code < 300) {
+      this.failures = 0;
+      this.backoff = 0;
+      this.pauseUntil = 0;
+    }
+  }
+  wait(base, now = Date.now()) {
+    return Math.max(base, this.backoff, this.pauseUntil - now);
+  }
+}
 
 export function tiktokUrl(value) {
   const u = new URL(value);

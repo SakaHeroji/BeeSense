@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[ExplanationTests]] - `contains` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer]] - `imports` [EXTRACTED]
 - [[model_from_counts()]] - `contains` [EXTRACTED]
 - [[profile()]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]

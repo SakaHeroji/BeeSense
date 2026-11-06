@@ -14,7 +14,9 @@ tags:
 ## Connections
 - [[.adapter()]] - `calls` [EXTRACTED]
 - [[.test_discovered_post_reuses_metadata_instead_of_shortcode_query()]] - `calls` [EXTRACTED]
+- [[.test_last_web_page_requests_only_remaining_comments()]] - `calls` [EXTRACTED]
 - [[.test_legacy_graphql_comments_do_not_take_the_mobile_branch()]] - `calls` [EXTRACTED]
+- [[.test_repeated_cursor_does_not_report_exhaustion()]] - `calls` [EXTRACTED]
 - [[.test_web_comments_pagination_ids_and_previews_do_not_use_mobile()]] - `calls` [EXTRACTED]
 - [[test_instaloader_crawler.py]] - `contains` [EXTRACTED]
 

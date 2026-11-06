@@ -1,21 +1,18 @@
 ---
-source_file: "Crawler/Backend/instaloader_crawler.py"
+source_file: "scripts/relevance_dashboard.py"
 type: "code"
-community: "Worker Instaloader"
-location: "L745"
+community: "Narasi Gemini dan Pembandingan"
+location: "L12"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # main()
 
 ## Connections
-- [[.close()_3]] - `calls` [EXTRACTED]
-- [[.plan()]] - `calls` [EXTRACTED]
-- [[.run()]] - `calls` [EXTRACTED]
-- [[InstaloaderCrawler]] - `calls` [EXTRACTED]
-- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
+- [[.load_run()]] - `calls` [EXTRACTED]
+- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

@@ -17,7 +17,6 @@ tags:
 - [[.test_10_exact_time_normalized_utc_and_role_evidence()]] - `calls` [EXTRACTED]
 - [[.write()_1]] - `calls` [EXTRACTED]
 - [[.write()_2]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[digest()_3]] - `calls` [EXTRACTED]
 - [[dumps()_1]] - `calls` [EXTRACTED]

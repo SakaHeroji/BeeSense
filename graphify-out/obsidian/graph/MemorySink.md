@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Kontrak Record Reddit"
-location: "L1054"
+location: "L1055"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,8 @@ tags:
 # MemorySink
 
 ## Connections
-- [[.__init__()_29]] - `method` [EXTRACTED]
-- [[.setUp()_11]] - `calls` [EXTRACTED]
+- [[.__init__()_42]] - `method` [EXTRACTED]
+- [[.setUp()_18]] - `calls` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
 - [[.write()_2]] - `method` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "Dashboard/app.py"
 type: "rationale"
-community: "thread_url"
+community: "Render Dashboard Streamlit"
 location: "L67"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/thread_url
+  - community/Render_Dashboard_Streamlit
 ---
 
 # Keep original audit data intact; escape spreadsheet formulas on export.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[relevance_csv()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/thread_url
+#graphify/rationale #graphify/EXTRACTED #community/Render_Dashboard_Streamlit

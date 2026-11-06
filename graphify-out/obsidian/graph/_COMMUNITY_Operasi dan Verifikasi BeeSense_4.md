@@ -1,17 +1,16 @@
 ---
 type: community
-members: 4
+cohesion: 1.00
+members: 1
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Members:** 4 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 1 nodes
 
 ## Members
-- [[BeeSense architecture note]] - document - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Dashboard URL state binding]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[Extracted evidence and inferred cosine edges]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
-- [[SocialNLPStreamlitApp]] - code - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[MMR diverse source evidence]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
 
 ## Live Query (requires Dataview plugin)
 

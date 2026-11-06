@@ -18,7 +18,7 @@ tags:
 - [[Offline contractdeadline tests; fixture data is always marked synthetic.]] - `rationale_for` [EXTRACTED]
 - [[SocialCrawler]] - `imports` [EXTRACTED]
 - [[instagram_crawler.py]] - `imports_from` [EXTRACTED]
-- [[records()_1]] - `contains` [EXTRACTED]
+- [[records()]] - `contains` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[spawn_fixture()]] - `contains` [EXTRACTED]
 - [[spawn_hanging()]] - `contains` [EXTRACTED]

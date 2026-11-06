@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "rationale"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L206"
+location: "L214"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

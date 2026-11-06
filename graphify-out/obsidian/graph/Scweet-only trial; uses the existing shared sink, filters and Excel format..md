@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "rationale"
-community: "Konfigurasi Crawler Universal"
-location: "L864"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L871"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # Scweet-only trial; uses the existing shared sink, filters and Excel format.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[TwitterCrawler]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

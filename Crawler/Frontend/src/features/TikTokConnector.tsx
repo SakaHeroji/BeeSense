@@ -8,6 +8,7 @@ import { useClock } from '../shared/hooks';
 import { connectorStates, connectorVersion } from '../shared/tiktok-connector';
 import type { Job } from '../shared/types';
 import { Button, Field, Notice, Spinner } from '../shared/ui';
+import { SessionGuide } from '../shared/SessionGuide';
 
 export function TikTokWorkflow({ step = 1 }: { step?: number }) {
   return (
@@ -37,7 +38,7 @@ export function TikTokChromePreparation() {
       <ul>
         <li>Aktifkan BeeSense TikTok Connector {connectorVersion} atau lebih baru.</li>
         <li>Alamat server dan kode pairing muncul di sini setelah konfigurasi ditinjau.</li>
-        <li>Biarkan tab TikTok aktif dan jendela Chrome terbuka. Popup plugin boleh ditutup.</li>
+        <li>Biarkan tab TikTok aktif dan jendela Chrome terbuka. Sidebar plugin boleh ditutup.</li>
         <li>
           Biarkan plugin menggulir dan membuka balasan. Hindari pindah post atau refresh manual.
         </li>
@@ -47,6 +48,7 @@ export function TikTokChromePreparation() {
         <ShieldCheck size={18} aria-hidden="true" />
         <span>Waktu crawling mulai dihitung setelah plugin terhubung.</span>
       </div>
+      <SessionGuide platform="tiktok" />
     </section>
   );
 }
@@ -221,8 +223,8 @@ export default function TikTokConnector({ job }: { job: Job }) {
               </div>
               <div className="tiktok-pairing-footer">
                 <p>
-                  Klik <b>Mulai pada tab TikTok ini</b> di popup. Halaman ini akan memperbarui
-                  status otomatis.
+                  Pilih tab TikTok, lalu klik <b>Hubungkan &amp; mulai</b> di sidebar BeeSense.
+                  Halaman ini akan memperbarui status otomatis.
                 </p>
                 <span>Plugin minimum {connection.minimumVersion}</span>
               </div>

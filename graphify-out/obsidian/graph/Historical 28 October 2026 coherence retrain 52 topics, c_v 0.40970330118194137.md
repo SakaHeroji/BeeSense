@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Historical fixed top10window110all15878-unique macro c_v protocol]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp_1]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/thread_url

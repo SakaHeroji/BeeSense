@@ -144,6 +144,58 @@ describe('social source dashboard', () => {
     ).toBeInTheDocument();
     expect(JSON.stringify(validate.mock.calls[0])).not.toContain('sessionid');
   });
+  it.each([
+    ['instagram', 'Instagram', 'sessionid', 'https://www.instagram.com'],
+    ['x', 'X / Twitter', 'auth_token', 'https://x.com'],
+  ])(
+    'explains the actual cookie for %s without submitting or revealing the form',
+    async (platform, name, cookie, origin) => {
+      const validate = vi.spyOn(demoApi, 'validate');
+      const save = vi.spyOn(demoApi, 'saveAuth');
+      const { user } = await mount(`/crawler/${platform}`);
+      const account = screen.getByRole('region', { name: `Akun ${name}` });
+      const summary = within(account)
+        .getByText(`Cara mengambil Session ID ${name}`)
+        .closest('summary')!;
+      await user.type(within(account).getByLabelText('Session ID'), 'synthetic-private-session');
+      await user.click(summary);
+      expect(summary.parentElement).toHaveAttribute('open');
+      expect(within(account).getByText(cookie, { selector: 'dd code' })).toBeVisible();
+      expect(within(account).getByText(origin, { selector: 'dd code' })).toBeVisible();
+      expect(within(account).getByLabelText('Session ID')).toHaveAttribute('type', 'password');
+      expect(
+        within(account).getByRole('link', { name: 'Panduan cookie Chrome (tab baru)' }),
+      ).toHaveAttribute('rel', 'noopener noreferrer');
+      expect(save).not.toHaveBeenCalled();
+      expect(validate).not.toHaveBeenCalled();
+      expect(JSON.stringify(localStorage)).not.toContain('synthetic-private-session');
+    },
+  );
+  it.each([
+    ['threads', 'Threads'],
+    ['facebook', 'Facebook'],
+  ])('marks %s session instructions as pending backend support', async (platform, name) => {
+    const { user } = await mount(`/crawler/${platform}`);
+    const account = screen.getByRole('region', { name: `Akun ${name}` });
+    await user.click(within(account).getByText(`Informasi sesi ${name}`));
+    expect(
+      within(account).getByText(
+        `Backend crawler ${name} belum tersedia. Form akun saat ini disiapkan untuk integrasi berikutnya.`,
+      ),
+    ).toBeVisible();
+    expect(within(account).queryByText(/Salin nilai cookie/)).not.toBeInTheDocument();
+  });
+  it('explains TikTok Chrome pairing without a Session ID input', async () => {
+    const { user } = await mount('/crawler/tiktok');
+    await user.click(screen.getByText('Cara menggunakan sesi Chrome TikTok'));
+    expect(
+      screen.getByText(
+        'TikTok memakai sesi pada tab Chrome pilihan Anda. Session ID tidak perlu ditempel ke frontend.',
+      ),
+    ).toBeVisible();
+    expect(screen.getByText(/Kode pairing berasal dari crawler BeeSense/)).toBeVisible();
+    expect(screen.queryByLabelText('Session ID')).not.toBeInTheDocument();
+  });
   it('observer cannot edit account settings or start a transaction migration', async () => {
     await mount('/crawler/youtube?view=results&transaction=demo-riset-001&action=migrate', true);
     expect(

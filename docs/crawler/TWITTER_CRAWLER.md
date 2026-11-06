@@ -1,5 +1,11 @@
 # TwitterCrawler — Scweet
 
+## Optimasi request — 6 November 2026
+
+Pemeriksaan root sebelum anak, pagination dan cooldown diperbarui tanpa menurunkan
+pacing atau kuota. Hasil pengukuran adalah fixture offline, bukan kecepatan live.
+Lihat [audit X/Instagram](PERFORMANCE_X_INSTAGRAM_20261106.md).
+
 > Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
 
 `Crawler/Backend/twitter_crawler.py` menyediakan class Python `TwitterCrawler` untuk percobaan Twitter/X secara terpisah. Akuisisi memakai **Scweet 5.8.2**, sedangkan filter, kontrak record, relasi, checksum dan Excel memakai komponen BeeSense yang sudah ada. Mulai SocialCrawler 1.7.0, backend ini juga tersedia pada coordinator gabungan dan alur NLP/dashboard.

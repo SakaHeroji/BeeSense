@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L554"
+location: "L559"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,6 +14,7 @@ tags:
 ## Connections
 - [[.run()_3]] - `calls` [EXTRACTED]
 - [[AccessBarrier_1]] - `indirect_call` [INFERRED]
+- [[retry_after_seconds()]] - `indirect_call` [INFERRED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 - [[worker_main()]] - `calls` [EXTRACTED]
 

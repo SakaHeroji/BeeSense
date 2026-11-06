@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "rationale"
-community: "Worker Instaloader"
-location: "L132"
+community: "Akuisisi TikTok dan Ekspor"
+location: "L143"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # Load JSON cookies only; never unpickle a session or replay a password.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[session_cookies()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

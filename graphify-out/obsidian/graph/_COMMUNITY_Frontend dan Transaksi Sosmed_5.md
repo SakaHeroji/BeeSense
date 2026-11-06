@@ -1,34 +1,42 @@
 ---
 type: community
-members: 21
+cohesion: 0.07
+members: 27
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 21 nodes
+**Cohesion:** 0.07 - loosely connected
+**Members:** 27 nodes
 
 ## Members
-- [[@eslintjs]] - code - Crawler/Frontend/package.json
-- [[@eslintjs_1]] - concept - Crawler/Frontend/package.json
-- [[@testing-libraryreact]] - code - Crawler/Frontend/package.json
-- [[@testing-libraryreact_1]] - concept - Crawler/Frontend/package.json
-- [[@vitejsplugin-react]] - code - Crawler/Frontend/package.json
-- [[@vitejsplugin-react_1]] - concept - Crawler/Frontend/package.json
-- [[devDependencies]] - code - Crawler/Frontend/package.json
-- [[eslint]] - code - Crawler/Frontend/package.json
-- [[eslint_1]] - concept - Crawler/Frontend/package.json
-- [[jsdom]] - code - Crawler/Frontend/package.json
-- [[jsdom_1]] - concept - Crawler/Frontend/package.json
-- [[prettier]] - code - Crawler/Frontend/package.json
-- [[prettier_1]] - concept - Crawler/Frontend/package.json
-- [[typescript]] - code - Crawler/Frontend/package.json
-- [[typescript_1]] - concept - Crawler/Frontend/package.json
-- [[typescript-eslint]] - code - Crawler/Frontend/package.json
-- [[typescript-eslint_1]] - concept - Crawler/Frontend/package.json
-- [[vite]] - code - Crawler/Frontend/package.json
-- [[vite_1]] - concept - Crawler/Frontend/package.json
-- [[vitest]] - code - Crawler/Frontend/package.json
-- [[vitest_1]] - concept - Crawler/Frontend/package.json
+- [[@testing-libraryjest-dom_2]] - concept - Crawler/Frontend/tsconfig.json
+- [[DOM]] - concept - Crawler/Frontend/tsconfig.json
+- [[DOM.Iterable]] - concept - Crawler/Frontend/tsconfig.json
+- [[ES2022]] - concept - Crawler/Frontend/tsconfig.json
+- [[allowImportingTsExtensions]] - code - Crawler/Frontend/tsconfig.json
+- [[compilerOptions]] - code - Crawler/Frontend/tsconfig.json
+- [[esModuleInterop]] - code - Crawler/Frontend/tsconfig.json
+- [[include]] - code - Crawler/Frontend/tsconfig.json
+- [[isolatedModules]] - code - Crawler/Frontend/tsconfig.json
+- [[jsx]] - code - Crawler/Frontend/tsconfig.json
+- [[lib]] - code - Crawler/Frontend/tsconfig.json
+- [[module]] - code - Crawler/Frontend/tsconfig.json
+- [[moduleResolution]] - code - Crawler/Frontend/tsconfig.json
+- [[noEmit]] - code - Crawler/Frontend/tsconfig.json
+- [[noUnusedLocals]] - code - Crawler/Frontend/tsconfig.json
+- [[noUnusedParameters]] - code - Crawler/Frontend/tsconfig.json
+- [[resolveJsonModule]] - code - Crawler/Frontend/tsconfig.json
+- [[skipLibCheck]] - code - Crawler/Frontend/tsconfig.json
+- [[src]] - concept - Crawler/Frontend/tsconfig.json
+- [[strict]] - code - Crawler/Frontend/tsconfig.json
+- [[target]] - code - Crawler/Frontend/tsconfig.json
+- [[tsconfig.json]] - code - Crawler/Frontend/tsconfig.json
+- [[types]] - code - Crawler/Frontend/tsconfig.json
+- [[vite.config.ts]] - concept - Crawler/Frontend/tsconfig.json
+- [[viteclient]] - concept - Crawler/Frontend/tsconfig.json
+- [[vitest.config.ts]] - concept - Crawler/Frontend/tsconfig.json
+- [[vitestglobals]] - concept - Crawler/Frontend/tsconfig.json
 
 ## Live Query (requires Dataview plugin)
 
@@ -36,14 +44,3 @@ members: 21
 TABLE source_file, type FROM #community/Frontend_dan_Transaksi_Sosmed
 SORT file.name ASC
 ```
-
-## Connections to other communities
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_2]]
-- 1 edge to [[_COMMUNITY_Aturan React Hooks]]
-- 1 edge to [[_COMMUNITY_Dependency Pengembangan Frontend]]
-- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform]]
-- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_1]]
-- 1 edge to [[_COMMUNITY_Frontend Crawler per Platform_2]]
-
-## Top bridge nodes
-- [[devDependencies]] - degree 16, connects to 6 communities

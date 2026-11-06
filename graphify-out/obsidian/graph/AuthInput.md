@@ -12,9 +12,7 @@ tags:
 # AuthInput
 
 ## Connections
-- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
-- [[auth.ts]] - `imports` [EXTRACTED]
 - [[types.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

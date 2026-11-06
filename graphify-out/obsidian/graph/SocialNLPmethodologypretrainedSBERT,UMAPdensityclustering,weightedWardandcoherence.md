@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Active36,233records,20topicsbeforeafter,mean0.43461028450.4666033620,11,185accepted10,795unique,40authorizednarratives;oldstatsdatedhistory]] - `references` [EXTRACTED]
 - [[BeeSense separate crawler, NLP and artifact-reading Streamlit dashboard]] - `references` [EXTRACTED]
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[Gensimc_vtop10termswindow110,wholeunique-runreferenceincludingnoise,unweighted20topicmean;invalidtopicinvalidatesaggregate,cross-corpusscoresnotaccuracyholdout]] - `references` [EXTRACTED]
 - [[Immutable multilingualMiniLM384D,128tokenstride24overflowpoolingL2;UMAP10Dseeds4243thenEuclideanDBSCAN,SBERToriginalspaceevaluation,noisecoreandmemoryguardsemantics]] - `references` [EXTRACTED]
 - [[Nov5combinedTikTokretrainingboth20topicfitsmeetmean0.4gate,40narrativescomplete]] - `references` [EXTRACTED]

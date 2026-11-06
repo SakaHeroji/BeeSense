@@ -27,6 +27,31 @@ COMPACT_COLUMNS = (
 )
 
 
+def root_rejection(root, config, include, exclude):
+    """One shared root policy, usable before fetching expensive child pages."""
+    if config["since"] or config["until"]:
+        if not root["published_at"]:
+            return "root_publication_date_unknown"
+        stamp = reddit.utc_datetime(root["published_at"])
+        if (
+            config["since"]
+            and stamp < reddit.utc_datetime(config["since"])
+            or config["until"]
+            and stamp >= reddit.utc_datetime(config["until"])
+        ):
+            return "root_outside_date_window"
+    fields = [root.get("title") or "", root["text_source"]]
+    if any(any(exclude.find(text)) for text in fields):
+        return "root_excluded_keyword"
+    matched = {hit["keyword"] for text in fields for hit in include.find(text)}
+    keywords = set(config["include_keywords"])
+    if keywords and (
+        not matched if config["include_mode"] == "any" else not keywords <= matched
+    ):
+        return "root_missing_include_keyword"
+    return None
+
+
 class SocialExportMixin:
     """Requires config, include and exclude matchers; performs no acquisition."""
 
@@ -251,28 +276,9 @@ class SocialExportMixin:
         if len(roots) != 1:
             return [], "root_not_verified"
         root = roots[0]
-        if self.config["since"] or self.config["until"]:
-            if not root["published_at"]:
-                return [], "root_publication_date_unknown"
-            stamp = reddit.utc_datetime(root["published_at"])
-            if (
-                self.config["since"]
-                and stamp < reddit.utc_datetime(self.config["since"])
-                or self.config["until"]
-                and stamp >= reddit.utc_datetime(self.config["until"])
-            ):
-                return [], "root_outside_date_window"
-        fields = [root.get("title") or "", root["text_source"]]
-        if any(any(self.exclude.find(text)) for text in fields):
-            return [], "root_excluded_keyword"
-        matched = {hit["keyword"] for text in fields for hit in self.include.find(text)}
-        keywords = set(self.config["include_keywords"])
-        if keywords and (
-            not matched
-            if self.config["include_mode"] == "any"
-            else not keywords <= matched
-        ):
-            return [], "root_missing_include_keyword"
+        reason = root_rejection(root, self.config, self.include, self.exclude)
+        if reason:
+            return [], reason
         selected = [root]
         seen = {root["object_key"]}
         for row in rows["Contents"]:

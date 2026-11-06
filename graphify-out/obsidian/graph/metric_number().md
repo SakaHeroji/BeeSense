@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L1056"
+location: "L1066"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # metric_number()
 
 ## Connections
-- [[.__init__()_43]] - `calls` [EXTRACTED]
+- [[.__init__()_29]] - `calls` [EXTRACTED]
 - [[.submit()]] - `calls` [EXTRACTED]
 - [[chrome_bridge.py]] - `imports` [EXTRACTED]
 - [[project_comment()]] - `calls` [EXTRACTED]

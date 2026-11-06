@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.16
 members: 39
 ---
 
 # Pengujian Koordinator Crawler
 
+**Cohesion:** 0.16 - loosely connected
 **Members:** 39 nodes
 
 ## Members
@@ -58,17 +60,16 @@ SORT file.name ASC
 ## Connections to other communities
 - 12 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
 - 3 edges to [[_COMMUNITY_Pengujian Koordinator Crawler_1]]
+- 2 edges to [[_COMMUNITY_Kuota Harian Scweet]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_Arsip Data Harian]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_2]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
-- 1 edge to [[_COMMUNITY_Kuota Harian Scweet_1]]
+- 1 edge to [[_COMMUNITY_Arsip Data Harian_1]]
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 - 1 edge to [[_COMMUNITY_Crawler Selenium]]
 
 ## Top bridge nodes
-- [[test_social_crawler.py]] - degree 12, connects to 7 communities
+- [[test_social_crawler.py]] - degree 12, connects to 6 communities
 - [[SocialCrawlerTests]] - degree 42, connects to 2 communities
 - [[.crawler()]] - degree 32, connects to 2 communities
-- [[.test_random_and_fixed_delays_are_between_operations()]] - degree 5, connects to 1 community
 - [[.test_compact_reexport_refilters_saved_data_and_keeps_source_unchanged()]] - degree 5, connects to 1 community
+- [[.test_random_and_fixed_delays_are_between_operations()]] - degree 5, connects to 1 community

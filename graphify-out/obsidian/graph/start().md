@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Tiktok/chrome_extension/background.mjs"
 type: "code"
 community: "Konektor Chrome TikTok Lokal"
-location: "L488"
+location: "L630"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # start()
 
 ## Connections
+- [[Kode pairing hanya di memori dan dikosongkan dari form]] - `rationale_for` [INFERRED]
 - [[background.mjs]] - `contains` [EXTRACTED]
 - [[bridge()]] - `calls` [EXTRACTED]
 - [[cdp()]] - `calls` [EXTRACTED]

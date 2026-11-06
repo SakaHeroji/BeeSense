@@ -1,16 +1,20 @@
 ---
 type: community
-members: 3
+cohesion: 0.50
+members: 5
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 3 nodes
+**Cohesion:** 0.50 - moderately connected
+**Members:** 5 nodes
 
 ## Members
-- [[PlatformResults()]] - code - Crawler/Frontend/src/features/PlatformResults.tsx
-- [[PlatformResults.tsx]] - code - Crawler/Frontend/src/features/PlatformResults.tsx
-- [[TransactionPreview()]] - code - Crawler/Frontend/src/features/PlatformResults.tsx
+- [[publicDefaults()]] - code - Crawler/Frontend/scripts/sync-config.mjs
+- [[source_1]] - code - Crawler/Frontend/scripts/sync-config.mjs
+- [[sync-config.mjs]] - code - Crawler/Frontend/scripts/sync-config.mjs
+- [[sync-config.test.mjs]] - code - Crawler/Frontend/scripts/sync-config.test.mjs
+- [[target_1]] - code - Crawler/Frontend/scripts/sync-config.mjs
 
 ## Live Query (requires Dataview plugin)
 

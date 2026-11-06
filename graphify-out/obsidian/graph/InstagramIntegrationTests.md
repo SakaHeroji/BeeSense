@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.ig()]] - `method` [EXTRACTED]
-- [[.setUp()_9]] - `method` [EXTRACTED]
+- [[.setUp()_3]] - `method` [EXTRACTED]
 - [[.test_discovery_retains_bounded_cursor()]] - `method` [EXTRACTED]
 - [[.test_instagram_429_honors_server_wait_and_retries_same_post()]] - `method` [EXTRACTED]
 - [[.test_instagram_batch_pause_is_bounded_by_global_deadline()]] - `method` [EXTRACTED]

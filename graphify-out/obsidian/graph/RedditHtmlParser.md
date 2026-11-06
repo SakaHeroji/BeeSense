@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Pengujian Parser Reddit"
-location: "L724"
+location: "L725"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # RedditHtmlParser
 
 ## Connections
-- [[.__init__()_27]] - `method` [EXTRACTED]
+- [[.__init__()_40]] - `method` [EXTRACTED]
 - [[.discover()]] - `method` [EXTRACTED]
 - [[.fullname()]] - `method` [EXTRACTED]
 - [[.own_body()]] - `method` [EXTRACTED]
@@ -29,8 +29,8 @@ tags:
 - [[.test_11_missing_parent_remains_unknown()]] - `calls` [EXTRACTED]
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - `calls` [EXTRACTED]
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - `calls` [EXTRACTED]
-- [[.thread()]] - `method` [EXTRACTED]
+- [[.thread()_1]] - `method` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[worker()_1]] - `calls` [EXTRACTED]
+- [[worker()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

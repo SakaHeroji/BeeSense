@@ -57,7 +57,7 @@ class ChromeBridgeTests(unittest.TestCase):
             "Origin": origin or self.worker.extension_origin,
             "Authorization": "Bearer " + (code or self.worker.nonce),
             "Content-Type": "application/json",
-            "X-BeeSense-Connector-Version": "1.2.1",
+            "X-BeeSense-Connector-Version": "1.3.0",
             "X-BeeSense-Connector-Build": "test-comments-v2",
             "X-BeeSense-Comment-Policy": COMMENT_PROTOCOL,
         }
@@ -117,8 +117,8 @@ class ChromeBridgeTests(unittest.TestCase):
         ) as response:
             self.assertEqual(response.status, 200)
         headers = {
-            "X-BeeSense-Connector-Version": "1.2.3",
-            "X-BeeSense-Connector-Build": "20261105-comment-viewport-v5",
+            "X-BeeSense-Connector-Version": "1.3.0",
+            "X-BeeSense-Connector-Build": "20261106-throughput-v6",
             "X-BeeSense-Comment-Policy": COMMENT_PROTOCOL,
         }
         with self.api("/api/task", client_headers=headers) as response:
@@ -137,14 +137,19 @@ class ChromeBridgeTests(unittest.TestCase):
         self.runner.join(2)
         self.assertEqual([row[1]["id"] for row in self.rows], ["100"])
         self.assertEqual(self.result[0]["status"], "FINISHED_BEST_EFFORT")
-        self.assertEqual(self.worker.client_info["version"], "1.2.3")
+        self.assertEqual(self.worker.client_info["version"], "1.3.0")
 
     def test_old_or_manifest_only_connector_cannot_start_crawl_clock(self):
         self.worker.extension_mode = True
         for headers in (
             {},
             {"X-BeeSense-Connector-Version": "1.1.0"},
-            {"X-BeeSense-Connector-Version": "1.2.1"},
+            {
+                "X-BeeSense-Connector-Version": "1.2.3",
+                "X-BeeSense-Connector-Build": "20261105-comment-viewport-v5",
+                "X-BeeSense-Comment-Policy": COMMENT_PROTOCOL,
+            },
+            {"X-BeeSense-Connector-Version": "1.3.0"},
         ):
             with self.assertRaises(HTTPError) as error:
                 self.api("/api/task", client_headers=headers)
@@ -172,6 +177,24 @@ class ChromeBridgeTests(unittest.TestCase):
             self.runner.join(2)
             self.assertEqual(self.result[0]["status"], expected)
             self.assertEqual(self.rows[-1][1]["id"], "100")
+
+    def test_stagnation_receipt_retains_partial_rows_without_stopping_run(self):
+        self.worker.extension_mode = True
+        oid = self.begin()
+        self.assertEqual(self.worker.active["task"]["comment_stagnation_seconds"], 75)
+        self.send(
+            oid,
+            events=[dict(kind="record", payload=post())],
+            status="PARTIAL",
+            collection_status="stagnated",
+            warnings=["comment_stagnation_timeout", "server_error_backoff"],
+        )
+        self.runner.join(2)
+        self.assertEqual(self.result[0]["status"], "PARTIAL")
+        self.assertEqual(self.rows[0][1]["id"], "100")
+        from Crawler.Backend.social_crawler import STOP_STATUSES
+
+        self.assertNotIn("PARTIAL", STOP_STATUSES)
 
     def test_extension_api_is_disabled_in_agent_mode(self):
         with self.assertRaises(HTTPError) as error:

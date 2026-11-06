@@ -19,6 +19,8 @@
 !Crawler/Backend/Youtube/
 !Crawler/Backend/Youtube/__init__.py
 !Crawler/Backend/Youtube/crawl_youtube.py
+!Crawler/Backend/Youtube/youtube_runtime.py
+!Crawler/Backend/crawler_network.py
 !Crawler/Backend/Youtube/social_common.py
 !Crawler/Backend/Youtube/contract.json
 !Crawler/Backend/Reddit/

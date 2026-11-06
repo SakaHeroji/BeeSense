@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_unlimited_crawling.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
+community: "Wrapper RedditCrawler"
 location: "L27"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Wrapper_RedditCrawler
 ---
 
 # UnlimitedCrawlingTests
@@ -18,9 +18,8 @@ tags:
 - [[.test_reddrix_unlimited_preserves_native_replies_and_zero_disables_them()]] - `method` [EXTRACTED]
 - [[.test_thousand_unique_posts_finish_beyond_old_hours_and_keep_all_comments()]] - `method` [EXTRACTED]
 - [[.test_ytdlp_receives_no_comment_or_reply_cap_and_emits_every_returned_row()]] - `method` [EXTRACTED]
-- [[Clock_1]] - `uses` [INFERRED]
+- [[FakeReddrix_1]] - `uses` [INFERRED]
 - [[SocialCrawler]] - `uses` [INFERRED]
-- [[SocialCrawlerSelenium]] - `uses` [INFERRED]
 - [[test_unlimited_crawling.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler

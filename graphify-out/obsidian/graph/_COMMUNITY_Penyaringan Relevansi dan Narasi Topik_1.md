@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.17
 members: 18
 ---
 
 # Penyaringan Relevansi dan Narasi Topik
 
+**Cohesion:** 0.17 - loosely connected
 **Members:** 18 nodes
 
 ## Members

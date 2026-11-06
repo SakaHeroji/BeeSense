@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.sleep()_1]] - `calls` [EXTRACTED]
 - [[.test_spawned_worker_preserves_events_and_kills_hanging_process()]] - `indirect_call` [INFERRED]
-- [[records()_1]] - `calls` [EXTRACTED]
+- [[records()]] - `calls` [EXTRACTED]
 - [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Client_Instagram

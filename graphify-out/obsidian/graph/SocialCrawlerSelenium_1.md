@@ -18,7 +18,6 @@ tags:
 - [[Selenium hanya YouTubeReddit 1000 post, tanpa cap durasikomentar]] - `references` [EXTRACTED]
 - [[Selenium snapshot non-exhaustive dan balasan tersembunyi terbatas]] - `references` [EXTRACTED]
 - [[Single social_crawler.json business configuration across all runners and Chrome transports]] - `references` [EXTRACTED]
-- [[SocialCrawler 1.10.0 dengan backend TikTok mandiri]] - `implements` [EXTRACTED]
 - [[social_crawler.json sumber konfigurasi universal]] - `references` [EXTRACTED]
 
 #graphify/concept #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

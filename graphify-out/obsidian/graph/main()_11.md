@@ -1,24 +1,20 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "scripts/topic_sentence_export.py"
 type: "code"
-community: "Batas Crawler Opsional"
-location: "L1324"
+community: "Narasi Gemini dan Pembandingan"
+location: "L110"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # main()
 
 ## Connections
-- [[.check_session()]] - `calls` [EXTRACTED]
-- [[.plan()_3]] - `calls` [EXTRACTED]
-- [[.run()_2]] - `calls` [EXTRACTED]
-- [[InstagramCrawler]] - `calls` [EXTRACTED]
-- [[error_receipt()_1]] - `calls` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[login_local()]] - `calls` [EXTRACTED]
-- [[run_instagram_worker()]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[export_payload()]] - `calls` [EXTRACTED]
+- [[seal()]] - `calls` [EXTRACTED]
+- [[topic_sentence_export.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

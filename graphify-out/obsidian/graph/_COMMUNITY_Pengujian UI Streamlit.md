@@ -1,17 +1,20 @@
 ---
 type: community
-members: 15
+cohesion: 0.21
+members: 16
 ---
 
 # Pengujian UI Streamlit
 
-**Members:** 15 nodes
+**Cohesion:** 0.21 - loosely connected
+**Members:** 16 nodes
 
 ## Members
 - [[.app()]] - code - tests/nlp/test_streamlit_app.py
-- [[.setUp()_3]] - code - tests/nlp/test_streamlit_app.py
-- [[.tearDown()]] - code - tests/nlp/test_streamlit_app.py
-- [[.tearDownClass()_1]] - code - tests/nlp/test_streamlit_app.py
+- [[.setUp()_13]] - code - tests/nlp/test_streamlit_app.py
+- [[.setUpClass()_2]] - code - tests/nlp/test_streamlit_app.py
+- [[.tearDown()_1]] - code - tests/nlp/test_streamlit_app.py
+- [[.tearDownClass()_2]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_all_views_and_noise_only_selection()]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_coherence_metric_and_per_topic_scores_are_visible()]] - code - tests/nlp/test_streamlit_app.py
 - [[.test_complete_excel_download_is_available_without_training()]] - code - tests/nlp/test_streamlit_app.py
@@ -32,11 +35,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Encoding dan Penyimpanan Model]]
-- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan_1]]
 - 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes
-- [[StreamlitTests]] - degree 17, connects to 2 communities
-- [[.test_complete_excel_download_is_available_without_training()]] - degree 3, connects to 1 community
-- [[.setUp()_3]] - degree 2, connects to 1 community
+- [[StreamlitTests]] - degree 16, connects to 1 community

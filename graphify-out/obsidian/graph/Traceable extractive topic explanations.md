@@ -18,7 +18,7 @@ tags:
 - [[Module API creates source-bound explanation sidecars without retraining]] - `references` [EXTRACTED]
 - [[On-demand explanations from active combined 20-topic artifacts]] - `references` [EXTRACTED]
 - [[Selected-topic explanation panel links cards, frequency graphs, time shares and source evidence]] - `references` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `references` [EXTRACTED]
+- [[SocialNLPClusterer]] - `references` [EXTRACTED]
 - [[SocialNLPStreamlitApp_1]] - `references` [EXTRACTED]
 - [[Source-bound beesense-topic-explanations1 sidecar manifest]] - `references` [EXTRACTED]
 

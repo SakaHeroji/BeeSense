@@ -12,7 +12,6 @@ tags:
 # tiktok-connector.ts
 
 ## Connections
-- [[TikTokConnector.tsx]] - `imports_from` [EXTRACTED]
 - [[TikTokConnectorSession]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports_from` [EXTRACTED]
 - [[connector-demo.ts]] - `imports_from` [EXTRACTED]

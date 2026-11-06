@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
 community: "Batas Crawler Opsional"
-location: "L68"
+location: "L69"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,9 +13,9 @@ tags:
 
 ## Connections
 - [[._baseline()]] - `calls` [EXTRACTED]
-- [[.accept()_4]] - `calls` [EXTRACTED]
+- [[.accept()_1]] - `calls` [EXTRACTED]
 - [[Accept only Instagram postreel permalinks; strip tracking parameters.]] - `rationale_for` [EXTRACTED]
-- [[ValueError_2]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [EXTRACTED]
 - [[_configuration()]] - `calls` [EXTRACTED]
 - [[collect()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]

@@ -1,21 +1,20 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Konfigurasi Crawler Universal"
-location: "L246"
+community: "Kuota Harian Scweet"
+location: "L262"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konfigurasi_Crawler_Universal
+  - community/Kuota_Harian_Scweet
 ---
 
 # resolve_reddrix_display()
 
 ## Connections
-- [[.__init__()_39]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
+- [[.__init__()_48]] - `calls` [EXTRACTED]
 - [[Virtual displays require Linux and Xvfb; other environments use headless.]] - `rationale_for` [EXTRACTED]
 - [[load_reddrix()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

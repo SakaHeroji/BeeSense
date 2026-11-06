@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L598"
+location: "L603"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,9 @@ tags:
 # worker_main()
 
 ## Connections
-- [[.close()_6]] - `calls` [EXTRACTED]
+- [[.close()_7]] - `calls` [EXTRACTED]
 - [[One isolated process owns Scweet state and transport for the whole trial.]] - `rationale_for` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
 - [[account_cooldown()]] - `calls` [EXTRACTED]
 - [[create_client()_1]] - `calls` [EXTRACTED]
 - [[error_receipt()_2]] - `calls` [EXTRACTED]

@@ -26,11 +26,21 @@ from tests.crawler.test_social_crawler import receipt, yt_events
 
 class UnlimitedCrawlingTests(unittest.TestCase):
     def test_ytdlp_receives_no_comment_or_reply_cap_and_emits_every_returned_row(self):
-        client = Mock()
-        client.extract_info.return_value = {"id": "00000000000", "title": "Kuliah"}
-        client.process_ie_result.return_value = {
-            "comments": [{"id": "c" + str(i), "text": "context"} for i in range(110)]
-        }
+        import yt_dlp
+        from yt_dlp.extractor.youtube import YoutubeIE
+
+        options = []
+
+        def metadata(client, *args, **kwargs):
+            options.append(client.params)
+            return {
+                "id": "00000000000",
+                "title": "Kuliah",
+                "__post_extractor": client.get_info_extractor(
+                    "Youtube"
+                ).extract_comments(),
+            }
+
         pipe = Mock()
         settings = dict(
             cert_store="system",
@@ -39,12 +49,19 @@ class UnlimitedCrawlingTests(unittest.TestCase):
             max_replies=None,
             max_replies_per_thread=None,
         )
-        with patch("yt_dlp.YoutubeDL") as constructor, patch.object(yt.os, "setsid"):
-            constructor.return_value.__enter__.return_value = client
+        with (
+            patch.object(yt_dlp.YoutubeDL, "extract_info", metadata),
+            patch.object(
+                YoutubeIE,
+                "_get_comments",
+                return_value=iter(
+                    [{"id": "c" + str(i), "text": "context"} for i in range(110)]
+                ),
+            ),
+            patch.object(yt.os, "setsid"),
+        ):
             yt.worker("video", "https://youtu.be/00000000000", settings, pipe)
-        args = constructor.call_args.args[0]["extractor_args"]["youtube"][
-            "max_comments"
-        ]
+        args = options[0]["extractor_args"]["youtube"]["max_comments"]
         self.assertEqual(args, ["", "", "", "", ""])
         comments = [
             call.args[0]

@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
+from itertools import islice
 import importlib.metadata
 import json
 import multiprocessing as mp
@@ -25,10 +26,11 @@ if __package__:
     from .social_common import (BundleSink, ContentInput, Dataset, KeywordMatcher, RecordFactory, SourceAdapter,
         add_readme, now_iso, schema_fingerprint, verify_descriptor)
 else:
+    sys.path.insert(0,str(Path(__file__).resolve().parents[3]))
     from social_common import (BundleSink, ContentInput, Dataset, KeywordMatcher, RecordFactory, SourceAdapter,
         add_readme, now_iso, schema_fingerprint, verify_descriptor)
 
-VERSION="0.1.0"
+VERSION="0.2.0"
 SOURCE="youtube"
 VIDEO_NAMESPACE="youtube_video"
 COMMENT_NAMESPACE="youtube_comment"
@@ -58,6 +60,7 @@ def error_code(message):
     if "429" in text or "too many requests" in text:return "RATE_LIMITED"
     if any(x in text for x in ("sign in","login required","confirm you’re not a bot","confirm you're not a bot","captcha")):return "LOGIN_OR_CHALLENGE"
     if "403" in text or "forbidden" in text:return "ACCESS_BLOCKED"
+    if re.search(r"(?:http error|status(?: code)?)[ :]+5\d\d\b",text):return "SERVER_UNAVAILABLE"
     if "comments are disabled" in text or "comments disabled" in text:return "COMMENTS_DISABLED"
     if "private video" in text or "members-only" in text:return "PRIVATE_TARGET"
     if "timed out" in text or "timeout" in text:return "NETWORK_TIMEOUT"
@@ -87,9 +90,10 @@ class Settings:
     since:str|None=None
     until:str|None=None
     keywords:tuple[str,...]=("BINUS","universitas","kampus","biaya kuliah","beasiswa","jurusan")
+    selection:dict|None=None
 
     def validate(self):
-        limits={"max_videos":(1,20),"search_results":(1,10),"max_comments":(1,2000),"max_replies":(0,1000),
+        limits={"max_videos":(1,20),"search_results":(1,10),"max_comments":(0,2000),"max_replies":(0,1000),
                 "max_replies_per_thread":(0,100),"timeout_seconds":(10,600),"total_seconds":(20,3600)}
         for k,(a,b) in limits.items():
             v=getattr(self,k)
@@ -105,55 +109,68 @@ def worker(operation,target,settings,pipe):
     # Only sanitized, selected fields leave this process. No cookies or credentials.
     if os.name=="posix":os.setsid()
     try:
-        import yt_dlp
         from yt_dlp.version import __version__
+        from Crawler.Backend.crawler_network import SourceBarrier
+        from Crawler.Backend.Youtube.youtube_runtime import controlled_youtube_dl, root_filter
         logger=SafeLogger()
+        downloader,extractor=controlled_youtube_dl(settings,logger,lambda kind,row:pipe.send((kind,row)))
         opts={"quiet":True,"noprogress":True,"logger":logger,"skip_download":True,"noplaylist":True,
               "cachedir":False,"socket_timeout":15,"retries":0,"extractor_retries":0,"fragment_retries":0,
               "nocheckcertificate":False,"ignore_no_formats_error":True,"ignoreerrors":False,
-              "getcomments":operation=="video","extract_flat":operation=="search"}
+              "getcomments":operation=="video" and settings["max_comments"]!=0,"extract_flat":operation=="search",
+              "lazy_playlist":True,"sleep_interval_requests":max(1,settings.get("request_delay",2))}
         if settings["cert_store"]=="system":opts["compat_opts"]={"no-certifi"}
         limits=[settings["max_comments"],settings["max_comments"],settings["max_replies"],settings["max_replies_per_thread"],None if settings["max_comments"] is None else 2]
         opts["extractor_args"]={"youtube":{"comment_sort":[settings["sort"]],"max_comments":[str(x) if x is not None else "" for x in limits]}}
-        with yt_dlp.YoutubeDL(opts) as ydl:
+        with downloader(opts) as ydl:
+            ydl.add_info_extractor(extractor())
             if operation=="search":
                 info=ydl.extract_info(f"ytsearch{settings['search_results']}:{target}",download=False)
+                ydl.check_barrier()
                 if not info:raise RuntimeError("No search result object")
                 found=0
-                for n,entry in enumerate(info.get("entries") or []):
-                    if n>=settings["search_results"]:break
+                for entry in islice(info.get("entries") or [],settings["search_results"]):
+                    ydl.check_barrier()
                     if entry and isinstance(entry.get("id"),str) and VIDEO_ID.fullmatch(entry["id"]):
                         found+=1
                         pipe.send(("candidate",{"url":f"https://www.youtube.com/watch?v={entry['id']}",
                             "discovered_from":"https://www.youtube.com/results?"+urlencode({"search_query":target})}))
+                        ydl.progress()
+                ydl.check_barrier()
                 pipe.send(("done",{"status":"FINISHED_BEST_EFFORT" if found else "NO_RESULT_UNKNOWN","reason":"bounded_search_results_not_exhaustive" if found else "no_video_candidates_returned",
                     "warnings":sorted(logger.codes),"source_version":__version__}))
             else:
                 # Metadata is emitted before comment extraction; it survives comment timeout.
                 raw=ydl.extract_info(target,download=False,process=False)
+                ydl.check_barrier()
                 if not raw or not isinstance(raw.get("id"),str) or not VIDEO_ID.fullmatch(raw["id"]):raise RuntimeError("No video ID")
                 if raw.get("availability") in {"private","premium_only","subscriber_only","needs_auth"}:
                     pipe.send(("done",{"status":"PRIVATE_TARGET","reason":"public_video_required","warnings":[],"source_version":__version__}));return
                 selected={k:raw.get(k) for k in ("id","title","description","timestamp","upload_date","channel_id","channel_url","comment_count","view_count","like_count","availability")}
                 pipe.send(("video",selected))
-                result=ydl.process_ie_result(raw,download=False)
-                comments=result.get("comments")
-                if not isinstance(comments,list):
+                ydl.progress()
+                reason=root_filter(selected,settings.get("selection"))
+                if reason or settings["max_comments"]==0:
+                    pipe.send(("done",{"status":"FINISHED_BEST_EFFORT","reason":reason or "metadata_only_requested",
+                        "warnings":["root_filtered_before_comments"] if reason else [],"source_version":__version__}));return
+                extract=raw.get("__post_extractor")
+                if not callable(extract):
                     pipe.send(("done",{"status":"NO_RESULT_UNKNOWN","reason":"comments_field_missing_not_zero_comments",
                         "warnings":sorted(logger.codes),"source_version":__version__}));return
-                for c in comments[:settings["max_comments"]]:
-                    if not isinstance(c,dict):continue
-                    pipe.send(("comment",{k:c.get(k) for k in ("id","text","parent","timestamp","_time_text","like_count","author_id")}))
+                extract()
+                ydl.check_barrier()
+                count=ydl.streamed_comments
                 status=("COMMENTS_DISABLED" if "COMMENTS_DISABLED" in logger.codes else
-                        "LIMIT_REACHED" if settings["max_comments"] is not None and len(comments)>=settings["max_comments"] else
-                        "FINISHED_BEST_EFFORT" if comments else "NO_RESULT_UNKNOWN")
-                pipe.send(("done",{"status":status,"reason":"bounded_web_comments_not_complete" if comments else "no_comments_returned_not_proof_of_absence",
+                        "LIMIT_REACHED" if settings["max_comments"] is not None and count>=settings["max_comments"] else
+                        "FINISHED_BEST_EFFORT" if count else "NO_RESULT_UNKNOWN")
+                pipe.send(("done",{"status":status,"reason":"bounded_web_comments_not_complete" if count else "no_comments_returned_not_proof_of_absence",
                     "warnings":sorted(logger.codes),"source_version":__version__}))
     except ImportError:
         pipe.send(("done",{"status":"DEPENDENCY_MISSING","reason":"install_requirements","warnings":[],"source_version":None}))
     except Exception as exc:
-        pipe.send(("done",{"status":error_code(exc),"reason":"source_failed_no_raw_error_or_credentials_exported",
-            "warnings":[],"source_version":None}))
+        barrier=exc if isinstance(exc,SourceBarrier) else getattr(locals().get("ydl"),"barrier",None)
+        pipe.send(("done",{"status":barrier.status if barrier else error_code(exc),"reason":barrier.reason if barrier else "source_failed_no_raw_error_or_credentials_exported",
+            "retry_after_seconds":barrier.retry_after_seconds if barrier else None,"warnings":[],"source_version":locals().get("__version__")}))
     finally:pipe.close()
 
 def run_worker(operation,target,settings,seconds,on_event,*,worker_entry=worker):

@@ -1,20 +1,18 @@
 ---
-source_file: "Crawler/Backend/instagram_crawler.py"
+source_file: "Crawler/Backend/instaloader_crawler.py"
 type: "code"
-community: "Batas Crawler Opsional"
-location: "L207"
+community: "Worker Instaloader"
+location: "L176"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Worker_Instaloader
 ---
 
 # save_session()
 
 ## Connections
-- [[Atomic owner-only settings; passwords are never part of this file.]] - `rationale_for` [EXTRACTED]
-- [[instagram_crawler.py]] - `contains` [EXTRACTED]
-- [[login_from_file()]] - `calls` [EXTRACTED]
-- [[login_local()]] - `calls` [EXTRACTED]
+- [[.collect()]] - `calls` [EXTRACTED]
+- [[instaloader_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

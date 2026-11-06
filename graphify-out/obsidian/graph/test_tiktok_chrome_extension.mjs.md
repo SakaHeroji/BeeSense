@@ -12,6 +12,7 @@ tags:
 # test_tiktok_chrome_extension.mjs
 
 ## Connections
+- [[NetworkPacing]] - `imports` [EXTRACTED]
 - [[commentPaginationExhausted()]] - `imports` [EXTRACTED]
 - [[core.mjs]] - `imports_from` [EXTRACTED]
 - [[oid]] - `contains` [EXTRACTED]

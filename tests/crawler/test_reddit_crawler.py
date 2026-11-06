@@ -336,9 +336,15 @@ class RedditCrawlerTests(unittest.TestCase):
                 "Crawler.Backend.social_crawler.resolve_reddrix_display",
                 return_value={"headless": True},
             ),
+            patch(
+                "Crawler.Backend.crawler_network.controlled_reddrix",
+                side_effect=lambda cls: cls,
+            ) as controls,
             patch("importlib.import_module", side_effect=lambda name: modules[name]),
         ):
             self.assertIs(load_reddrix("auto"), FakeReddrix)
+        controls.assert_called_once_with(FakeReddrix)
+        self.assertEqual(module.MAX_COOKIE_RETRIES, 1)
         module.AsyncCamoufox(headless="virtual", humanize=True)
         module.AsyncCamoufox(headless=False)
         self.assertEqual(

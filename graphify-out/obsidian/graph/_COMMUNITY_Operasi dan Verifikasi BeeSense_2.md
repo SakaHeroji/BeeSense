@@ -1,14 +1,17 @@
 ---
 type: community
-members: 1
+cohesion: 1.00
+members: 2
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Members:** 1 nodes
+**Cohesion:** 1.00 - tightly connected
+**Members:** 2 nodes
 
 ## Members
-- [[Narrative request receipt cache]] - rationale - graphify-out/obsidian/Topik Gemini.md
+- [[Historical Gemini publication 30 October 2026]] - concept - graphify-out/obsidian/Topik Gemini.md
+- [[Topik Gemini note]] - document - graphify-out/obsidian/Topik Gemini.md
 
 ## Live Query (requires Dataview plugin)
 

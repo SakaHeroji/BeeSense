@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Kuota Harian Scweet"
-location: "L387"
+location: "L462"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,7 @@ tags:
 # reddrix_worker()
 
 ## Connections
+- [[.error()]] - `indirect_call` [INFERRED]
 - [[.run()_4]] - `calls` [EXTRACTED]
 - [[.runner()]] - `indirect_call` [INFERRED]
 - [[Spawn boundary retains streamed records when the hard deadline expires.]] - `rationale_for` [EXTRACTED]

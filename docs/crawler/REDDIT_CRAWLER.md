@@ -1,8 +1,12 @@
 # RedditCrawler dengan Reddrix
 
+Pembaruan 6 November 2026: request SDK berurutan, filter root sebelum komentar,
+penutupan iterator saat cap, serta penghentian pada barrier/stagnasi. Lihat
+[analisis dan bukti offline](PERFORMANCE_YOUTUBE_REDDIT_20261106.md).
+
 > Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
 
-Class `RedditCrawler` berada di [reddit_crawler.py](../../Crawler/Backend/reddit_crawler.py) sebagai pembungkus Reddit-only untuk backend Reddrix yang sekarang terintegrasi dalam [SocialCrawler](../../Crawler/Backend/social_crawler.py) **1.4.0**. Normalisasi, display adaptif, iterator dan worker subprocess hanya diimplementasikan sekali di `Crawler/Backend/social_crawler.py`. Library sumber: [Reddrix](https://github.com/Coding-Doctor-Omar/reddrix) / [PyPI](https://pypi.org/project/reddrix/), versi 1.2.14. Tidak menggunakan Reddit Data API/OAuth atau layanan berbayar.
+Class `RedditCrawler` berada di [reddit_crawler.py](../../Crawler/Backend/reddit_crawler.py) sebagai pembungkus Reddit-only untuk backend Reddrix yang sekarang terintegrasi dalam [SocialCrawler](../../Crawler/Backend/social_crawler.py) **1.11.0**. Normalisasi, display adaptif, iterator dan worker subprocess hanya diimplementasikan sekali di `Crawler/Backend/social_crawler.py`. Library sumber: [Reddrix](https://github.com/Coding-Doctor-Omar/reddrix) / [PyPI](https://pypi.org/project/reddrix/), versi 1.2.14. Tidak menggunakan Reddit Data API/OAuth atau layanan berbayar.
 
 ## Konfigurasi aktif
 
@@ -75,9 +79,9 @@ Normalisasi memakai native ID `t3_`/`t1_`, parent/root terverifikasi, timestamp 
 
 ## Batas adapter
 
-Reddrix keyword search memaksa relevance; konfigurasi search_sort/new tidak dapat dijanjikan. Library tidak menyediakan pengaturan sort komentar. Query diberi `subreddit:` dan hasil dibatasi kembali secara lokal. Request internal Reddrix mempunyai jitter/retry sendiri; `delay` BeeSense berlaku antaroperasi, bukan setiap request HTTP di dalam library.
+Reddrix keyword search memaksa relevance; konfigurasi search_sort/new tidak dapat dijanjikan. Query diberi `subreddit:` dan hasil dibatasi kembali secara lokal. Mulai SocialCrawler 1.11.0, GET/POST internal diserialisasi dan memakai jeda minimum 1 detik setelah respons; nilai delay mengikuti konfigurasi. Retry/refresh tersembunyi transport SDK dilewati, dan inisialisasi dibatasi satu percobaan. Sort thread diteruskan ke SDK; pencarian tetap mengikuti relevance upstream.
 
-Upstream anti-bot exception tidak memberikan HTTP status atau Retry-After yang dapat dipercaya. Karena itu blocker tersebut dicatat `ACCESS_BLOCKED`, bukan ditebak sebagai HTTP429. Jika exception menyediakan 429 yang terverifikasi, cooldown coordinator memakai maksimum konfigurasi dan Retry-After, dengan maksimal 3 retry dan deadline yang sama. Browser/headless tidak menjamin bebas CAPTCHA atau rate limit. Tidak ada solver CAPTCHA; opsi stealth eksplisit false.
+Guard HTTP mempertahankan status dan Retry-After sebelum SDK mengubahnya menjadi exception generik. Anti-bot exception yang tidak mempunyai status tetap dicatat `ACCESS_BLOCKED`, bukan ditebak sebagai HTTP429. Pada 429 terverifikasi, cooldown coordinator memakai maksimum konfigurasi dan Retry-After, dengan batas retry konfigurasi dan deadline yang sama. HTTP 5xx menghentikan platform dengan `SERVER_UNAVAILABLE`. Browser/headless tidak menjamin bebas CAPTCHA atau rate limit. Tidak ada solver CAPTCHA; opsi stealth eksplisit false.
 
 Setiap operasi berada dalam subprocess dengan hard deadline; record yang telah diterima dipertahankan ketika timeout. Tidak ada fallback ke crawler/API lain. Dataset kosong/parsial saat akses gagal tetap dilaporkan sebagai parsial, bukan keberhasilan crawling.
 

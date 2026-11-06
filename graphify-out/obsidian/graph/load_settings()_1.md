@@ -1,22 +1,21 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L952"
+community: "Kontrak Record Reddit"
+location: "L243"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Kontrak_Record_Reddit
 ---
 
 # load_settings()
 
 ## Connections
-- [[.validate()_1]] - `calls` [EXTRACTED]
+- [[.validate()_2]] - `calls` [EXTRACTED]
 - [[Settings_1]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[run()_2]] - `calls` [EXTRACTED]
-- [[thread_url()]] - `calls` [EXTRACTED]
+- [[video_url()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

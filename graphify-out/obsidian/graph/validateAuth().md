@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/shared/auth.ts"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L4"
+location: "L8"
 tags:
   - graphify/code
   - graphify/EXTRACTED

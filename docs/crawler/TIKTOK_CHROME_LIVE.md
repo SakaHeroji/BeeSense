@@ -1,5 +1,48 @@
 # TikTok: Chrome pengguna dan konektor lokal
 
+UI aktif versi 1.4.0 memakai sidebar Chrome, build `20261106-sidebar-v7`.
+Baca [panduan sidebar dan verifikasi UI](TIKTOK_SIDEBAR_20261106.md).
+
+## Peningkatan throughput — Connector 1.3.0, 6 November 2026
+
+Build `20261106-throughput-v6` menggunakan dua fase per post: kumpulkan komentar
+utama sampai akhir pagination sumber (atau cap yang dikonfigurasi), kemudian
+rewind panel dan telusuri balasan. Balasan bawaan dalam respons komentar tetap
+disimpan; klik balasan ditunda sampai fase kedua.
+
+`platforms.tiktok.comment_stagnation_seconds` default 75 (rentang 60–90).
+Hanya ID komentar/balasan baru yang mereset timer; respons berulang atau metadata
+post tidak meresetnya. Post yang stagnan mengirim status `PARTIAL` dan warning
+`comment_stagnation_timeout`. Koordinator mengekspor progres, melanjutkan kandidat
+baru dan pencarian, lalu mencoba ulang post parsial. `partial_retry_limit`
+default 1 (rentang 0–3). Retry tetap tunduk target, deadline global dan cap post;
+retry tidak menambah hitungan post yang dicoba atau menggandakan native ID.
+Antrean belum selesai tersimpan dalam `tiktok_retry_queue.json` di bundle beserta
+checksum manifest; tidak otomatis diimpor oleh run baru. `comments_complete`
+tetap false. PARTIAL tidak lagi menghentikan seluruh kampanye.
+
+Jeda minimum tetap mengikuti `request_interval_seconds` / `scroll_pause_seconds`.
+Penalti idle tambahan dihapus. Setelah aksi, controller menunggu request relevan
+beserta body respons, maksimal 10 detik; `Network.loadingFailed` melepaskan request.
+Respons post lain tidak memengaruhi barrier, pacing atau data post aktif.
+Backoff HTTP 5xx adalah 5/10/15 detik (maksimum 15), reset setelah HTTP 2xx.
+Tiga 5xx beruntun memicu pause minimal 30 detik dan menghormati Retry-After yang
+lebih panjang. Status pause dibagikan antar tugas agar perpindahan post tidak
+melewati cooldown. 401/403/429 dan CAPTCHA tetap memakai penanganan sebelumnya.
+
+Bridge mensyaratkan Connector >=1.3.0 agar timer run tidak dimulai dengan kode
+lama. Reload ekstensi dari `Crawler/Backend/Tiktok/chrome_extension` dan pairing
+ulang sebelum uji live. Izin dan ID ekstensi tidak berubah. Tidak ada migrasi DB.
+Dockerfile native tetap menyalin package lengkap; Docker daemon lokal tidak aktif,
+sehingga rebuild belum diverifikasi. Jalankan ketika Docker tersedia:
+`docker build -f deployment/docker/Dockerfile.tiktok -t beesense-tiktok:local .`
+lalu `docker run --rm beesense-tiktok:local --dry-run`.
+
+Pengujian menggunakan fixture offline, termasuk 1.200 komentar +100 balasan
+sintetis, bukan bukti kecepatan TikTok live. Uji yang diminta berikutnya: target
+50 post, maksimal 3.600 detik, timer dimulai setelah pairing versi/build terverifikasi.
+
+
 ## Run awal selesai dan restart — 5 November 2026
 
 Run 6cd0ad73 berakhir parsial sekitar 14.26 WIB: 5 post, 458 komentar dan 479

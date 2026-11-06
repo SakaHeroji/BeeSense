@@ -22,6 +22,7 @@ import tempfile
 import time
 import uuid
 from collections import Counter, deque
+from contextlib import aclosing
 from copy import deepcopy
 from dataclasses import replace
 from datetime import datetime, timedelta, timezone
@@ -39,6 +40,7 @@ from Crawler.Backend.social_export import (
     COMPACT_FILE,
     COMPACT_TIMEZONE,
     SocialExportMixin,
+    root_rejection,
 )
 from Crawler.Backend.storage_config import (
     DEFAULT_STORAGE,
@@ -47,7 +49,7 @@ from Crawler.Backend.storage_config import (
 )
 from Crawler.Backend.Youtube import crawl_youtube as youtube
 
-VERSION = "1.10.0"
+VERSION = "1.11.0"
 INSTAGRAM_RATE_LIMIT_DEFAULTS = {
     "rate_limit_cooldown_seconds": 360,
     "rate_limit_max_retries": 3,
@@ -74,6 +76,7 @@ BARRIERS = {
     "TLS_ERROR",
 }
 STOP_STATUSES = BARRIERS | {
+    "SERVER_UNAVAILABLE",
     "DEPENDENCY_MISSING",
     "INTERRUPTED",
     "SESSION_INVALID",
@@ -220,7 +223,20 @@ def reddrix_receipt(status, reason, **extra):
 
 def reddrix_error_receipt(error):
     """Reddrix anti-bot exceptions do not expose an authoritative HTTP status."""
+    from Crawler.Backend.crawler_network import SourceBarrier, http_barrier
+
+    if isinstance(error, SourceBarrier):
+        return reddrix_receipt(
+            error.status, error.reason, retry_after_seconds=error.retry_after_seconds
+        )
     code = getattr(error, "status_code", None)
+    barrier = http_barrier(code, getattr(error, "headers", None))
+    if barrier and code != 429:
+        return reddrix_receipt(
+            barrier.status,
+            barrier.reason,
+            retry_after_seconds=barrier.retry_after_seconds,
+        )
     if code == 429:
         from Crawler.Backend.Reddit.crawl_reddit_playwright import rate_limit_seconds
 
@@ -279,7 +295,12 @@ def load_reddrix(display_mode="auto"):
 
     # Neither stdlib shutil nor the global Camoufox module is patched.
     module.AsyncCamoufox = browser_factory
-    return module.Reddrix
+    # Initialization must not refresh/retry a challenged session behind the
+    # coordinator's back. This module lives only in the isolated source worker.
+    module.MAX_COOKIE_RETRIES = 1
+    from Crawler.Backend.crawler_network import controlled_reddrix
+
+    return controlled_reddrix(module.Reddrix)
 
 
 async def collect_reddrix(
@@ -293,7 +314,8 @@ async def collect_reddrix(
     options = dict(
         stealth=False,
         verbose=False,
-        include_comments=not search,
+        include_comments=not search and settings["max_comments"] != 0,
+        sort=settings.get("sort", "new"),
         max_results=settings["search_results"]
         if search
         else float("inf")
@@ -318,68 +340,121 @@ async def collect_reddrix(
         options.update(mode="standard", post_urls=[reddit.thread_url(target)])
     found, invalid, comments, replies = 0, 0, 0, 0
     seen, parents, branches = set(), {}, {}
-    async with factory(**options) as source:
-        async for item in source.get_items():
-            if not isinstance(item, dict):
-                invalid += 1
-                continue
-            if search:
-                try:
-                    url = reddit.thread_url(item["submissionUrl"])
-                    if item.get("submissionType") != "post" or url in seen:
-                        continue
-                    # The query is upstream best effort; enforce subreddit locally too.
-                    sub = str(item.get("subreddit") or "").removeprefix("r/")
-                    if sub.lower() != match[1].lower():
-                        continue
-                except (KeyError, ValueError, TypeError):
+    subreddits = {s.lower() for s in settings["subreddits"]}
+    selection = settings.get("selection")
+    include = (
+        reddit.KeywordMatcher(selection["include_keywords"]) if selection else None
+    )
+    exclude = (
+        reddit.KeywordMatcher(selection["exclude_keywords"]) if selection else None
+    )
+    reason = None
+    source = factory(**options)
+    source.request_delay = settings.get("request_delay", 2)
+    async with source:
+        async with aclosing(source.get_items()) as items:
+            async for item in items:
+                if not isinstance(item, dict):
                     invalid += 1
                     continue
-                seen.add(url)
-                emit("candidate", {"url": url, "discovered_from": target})
-                found += 1
-                if found >= settings["search_results"]:
-                    break
-            else:
-                try:
-                    row = normalize_reddrix_item(item, target, reddit.now_iso())
-                    if row["fullname"] in seen:
-                        continue
-                    if row["subreddit"].lower() not in [
-                        s.lower() for s in settings["subreddits"]
-                    ]:
-                        raise ValueError("Subreddit outside configuration")
-                except (ValueError, TypeError, KeyError):
-                    invalid += 1
-                    continue
-                seen.add(row["fullname"])
-                parents[row["fullname"]] = row["parent"]
-                if row["kind"] != "post":
-                    if reached(comments + replies, settings["max_comments"]):
-                        continue
-                    if row["kind"] == "reply":
-                        parent, visited = row["parent"], set()
-                        while (
-                            parent in parents
-                            and parent not in visited
-                            and parents[parent]
-                            and parents[parent].startswith("t1_")
-                        ):
-                            visited.add(parent)
-                            parent = parents[parent]
-                        if reached(replies, settings["max_replies"]) or reached(
-                            branches.get(parent, 0), settings["max_replies_per_thread"]
-                        ):
+                if search:
+                    try:
+                        url = reddit.thread_url(item["submissionUrl"])
+                        if item.get("submissionType") != "post" or url in seen:
                             continue
-                        replies += 1
-                        branches[parent] = branches.get(parent, 0) + 1
-                    else:
-                        comments += 1
-                emit("record", row)
-                found += 1
+                        # The query is upstream best effort; enforce subreddit locally too.
+                        sub = str(item.get("subreddit") or "").removeprefix("r/")
+                        if sub.lower() != match[1].lower():
+                            continue
+                    except (KeyError, ValueError, TypeError):
+                        invalid += 1
+                        continue
+                    if selection:
+                        try:
+                            root = normalize_reddrix_item(item, url, reddit.now_iso())
+                            rejected = root_rejection(
+                                dict(root, text_source=root["text"]),
+                                selection,
+                                include,
+                                exclude,
+                            )
+                        except (ValueError, TypeError, KeyError):
+                            invalid += 1
+                            continue
+                        if rejected:
+                            continue
+                    seen.add(url)
+                    if hasattr(source, "request_gate"):
+                        source.request_gate.progress()
+                    emit("candidate", {"url": url, "discovered_from": target})
+                    found += 1
+                    if found >= settings["search_results"]:
+                        break
+                else:
+                    try:
+                        row = normalize_reddrix_item(item, target, reddit.now_iso())
+                        if row["fullname"] in seen:
+                            continue
+                        if row["subreddit"].lower() not in subreddits:
+                            raise ValueError("Subreddit outside configuration")
+                    except (ValueError, TypeError, KeyError):
+                        invalid += 1
+                        continue
+                    seen.add(row["fullname"])
+                    if hasattr(source, "request_gate"):
+                        source.request_gate.progress()
+                    parents[row["fullname"]] = row["parent"]
+                    if row["kind"] != "post":
+                        if reached(comments + replies, settings["max_comments"]):
+                            reason = "configured_comment_limit_reached"
+                            break
+                        if row["kind"] == "reply":
+                            parent, visited = row["parent"], set()
+                            while (
+                                parent in parents
+                                and parent not in visited
+                                and parents[parent]
+                                and parents[parent].startswith("t1_")
+                            ):
+                                visited.add(parent)
+                                parent = parents[parent]
+                            if reached(replies, settings["max_replies"]) or reached(
+                                branches.get(parent, 0),
+                                settings["max_replies_per_thread"],
+                            ):
+                                continue
+                            replies += 1
+                            branches[parent] = branches.get(parent, 0) + 1
+                        else:
+                            comments += 1
+                    emit("record", row)
+                    found += 1
+                    if row["kind"] == "post" and selection:
+                        reason = root_rejection(
+                            dict(row, text_source=row["text"]),
+                            selection,
+                            include,
+                            exclude,
+                        )
+                        if reason:
+                            break
+                    if (
+                        row["kind"] == "post" and settings["max_comments"] == 0
+                    ) or reached(comments + replies, settings["max_comments"]):
+                        reason = (
+                            "metadata_only_requested"
+                            if settings["max_comments"] == 0
+                            else "configured_comment_limit_reached"
+                        )
+                        break
+            source.is_running = False
     return reddrix_receipt(
-        "FINISHED_BEST_EFFORT" if found else "NO_RESULT_UNKNOWN",
-        "bounded_reddrix_search" if search else "bounded_reddrix_thread",
+        "LIMIT_REACHED"
+        if reason == "configured_comment_limit_reached"
+        else "FINISHED_BEST_EFFORT"
+        if found
+        else "NO_RESULT_UNKNOWN",
+        reason or ("bounded_reddrix_search" if search else "bounded_reddrix_thread"),
         invalid=invalid,
     )
 
@@ -1231,6 +1306,17 @@ class SocialCrawler(SocialExportMixin):
                 return InstaloaderSettings(
                     **self.config["instaloader"],
                     timeout_seconds=self.config["timeout_seconds"],
+                    rate_limit_cooldown_seconds=p["rate_limit_cooldown_seconds"],
+                    selection={
+                        k: deepcopy(self.config[k])
+                        for k in (
+                            "since",
+                            "until",
+                            "include_keywords",
+                            "exclude_keywords",
+                            "include_mode",
+                        )
+                    },
                     **{
                         key: p[key]
                         for key in (
@@ -1269,6 +1355,16 @@ class SocialCrawler(SocialExportMixin):
             else p["search_results"],
             request_delay=2,
             sort=p["sort"],
+            selection={
+                k: deepcopy(self.config[k])
+                for k in (
+                    "since",
+                    "until",
+                    "include_keywords",
+                    "exclude_keywords",
+                    "include_mode",
+                )
+            },
         )
         if name == "youtube":
             settings = youtube.Settings(
@@ -1289,7 +1385,17 @@ class SocialCrawler(SocialExportMixin):
         if name == "youtube":
             # This coordinator owns and validates the larger discovery budget;
             # the original CLI retains its existing 10-result search bound.
-            settings = replace(settings, search_results=p["search_results"])
+            delay = self.config["delay"]
+            settings = replace(
+                settings,
+                search_results=p["search_results"],
+                request_delay=max(
+                    1,
+                    delay["seconds"]
+                    if delay["mode"] == "fixed"
+                    else delay["max_seconds"],
+                ),
+            )
         elif p["backend"] == "reddrix":
             delay = self.config["delay"]
             settings = replace(
@@ -1552,6 +1658,30 @@ class SocialCrawler(SocialExportMixin):
         )
 
     def _execute(self, name, operation, target, settings, p, deadline, cached=None):
+        if name == "twitter" and cached is not None and operation != "search":
+            from Crawler.Backend.twitter_crawler import normalize_item, upstream_version
+
+            try:
+                raw = normalize_item(cached)
+                reason = root_rejection(
+                    dict(
+                        published_at=raw.published_at,
+                        title=raw.title,
+                        text_source=raw.text_source,
+                    ),
+                    self.config,
+                    self.include,
+                    self.exclude,
+                )
+            except (ValueError, TypeError, KeyError, AttributeError):
+                reason = None  # The normal adapter still validates malformed metadata.
+            if reason:
+                return [("record", cached)], dict(
+                    status="FINISHED_BEST_EFFORT",
+                    reason=reason,
+                    warnings=["root_filtered_before_replies"],
+                    source_version=upstream_version(),
+                )
         if cached is not None and name not in {"twitter", "tiktok"}:
             try:
                 return self._dom_events(cached, target, p), dict(
@@ -1863,12 +1993,29 @@ class SocialCrawler(SocialExportMixin):
                     summary.update(operations_completed=0, batch_pauses=0)
                 settings = self._legacy_settings(name, p)
                 queue = deque()
+                deferred = deque()
+                partial_posts = {}
+                partial_attempts = Counter()
+                root_comment_counts = Counter()
+                qualified_roots = set()
                 pending_operation = None
                 known = set()
                 filtered = Counter()
                 excluded_seen = set()
                 summary["existing_posts_skipped"] = 0
                 summary["duplicate_posts_skipped"] = 0
+
+                def save_partial_queue():
+                    summary["partial_posts_pending"] = len(partial_posts)
+                    path = sink.stage / "tiktok_retry_queue.json"
+                    temporary = path.with_suffix(".tmp")
+                    temporary.write_text(
+                        json.dumps(
+                            list(partial_posts.values()), ensure_ascii=False, indent=2
+                        ),
+                        encoding="utf-8",
+                    )
+                    temporary.replace(path)
 
                 def enqueue(url, origin=None, cached=None):
                     try:
@@ -1941,14 +2088,15 @@ class SocialCrawler(SocialExportMixin):
                 summary["stop_reason"] = "CANDIDATES_EXHAUSTED"
                 source_errors = 0
                 versions = set()
-                while summary["qualified_posts"] < p["min_posts"]:
+                while summary["qualified_posts"] < p["min_posts"] or deferred:
                     if interrupted:
                         summary["stop_reason"] = "INTERRUPTED"
                         break
                     if self.clock() >= deadline:
                         summary["stop_reason"] = "TIME_BUDGET_EXHAUSTED"
                         break
-                    if reached(summary["posts_attempted"], p["max_posts"]):
+                    at_post_cap = reached(summary["posts_attempted"], p["max_posts"])
+                    if at_post_cap and not deferred:
                         summary["stop_reason"] = "MAX_POSTS_REACHED"
                         break
                     if row_count >= 500000 and p["max_comments"] is not None:
@@ -1965,6 +2113,19 @@ class SocialCrawler(SocialExportMixin):
                             "rate_limit_retry", platform=name, operation=operation
                         )
                         search = operation == "search"
+                    elif deferred and (
+                        summary["qualified_posts"] >= p["min_posts"]
+                        or at_post_cap
+                        or not queue
+                        and (not searches or reached(len(known), p["max_candidates"]))
+                    ):
+                        target, origin, cached = deferred.popleft()
+                        operation, search, retrying = "thread", False, True
+                        partial_attempts[target] += 1
+                        summary["partial_post_retries"] = (
+                            summary.get("partial_post_retries", 0) + 1
+                        )
+                        self._event("partial_post_retry", platform=name, target=target)
                     elif not queue:
                         search = True
                         if (
@@ -2078,7 +2239,9 @@ class SocialCrawler(SocialExportMixin):
                                 summary["existing_posts_skipped"] = len(excluded_seen)
                                 selected = []
                                 reason = "root_seen_in_existing_dataset"
-                            elif root_url in exported_roots[name] and name != "twitter":
+                            elif root_url in exported_roots[name] and not (
+                                name == "twitter" or name == "tiktok" and retrying
+                            ):
                                 summary["duplicate_posts_skipped"] += 1
                                 selected = []
                                 reason = "duplicate_root_in_run"
@@ -2098,8 +2261,20 @@ class SocialCrawler(SocialExportMixin):
                             new_root = root_url not in exported_roots[name]
                             exported_roots[name].add(root_url)
                             count = len(selected) - 1
+                            if name == "tiktok":
+                                root_comment_counts[root_url] += count
+                                count = root_comment_counts[root_url]
                             qualified = count >= p["min_comments_per_post"]
-                            summary["qualified_posts"] += int(qualified and new_root)
+                            newly_qualified = qualified and (
+                                root_url not in qualified_roots
+                                if name == "tiktok"
+                                else new_root
+                            )
+                            summary["qualified_posts"] += int(newly_qualified)
+                            if newly_qualified:
+                                qualified_roots.add(root_url)
+                                if not new_root and name == "tiktok":
+                                    summary["insufficient_comment_posts"] -= 1
                             summary["insufficient_comment_posts"] += int(
                                 not qualified and new_root
                             )
@@ -2141,6 +2316,43 @@ class SocialCrawler(SocialExportMixin):
                             "retry_after_seconds:" + str(result["retry_after_seconds"])
                         )
                     finished = reddit.now_iso()
+                    if name == "tiktok" and not search:
+                        if result["status"] == "PARTIAL":
+                            # Persist unresolved work alongside streamed partial rows.
+                            # New candidates/searches always precede these retries.
+                            root = next(
+                                (
+                                    payload
+                                    for kind, payload in events
+                                    if kind == "record"
+                                    and payload.get("kind", "post") == "post"
+                                ),
+                                cached,
+                            )
+                            partial_posts[target] = dict(
+                                url=target,
+                                cached_root=root,
+                                discovered_from=origin,
+                                status="PARTIAL",
+                                attempts=partial_attempts[target] + 1,
+                                reason=result.get("reason"),
+                            )
+                            if partial_attempts[target] < p.get(
+                                "partial_retry_limit", 1
+                            ):
+                                deferred.append((target, origin, root))
+                            for stream in sink.files.values():
+                                stream.flush()
+                            save_partial_queue()
+                            self._event(
+                                "partial_post_deferred", platform=name, target=target
+                            )
+                        elif (
+                            target in partial_posts
+                            and result["status"] == "FINISHED_BEST_EFFORT"
+                        ):
+                            partial_posts.pop(target)
+                            save_partial_queue()
                     if name in {"twitter", "tiktok"} and result.get("network"):
                         summary["network"] = result["network"]
                     sink.write(

@@ -1,17 +1,17 @@
 ---
-source_file: "Crawler/Backend/Tiktok/chrome_extension/manifest.json"
+source_file: "docs/architecture/floorplan/architecture.json"
 type: "code"
-community: "Frontend TikTok dan Koneksi Chrome"
-location: "L3"
+community: "Metadata Peta Arsitektur"
+location: "L4"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Frontend_TikTok_dan_Koneksi_Chrome
+  - community/Metadata_Peta_Arsitektur
 ---
 
 # name
 
 ## Connections
-- [[manifest.json]] - `contains` [EXTRACTED]
+- [[project]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Frontend_TikTok_dan_Koneksi_Chrome
+#graphify/code #graphify/EXTRACTED #community/Metadata_Peta_Arsitektur

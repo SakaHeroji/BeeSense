@@ -14,6 +14,5 @@ tags:
 ## Connections
 - [[Riwayat X 333 post dari lima batch]] - `references` [EXTRACTED]
 - [[Single social_crawler.json business configuration across all runners and Chrome transports]] - `references` [EXTRACTED]
-- [[TwitterCrawler Scweet]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Konfigurasi_Crawler_Bersama

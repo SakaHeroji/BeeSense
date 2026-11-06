@@ -12,8 +12,6 @@ tags:
 # useApp()
 
 ## Connections
-- [[AuthSettings()]] - `calls` [EXTRACTED]
-- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[DatasetView()]] - `calls` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
 - [[TransactionMigration()]] - `calls` [EXTRACTED]

@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawler Selenium.md"
 type: "rationale"
-community: "Panduan Pipeline BeeSense"
+community: "Integrasi Default Instaloader"
 location: "Supervisor paragraph"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Bounded native-ID evidence and explicit uncertainty
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[Obsidian Crawler Selenium architecture]] - `references` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/rationale #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

@@ -66,6 +66,12 @@ def hanging_fixture(settings, pipe):
     time.sleep(20)
 
 
+def server_fault_fixture(settings, pipe):
+    pipe.recv()
+    pipe.send(("done", dict(status="SERVER_UNAVAILABLE", retry_after_seconds=120)))
+    pipe.close()
+
+
 class InstaloaderCrawlerTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -102,6 +108,253 @@ class InstaloaderCrawlerTests(unittest.TestCase):
             module=module,
             comments=lambda post: post.get_comments(),
         )
+
+    def test_zero_comment_cap_does_not_open_comment_iterator(self):
+        adapter = self.adapter(replace(self.settings(), max_comments=0))
+        adapter.comments = Mock(
+            side_effect=AssertionError("unnecessary comment request")
+        )
+        rows = []
+        adapter.collect("media", URL, lambda kind, row: rows.append(row))
+        self.assertEqual([row["native_id"] for row in rows], ["1"])
+        adapter.comments.assert_not_called()
+
+    def test_filtered_roots_do_not_open_comments(self):
+        policy = dict(
+            since=None,
+            until=None,
+            include_keywords=["kuliah"],
+            exclude_keywords=[],
+            include_mode="any",
+        )
+        for changes, expected in (
+            ({"until": "2026-09-01T00:00:00Z"}, "root_outside_date_window"),
+            ({"include_keywords": ["universitas"]}, "root_missing_include_keyword"),
+            ({"exclude_keywords": ["kampus"]}, "root_excluded_keyword"),
+            (
+                {"include_keywords": ["kuliah", "universitas"], "include_mode": "all"},
+                "root_missing_include_keyword",
+            ),
+        ):
+            with self.subTest(reason=expected):
+                adapter = self.adapter(
+                    replace(self.settings(), selection={**policy, **changes})
+                )
+                adapter.comments = Mock(
+                    side_effect=AssertionError("filtered post fetched comments")
+                )
+                rows = []
+                result = adapter.collect(
+                    "media", URL, lambda kind, row: rows.append(row)
+                )
+                self.assertEqual(result["reason"], expected)
+                self.assertEqual([row["native_id"] for row in rows], ["1"])
+                adapter.comments.assert_not_called()
+
+    def test_all_main_comments_precede_reply_requests_and_global_cap(self):
+        adapter = self.adapter(
+            replace(self.settings(), max_comments=None, max_replies=1)
+        )
+        actions = []
+
+        def answers(parent):
+            actions.append("request-replies-" + parent)
+            yield Obj(
+                id=int(parent) + 1,
+                text="Balasan",
+                created_at_utc=STAMP,
+                owner=Obj(userid=9),
+                likes_count=0,
+            )
+
+        adapter.comments = lambda post: iter(
+            [
+                Obj(
+                    id=parent,
+                    text="Komentar",
+                    created_at_utc=STAMP,
+                    owner=Obj(userid=9),
+                    likes_count=0,
+                    answers=answers(str(parent)),
+                )
+                for parent in (21, 31)
+            ]
+        )
+        with patch.object(il, "save_session"):
+            adapter.collect(
+                "media", URL, lambda kind, row: actions.append(row["native_id"])
+            )
+        self.assertEqual(actions, ["1", "21", "31", "request-replies-21", "22"])
+
+    def test_lazy_answers_reuse_embedded_page_without_extra_request(self):
+        from instaloader import NodeIterator
+
+        adapter = self.adapter()
+        adapter.module.NodeIterator = NodeIterator
+        adapter.comments = adapter.legacy_comments
+        child = dict(
+            id="22", text="Ada beasiswa", created_at=1790848800, owner=dict(id="9")
+        )
+        embedded = dict(
+            count=2,
+            edges=[dict(node=child)],
+            page_info=dict(has_next_page=True, end_cursor="reply-next"),
+        )
+        parent = dict(
+            id="21",
+            text="Biaya kuliah",
+            created_at=1790848800,
+            owner=dict(id="10"),
+            edge_threaded_comments=embedded,
+        )
+        adapter.loader.context.graphql_query.return_value = dict(
+            data=dict(
+                shortcode_media=dict(
+                    edge_media_to_parent_comment=dict(
+                        count=1,
+                        edges=[dict(node=parent)],
+                        page_info=dict(has_next_page=False, end_cursor=None),
+                    )
+                )
+            )
+        )
+        rows = []
+        with patch.object(il, "save_session"):
+            adapter.collect("media", URL, lambda kind, row: rows.append(row))
+        self.assertEqual([row["native_id"] for row in rows], ["1", "21", "22"])
+        adapter.loader.context.graphql_query.assert_called_once()
+
+    def web_response(self, ids, cursor, more=True):
+        return dict(
+            data={
+                "xdt_api__v1__media__media_id__comments__connection": dict(
+                    edges=[
+                        dict(
+                            node=dict(pk=str(ident), text="Komentar", user=dict(pk="9"))
+                        )
+                        for ident in ids
+                    ],
+                    page_info=dict(has_next_page=more, end_cursor=cursor),
+                )
+            }
+        )
+
+    def test_last_web_page_requests_only_remaining_comments(self):
+        adapter = self.adapter(replace(self.settings(), max_comments=25))
+        query = adapter.loader.context.doc_id_graphql_query
+        query.side_effect = [
+            self.web_response(range(100, 120), "next"),
+            self.web_response(range(120, 125), None, False),
+        ]
+        self.assertEqual(len(list(adapter.web_comments(fixture_post()))), 25)
+        self.assertEqual(
+            [call.args[1]["first"] for call in query.call_args_list], [20, 5]
+        )
+
+    def test_duplicate_pages_with_new_cursors_preserve_partial_rows_then_stop(self):
+        adapter = self.adapter(replace(self.settings(), max_comments=None))
+        adapter.comments = adapter.web_comments
+        query = adapter.loader.context.doc_id_graphql_query
+        query.side_effect = [
+            self.web_response([21], cursor) for cursor in ("a", "b", "c")
+        ]
+        rows = []
+        with self.assertRaises(il.PaginationStalled) as raised:
+            adapter.collect("media", URL, lambda kind, row: rows.append(row))
+        self.assertEqual([row["native_id"] for row in rows], ["1", "21"])
+        self.assertEqual(query.call_count, 3)
+        self.assertEqual(il.error_receipt(raised.exception)["status"], "PARTIAL")
+
+    def test_repeated_cursor_does_not_report_exhaustion(self):
+        adapter = self.adapter(replace(self.settings(), max_comments=None))
+        query = adapter.loader.context.doc_id_graphql_query
+        query.side_effect = [
+            self.web_response([21], "same"),
+            self.web_response([22], "same"),
+        ]
+        with self.assertRaises(il.PaginationStalled):
+            list(adapter.web_comments(fixture_post()))
+        self.assertEqual(query.call_count, 2)
+
+    def test_reply_iterator_does_not_query_when_replies_disabled(self):
+        adapter = self.adapter(replace(self.settings(), max_replies=0))
+        adapter.module.NodeIterator = Mock(
+            side_effect=AssertionError("unnecessary reply request")
+        )
+        answers = adapter.threaded_answers("21", "B")
+        adapter.comments = lambda post: iter(
+            [
+                Obj(
+                    id=21,
+                    text="Komentar",
+                    created_at_utc=STAMP,
+                    owner=Obj(userid=9),
+                    likes_count=0,
+                    answers=answers,
+                )
+            ]
+        )
+        with patch.object(il, "save_session"):
+            adapter.collect("media", URL, Mock())
+        adapter.module.NodeIterator.assert_not_called()
+
+    def test_persisted_cooldown_blocks_new_worker_without_network(self):
+        settings = self.settings()
+        worker = il.InstaloaderWorker()
+        self.addCleanup(worker.close)
+        with patch.object(il.time, "time", return_value=1000):
+            worker.remember_cooldown(
+                dict(status="RATE_LIMITED", retry_after_seconds=720), settings
+            )
+        fresh = il.InstaloaderWorker()
+        self.addCleanup(fresh.close)
+        with patch.object(il.time, "time", return_value=1010):
+            result = fresh("media", URL, settings, 1, Mock())
+        self.assertIsNone(fresh.process)
+        self.assertEqual(
+            (result["status"], result["retry_after_seconds"]), ("RATE_LIMITED", 710)
+        )
+        self.assertEqual(fresh.cooldown_path(settings).stat().st_mode & 0o777, 0o600)
+        with patch.object(il.time, "time", return_value=1721):
+            self.assertIsNone(fresh.cooldown_receipt(settings))
+
+    def test_malformed_saved_cooldown_fails_before_starting_worker(self):
+        worker, settings = il.InstaloaderWorker(), self.settings()
+        self.addCleanup(worker.close)
+        worker.cooldown_path(settings).write_text(
+            '{"schema_version":1,"not_before":"invalid"}'
+        )
+        with self.assertRaises(ValueError):
+            worker("media", URL, settings, 1, Mock())
+        self.assertIsNone(worker.process)
+
+    def test_server_failure_persists_pause_before_any_new_worker(self):
+        settings = self.settings()
+        worker = il.InstaloaderWorker(server_fault_fixture)
+        self.addCleanup(worker.close)
+        self.assertEqual(
+            worker("media", URL, settings, 10, Mock())["status"], "SERVER_UNAVAILABLE"
+        )
+        fresh = il.InstaloaderWorker()
+        self.addCleanup(fresh.close)
+        result = fresh("media", URL, settings, 1, Mock())
+        self.assertEqual(result["status"], "SERVER_UNAVAILABLE")
+        self.assertGreaterEqual(result["retry_after_seconds"], 119)
+        self.assertIsNone(fresh.process)
+
+    def test_http_503_observed_as_temporary_server_pause(self):
+        response = requests.Response()
+        response.status_code = 503
+        response.headers["Retry-After"] = "120"
+        response._content = b"unavailable"
+        response._content_consumed = True
+        with patch.object(requests.Session, "send", return_value=response) as transport:
+            with il.observe_requests(5), self.assertRaises(il.AccessBarrier) as raised:
+                requests.Session().get(URL)
+        self.assertEqual(
+            il.error_receipt(raised.exception)["status"], "SERVER_UNAVAILABLE"
+        )
+        transport.assert_called_once()
 
     def test_normalization_and_caps_preserve_native_parents_and_utc(self):
         adapter, events = self.adapter(), []

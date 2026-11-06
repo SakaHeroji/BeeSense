@@ -12,11 +12,15 @@ tags:
 # test_streamlit_app.py
 
 ## Connections
-- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
 - [[StreamlitTests]] - `contains` [EXTRACTED]
-- [[encoder()]] - `imports` [EXTRACTED]
-- [[fixture()_1]] - `imports` [EXTRACTED]
+- [[numpy]] - `imports` [EXTRACTED]
+- [[os]] - `imports` [EXTRACTED]
+- [[pathlib]] - `imports_from` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
-- [[test_social_nlp.py]] - `imports_from` [EXTRACTED]
+- [[streamlit_testing_v1]] - `imports_from` [EXTRACTED]
+- [[tempfile]] - `imports` [EXTRACTED]
+- [[test_social_nlp]] - `imports_from` [EXTRACTED]
+- [[unittest]] - `imports` [EXTRACTED]
+- [[unittest_mock]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

@@ -27,7 +27,7 @@ tags:
 - [[.test_stable_and_episodic_patterns()]] - `method` [EXTRACTED]
 - [[.test_tiktok_native_roots_and_explanations_include_comments_and_replies()]] - `method` [EXTRACTED]
 - [[.test_unknown_dates_estimates_empty_and_invalid_inputs()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
+- [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_topic_explanations.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Penjelasan_Topik

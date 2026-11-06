@@ -6,6 +6,12 @@ captured_at: 2026-11-03
 
 # TikTok Chrome Live Connector
 
+Pembaruan aktif pada disk: Connector **1.4.0**, build `20261106-sidebar-v7`.
+[[Sidebar TikTok Connector 20261106]] mengganti popup dengan panel Chrome native.
+Lihat [[TikTok Throughput 20261106]] untuk kebijakan stagnasi, dua fase dan retry.
+Hasil final uji 1 jam: 10 post, 1.348 komentar, 481 balasan; target 50 belum tercapai.
+
+
 ## Run awal selesai dan restart — 5 November 2026
 
 Run 6cd0ad73 berakhir parsial sekitar 14.26 WIB: 5 post, 458 komentar dan 479

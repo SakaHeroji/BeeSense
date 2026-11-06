@@ -1,23 +1,13 @@
 ---
-source_file: "Crawler/Backend/social_export.py"
+source_file: ""
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L30"
+community: "Akuisisi TikTok dan Ekspor"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # SocialExportMixin
 
-## Connections
-- [[._calendar_date()]] - `method` [EXTRACTED]
-- [[._select()]] - `method` [EXTRACTED]
-- [[._write_compact()]] - `method` [EXTRACTED]
-- [[.comment_exclude()]] - `method` [EXTRACTED]
-- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - `references` [EXTRACTED]
-- [[Requires config, include and exclude matchers; performs no acquisition.]] - `rationale_for` [EXTRACTED]
-- [[social_export.py]] - `contains` [EXTRACTED]
-
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

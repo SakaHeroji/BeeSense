@@ -12,8 +12,6 @@ tags:
 # FrontendReactCrawler:React/TypeScript/Vite/Router/TanStackQuery,seven-platformfrontend-firstnavigation
 
 ## Connections
-- [[BeeSense Crawler Frontend ReactTypeScriptVite, seven platform menus, frontend-first scope]] - `references` [EXTRACTED]
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[BeeSensewhiteorangePlusJakartaSansminimum12px;NginxUID1018080unchanged,Dockerrevisionnotbuilt,noDBmigration;oldermanualmigrationutilitiesremoved]] - `references` [EXTRACTED]
 - [[Frontend API contract1.2integration design,not implemented HTTP service]] - `references` [EXTRACTED]
 - [[Frontend TikTok Plugin Chrome one transaction for configuration, review, pairing and progress]] - `references` [EXTRACTED]

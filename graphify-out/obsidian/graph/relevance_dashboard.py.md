@@ -12,9 +12,9 @@ tags:
 # relevance_dashboard.py
 
 ## Connections
-- [[SocialNLPClusterer_1]] - `imports` [EXTRACTED]
+- [[SocialNLPClusterer]] - `imports` [EXTRACTED]
 - [[Start the local relevance experiment, or its preserved baseline snapshot.]] - `rationale_for` [EXTRACTED]
-- [[main()_16]] - `contains` [EXTRACTED]
+- [[main()_6]] - `contains` [EXTRACTED]
 - [[social_nlp.py]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

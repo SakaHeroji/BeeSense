@@ -15,6 +15,7 @@ tags:
 - [[activeTab]] - `extends` [EXTRACTED]
 - [[debugger]] - `extends` [EXTRACTED]
 - [[manifest.json]] - `contains` [EXTRACTED]
+- [[sidePanel]] - `extends` [EXTRACTED]
 - [[storage]] - `extends` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_TikTok_dan_Koneksi_Chrome

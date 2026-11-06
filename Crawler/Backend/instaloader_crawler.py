@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import importlib.metadata
 import json
+import math
 import multiprocessing as mp
 import os
 import re
@@ -24,6 +25,8 @@ from urllib.parse import urlsplit
 from Crawler.Backend import instagram_crawler as ig
 from Crawler.Backend.crawler_config import DEFAULT_CONFIG_PATH, standalone_config
 from Crawler.Backend.crawler_limits import cap, reached, remaining
+from Crawler.Backend.Reddit.crawl_reddit_single import KeywordMatcher
+from Crawler.Backend.social_export import root_rejection
 
 METHOD = "instaloader_saved_web_session"
 COOKIE_NAMES = {"sessionid", "csrftoken", "ds_user_id", "mid", "ig_did", "rur"}
@@ -44,6 +47,10 @@ class AccessBarrier(RuntimeError):
             retry_after,
         )
         self.upstream_code = upstream_code
+
+
+class PaginationStalled(RuntimeError):
+    """The source claims more pages without advancing native identities."""
 
 
 def retry_after_seconds(value):
@@ -68,7 +75,9 @@ def error_receipt(error):
     names = {c.__name__ for e in chain for c in type(e).__mro__}
     barrier = next((e for e in chain if isinstance(e, AccessBarrier)), None)
     status = "SOURCE_ERROR"
-    if barrier:
+    if isinstance(error, PaginationStalled):
+        status = "PARTIAL"
+    elif barrier:
         status = barrier.status
     elif names & {"TooManyRequestsException"}:
         status = "RATE_LIMITED"
@@ -116,6 +125,8 @@ class InstaloaderSettings:
     search_tab: str = "recent"
     comments_transport: str = "query_hash"
     timeout_seconds: int = 60
+    rate_limit_cooldown_seconds: int = 360
+    selection: dict | None = None
 
 
 def _json(path):
@@ -207,6 +218,8 @@ def observe_requests(interval):
             401: "LOGIN_REQUIRED",
             403: "ACCESS_BLOCKED",
         }.get(code)
+        if 500 <= code <= 599:
+            status = "SERVER_UNAVAILABLE"
         location = urlsplit(response.headers.get("Location", "")).path
         if 300 <= code < 400 and location.startswith("/accounts/login"):
             status = "LOGIN_REQUIRED"
@@ -281,6 +294,9 @@ class InstaloaderAdapter:
             configure_web_graphql(self.loader)
         self.searches = {}
         self.posts = OrderedDict()
+        policy = settings.selection or {}
+        self.include = KeywordMatcher(policy.get("include_keywords", []))
+        self.exclude = KeywordMatcher(policy.get("exclude_keywords", []))
         self.comments = comments or (
             self.legacy_comments
             if settings.comments_transport == "query_hash"
@@ -301,15 +317,8 @@ class InstaloaderAdapter:
             edges = (node.get("edge_threaded_comments") or {}).get("edges", [])
             connection = node.get("edge_threaded_comments") or {}
             if connection.get("count", len(edges)) > len(edges):
-                item.answers = self.module.NodeIterator(
-                    self.loader.context,
-                    "51fdd02b67508306ad4484ff574a0b62",
-                    lambda response: response["data"]["comment"][
-                        "edge_threaded_comments"
-                    ],
-                    self.web_comment,
-                    {"comment_id": str(node["id"])},
-                    f"https://www.instagram.com/p/{post.shortcode}/",
+                item.answers = self.threaded_answers(
+                    str(node["id"]), post.shortcode, connection
                 )
             else:
                 item.answers = (self.web_comment(edge["node"]) for edge in edges)
@@ -326,6 +335,26 @@ class InstaloaderAdapter:
             f"https://www.instagram.com/p/{post.shortcode}/",
         )
 
+    def threaded_answers(self, parent, shortcode, connection=None):
+        # NodeIterator queries in __init__. Defer its creation until replies are
+        # actually consumed, and reuse a genuine embedded page when available.
+        first_data = None
+        if connection and isinstance(connection.get("edges"), list):
+            page = connection.get("page_info") or {}
+            if isinstance(page.get("has_next_page"), bool) and (
+                not page["has_next_page"] or page.get("end_cursor")
+            ):
+                first_data = connection
+        yield from self.module.NodeIterator(
+            self.loader.context,
+            "51fdd02b67508306ad4484ff574a0b62",
+            lambda response: response["data"]["comment"]["edge_threaded_comments"],
+            self.web_comment,
+            {"comment_id": parent},
+            f"https://www.instagram.com/p/{shortcode}/",
+            **({"first_data": first_data} if first_data is not None else {}),
+        )
+
     def web_comments(self, post):
         """Bounded web comments through Instaloader's patched context.
 
@@ -336,13 +365,13 @@ class InstaloaderAdapter:
 
         if post.comments == 0:
             return
-        cursor, cursors, seen = None, set(), set()
+        cursor, cursors, seen, idle_pages = None, set(), set(), 0
         while not reached(len(seen), self.settings.max_comments):
             response = self.loader.context.doc_id_graphql_query(
                 "25060748103519434",
                 dict(
                     media_id=str(post.mediaid),
-                    first=cap(20, self.settings.max_comments),
+                    first=cap(20, remaining(self.settings.max_comments, len(seen))),
                     after=cursor,
                     before=None,
                     last=None,
@@ -359,6 +388,7 @@ class InstaloaderAdapter:
                 connection.get("edges"), list
             ):
                 raise BadResponseException("Web comment connection is unavailable")
+            before = len(seen)
             for edge in connection["edges"]:
                 node = edge["node"]
                 item = self.web_comment(node)
@@ -368,16 +398,7 @@ class InstaloaderAdapter:
                 seen.add(native)
                 previews = node.get("preview_child_comments", []) or []
                 if node.get("child_comment_count", len(previews)) > len(previews):
-                    item.answers = self.module.NodeIterator(
-                        self.loader.context,
-                        "51fdd02b67508306ad4484ff574a0b62",
-                        lambda response: response["data"]["comment"][
-                            "edge_threaded_comments"
-                        ],
-                        self.web_comment,
-                        {"comment_id": native},
-                        f"https://www.instagram.com/p/{post.shortcode}/",
-                    )
+                    item.answers = self.threaded_answers(native, post.shortcode)
                 else:
                     item.answers = (self.web_comment(child) for child in previews)
                 yield item
@@ -385,12 +406,11 @@ class InstaloaderAdapter:
                     return
             page = connection.get("page_info") or {}
             next_cursor = page.get("end_cursor")
-            if (
-                not page.get("has_next_page")
-                or not next_cursor
-                or next_cursor in cursors
-            ):
+            if not page.get("has_next_page"):
                 return
+            idle_pages = idle_pages + 1 if len(seen) == before else 0
+            if not next_cursor or next_cursor in cursors or idle_pages >= 2:
+                raise PaginationStalled("Comment pagination stopped advancing")
             cursors.add(next_cursor)
             cursor = next_cursor
 
@@ -472,15 +492,33 @@ class InstaloaderAdapter:
                 like_count=post.likes,
                 comment_count=post.comments,
             )
-            emit("record", ig.normalize_item(media, url))
+            root = ig.normalize_item(media, url)
+            emit("record", root)
+            if settings.selection is not None:
+                reason = root_rejection(
+                    root, settings.selection, self.include, self.exclude
+                )
+                if reason:
+                    return {
+                        **result,
+                        "reason": reason,
+                        "warnings": ["root_filtered_before_comments"],
+                    }
             seen, replies, parents = set(), 0, 0
-            for comment in self.comments(post):
+            reply_parents = []
+            comments = self.comments(post) if settings.max_comments != 0 else ()
+            for comment in comments:
                 native = ig.native_pk(comment.id)
                 if native in seen:
                     continue
                 seen.add(native)
                 emit("record", self.comment(comment, url, media))
                 parents += 1
+                if settings.max_replies != 0 and settings.max_replies_per_thread != 0:
+                    reply_parents.append((native, comment))
+                if reached(parents, settings.max_comments):
+                    break
+            for native, comment in reply_parents:
                 thread_limit = cap(
                     settings.max_replies_per_thread,
                     remaining(settings.max_replies, replies),
@@ -497,7 +535,7 @@ class InstaloaderAdapter:
                         thread_count += 1
                         if reached(thread_count, thread_limit):
                             break
-                if reached(parents, settings.max_comments):
+                if reached(replies, settings.max_replies):
                     break
             if parents:
                 save_session(self.loader, settings)
@@ -556,11 +594,79 @@ class InstaloaderWorker:
     def __init__(self, entry=instaloader_worker):
         self.entry, self.process, self.pipe, self.stopped = entry, None, None, False
 
+    @staticmethod
+    def cooldown_path(settings):
+        return Path(str(settings.session_file) + ".cooldown.json")
+
+    def cooldown_receipt(self, settings):
+        try:
+            data = json.loads(self.cooldown_path(settings).read_text())
+        except FileNotFoundError:
+            return None
+        if (
+            not isinstance(data, dict)
+            or data.get("schema_version") != 1
+            or data.get("username") != settings.username.casefold()
+            or data.get("status") not in {"RATE_LIMITED", "SERVER_UNAVAILABLE"}
+            or type(data.get("not_before")) not in (int, float)
+            or not math.isfinite(data["not_before"])
+        ):
+            raise ValueError("Invalid saved Instagram cooldown")
+        left = data["not_before"] - time.time()
+        if left > 0:
+            return dict(
+                status=data["status"],
+                reason="persisted_instagram_cooldown",
+                retry_after_seconds=math.ceil(left),
+                warnings=[],
+                source_version=upstream_version(),
+            )
+        return None
+
+    def remember_cooldown(self, result, settings):
+        if result.get("status") not in {"RATE_LIMITED", "SERVER_UNAVAILABLE"}:
+            return
+        wait = result.get("retry_after_seconds")
+        base = (
+            settings.rate_limit_cooldown_seconds
+            if result["status"] == "RATE_LIMITED"
+            else 60
+        )
+        wait = max(
+            base, wait if type(wait) in (int, float) and math.isfinite(wait) else 0
+        )
+        path = self.cooldown_path(settings)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode="w", dir=path.parent, prefix=".cooldown-", delete=False
+            ) as stream:
+                temporary = Path(stream.name)
+                json.dump(
+                    dict(
+                        schema_version=1,
+                        username=settings.username.casefold(),
+                        status=result["status"],
+                        not_before=time.time() + wait,
+                    ),
+                    stream,
+                )
+            temporary.chmod(0o600)
+            temporary.replace(path)
+        finally:
+            if temporary:
+                temporary.unlink(missing_ok=True)
+        result["retry_after_seconds"] = math.ceil(wait)
+
     def __call__(self, operation, target, settings, seconds, emit):
         if self.stopped:
             return dict(
                 status="WORKER_FAILED", reason="worker_already_stopped", warnings=[]
             )
+        cooldown = self.cooldown_receipt(settings)
+        if cooldown:
+            return cooldown
         deadline = time.monotonic() + seconds
         if self.process is None:
             context = mp.get_context("spawn")
@@ -576,6 +682,7 @@ class InstaloaderWorker:
                 if self.pipe.poll(min(0.2, max(0, deadline - time.monotonic()))):
                     kind, payload = self.pipe.recv()
                     if kind == "done":
+                        self.remember_cooldown(payload, settings)
                         return payload
                     emit(kind, payload)
                 elif not self.process.is_alive():
@@ -678,6 +785,19 @@ class InstaloaderCrawler(ig.InstagramCrawler):
         self.settings = InstaloaderSettings(
             **options,
             timeout_seconds=self.config["timeout_seconds"],
+            rate_limit_cooldown_seconds=self.config["platforms"]["instagram"][
+                "rate_limit_cooldown_seconds"
+            ],
+            selection={
+                k: self.config[k]
+                for k in (
+                    "since",
+                    "until",
+                    "include_keywords",
+                    "exclude_keywords",
+                    "include_mode",
+                )
+            },
             **{
                 k: self.config["platforms"]["instagram"][k]
                 for k in (

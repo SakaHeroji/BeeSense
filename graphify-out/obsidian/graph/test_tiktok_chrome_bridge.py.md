@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_tiktok_chrome_bridge.py"
 type: "code"
-community: "Konektor Chrome TikTok Lokal"
+community: "Akuisisi TikTok dan Ekspor"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Konektor_Chrome_TikTok_Lokal
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # test_tiktok_chrome_bridge.py
@@ -17,7 +17,16 @@ tags:
 - [[Task isolation, real loopback transport and streamed export contracts.]] - `rationale_for` [EXTRACTED]
 - [[chrome_bridge.py]] - `imports_from` [EXTRACTED]
 - [[crawler_config.py]] - `imports_from` [EXTRACTED]
+- [[json]] - `imports` [EXTRACTED]
+- [[pathlib]] - `imports_from` [EXTRACTED]
 - [[post()_1]] - `contains` [EXTRACTED]
+- [[re]] - `imports` [EXTRACTED]
+- [[tempfile]] - `imports` [EXTRACTED]
+- [[threading]] - `imports` [EXTRACTED]
 - [[tiktok_crawler.py]] - `imports_from` [EXTRACTED]
+- [[unittest]] - `imports` [EXTRACTED]
+- [[urllib_error]] - `imports_from` [EXTRACTED]
+- [[urllib_parse]] - `imports_from` [EXTRACTED]
+- [[urllib_request]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konektor_Chrome_TikTok_Lokal
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

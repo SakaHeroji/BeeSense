@@ -69,6 +69,128 @@ class TwitterCrawlerTests(unittest.TestCase):
         self.assertTrue(plan["integrated_into_social_crawler"])
         self.assertEqual(plan["primary_output"]["columns"], list(x.COMPACT_COLUMNS))
 
+    def test_calendar_windows_have_no_duplicate_days_or_coverage_gaps(self):
+        from datetime import date, timedelta
+
+        cfg = deepcopy(self.cfg)
+        cfg.update(since="2026-01-01T10:17:00Z", until="2026-01-29T10:17:00Z")
+        cfg["platforms"]["twitter"].update(
+            max_searches=None, queries=["kuliah", "kampus"]
+        )
+        targets = list(x.search_targets(x.configuration(cfg)))
+        for query in ("kuliah", "kampus"):
+            windows = [t for t in targets if t["query"] == query]
+            self.assertEqual(len(windows), 4)
+            days = []
+            for current, following in zip(windows, windows[1:]):
+                self.assertEqual(current["since"], following["until"])
+            for window in windows:
+                begin, end = (
+                    date.fromisoformat(window["since"]),
+                    date.fromisoformat(window["until"]),
+                )
+                days.extend(
+                    begin + timedelta(days=i) for i in range((end - begin).days)
+                )
+            self.assertEqual(len(days), 29)
+            self.assertEqual(len(set(days)), 29)
+            self.assertEqual(
+                (min(days), max(days)), (date(2026, 1, 1), date(2026, 1, 29))
+            )
+
+    def test_social_filters_cached_roots_before_requesting_replies(self):
+        for field, value, reason in (
+            ("timestamp", "2024-01-01T00:00:00Z", "root_outside_date_window"),
+            ("text", "jual ikan segar", "root_missing_include_keyword"),
+        ):
+            with self.subTest(field=field):
+                calls = []
+
+                def worker(operation, target, seconds, emit):
+                    calls.append(operation)
+                    self.assertEqual(
+                        operation, "search", "filtered roots must not fetch replies"
+                    )
+                    emit({**tweet(comments=100), field: value})
+                    emit(tweet("200"))
+                    return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+
+                adapter = x.TwitterCoordinatorWorker({}, worker=worker)
+                report = SocialCrawler(self.cfg, workers={"twitter": adapter}).run(
+                    self.path / ("filter-" + field)
+                )
+                self.assertEqual(calls, ["search"])
+                self.assertEqual(report["platforms"]["twitter"]["posts_exported"], 1)
+                self.assertEqual(
+                    report["platforms"]["twitter"]["filtered_roots"], {reason: 1}
+                )
+
+    def test_social_server_pause_retains_root_and_stops_before_next_post(self):
+        calls = []
+        cfg = deepcopy(self.cfg)
+        cfg["platforms"]["twitter"].update(min_posts=2, max_posts=2)
+
+        def worker(operation, target, seconds, emit):
+            calls.append(operation)
+            if operation == "search":
+                emit(tweet(comments=100))
+                emit(tweet("200"))
+                return dict(status="FINISHED_BEST_EFFORT", warnings=[])
+            return dict(
+                status="SERVER_UNAVAILABLE", retry_after_seconds=120, warnings=[]
+            )
+
+        adapter = x.TwitterCoordinatorWorker({}, worker=worker)
+        report = SocialCrawler(cfg, workers={"twitter": adapter}).run(
+            self.path / "server-pause"
+        )
+        self.assertEqual(calls, ["search", "replies"])
+        self.assertEqual(report["platforms"]["twitter"]["posts_exported"], 1)
+        self.assertEqual(
+            report["platforms"]["twitter"]["stop_reason"], "SERVER_UNAVAILABLE"
+        )
+
+    def test_server_failure_honors_retry_after_and_stops_further_requests(self):
+        from curl_cffi.requests import Session
+
+        options = x.configuration(self.cfg)["scweet"]
+        Path(options["state_dir"]).mkdir()
+        response = SimpleNamespace(
+            status_code=503, url="https://x.com/test", headers={"retry-after": "120"}
+        )
+        with patch.object(Session, "request", return_value=response) as original:
+            with x.guarded_transport(options) as state:
+                Session().get("https://x.com/test")
+                with self.assertRaises(x.AccessBarrier) as raised:
+                    Session().get("https://x.com/test")
+        self.assertEqual(raised.exception.status, "SERVER_UNAVAILABLE")
+        self.assertEqual(state["requests"], 1)
+        original.assert_called_once()
+        saved = json.loads((Path(options["state_dir"]) / "barrier.json").read_text())
+        self.assertEqual(saved["status"], "SERVER_UNAVAILABLE")
+        self.assertGreater(saved["not_before"], time.time() + 119)
+
+    def test_expired_server_pause_allows_client_without_resetting_account_state(self):
+        options = x.configuration(self.cfg)["scweet"]
+        directory = Path(options["state_dir"])
+        directory.mkdir()
+        Path(options["auth_file"]).write_text(
+            json.dumps(
+                [dict(sosmed="twitter", username="example", sessionid="fixture")]
+            )
+        )
+        x.private_json(
+            directory / "barrier.json",
+            dict(status="SERVER_UNAVAILABLE", not_before=time.time() - 1),
+        )
+        client = Mock()
+        client._accounts_repo.eligibility_diagnostics.return_value = {"eligible": 1}
+        with (
+            patch("Scweet.Scweet", return_value=client),
+            patch("Crawler.Backend.scweet_limits.configure_daily_quotas"),
+        ):
+            self.assertIs(x.create_client(options), client)
+
     def test_social_coordinator_uses_cached_search_root_and_native_replies(self):
         calls = []
 

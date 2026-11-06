@@ -18,13 +18,9 @@ tags:
 - [[Chrome live follows global deadline;timeout_seconds90 audit field does not prove90second truncation;StopCAPTCHAloginrate limits remain]] - `references` [EXTRACTED]
 - [[Five enabled platforms,target1000each,null durationcount caps,preserved comment context and root filters;source accesscoverage not guaranteed]] - `references` [EXTRACTED]
 - [[InstagramCrawler instagrapi atau browser]] - `references` [EXTRACTED]
-- [[InstaloaderCrawler_1]] - `references` [EXTRACTED]
 - [[Obsidian Konfigurasi Universal Social Crawler]] - `references` [EXTRACTED]
 - [[Obsidian Target 1000 Post Tanpa Batas Waktu]] - `references` [EXTRACTED]
 - [[Pipeline Instagram 30 Oktober (riwayat)]] - `references` [EXTRACTED]
-- [[RedditCrawler pembungkus Reddrix]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium_1]] - `references` [EXTRACTED]
-- [[TikTok Chrome CLI architecture, audited segment history and fresh restart]] - `references` [EXTRACTED]
-- [[TwitterCrawler Scweet]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Konfigurasi_Crawler_Bersama

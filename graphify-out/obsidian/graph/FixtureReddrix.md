@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.runner()]] - `indirect_call` [INFERRED]
-- [[FakeReddrix_1]] - `inherits` [EXTRACTED]
+- [[FakeReddrix]] - `inherits` [EXTRACTED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[spawn_reddrix_fixture()]] - `indirect_call` [INFERRED]
 - [[test_social_crawler_reddrix.py]] - `contains` [EXTRACTED]

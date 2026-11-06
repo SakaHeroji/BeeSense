@@ -1,56 +1,33 @@
 ---
 type: community
-members: 43
+cohesion: 0.12
+members: 18
 ---
 
 # Integrasi Default Instaloader
 
-**Members:** 43 nodes
+**Cohesion:** 0.12 - loosely connected
+**Members:** 18 nodes
 
 ## Members
-- [[--output-dir mempertahankan bundle eksplisit legacy]] - rationale - docs/crawler/OUTPUTS.md
-- [[1058 ID Instagram tanggal campaign terverifikasi, jam null]] - rationale - docs/crawler/OUTPUTS.md
-- [[Artifact relevansi terikat korpus sumber]] - concept - config/social_nlp.json
-- [[Baca ulang nilai baris tanggal checksum dan ID global]] - concept - docs/crawler/OUTPUTS.md
-- [[Bundle audit mentah pada outputcrawler_runs]] - concept - docs/crawler/OUTPUTS.md
-- [[Grid DBSCAN dan batas memori tetangga]] - concept - config/social_nlp.json
-- [[Hari pertama akuisisi dengan nilai observasi terbaru]] - rationale - docs/crawler/OUTPUTS.md
-- [[Indeks output BeeSense]] - document - outputs/README.md
-- [[Indeks sembilan partisi crawling]] - document - outputs/crawling/README.md
-- [[Input NLP workbook gabungan Twitter historis]] - concept - config/social_nlp.json
-- [[Konsolidasi awal 34785 native ID, empat platform, sembilan partisi]] - concept - docs/crawler/OUTPUTS.md
-- [[Loader NLP load_config]] - concept - graphify-out/obsidian/Konfigurasi Universal NLP.md
-- [[Narasi Gemini tersimpan]] - concept - config/social_nlp.json
-- [[Native ID unik global lintas seluruh tanggal]] - rationale - docs/crawler/OUTPUTS.md
-- [[Obsidian Konfigurasi Universal NLP]] - document - graphify-out/obsidian/Konfigurasi Universal NLP.md
-- [[Obsidian Output Social Media Per Tanggal]] - document - graphify-out/obsidian/Output Social Media Per Tanggal.md
-- [[Opsi graf kemiripan bukti dan tren]] - concept - config/social_nlp.json
-- [[Panduan output per platform dan tanggal WIB]] - document - docs/crawler/OUTPUTS.md
-- [[Partisi menurut pengamatan pertama WIB]] - rationale - docs/crawler/OUTPUTS.md
-- [[Proyeksi UMAP]] - concept - config/social_nlp.json
-- [[Publikasi partisi dengan lock dan rollback]] - rationale - docs/crawler/OUTPUTS.md
-- [[Relokasi bundle belum terbit dan relocation map]] - rationale - docs/crawler/OUTPUTS.md
-- [[SBERT multilingual dengan revision tetap]] - concept - config/social_nlp.json
-- [[Seleksi commentreply dan segmentasi kalimat]] - concept - config/social_nlp.json
-- [[Skema filesystem beesense-social-archive1]] - concept - docs/crawler/OUTPUTS.md
-- [[Snapshot aktif NLP relevansi 20 topik Gemini]] - concept - config/social_nlp.json
-- [[Struktur proyek BeeSense]] - document - docs/PROJECT_STRUCTURE.md
-- [[Sumber terbit dan snapshot model tetap pada path lama]] - rationale - outputs/README.md
-- [[configsocial_nlp.json — konfigurasi aktif NLP]] - document - config/social_nlp.json
-- [[instagram 2026-10-30 4444 record unik]] - concept - outputs/crawling/README.md
-- [[native_roots.json mempertahankan root Twitter]] - rationale - docs/crawler/OUTPUTS.md
-- [[outputscrawlingplatformYYYY-MM-DDsocial_data.xlsx]] - concept - docs/crawler/OUTPUTS.md
-- [[record_lineage.jsonl native ID dan sumber baris]] - concept - docs/crawler/OUTPUTS.md
-- [[reddit 2026-10-27 2404 record unik]] - concept - outputs/crawling/README.md
-- [[reddit 2026-10-28 108 record unik]] - concept - outputs/crawling/README.md
-- [[reddit 2026-10-29 1429 record unik]] - concept - outputs/crawling/README.md
-- [[reddit 2026-10-30 573 record unik]] - concept - outputs/crawling/README.md
-- [[scripts.organize_social_outputs dan social_archive.organize]] - concept - docs/crawler/OUTPUTS.md
-- [[social_identity.identity bersama organizer dan merge]] - concept - graphify-out/obsidian/Output Social Media Per Tanggal.md
-- [[twitter 2026-10-31 45 record unik]] - concept - outputs/crawling/README.md
-- [[twitter 2026-11-02 624 record unik]] - concept - outputs/crawling/README.md
-- [[youtube 2026-10-28 5937 record unik]] - concept - outputs/crawling/README.md
-- [[youtube 2026-10-29 19221 record unik]] - concept - outputs/crawling/README.md
+- [[Active TikTokCrawler2.6.1  NativeTikTokClient  BeeSenseNative1.3.0 with Playwright1.62.0]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[First search HTTP403; exit 2; zero videoscomments; no CSV or archive changes]] - concept - docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md
+- [[Five-videotwenty-comment third-party probe; no credentials sent; no configuration changes]] - concept - graphify-out/obsidian/TikWM Probe TikTok 20261103.md
+- [[HTTP403 at first search, exit 2, zero data, no CSV; origin and permanent-ban claims unproven]] - concept - graphify-out/obsidian/TikWM Probe TikTok 20261103.md
+- [[HTTP403 origin unspecified provider application, network protection or local network path]] - concept - docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md
+- [[Large1200comment100reply figures are synthetic fixtures,not TikTok success;new Docker image unverified,no PostgreSQL migration or dashboard dependency change]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[Native backend retained; probe changed no application, dependencies, config, auth or runtime]] - rationale - docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md
+- [[One social_crawler.json supplies querydateroot filters,1000posttarget,null global duration and commentreply caps;native requestscrollidle333 preserve pacing,not uncapped-comment termination]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[Ordinary UIhydrationnetworknative links;verify real rootparent IDs,epoch-isolate late responses,keep missing timestampsstatistics unknown,no invented API requests or synthetic IDs]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[Owned Chromium manual preflight uses private wait_idcontrol state;ChromeCaptureWorker imports saved public capture offline without live browser attachmentauthnetwork;ChromeLive transport is separate]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[Playwright1.62.0 satisfies Camoufox0.5.8 requirement1.63 in combined crawler environment;old1.64.1CI pin conflict corrected]] - rationale - docs/crawler/TIKTOK_CRAWLER.md
+- [[Running versionbuildsource-pagination-v3 checked before clock;incompatible clientsHTTP409,incomplete source-pagination proof stops with partial data and comments_complete false]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[Serial pacing5xxbackoff,429Retry-After persists between processes;accesschallengeinvalidJSON stops;local auth unchanged,profile cookies and raw debug data not exported]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[Shared ContentInputDatasetExcel with string IDs and cross-WIB-day uniqueness;partial rows survive deadline,old roots dedup,but not exact comment cursor resume]] - concept - docs/crawler/TIKTOK_CRAWLER.md
+- [[TikWM Probe TikTok 20261103]] - document - graphify-out/obsidian/TikWM Probe TikTok 20261103.md
+- [[Unmodified probe biaya kuliah beasiswa, five videos, maximum twenty comments per video]] - concept - docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md
+- [[User-supplied TikWM probe — 3 November 2026]] - document - docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md
+- [[requests.Session uses third-party TikWM feedsearch; commentlist planned, never reached]] - concept - docs/crawler/TIKTOK_TIKWM_PROBE_20261103.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -58,3 +35,10 @@ members: 43
 TABLE source_file, type FROM #community/Integrasi_Default_Instaloader
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Bersama]]
+- 1 edge to [[_COMMUNITY_Integrasi Default Instaloader_4]]
+
+## Top bridge nodes
+- [[Active TikTokCrawler2.6.1  NativeTikTokClient  BeeSenseNative1.3.0 with Playwright1.62.0]] - degree 12, connects to 2 communities

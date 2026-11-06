@@ -12,7 +12,7 @@ tags:
 # sha()
 
 ## Connections
-- [[.source()_1]] - `calls` [EXTRACTED]
+- [[.source()]] - `calls` [EXTRACTED]
 - [[.test_historical_recovery_keeps_day_precision_and_checks_merge_hash()]] - `calls` [EXTRACTED]
 - [[.test_synthetic_and_changed_sources_fail_without_replacing_archive()]] - `calls` [EXTRACTED]
 - [[_write_day()]] - `calls` [EXTRACTED]

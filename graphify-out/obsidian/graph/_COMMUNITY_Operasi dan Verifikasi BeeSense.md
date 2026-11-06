@@ -1,16 +1,19 @@
 ---
 type: community
-members: 3
+cohesion: 0.50
+members: 4
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Members:** 3 nodes
+**Cohesion:** 0.50 - moderately connected
+**Members:** 4 nodes
 
 ## Members
-- [[Native thread root explainability]] - rationale - graphify-out/obsidian/Twitter 20 Topik 20261102.md
-- [[Twitter twenty topic result note]] - document - graphify-out/obsidian/Twitter 20 Topik 20261102.md
-- [[X Twitter dashboard support]] - concept - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[BeeSense architecture note]] - document - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[Dashboard URL state binding]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[Extracted evidence and inferred cosine edges]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[SocialNLPStreamlitApp]] - code - graphify-out/obsidian/Arsitektur BeeSense.md
 
 ## Live Query (requires Dataview plugin)
 

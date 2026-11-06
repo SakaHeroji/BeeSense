@@ -1,14 +1,16 @@
 ---
 type: community
+cohesion: 0.12
 members: 17
 ---
 
 # Pengujian Analisis Dashboard
 
+**Cohesion:** 0.12 - loosely connected
 **Members:** 17 nodes
 
 ## Members
-- [[.setUp()_19]] - code - tests/nlp/test_dashboard_analysis.py
+- [[.setUp()_9]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_bar_data_matches_aggregates_and_escapes_topic_hover_text()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_chart_events_ignore_non_topic_points_and_support_cluster_zero()]] - code - tests/nlp/test_dashboard_analysis.py
 - [[.test_conflicting_root_captions_are_not_guessed()]] - code - tests/nlp/test_dashboard_analysis.py

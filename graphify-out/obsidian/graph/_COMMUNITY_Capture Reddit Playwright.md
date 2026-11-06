@@ -1,11 +1,13 @@
 ---
 type: community
-members: 23
+cohesion: 0.16
+members: 25
 ---
 
 # Capture Reddit Playwright
 
-**Members:** 23 nodes
+**Cohesion:** 0.16 - loosely connected
+**Members:** 25 nodes
 
 ## Members
 - [[.__init__()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
@@ -18,6 +20,8 @@ members: 23
 - [[PlaywrightCLI]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
 - [[Reddit__init__.py]] - code - Crawler/Backend/Reddit/__init__.py
 - [[RuntimeError]] - code
+- [[SearchUnavailable]] - code - Crawler/Backend/tiktok_crawler.py
+- [[The browser observed no native video candidates on the search page.]] - rationale - Crawler/Backend/tiktok_crawler.py
 - [[arguments()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
 - [[atomic_json()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
 - [[barrier_status()]] - code - Crawler/Backend/Reddit/crawl_reddit_playwright.py
@@ -40,21 +44,21 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 3 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 2 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
-- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_3]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_1]]
-- 1 edge to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
+- 4 edges to [[_COMMUNITY_Kontrak Record Reddit_3]]
+- 2 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit]]
+- 1 edge to [[_COMMUNITY_Kuota Harian Scweet]]
 - 1 edge to [[_COMMUNITY_Pengujian Koordinator Crawler]]
-- 1 edge to [[_COMMUNITY_Capture Reddit Playwright_3]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
-- 1 edge to [[_COMMUNITY_Crawler Selenium_2]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_2]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium]]
 - 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
+- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
+- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
 
 ## Top bridge nodes
 - [[crawl_reddit_playwright.py]] - degree 17, connects to 3 communities
 - [[run()]] - degree 15, connects to 3 communities
-- [[RuntimeError]] - degree 8, connects to 3 communities
+- [[SearchUnavailable]] - degree 5, connects to 3 communities
+- [[RuntimeError]] - degree 7, connects to 2 communities
 - [[validate_capture()]] - degree 5, connects to 2 communities
-- [[.inspect()]] - degree 4, connects to 1 community

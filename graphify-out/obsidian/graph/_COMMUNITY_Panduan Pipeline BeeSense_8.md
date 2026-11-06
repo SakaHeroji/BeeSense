@@ -1,14 +1,18 @@
 ---
 type: community
-members: 1
+cohesion: 0.67
+members: 3
 ---
 
 # Panduan Pipeline BeeSense
 
-**Members:** 1 nodes
+**Cohesion:** 0.67 - moderately connected
+**Members:** 3 nodes
 
 ## Members
-- [[Shared deadline round robin scheduling]] - rationale - graphify-out/obsidian/Arsitektur BeeSense.md
+- [[General NLP Environment]] - document - requirements/nlp.txt
+- [[Gensim Coherence Environment]] - document - requirements/coherence.txt
+- [[Native SBERT Training Environment]] - document - requirements/sbert.txt
 
 ## Live Query (requires Dataview plugin)
 

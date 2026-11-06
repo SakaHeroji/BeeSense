@@ -12,10 +12,11 @@ tags:
 # normalize_item()
 
 ## Connections
-- [[.accept()_5]] - `calls` [EXTRACTED]
+- [[.accept()_2]] - `calls` [EXTRACTED]
 - [[Keep native parent IDs; never infer a reply parent from screen position.]] - `rationale_for` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
 - [[native_id()]] - `calls` [EXTRACTED]
-- [[object_key()_2]] - `calls` [EXTRACTED]
+- [[object_key()_1]] - `calls` [EXTRACTED]
 - [[post_url()]] - `calls` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]
 - [[upstream_version()_2]] - `calls` [EXTRACTED]

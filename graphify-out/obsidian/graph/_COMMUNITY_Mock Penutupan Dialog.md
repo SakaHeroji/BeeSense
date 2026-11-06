@@ -1,14 +1,16 @@
 ---
 type: community
+cohesion: 1.00
 members: 1
 ---
 
 # Mock Penutupan Dialog
 
+**Cohesion:** 1.00 - tightly connected
 **Members:** 1 nodes
 
 ## Members
-- [[.close()_7]] - code - Crawler/Frontend/src/test/setup.ts
+- [[.close()_1]] - code - Crawler/Frontend/src/test/setup.ts
 
 ## Live Query (requires Dataview plugin)
 

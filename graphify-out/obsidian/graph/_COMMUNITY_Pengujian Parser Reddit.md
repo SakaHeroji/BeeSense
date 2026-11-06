@@ -1,13 +1,16 @@
 ---
 type: community
-members: 23
+cohesion: 0.21
+members: 28
 ---
 
 # Pengujian Parser Reddit
 
-**Members:** 23 nodes
+**Cohesion:** 0.21 - loosely connected
+**Members:** 28 nodes
 
 ## Members
+- [[.__init__()_40]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.discover()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.fullname()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.has_class()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
@@ -25,12 +28,16 @@ members: 23
 - [[.test_11_missing_parent_remains_unknown()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_12_relations_child_before_parent_and_score_semantics()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[.thread()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[Exception]] - code
+- [[.thread()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditHtmlParser]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[RedditTests]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
-- [[SourceFailure]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[assert_accessible()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[content_node()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[first()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 - [[fixture_page()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[rendered_text()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[source_time()_1]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
+- [[walk()]] - code - Crawler/Backend/Reddit/crawl_reddit_single.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,16 +47,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 20 edges to [[_COMMUNITY_Parsing Identitas Reddit_3]]
-- 15 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
-- 10 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
-- 3 edges to [[_COMMUNITY_Kontrak Record Reddit]]
-- 2 edges to [[_COMMUNITY_Capture Reddit Playwright_1]]
-- 2 edges to [[_COMMUNITY_Parsing Identitas Reddit_2]]
+- 11 edges to [[_COMMUNITY_Parsing Identitas Reddit]]
+- 9 edges to [[_COMMUNITY_Kontrak Record Reddit]]
+- 9 edges to [[_COMMUNITY_Kontrak Record Reddit_2]]
+- 6 edges to [[_COMMUNITY_Parsing Identitas Reddit_2]]
+- 6 edges to [[_COMMUNITY_Kontrak Record Reddit_4]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit_3]]
+- 3 edges to [[_COMMUNITY_Parsing Identitas Reddit_1]]
+- 3 edges to [[_COMMUNITY_Kontrak Record Reddit_1]]
 
 ## Top bridge nodes
-- [[RedditTests]] - degree 20, connects to 3 communities
+- [[RedditTests]] - degree 20, connects to 4 communities
 - [[fixture_page()]] - degree 15, connects to 3 communities
-- [[SourceFailure]] - degree 13, connects to 3 communities
-- [[.thread()]] - degree 22, connects to 2 communities
-- [[RedditHtmlParser]] - degree 20, connects to 2 communities
+- [[.test_12_relations_child_before_parent_and_score_semantics()]] - degree 11, connects to 3 communities
+- [[.test_13_dom_parent_provenance_is_not_source_parent_id()]] - degree 11, connects to 3 communities
+- [[.thread()_1]] - degree 22, connects to 2 communities

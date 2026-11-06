@@ -31,13 +31,18 @@ Form menyediakan tanggal publikasi WIB dari/sampai sebelum, include/exclude keyw
 
 Akun & sesi opsional ditampilkan untuk Instagram, X/Twitter, Threads dan Facebook. Username/session ID disiapkan untuk `config/auth.json` melalui kontrak HTTP tersendiri; bukan bagian konfigurasi crawling. Session ID disembunyikan, bisa ditampilkan dengan tombol, tidak disimpan ke URL/localStorage dan dibersihkan setelah simulasi simpan. Isian kosong mempertahankan nilai yang ada. Simpan perubahan akun sebelum meninjau crawling. Demo hanya menyimpan metadata akun di memori, tanpa menyimpan session ID atau mengubah file nyata. TikTok memakai sesi pada tab Chrome melalui plugin.
 
+Panduan lipat pada bagian akun menjelaskan cookie `sessionid` Instagram dan
+`auth_token` X melalui Chrome DevTools. TikTok menggunakan sesi tab Chrome dan
+pairing; Threads/Facebook menjelaskan backend yang belum tersedia. Lihat
+[panduan sesi per sosmed dan verifikasi](docs/SESSION_GUIDE.md).
+
 ## TikTok melalui plugin Chrome
 
 Konfigurasi → tinjau → hubungkan Chrome → pantau hasil berada pada menu TikTok dan transaksi yang sama. Setelah review, monitor menampilkan alamat server dashboard, kode pairing sementara yang tersembunyi, versi minimum plugin, status koneksi dan petunjuk validasi manual. Versi minimum diproyeksikan dari manifest publik Connector, tanpa menyalin key atau permissions.
 
 Waktu pengambilan baru dimulai setelah server memverifikasi plugin. Koneksi ulang mempertahankan deadline. CAPTCHA/login diselesaikan pengguna pada tab TikTok; tombol lanjut meminta server memeriksa ulang, bukan menandai validasi selesai dari browser. Jumlah komentar/balasan post aktif dipisahkan dari operasi selesai; kelengkapan memerlukan akhir pagination yang terverifikasi, bukan kesamaan dengan statistik sumber.
 
-Chrome dan tab TikTok harus tetap terbuka. Untuk penelusuran UI yang paling andal, biarkan tab TikTok aktif dan jendela tidak diminimalkan; popup Connector boleh ditutup. Biarkan plugin menggulir, membuka balasan dan berpindah post; hindari navigasi/refresh manual kecuali menyelesaikan CAPTCHA atau login ketika diminta. Aktivitas halaman latar dapat diperlambat browser. Ini pertimbangan operasi, bukan bukti penyebab stagnasi run tertentu.
+Chrome dan tab TikTok harus tetap terbuka. Untuk penelusuran UI yang paling andal, biarkan tab TikTok aktif dan jendela tidak diminimalkan; sidebar Connector boleh ditutup. Biarkan plugin menggulir, membuka balasan dan berpindah post; hindari navigasi/refresh manual kecuali menyelesaikan CAPTCHA atau login ketika diminta. Aktivitas halaman latar dapat diperlambat browser. Ini pertimbangan operasi, bukan bukti penyebab stagnasi run tertentu.
 
 Adapter HTTP menggunakan API proyek yang sama. Respons pairing wajib terikat job dan origin dashboard; tidak ada port bridge tetap, server kedua atau menu plugin terpisah. Kode pairing hanya berada di memori halaman, tidak di URL/localStorage/snapshot publik job. Pengamat tidak meminta endpoint privat. Mode demo menyediakan tombol simulasi berlabel yang **tidak mengendalikan crawler nyata**.
 

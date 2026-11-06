@@ -1,25 +1,21 @@
 ---
-source_file: "Crawler/Backend/tiktok_crawler.py"
+source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
-community: "Akuisisi TikTok dan Ekspor"
-location: "L1413"
+community: "Integrasi X dan Provenans Akuisisi"
+location: "L1301"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_TikTok_dan_Ekspor
+  - community/Integrasi_X_dan_Provenans_Akuisisi
 ---
 
 # main()
 
 ## Connections
-- [[.close()_10]] - `calls` [EXTRACTED]
-- [[.plan()_6]] - `calls` [EXTRACTED]
-- [[ChromeCaptureWorker]] - `calls` [EXTRACTED]
-- [[ChromeLiveWorker]] - `calls` [EXTRACTED]
-- [[TikTokCrawler]] - `calls` [EXTRACTED]
-- [[ValueError]] - `calls` [EXTRACTED]
-- [[live_chrome_plan()]] - `calls` [EXTRACTED]
-- [[platform_configuration()]] - `calls` [EXTRACTED]
-- [[tiktok_crawler.py]] - `contains` [EXTRACTED]
+- [[.close()_7]] - `calls` [EXTRACTED]
+- [[.plan()_4]] - `calls` [EXTRACTED]
+- [[.run()_3]] - `calls` [EXTRACTED]
+- [[TwitterCrawler]] - `calls` [EXTRACTED]
+- [[twitter_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor
+#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

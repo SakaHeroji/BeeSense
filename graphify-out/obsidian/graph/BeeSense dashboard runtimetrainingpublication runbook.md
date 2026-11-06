@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Active36,233five-platformrecords,two20topicmodels0.43461028450.4666033620,40authorizednarratives;native8502,Dockernewimageunverified,noUIAPItraining]] - `references` [EXTRACTED]
 - [[BeeSense separate crawler, NLP and artifact-reading Streamlit dashboard]] - `references` [EXTRACTED]
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[DataGitallowlistCIchecks precedepublication;dashboardreadswithouttraininglibraries,SBERTenvhandlesnewencoding,incompatibleoldcorpusreuse rejected,noDBmigration]] - `references` [EXTRACTED]
 - [[Dataset Dashboard active source provenance, caption mapping and dated archives]] - `references` [EXTRACTED]
 - [[Nov5combinedTikTokretrainingboth20topicfitsmeetmean0.4gate,40narrativescomplete]] - `references` [EXTRACTED]

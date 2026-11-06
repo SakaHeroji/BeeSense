@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[Active36,233unique five-platform records; beforeafter models20topics,c_v0.43461028450.4666033620; filtered11,185occurrences10,795unique sentences,81.81%coverage,6topics individually below0.4]] - `references` [EXTRACTED]
 - [[BeeSense dashboard runtimetrainingpublication runbook]] - `references` [EXTRACTED]
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[Dashboard BeeSense verified artifacts, caption source labels and topic evidence]] - `references` [EXTRACTED]
 - [[DashboardPython3.123.14 installs artifactUI dependencies only,without TorchUMAPGensimONNXNumbacrawler;PyArrow24pinned for reader stability,training environment separate]] - `references` [EXTRACTED]
 - [[Data verifiercheck-git,offline tests,CI and Docker checks are distinct;dashboard reads artifacts,noDBmigration;old local Docker validation is historical,remoteCI not inferred from local passes]] - `references` [EXTRACTED]

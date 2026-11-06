@@ -10,6 +10,7 @@ import {
   tiktokUrl,
   validateTask,
   retryAfter,
+  NetworkPacing,
 } from "../../Crawler/Backend/Tiktok/chrome_extension/core.mjs";
 
 const root = "7685001417442086152",
@@ -159,6 +160,159 @@ test("Retry-After honors server wait including HTTP dates", () => {
   assert.equal(retryAfter(undefined), 60);
 });
 
+test("5xx backoff is capped, pauses after three failures, and resets on success", () => {
+  const pacing = new NetworkPacing();
+  pacing.observe(503, null, 1000);
+  assert.equal(pacing.wait(3000, 1000), 5000);
+  pacing.observe(502, null, 1000);
+  assert.equal(pacing.wait(3000, 1000), 10000);
+  for (let i = 0; i < 30; i++) pacing.observe(500, null, 1000);
+  assert.equal(pacing.backoff, 15000);
+  assert.equal(pacing.wait(3000, 1000), 30000);
+  pacing.observe(503, 120, 2000);
+  assert.equal(pacing.wait(3000, 2000), 120000);
+  pacing.observe(200, null, 3000);
+  assert.equal(pacing.wait(3000, 3000), 3000);
+  assert.equal(pacing.failures, 0);
+});
+
+test("duplicate comment responses cannot keep a stagnant post alive", async () => {
+  const prior = {
+    chrome: globalThis.chrome,
+    fetch: globalThis.fetch,
+    timeout: globalThis.setTimeout,
+    now: Date.now,
+  };
+  let listener,
+    network,
+    detached = false,
+    taskSent = false,
+    scrolls = 0;
+  let now = prior.now();
+  const batches = [];
+  Date.now = () => now;
+  globalThis.setTimeout = (fn, ms, ...args) =>
+    prior.timeout(
+      () => {
+        now += ms;
+        fn(...args);
+      },
+      ms >= 100 ? 1 : ms,
+    );
+  const respond = () => {
+    network({ tabId: 1 }, "Network.requestWillBeSent", {
+      requestId: "duplicate",
+      request: {
+        url: `https://www.tiktok.com/api/comment/list/?aweme_id=${root}`,
+      },
+    });
+    // A stale response for another post must not block the current post.
+    network({ tabId: 1 }, "Network.requestWillBeSent", {
+      requestId: "foreign",
+      request: { url: "https://www.tiktok.com/api/comment/list/?aweme_id=999" },
+    });
+    network({ tabId: 1 }, "Network.responseReceived", {
+      requestId: "foreign",
+      response: { status: 403 },
+    });
+    network({ tabId: 1 }, "Network.loadingFinished", {
+      requestId: "duplicate",
+    });
+  };
+  globalThis.chrome = {
+    runtime: {
+      id: "stagnation",
+      getManifest: () => ({ version: "1.3.0" }),
+      onMessage: { addListener: (f) => (listener = f) },
+    },
+    storage: { session: { set: async () => {} } },
+    tabs: { get: async () => ({ url }), update: async () => respond() },
+    debugger: {
+      attach: async () => {},
+      detach: async () => {
+        detached = true;
+      },
+      onEvent: { addListener: (f) => (network = f) },
+      onDetach: { addListener: () => {} },
+      sendCommand: async (_, method, params) => {
+        if (method === "Network.getResponseBody")
+          return {
+            body: JSON.stringify({
+              has_more: 1,
+              comments: [{ cid, aweme_id: root, text: "same ID" }],
+            }),
+          };
+        if (method !== "Runtime.evaluate") return {};
+        const args = JSON.parse(
+          params.expression.slice(params.expression.lastIndexOf(")(") + 2, -1),
+        );
+        assert.notEqual(args.action, "expand", "main comments take priority");
+        if (args.action === "scroll") {
+          scrolls++;
+          respond();
+        }
+        return {
+          result: { value: { ready: true, url, candidates: [], at_end: true } },
+        };
+      },
+    },
+  };
+  globalThis.fetch = async (value, options) => {
+    if (new URL(value).pathname === "/api/task") {
+      if (taskSent) throw new Error("Test complete");
+      taskSent = true;
+      return {
+        ok: true,
+        json: async () => ({
+          operation_id: oid,
+          operation: "thread",
+          video_id: root,
+          url,
+          max_comments: null,
+          collect_all_comments: true,
+          comment_stagnation_seconds: 75,
+          expires_at_unix: now / 1000 + 600,
+          cached_root: {
+            id: root,
+            link: url,
+            created_at: "2026-09-13T12:50:35Z",
+          },
+        }),
+      };
+    }
+    batches.push(JSON.parse(options.body));
+    return { ok: true, json: async () => ({ accepted: true }) };
+  };
+  try {
+    await import("../../Crawler/Backend/Tiktok/chrome_extension/background.mjs?stagnation");
+    listener(
+      {
+        action: "start",
+        origin: "http://127.0.0.1:54321/",
+        code: "a".repeat(43),
+        tabId: 1,
+      },
+      { id: "stagnation" },
+      () => {},
+    );
+    const deadline = prior.now() + 3000;
+    while (!detached && prior.now() < deadline)
+      await new Promise((resolve) => prior.timeout(resolve, 10));
+    assert.ok(detached);
+    assert.ok(scrolls > 3);
+    assert.equal(batches.at(-1).status, "PARTIAL");
+    assert.equal(batches.at(-1).collection_status, "stagnated");
+    assert.ok(batches.at(-1).warnings.includes("comment_stagnation_timeout"));
+    assert.equal(batches.flatMap((b) => b.events).length, 2);
+  } finally {
+    listener?.({ action: "stop" }, { id: "stagnation" }, () => {});
+    globalThis.chrome = prior.chrome;
+    globalThis.fetch = prior.fetch;
+    globalThis.setTimeout = prior.timeout;
+    Date.now = prior.now;
+  }
+});
+
 test("uncapped controller scrolls past unresponsive reply controls until delayed replies end", async () => {
   const priorChrome = globalThis.chrome,
     priorFetch = globalThis.fetch,
@@ -306,7 +460,7 @@ test("uncapped controller scrolls past unresponsive reply controls until delayed
       await new Promise((resolve) => priorTimeout(resolve, 10));
     assert.ok(detached);
     assert.equal(rounds, 6);
-    assert.deepEqual(scrollRewinds, Array(6).fill(false));
+    assert.deepEqual(scrollRewinds, [true, ...Array(5).fill(false)]);
     const events = batches.flatMap((batch) => batch.events);
     assert.deepEqual(
       events.map((event) => event.payload.id),
@@ -318,9 +472,13 @@ test("uncapped controller scrolls past unresponsive reply controls until delayed
           batch.done && !batch.warnings.includes("visible_pagination_idle"),
       ),
     );
-    assert.ok(statuses.includes("Terhubung ke crawler lokal."));
     assert.ok(
-      !statuses.includes("Chrome connection detached. No tab was closed."),
+      statuses.includes("Terhubung. Menunggu tugas dari crawler lokal…"),
+    );
+    assert.ok(
+      !statuses.includes(
+        "Koneksi tab terlepas. Hubungkan kembali untuk melanjutkan.",
+      ),
     );
   } finally {
     listener?.({ action: "stop" }, { id: "thread-test" }, () => {});
@@ -364,9 +522,7 @@ test("failed debugger attachment clears the session and permits another attempt"
   listener(message, { id: "test" }, () => {});
   await new Promise((resolve) => setImmediate(resolve));
   assert.equal(attempts, 2);
-  assert.ok(
-    statuses.some((value) => value.includes("release any other debugger")),
-  );
+  assert.ok(statuses.some((value) => value.includes("Tutup debugger lain")));
   // Exercise the actual controller with a simulated selected TikTok tab and
   // native UI JSON. No browser is attached or external endpoint contacted.
   const batches = [],
@@ -469,11 +625,13 @@ test("all-comment controller collects 1200 comments and 100 replies across slow 
     taskSent = false,
     scrolls = 0,
     replyPages = 0,
+    waitingForBody = false,
     firstScrollReplies;
   const bodies = new Map(),
-    batches = [];
+    batches = [],
+    states = [];
   globalThis.setTimeout = (fn, ms, ...args) =>
-    prior.timeout(fn, ms >= 1000 ? 5 : ms, ...args);
+    prior.timeout(fn, ms === 10000 ? 500 : ms >= 1000 ? 5 : ms, ...args);
   const respond = (name, endpoint, body) => {
     bodies.set(name, body);
     network({ tabId: 1 }, "Network.requestWillBeSent", {
@@ -502,7 +660,9 @@ test("all-comment controller collects 1200 comments and 100 replies across slow 
       getManifest: () => ({ version: "1.2.1" }),
       onMessage: { addListener: (f) => (listener = f) },
     },
-    storage: { session: { set: async () => {} } },
+    storage: {
+      session: { set: async (value) => states.push(structuredClone(value)) },
+    },
     tabs: { get: async () => ({ url }), update: async () => parents(0) },
     debugger: {
       attach: async () => {},
@@ -512,13 +672,23 @@ test("all-comment controller collects 1200 comments and 100 replies across slow 
       onEvent: { addListener: (f) => (network = f) },
       onDetach: { addListener: () => {} },
       sendCommand: async (_, method, params) => {
-        if (method === "Network.getResponseBody")
+        if (method === "Network.getResponseBody") {
+          if (params.requestId === "parents1") {
+            waitingForBody = true;
+            await new Promise((resolve) => prior.timeout(resolve, 60));
+            waitingForBody = false;
+          }
           return { body: JSON.stringify(bodies.get(params.requestId)) };
+        }
         if (method !== "Runtime.evaluate") return {};
         const args = JSON.parse(
           params.expression.slice(params.expression.lastIndexOf(")(") + 2, -1),
         );
         if (args.action === "expand" && replyPages < 5) {
+          assert.ok(
+            scrolls >= 8,
+            "all main comment pages precede reply clicks",
+          );
           const page = replyPages++;
           respond(
             "replies" + page,
@@ -537,6 +707,11 @@ test("all-comment controller collects 1200 comments and 100 replies across slow 
           };
         }
         if (args.action === "scroll") {
+          assert.equal(
+            waitingForBody,
+            false,
+            "wait for the pending response body before another scroll",
+          );
           firstScrollReplies ??= replyPages;
           scrolls++;
           if (scrolls === 4) parents(1);
@@ -603,15 +778,64 @@ test("all-comment controller collects 1200 comments and 100 replies across slow 
     assert.equal(rows.filter((r) => r.kind === "comment").length, 1200);
     assert.equal(rows.filter((r) => r.kind === "reply").length, 100);
     assert.equal(new Set(rows.map((r) => r.id)).size, 1301);
-    assert.equal(firstScrollReplies, 5);
-    assert.equal(scrolls, 8);
+    assert.equal(firstScrollReplies, 0);
+    assert.equal(scrolls, 9);
     assert.ok(batches.every((b) => b.events.length <= 500));
     assert.equal(batches.at(-1).collection_status, "exhausted");
     assert.equal(batches.at(-1).status, "FINISHED_BEST_EFFORT");
+    assert.deepEqual(states.at(-1).connectorState.counts, {
+      posts: 1,
+      comments: 1200,
+      replies: 100,
+    });
+    assert.ok(
+      !JSON.stringify(states).includes("a".repeat(43)),
+      "pairing code stays out of session storage",
+    );
   } finally {
     listener?.({ action: "stop" }, { id: "large-test" }, () => {});
     globalThis.chrome = prior.chrome;
     globalThis.fetch = prior.fetch;
     globalThis.setTimeout = prior.timeout;
+  }
+});
+
+test("side panel opens on toolbar click and worker restart clears stale running state", async () => {
+  const prior = globalThis.chrome;
+  const writes = [],
+    behavior = [];
+  globalThis.chrome = {
+    runtime: { id: "panel", onMessage: { addListener: () => {} } },
+    sidePanel: { setPanelBehavior: async (value) => behavior.push(value) },
+    storage: {
+      session: {
+        get: async () => ({
+          connectorState: {
+            running: true,
+            phase: "human",
+            counts: { posts: 2, comments: 4, replies: 1 },
+          },
+        }),
+        set: async (value) => writes.push(value),
+      },
+    },
+    debugger: {
+      onEvent: { addListener: () => {} },
+      onDetach: { addListener: () => {} },
+    },
+  };
+  try {
+    await import("../../Crawler/Backend/Tiktok/chrome_extension/background.mjs?panel-restart");
+    await new Promise((resolve) => setImmediate(resolve));
+    assert.deepEqual(behavior, [{ openPanelOnActionClick: true }]);
+    assert.equal(writes.at(-1).connectorState.running, false);
+    assert.equal(writes.at(-1).connectorState.phase, "stopped");
+    assert.deepEqual(writes.at(-1).connectorState.counts, {
+      posts: 2,
+      comments: 4,
+      replies: 1,
+    });
+  } finally {
+    globalThis.chrome = prior;
   }
 });

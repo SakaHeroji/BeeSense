@@ -1,22 +1,17 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Frontend/package.json"
 type: "code"
-community: "Parsing Identitas Reddit"
-location: "L625"
+community: "Frontend dan Transaksi Sosmed"
+location: "L7"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Parsing_Identitas_Reddit
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
-# Node
+# node
 
 ## Connections
-- [[.__init__()_26]] - `calls` [EXTRACTED]
-- [[.__init__()_25]] - `method` [EXTRACTED]
-- [[.handle_starttag()]] - `calls` [EXTRACTED]
-- [[.has_class()]] - `method` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
-- [[walk()]] - `indirect_call` [INFERRED]
+- [[engines]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit
+#graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

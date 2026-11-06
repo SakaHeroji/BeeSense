@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Frontend TikTok Plugin Chrome.md"
 type: "document"
-community: "Integrasi Default Instaloader"
+community: "Frontend dan Transaksi Sosmed"
 location: "7"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Integrasi_Default_Instaloader
+  - community/Frontend_dan_Transaksi_Sosmed
 ---
 
 # Frontend TikTok Plugin Chrome: one transaction for configuration, review, pairing and progress
@@ -21,4 +21,4 @@ tags:
 - [[Three operator-only private per-job project API endpoints validate joborigin without fixed port; secret is page-memory-only, min version projected from public manifest without keypermissionsauth]] - `references` [EXTRACTED]
 - [[WAITING_CONNECTOR has no startdeadline; compatible handshake starts once, reconnect preserves resultsdeadline, Continue asks server to reverify; thread counts do not inflate completed totals]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader
+#graphify/document #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

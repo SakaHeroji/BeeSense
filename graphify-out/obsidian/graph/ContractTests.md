@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Kontrak Record Reddit"
-location: "L1059"
+location: "L1060"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # ContractTests
 
 ## Connections
-- [[.setUp()_11]] - `method` [EXTRACTED]
+- [[.setUp()_18]] - `method` [EXTRACTED]
 - [[.test_01_frozen_header_fingerprint()]] - `method` [EXTRACTED]
 - [[.test_02_cross_source_identical_columns_and_types()]] - `method` [EXTRACTED]
 - [[.test_03_unknown_columns_rejected()]] - `method` [EXTRACTED]

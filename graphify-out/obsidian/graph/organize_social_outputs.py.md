@@ -15,7 +15,7 @@ tags:
 - [[Consolidate original crawl bundles by platformday without repeated native IDs.]] - `rationale_for` [EXTRACTED]
 - [[consolidate()]] - `contains` [EXTRACTED]
 - [[discover()]] - `contains` [EXTRACTED]
-- [[main()_5]] - `contains` [EXTRACTED]
+- [[main()_2]] - `contains` [EXTRACTED]
 - [[organize()]] - `imports` [EXTRACTED]
 - [[social_archive.py]] - `imports_from` [EXTRACTED]
 - [[source_records()]] - `imports` [EXTRACTED]

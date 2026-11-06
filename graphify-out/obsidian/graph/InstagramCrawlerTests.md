@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[.crawler()_2]] - `method` [EXTRACTED]
-- [[.setUp()_13]] - `method` [EXTRACTED]
+- [[.setUp()_5]] - `method` [EXTRACTED]
 - [[.test_actual_instagram_worker_missing_session_stops_without_network()]] - `method` [EXTRACTED]
 - [[.test_auth_file_login_selects_instagram_and_never_exports_credentials()]] - `method` [EXTRACTED]
 - [[.test_authentication_barrier_keeps_partial_records_without_retry()]] - `method` [EXTRACTED]
@@ -41,7 +41,7 @@ tags:
 - [[.test_upgrade_gate_is_distinct_from_throttling_and_unknown_source_errors()]] - `method` [EXTRACTED]
 - [[.test_url_canonicalization_and_identity()]] - `method` [EXTRACTED]
 - [[.test_verified_429_respects_retry_after_and_budget()]] - `method` [EXTRACTED]
-- [[.worker()_2]] - `method` [EXTRACTED]
+- [[.worker()_1]] - `method` [EXTRACTED]
 - [[SocialCrawler]] - `uses` [INFERRED]
 - [[test_instagram_crawler.py]] - `contains` [EXTRACTED]
 

@@ -13,7 +13,8 @@ tags:
 
 ## Connections
 - [[._baseline()_1]] - `calls` [EXTRACTED]
-- [[.accept()_5]] - `calls` [EXTRACTED]
+- [[.accept()_2]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
 - [[configuration()]] - `calls` [EXTRACTED]
 - [[normalize_item()_1]] - `calls` [EXTRACTED]
 - [[twitter_crawler.py]] - `contains` [EXTRACTED]

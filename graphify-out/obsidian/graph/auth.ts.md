@@ -12,14 +12,13 @@ tags:
 # auth.ts
 
 ## Connections
-- [[AuthInput]] - `imports` [EXTRACTED]
 - [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
-- [[FieldError]] - `imports` [EXTRACTED]
-- [[Platform]] - `imports` [EXTRACTED]
+- [[SessionGuide.tsx]] - `imports_from` [EXTRACTED]
+- [[sessionCookies]] - `contains` [EXTRACTED]
 - [[sessionPlatforms]] - `contains` [EXTRACTED]
 - [[transaction-demo.ts]] - `imports_from` [EXTRACTED]
 - [[transaction.test.ts]] - `imports_from` [EXTRACTED]
-- [[types.ts]] - `imports_from` [EXTRACTED]
+- [[users_socs3_documents_beesense_crawler_frontend_src_shared_ui_tsx]] - `imports_from` [EXTRACTED]
 - [[validateAuth()]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

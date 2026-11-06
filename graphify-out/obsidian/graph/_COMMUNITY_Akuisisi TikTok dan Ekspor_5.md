@@ -1,22 +1,21 @@
 ---
 type: community
-members: 9
+cohesion: 0.33
+members: 6
 ---
 
 # Akuisisi TikTok dan Ekspor
 
-**Members:** 9 nodes
+**Cohesion:** 0.33 - loosely connected
+**Members:** 6 nodes
 
 ## Members
-- [[.capture()_2]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.response()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.save_cooldown()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[Find video objects in hydration and browser response JSON.]] - rationale - Crawler/Backend/tiktok_crawler.py
-- [[Honor server seconds or an HTTP date; never put headers in receipts.]] - rationale - Crawler/Backend/tiktok_crawler.py
-- [[Missing pagination metadata never proves that all comments were loaded.]] - rationale - Crawler/Backend/tiktok_crawler.py
-- [[embedded_videos()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[retry_after()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[source_has_more()]] - code - Crawler/Backend/tiktok_crawler.py
+- [[.__init__()_17]] - code - Crawler/Backend/instaloader_crawler.py
+- [[Apply the supplied runtime patch to this worker's context only.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[Load JSON cookies only; never unpickle a session or replay a password.]] - rationale - Crawler/Backend/instaloader_crawler.py
+- [[_json()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[configure_web_graphql()]] - code - Crawler/Backend/instaloader_crawler.py
+- [[session_cookies()]] - code - Crawler/Backend/instaloader_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -26,14 +25,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 5 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
-- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_2]]
-- 3 edges to [[_COMMUNITY_Konektor Chrome TikTok Lokal_2]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed]]
+- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
 
 ## Top bridge nodes
-- [[.response()]] - degree 8, connects to 2 communities
-- [[.capture()_2]] - degree 6, connects to 2 communities
-- [[embedded_videos()]] - degree 4, connects to 2 communities
-- [[source_has_more()]] - degree 3, connects to 1 community
-- [[retry_after()]] - degree 3, connects to 1 community
+- [[session_cookies()]] - degree 5, connects to 2 communities
+- [[configure_web_graphql()]] - degree 3, connects to 1 community
+- [[.__init__()_17]] - degree 3, connects to 1 community
+- [[_json()]] - degree 2, connects to 1 community

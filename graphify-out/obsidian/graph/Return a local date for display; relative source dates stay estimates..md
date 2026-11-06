@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L40"
+community: "Batas Crawler Opsional"
+location: "L65"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Batas_Crawler_Opsional
 ---
 
 # Return a local date for display; relative source dates stay estimates.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[._calendar_date()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Kuota Harian Scweet"
-location: "L409"
+location: "L484"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # run_reddrix_worker()
 
 ## Connections
-- [[.__init__()_39]] - `indirect_call` [INFERRED]
+- [[.__init__()_48]] - `indirect_call` [INFERRED]
 - [[.test_default_config_selects_reddrix_without_loading_browser()]] - `indirect_call` [INFERRED]
 - [[.test_display_mode_propagates_through_process_boundary()]] - `calls` [EXTRACTED]
 - [[reddrix_worker()]] - `indirect_call` [INFERRED]

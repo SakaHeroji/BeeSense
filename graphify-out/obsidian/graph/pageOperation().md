@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Tiktok/chrome_extension/core.mjs"
 type: "code"
 community: "Konektor Chrome TikTok Lokal"
-location: "L214"
+location: "L244"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,8 @@ tags:
 # pageOperation()
 
 ## Connections
+- [[Clipped reply controls require visibility checks]] - `references` [EXTRACTED]
+- [[Reply control starvation and forced scrolling]] - `references` [EXTRACTED]
 - [[background.mjs]] - `imports` [EXTRACTED]
 - [[core.mjs]] - `contains` [EXTRACTED]
 

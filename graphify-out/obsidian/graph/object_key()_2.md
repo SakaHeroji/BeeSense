@@ -1,21 +1,20 @@
 ---
-source_file: "Crawler/Backend/twitter_crawler.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L83"
+community: "Kontrak Record Reddit"
+location: "L512"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Kontrak_Record_Reddit
 ---
 
 # object_key()
 
 ## Connections
-- [[._baseline()_1]] - `calls` [EXTRACTED]
 - [[.accept()_5]] - `calls` [EXTRACTED]
-- [[native_id()]] - `calls` [EXTRACTED]
-- [[normalize_item()_1]] - `calls` [EXTRACTED]
-- [[twitter_crawler.py]] - `contains` [EXTRACTED]
+- [[.key()_1]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[native_fullname()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

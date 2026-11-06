@@ -1,4 +1,68 @@
-# BeeSense TikTok Connector 1.2.3
+# BeeSense TikTok Connector 1.4.0
+
+## Sidebar Chrome — 6 November 2026
+
+Klik ikon BeeSense pada toolbar untuk membuka sidebar native Chrome. UI popup
+telah diganti dengan `sidepanel.html/css/mjs`; izin `sidePanel` ditambahkan.
+ID ekstensi, host yang diizinkan, protokol komentar dan minimum bridge 1.3.0
+tetap kompatibel. Build aktif: `20261106-sidebar-v7`.
+
+1. Reload ekstensi di `chrome://extensions` dari folder ini.
+2. Jalankan crawler lokal dan buka tab TikTok yang sudah login.
+3. Klik ikon BeeSense, pilih tab, lalu tempel alamat lokal dan kode pasangan.
+4. Tekan **Hubungkan & mulai**. Progres post/komentar/balasan muncul di sidebar.
+5. Jika CAPTCHA muncul, selesaikan di TikTok lalu tekan **Validasi selesai, lanjutkan**.
+6. Tekan **Hentikan pengambilan** untuk melepas tab; data yang diterima tetap ada.
+
+Menutup sidebar tidak menghentikan worker. Membuka kembali memulihkan status
+dari `storage.session`. Jika service worker benar-benar dimuat ulang, UI meminta
+pairing ulang dan tidak mengklaim koneksi masih berjalan. Kode pasangan tidak
+disimpan di storage. Penghitung hanya mencakup native ID record yang diterima
+bridge dalam sesi konektor ini; hasil ekspor akhir mengikuti filter Python.
+
+Posisi panel mengikuti pengaturan Chrome. Jika tampil di kiri, pilih
+**Setelan → Tampilan → Panel samping → Kanan**. API ekstensi tidak dapat memaksa
+posisi panel. [Rincian desain dan pengujian](../../../../docs/crawler/TIKTOK_SIDEBAR_20261106.md).
+
+## Peningkatan throughput — Connector 1.3.0, 6 November 2026
+
+Build `20261106-throughput-v6` menggunakan dua fase per post: kumpulkan komentar
+utama sampai akhir pagination sumber (atau cap yang dikonfigurasi), kemudian
+rewind panel dan telusuri balasan. Balasan bawaan dalam respons komentar tetap
+disimpan; klik balasan ditunda sampai fase kedua.
+
+`platforms.tiktok.comment_stagnation_seconds` default 75 (rentang 60–90).
+Hanya ID komentar/balasan baru yang mereset timer; respons berulang atau metadata
+post tidak meresetnya. Post yang stagnan mengirim status `PARTIAL` dan warning
+`comment_stagnation_timeout`. Koordinator mengekspor progres, melanjutkan kandidat
+baru dan pencarian, lalu mencoba ulang post parsial. `partial_retry_limit`
+default 1 (rentang 0–3). Retry tetap tunduk target, deadline global dan cap post;
+retry tidak menambah hitungan post yang dicoba atau menggandakan native ID.
+Antrean belum selesai tersimpan dalam `tiktok_retry_queue.json` di bundle beserta
+checksum manifest; tidak otomatis diimpor oleh run baru. `comments_complete`
+tetap false. PARTIAL tidak lagi menghentikan seluruh kampanye.
+
+Jeda minimum tetap mengikuti `request_interval_seconds` / `scroll_pause_seconds`.
+Penalti idle tambahan dihapus. Setelah aksi, controller menunggu request relevan
+beserta body respons, maksimal 10 detik; `Network.loadingFailed` melepaskan request.
+Respons post lain tidak memengaruhi barrier, pacing atau data post aktif.
+Backoff HTTP 5xx adalah 5/10/15 detik (maksimum 15), reset setelah HTTP 2xx.
+Tiga 5xx beruntun memicu pause minimal 30 detik dan menghormati Retry-After yang
+lebih panjang. Status pause dibagikan antar tugas agar perpindahan post tidak
+melewati cooldown. 401/403/429 dan CAPTCHA tetap memakai penanganan sebelumnya.
+
+Bridge mensyaratkan Connector >=1.3.0 agar timer run tidak dimulai dengan kode
+lama. Reload ekstensi dari `Crawler/Backend/Tiktok/chrome_extension` dan pairing
+ulang sebelum uji live. Izin dan ID ekstensi tidak berubah. Tidak ada migrasi DB.
+Dockerfile native tetap menyalin package lengkap; Docker daemon lokal tidak aktif,
+sehingga rebuild belum diverifikasi. Jalankan ketika Docker tersedia:
+`docker build -f deployment/docker/Dockerfile.tiktok -t beesense-tiktok:local .`
+lalu `docker run --rm beesense-tiktok:local --dry-run`.
+
+Pengujian menggunakan fixture offline, termasuk 1.200 komentar +100 balasan
+sintetis, bukan bukti kecepatan TikTok live. Uji yang diminta berikutnya: target
+50 post, maksimal 3.600 detik, timer dimulai setelah pairing versi/build terverifikasi.
+
 
 ## Koreksi viewport komentar — Connector 1.2.3, 5 November 2026
 
@@ -146,20 +210,20 @@ Pengguna sudah mengonfirmasi pemasangan paket lokal. Uji live versi 1.0.0 mengha
 Reload paket 1.1.0 sebelum pemakaian berikutnya; perbaikan terbaru diuji offline. Baca [panduan dan hasil nyata](../../../../docs/crawler/TIKTOK_CHROME_LIVE.md).
 
 Ekstensi Manifest V3 tanpa dependensi/kode remote. Dibutuhkan Chrome 118+.
-Izin: debugger (inspeksi/kendali halaman dan respons jaringan), activeTab, storage;
+Izin: debugger (inspeksi/kendali halaman dan respons jaringan), activeTab, storage, sidePanel;
 host www.tiktok.com dan loopback 127.0.0.1. Chrome memberikan izin debugger luas;
-kode hanya menempel pada tab TikTok yang dipilih lewat popup. Pemasangan memerlukan
+kode hanya menempel pada tab TikTok yang dipilih lewat sidebar. Pemasangan memerlukan
 persetujuan pengguna. Tidak membaca profil/cookie/auth.json atau menyimpan pairing
-code. Storage.session hanya berisi status. Tidak memecahkan CAPTCHA otomatis.
+code. Storage.session berisi status, nama tab dan hitungan progres sesi. Tidak memecahkan CAPTCHA otomatis.
 
 Setelah disetujui: Load unpacked folder ini, jalankan CLI --chrome-extension,
-buka bridge_url, lalu masukkan alamat lokal dan pairing code ke popup pada tab
-TikTok. Lepas debugger lain dari tab itu sebelum Mulai. Stop melepas debugger
+buka bridge_url, lalu masukkan alamat lokal dan pairing code ke sidebar BeeSense.
+Pilih tab TikTok dan lepas debugger lain dari tab itu sebelum menghubungkan. Stop melepas debugger
 sendiri, tanpa menutup Chrome. Batas crawling berjalan setelah pairing berhasil.
 
 Manifest key adalah kunci publik untuk ID extension stabil, bukan rahasia.
 File sumber: background.mjs (pengendali), core.mjs (validasi/parser/UI),
-popup.html/css/mjs (pairing/status), manifest.json. Tes di
+sidepanel.html/css/mjs (pairing/status), manifest.json. Tes di
 `tests/crawler/test_tiktok_chrome_extension.mjs`; server HTTP diuji pada
 `tests/crawler/test_tiktok_chrome_bridge.py`.
 

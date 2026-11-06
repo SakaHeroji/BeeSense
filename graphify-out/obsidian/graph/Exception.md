@@ -10,7 +10,4 @@ tags:
 
 # Exception
 
-## Connections
-- [[SourceFailure]] - `inherits` [EXTRACTED]
-
 #graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

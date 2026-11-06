@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L205"
+location: "L213"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # auth_material()
 
 ## Connections
-- [[.start()]] - `calls` [EXTRACTED]
+- [[.start()_1]] - `calls` [EXTRACTED]
 - [[AuthError]] - `calls` [EXTRACTED]
 - [[Read exactly one TikTok token without serializing any authentication data.]] - `rationale_for` [EXTRACTED]
 - [[tiktok_crawler.py]] - `contains` [EXTRACTED]

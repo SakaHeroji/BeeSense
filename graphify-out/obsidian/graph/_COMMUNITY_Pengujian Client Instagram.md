@@ -1,11 +1,13 @@
 ---
 type: community
-members: 40
+cohesion: 0.08
+members: 37
 ---
 
 # Pengujian Client Instagram
 
-**Members:** 40 nodes
+**Cohesion:** 0.08 - loosely connected
+**Members:** 37 nodes
 
 ## Members
 - [[.crawler()_2]] - code - tests/crawler/test_instagram_crawler.py
@@ -14,14 +16,12 @@ members: 40
 - [[.media_comments_chunk()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.media_info_v1()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.media_pk_from_code()]] - code - tests/crawler/test_instagram_crawler.py
-- [[.setUp()_13]] - code - tests/crawler/test_instagram_crawler.py
 - [[.sleep()_1]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_actual_instagram_worker_missing_session_stops_without_network()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_auth_file_login_selects_instagram_and_never_exports_credentials()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_authentication_barrier_keeps_partial_records_without_retry()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_baseline_dedup_before_request_and_source_remains_unchanged()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_browser_cookie_is_opaque_and_device_survives_stale_auth_removal()]] - code - tests/crawler/test_instagram_crawler.py
-- [[.test_complete_bundle_matches_social_excel_contract_and_checksums()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_credentials_cannot_be_embedded_in_config()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_filtering_dates_keywords_and_minimum_uses_unique_comments()]] - code - tests/crawler/test_instagram_crawler.py
 - [[.test_formula_and_long_unicode_text_remain_safe_and_full_in_jsonl()]] - code - tests/crawler/test_instagram_crawler.py
@@ -44,10 +44,9 @@ members: 40
 - [[.test_verified_429_respects_retry_after_and_budget()]] - code - tests/crawler/test_instagram_crawler.py
 - [[FakeClient]] - code - tests/crawler/test_instagram_crawler.py
 - [[InstagramCrawlerTests]] - code - tests/crawler/test_instagram_crawler.py
-- [[records()_1]] - code - tests/crawler/test_instagram_crawler.py
+- [[records()]] - code - tests/crawler/test_instagram_crawler.py
 - [[spawn_fixture()]] - code - tests/crawler/test_instagram_crawler.py
 - [[spawn_hanging()]] - code - tests/crawler/test_instagram_crawler.py
-- [[stream()]] - code - tests/crawler/test_tiktok_crawler.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -57,19 +56,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 7 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 5 edges to [[_COMMUNITY_Kuota Harian Scweet_1]]
-- 4 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_7]]
-- 2 edges to [[_COMMUNITY_Worker Instaloader_2]]
-- 1 edge to [[_COMMUNITY_Batas Crawler Opsional_1]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
+- 10 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
+- 5 edges to [[_COMMUNITY_Kuota Harian Scweet]]
+- 2 edges to [[_COMMUNITY_Konfigurasi Crawler Universal]]
+- 2 edges to [[_COMMUNITY_Penyaringan Relevansi dan Narasi Topik]]
 - 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
-- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
-- 1 edge to [[_COMMUNITY_Arsip Data Harian_1]]
 
 ## Top bridge nodes
-- [[records()_1]] - degree 11, connects to 6 communities
 - [[InstagramCrawlerTests]] - degree 32, connects to 4 communities
-- [[stream()]] - degree 4, connects to 3 communities
+- [[records()]] - degree 9, connects to 3 communities
 - [[FakeClient]] - degree 9, connects to 2 communities
-- [[spawn_hanging()]] - degree 4, connects to 1 community
+- [[.crawler()_2]] - degree 13, connects to 1 community
+- [[.test_formula_and_long_unicode_text_remain_safe_and_full_in_jsonl()]] - degree 4, connects to 1 community

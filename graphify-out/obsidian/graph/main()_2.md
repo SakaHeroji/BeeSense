@@ -1,20 +1,19 @@
 ---
-source_file: "scripts/filter_context_relevance.py"
+source_file: "scripts/organize_social_outputs.py"
 type: "code"
-community: "Penyaringan Relevansi dan Narasi Topik"
-location: "L12"
+community: "Arsip Data Harian"
+location: "L100"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Arsip_Data_Harian
 ---
 
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[ContextRelevanceFilter]] - `calls` [EXTRACTED]
-- [[LocalSemanticBackend]] - `calls` [EXTRACTED]
-- [[filter_context_relevance.py]] - `contains` [EXTRACTED]
+- [[consolidate()]] - `calls` [EXTRACTED]
+- [[discover()]] - `calls` [EXTRACTED]
+- [[organize_social_outputs.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/code #graphify/EXTRACTED #community/Arsip_Data_Harian

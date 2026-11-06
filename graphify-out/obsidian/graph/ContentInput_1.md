@@ -12,11 +12,11 @@ tags:
 # ContentInput
 
 ## Connections
-- [[.accept()_1]] - `calls` [INFERRED]
-- [[.accept()_3]] - `calls` [EXTRACTED]
+- [[.accept()_5]] - `calls` [EXTRACTED]
+- [[.accept()_6]] - `calls` [INFERRED]
 - [[.add_content()_1]] - `references` [EXTRACTED]
 - [[.content()_1]] - `references` [EXTRACTED]
-- [[.setUp()_11]] - `calls` [EXTRACTED]
+- [[.setUp()_18]] - `calls` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
 

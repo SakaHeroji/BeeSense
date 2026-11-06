@@ -21,8 +21,6 @@ tags:
 - [[PlatformPage()]] - `calls` [EXTRACTED]
 - [[PlatformWorkspace.tsx]] - `imports` [EXTRACTED]
 - [[ProgressChart()]] - `calls` [EXTRACTED]
-- [[TikTokConnector()]] - `calls` [EXTRACTED]
-- [[TikTokConnector.tsx]] - `imports` [EXTRACTED]
 - [[domain.ts]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

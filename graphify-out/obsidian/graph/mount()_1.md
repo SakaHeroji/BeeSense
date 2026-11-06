@@ -1,8 +1,8 @@
 ---
-source_file: "Crawler/Frontend/src/test/workflows.test.tsx"
+source_file: "Crawler/Frontend/src/test/tiktok-connector.test.tsx"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L14"
+location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,6 +12,6 @@ tags:
 # mount()
 
 ## Connections
-- [[workflows.test.tsx]] - `contains` [EXTRACTED]
+- [[tiktok-connector.test.tsx]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

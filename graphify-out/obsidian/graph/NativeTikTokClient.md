@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L407"
+location: "L417"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,7 +12,7 @@ tags:
 # NativeTikTokClient
 
 ## Connections
-- [[.__init__()_41]] - `method` [EXTRACTED]
+- [[.__init__()_27]] - `method` [EXTRACTED]
 - [[.candidate()]] - `method` [EXTRACTED]
 - [[.candidates()]] - `method` [EXTRACTED]
 - [[.capture()_2]] - `method` [EXTRACTED]
@@ -35,11 +35,13 @@ tags:
 - [[.route()]] - `method` [EXTRACTED]
 - [[.save_cooldown()]] - `method` [EXTRACTED]
 - [[.search()_1]] - `method` [EXTRACTED]
-- [[.start()]] - `method` [EXTRACTED]
-- [[.thread()_1]] - `method` [EXTRACTED]
+- [[.start()_1]] - `method` [EXTRACTED]
+- [[.thread()]] - `method` [EXTRACTED]
 - [[ChromeLiveWorker]] - `uses` [INFERRED]
+- [[Native TikTok dependencies Playwright 1.62.0 and openpyxl 3.1.5]] - `conceptually_related_to` [INFERRED]
+- [[Native client live failure versus fixture success]] - `references` [EXTRACTED]
 - [[One ordinary Playwright session; observe public UI traffic, never forge APIs.]] - `rationale_for` [EXTRACTED]
-- [[SocialExportMixin_5]] - `inherits` [EXTRACTED]
+- [[SocialExportMixin]] - `inherits` [EXTRACTED]
 - [[tiktok_crawler.py]] - `contains` [EXTRACTED]
 - [[worker_main()_1]] - `calls` [EXTRACTED]
 

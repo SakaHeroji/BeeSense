@@ -2,7 +2,7 @@
 source_file: "Crawler/Frontend/src/features/TikTokConnector.tsx"
 type: "code"
 community: "Frontend dan Transaksi Sosmed"
-location: "L54"
+location: "L56"
 tags:
   - graphify/code
   - graphify/EXTRACTED

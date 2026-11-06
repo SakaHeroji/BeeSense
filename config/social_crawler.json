@@ -192,6 +192,8 @@
       "request_interval_seconds": 3,
       "scroll_pause_seconds": 3,
       "idle_scroll_limit": 3,
+      "comment_stagnation_seconds": 75,
+      "partial_retry_limit": 1,
       "manual_wait_seconds": 0,
       "manual_poll_seconds": 2,
       "manual_profile_dir": ".cache/tiktok/chromium-profile"

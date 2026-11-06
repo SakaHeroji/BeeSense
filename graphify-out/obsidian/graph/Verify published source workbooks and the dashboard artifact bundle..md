@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "rationale"
-community: "Verifikasi Dataset Publik"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Verifikasi_Dataset_Publik
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Verify published source workbooks and the dashboard artifact bundle.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[verify_dashboard_data.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

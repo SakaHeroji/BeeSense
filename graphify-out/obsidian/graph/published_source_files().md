@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/verify_dashboard_data.py"
 type: "code"
-community: "Verifikasi Dataset Publik"
+community: "Narasi Gemini dan Pembandingan"
 location: "L47"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Verifikasi_Dataset_Publik
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # published_source_files()
@@ -18,4 +18,4 @@ tags:
 - [[verify()_2]] - `calls` [EXTRACTED]
 - [[verify_dashboard_data.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Verifikasi_Dataset_Publik
+#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

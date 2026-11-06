@@ -1,36 +1,27 @@
 ---
 type: community
-members: 23
+cohesion: 0.21
+members: 12
 ---
 
 # Batas Crawler Opsional
 
-**Members:** 23 nodes
+**Cohesion:** 0.21 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[.__init__()_32]] - code - Crawler/Backend/instagram_crawler.py
-- [[.check_session()]] - code - Crawler/Backend/instagram_crawler.py
-- [[.plan()_3]] - code - Crawler/Backend/instagram_crawler.py
-- [[.test_browser_429_passes_retry_after_and_keeps_chrome_open()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_browser_is_real_backend_but_injected_workers_remain_synthetic()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_cli_error_never_exposes_auth_redirect_or_input()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_configuration_rejects_secrets_and_invalid_limits()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_document_parser_rejects_unrelated_posts_and_preserves_reply_parent()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_navigation_observes_429_even_when_chrome_throws_before_response()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_repeated_cli_error_preserves_browser_without_claiming_access_barrier()]] - code - tests/crawler/test_instagram_browser.py
-- [[.test_timeout_preserves_browser_for_manual_inspection()]] - code - tests/crawler/test_instagram_browser.py
-- [[InstagramBrowserTests]] - code - tests/crawler/test_instagram_browser.py
-- [[InstagramCrawler]] - code - Crawler/Backend/instagram_crawler.py
-- [[InstagramSettings]] - code - Crawler/Backend/instagram_crawler.py
-- [[Offline checks for the Chrome boundary, native identity, and provenance.]] - rationale - tests/crawler/test_instagram_browser.py
-- [[Project the versioned universal file to a legacy standalone adapter contract.]] - rationale - Crawler/Backend/crawler_config.py
-- [[SocialExportMixin_3]] - code
-- [[Standalone trial. The production SocialCrawler backend stays unchanged.]] - rationale - Crawler/Backend/instagram_crawler.py
-- [[main()_11]] - code - Crawler/Backend/instagram_crawler.py
-- [[run_instagram_worker()]] - code - Crawler/Backend/instagram_crawler.py
-- [[standalone_config()]] - code - Crawler/Backend/crawler_config.py
-- [[test_instagram_browser.py]] - code - tests/crawler/test_instagram_browser.py
+- [[.__init__()_14]] - code - Crawler/Backend/instagram_crawler.py
+- [[._calendar_date()]] - code - Crawler/Backend/social_export.py
+- [[._select()]] - code - Crawler/Backend/social_export.py
+- [[._write_compact()]] - code - Crawler/Backend/social_export.py
+- [[.comment_exclude()]] - code - Crawler/Backend/social_export.py
+- [[Historical interruptedChrome trial before1.5integration]] - concept - graphify-out/obsidian/InstagramCrawler instagrapi.md
+- [[InstagramAdapter]] - code - Crawler/Backend/instagram_crawler.py
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - document - graphify-out/obsidian/InstagramCrawler instagrapi.md
+- [[Project the full audit rows into one sheet, applying current filters.]] - rationale - Crawler/Backend/social_export.py
+- [[Requires config, include and exclude matchers; performs no acquisition.]] - rationale - Crawler/Backend/social_export.py
+- [[Return a local date for display; relative source dates stay estimates.]] - rationale - Crawler/Backend/social_export.py
+- [[SocialExportMixin_5]] - code - Crawler/Backend/social_export.py
 
 ## Live Query (requires Dataview plugin)
 
@@ -40,20 +31,17 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 13 edges to [[_COMMUNITY_Batas Crawler Opsional_2]]
-- 8 edges to [[_COMMUNITY_Konfigurasi Crawler Universal]]
-- 5 edges to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
-- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
-- 1 edge to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 1 edge to [[_COMMUNITY_Batas Crawler Opsional]]
-- 1 edge to [[_COMMUNITY_Pengujian Client Instagram]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_2]]
-- 1 edge to [[_COMMUNITY_Wrapper RedditCrawler_1]]
+- 7 edges to [[_COMMUNITY_Batas Crawler Opsional]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
+- 3 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_3]]
+- 1 edge to [[_COMMUNITY_Kontrak Record Reddit_1]]
+- 1 edge to [[_COMMUNITY_Crawler Selenium]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_4]]
+- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_5]]
 
 ## Top bridge nodes
-- [[standalone_config()]] - degree 21, connects to 8 communities
-- [[test_instagram_browser.py]] - degree 8, connects to 4 communities
-- [[InstagramCrawler]] - degree 16, connects to 2 communities
-- [[main()_11]] - degree 8, connects to 1 community
-- [[.__init__()_32]] - degree 5, connects to 1 community
+- [[SocialExportMixin_5]] - degree 18, connects to 5 communities
+- [[InstagramAdapter]] - degree 6, connects to 1 community
+- [[IntegratedInstagram1.5.2 pacing after verified dashboard release]] - degree 4, connects to 1 community
+- [[._select()]] - degree 3, connects to 1 community
+- [[Historical interruptedChrome trial before1.5integration]] - degree 2, connects to 1 community

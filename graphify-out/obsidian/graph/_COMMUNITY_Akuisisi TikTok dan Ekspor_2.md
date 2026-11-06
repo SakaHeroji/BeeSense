@@ -1,28 +1,29 @@
 ---
 type: community
-members: 15
+cohesion: 0.14
+members: 14
 ---
 
 # Akuisisi TikTok dan Ekspor
 
-**Members:** 15 nodes
+**Cohesion:** 0.14 - loosely connected
+**Members:** 14 nodes
 
 ## Members
-- [[.__init__()_40]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.accept()_6]] - code - Crawler/Backend/tiktok_crawler.py
-- [[.submit()]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
-- [[Live, loopback-only taskresult bridge for an already-connected Chrome agent.  T]] - rationale - Crawler/Backend/Tiktok/chrome_bridge.py
-- [[Native TikTok browser crawler with the shared Excel and native-ID contract.]] - rationale - Crawler/Backend/tiktok_crawler.py
-- [[TikTokAdapter]] - code - Crawler/Backend/tiktok_crawler.py
-- [[chrome_bridge.py]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
-- [[metric_number()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[native_id()_1]] - code - Crawler/Backend/tiktok_crawler.py
-- [[normalize_item()_2]] - code - Crawler/Backend/tiktok_crawler.py
-- [[parse_url()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[project_comment()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[project_video()]] - code - Crawler/Backend/tiktok_crawler.py
-- [[source_time()_1]] - code - Crawler/Backend/tiktok_crawler.py
-- [[tiktok_crawler.py]] - code - Crawler/Backend/tiktok_crawler.py
+- [[.__call__()_4]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[.__init__()_25]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[.close()_8]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[.page()]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[.setUp()_10]] - code - tests/crawler/test_tiktok_chrome_bridge.py
+- [[.test_extension_cli_waits_for_pairing_before_creating_crawler()]] - code - tests/crawler/test_tiktok_crawler.py
+- [[.test_pairing_timeout_never_starts_crawler_and_closes_bridge()]] - code - tests/crawler/test_tiktok_crawler.py
+- [[.wait_for_extension()]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[ChromeLiveWorker]] - code - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[Extension installation and pairing contract]] - rationale - graphify-out/memory/query_20261103_091127_bagaimana_cara_memasangnya.md
+- [[Local Chrome bridge introduction]] - rationale - graphify-out/memory/query_20261103_090841_perbaiki_agar_crawlernya_bisa_lebih_baik.md
+- [[One pending operation at a time, with streamed batches and stale-task rejection.]] - rationale - Crawler/Backend/Tiktok/chrome_bridge.py
+- [[Pairing timeout is separate from crawl time]] - rationale - graphify-out/memory/query_20261103_093313_sudah_saya_pasang_ekstensinya__update_tiktok_crawl.md
+- [[Queued keywords are not executed queries]] - rationale - graphify-out/memory/query_20261105_044233_apakah_tiktok_crawler_yang_aktif_menggunakan_selur.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,24 +33,18 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 11 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
-- 8 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
-- 7 edges to [[_COMMUNITY_Akuisisi YouTube_2]]
-- 6 edges to [[_COMMUNITY_Konfigurasi Crawler Universal_1]]
-- 6 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
-- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_5]]
-- 2 edges to [[_COMMUNITY_Arsip Data Harian]]
-- 2 edges to [[_COMMUNITY_Konektor Chrome TikTok Lokal_2]]
-- 2 edges to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi]]
-- 1 edge to [[_COMMUNITY_Worker Instaloader_1]]
-- 1 edge to [[_COMMUNITY_Integrasi X dan Provenans Akuisisi_6]]
-- 1 edge to [[_COMMUNITY_Parsing Identitas Reddit_3]]
-- 1 edge to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_6]]
-- 1 edge to [[_COMMUNITY_Arsip Data Harian_1]]
+- 6 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_1]]
+- 3 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_3]]
+- 3 edges to [[_COMMUNITY_Arsip Data Harian]]
+- 2 edges to [[_COMMUNITY_Akuisisi YouTube_1]]
+- 2 edges to [[_COMMUNITY_Akuisisi TikTok dan Ekspor_4]]
+- 1 edge to [[_COMMUNITY_Capture Reddit Playwright]]
+- 1 edge to [[_COMMUNITY_Narasi Gemini dan Pembandingan]]
 
 ## Top bridge nodes
-- [[tiktok_crawler.py]] - degree 34, connects to 11 communities
-- [[parse_url()]] - degree 12, connects to 4 communities
-- [[normalize_item()_2]] - degree 10, connects to 3 communities
-- [[TikTokAdapter]] - degree 7, connects to 3 communities
-- [[native_id()_1]] - degree 10, connects to 2 communities
+- [[ChromeLiveWorker]] - degree 29, connects to 7 communities
+- [[.__call__()_4]] - degree 2, connects to 1 community
+- [[.__init__()_25]] - degree 2, connects to 1 community
+- [[.setUp()_10]] - degree 2, connects to 1 community
+- [[.test_extension_cli_waits_for_pairing_before_creating_crawler()]] - degree 2, connects to 1 community

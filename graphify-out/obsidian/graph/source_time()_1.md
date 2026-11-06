@@ -1,19 +1,21 @@
 ---
-source_file: "Crawler/Backend/tiktok_crawler.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Akuisisi TikTok dan Ekspor"
-location: "L1064"
+community: "Pengujian Parser Reddit"
+location: "L707"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Akuisisi_TikTok_dan_Ekspor
+  - community/Pengujian_Parser_Reddit
 ---
 
 # source_time()
 
 ## Connections
-- [[project_comment()]] - `calls` [EXTRACTED]
-- [[project_video()]] - `calls` [EXTRACTED]
-- [[tiktok_crawler.py]] - `contains` [EXTRACTED]
+- [[.thread()_1]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[first()]] - `calls` [EXTRACTED]
+- [[rendered_text()]] - `calls` [EXTRACTED]
+- [[utc_datetime()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor
+#graphify/code #graphify/EXTRACTED #community/Pengujian_Parser_Reddit

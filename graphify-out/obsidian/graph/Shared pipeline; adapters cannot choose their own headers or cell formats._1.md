@@ -12,6 +12,6 @@ tags:
 # Shared pipeline; adapters cannot choose their own headers or cell formats.
 
 ## Connections
-- [[Dataset_1]] - `rationale_for` [EXTRACTED]
+- [[Dataset_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Kontrak_Record_Reddit

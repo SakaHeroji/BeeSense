@@ -1,17 +1,17 @@
 ---
-source_file: "Crawler/Backend/Tiktok/chrome_extension/background.mjs"
-type: "code"
-community: "Konektor Chrome TikTok Lokal"
-location: "L70"
+source_file: "tests/crawler/test_instaloader_crawler.py"
+type: "concept"
+community: "Narasi Gemini dan Pembandingan"
+location: "L14"
 tags:
-  - graphify/code
+  - graphify/concept
   - graphify/EXTRACTED
-  - community/Konektor_Chrome_TikTok_Lokal
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # requests
 
 ## Connections
-- [[background.mjs]] - `contains` [EXTRACTED]
+- [[test_instaloader_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Konektor_Chrome_TikTok_Lokal
+#graphify/concept #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

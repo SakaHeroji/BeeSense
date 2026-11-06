@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Kontrak Record Reddit"
-location: "L917"
+location: "L918"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -18,6 +18,6 @@ tags:
 - [[RecordFactory_1]] - `inherits` [EXTRACTED]
 - [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
 - [[export_campaign()]] - `calls` [EXTRACTED]
-- [[run()_2]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

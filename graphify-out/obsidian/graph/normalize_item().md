@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
 community: "Batas Crawler Opsional"
-location: "L361"
+location: "L362"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[.call()_1]] - `calls` [EXTRACTED]
 - [[Map explicit native IDstimestamps; do not infer authors or text coverage.]] - `rationale_for` [EXTRACTED]
-- [[ValueError_2]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [EXTRACTED]
 - [[_timestamp()_1]] - `calls` [EXTRACTED]
 - [[_value()]] - `calls` [EXTRACTED]
 - [[collect()]] - `calls` [EXTRACTED]
@@ -23,6 +23,6 @@ tags:
 - [[media_pk_from_url()]] - `calls` [EXTRACTED]
 - [[media_url()]] - `calls` [EXTRACTED]
 - [[native_pk()]] - `calls` [EXTRACTED]
-- [[object_key()_1]] - `calls` [EXTRACTED]
+- [[object_key()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

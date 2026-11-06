@@ -1,17 +1,17 @@
 ---
 source_file: "Crawler/Backend/social_export.py"
 type: "rationale"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L31"
+community: "Batas Crawler Opsional"
+location: "L56"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Batas_Crawler_Opsional
 ---
 
 # Requires config, include and exclude matchers; performs no acquisition.
 
 ## Connections
-- [[SocialExportMixin_4]] - `rationale_for` [EXTRACTED]
+- [[SocialExportMixin_5]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/rationale #graphify/EXTRACTED #community/Batas_Crawler_Opsional

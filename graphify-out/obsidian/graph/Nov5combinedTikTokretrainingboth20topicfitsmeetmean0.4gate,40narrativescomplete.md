@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[12workbooksmerge36,233unique=2,552roots+33,681commentsreplies;TikTokallarchive25617806distinctfromdaily7492537;sourcesunchanged34,764repeatsremoved]] - `references` [EXTRACTED]
 - [[BeeSense dashboard runtimetrainingpublication runbook]] - `references` [EXTRACTED]
-- [[BeeSenseObsidian index of frontendcontracts,currentretraining and datedcrawlermodelhistory]] - `references` [EXTRACTED]
 - [[Beforeafter clustering architectureshared workbook,selected sentence cohorts,local fitting and stored Geminidashboard artifacts]] - `references` [EXTRACTED]
 - [[Explicitpermission400keywords+400representatives→GoogleGemini40narratives,20before20after,prompthashapproved,filefittedidentical,no-narrativeoriginalsretained]] - `references` [EXTRACTED]
 - [[LocalpinnedSBERTnewencoding,UMAPtwoSeedsDBSCANWardrefit;before20c_v0.4346102845after20c_v0.4666033620,106topicsindividually0.4,newchecksum-boundmask]] - `references` [EXTRACTED]

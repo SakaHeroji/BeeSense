@@ -5,6 +5,9 @@ tags: [beesense, crawler, twitter, scweet]
 
 # TwitterCrawler Scweet
 
+Pembaruan 6 November: [[Optimasi Crawler X dan Instagram 20261106]] menjelaskan
+penghematan request, pemeriksaan root, pagination dan cooldown antarrun.
+
 Class `TwitterCrawler` pada `Crawler/Backend/twitter_crawler.py` merupakan percobaan X/Twitter mandiri dengan Scweet 5.8.2. Konfigurasi `config/twitter_crawler.json` menetapkan 30 menit, target percobaan 1.000 post, maksimal 10 komentar/balasan per post dan query pendidikan dari preset Reddit. Kini diintegrasikan ke SocialCrawler 1.7.0 melalui TwitterCoordinatorWorker, dengan preset Twitter-only 3 jam/1.000 post pada config/social_crawler_twitter_3h.json.
 
 ## Alur dan kontrak

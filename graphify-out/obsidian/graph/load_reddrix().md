@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
-community: "Wrapper RedditCrawler"
-location: "L268"
+community: "Kuota Harian Scweet"
+location: "L284"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Wrapper_RedditCrawler
+  - community/Kuota_Harian_Scweet
 ---
 
 # load_reddrix()
@@ -15,7 +15,8 @@ tags:
 - [[.test_browser_factory_overrides_initial_and_refreshed_sessions()]] - `calls` [EXTRACTED]
 - [[Configure initial and refreshed sessions inside an isolated worker module.]] - `rationale_for` [EXTRACTED]
 - [[collect_reddrix()]] - `calls` [EXTRACTED]
+- [[controlled_reddrix()]] - `calls` [EXTRACTED]
 - [[resolve_reddrix_display()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Wrapper_RedditCrawler
+#graphify/code #graphify/EXTRACTED #community/Kuota_Harian_Scweet

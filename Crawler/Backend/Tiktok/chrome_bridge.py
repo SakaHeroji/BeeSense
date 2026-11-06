@@ -26,7 +26,8 @@ from pathlib import Path
 from urllib.parse import parse_qs
 
 LIVE_METHOD = "beesense_existing_chrome_live"
-LIVE_VERSION = "BeeSenseChromeLive:1.2.1"
+LIVE_VERSION = "BeeSenseChromeLive:1.4.0"
+MIN_CONNECTOR_VERSION = "1.3.0"
 COMMENT_PROTOCOL = "source-pagination-v3"
 STATUSES = {
     "FINISHED_BEST_EFFORT",
@@ -38,6 +39,7 @@ STATUSES = {
     "INTERRUPTED",
     "COMMENTS_INCOMPLETE",
     "CLIENT_UPGRADE_REQUIRED",
+    "PARTIAL",
 }
 WARNINGS = {
     "comments_completeness_unverified",
@@ -54,6 +56,8 @@ WARNINGS = {
     "comment_control_error",
     "tiktok_view_changed",
     "chrome_command_timeout",
+    "comment_stagnation_timeout",
+    "server_error_backoff",
 }
 FIELDS = {
     "id",
@@ -155,7 +159,8 @@ class ChromeLiveWorker:
                 build = self.headers.get("X-BeeSense-Connector-Build", "")
                 return (
                     re.fullmatch(r"\d{1,3}\.\d{1,3}\.\d{1,3}", version) is not None
-                    and tuple(map(int, version.split("."))) >= (1, 2, 1)
+                    and tuple(map(int, version.split(".")))
+                    >= tuple(map(int, MIN_CONNECTOR_VERSION.split(".")))
                     and self.headers.get("X-BeeSense-Comment-Policy")
                     == COMMENT_PROTOCOL
                     and re.fullmatch(r"[a-zA-Z0-9._-]{1,80}", build) is not None
@@ -176,16 +181,23 @@ class ChromeLiveWorker:
                         return self.send(403, "Rejected client")
                     if not self.compatible_client():
                         if worker.client_error is None:
-                            worker.client_error = "Reload BeeSense TikTok Connector 1.2.1 from this project"
+                            worker.client_error = (
+                                "Reload BeeSense TikTok Connector "
+                                + MIN_CONNECTOR_VERSION
+                                + " from this project"
+                            )
                             worker.progress(
                                 dict(
                                     stage="connector_upgrade_required",
-                                    minimum_version="1.2.1",
+                                    minimum_version=MIN_CONNECTOR_VERSION,
                                     crawling_started=False,
                                 )
                             )
                         return self.send(
-                            409, "Reload connector 1.2.1: comment protocol required"
+                            409,
+                            "Reload connector "
+                            + MIN_CONNECTOR_VERSION
+                            + ": throughput and comment protocol required",
                         )
                     worker.client_info = {
                         "version": self.headers["X-BeeSense-Connector-Version"],
@@ -213,7 +225,10 @@ class ChromeLiveWorker:
                         return self.send(403, "Rejected client")
                     if not self.compatible_client():
                         return self.send(
-                            409, "Reload connector 1.2.1: comment protocol required"
+                            409,
+                            "Reload connector "
+                            + MIN_CONNECTOR_VERSION
+                            + ": throughput and comment protocol required",
                         )
                     try:
                         size = int(self.headers.get("Content-Length", "0"))
@@ -289,7 +304,7 @@ class ChromeLiveWorker:
 <p>{escape(self.client_error or "")}</p>
 <p>Verified connector: {escape(json.dumps(self.client_info))}</p>
 <h2>Current task</h2><pre id="task">{escape(json.dumps(task, ensure_ascii=False))}</pre>
-{('<details><summary>Connect BeeSense extension</summary><p>Use this URL and the temporary pairing code in the extension popup. The code is local and expires when this process stops.</p><label>Pairing code <input readonly value="' + escape(self.nonce) + '"></label></details>') if self.extension_mode else ""}
+{('<details><summary>Connect BeeSense extension</summary><p>Click the BeeSense toolbar icon to open its sidebar. Choose the TikTok tab, paste this URL and the temporary pairing code, then click Hubungkan &amp; mulai. The code expires when this process stops.</p><label>Pairing code <input readonly value="' + escape(self.nonce) + '"></label></details>') if self.extension_mode else ""}
 <form method="post" action="/result"><input type="hidden" name="nonce" value="{escape(self.nonce)}">
 <label for="batch">Batch JSON</label><textarea id="batch" name="batch" required></textarea>
 <button type="submit">Send live batch</button></form></html>"""
@@ -435,6 +450,9 @@ class ChromeLiveWorker:
             scroll_pause_seconds=settings.scroll_pause_seconds,
             request_interval_seconds=settings.request_interval_seconds,
             idle_scroll_limit=settings.idle_scroll_limit,
+            comment_stagnation_seconds=getattr(
+                settings, "comment_stagnation_seconds", 75
+            ),
         )
         if operation != "search":
             cached = target.get("cached_root") or {}

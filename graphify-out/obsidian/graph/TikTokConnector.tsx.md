@@ -12,24 +12,14 @@ tags:
 # TikTokConnector.tsx
 
 ## Connections
-- [[Button()]] - `imports` [EXTRACTED]
 - [[CopyField()]] - `contains` [EXTRACTED]
-- [[Field()]] - `imports` [EXTRACTED]
-- [[Job]] - `imports` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports_from` [EXTRACTED]
-- [[Notice()]] - `imports` [EXTRACTED]
 - [[PlatformWorkspace.tsx]] - `imports_from` [EXTRACTED]
-- [[Spinner()]] - `imports` [EXTRACTED]
+- [[SessionGuide()]] - `imports` [EXTRACTED]
+- [[SessionGuide.tsx]] - `imports_from` [EXTRACTED]
 - [[TikTokChromePreparation()]] - `contains` [EXTRACTED]
 - [[TikTokConnector()]] - `contains` [EXTRACTED]
 - [[TikTokWorkflow()]] - `contains` [EXTRACTED]
-- [[api.ts]] - `imports_from` [EXTRACTED]
-- [[connectorStates]] - `imports` [EXTRACTED]
-- [[dateTime()]] - `imports` [EXTRACTED]
-- [[domain.ts]] - `imports_from` [EXTRACTED]
-- [[number()]] - `imports` [EXTRACTED]
-- [[tiktok-connector.ts]] - `imports_from` [EXTRACTED]
-- [[types.ts]] - `imports_from` [EXTRACTED]
-- [[ui.tsx]] - `imports_from` [EXTRACTED]
+- [[users_socs3_documents_beesense_crawler_frontend_src_shared_ui_tsx]] - `imports_from` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_dan_Transaksi_Sosmed

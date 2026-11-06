@@ -19,8 +19,9 @@ tags:
 - [[key]] - `contains` [EXTRACTED]
 - [[manifest_version]] - `contains` [EXTRACTED]
 - [[minimum_chrome_version]] - `contains` [EXTRACTED]
-- [[name_1]] - `contains` [EXTRACTED]
+- [[name_2]] - `contains` [EXTRACTED]
 - [[permissions]] - `contains` [EXTRACTED]
+- [[side_panel]] - `contains` [EXTRACTED]
 - [[version_1]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Frontend_TikTok_dan_Koneksi_Chrome

@@ -1,15 +1,19 @@
 ---
 type: community
-members: 2
+cohesion: 0.50
+members: 4
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 2 nodes
+**Cohesion:** 0.50 - moderately connected
+**Members:** 4 nodes
 
 ## Members
-- [[JobStatistics()]] - code - Crawler/Frontend/src/features/JobStatistics.tsx
-- [[JobStatistics.tsx]] - code - Crawler/Frontend/src/features/JobStatistics.tsx
+- [[.prettierrc.json]] - code - Crawler/Frontend/.prettierrc.json
+- [[printWidth]] - code - Crawler/Frontend/.prettierrc.json
+- [[singleQuote]] - code - Crawler/Frontend/.prettierrc.json
+- [[trailingComma]] - code - Crawler/Frontend/.prettierrc.json
 
 ## Live Query (requires Dataview plugin)
 

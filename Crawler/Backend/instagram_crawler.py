@@ -47,6 +47,7 @@ ROOT = Path(__file__).resolve().parents[2]
 VERSION = "1.0.0"
 METHOD = "instagrapi_authenticated_private_api"
 STOP_STATUSES = {
+    "SERVER_UNAVAILABLE",
     "LOGIN_REQUIRED",
     "CHALLENGE_REQUIRED",
     "RATE_LIMITED",

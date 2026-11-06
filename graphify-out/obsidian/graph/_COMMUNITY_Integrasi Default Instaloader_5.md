@@ -1,30 +1,27 @@
 ---
 type: community
-members: 17
+cohesion: 0.17
+members: 12
 ---
 
 # Integrasi Default Instaloader
 
-**Members:** 17 nodes
+**Cohesion:** 0.17 - loosely connected
+**Members:** 12 nodes
 
 ## Members
-- [[Audit berheader tanpa data TikTok; arsip tetap 34785 ID unik]] - concept - graphify-out/obsidian/TikTok-Api Uji 500 Post 20261103.md
-- [[Obsidian TikTokCrawler Omkar — riwayat yang sudah diganti]] - document - graphify-out/obsidian/TikTokCrawler Omkar.md
-- [[Obsidian TikTokCrawler PyTok — riwayat]] - document - graphify-out/obsidian/TikTokCrawler PyTok.md
-- [[Obsidian trial PyTok 0500 CAPTCHA_REQUIRED 159,81 detik — riwayat]] - document - graphify-out/obsidian/TikTok PyTok Uji 500 Post 20261103.md
-- [[Obsidian uji TikTok-Api aktif 0500 ACCESS_BLOCKED 33,27 detik]] - document - graphify-out/obsidian/TikTok-Api Uji 500 Post 20261103.md
-- [[Omkar gagal memperoleh target dan bukan implementasi aktif]] - concept - graphify-out/obsidian/TikTokCrawler Omkar.md
-- [[Pengguna kembali ke TikTok-Api; PyTok tidak lagi aktif]] - concept - Crawler/Backend/Tiktok/PYTOK.md
-- [[Provenance PyTok historis, dependency sudah tidak aktif]] - document - Crawler/Backend/Tiktok/PYTOK.md
-- [[PyTok 0.3.0 revision dipin dan Camoufox 0.5.9 adalah backend trial lama]] - concept - graphify-out/obsidian/TikTokCrawler PyTok.md
-- [[PyTok historis 0500, PARTIAL CAPTCHA_REQUIRED, 159,81 detik]] - concept - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
-- [[PyTok timeout pertama, CAPTCHA worker kedua, telemetry HTTP tidak lengkap]] - rationale - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
-- [[Riwayat PyTok 0.3.0 PolyForm Noncommercial 1.0.0 AND MIT]] - concept - Crawler/Backend/Tiktok/PYTOK.md
-- [[Riwayat uji PyTok 3 November 2026]] - document - docs/crawler/TIKTOK_PYTOK_TRIAL_20261103.md
-- [[Tiga HTTP200, pencarian kosong; bukan bukti token kedaluwarsa]] - rationale - docs/crawler/TIKTOK_API_TRIAL_20261103.md
-- [[TikTok-Api 0500, PARTIAL ACCESS_BLOCKED setelah 33,27 detik]] - concept - docs/crawler/TIKTOK_API_TRIAL_20261103.md
-- [[Trial PyTok berhenti setelah timeout dan CAPTCHA, tanpa solverrotasi]] - concept - graphify-out/obsidian/TikTok PyTok Uji 500 Post 20261103.md
-- [[Uji backend aktif TikTok-Api 3 November 2026]] - document - docs/crawler/TIKTOK_API_TRIAL_20261103.md
+- [[36,233records produce55,257decisions11,185relevant,19,739general interaction,3,833out-of-scope,20,500uncertain;10,795unique accepted sentences]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Authorized Gemini uses10weighted keywords10centroid-near sentences per topic;new narrative bundle copies fitted files identically,validates beforeafter checksums and publishes atomically;UI r_b40553e1]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[ContextRelevanceFilterLocalSemanticBackend local pinned-SBERT reference-based occurrence filtering,not human-labeled classifier or per-comment API]] - document - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Default20topics,mean c_v=0.4,Gemini enabled,filtered active snapshot;gate never automatically lowered and local API key stays outside tracked config]] - concept - docs/machine-learning/CONFIGURATION.md
+- [[Different reference corpora prevent direct beforeafter quality claims;example tests are not precisionrecall,lightNLI rejected;old snapshotsconfigs retained,SQLitecache disposable,noDBmigration]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Dry-run validates without workbookmodelfittingcredentials;nested partial overrides merge and unknown fields reject;effective summaryconfig reproduces into new directory,not copied presets]] - concept - docs/machine-learning/CONFIGURATION.md
+- [[Every occurrence receives one decision;maskartifacts bind source checksum,IDtextmodelnormalization checks allow subset embedding reuse;UMAPDBSCANWardevaluation still refit]] - concept - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Maximum cosine against category examplesdirect=0.42margin0.035,short=14word targets may need context;context=0.50margin0.035 afterdirect=0.22;onlyrelevant enters clustering]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
+- [[Narrative-only bundle may retain source output_dir in config;opened bundle+manifest identify result;old datafitscontainer settings preserved,no migration]] - concept - docs/machine-learning/CONFIGURATION.md
+- [[Relevance config and dashboard beforeafter pair remain separate;mask must match source checksum,custom corpus cannot inherit old maskbaseline silently]] - rationale - docs/machine-learning/CONFIGURATION.md
+- [[Single configsocial_nlp.json for SocialNLPClusterer;five dated presets removed,history retained in summaries]] - document - docs/machine-learning/CONFIGURATION.md
+- [[URLnative roots and checksum-verified parent relations supply context;missingconflicting parents are not guessed;only original target sentence is clustering feature]] - rationale - docs/machine-learning/CONTEXT_RELEVANCE.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -32,3 +29,12 @@ members: 17
 TABLE source_file, type FROM #community/Integrasi_Default_Instaloader
 SORT file.name ASC
 ```
+
+## Connections to other communities
+- 2 edges to [[_COMMUNITY_Retraining Lima Platform]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Frontend TikTok dan Koneksi Chrome_1]]
+
+## Top bridge nodes
+- [[Single configsocial_nlp.json for SocialNLPClusterer;five dated presets removed,history retained in summaries]] - degree 8, connects to 3 communities
+- [[ContextRelevanceFilterLocalSemanticBackend local pinned-SBERT reference-based occurrence filtering,not human-labeled classifier or per-comment API]] - degree 8, connects to 1 community

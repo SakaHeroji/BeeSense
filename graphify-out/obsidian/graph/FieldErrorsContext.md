@@ -12,7 +12,6 @@ tags:
 # FieldErrorsContext
 
 ## Connections
-- [[AuthSettings.tsx]] - `imports` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[context.ts]] - `contains` [EXTRACTED]
 

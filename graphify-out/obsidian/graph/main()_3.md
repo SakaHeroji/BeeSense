@@ -1,19 +1,22 @@
 ---
-source_file: "scripts/generate_topic_narratives.py"
+source_file: "Crawler/Backend/social_crawler_selenium.py"
 type: "code"
-community: "Narasi Gemini dan Pembandingan"
-location: "L95"
+community: "Crawler Selenium"
+location: "L857"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Narasi_Gemini_dan_Pembandingan
+  - community/Crawler_Selenium
 ---
 
 # main()
 
 ## Connections
-- [[SocialNLPClusterer_1]] - `calls` [EXTRACTED]
-- [[enrich_run()]] - `calls` [EXTRACTED]
-- [[generate_topic_narratives.py]] - `contains` [EXTRACTED]
+- [[.error()]] - `indirect_call` [INFERRED]
+- [[.plan()]] - `calls` [EXTRACTED]
+- [[.run()]] - `calls` [EXTRACTED]
+- [[SocialCrawlerSelenium]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [INFERRED]
+- [[social_crawler_selenium.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan
+#graphify/code #graphify/EXTRACTED #community/Crawler_Selenium

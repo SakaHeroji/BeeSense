@@ -1,18 +1,18 @@
 ---
 type: community
-members: 5
+cohesion: 0.67
+members: 3
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 5 nodes
+**Cohesion:** 0.67 - moderately connected
+**Members:** 3 nodes
 
 ## Members
-- [[publicDefaults()]] - code - Crawler/Frontend/scripts/sync-config.mjs
-- [[source_1]] - code - Crawler/Frontend/scripts/sync-config.mjs
-- [[sync-config.mjs]] - code - Crawler/Frontend/scripts/sync-config.mjs
-- [[sync-config.test.mjs]] - code - Crawler/Frontend/scripts/sync-config.test.mjs
-- [[target_1]] - code - Crawler/Frontend/scripts/sync-config.mjs
+- [[Default publik 1000 post, durasi dan cap komentar null]] - concept - Crawler/Frontend/src/shared/crawler-defaults.json
+- [[Snapshot publik crawler-defaults.json]] - document - Crawler/Frontend/src/shared/crawler-defaults.json
+- [[Snapshot storage Excel, hostport dan nama env tanpa DSN]] - concept - Crawler/Frontend/src/shared/crawler-defaults.json
 
 ## Live Query (requires Dataview plugin)
 

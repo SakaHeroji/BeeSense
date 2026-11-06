@@ -2,7 +2,7 @@
 source_file: "tests/crawler/test_tiktok_chrome_extension.mjs"
 type: "code"
 community: "Konektor Chrome TikTok Lokal"
-location: "L18"
+location: "L19"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,41 +1,26 @@
 ---
 type: community
-members: 28
+cohesion: 0.31
+members: 11
 ---
 
 # Frontend dan Transaksi Sosmed
 
-**Members:** 28 nodes
+**Cohesion:** 0.31 - loosely connected
+**Members:** 11 nodes
 
 ## Members
-- [[Counts]] - code - Crawler/Frontend/src/shared/types.ts
-- [[Dataset_2]] - code - Crawler/Frontend/src/shared/types.ts
-- [[PreviewRow]] - code - Crawler/Frontend/src/shared/types.ts
-- [[SeriesPoint]] - code - Crawler/Frontend/src/shared/types.ts
-- [[TikTokConnectorState]] - code - Crawler/Frontend/src/shared/types.ts
-- [[advance()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[cap]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[changeDemoConnection()]] - code - Crawler/Frontend/src/shared/connector-demo.ts
-- [[connections]] - code - Crawler/Frontend/src/shared/connector-demo.ts
-- [[connector-demo.ts]] - code - Crawler/Frontend/src/shared/connector-demo.ts
-- [[dataset()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[demo.ts]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[demoApi]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[demoConnection()]] - code - Crawler/Frontend/src/shared/connector-demo.ts
-- [[emptyCounts()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[get()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[isTikTokJob()]] - code - Crawler/Frontend/src/shared/connector-demo.ts
-- [[load()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[mount()_1]] - code - Crawler/Frontend/src/test/workflows.test.tsx
-- [[plans_1]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[redactConfig()]] - code - Crawler/Frontend/src/shared/domain.ts
-- [[requireOperator()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[save()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[seed()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[stamp()_1]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[update()]] - code - Crawler/Frontend/src/shared/demo.ts
-- [[workflows.test.tsx]] - code - Crawler/Frontend/src/test/workflows.test.tsx
-- [[zeros]] - code - Crawler/Frontend/src/shared/demo.ts
+- [[Capabilities]] - code - Crawler/Frontend/src/shared/types.ts
+- [[FieldError]] - code - Crawler/Frontend/src/shared/types.ts
+- [[FieldErrorsContext]] - code - Crawler/Frontend/src/shared/context.ts
+- [[Session]] - code - Crawler/Frontend/src/shared/types.ts
+- [[TransactionMigration()]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
+- [[TransactionMigration.tsx]] - code - Crawler/Frontend/src/features/TransactionMigration.tsx
+- [[context.ts]] - code - Crawler/Frontend/src/shared/context.ts
+- [[crawlDateLabel()]] - code - Crawler/Frontend/src/shared/domain.ts
+- [[useApp()]] - code - Crawler/Frontend/src/shared/context.ts
+- [[useClock()]] - code - Crawler/Frontend/src/shared/hooks.ts
+- [[validateStorage()]] - code - Crawler/Frontend/src/shared/domain.ts
 
 ## Live Query (requires Dataview plugin)
 
@@ -45,16 +30,15 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 14 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_9]]
-- 9 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_11]]
-- 7 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_10]]
-- 3 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_8]]
-- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_19]]
+- 16 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_3]]
+- 11 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_2]]
+- 7 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_7]]
+- 6 edges to [[_COMMUNITY_Frontend dan Transaksi Sosmed_4]]
+- 1 edge to [[_COMMUNITY_Frontend dan Transaksi Sosmed_6]]
 
 ## Top bridge nodes
-- [[demo.ts]] - degree 38, connects to 4 communities
-- [[connector-demo.ts]] - degree 10, connects to 2 communities
-- [[workflows.test.tsx]] - degree 6, connects to 2 communities
-- [[demoApi]] - degree 6, connects to 2 communities
-- [[redactConfig()]] - degree 4, connects to 2 communities
+- [[TransactionMigration.tsx]] - degree 25, connects to 4 communities
+- [[context.ts]] - degree 11, connects to 4 communities
+- [[FieldError]] - degree 6, connects to 3 communities
+- [[Capabilities]] - degree 4, connects to 3 communities
+- [[TransactionMigration()]] - degree 8, connects to 2 communities

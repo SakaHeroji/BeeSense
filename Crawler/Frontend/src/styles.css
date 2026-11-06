@@ -3543,6 +3543,125 @@ progress::-moz-progress-bar {
   font-size: 13px;
   line-height: 1.7;
 }
+.session-guide {
+  margin-top: 18px;
+  border-block: 1px solid #ead8c8;
+  color: #000000;
+}
+.session-guide summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 14px 4px;
+  cursor: pointer;
+  list-style: none;
+  touch-action: manipulation;
+}
+.session-guide summary::-webkit-details-marker {
+  display: none;
+}
+.session-guide summary:hover {
+  background: #fff6ed;
+}
+.session-guide summary > svg {
+  flex-shrink: 0;
+}
+.session-guide summary > span {
+  min-width: 0;
+}
+.session-guide summary strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 650;
+  text-wrap: balance;
+}
+.session-guide summary small {
+  display: block;
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.session-guide-chevron {
+  margin-left: auto;
+}
+.session-guide[open] .session-guide-chevron {
+  transform: rotate(180deg);
+}
+.session-guide-content {
+  max-width: 72ch;
+  padding: 4px 4px 18px;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.session-guide-content > p {
+  margin-bottom: 14px;
+}
+.session-guide-content a {
+  display: inline;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.session-guide-content a:hover {
+  text-decoration-thickness: 2px;
+}
+.session-guide-content a svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.session-guide-source {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  background: #fff6ed;
+}
+.session-guide-source > div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+}
+.session-guide-source dt {
+  min-width: 130px;
+  font-size: 13px;
+}
+.session-guide-source dd {
+  margin: 0;
+  min-width: 0;
+}
+.session-guide-content code {
+  font: inherit;
+  font-weight: 650;
+}
+.session-guide-steps {
+  padding-left: 23px;
+  margin: 0 0 18px;
+}
+.session-guide-steps > li {
+  padding-left: 6px;
+}
+.session-guide-steps > li + li {
+  margin-top: 14px;
+}
+.session-guide-steps li::marker {
+  color: #a74500;
+  font-weight: 700;
+}
+.session-guide-steps p {
+  margin: 0;
+}
+.session-guide-content kbd {
+  font: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.session-guide-tip {
+  padding-left: 12px;
+  border-left: 3px solid #e97818;
+}
+.session-guide-content .session-guide-footnote {
+  font-size: 13px;
+  margin-bottom: 0;
+}
 .transaction-migration {
   padding: 28px;
   border-top: 1px solid #e6ddd5;

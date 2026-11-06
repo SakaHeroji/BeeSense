@@ -14,7 +14,6 @@ tags:
 ## Connections
 - [[DatasetView.tsx]] - `imports` [EXTRACTED]
 - [[JobDetail.tsx]] - `imports` [EXTRACTED]
-- [[TikTokConnector.tsx]] - `imports` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports` [EXTRACTED]
 - [[api.ts]] - `imports` [EXTRACTED]
 - [[connector-demo.ts]] - `imports` [EXTRACTED]

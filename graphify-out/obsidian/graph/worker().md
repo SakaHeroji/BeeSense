@@ -1,19 +1,26 @@
 ---
-source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Capture Reddit Playwright"
-location: "L104"
+community: "Parsing Identitas Reddit"
+location: "L853"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Capture_Reddit_Playwright
+  - community/Parsing_Identitas_Reddit
 ---
 
 # worker()
 
 ## Connections
-- [[SafeLogger]] - `calls` [EXTRACTED]
-- [[crawl_youtube.py]] - `contains` [EXTRACTED]
-- [[error_code()]] - `calls` [EXTRACTED]
+- [[.discover()]] - `calls` [EXTRACTED]
+- [[.fetch()_2]] - `calls` [EXTRACTED]
+- [[.thread()_1]] - `calls` [EXTRACTED]
+- [[LocalHtmlSource]] - `calls` [EXTRACTED]
+- [[PublicHtmlSource]] - `calls` [EXTRACTED]
+- [[RedditHtmlParser]] - `calls` [EXTRACTED]
+- [[Settings]] - `calls` [EXTRACTED]
+- [[bounded_events()]] - `calls` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[thread_id()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Capture_Reddit_Playwright
+#graphify/code #graphify/EXTRACTED #community/Parsing_Identitas_Reddit

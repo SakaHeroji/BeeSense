@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/twitter_crawler.py"
 type: "code"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L576"
+location: "L581"
 tags:
   - graphify/code
   - graphify/EXTRACTED

@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/crawler_limits.py"
 type: "code"
-community: "Worker Instaloader"
+community: "Akuisisi TikTok dan Ekspor"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # crawler_limits.py
@@ -26,4 +26,4 @@ tags:
 - [[tiktok_crawler.py]] - `imports_from` [EXTRACTED]
 - [[twitter_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

@@ -12,5 +12,6 @@ tags:
 
 ## Connections
 - [[AccessBarrier]] - `inherits` [EXTRACTED]
+- [[PaginationStalled]] - `inherits` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Worker_Instaloader

@@ -13,15 +13,15 @@ tags:
 
 ## Connections
 - [[.__call__()]] - `method` [EXTRACTED]
-- [[.__init__()_7]] - `method` [EXTRACTED]
+- [[.__init__()_13]] - `method` [EXTRACTED]
 - [[._scores()]] - `calls` [EXTRACTED]
-- [[.encode()]] - `method` [EXTRACTED]
+- [[.encode()_1]] - `method` [EXTRACTED]
 - [[ContextRelevanceFilter]] - `uses` [INFERRED]
+- [[Local pretrained SBERT with per-category maximum cosine scores]] - `references` [EXTRACTED]
 - [[SBERT prototypes; scores are cosine similarities, never probabilities.]] - `rationale_for` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
 - [[context_relevance.py]] - `imports` [EXTRACTED]
 - [[filter_context_relevance.py]] - `imports` [EXTRACTED]
-- [[main()_2]] - `calls` [EXTRACTED]
+- [[main()_9]] - `calls` [EXTRACTED]
 - [[relevance_semantic.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik

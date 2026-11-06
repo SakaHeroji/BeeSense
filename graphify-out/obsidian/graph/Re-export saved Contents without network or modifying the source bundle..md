@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "rationale"
 community: "Integrasi X dan Provenans Akuisisi"
-location: "L1137"
+location: "L1212"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

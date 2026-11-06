@@ -1,19 +1,19 @@
 ---
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Batas Crawler Opsional"
-location: "L629"
+community: "Akuisisi YouTube"
+location: "L630"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Akuisisi_YouTube
 ---
 
 # _integer()
 
 ## Connections
-- [[ValueError_2]] - `calls` [EXTRACTED]
+- [[ValueError]] - `calls` [EXTRACTED]
 - [[_configuration()]] - `calls` [EXTRACTED]
 - [[instagram_crawler.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Akuisisi_YouTube

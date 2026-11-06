@@ -1,10 +1,12 @@
 ---
 type: community
+cohesion: 0.27
 members: 10
 ---
 
 # Retraining Lima Platform
 
+**Cohesion:** 0.27 - loosely connected
 **Members:** 10 nodes
 
 ## Members
@@ -27,9 +29,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
-- 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_12]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_12]]
-- 1 edge to [[_COMMUNITY_Frontend TikTok dan Koneksi Chrome_2]]
+- 2 edges to [[_COMMUNITY_Integrasi Default Instaloader_5]]
+- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_3]]
+- 1 edge to [[_COMMUNITY_Frontend TikTok dan Koneksi Chrome_1]]
 - 1 edge to [[_COMMUNITY_Arsip dan Metode NLP]]
 
 ## Top bridge nodes

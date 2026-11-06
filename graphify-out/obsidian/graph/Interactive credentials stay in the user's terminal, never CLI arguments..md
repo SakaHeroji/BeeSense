@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/instagram_crawler.py"
 type: "rationale"
 community: "Batas Crawler Opsional"
-location: "L240"
+location: "L241"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

@@ -1,20 +1,22 @@
 ---
 type: community
+cohesion: 0.29
 members: 7
 ---
 
 # Arsip dan Metode NLP
 
+**Cohesion:** 0.29 - loosely connected
 **Members:** 7 nodes
 
 ## Members
-- [[Active 36,233 unique five-platform records; before  after 20-topic means 0.4346102845  0.4666033620, 11,185 accepted occurrences  10,795 unique sentences and 40 authorized Gemini narratives]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[All 25 Nov 5 TikTok posts retain caption in post text with empty title; SocialNLPStreamlitApp.with_source_titles uses verified social_data  native URL or X audit root, not username changes or_3589af02]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[Comment URLs and changed usernames resolve same native root; identical captions never merge separate posts, original titles win, unverified roots  conflicting captions remain unresolved]] - rationale - graphify-out/obsidian/Dataset Dashboard.md
-- [[Dataset Dashboard active source provenance, caption mapping and dated archives]] - document - graphify-out/obsidian/Dataset Dashboard.md
-- [[Earlier 34,764  34,095  33,034  29,099-record sources, coherence scores and topic-sentence workbooks remain preserved dated snapshots, not current active metrics]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[Only UI data copy changes; graphs  tables  evidence agree on captions while workbook, membership, coherence and narratives remain identical; no new training  API or migration]] - concept - graphify-out/obsidian/Dataset Dashboard.md
-- [[Source  baseline  model SHA256 and artifact mappings preserved; UI uses artifacts without refitting, YouTube dates may be approximate, partial snapshots are not platform population and cross-_85f061dd]] - concept - graphify-out/obsidian/Dataset Dashboard.md
+- [[Active36,233records,20topicsbeforeafter,c_v0.43461028450.4666033620,11,185accepted10,795unique,40authorizedGemini narratives;newDockerunverified]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[Beforeafter clustering architectureshared workbook,selected sentence cohorts,local fitting and stored Geminidashboard artifacts]] - document - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[Both branches useSBERT384D,UMAPseeds4243,DBSCANgrid,weightedWard20 and unchangedqualitygates;filteredsubsetreuse savesencoding but refitsallclusteringevaluation]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[Gemini receives10keywordsup-to10representatives pertopic but doesnotchoosemembers orraise coherence;newCSVderivative preservesfits,configdashboardselectspair,no reruntrainingAPI]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[Native-ID merge retains distinctsame-text recordslatestobservationlineage;sentencepreparation tracksoriginalspanoccurrences;verifiedrootparent context aidsrelevance but not targetembedding]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[Nov2four-platform34,764corpus,52,450unique beforevs10,380after,20topic c_v0.42432097720.4733391691 and removedpresets are historical,not activeNov5]] - concept - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
+- [[Training means fitUMAPDBSCANWard and selectparameters;SBERTstayspretrained,not supervisedclassifier or neuralfine-tuning]] - rationale - graphify-out/obsidian/Alur Clustering Sebelum dan Setelah Penyaringan.md
 
 ## Live Query (requires Dataview plugin)
 
@@ -25,7 +27,6 @@ SORT file.name ASC
 
 ## Connections to other communities
 - 1 edge to [[_COMMUNITY_Arsip dan Metode NLP]]
-- 1 edge to [[_COMMUNITY_Panduan Pipeline BeeSense_13]]
 
 ## Top bridge nodes
-- [[Dataset Dashboard active source provenance, caption mapping and dated archives]] - degree 8, connects to 2 communities
+- [[Beforeafter clustering architectureshared workbook,selected sentence cohorts,local fitting and stored Geminidashboard artifacts]] - degree 7, connects to 1 community

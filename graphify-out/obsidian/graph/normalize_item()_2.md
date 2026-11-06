@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/tiktok_crawler.py"
 type: "code"
 community: "Akuisisi TikTok dan Ekspor"
-location: "L238"
+location: "L246"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,11 +12,11 @@ tags:
 # normalize_item()
 
 ## Connections
-- [[.__init__()_43]] - `calls` [EXTRACTED]
-- [[.accept()_6]] - `calls` [EXTRACTED]
+- [[.__init__()_29]] - `calls` [EXTRACTED]
+- [[.accept()_3]] - `calls` [EXTRACTED]
 - [[.candidates()]] - `calls` [EXTRACTED]
 - [[.submit()]] - `calls` [EXTRACTED]
-- [[.thread()_1]] - `calls` [EXTRACTED]
+- [[.thread()]] - `calls` [EXTRACTED]
 - [[ValueError]] - `calls` [EXTRACTED]
 - [[chrome_bridge.py]] - `imports` [EXTRACTED]
 - [[native_id()_1]] - `calls` [EXTRACTED]

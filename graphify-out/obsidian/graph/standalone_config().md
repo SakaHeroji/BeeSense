@@ -1,21 +1,18 @@
 ---
 source_file: "Crawler/Backend/crawler_config.py"
 type: "code"
-community: "Batas Crawler Opsional"
+community: "Konfigurasi Crawler Universal"
 location: "L86"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Batas_Crawler_Opsional
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # standalone_config()
 
 ## Connections
-- [[.__init__()_13]] - `calls` [EXTRACTED]
-- [[.__init__()_30]] - `calls` [EXTRACTED]
-- [[.__init__()_32]] - `calls` [EXTRACTED]
-- [[.__init__()_37]] - `calls` [EXTRACTED]
+- [[.__init__()_9]] - `calls` [EXTRACTED]
 - [[.test_browser_bundle_keeps_backend_provenance_and_fixture_is_not_live()]] - `calls` [EXTRACTED]
 - [[.test_browser_is_real_backend_but_injected_workers_remain_synthetic()]] - `calls` [EXTRACTED]
 - [[.test_custom_storage_reaches_coordinator_and_standalone_projections()]] - `calls` [EXTRACTED]
@@ -25,13 +22,10 @@ tags:
 - [[ValueError]] - `calls` [INFERRED]
 - [[_config()]] - `calls` [EXTRACTED]
 - [[crawler_config.py]] - `contains` [EXTRACTED]
-- [[instagram_crawler.py]] - `imports` [EXTRACTED]
-- [[instaloader_crawler.py]] - `imports` [EXTRACTED]
 - [[read_config()]] - `calls` [EXTRACTED]
 - [[reddit_crawler.py]] - `imports` [EXTRACTED]
 - [[test_crawler_config.py]] - `imports` [EXTRACTED]
 - [[test_instagram_browser.py]] - `imports` [EXTRACTED]
 - [[test_storage_config.py]] - `imports` [EXTRACTED]
-- [[twitter_crawler.py]] - `imports` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

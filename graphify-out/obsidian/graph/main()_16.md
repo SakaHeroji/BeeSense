@@ -1,18 +1,24 @@
 ---
-source_file: "scripts/relevance_dashboard.py"
+source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
-community: "Narasi Gemini dan Pembandingan"
-location: "L12"
+community: "Kontrak Record Reddit"
+location: "L1399"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Narasi_Gemini_dan_Pembandingan
+  - community/Kontrak_Record_Reddit
 ---
 
 # main()
 
 ## Connections
-- [[.load_run()]] - `calls` [EXTRACTED]
-- [[relevance_dashboard.py]] - `contains` [EXTRACTED]
+- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[dumps()_1]] - `calls` [EXTRACTED]
+- [[parser()]] - `calls` [EXTRACTED]
+- [[run()_1]] - `calls` [EXTRACTED]
+- [[run_self_tests()]] - `calls` [EXTRACTED]
+- [[schema_document()_1]] - `calls` [EXTRACTED]
+- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
+- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan
+#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit

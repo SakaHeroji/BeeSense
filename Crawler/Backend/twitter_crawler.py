@@ -364,6 +364,8 @@ def response_barrier(response):
         403: "ACCESS_BLOCKED",
         400: "ACCESS_BLOCKED",
     }.get(code)
+    if 500 <= code <= 599:
+        status = "SERVER_UNAVAILABLE"
     path = urlsplit(str(response.url)).path
     if path.startswith(("/i/flow/login", "/login")):
         status = "LOGIN_REQUIRED"
@@ -383,7 +385,7 @@ def response_barrier(response):
         except (ValueError, TypeError):
             pass
     retry = None
-    if status == "RATE_LIMITED":
+    if status in {"RATE_LIMITED", "SERVER_UNAVAILABLE"}:
         value = str(headers.get("retry-after", ""))
         if value.isdigit():
             retry = int(value)
@@ -398,7 +400,8 @@ def response_barrier(response):
             reset = max(
                 0, int(headers.get("x-rate-limit-reset", 0)) - int(time.time()) + 1
             )
-            retry = max(retry or 0, reset) or None
+            if status == "RATE_LIMITED":
+                retry = max(retry or 0, reset) or None
         except (TypeError, ValueError):
             pass
     return AccessBarrier(status, code, retry) if status else None
@@ -430,7 +433,9 @@ def guarded_transport(options):
         state["barrier"] = response_barrier(response)
         if state["barrier"]:
             cooldown = max(
-                options["rate_limit_cooldown_seconds"],
+                options["rate_limit_cooldown_seconds"]
+                if state["barrier"].status != "SERVER_UNAVAILABLE"
+                else 60,
                 state["barrier"].retry_after_seconds or 0,
             )
             private_json(
@@ -471,7 +476,7 @@ def create_client(options):
     if barrier_path.exists():
         barrier = read_json(barrier_path)
         if (
-            barrier.get("status") != "RATE_LIMITED"
+            barrier.get("status") not in {"RATE_LIMITED", "SERVER_UNAVAILABLE"}
             or barrier["not_before"] > time.time()
         ):
             raise AccessBarrier(
@@ -682,7 +687,9 @@ def search_targets(config):
                 tweet_type="originals_only",
                 limit=p["search_results"],
             )
-        end = lower
+        # Date-only search operators must share a calendar-day boundary. Root
+        # selection still enforces the exact publication timestamp interval.
+        end = lower.replace(hour=0, minute=0, second=0, microsecond=0)
 
 
 class TwitterAdapter:

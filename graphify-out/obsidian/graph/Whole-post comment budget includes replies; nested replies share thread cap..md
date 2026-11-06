@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "rationale"
 community: "Parsing Identitas Reddit"
-location: "L832"
+location: "L833"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED

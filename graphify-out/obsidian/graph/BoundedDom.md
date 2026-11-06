@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
 type: "code"
 community: "Parsing Identitas Reddit"
-location: "L669"
+location: "L670"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -12,8 +12,8 @@ tags:
 # BoundedDom
 
 ## Connections
-- [[.__init__()_26]] - `method` [EXTRACTED]
-- [[.__init__()_27]] - `calls` [EXTRACTED]
+- [[.__init__()_39]] - `method` [EXTRACTED]
+- [[.__init__()_40]] - `calls` [EXTRACTED]
 - [[.handle_data()]] - `method` [EXTRACTED]
 - [[.handle_endtag()]] - `method` [EXTRACTED]
 - [[.handle_startendtag()]] - `method` [EXTRACTED]

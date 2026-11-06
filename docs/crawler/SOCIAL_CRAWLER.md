@@ -1,6 +1,10 @@
 # SocialCrawler
 
-SocialCrawler **1.10.0** menyimpan output standar per platform/tanggal WIB dan menggabungkan ID secara global. Lihat [struktur output](OUTPUTS.md). Tanpa `--output-dir`, bundle mentah masuk `output/crawler_runs/` dan file harian diperbarui otomatis.
+SocialCrawler **1.11.0** menyimpan output standar per platform/tanggal WIB dan menggabungkan ID secara global. Lihat [struktur output](OUTPUTS.md). Tanpa `--output-dir`, bundle mentah masuk `output/crawler_runs/` dan file harian diperbarui otomatis.
+
+YouTube dan Reddrix kini menyaring root sebelum komentar, menyimpan progres
+streaming, dan menghentikan pagination yang mencapai cap atau stagnan. Baca
+[analisis, benchmark offline dan batas validasi](PERFORMANCE_YOUTUBE_REDDIT_20261106.md).
 
 > Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
 
@@ -178,7 +182,7 @@ Mulai SocialCrawler **1.4.0**, backend default dan konfigurasi utama memakai **R
 python -m Crawler.Backend.social_crawler --display-mode headless --dry-run
 ```
 
-Reddrix memakai akses web tanpa Data API/OAuth, `stealth=False`, tanpa solver CAPTCHA atau proxy berbayar. Pencarian Reddrix memakai relevance meskipun `search_sort` disetel new; sort komentar tidak diekspos. Jeda BeeSense berlaku antaroperasi, retry internal library tetap terikat hard deadline subprocess. Exception anti-bot tanpa status tepercaya dicatat `ACCESS_BLOCKED`, bukan diasumsikan HTTP 429/CAPTCHA. Hanya 429 yang terverifikasi memicu cooldown/Retry-After coordinator. Tidak ada fallback otomatis ke backend lama. `captcha_wait_seconds`/profil Chrome adalah opsi khusus backend Playwright, bukan mekanisme interaksi CAPTCHA Reddrix. Lihat [panduan Reddrix](REDDIT_CRAWLER.md).
+Reddrix memakai akses web tanpa Data API/OAuth, `stealth=False`, tanpa solver CAPTCHA atau proxy berbayar. Pencarian Reddrix memakai relevance meskipun `search_sort` disetel new; sort thread diteruskan ke SDK. Mulai 1.11.0, GET/POST internal berurutan dengan jeda setelah respons, retry/refresh transport tersembunyi dilewati dan inisialisasi satu percobaan. Guard mempertahankan status HTTP/Retry-After; exception anti-bot tanpa status tetap dicatat `ACCESS_BLOCKED`. HTTP 429 terverifikasi memakai cooldown coordinator, sedangkan 5xx menghentikan platform. Stagnasi 75 detik tanpa ID baru berhenti pada batas request dengan `PARTIAL`. Tidak ada fallback otomatis ke backend lama. `captcha_wait_seconds`/profil Chrome adalah opsi khusus backend Playwright, bukan mekanisme interaksi CAPTCHA Reddrix. Lihat [panduan Reddrix](REDDIT_CRAWLER.md).
 
 Backend lama tetap dapat dipilih eksplisit untuk kompatibilitas: html memakai halaman publik, playwright memakai Chrome host/Playwright CLI, checkpoint memerlukan capture pengguna sendiri. `import_checkpoint_dir` default null dan ditolak bila dipadukan dengan backend Reddrix. CAPTCHA pada backend Playwright ditampilkan di Chrome headed dan ditunggu sesuai opsi manualnya. Profil/capture lokal berada di output/ dan diabaikan Git.
 

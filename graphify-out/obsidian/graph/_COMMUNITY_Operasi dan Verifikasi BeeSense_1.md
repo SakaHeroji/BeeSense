@@ -1,15 +1,18 @@
 ---
 type: community
-members: 2
+cohesion: 0.67
+members: 3
 ---
 
 # Operasi dan Verifikasi BeeSense
 
-**Members:** 2 nodes
+**Cohesion:** 0.67 - moderately connected
+**Members:** 3 nodes
 
 ## Members
-- [[Historical Gemini publication 30 October 2026]] - concept - graphify-out/obsidian/Topik Gemini.md
-- [[Topik Gemini note]] - document - graphify-out/obsidian/Topik Gemini.md
+- [[Native thread root explainability]] - rationale - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[Twitter twenty topic result note]] - document - graphify-out/obsidian/Twitter 20 Topik 20261102.md
+- [[X Twitter dashboard support]] - concept - graphify-out/obsidian/Twitter 20 Topik 20261102.md
 
 ## Live Query (requires Dataview plugin)
 

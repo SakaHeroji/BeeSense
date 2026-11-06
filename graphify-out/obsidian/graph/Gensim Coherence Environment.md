@@ -13,6 +13,5 @@ tags:
 
 ## Connections
 - [[Native SBERT Training Environment]] - `references` [EXTRACTED]
-- [[Offline Regression and Crawler Environment]] - `references` [EXTRACTED]
 
 #graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense

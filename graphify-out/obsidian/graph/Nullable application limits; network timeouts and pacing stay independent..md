@@ -1,12 +1,12 @@
 ---
 source_file: "Crawler/Backend/crawler_limits.py"
 type: "rationale"
-community: "Worker Instaloader"
+community: "Akuisisi TikTok dan Ekspor"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Akuisisi_TikTok_dan_Ekspor
 ---
 
 # Nullable application limits; network timeouts and pacing stay independent.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[crawler_limits.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/rationale #graphify/EXTRACTED #community/Akuisisi_TikTok_dan_Ekspor

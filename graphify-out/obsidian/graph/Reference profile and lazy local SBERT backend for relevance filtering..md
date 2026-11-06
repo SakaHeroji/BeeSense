@@ -1,12 +1,12 @@
 ---
 source_file: "MachineLearning/relevance_semantic.py"
 type: "rationale"
-community: "Penyaringan Relevansi dan Narasi Topik"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Reference profile and lazy local SBERT backend for relevance filtering.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[relevance_semantic.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan

@@ -1,12 +1,12 @@
 ---
 source_file: "tests/crawler/test_social_crawler_instagram.py"
 type: "code"
-community: "Worker Instaloader"
+community: "Konfigurasi Crawler Universal"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Worker_Instaloader
+  - community/Konfigurasi_Crawler_Universal
 ---
 
 # test_social_crawler_instagram.py
@@ -20,9 +20,9 @@ tags:
 - [[crawler_config.py]] - `imports_from` [EXTRACTED]
 - [[instaloader_crawler.py]] - `imports_from` [EXTRACTED]
 - [[read_config()]] - `imports` [EXTRACTED]
-- [[records()_1]] - `imports` [EXTRACTED]
+- [[records()]] - `imports` [EXTRACTED]
 - [[social_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_instagram_crawler.py]] - `imports_from` [EXTRACTED]
 - [[test_social_crawler.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Worker_Instaloader
+#graphify/code #graphify/EXTRACTED #community/Konfigurasi_Crawler_Universal

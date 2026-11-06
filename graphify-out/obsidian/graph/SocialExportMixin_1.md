@@ -10,7 +10,4 @@ tags:
 
 # SocialExportMixin
 
-## Connections
-- [[SocialCrawler]] - `inherits` [EXTRACTED]
-
 #graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi

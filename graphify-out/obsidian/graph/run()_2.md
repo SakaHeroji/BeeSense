@@ -1,37 +1,29 @@
 ---
-source_file: "Crawler/Backend/Reddit/crawl_reddit_single.py"
+source_file: "Crawler/Backend/Youtube/crawl_youtube.py"
 type: "code"
 community: "Kontrak Record Reddit"
-location: "L972"
+location: "L267"
 tags:
   - graphify/code
-  - graphify/EXTRACTED
+  - graphify/INFERRED
   - community/Kontrak_Record_Reddit
 ---
 
 # run()
 
 ## Connections
-- [[.abort()_1]] - `calls` [EXTRACTED]
-- [[.accept()_3]] - `calls` [EXTRACTED]
-- [[.finish()_1]] - `calls` [EXTRACTED]
-- [[.finish_relations()_1]] - `calls` [EXTRACTED]
-- [[.row()_1]] - `calls` [EXTRACTED]
-- [[.test_17_import_html_produces_eight_sheets_and_unknown_capture_flag()]] - `calls` [EXTRACTED]
-- [[.test_18_challenge_snapshot_has_receipt_and_zero_content_without_success()]] - `calls` [EXTRACTED]
-- [[.write()_2]] - `calls` [EXTRACTED]
-- [[BundleSink_1]] - `calls` [EXTRACTED]
-- [[Dataset_1]] - `calls` [EXTRACTED]
-- [[KeywordMatcher_1]] - `calls` [EXTRACTED]
-- [[RedditAdapter]] - `calls` [EXTRACTED]
-- [[RedditRecordFactory]] - `calls` [EXTRACTED]
-- [[add_readme()_1]] - `calls` [EXTRACTED]
-- [[crawl_reddit_single.py]] - `contains` [EXTRACTED]
+- [[.accept()_6]] - `calls` [EXTRACTED]
+- [[BundleSink_1]] - `calls` [INFERRED]
+- [[Dataset_2]] - `calls` [INFERRED]
+- [[KeywordMatcher_1]] - `calls` [INFERRED]
+- [[RecordFactory_1]] - `calls` [INFERRED]
+- [[YouTubeAdapter]] - `calls` [EXTRACTED]
+- [[add_readme()_1]] - `calls` [INFERRED]
+- [[crawl_youtube.py]] - `contains` [EXTRACTED]
 - [[load_settings()_1]] - `calls` [EXTRACTED]
-- [[main()_9]] - `calls` [EXTRACTED]
-- [[now_iso()_1]] - `calls` [EXTRACTED]
-- [[run_self_tests()]] - `calls` [EXTRACTED]
-- [[schema_fingerprint()_1]] - `calls` [EXTRACTED]
-- [[verify_descriptor()_1]] - `calls` [EXTRACTED]
+- [[main()_17]] - `calls` [EXTRACTED]
+- [[now_iso()_1]] - `calls` [INFERRED]
+- [[schema_fingerprint()_1]] - `calls` [INFERRED]
+- [[verify_descriptor()_1]] - `calls` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Kontrak_Record_Reddit
+#graphify/code #graphify/INFERRED #community/Kontrak_Record_Reddit

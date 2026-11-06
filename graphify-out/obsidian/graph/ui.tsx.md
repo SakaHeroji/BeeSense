@@ -12,7 +12,6 @@ tags:
 # ui.tsx
 
 ## Connections
-- [[AuthSettings.tsx]] - `imports_from` [EXTRACTED]
 - [[Badge()]] - `contains` [EXTRACTED]
 - [[Button()]] - `contains` [EXTRACTED]
 - [[DatasetView.tsx]] - `imports_from` [EXTRACTED]
@@ -31,7 +30,6 @@ tags:
 - [[Spinner()]] - `contains` [EXTRACTED]
 - [[Stepper()]] - `contains` [EXTRACTED]
 - [[StorageSettings.tsx]] - `imports_from` [EXTRACTED]
-- [[TikTokConnector.tsx]] - `imports_from` [EXTRACTED]
 - [[TransactionMigration.tsx]] - `imports_from` [EXTRACTED]
 - [[UnsavedGuard()]] - `contains` [EXTRACTED]
 - [[statusLabels]] - `contains` [EXTRACTED]

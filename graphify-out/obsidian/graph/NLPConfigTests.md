@@ -20,7 +20,7 @@ tags:
 - [[.test_explanation_validation_does_not_reread_the_editable_file()]] - `method` [EXTRACTED]
 - [[.test_falsey_non_objects_and_unknown_settings_are_rejected()]] - `method` [EXTRACTED]
 - [[.test_partial_overrides_preserve_siblings_and_do_not_mutate_input()]] - `method` [EXTRACTED]
-- [[SocialNLPClusterer_1]] - `uses` [INFERRED]
+- [[SocialNLPClusterer]] - `uses` [INFERRED]
 - [[test_nlp_config.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Encoding_dan_Penyimpanan_Model

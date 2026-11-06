@@ -1,21 +1,24 @@
 ---
-source_file: "Crawler/Backend/twitter_crawler.py"
+source_file: "Crawler/Backend/instagram_crawler.py"
 type: "code"
-community: "Integrasi X dan Provenans Akuisisi"
-location: "L1294"
+community: "Batas Crawler Opsional"
+location: "L1325"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Integrasi_X_dan_Provenans_Akuisisi
+  - community/Batas_Crawler_Opsional
 ---
 
 # main()
 
 ## Connections
-- [[.close()_6]] - `calls` [EXTRACTED]
-- [[.plan()_4]] - `calls` [EXTRACTED]
-- [[.run()_3]] - `calls` [EXTRACTED]
-- [[TwitterCrawler]] - `calls` [EXTRACTED]
-- [[twitter_crawler.py]] - `contains` [EXTRACTED]
+- [[.check_session()]] - `calls` [EXTRACTED]
+- [[.plan()_2]] - `calls` [EXTRACTED]
+- [[.run()_1]] - `calls` [EXTRACTED]
+- [[InstagramCrawler]] - `calls` [EXTRACTED]
+- [[error_receipt()]] - `calls` [EXTRACTED]
+- [[instagram_crawler.py]] - `contains` [EXTRACTED]
+- [[login_local()]] - `calls` [EXTRACTED]
+- [[run_instagram_worker()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Integrasi_X_dan_Provenans_Akuisisi
+#graphify/code #graphify/EXTRACTED #community/Batas_Crawler_Opsional

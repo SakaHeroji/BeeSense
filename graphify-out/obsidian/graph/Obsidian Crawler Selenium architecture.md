@@ -1,12 +1,12 @@
 ---
 source_file: "graphify-out/obsidian/Crawler Selenium.md"
 type: "document"
-community: "Panduan Pipeline BeeSense"
+community: "Integrasi Default Instaloader"
 location: "# Crawler Selenium"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/Panduan_Pipeline_BeeSense
+  - community/Integrasi_Default_Instaloader
 ---
 
 # Obsidian: Crawler Selenium architecture
@@ -18,4 +18,4 @@ tags:
 - [[SocialCrawler]] - `references` [EXTRACTED]
 - [[SocialCrawlerSelenium_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Panduan_Pipeline_BeeSense
+#graphify/document #graphify/EXTRACTED #community/Integrasi_Default_Instaloader

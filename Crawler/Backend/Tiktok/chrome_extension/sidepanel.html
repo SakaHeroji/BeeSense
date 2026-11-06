@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>BeeSense · TikTok</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ke pengendali crawler</a>
+    <header class="brand">
+      <svg
+        class="brand-mark"
+        width="32"
+        height="36"
+        viewBox="0 0 32 36"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="m16 2 14 8v16l-14 8L2 26V10Z"
+          stroke="currentColor"
+          stroke-width="3"
+        />
+        <path
+          d="M10 12h7a4 4 0 0 1 0 8h-7m0-8v14h8a4 4 0 0 0 0-8"
+          stroke="currentColor"
+          stroke-width="3"
+        />
+      </svg>
+      <div>
+        <p class="brand-name" translate="no">BeeSense</p>
+        <p class="brand-product">TikTok Connector</p>
+      </div>
+      <span id="version" class="version" translate="no"></span>
+    </header>
+
+    <div class="connection" id="connection" data-state="idle">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span id="connection-label">Belum terhubung</span>
+    </div>
+
+    <main id="main" tabindex="-1">
+      <section id="setup" aria-labelledby="setup-title">
+        <h1 id="setup-title">Hubungkan tab TikTok</h1>
+        <p class="intro">
+          Jalankan crawler BeeSense, lalu salin alamat dan kode pasangan ke
+          sini.
+        </p>
+        <form id="pairing" novalidate>
+          <div class="field">
+            <div class="label-row">
+              <label for="tab">Tab yang dikendalikan</label
+              ><button class="text-button" id="refresh-tabs" type="button">
+                Perbarui
+              </button>
+            </div>
+            <select
+              id="tab"
+              name="tab"
+              aria-describedby="tab-hint tab-error"
+            ></select>
+            <p class="hint" id="tab-hint">Pilih tab TikTok yang sudah login.</p>
+            <p class="field-error" id="tab-error" hidden></p>
+            <button type="button" class="text-button" id="open-tiktok" hidden>
+              Buka TikTok
+            </button>
+          </div>
+          <div class="field">
+            <label for="origin">Alamat crawler lokal</label>
+            <input
+              id="origin"
+              name="origin"
+              type="url"
+              inputmode="url"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="http://127.0.0.1:8765/…"
+              aria-describedby="origin-hint origin-error"
+              required
+            />
+            <p class="hint" id="origin-hint">
+              Salin alamat lengkap dari terminal atau halaman pairing.
+            </p>
+            <p class="field-error" id="origin-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="code">Kode pasangan</label>
+            <div class="secret-field">
+              <input
+                id="code"
+                name="pairing-code"
+                type="password"
+                autocomplete="off"
+                spellcheck="false"
+                aria-describedby="code-hint code-error"
+                required
+              />
+              <button
+                id="show-code"
+                type="button"
+                class="text-button"
+                aria-pressed="false"
+                aria-controls="code"
+              >
+                Tampilkan
+              </button>
+            </div>
+            <p class="hint" id="code-hint">
+              Kode sementara dari proses crawler yang sedang aktif.
+            </p>
+            <p class="field-error" id="code-error" hidden></p>
+          </div>
+          <button id="start" class="primary" type="submit">
+            <span id="start-label">Hubungkan & mulai</span>
+          </button>
+        </form>
+      </section>
+
+      <section id="monitor" aria-labelledby="monitor-title" hidden>
+        <div class="section-heading">
+          <h1 id="monitor-title">Pengambilan berjalan</h1>
+          <span class="live-indicator" aria-hidden="true"></span>
+        </div>
+        <p class="intro" id="monitor-hint">
+          Tab terpilih dikendalikan crawler. Sidebar dapat tetap terbuka.
+        </p>
+        <div class="selected-tab">
+          <span class="tab-icon" aria-hidden="true">↗</span>
+          <div>
+            <span class="hint">Tab terhubung</span>
+            <p id="selected-tab" translate="no"></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="progress" aria-labelledby="progress-title" hidden>
+        <div class="section-heading">
+          <h2 id="progress-title">Data terkirim</h2>
+          <span class="session-label">Sesi ini</span>
+        </div>
+        <dl class="metrics">
+          <div>
+            <dt>Post</dt>
+            <dd id="posts">0</dd>
+          </div>
+          <div>
+            <dt>Komentar</dt>
+            <dd id="comments">0</dd>
+          </div>
+          <div>
+            <dt>Balasan</dt>
+            <dd id="replies">0</dd>
+          </div>
+        </dl>
+        <p class="hint">
+          Data diterima crawler lokal. Hasil akhir mengikuti filter dan ekspor
+          di Python.
+        </p>
+      </section>
+
+      <section class="activity" aria-labelledby="activity-title">
+        <div class="section-heading">
+          <h2 id="activity-title">Aktivitas</h2>
+          <time id="updated"></time>
+        </div>
+        <p id="status" role="status" aria-live="polite" aria-atomic="true">
+          Siap disambungkan. Pilih tab TikTok untuk memulai.
+        </p>
+        <p id="activity-context" class="hint" hidden></p>
+      </section>
+
+      <div class="run-controls" id="run-controls" hidden>
+        <button id="continue" class="primary" type="button" hidden>
+          Validasi selesai, lanjutkan
+        </button>
+        <button id="stop" class="stop-button" type="button">
+          Hentikan pengambilan
+        </button>
+        <p class="hint">Data yang sudah diterima tetap tersimpan di crawler.</p>
+      </div>
+
+      <details class="help">
+        <summary>Panduan singkat</summary>
+        <ol>
+          <li>Jalankan crawler dan buka tab TikTok yang sudah login.</li>
+          <li>Tempel alamat lokal dan kode pasangan, lalu hubungkan.</li>
+          <li>
+            Jika diminta CAPTCHA, selesaikan di TikTok lalu tekan tombol lanjut
+            di sini.
+          </li>
+        </ol>
+        <p>
+          Untuk sidebar di kanan: buka Setelan Chrome → Tampilan → Panel samping
+          → Kanan.
+        </p>
+        <p id="layout-hint" hidden>
+          Chrome Anda saat ini menampilkan panel di kiri. Pilih Kanan di setelan
+          Tampilan.
+        </p>
+        <p>
+          Menutup sidebar tidak menghentikan pengambilan. Gunakan tombol
+          Hentikan untuk melepas tab.
+        </p>
+      </details>
+    </main>
+    <footer>
+      <p>Terhubung hanya ke crawler di perangkat ini.</p>
+      <details>
+        <summary>Informasi konektor</summary>
+        <p id="build" translate="no"></p>
+        <p>
+          Izin debugger membaca respons dan mengendalikan tab TikTok pilihan
+          Anda. Validasi CAPTCHA dilakukan manual.
+        </p>
+      </details>
+    </footer>
+    <script type="module" src="sidepanel.mjs"></script>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 {
-  "tiktok_connector": { "name": "BeeSense TikTok Connector", "version": "1.2.3" },
+  "tiktok_connector": { "name": "BeeSense TikTok Connector", "version": "1.4.0" },
   "project_id": "university-intelligence",
   "since": "2025-10-27T10:17:00+07:00",
   "until": "2026-10-27T10:17:00+07:00",

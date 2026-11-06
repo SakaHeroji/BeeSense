@@ -12,7 +12,7 @@ tags:
 # selenium_worker()
 
 ## Connections
-- [[.__init__()_15]] - `indirect_call` [INFERRED]
+- [[.__init__()_8]] - `indirect_call` [INFERRED]
 - [[.error()]] - `indirect_call` [INFERRED]
 - [[.reddit()]] - `calls` [EXTRACTED]
 - [[.search()]] - `calls` [EXTRACTED]

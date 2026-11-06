@@ -2,7 +2,7 @@
 source_file: "Crawler/Backend/social_crawler.py"
 type: "code"
 community: "Kuota Harian Scweet"
-location: "L131"
+location: "L134"
 tags:
   - graphify/code
   - graphify/EXTRACTED
@@ -13,7 +13,6 @@ tags:
 
 ## Connections
 - [[Map Reddrix 1.2.14 dictionaries without inventing identity or dates.]] - `rationale_for` [EXTRACTED]
-- [[ValueError]] - `calls` [INFERRED]
 - [[collect_reddrix()]] - `calls` [EXTRACTED]
 - [[social_crawler.py]] - `contains` [EXTRACTED]
 

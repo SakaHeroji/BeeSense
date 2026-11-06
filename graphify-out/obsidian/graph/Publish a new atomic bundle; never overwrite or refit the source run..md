@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/generate_topic_narratives.py"
 type: "rationale"
-community: "Narasi Gemini dan Pembandingan"
+community: "Pengujian Narasi Gemini"
 location: "L16"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Narasi_Gemini_dan_Pembandingan
+  - community/Pengujian_Narasi_Gemini
 ---
 
 # Publish a new atomic bundle; never overwrite or refit the source run.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[enrich_run()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan
+#graphify/rationale #graphify/EXTRACTED #community/Pengujian_Narasi_Gemini

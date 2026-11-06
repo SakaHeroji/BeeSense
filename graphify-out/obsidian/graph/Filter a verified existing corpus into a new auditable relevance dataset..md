@@ -1,12 +1,12 @@
 ---
 source_file: "scripts/filter_context_relevance.py"
 type: "rationale"
-community: "Penyaringan Relevansi dan Narasi Topik"
+community: "Narasi Gemini dan Pembandingan"
 location: "L1"
 tags:
   - graphify/rationale
   - graphify/EXTRACTED
-  - community/Penyaringan_Relevansi_dan_Narasi_Topik
+  - community/Narasi_Gemini_dan_Pembandingan
 ---
 
 # Filter a verified existing corpus into a new auditable relevance dataset.
@@ -14,4 +14,4 @@ tags:
 ## Connections
 - [[filter_context_relevance.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Penyaringan_Relevansi_dan_Narasi_Topik
+#graphify/rationale #graphify/EXTRACTED #community/Narasi_Gemini_dan_Pembandingan
