@@ -6,6 +6,10 @@ YouTube dan Reddrix kini menyaring root sebelum komentar, menyimpan progres
 streaming, dan menghentikan pagination yang mencapai cap atau stagnan. Baca
 [analisis, benchmark offline dan batas validasi](PERFORMANCE_YOUTUBE_REDDIT_20261106.md).
 
+[Rencana campaign paralel](PLAN_CAMPAIGN_PARALEL.md) mendokumentasikan usulan satu
+eksekusi untuk menjalankan worker platform bersamaan dengan konfigurasi bersama
+dan folder per campaign. Runner baru tersebut belum diimplementasikan.
+
 > Konfigurasi aktif: **[config/social_crawler.json](../../config/social_crawler.json)** untuk semua runner. Baca [panduan konfigurasi universal](CONFIGURATION.md). Runner mandiri mewarisi durasi/target file utama; angka trial di bagian riwayat tidak mengubah default sekarang.
 
 Default aktif: **1.000 post per platform**, kelima platform aktif,
