@@ -1,6 +1,28 @@
-# Kontrak frontend Crawler 1.2
+# Kontrak frontend Crawler 1.3
 
 **Rancangan integrasi, belum layanan HTTP nyata.** Lingkup saat ini frontend terlebih dahulu. Prefix `/api/v1/projects/:projectId`, sesi same-origin dengan credentials include. Backend wajib memeriksa izin proyek, validasi, idempotensi dan keterikatan sumber; role selector demo tidak memberikan otorisasi server.
+
+## Conversation riset
+
+Conversation adalah sumber konteks riset yang berdiri sendiri dari eksekusi crawling. Versi conversation yang dipilih dibekukan ke `Config.conversation` saat review; job tidak membaca conversation terbaru secara dinamis.
+
+| Endpoint                               | Kontrak                                                                                                              |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| GET `/crawler/conversations`           | Daftar conversation yang dapat diakses, diurutkan menurut `updatedAt`; tanpa rahasia atau API key.                   |
+| GET `/crawler/conversations/:id`       | Satu versi conversation lengkap berdasarkan ID proyek.                                                               |
+| POST `/crawler/conversations/generate` | Body tepat `{title}`. Gemini dipanggil server-side; respons `ConversationDraft`, belum tersimpan dan wajib ditinjau. |
+| POST `/crawler/conversations`          | Body `{conversation}` untuk conversation baru; server memvalidasi, memberi ID, versi 1 dan timestamp.                |
+| PUT `/crawler/conversations/:id`       | Body `{conversation}`; optimistic concurrency memakai versi lama dan menghasilkan versi baru.                        |
+
+`ConversationDraft` memuat title, objective, since, until, include, exclude, includeMode (`any`/`all`), queries, hashtags, subreddits, relevance (`scope`, contoh relevant/generic/irrelevant, threshold), serta origin (`manual`/`gemini`/`excel`). `Conversation` menambah id, version, createdAt dan updatedAt. Title maksimum 120 karakter. Rentang waktu harus valid; query, scope dan setidaknya satu contoh relevan wajib tersedia; threshold berada pada 0–1.
+
+Endpoint generator tidak menerima field lain, cookie, data job, atau kredensial. Prompt, model, rate limit, sanitasi output dan `GEMINI_API_KEY` menjadi tanggung jawab backend. Frontend tidak menganggap output model benar: origin hanya menandai asal draf, bukan status persetujuan.
+
+Snapshot pada rencana menyertakan seluruh conversation ditambah `frozenAt`. Semua platform pada mode parallel harus menerima snapshot ID/versi yang sama. Backend menolak conversation yang tidak dimiliki proyek dan tidak boleh mengganti snapshot dengan versi terbaru setelah validasi.
+
+### Pertukaran prompt dan Excel lokal
+
+Download prompt Markdown dan pembacaan `.xlsx` berlangsung sepenuhnya di browser, bukan endpoint baru. Prompt mengikat judul ke workbook tanpa formula/macro dengan tiga sheet: `conversation` (satu baris metadata), `discovery` (`type`, `value`), dan `relevance_examples` (`classification`, `text`). Parser hanya menerima tipe discovery `include_keyword`, `exclude_keyword`, `query`, `hashtag`, `subreddit` serta kelas `relevant`, `generic`, `irrelevant`. Setelah lolos validasi, frontend mengirim draft ber-origin `excel` melalui POST/PUT conversation yang sama. Rentang tanggal tetap berasal dari form dan tidak ditimpa workbook.
 
 ## Crawling dan dataset
 

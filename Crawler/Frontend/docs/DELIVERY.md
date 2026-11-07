@@ -1,4 +1,51 @@
-# Delivery frontend 1.2
+# Delivery frontend 1.3
+
+## Conversation-first crawling — 7 November 2026
+
+Seluruh frontend yang terdampak kini memisahkan konteks riset dari operasi
+crawling. Menu **Persiapan → Conversation** menjadi library dan editor berversi untuk
+judul, tujuan, tanggal konten, keyword include/exclude, mode pencocokan, query,
+hashtag, subreddit, scope, contoh relevansi dan threshold. Conversation dapat ditulis
+manual atau dibuat sebagai draf Gemini; request generator hanya mengirim `title`,
+dan draf harus ditinjau serta disimpan sebelum dapat dipakai. Tabel library kini
+terpisah dari form editor. Form dapat mengunduh prompt Markdown berbasis judul dan
+membaca workbook `.xlsx` tiga sheet untuk mengisi discovery/relevansi lalu menyimpan
+conversation ber-origin Excel. Parser menolak struktur asing dan formula.
+
+Menu **Crawling → Parallel** dan tujuh halaman platform tidak lagi meminta ulang
+field riset. Operator memilih conversation tersimpan, melihat ringkasannya, lalu hanya
+mengatur platform, target, durasi, storage dan koneksi sumber. Review membekukan
+seluruh conversation sebagai snapshot ID/versi/waktu. Mode parallel menggunakan satu
+snapshot yang sama untuk minimal dua platform; mode platform tunggal memakai
+alur review yang sama. Perubahan conversation berikutnya tidak mengubah job lama.
+
+Kontrak HTTP menambahkan list/detail/create/update conversation dan generator
+server-side. Demo menyediakan library localStorage serta generator deterministik
+berlabel, tanpa API key atau rahasia. Endpoint, pemanggilan Gemini nyata,
+persistensi backend dan runner paralel tetap pekerjaan backend berikutnya.
+Frontend tidak menulis database, `auth.json`, Compose, env produksi atau layanan
+aktif. **No migration required.**
+
+Verifikasi revisi ini lulus:
+
+- `npm run test`: 59 tes Vitest dan 2 tes Node.
+- `npm run lint`, `npm run typecheck`, `npm run format:check`.
+- `npm run build` untuk mode API dan `npm run build:demo`.
+- Browser nyata pada 1440 px, mobile 375 px dan landscape 812×375; tidak ada
+  horizontal overflow, error console atau warning console.
+- Audit pedoman web terbaru: struktur landmark, label/error inline, fokus,
+  keyboard, hit area, responsif dan reduced motion lulus untuk perubahan ini.
+
+Screenshot berada di `output/playwright/conversation-*.png`,
+`output/playwright/parallel-*.png`, dan
+`output/playwright/youtube-conversation-desktop.png`.
+
+Dockerfile tetap memakai build Node dan Nginx non-root UID 101 dengan health
+`/healthz`. Build/start image belum dapat diverifikasi karena Docker Desktop lokal
+tidak aktif; runtime container alternatif tidak dinyalakan atau dipasang. Status deployment tetap
+**Not fully verified**; jalankan
+`docker build -t beesense-crawler-frontend:conversation-v1.3 Crawler/Frontend` saat
+daemon tersedia. Keterbatasan ini tidak memengaruhi build Vite API/demo yang lulus.
 
 ## TikTok plugin Chrome — 5 November 2026
 

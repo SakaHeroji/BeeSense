@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from 'vitest';
 import { httpApi } from '../shared/api';
-import { initialConfig } from '../shared/domain';
+import { emptyConversationDraft, initialConfig } from '../shared/domain';
 import type { Plan } from '../shared/types';
 
 describe('API transport contract', () => {
@@ -32,6 +32,24 @@ describe('API transport contract', () => {
       }),
     );
     await expect(httpApi.stop('private-job')).rejects.toThrow('Anda tidak memiliki izin');
+  });
+  it('sends only the conversation title to the Gemini draft endpoint', async () => {
+    const generated = {
+      ...emptyConversationDraft('Akses beasiswa mahasiswa daerah'),
+      objective: 'Memahami akses beasiswa.',
+    };
+    const fetchMock = vi.spyOn(globalThis, 'fetch').mockResolvedValue(
+      new Response(JSON.stringify(generated), {
+        headers: { 'Content-Type': 'application/json' },
+      }),
+    );
+    await httpApi.generateConversation('Akses beasiswa mahasiswa daerah');
+    const [url, options] = fetchMock.mock.calls[0];
+    expect(url).toContain('/crawler/conversations/generate');
+    expect(options?.method).toBe('POST');
+    expect(JSON.parse(options?.body as string)).toEqual({
+      title: 'Akses beasiswa mahasiswa daerah',
+    });
   });
 });
 

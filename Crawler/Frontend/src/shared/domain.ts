@@ -1,5 +1,14 @@
 import crawlerDefaults from './crawler-defaults.json';
-import type { Capabilities, Config, FieldError, Platform, StorageConfig } from './types';
+import type {
+  Conversation,
+  ConversationDraft,
+  ConversationOrigin,
+  Capabilities,
+  Config,
+  FieldError,
+  Platform,
+  StorageConfig,
+} from './types';
 
 export const projectId = import.meta.env.VITE_PROJECT_ID || 'university-intelligence';
 export const demoMode = import.meta.env.VITE_DATA_MODE === 'demo';
@@ -22,6 +31,14 @@ export const platformLabels: Record<Platform, string> = {
   x: 'X / Twitter',
 };
 export const platformName = (p: Platform) => platformLabels[p];
+export const conversationOriginLabel = (origin: ConversationOrigin, reviewed = false) =>
+  origin === 'gemini'
+    ? reviewed
+      ? 'Draf Gemini ditinjau'
+      : 'Draf Gemini'
+    : origin === 'excel'
+      ? 'Excel'
+      : 'Manual';
 export const platformDescription: Record<Platform, string> = {
   youtube: 'Video, komentar & reply',
   reddit: 'Post, diskusi & reply',
@@ -158,6 +175,8 @@ export function initialConfig(mode: 'automatic' | 'url' = 'automatic', only?: Pl
     }),
   ) as Config['platforms'];
   return {
+    conversation: null,
+    executionMode: only ? 'single' : 'parallel',
     name: '',
     description: '',
     mode,
@@ -189,6 +208,99 @@ export function initialConfig(mode: 'automatic' | 'url' = 'automatic', only?: Pl
       },
     },
   };
+}
+export function emptyConversationDraft(title = ''): ConversationDraft {
+  return {
+    title,
+    objective: '',
+    since: wibInput(crawlerDefaults.since),
+    until: wibInput(crawlerDefaults.until),
+    include: crawlerDefaults.include_keywords.join('\n'),
+    exclude: crawlerDefaults.exclude_keywords.join('\n'),
+    includeMode: 'any',
+    queries: crawlerDefaults.queries.join('\n'),
+    hashtags: '',
+    subreddits: crawlerDefaults.platforms.reddit.subreddits.join('\n'),
+    relevance: {
+      scope: '',
+      relevantExamples: '',
+      genericExamples: '',
+      irrelevantExamples: '',
+      threshold: 0.62,
+    },
+    origin: 'manual',
+  };
+}
+export function validateConversation(
+  conversation: ConversationDraft,
+  cap: Capabilities,
+): FieldError[] {
+  const errors: FieldError[] = [];
+  const add = (field: string, message: string) => errors.push({ field, message });
+  if (!conversation.title.trim() || conversation.title.trim().length > 120)
+    add('conversation.title', 'Isi judul conversation, maksimum 120 karakter.');
+  if (!conversation.objective.trim() || conversation.objective.trim().length > 600)
+    add('conversation.objective', 'Jelaskan tujuan riset, maksimum 600 karakter.');
+  if (
+    !conversation.since ||
+    !conversation.until ||
+    !Number.isFinite(Date.parse(isoWib(conversation.since))) ||
+    isoWib(conversation.since) >= isoWib(conversation.until)
+  )
+    add('conversation.dates', 'Pilih rentang publikasi yang valid dalam WIB.');
+  const queries = queryLines(conversation.queries);
+  const hashtags = lines(conversation.hashtags);
+  if (!queries.length && !hashtags.length)
+    add('conversation.queries', 'Isi minimal satu query atau hashtag untuk menemukan konten.');
+  if (
+    queries.length > cap.limits.maxQueries ||
+    queries.some((value) => value.length > cap.limits.maxQueryLength)
+  )
+    add(
+      'conversation.queries',
+      `Isi maksimum ${cap.limits.maxQueries} query dan ${cap.limits.maxQueryLength} karakter per baris.`,
+    );
+  if (
+    hashtags.length > cap.limits.maxQueries ||
+    hashtags.some((tag) => !/^[A-Za-z0-9_]{1,100}$/.test(tag.replace(/^#/, '')))
+  )
+    add('conversation.hashtags', 'Gunakan hashtag tanpa spasi, satu per baris.');
+  const subreddits = lines(conversation.subreddits);
+  if (
+    subreddits.length > cap.limits.maxSubreddits ||
+    subreddits.some((value) => !/^[A-Za-z0-9_]{2,21}$/.test(value.replace(/^r\//, '')))
+  )
+    add('conversation.subreddits', 'Gunakan nama subreddit tanpa r/, satu per baris.');
+  if (!conversation.relevance.scope.trim())
+    add('conversation.relevance.scope', 'Jelaskan ruang lingkup relevansi conversation.');
+  if (!queryLines(conversation.relevance.relevantExamples).length)
+    add('conversation.relevance.relevant', 'Isi minimal satu contoh kalimat relevan.');
+  if (
+    !Number.isFinite(conversation.relevance.threshold) ||
+    conversation.relevance.threshold < 0 ||
+    conversation.relevance.threshold > 1
+  )
+    add('conversation.relevance.threshold', 'Isi threshold antara 0 dan 1.');
+  return errors;
+}
+export function applyConversation(config: Config, conversation: Conversation): Config {
+  const next = structuredClone(config);
+  next.conversation = { ...structuredClone(conversation), frozenAt: new Date().toISOString() };
+  next.name = conversation.title;
+  next.description = conversation.objective;
+  next.since = conversation.since;
+  next.until = conversation.until;
+  next.include = conversation.include;
+  next.exclude = conversation.exclude;
+  next.includeMode = conversation.includeMode;
+  next.subreddit = lines(conversation.subreddits)
+    .map((value) => value.replace(/^r\//, ''))
+    .join(', ');
+  for (const platform of platforms) {
+    next.platforms[platform].queries = conversation.queries;
+    next.platforms[platform].hashtags = conversation.hashtags;
+  }
+  return next;
 }
 export function validateConfig(c: Config, cap: Capabilities): FieldError[] {
   const errors: FieldError[] = [];

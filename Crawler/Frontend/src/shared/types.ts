@@ -74,7 +74,42 @@ export interface PlatformConfig {
   maxReplies: number | null;
   maxRepliesPerThread: number | null;
 }
+export type ConversationOrigin = 'manual' | 'gemini' | 'excel';
+export interface ConversationRelevance {
+  scope: string;
+  relevantExamples: string;
+  genericExamples: string;
+  irrelevantExamples: string;
+  threshold: number;
+}
+export interface ConversationDraft {
+  id?: string;
+  version?: number;
+  title: string;
+  objective: string;
+  since: string;
+  until: string;
+  include: string;
+  exclude: string;
+  includeMode: 'any' | 'all';
+  queries: string;
+  hashtags: string;
+  subreddits: string;
+  relevance: ConversationRelevance;
+  origin: ConversationOrigin;
+}
+export interface Conversation extends ConversationDraft {
+  id: string;
+  version: number;
+  createdAt: string;
+  updatedAt: string;
+}
+export interface ConversationSnapshot extends Conversation {
+  frozenAt: string;
+}
 export interface Config {
+  conversation: ConversationSnapshot | null;
+  executionMode: 'single' | 'parallel';
   name: string;
   description: string;
   mode: 'automatic' | 'url';
@@ -213,6 +248,10 @@ export interface DatasetDetail {
   warning?: string;
 }
 export interface Api {
+  conversations(): Promise<Conversation[]>;
+  conversation(id: string): Promise<Conversation>;
+  generateConversation(title: string): Promise<ConversationDraft>;
+  saveConversation(conversation: ConversationDraft): Promise<Conversation>;
   tiktokConnector(jobId: string): Promise<TikTokConnectorSession>;
   renewTikTokConnector(jobId: string): Promise<TikTokConnectorSession>;
   resumeTikTokConnector(jobId: string): Promise<TikTokConnectorSession>;

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -8,7 +8,7 @@ import JobDetail from '../features/JobDetail';
 import { AppContext } from '../shared/context';
 import { demoApi } from '../shared/demo';
 import { httpApi } from '../shared/api';
-import { initialConfig } from '../shared/domain';
+import { applyConversation, initialConfig } from '../shared/domain';
 import { validateConnectorSession } from '../shared/tiktok-connector';
 import type { TikTokConnectorSession } from '../shared/types';
 
@@ -20,8 +20,10 @@ afterEach(() => vi.useRealTimers());
 
 async function newTikTokJob() {
   sessionStorage.setItem('beesense:demo-role', 'operator');
-  const config = initialConfig('automatic', 'tiktok');
-  config.name = 'Uji alur plugin sintetis';
+  const config = applyConversation(
+    initialConfig('automatic', 'tiktok'),
+    (await demoApi.conversations())[0],
+  );
   config.duration = 10800;
   return demoApi.start(await demoApi.validate(config), crypto.randomUUID());
 }
@@ -55,7 +57,12 @@ describe('TikTok plugin workspace', () => {
     expect(screen.getByRole('list', { name: 'Alur crawling TikTok' })).toBeInTheDocument();
     expect(screen.getByText('Gunakan Chrome Anda')).toBeInTheDocument();
     expect(screen.queryByLabelText('Session ID')).not.toBeInTheDocument();
-    expect(screen.getByLabelText('Hashtag TikTok')).toBeInTheDocument();
+    await user.selectOptions(
+      await screen.findByLabelText(/^Conversation/),
+      'conversation-riset-kuliah',
+    );
+    expect(screen.getByText('Query & hashtag conversation')).toBeInTheDocument();
+    expect(screen.queryByLabelText('Hashtag TikTok')).not.toBeInTheDocument();
     expect(screen.getByRole('radio', { name: /^Excel lokal/ })).toBeChecked();
     await user.click(screen.getByRole('button', { name: 'Tinjau & siapkan koneksi Chrome' }));
     const dialog = await screen.findByRole('dialog', {
@@ -89,17 +96,14 @@ describe('TikTok plugin workspace', () => {
     expect(screen.queryByLabelText('Kode pairing sementara')).not.toBeInTheDocument();
     await expect(demoApi.tiktokConnector(job.id)).rejects.toThrow('Pengamat');
   });
-  it('allows a hashtag-only search and validates malformed hashtags inline', async () => {
+  it('uses validated discovery from the selected conversation without duplicate inputs', async () => {
     const { user } = await mount();
-    await user.clear(screen.getByLabelText(/Queries pencarian/));
-    await user.type(screen.getByLabelText('Hashtag TikTok'), 'beasiswa kampus');
-    await user.click(screen.getByRole('button', { name: 'Tinjau & siapkan koneksi Chrome' }));
-    await screen.findByText('Isi hashtag TikTok tanpa spasi, maksimum 100 karakter per hashtag.', {
-      selector: '.field-error',
-    });
-    await waitFor(() => expect(screen.getByLabelText('Hashtag TikTok')).toHaveFocus());
-    await user.clear(screen.getByLabelText('Hashtag TikTok'));
-    await user.type(screen.getByLabelText('Hashtag TikTok'), '#beasiswa');
+    await user.selectOptions(
+      await screen.findByLabelText(/^Conversation/),
+      'conversation-riset-kuliah',
+    );
+    expect(screen.queryByLabelText(/Queries pencarian/)).not.toBeInTheDocument();
+    expect(screen.queryByLabelText('Hashtag TikTok')).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: 'Tinjau & siapkan koneksi Chrome' }));
     expect(
       await screen.findByRole('dialog', { name: 'Siapkan crawling TikTok melalui Chrome?' }),

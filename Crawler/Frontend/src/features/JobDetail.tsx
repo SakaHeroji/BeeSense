@@ -14,6 +14,7 @@ import {
 import { api } from '../shared/api';
 import { useUrlState } from '../shared/hooks';
 import {
+  conversationOriginLabel,
   dateTime,
   demoMode,
   duration,
@@ -123,6 +124,7 @@ export default function JobDetail() {
   };
   const live = liveStates.includes(job.status);
   const currentPlatform = job.platforms.find((p) => p.platform === routePlatform)?.platform;
+  const parallelJob = job.config?.executionMode === 'parallel' && !routePlatform;
   const stale = live && (!online || !!query.error || now - Date.parse(job.updatedAt) > 20000);
   const counts = job.platforms.reduce(
     (acc, p) => ({
@@ -136,20 +138,33 @@ export default function JobDetail() {
   );
   return (
     <>
-      <Link className="back-link" to={`/crawler/${currentPlatform || 'youtube'}?view=results`}>
+      <Link
+        className="back-link"
+        to={
+          parallelJob
+            ? '/crawler/parallel'
+            : `/crawler/${currentPlatform || 'youtube'}?view=results`
+        }
+      >
         <ArrowLeft size={15} aria-hidden="true" />
-        Hasil {platformName(currentPlatform || 'youtube')}
+        {parallelJob ? 'Crawling parallel' : `Hasil ${platformName(currentPlatform || 'youtube')}`}
       </Link>
       <div className="page-heading job-heading">
         <div>
           <span className="section-kicker">
             <Radio size={16} />
-            Akuisisi otomatis
+            {parallelJob ? 'Conversation parallel' : 'Akuisisi satu platform'}
           </span>
           <h1 id="main-title" tabIndex={-1}>
             {job.name}
           </h1>
           <p className="job-id">{job.id}</p>
+          {job.config?.conversation && (
+            <p className="job-conversation-meta">
+              Snapshot conversation v{job.config.conversation.version},{' '}
+              {conversationOriginLabel(job.config.conversation.origin, true)}
+            </p>
+          )}
         </div>
         <div className="job-heading-actions">
           <Badge status={job.status} />

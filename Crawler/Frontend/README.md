@@ -1,6 +1,6 @@
 # BeeSense Crawler Frontend
 
-React, TypeScript dan Vite untuk tujuh menu: YouTube, Reddit, Instagram, TikTok, Threads, Facebook dan X/Twitter. Lingkup versi 1.2 adalah **frontend terlebih dahulu**. Tidak ada menu/perangkat Migrasi Excel terpisah atau Crawler Manual. Form URL/survei dan penulis migrasi PostgreSQL yang sempat dibuat telah dihapus sesuai koreksi lingkup.
+React, TypeScript dan Vite untuk conversation riset, crawling parallel, serta tujuh sumber: YouTube, Reddit, Instagram, TikTok, Threads, Facebook dan X/Twitter. Lingkup versi 1.3 tetap **frontend terlebih dahulu**. Tidak ada menu/perangkat Migrasi Excel terpisah atau Crawler Manual. Form URL/survei dan penulis migrasi PostgreSQL yang sempat dibuat telah dihapus sesuai koreksi lingkup.
 
 ## Menjalankan
 
@@ -23,11 +23,21 @@ npm run preview
 
 Build produksi memakai mode API dan tidak fallback diam-diam ke simulasi. Konfigurasi publik berada di `.env.example`; VITE_* tidak boleh memuat token, cookie atau DSN.
 
+## Alur conversation-first
+
+Konteks riset sekarang disiapkan terpisah di `/crawler/conversations`. Tabel library dan form editor tidak ditampilkan bersamaan: operator membuka conversation baru atau versi yang dipilih pada form tersendiri. Satu conversation menyimpan judul, tujuan, rentang publikasi, include/exclude beserta mode pencocokan, query, hashtag, subreddit, ruang lingkup relevansi, contoh klasifikasi dan threshold.
+
+Operator dapat mengisi semuanya manual, meminta draf Gemini hanya dari judul, atau mengunduh prompt Markdown berbasis judul untuk menghasilkan workbook `.xlsx` melalui AI eksternal. Workbook memakai tiga sheet tetap: `conversation`, `discovery`, dan `relevance_examples`. Upload lokal memeriksa ekstensi, ukuran, sheet, header, tipe baris, threshold, formula, dan validasi domain sebelum langsung menyimpan conversation berversi. Rentang publikasi tetap berasal dari form; file hanya mengisi tujuan, discovery, keyword, dan relevansi. Workbook tidak dikirim ke endpoint upload frontend.
+
+Menu `/crawler/parallel` dan setiap `/crawler/:platform` hanya memilih conversation lalu mengatur operasi: platform, target, durasi, penyimpanan, serta akun bila diperlukan. Saat dipilih, conversation dibekukan menjadi snapshot berisi ID, versi dan waktu pembekuan. Perubahan conversation berikutnya tidak mengubah job yang sudah ditinjau. Mode parallel memakai satu snapshot yang sama untuk seluruh platform terpilih, sementara kegagalan satu platform tidak dimodelkan sebagai pembatalan platform lain.
+
+Demo menyimpan library conversation di localStorage tanpa rahasia. Generator demo deterministik dan berlabel; mode API memakai endpoint conversation pada kontrak HTTP. Gemini/API key tidak pernah berada di frontend. Origin conversation membedakan `manual`, `gemini`, dan `excel`.
+
 ## Konfigurasi per sosmed
 
 `config/social_crawler.json` adalah sumber nilai awal. `scripts/sync-config.mjs` membuat proyeksi publik `src/shared/crawler-defaults.json` sebelum dev/test/build. Edit JSON root, bukan snapshot; regenerasikan sebelum membangun dari context Docker frontend terisolasi. Proyeksi tidak membaca auth.json atau menyertakan rahasia.
 
-Form menyediakan tanggal publikasi WIB dari/sampai sebelum, include/exclude keywords, query atau hashtag Instagram/TikTok, subreddit Reddit, target post dan batas waktu jam opsional. Hanya sumber halaman yang aktif. Default 1.000 post, komentar/balasan tanpa cap, tanpa batas durasi. Excel lokal default; PostgreSQL/keduanya menyediakan host/IP, port dan URI sementara.
+Form platform tidak lagi mengulang judul, tanggal, keyword, query, hashtag, subreddit, atau relevansi. Seluruhnya berasal dari snapshot conversation yang terlihat sebelum review. Form platform hanya mengatur target post dan batas waktu jam opsional untuk sumber aktif. Default 1.000 post, komentar/balasan tanpa cap, tanpa batas durasi. Excel lokal default; PostgreSQL/keduanya menyediakan host/IP, port dan URI sementara.
 
 Akun & sesi opsional ditampilkan untuk Instagram, X/Twitter, Threads dan Facebook. Username/session ID disiapkan untuk `config/auth.json` melalui kontrak HTTP tersendiri; bukan bagian konfigurasi crawling. Session ID disembunyikan, bisa ditampilkan dengan tombol, tidak disimpan ke URL/localStorage dan dibersihkan setelah simulasi simpan. Isian kosong mempertahankan nilai yang ada. Simpan perubahan akun sebelum meninjau crawling. Demo hanya menyimpan metadata akun di memori, tanpa menyimpan session ID atau mengubah file nyata. TikTok memakai sesi pada tab Chrome melalui plugin.
 
@@ -60,7 +70,7 @@ Mulai crawling membuka monitor job untuk progres, aktivitas, konfigurasi dan dat
 
 ## Batas backend dan database
 
-[Kontrak API](docs/API_CONTRACT.md) adalah rancangan untuk tahap berikutnya. HTTP server/worker, penyimpanan auth.json dan migrasi transaksi PostgreSQL **belum diimplementasikan**. Tombol API hanya aktif bila capability tersedia. SocialCrawler Python tetap CLI/library; TikTok memiliki transport Chrome/plugin nyata yang belum terhubung ke gateway frontend. Penulisan langsung PostgreSQL belum tersedia dan runner menolak opsi tersebut sebelum crawling.
+[Kontrak API](docs/API_CONTRACT.md) adalah rancangan untuk tahap berikutnya. HTTP server/worker, penyimpanan conversation persisten, pemanggilan Gemini server-side, penyimpanan auth.json dan migrasi transaksi PostgreSQL **belum diimplementasikan**. Tombol API hanya aktif bila capability tersedia. SocialCrawler Python tetap CLI/library; TikTok memiliki transport Chrome/plugin nyata yang belum terhubung ke gateway frontend. Penulisan langsung PostgreSQL belum tersedia dan runner menolak opsi tersebut sebelum crawling.
 
 Utility `excel_postgresql.py`, SQL, tes database khusus, job CI dan image utility migrasi Excel telah dihapus. Database serta sumber Excel yang sudah ada tidak disentuh. **No migration required** untuk perubahan frontend ini.
 

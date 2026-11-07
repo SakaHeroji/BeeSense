@@ -1,7 +1,16 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { ArrowUpRight, FlaskConical, LifeBuoy, Menu, ShieldCheck, X } from 'lucide-react';
+import {
+  ArrowUpRight,
+  FlaskConical,
+  FolderKanban,
+  Layers3,
+  LifeBuoy,
+  Menu,
+  ShieldCheck,
+  X,
+} from 'lucide-react';
 import { api } from '../shared/api';
 import { useMediaQuery } from '../shared/hooks';
 import { demoMode, platformName, platforms } from '../shared/domain';
@@ -76,14 +85,29 @@ export default function Shell() {
         className={`sidebar ${mobile ? 'is-open' : ''}`}
         aria-label="Navigasi workspace"
       >
-        <Link to="/crawler/youtube" className="brand" onClick={() => setMobile(false)}>
+        <Link to="/crawler/conversations" className="brand" onClick={() => setMobile(false)}>
           <img src="/beesense.svg" alt="" width="39" height="39" />
           <span>
             BeeSense<span className="brand-sub">Research workspace</span>
           </span>
         </Link>
-        <p className="nav-caption">Akuisisi data</p>
+        <p className="nav-caption">Persiapan</p>
         <nav aria-label="Menu Crawler">
+          <NavLink to="/crawler/conversations" onClick={() => setMobile(false)}>
+            <span className="nav-feature-icon" aria-hidden="true">
+              <FolderKanban size={18} />
+            </span>
+            <span>Conversation</span>
+          </NavLink>
+        </nav>
+        <p className="nav-caption nav-caption-secondary">Crawling</p>
+        <nav aria-label="Mode dan platform crawling">
+          <NavLink to="/crawler/parallel" onClick={() => setMobile(false)}>
+            <span className="nav-feature-icon" aria-hidden="true">
+              <Layers3 size={18} />
+            </span>
+            <span>Parallel</span>
+          </NavLink>
           {platforms.map((platform) => (
             <NavLink
               key={platform}
@@ -102,7 +126,7 @@ export default function Shell() {
             <LifeBuoy size={18} /> Panduan workspace <ArrowUpRight size={14} />
           </button>
           <span className="sidebar-version">
-            BeeSense Crawler <span>v1.2</span>
+            BeeSense Crawler <span>v1.3</span>
           </span>
         </div>
       </aside>
@@ -120,7 +144,7 @@ export default function Shell() {
             </button>
             <span>Workspace</span>
             <span className="slash">/</span>
-            <b>Crawler</b>
+            <b>{location.pathname.includes('/conversations') ? 'Conversation' : 'Crawling'}</b>
           </div>
           <div className="header-right">
             <span className="project-label">
@@ -219,10 +243,17 @@ export default function Shell() {
       )}
       <Dialog open={help} onClose={() => setHelp(false)} title="Panduan workspace">
         <p>
-          Pilih menu sosmed, atur pencarian, lalu tinjau konfigurasi sebelum mulai crawling. Gunakan
-          buka Hasil per tanggal untuk statistik, data lengkap dan migrasi transaksi ke PostgreSQL.
+          Susun judul, keyword, discovery, dan relevansi di menu Conversation. Saat akan crawling,
+          pilih conversation yang sudah siap lalu tentukan satu platform atau mode parallel. Gunakan
+          Hasil per tanggal untuk statistik, data lengkap, dan migrasi transaksi ke PostgreSQL.
         </p>
         <div className="help-list">
+          <p>
+            <b>Conversation adalah sumber konteks</b>
+            <br />
+            Perubahan conversation tidak mengubah pekerjaan yang sudah dimulai; setiap pekerjaan
+            menyimpan snapshot versinya.
+          </p>
           <p>
             <b>Post memenuhi kriteria</b>
             <br />

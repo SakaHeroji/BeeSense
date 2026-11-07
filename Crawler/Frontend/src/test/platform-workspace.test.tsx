@@ -36,14 +36,23 @@ async function mount(path = '/crawler/youtube', observer = false) {
   );
   return { router, user: userEvent.setup() };
 }
+async function selectConversation(user: ReturnType<typeof userEvent.setup>) {
+  const select = await screen.findByLabelText(/^Conversation/);
+  await user.selectOptions(select, 'conversation-riset-kuliah');
+  return select;
+}
 describe('platform collection workspace', () => {
-  it('loads source JSON defaults and only enables the current source', async () => {
-    await mount('/crawler/instagram');
+  it('loads a separate conversation selector and keeps research inputs out of the crawling form', async () => {
+    const { user } = await mount('/crawler/instagram');
     expect(screen.getByRole('heading', { name: 'Instagram', level: 1 })).toBeInTheDocument();
-    expect(screen.getByLabelText(/Hashtag/)).toHaveValue(
-      initialConfig('automatic', 'instagram').platforms.instagram.hashtags,
+    await selectConversation(user);
+    expect(screen.getByText('Hashtag conversation')).toBeInTheDocument();
+    expect(screen.queryByLabelText(/Include keywords/)).not.toBeInTheDocument();
+    expect(screen.queryByLabelText(/Query discovery/)).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /Kelola conversation/ })).toHaveAttribute(
+      'href',
+      '/crawler/conversations',
     );
-    expect(screen.queryByLabelText(/Queries pencarian/)).not.toBeInTheDocument();
     expect(screen.getByLabelText(/Jumlah post/)).toHaveValue(1000);
     expect(screen.getByRole('radio', { name: /^Excel lokal/ })).toBeChecked();
     expect(screen.getByRole('checkbox', { name: /Batasi waktu/ })).not.toBeChecked();
@@ -55,7 +64,7 @@ describe('platform collection workspace', () => {
   it('supports optional hours and an ephemeral PostgreSQL URI with matching host', async () => {
     const { user, router } = await mount();
     const start = vi.spyOn(demoApi, 'start');
-    await user.type(screen.getByLabelText(/Nama pengambilan/), 'Uji penyimpanan sintetis');
+    await selectConversation(user);
     await user.click(screen.getByRole('checkbox', { name: /Batasi waktu/ }));
     const hours = screen.getByLabelText(/Limit waktu/);
     await user.clear(hours);
@@ -86,7 +95,7 @@ describe('platform collection workspace', () => {
   it('focuses an invalid field and never submits an invalid target', async () => {
     const { user } = await mount();
     const validate = vi.spyOn(demoApi, 'validate');
-    await user.type(screen.getByLabelText(/Nama pengambilan/), 'Target invalid');
+    await selectConversation(user);
     const target = screen.getByLabelText(/Jumlah post/);
     await user.clear(target);
     await user.type(target, '0');
@@ -103,9 +112,11 @@ describe('platform collection workspace', () => {
       }),
     );
     const { user } = await mount();
-    await user.type(screen.getByLabelText(/Nama pengambilan/), 'Awal');
+    await selectConversation(user);
     await user.click(screen.getByRole('button', { name: /Tinjau & mulai/ }));
-    await user.type(screen.getByLabelText(/Nama pengambilan/), ' berubah');
+    const target = screen.getByLabelText(/Jumlah post/);
+    await user.clear(target);
+    await user.type(target, '800');
     await act(async () =>
       resolve({
         id: 'stale',
@@ -120,11 +131,13 @@ describe('platform collection workspace', () => {
   });
   it('preserves draft across results tabs and confirms when changing platforms', async () => {
     const { user, router } = await mount();
-    await user.clear(screen.getByLabelText(/Nama pengambilan/));
-    await user.type(screen.getByLabelText(/Nama pengambilan/), 'Draft utuh');
+    await selectConversation(user);
+    const target = screen.getByLabelText(/Jumlah post/);
+    await user.clear(target);
+    await user.type(target, '777');
     await user.click(screen.getByRole('link', { name: 'Hasil per tanggal' }));
     await user.click(screen.getByRole('link', { name: 'Konfigurasi crawling' }));
-    expect(screen.getByLabelText(/Nama pengambilan/)).toHaveValue('Draft utuh');
+    expect(screen.getByLabelText(/Jumlah post/)).toHaveValue(777);
     await act(async () => {
       await router.navigate('/crawler/reddit');
     });

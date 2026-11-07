@@ -5,6 +5,8 @@ import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import PlatformWorkspace from '../features/PlatformWorkspace';
 import JobDetail from '../features/JobDetail';
+import ConversationWorkspace from '../features/ConversationWorkspace';
+import ParallelWorkspace from '../features/ParallelWorkspace';
 import Shell from '../app/Shell';
 import { demoApi } from '../shared/demo';
 vi.mock('../shared/api', async (original) => ({
@@ -21,6 +23,8 @@ async function mount(path: string, observer = false) {
       {
         element: <Shell />,
         children: [
+          { path: '/crawler/conversations', element: <ConversationWorkspace /> },
+          { path: '/crawler/parallel', element: <ParallelWorkspace /> },
           { path: '/crawler/:platform', element: <PlatformWorkspace /> },
           { path: '/crawler/:platform/jobs/:jobId', element: <JobDetail /> },
         ],
@@ -37,12 +41,22 @@ async function mount(path: string, observer = false) {
   return { router, user: userEvent.setup() };
 }
 describe('social source dashboard', () => {
-  it('only exposes seven social menus, with no manual or standalone migration page', async () => {
+  it('separates conversation preparation from parallel and seven social crawling menus', async () => {
     await mount('/crawler/youtube');
-    const nav = screen.getByRole('navigation', { name: 'Menu Crawler' });
-    expect(within(nav).getAllByRole('link')).toHaveLength(7);
-    expect(within(nav).queryByText('Crawler Manual')).not.toBeInTheDocument();
-    expect(within(nav).queryByText('Migrasi Excel')).not.toBeInTheDocument();
+    const preparation = screen.getByRole('navigation', { name: 'Menu Crawler' });
+    const crawling = screen.getByRole('navigation', { name: 'Mode dan platform crawling' });
+    expect(within(preparation).getAllByRole('link')).toHaveLength(1);
+    expect(within(preparation).getByRole('link', { name: 'Conversation' })).toHaveAttribute(
+      'href',
+      '/crawler/conversations',
+    );
+    expect(within(crawling).getAllByRole('link')).toHaveLength(8);
+    expect(within(crawling).getByRole('link', { name: 'Parallel' })).toHaveAttribute(
+      'href',
+      '/crawler/parallel',
+    );
+    expect(within(crawling).queryByText('Crawler Manual')).not.toBeInTheDocument();
+    expect(within(crawling).queryByText('Migrasi Excel')).not.toBeInTheDocument();
     expect(screen.queryByLabelText('Module frontend')).not.toBeInTheDocument();
   });
   it('opens complete source-scoped statistics from the crawling transaction', async () => {
@@ -138,6 +152,10 @@ describe('social source dashboard', () => {
       await screen.findByText(/Simpan pengaturan akun ke auth.json terlebih dahulu/),
     ).toBeInTheDocument();
     await user.clear(screen.getByLabelText('Session ID'));
+    await user.selectOptions(
+      await screen.findByLabelText(/^Conversation/),
+      'conversation-riset-kuliah',
+    );
     await user.click(screen.getByRole('button', { name: 'Tinjau & mulai crawling' }));
     expect(
       await screen.findByRole('dialog', { name: 'Mulai crawling Instagram?' }),

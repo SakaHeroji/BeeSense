@@ -61,6 +61,16 @@ const connection = async (id: string, suffix = '', action = false) => {
   return validateConnectorSession(result, id, window.location.origin);
 };
 export const httpApi: Api = {
+  conversations: () => request('/crawler/conversations'),
+  conversation: (id) => request(`/crawler/conversations/${encodeURIComponent(id)}`),
+  generateConversation: (title) => post('/crawler/conversations/generate', { title }),
+  saveConversation: (conversation) =>
+    conversation.id
+      ? request(`/crawler/conversations/${encodeURIComponent(conversation.id)}`, {
+          method: 'PUT',
+          body: JSON.stringify({ conversation }),
+        })
+      : post('/crawler/conversations', { conversation }),
   tiktokConnector: (id) => connection(id),
   renewTikTokConnector: (id) => connection(id, '/pairing', true),
   resumeTikTokConnector: (id) => connection(id, '/resume', true),

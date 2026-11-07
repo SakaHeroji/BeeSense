@@ -1,4 +1,13 @@
-import { dateTime, isoWib, lines, number, platformName, platforms, storageLabels } from './domain';
+import {
+  conversationOriginLabel,
+  dateTime,
+  isoWib,
+  lines,
+  number,
+  platformName,
+  platforms,
+  storageLabels,
+} from './domain';
 import type { Config } from './types';
 export function ConfigReview({ config }: { config: Config }) {
   return (
@@ -6,8 +15,20 @@ export function ConfigReview({ config }: { config: Config }) {
       <h2>Konfigurasi pengambilan</h2>
       <dl className="review-dl">
         <div>
-          <dt>Nama pengambilan</dt>
+          <dt>Conversation</dt>
           <dd>{config.name}</dd>
+        </div>
+        <div>
+          <dt>Snapshot conversation</dt>
+          <dd>
+            {config.conversation
+              ? `v${config.conversation.version} · ${conversationOriginLabel(config.conversation.origin, true)}`
+              : 'Konfigurasi lama tanpa snapshot conversation'}
+          </dd>
+        </div>
+        <div>
+          <dt>Mode eksekusi</dt>
+          <dd>{config.executionMode === 'parallel' ? 'Parallel' : 'Satu platform'}</dd>
         </div>
         <div>
           <dt>Publikasi mulai</dt>
@@ -32,6 +53,15 @@ export function ConfigReview({ config }: { config: Config }) {
             exclude
           </dd>
         </div>
+        {config.conversation && (
+          <div>
+            <dt>Relevansi</dt>
+            <dd>
+              Threshold {number(config.conversation.relevance.threshold * 100)}% ·{' '}
+              {config.conversation.relevance.scope}
+            </dd>
+          </div>
+        )}
         <div>
           <dt>Penyimpanan</dt>
           <dd>{storageLabels[config.storage.destination]}</dd>

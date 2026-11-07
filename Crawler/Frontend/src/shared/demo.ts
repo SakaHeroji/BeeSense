@@ -1,6 +1,8 @@
 import { transactionDemoApi } from './transaction-demo';
 import type {
   Api,
+  Conversation,
+  ConversationDraft,
   Capabilities,
   Config,
   Counts,
@@ -9,13 +11,24 @@ import type {
   SeriesPoint,
   PreviewRow,
 } from './types';
-import { initialConfig, redactConfig, platforms, queryLines, validateConfig } from './domain';
+import {
+  applyConversation,
+  emptyConversationDraft,
+  initialConfig,
+  redactConfig,
+  platforms,
+  queryLines,
+  validateConversation,
+  validateConfig,
+} from './domain';
 import { changeDemoConnection, demoConnection, isTikTokJob } from './connector-demo';
 
 // This adapter NEVER contacts social networks. Only public job metadata persists; credentials never enter browser storage.
 const storageKey = 'beesense:crawler:demo-jobs:v3';
+const conversationStorageKey = 'beesense:crawler:demo-conversations:v1';
 const plans = new Map<string, { config: Config; expiresAt: string }>();
 let jobCache: Job[] | undefined;
+let conversationCache: Conversation[] | undefined;
 const cap: Capabilities = {
   tiktokConnectorAvailable: true,
   migrationsAvailable: true,
@@ -57,6 +70,87 @@ const emptyCounts = (): Counts => ({
   candidates: 0,
 });
 const zeros = '0'.repeat(64);
+function conversationSeed(): Conversation[] {
+  const now = new Date(Date.now() - 86400000).toISOString();
+  return [
+    {
+      ...emptyConversationDraft('Percakapan tentang pilihan kuliah'),
+      id: 'conversation-riset-kuliah',
+      version: 3,
+      objective:
+        'Memahami pertimbangan calon mahasiswa dan keluarga ketika memilih jurusan dan kampus.',
+      include: 'kuliah\nkampus\njurusan\nbeasiswa',
+      exclude: 'judi\npromosi pinjaman',
+      queries: 'pilihan jurusan kuliah\nbiaya kuliah dan beasiswa\npengalaman memilih kampus',
+      hashtags: 'kuliah\nbeasiswa\nmasukkampus',
+      subreddits: 'indonesia\nfinansial',
+      relevance: {
+        scope: 'Pertimbangan, hambatan, dan pengalaman dalam memilih pendidikan tinggi.',
+        relevantExamples:
+          'Biaya kuliah dan ketersediaan beasiswa memengaruhi pilihan kampus saya.\nSaya membandingkan prospek kerja beberapa jurusan.',
+        genericExamples: 'Terima kasih atas informasinya.\nSemoga membantu.',
+        irrelevantExamples: 'Saya sedang memperbaiki kendaraan.\nPromo gim baru sudah tersedia.',
+        threshold: 0.62,
+      },
+      origin: 'manual',
+      createdAt: now,
+      updatedAt: now,
+    },
+  ];
+}
+function loadConversations(): Conversation[] {
+  if (conversationCache) return conversationCache;
+  try {
+    const saved: unknown = JSON.parse(localStorage.getItem(conversationStorageKey) || 'null');
+    if (
+      Array.isArray(saved) &&
+      saved.every(
+        (entry) =>
+          typeof entry?.id === 'string' &&
+          typeof entry?.title === 'string' &&
+          typeof entry?.version === 'number',
+      )
+    )
+      return (conversationCache = saved as Conversation[]);
+  } catch {
+    /* A corrupt browser cache must not break the conversation library. */
+  }
+  return (conversationCache = conversationSeed());
+}
+function saveConversations(conversations: Conversation[]) {
+  conversationCache = conversations;
+  try {
+    localStorage.setItem(conversationStorageKey, JSON.stringify(conversations));
+  } catch {
+    /* Conversation editing still works in memory when storage is unavailable. */
+  }
+}
+function generatedConversation(title: string): ConversationDraft {
+  const clean = title.trim();
+  const words = clean
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((word) => word.length > 2)
+    .slice(0, 8);
+  const keywords = [...new Set(words)];
+  return {
+    ...emptyConversationDraft(clean),
+    objective: `Memetakan percakapan, kebutuhan, dan persepsi publik terkait ${clean}.`,
+    include: keywords.join('\n'),
+    exclude: 'spam\npromosi tidak terkait',
+    queries: [clean, `pengalaman ${clean}`, `pendapat tentang ${clean}`].join('\n'),
+    hashtags: keywords.slice(0, 4).join('\n'),
+    relevance: {
+      scope: `Konten yang membahas pengalaman, kebutuhan, keputusan, atau persepsi terkait ${clean}.`,
+      relevantExamples: `Saya mempertimbangkan ${clean} karena sesuai dengan kebutuhan saya.`,
+      genericExamples: 'Terima kasih atas informasinya.',
+      irrelevantExamples: `Konten ini tidak berkaitan dengan ${clean}.`,
+      threshold: 0.62,
+    },
+    origin: 'gemini',
+  };
+}
 function dataset(job: Job, partial: boolean): Dataset {
   const rows = job.platforms.reduce(
     (n, p) => n + p.counts.roots + p.counts.comments + p.counts.replies,
@@ -73,8 +167,7 @@ function dataset(job: Job, partial: boolean): Dataset {
   };
 }
 function seed(): Job[] {
-  const config = initialConfig();
-  config.name = 'Percakapan tentang pilihan kuliah';
+  const config = applyConversation(initialConfig(), conversationSeed()[0]);
   config.since = '2026-10-01T00:00';
   config.until = '2026-10-29T00:00';
   const at = new Date(Date.now() - 4 * 3600000).toISOString();
@@ -280,6 +373,50 @@ function advance(job: Job): Job {
 }
 export const demoApi: Api = {
   ...transactionDemoApi,
+  async conversations() {
+    return structuredClone(loadConversations()).sort((a, b) =>
+      b.updatedAt.localeCompare(a.updatedAt),
+    );
+  },
+  async conversation(id) {
+    const conversation = loadConversations().find((entry) => entry.id === id);
+    if (!conversation) throw new Error('Conversation simulasi tidak ditemukan.');
+    return structuredClone(conversation);
+  },
+  async generateConversation(title) {
+    requireOperator();
+    if (!title.trim() || title.trim().length > 120)
+      throw new Error('Isi judul conversation, maksimum 120 karakter.');
+    await new Promise((resolve) => setTimeout(resolve, 250));
+    return generatedConversation(title);
+  },
+  async saveConversation(draft) {
+    requireOperator();
+    const errors = validateConversation(draft, cap);
+    if (errors.length) throw new Error(errors.map((error) => error.message).join(' '));
+    const existing = draft.id
+      ? loadConversations().find((conversation) => conversation.id === draft.id)
+      : undefined;
+    if (draft.id && !existing)
+      throw new Error('Conversation yang akan diperbarui tidak ditemukan.');
+    if (existing && draft.version !== existing.version)
+      throw new Error(
+        'Conversation sudah diperbarui di tempat lain. Muat ulang sebelum menyimpan.',
+      );
+    const now = stamp();
+    const saved: Conversation = {
+      ...structuredClone(draft),
+      id: existing?.id || `conversation-${crypto.randomUUID()}`,
+      version: (existing?.version || 0) + 1,
+      createdAt: existing?.createdAt || now,
+      updatedAt: now,
+    };
+    saveConversations([
+      saved,
+      ...loadConversations().filter((conversation) => conversation.id !== saved.id),
+    ]);
+    return structuredClone(saved);
+  },
   async tiktokConnector(id) {
     requireOperator();
     const job = get(id);

@@ -1,22 +1,14 @@
 import { flushSync } from 'react-dom';
 import { useRef, useState } from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import {
-  CalendarDays,
-  Check,
-  Clock3,
-  Database,
-  FolderOpen,
-  Play,
-  Search,
-  Settings2,
-} from 'lucide-react';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { Clock3, Database, FolderOpen, Play, Settings2, SlidersHorizontal } from 'lucide-react';
 import { api, ApiError } from '../shared/api';
 import { FieldErrorsContext, useApp } from '../shared/context';
 import {
   dateTime,
   demoMode,
+  applyConversation,
   initialConfig,
   isoWib,
   number,
@@ -34,6 +26,7 @@ import { StorageSettings } from '../shared/StorageSettings';
 import { AuthSettings } from '../shared/AuthSettings';
 import type { AuthInput } from '../shared/types';
 import { TikTokChromePreparation, TikTokWorkflow } from './TikTokConnector';
+import { ConversationPicker } from '../shared/ConversationPicker';
 
 export default function PlatformWorkspace() {
   const { platform = 'youtube' } = useParams();
@@ -44,10 +37,7 @@ export default function PlatformWorkspace() {
 function PlatformPage({ platform }: { platform: Platform }) {
   const { cap, session, notify } = useApp();
   const [view] = useUrlState('view', 'config');
-  const [config, setConfig] = useState(() => ({
-    ...initialConfig('automatic', platform),
-    name: `Riset pendidikan di ${platformName(platform)}`,
-  }));
+  const [config, setConfig] = useState(() => initialConfig('automatic', platform));
   const [dirty, setDirty] = useState(false);
   const [credentials, setCredentials] = useState<AuthInput>({ username: '', sessionid: '' });
   const [errors, setErrors] = useState<FieldError[]>([]);
@@ -57,6 +47,11 @@ function PlatformPage({ platform }: { platform: Platform }) {
   const now = useClock();
   const client = useQueryClient();
   const navigate = useNavigate();
+  const conversations = useQuery({ queryKey: ['conversations'], queryFn: api.conversations });
+  const selectedConversation = conversations.data?.find(
+    (conversation) => conversation.id === config.conversation?.id,
+  );
+  const conversationSnapshot = selectedConversation || config.conversation;
   const isTikTok = platform === 'tiktok';
   const supported =
     cap.platforms.includes(platform) && (!isTikTok || cap.tiktokConnectorAvailable === true);
@@ -111,6 +106,11 @@ function PlatformPage({ platform }: { platform: Platform }) {
     if (credentials.username || credentials.sessionid) {
       notify('Simpan pengaturan akun ke auth.json terlebih dahulu, atau kosongkan isian akun.');
       document.querySelector<HTMLButtonElement>('.account-actions button:last-child')?.focus();
+      return;
+    }
+    if (!config.conversation) {
+      setErrors([{ field: 'conversation', message: 'Pilih conversation sebelum mulai crawling.' }]);
+      requestAnimationFrame(() => document.getElementsByName('conversation')[0]?.focus());
       return;
     }
     const issues = validateConfig(config, cap);
@@ -184,6 +184,16 @@ function PlatformPage({ platform }: { platform: Platform }) {
             </Notice>
           ) : (
             <FieldErrorsContext.Provider value={errors}>
+              <ConversationPicker
+                conversations={conversations.data || []}
+                value={config.conversation?.id || ''}
+                pending={conversations.isPending}
+                error={conversations.error?.message}
+                onChange={(conversation) => {
+                  if (conversation) change(applyConversation(config, conversation));
+                  else change({ ...config, conversation: null, name: '', description: '' });
+                }}
+              />
               <form
                 className={`social-config-layout ${isTikTok ? 'tiktok-config' : ''}`}
                 onSubmit={submit}
@@ -192,182 +202,60 @@ function PlatformPage({ platform }: { platform: Platform }) {
                 <section className="panel social-form">
                   <div className="social-section-heading">
                     <div>
-                      <h2>Apa yang ingin dikumpulkan?</h2>
+                      <span className="step-kicker">2 dari 2</span>
+                      <h2>Atur eksekusi {platformName(platform)}</h2>
                       <p>
-                        Nilai awal mengikuti konfigurasi proyek. Sesuaikan untuk pengambilan ini.
+                        Konteks riset berasal dari conversation. Di sini Anda hanya mengatur cara
+                        platform ini dijalankan.
                       </p>
                     </div>
-                    <Search size={21} aria-hidden="true" />
+                    <SlidersHorizontal size={21} aria-hidden="true" />
                   </div>
                   <Errors errors={errors} />
-                  <Field name="name" label="Nama pengambilan" required>
-                    {(id) => (
-                      <input
-                        id={id}
-                        maxLength={120}
-                        value={config.name}
-                        onChange={(e) => field('name', e.target.value)}
-                        placeholder="Contoh: Pilihan jurusan November…"
-                      />
-                    )}
-                  </Field>
-                  <fieldset className="social-fieldset">
-                    <legend>
-                      <CalendarDays size={18} aria-hidden="true" />
-                      Tanggal publikasi post
-                    </legend>
-                    <p className="section-description">
-                      Waktu dalam WIB. Tanggal crawling akan dicatat terpisah pada hasil.
-                    </p>
-                    <div className="form-grid">
-                      <Field name="dates" label="Dari tanggal" required>
-                        {(id) => (
-                          <input
-                            id={id}
-                            type="datetime-local"
-                            value={config.since}
-                            onChange={(e) => field('since', e.target.value)}
-                          />
-                        )}
-                      </Field>
-                      <Field
-                        name="dates"
-                        label="Sampai sebelum tanggal"
-                        required
-                        hint="Batas akhir tidak termasuk."
-                      >
-                        {(id) => (
-                          <input
-                            id={id}
-                            type="datetime-local"
-                            value={config.until}
-                            onChange={(e) => field('until', e.target.value)}
-                          />
-                        )}
-                      </Field>
+                  {conversationSnapshot ? (
+                    <div className="platform-conversation-plan">
+                      <dl>
+                        <div>
+                          <dt>Conversation</dt>
+                          <dd>{conversationSnapshot.title}</dd>
+                        </div>
+                        <div>
+                          <dt>Metode discovery</dt>
+                          <dd>
+                            {platform === 'instagram'
+                              ? 'Hashtag conversation'
+                              : isTikTok
+                                ? 'Query & hashtag conversation'
+                                : platform === 'reddit'
+                                  ? 'Query conversation & subreddit'
+                                  : 'Query conversation'}
+                          </dd>
+                        </div>
+                        <div>
+                          <dt>Relevansi</dt>
+                          <dd>
+                            Threshold {number(conversationSnapshot.relevance.threshold * 100)}%
+                          </dd>
+                        </div>
+                        <div>
+                          <dt>Versi snapshot</dt>
+                          <dd>v{conversationSnapshot.version}</dd>
+                        </div>
+                      </dl>
+                      <Notice>
+                        Perubahan pada conversation setelah pekerjaan dimulai tidak mengubah
+                        snapshot pekerjaan ini. Buat pekerjaan baru untuk memakai versi terbaru.
+                      </Notice>
                     </div>
-                  </fieldset>
-                  <fieldset className="social-fieldset">
-                    <legend>Kata kunci pada post</legend>
-                    <div className="form-grid">
-                      <Field
-                        name="include"
-                        label="Include keywords"
-                        hint="Satu kata atau frasa per baris."
-                      >
-                        {(id) => (
-                          <textarea
-                            id={id}
-                            rows={4}
-                            value={config.include}
-                            onChange={(e) => field('include', e.target.value)}
-                            placeholder="beasiswa kuliah…"
-                          />
-                        )}
-                      </Field>
-                      <Field
-                        name="exclude"
-                        label="Exclude keywords"
-                        hint="Post yang cocok akan dilewati."
-                      >
-                        {(id) => (
-                          <textarea
-                            id={id}
-                            rows={4}
-                            value={config.exclude}
-                            onChange={(e) => field('exclude', e.target.value)}
-                            placeholder="Kata atau topik yang dikecualikan…"
-                          />
-                        )}
-                      </Field>
+                  ) : (
+                    <div className="conversation-required-state">
+                      <h3>Pilih conversation untuk melanjutkan</h3>
+                      <p>
+                        Semua keyword, query, tanggal publikasi, dan aturan relevansi dikelola dari
+                        menu Conversation.
+                      </p>
                     </div>
-                  </fieldset>
-                  <fieldset className="social-fieldset">
-                    <legend>Pencarian {platformName(platform)}</legend>
-                    {platform === 'instagram' ? (
-                      <Field
-                        name={`${platform}.hashtags`}
-                        label="Hashtag"
-                        required
-                        hint="Instagram menggunakan hashtag. Tulis satu per baris; tanda # boleh disertakan."
-                      >
-                        {(id) => (
-                          <textarea
-                            id={id}
-                            rows={5}
-                            value={settings.hashtags}
-                            onChange={(e) => platformField('hashtags', e.target.value)}
-                            placeholder="kuliah\nbeasiswa…"
-                            spellCheck={false}
-                          />
-                        )}
-                      </Field>
-                    ) : (
-                      <Field
-                        name={`${platform}.queries`}
-                        label="Queries pencarian"
-                        required={!isTikTok || !settings.hashtags.trim()}
-                        hint={
-                          isTikTok
-                            ? 'Satu query per baris. Query dan hashtag diproses bergiliran.'
-                            : 'Satu query per baris. Hashtag dapat ditulis langsung dalam query jika platform mendukungnya.'
-                        }
-                      >
-                        {(id) => (
-                          <textarea
-                            id={id}
-                            rows={5}
-                            value={settings.queries}
-                            onChange={(e) => platformField('queries', e.target.value)}
-                            placeholder="biaya kuliah beasiswa…"
-                            spellCheck={false}
-                          />
-                        )}
-                      </Field>
-                    )}
-                    {isTikTok && (
-                      <Field
-                        name="tiktok.hashtags"
-                        label="Hashtag TikTok"
-                        hint="Opsional. Satu hashtag per baris, tanpa spasi; tanda # boleh disertakan."
-                      >
-                        {(id) => (
-                          <textarea
-                            id={id}
-                            rows={3}
-                            value={settings.hashtags}
-                            onChange={(e) => platformField('hashtags', e.target.value)}
-                            placeholder="beasiswa…"
-                            spellCheck={false}
-                          />
-                        )}
-                      </Field>
-                    )}
-                    {platform === 'reddit' && (
-                      <Field
-                        name="subreddit"
-                        label="Subreddit"
-                        hint="Pisahkan dengan koma, tanpa r/."
-                      >
-                        {(id) => (
-                          <input
-                            id={id}
-                            value={config.subreddit}
-                            onChange={(e) => field('subreddit', e.target.value)}
-                            spellCheck={false}
-                          />
-                        )}
-                      </Field>
-                    )}
-                    <div className="context-preserved">
-                      <Check size={17} aria-hidden="true" />
-                      <span>
-                        {isTikTok
-                          ? 'Seluruh komentar dan balasan dicoba sampai akhir pagination atau batas waktu. Hasil parsial tetap disimpan.'
-                          : 'Seluruh komentar dan balasan yang tersedia ikut diambil, tanpa batas jumlah.'}
-                      </span>
-                    </div>
-                  </fieldset>
+                  )}
                 </section>
                 <aside className="social-controls">
                   {isTikTok && <TikTokChromePreparation />}
@@ -498,8 +386,10 @@ function PlatformPage({ platform }: { platform: Platform }) {
             onClose={() => !start.isPending && setPlan(null)}
           >
             <dl className="start-summary">
-              <dt>Nama pengambilan</dt>
+              <dt>Conversation</dt>
               <dd>{config.name}</dd>
+              <dt>Snapshot</dt>
+              <dd>v{config.conversation?.version || '—'} · eksekusi satu platform</dd>
               <dt>Target</dt>
               <dd>{number(settings.target)} post unik, seluruh komentar & balasan</dd>
               <dt>Publikasi mulai</dt>

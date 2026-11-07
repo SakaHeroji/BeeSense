@@ -6,7 +6,7 @@ YouTube dan Reddrix kini menyaring root sebelum komentar, menyimpan progres
 streaming, dan menghentikan pagination yang mencapai cap atau stagnan. Baca
 [analisis, benchmark offline dan batas validasi](PERFORMANCE_YOUTUBE_REDDIT_20261106.md).
 
-[Rencana campaign paralel](PLAN_CAMPAIGN_PARALEL.md) mendokumentasikan usulan satu
+[Rencana conversation paralel](PLAN_CONVERSATION_PARALEL.md) mendokumentasikan usulan satu
 eksekusi untuk menjalankan worker platform bersamaan dengan konfigurasi bersama
 dan folder per campaign. Runner baru tersebut belum diimplementasikan.
 

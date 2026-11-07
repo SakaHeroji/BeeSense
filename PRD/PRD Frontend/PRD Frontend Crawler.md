@@ -1,26 +1,26 @@
 # PRD Frontend Crawler BeeSense
 
-| Atribut | Nilai |
-| --- | --- |
-| Versi | 1.1 |
-| Tanggal | 29 Oktober 2026 |
-| Status | Draf spesifikasi produk; belum diimplementasikan |
-| Teknologi frontend | ReactJS dengan TypeScript, aplikasi web untuk operator |
-| Bagian sistem | Crawler; frontend NLP Machine Learning dan Dashboard dibahas terpisah |
+| Atribut            | Nilai                                                                                                     |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| Versi              | 1.3                                                                                                       |
+| Tanggal            | 7 November 2026                                                                                           |
+| Status             | Frontend conversation-first diimplementasikan; integrasi backend direncanakan                             |
+| Teknologi frontend | ReactJS dengan TypeScript, aplikasi web untuk operator                                                    |
+| Bagian sistem      | Crawler; frontend NLP Machine Learning dan Dashboard dibahas terpisah                                     |
 | Dokumen pendamping | [Rancangan layar](<Rancangan Layar Crawler.md>) · [Acceptance criteria](<Acceptance Criteria Crawler.md>) |
 
-Implementasi frontend setelah penyusunan PRD tersedia pada [Crawler/Frontend](../../Crawler/Frontend/README.md). Mode simulasi dan typed API adapter sudah dibuat; layanan backend untuk kontrak ini masih diperlukan. Tabel kebutuhan di bawah tetap menjadi acuan produk, bukan klaim seluruh integrasi produksi telah tersedia.
+Implementasi frontend tersedia pada [Crawler/Frontend](../../Crawler/Frontend/README.md). Mode simulasi dan typed API adapter sudah dibuat; layanan backend untuk kontrak ini masih diperlukan. Bagian Crawler Manual/URL/survei pada revisi lama telah dibatalkan dari lingkup frontend aktif dan dipertahankan di bagian akhir hanya sebagai histori rancangan.
 
 ## 1. Ringkasan produk
 
 Frontend Crawler membantu tim riset penerimaan mahasiswa memperoleh dan memeriksa data dari media sosial serta survei calon mahasiswa dan orang tua. Pengguna dapat menentukan sumber, menjalankan akuisisi, menangani hambatan akses, memeriksa kualitas, lalu menyediakan dataset berversi untuk tahap NLP.
 
-Di dalam frontend Crawler terdapat **dua menu utama**:
+Di dalam frontend Crawler terdapat dua kelompok navigasi:
 
-1. **Crawler Otomatis**: sistem menemukan post berdasarkan query, platform, rentang tanggal, dan filter, kemudian mengambil post beserta komentar/reply.
-2. **Crawler Manual**: manusia memasukkan URL post tertentu atau data survei. Pilihan **Input URL** dan **Data Survei** berada di dalam menu ini.
+1. **Persiapan — Conversation**: operator menentukan judul, tujuan, tanggal, keyword, discovery dan relevansi secara manual atau meninjau draf Gemini yang dibuat hanya dari judul.
+2. **Crawling — Parallel atau satu platform**: operator memilih conversation yang sudah tersimpan, lalu menentukan target, durasi, penyimpanan dan koneksi sumber.
 
-“Otomatis” pada MVP berarti pencarian dan pengambilan dilakukan setelah operator memulai pekerjaan. Penjadwalan berulang bukan syarat MVP. “Manual” menyatakan asal masukan dari manusia; pengambilan konten URL tetap dikerjakan worker server.
+Satu versi conversation dibekukan sebagai snapshot pada saat rencana crawling dibuat. Penjadwalan berulang bukan syarat MVP. Mode parallel menggunakan snapshot yang sama pada semua platform yang dipilih; mode satu platform menggunakan alur review yang sama.
 
 ## 2. Masalah dan hasil yang dituju
 
@@ -38,10 +38,10 @@ Hasil yang dituju:
 
 MVP menggunakan dua peran yang diusulkan berikut. Backend menjadi penegak izin; menyembunyikan tombol saja tidak cukup.
 
-| Peran | Kebutuhan | Izin |
-| --- | --- | --- |
-| Operator riset | Mengatur akuisisi, memasukkan URL/survei, mengatasi hambatan, memeriksa hasil | Membuat dan menjalankan pekerjaan, menghentikan pekerjaan, menangani CAPTCHA untuk pekerjaan yang diizinkan, mengomit data manual, menyiapkan dataset untuk NLP. |
-| Pengamat/analis | Memantau pekerjaan dan menilai kualitas data | Membaca pekerjaan/dataset di proyek yang diizinkan; unduh hanya bila izin ekspor diberikan. Tidak memulai, menghentikan, atau mengomit. |
+| Peran           | Kebutuhan                                                                     | Izin                                                                                                                                                             |
+| --------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Operator riset  | Mengatur akuisisi, memasukkan URL/survei, mengatasi hambatan, memeriksa hasil | Membuat dan menjalankan pekerjaan, menghentikan pekerjaan, menangani CAPTCHA untuk pekerjaan yang diizinkan, mengomit data manual, menyiapkan dataset untuk NLP. |
+| Pengamat/analis | Memantau pekerjaan dan menilai kualitas data                                  | Membaca pekerjaan/dataset di proyek yang diizinkan; unduh hanya bila izin ekspor diberikan. Tidak memulai, menghentikan, atau mengomit.                          |
 
 Calon mahasiswa dan orang tua merupakan **kelompok responden survei**, bukan pengguna wajib frontend operator ini. MVP menerima jawaban yang sudah diperoleh manusia melalui formulir input operator atau impor file. Pembuatan formulir survei publik, distribusi kuesioner, dan manajemen penerimaan mahasiswa berada di luar lingkup.
 
@@ -51,22 +51,21 @@ Calon mahasiswa dan orang tua merupakan **kelompok responden survei**, bukan pen
 
 **P0** wajib tersedia sebelum rilis MVP. **P1** merupakan peningkatan setelah alur inti diterima.
 
-| ID | Prioritas | Kebutuhan |
-| --- | --- | --- |
-| CR-01 | P0 | Shell dengan pilihan tiga frontend, konteks proyek, dan tepat dua menu utama Crawler. |
-| CR-02 | P0 | Form Crawler Otomatis: sumber, query, tanggal, filter, target, durasi, dan pengecualian dataset. |
-| CR-03 | P0 | Validasi rencana tanpa crawling, ringkasan konfigurasi, dan mulai pekerjaan sekali saja. |
-| CR-04 | P0 | Monitor pekerjaan persisten: progres per platform, deadline, event, dan status koneksi. |
-| CR-05 | P0 | Penanganan CAPTCHA manusia dan cooldown HTTP 429 sesuai sesi worker dan deadline. |
-| CR-06 | P0 | Hentikan akuisisi dengan aman, finalisasi data parsial, riwayat, dan konfigurasi salinan untuk pekerjaan baru. |
-| CR-07 | P0 | Crawler Manual Input URL: satu/banyak URL, validasi, deduplikasi, review, dan pengambilan URL terpilih. |
-| CR-08 | P0 | Crawler Manual Data Survei: input formulir dan impor CSV/XLSX dengan mapping, preview, dan commit. |
-| CR-09 | P0 | Deduplikasi dan provenance, termasuk baseline historis serta identitas respons survei. |
-| CR-10 | P0 | Pemeriksaan dataset, status parsial, ekspor tervalidasi, dan handoff ke NLP berbasis versi. |
-| CR-11 | P0 | Izin, perlindungan data responden, dan audit tindakan. |
-| CR-12 | P0 | Aksesibilitas, responsivitas, penanganan error, dan pemulihan koneksi. |
-| CR-13 | P1 | Preset konfigurasi bernama dan notifikasi dalam aplikasi yang dapat dikonfigurasi. |
-| CR-14 | P0 | Pilihan tujuh platform: YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter, dengan kapabilitas adapter yang dinyatakan jelas. |
+| ID    | Prioritas | Kebutuhan                                                                                                                                                |
+| ----- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CR-01 | P0        | Shell crawler dengan Conversation sebagai persiapan, mode Parallel, dan tujuh menu platform.                                                             |
+| CR-02 | P0        | Editor Conversation berversi untuk judul, tujuan, query, tanggal, keyword dan relevansi; form crawling hanya memuat pengaturan operasi.                  |
+| CR-03 | P0        | Validasi rencana tanpa crawling, ringkasan konfigurasi, dan mulai pekerjaan sekali saja.                                                                 |
+| CR-04 | P0        | Monitor pekerjaan persisten: progres per platform, deadline, event, dan status koneksi.                                                                  |
+| CR-05 | P0        | Penanganan CAPTCHA manusia dan cooldown HTTP 429 sesuai sesi worker dan deadline.                                                                        |
+| CR-06 | P0        | Hentikan akuisisi dengan aman, finalisasi data parsial, riwayat, dan konfigurasi salinan untuk pekerjaan baru.                                           |
+| CR-09 | P0        | Deduplikasi dan provenance, termasuk baseline historis serta identitas respons survei.                                                                   |
+| CR-10 | P0        | Pemeriksaan dataset, status parsial, ekspor tervalidasi, dan handoff ke NLP berbasis versi.                                                              |
+| CR-11 | P0        | Izin, perlindungan data responden, dan audit tindakan.                                                                                                   |
+| CR-12 | P0        | Aksesibilitas, responsivitas, penanganan error, dan pemulihan koneksi.                                                                                   |
+| CR-13 | P0        | Conversation dapat diisi manual atau dibuat sebagai draf Gemini dari judul saja; draf wajib ditinjau sebelum disimpan.                                   |
+| CR-14 | P0        | Tabel library dan form Conversation dipisahkan; prompt Markdown berbasis judul dapat diunduh dan workbook Excel hasil AI dapat divalidasi lalu disimpan. |
+| CR-15 | P0        | Pilihan tujuh platform: YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter, dengan kapabilitas adapter yang dinyatakan jelas.          |
 
 ### 4.2 Di luar MVP
 
@@ -74,14 +73,14 @@ Penjadwalan rutin, ekspansi otomatis akun/proxy, penyelesaian CAPTCHA otomatis, 
 
 ### 4.3 Dasar sistem yang sudah ada
 
-| Area | Kondisi kode saat penyusunan | Kebutuhan pengembangan |
-| --- | --- | --- |
-| Akuisisi sosial | YouTube dan Reddit; konfigurasi JSON; `plan()`/dry-run dan `run()` pada [social_crawler.py](../../Crawler/Backend/social_crawler.py). | API dan worker persisten yang membungkus kapabilitas tersebut. |
-| Eksekusi | Batas waktu global, round robin, deduplikasi historis, event progres, CAPTCHA manual, cooldown 429. | Pemetaan status/progres menjadi kontrak UI dan pengendalian pekerjaan yang aman. |
-| Ekspor | Bundle audit, workbook sosial, summary, dan manifest. | Katalog dataset, kontrol akses, preview, dan unduh sesudah finalisasi. |
-| Input URL | Crawler menerima URL di konfigurasi. | Mode URL saja yang menjamin tidak memicu discovery query sebagai fallback. |
-| Survei | Belum ada jalur survei yang memenuhi spesifikasi dokumen ini. | Validasi/import/form dan skema survei berversi. |
-| Frontend | Dashboard saat ini menggunakan [main.py](../../Dashboard/app.py), Streamlit. | Frontend Crawler ReactJS baru; tidak mengganti Dashboard dalam pekerjaan PRD ini. |
+| Area            | Kondisi kode saat penyusunan                                                                                                          | Kebutuhan pengembangan                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Akuisisi sosial | YouTube dan Reddit; konfigurasi JSON; `plan()`/dry-run dan `run()` pada [social_crawler.py](../../Crawler/Backend/social_crawler.py). | API dan worker persisten yang membungkus kapabilitas tersebut.                    |
+| Eksekusi        | Batas waktu global, round robin, deduplikasi historis, event progres, CAPTCHA manual, cooldown 429.                                   | Pemetaan status/progres menjadi kontrak UI dan pengendalian pekerjaan yang aman.  |
+| Ekspor          | Bundle audit, workbook sosial, summary, dan manifest.                                                                                 | Katalog dataset, kontrol akses, preview, dan unduh sesudah finalisasi.            |
+| Input URL       | Crawler menerima URL di konfigurasi.                                                                                                  | Mode URL saja yang menjamin tidak memicu discovery query sebagai fallback.        |
+| Survei          | Belum ada jalur survei yang memenuhi spesifikasi dokumen ini.                                                                         | Validasi/import/form dan skema survei berversi.                                   |
+| Frontend        | Dashboard saat ini menggunakan [main.py](../../Dashboard/app.py), Streamlit.                                                          | Frontend Crawler ReactJS baru; tidak mengganti Dashboard dalam pekerjaan PRD ini. |
 
 Rujukan perilaku crawler: [SOCIAL_CRAWLER.md](../../docs/crawler/SOCIAL_CRAWLER.md) dan [social_crawler.json](../../config/social_crawler.json). Angka bawaan di bawah diambil dari konfigurasi proyek saat ini atau ditandai sebagai usulan produk.
 
@@ -90,64 +89,65 @@ Rujukan perilaku crawler: [SOCIAL_CRAWLER.md](../../docs/crawler/SOCIAL_CRAWLER.
 ```text
 BeeSense — pemilih frontend: Crawler | NLP Machine Learning | Dashboard
 └── Crawler — proyek aktif
-    ├── Crawler Otomatis
-    │   ├── Konfigurasi baru
-    │   └── Riwayat → Detail pekerjaan → Hasil dataset
-    └── Crawler Manual
-        ├── Input URL
-        ├── Data Survei
-        └── Riwayat → Detail pekerjaan/import → Hasil dataset
+    ├── Persiapan
+    │   └── Conversation → Library dan editor berversi
+    └── Crawling
+        ├── Parallel → pilih conversation dan beberapa platform
+        └── YouTube / Reddit / Instagram / TikTok / Threads / Facebook / X
+            └── pilih conversation → konfigurasi operasi → detail pekerjaan → hasil
 ```
 
-Riwayat disajikan sebagai tab pada masing-masing menu, dengan filter sumber, status, tanggal, dan pencarian nama/ID. Detail pekerjaan dapat ditautkan langsung dan tetap menandai menu asalnya. Hasil dataset dibuka dari pekerjaan terkait. Tidak ada menu utama ketiga untuk riwayat atau dataset.
+Riwayat disajikan sebagai tab pada masing-masing menu platform, dengan filter sumber, status, tanggal, dan pencarian nama/ID. Detail pekerjaan dapat ditautkan langsung dan tetap menandai menu asalnya. Hasil dataset dibuka dari pekerjaan terkait. Conversation tetap menu persiapan tersendiri; tidak ada menu utama ketiga untuk riwayat atau dataset.
 
 Rute yang diusulkan:
 
-| Rute | Tampilan |
-| --- | --- |
-| `/crawler/automatic` | Konfigurasi otomatis dan tab Riwayat. |
-| `/crawler/automatic/jobs/:jobId` | Monitor, event, dan hasil pekerjaan otomatis. |
-| `/crawler/manual?tab=url` | Input URL dan riwayat manual. |
-| `/crawler/manual?tab=survey` | Input/impor survei dan riwayat manual. |
-| `/crawler/manual/jobs/:jobId` | Detail pekerjaan URL/import survei. |
+| Rute                             | Tampilan                                                         |
+| -------------------------------- | ---------------------------------------------------------------- |
+| `/crawler/conversations`         | Library dan editor conversation manual/Gemini.                   |
+| `/crawler/parallel`              | Pilih conversation, platform dan target untuk eksekusi parallel. |
+| `/crawler/parallel/jobs/:jobId`  | Monitor pekerjaan parallel.                                      |
+| `/crawler/:platform`             | Pilih conversation, konfigurasi operasi dan hasil per platform.  |
+| `/crawler/:platform/jobs/:jobId` | Monitor, statistik dan hasil pekerjaan satu platform.            |
 
 Identitas proyek berasal dari konteks yang diverifikasi server. URL boleh menyimpan tab/filter/ID, bukan isi jawaban survei, token, atau informasi pribadi. Jika frontend NLP/Dashboard belum tersedia, tampilkan status belum tersedia; jangan menampilkan tautan yang rusak.
 
-## 6. Crawler Otomatis
+## 6. Conversation dan crawling
 
 ### 6.1 Alur pengguna
 
-**Pilih proyek → tentukan sumber dan query → tetapkan filter/target → validasi rencana → tinjau → mulai → pantau → periksa hasil → siapkan untuk NLP.**
+**Buat/pilih conversation → tinjau konteks riset → pilih mode/platform → tetapkan target/durasi/storage → validasi rencana → tinjau snapshot → mulai → pantau → periksa hasil → siapkan untuk NLP.**
 
-Form menggunakan empat langkah: **Sumber**, **Filter dan target**, **Pengecualian**, **Tinjau**. Pengguna dapat kembali ke langkah sebelumnya tanpa kehilangan input. Konfigurasi yang sedang berjalan bersifat tetap; perubahan menghasilkan draf pekerjaan baru.
+Conversation dan crawling merupakan dua konteks terpisah. Tabel conversation dan form editor juga merupakan dua tampilan terpisah agar operator tidak mengedit data sambil memindai library. Editor menyimpan konteks riset berversi. Form crawling memilih satu conversation dan hanya mengatur operasi. Pengguna dapat kembali dengan peringatan bila draft belum disimpan. Konfigurasi yang sedang berjalan bersifat tetap; perubahan conversation menghasilkan versi baru dan tidak mengubah snapshot job lama.
 
 ### 6.2 Masukan dan validasi
 
-| Kelompok | Field dan perilaku |
-| --- | --- |
-| Identitas | Nama pekerjaan wajib, proyek aktif, deskripsi opsional. Identitas operator dan waktu dicatat server. |
-| Platform | Tujuh pilihan sumber: YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter. Minimal satu aktif. Seluruhnya dapat dicoba pada simulasi; mode API mengaktifkan pilihan sesuai capabilities backend dan menjelaskan adapter yang belum tersedia. |
-| Query | Daftar query per platform; satu baris satu query, trim dan dedup. Minimal satu query efektif per platform otomatis; jangan diam-diam membuat query dari field lain. Maksimum 100 query/platform, 300 karakter/query sesuai validasi crawler saat ini. |
-| Reddit | Pilihan subreddit; preset proyek dapat berisi `indonesia`, `karir`, `indotech`. Maksimum 10 sesuai adapter saat ini; tampilkan aturan nama dari capabilities server. |
-| Tanggal konten | Mulai dan akhir dengan zona WIB. Mulai inklusif, akhir eksklusif; mulai harus lebih kecil dari akhir. Label contoh: “Sampai sebelum 30 Okt 2026, 00.00 WIB”. Waktu pengambilan merupakan field terpisah. |
-| Keyword | Include, mode salah satu/semua, dan exclude. Exclude mengalahkan include. Tampilkan dampak terhadap root/thread dan komentar. |
-| Target | Target post memenuhi kriteria per platform, minimum komentar unik/post, serta batas kandidat dan pengambilan. Target tidak menjanjikan hasil. |
-| Waktu | Durasi maksimum akuisisi 3 jam pada preset proyek; nilainya dapat ditinjau sebelum mulai. Deadline dihitung dari waktu worker mulai, bukan saat membuka formulir/menunggu antrean. |
-| Batas lanjut | Maksimum komentar/reply, jeda, timeout, retry 429, dan waktu tunggu CAPTCHA dalam panel Pengaturan lanjut. Nilai di luar kapabilitas backend ditolak. |
-| Dataset pengecualian | Pilih satu atau lebih dataset terbit yang dapat diakses dari katalog. Tampilkan versi dan jumlah ID yang diindeks. Baseline `social_20261028_01` menjadi preset proyek bila tersedia. Tidak meminta operator mengetik path server. |
+| Kelompok             | Field dan perilaku                                                                                                                                                                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Identitas            | Judul dan tujuan conversation wajib. Identitas operator, versi dan waktu dicatat server.                                                                                                                                                                                                   |
+| Platform             | Tujuh pilihan sumber: YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter. Minimal satu aktif. Seluruhnya dapat dicoba pada simulasi; mode API mengaktifkan pilihan sesuai capabilities backend dan menjelaskan adapter yang belum tersedia.                              |
+| Query                | Daftar query berasal dari conversation; satu baris satu query, trim dan dedup. Minimal satu query efektif; adapter menerjemahkan discovery sesuai kemampuannya dan tidak diam-diam membuat query dari field lain. Maksimum 100 query, 300 karakter/query sesuai validasi crawler saat ini. |
+| Reddit               | Pilihan subreddit; preset proyek dapat berisi `indonesia`, `karir`, `indotech`. Maksimum 10 sesuai adapter saat ini; tampilkan aturan nama dari capabilities server.                                                                                                                       |
+| Tanggal konten       | Disimpan pada conversation dengan zona WIB. Mulai inklusif, akhir eksklusif; mulai harus lebih kecil dari akhir. Waktu pengambilan merupakan pengaturan crawling terpisah.                                                                                                                 |
+| Keyword              | Disimpan pada conversation: include, mode salah satu/semua, dan exclude. Exclude mengalahkan include.                                                                                                                                                                                      |
+| Relevansi            | Scope, contoh relevan/generik/tidak relevan dan threshold disimpan pada conversation dan dibekukan bersama snapshot.                                                                                                                                                                       |
+| Prompt dan Excel     | Judul dapat diunduh sebagai prompt Markdown dengan kontrak tiga sheet. Upload `.xlsx` mengisi tujuan, discovery, keyword dan relevansi, mempertahankan tanggal form, menolak formula/struktur asing, lalu menyimpan origin `excel`.                                                        |
+| Target               | Target post memenuhi kriteria per platform, minimum komentar unik/post, serta batas kandidat dan pengambilan. Target tidak menjanjikan hasil.                                                                                                                                              |
+| Waktu                | Durasi maksimum akuisisi 3 jam pada preset proyek; nilainya dapat ditinjau sebelum mulai. Deadline dihitung dari waktu worker mulai, bukan saat membuka formulir/menunggu antrean.                                                                                                         |
+| Batas lanjut         | Maksimum komentar/reply, jeda, timeout, retry 429, dan waktu tunggu CAPTCHA dalam panel Pengaturan lanjut. Nilai di luar kapabilitas backend ditolak.                                                                                                                                      |
+| Dataset pengecualian | Pilih satu atau lebih dataset terbit yang dapat diakses dari katalog. Tampilkan versi dan jumlah ID yang diindeks. Baseline `social_20261028_01` menjadi preset proyek bila tersedia. Tidak meminta operator mengetik path server.                                                         |
 
 Nilai preset riset proyek saat ini:
 
-| Pengaturan | Nilai |
-| --- | --- |
-| Target | 1.000 post memenuhi kriteria untuk YouTube dan 1.000 untuk Reddit. |
-| Minimum komentar | 10 komentar unik termasuk reply per post. |
-| Batas bersama | 10.800 detik; round robin, satu operasi platform pada satu waktu. |
-| Batas per platform | Maksimum 4.000 percobaan post dan 6.000 kandidat. |
-| Isi thread | Maksimum 100 komentar, 30 reply, 10 reply per thread sesuai konfigurasi adapter. |
-| Jeda dan timeout | Jeda tetap 2 detik; timeout request 90 detik. |
-| Reddit 429 | Cooldown awal 360 detik, maksimum 3 retry per pekerjaan; server Retry-After yang lebih lama dihormati. |
-| Reddit CAPTCHA | Maksimum menunggu 600 detik; pemeriksaan worker setiap 5 detik. |
+| Pengaturan         | Nilai                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------ |
+| Target             | 1.000 post memenuhi kriteria untuk YouTube dan 1.000 untuk Reddit.                                     |
+| Minimum komentar   | 10 komentar unik termasuk reply per post.                                                              |
+| Batas bersama      | 10.800 detik; round robin, satu operasi platform pada satu waktu.                                      |
+| Batas per platform | Maksimum 4.000 percobaan post dan 6.000 kandidat.                                                      |
+| Isi thread         | Maksimum 100 komentar, 30 reply, 10 reply per thread sesuai konfigurasi adapter.                       |
+| Jeda dan timeout   | Jeda tetap 2 detik; timeout request 90 detik.                                                          |
+| Reddit 429         | Cooldown awal 360 detik, maksimum 3 retry per pekerjaan; server Retry-After yang lebih lama dihormati. |
+| Reddit CAPTCHA     | Maksimum menunggu 600 detik; pemeriksaan worker setiap 5 detik.                                        |
 
 Tanggal penelitian historis tidak otomatis dipakai untuk penelitian baru. Operator harus memilih rentang tanggal; preset filter dapat diambil dari konfigurasi proyek dan ditinjau. Nilai batas final berasal dari capabilities backend agar frontend dan crawler tidak berbeda aturan.
 
@@ -163,18 +163,17 @@ Review menampilkan konfigurasi efektif per platform, target, kriteria post, tang
 
 Satu klik menghasilkan satu pekerjaan dengan idempotency key. Saat respons belum pasti karena koneksi terputus, frontend mencari hasil berdasarkan key yang sama; jangan mengirim pekerjaan baru dengan key baru. Submit dinonaktifkan selama permintaan diproses. Pekerjaan menunggu antrean memperoleh ID dan layar detail sebelum worker mulai.
 
-
 ### 6.4 Tujuh sumber media sosial
 
-| Platform | ID konfigurasi | Jenis konten yang dipilih di UI | Status integrasi |
-| --- | --- | --- | --- |
-| YouTube | `youtube` | Video/Shorts, komentar, reply | UI/simulasi tersedia; crawler Python sudah ada, wrapper API diperlukan. |
-| Reddit | `reddit` | Post, komentar, reply | UI/simulasi tersedia; crawler Python sudah ada, wrapper API/sesi worker diperlukan. |
-| Instagram | `instagram` | Post, Reels, komentar | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat. |
-| TikTok | `tiktok` | Video/foto dan komentar | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat. |
-| Threads | `threads` | Post dan balasan | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat. |
-| Facebook | `facebook` | Post/Reel dan komentar | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat. |
-| X / Twitter | `x` | Post dan balasan | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat. |
+| Platform    | ID konfigurasi | Jenis konten yang dipilih di UI | Status integrasi                                                                    |
+| ----------- | -------------- | ------------------------------- | ----------------------------------------------------------------------------------- |
+| YouTube     | `youtube`      | Video/Shorts, komentar, reply   | UI/simulasi tersedia; crawler Python sudah ada, wrapper API diperlukan.             |
+| Reddit      | `reddit`       | Post, komentar, reply           | UI/simulasi tersedia; crawler Python sudah ada, wrapper API/sesi worker diperlukan. |
+| Instagram   | `instagram`    | Post, Reels, komentar           | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat.                        |
+| TikTok      | `tiktok`       | Video/foto dan komentar         | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat.                        |
+| Threads     | `threads`      | Post dan balasan                | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat.                        |
+| Facebook    | `facebook`     | Post/Reel dan komentar          | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat.                        |
+| X / Twitter | `x`            | Post dan balasan                | UI/simulasi tersedia; adapter akuisisi backend perlu dibuat.                        |
 
 Setiap sumber mempunyai query, target, batas pengambilan, status, progres, serta penyaring hasil sendiri. Seri grafik dan filter tidak boleh mengasumsikan hanya dua platform. Dua sumber lama tetap dipilih pada preset awal; lima tambahan dapat dipilih eksplisit agar target total tidak berubah diam-diam.
 
@@ -203,16 +202,16 @@ Grafik operasional MVP: garis kumulatif post memenuhi kriteria per platform menu
 
 Status API berikut merupakan rancangan wrapper baru, bukan nama status Python yang seluruhnya sudah tersedia.
 
-| Status pekerjaan | Makna dan tindakan UI |
-| --- | --- |
-| `QUEUED` | Diterima server, belum mulai; deadline akuisisi belum berjalan. |
-| `RUNNING` | Worker melakukan akuisisi atau menunggu akses platform; tampilkan status per platform. |
-| `STOP_REQUESTED` | Permintaan berhenti diterima; tunggu worker menyelesaikan operasi secara aman. |
-| `FINALIZING` | Akuisisi berakhir; ekspor, validasi, dan manifest sedang diselesaikan. Jangan tampilkan unduhan final. |
-| `COMPLETED` | Tujuan mode terpenuhi dan dataset valid telah terbit. |
-| `PARTIAL` | Dataset valid terbit, tetapi sebagian tujuan tidak tercapai. Tampilkan penyebab dan selisih target. |
-| `FAILED` | Tidak ada dataset terbit yang dapat dipakai; tampilkan alasan dan jalur perbaikan. |
-| `CANCELLED` | Dihentikan pengguna. Jika ada dataset parsial valid, tampilkan dataset itu dengan label parsial; jangan mengubahnya menjadi keberhasilan penuh. |
+| Status pekerjaan | Makna dan tindakan UI                                                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `QUEUED`         | Diterima server, belum mulai; deadline akuisisi belum berjalan.                                                                                 |
+| `RUNNING`        | Worker melakukan akuisisi atau menunggu akses platform; tampilkan status per platform.                                                          |
+| `STOP_REQUESTED` | Permintaan berhenti diterima; tunggu worker menyelesaikan operasi secara aman.                                                                  |
+| `FINALIZING`     | Akuisisi berakhir; ekspor, validasi, dan manifest sedang diselesaikan. Jangan tampilkan unduhan final.                                          |
+| `COMPLETED`      | Tujuan mode terpenuhi dan dataset valid telah terbit.                                                                                           |
+| `PARTIAL`        | Dataset valid terbit, tetapi sebagian tujuan tidak tercapai. Tampilkan penyebab dan selisih target.                                             |
+| `FAILED`         | Tidak ada dataset terbit yang dapat dipakai; tampilkan alasan dan jalur perbaikan.                                                              |
+| `CANCELLED`      | Dihentikan pengguna. Jika ada dataset parsial valid, tampilkan dataset itu dengan label parsial; jangan mengubahnya menjadi keberhasilan penuh. |
 
 Status per platform: `PENDING`, `FETCHING`, `WAITING_CAPTCHA`, `RATE_LIMITED`, `TARGET_REACHED`, `EXHAUSTED`, `BLOCKED`, `STOPPED`, `ERROR`. Satu platform menunggu tidak otomatis menghentikan platform lain; worker tetap menentukan operasi yang aman.
 
@@ -236,7 +235,7 @@ MVP menyediakan hentikan, bukan pause/resume umum. Pemulihan CAPTCHA/cooldown da
 
 Saat offline atau heartbeat terlambat, pertahankan data terakhir dengan label **Status belum diperbarui**. Jangan menebak `FAILED` atau mengubah angka menjadi nol. Setelah tersambung, ambil snapshot server sebelum menerapkan event baru. Jika worker hilang, backend harus memberikan status pemulihan atau kegagalan eksplisit.
 
-## 8. Crawler Manual melalui URL
+## 8. Histori rancangan Crawler Manual melalui URL — tidak aktif
 
 ### 8.1 Alur dan cakupan
 
@@ -256,7 +255,7 @@ Default usulan minimum komentar untuk URL adalah 0 agar URL yang diminta tetap d
 
 Setiap URL mempunyai hasil akhir: diperoleh, tidak memenuhi filter, tidak tersedia/privat, gagal akses, atau tidak selesai sebelum deadline. Pekerjaan `COMPLETED` memerlukan semua URL terpilih diperoleh dan kriteria yang diaktifkan terpenuhi; URL yang terselesaikan sebagai penolakan/gagal menghasilkan `PARTIAL` dengan rincian. Kegagalan finalisasi tetap `FAILED`. Monitor, CAPTCHA, 429, dan ekspor menggunakan komponen bersama.
 
-## 9. Crawler Manual untuk data survei
+## 9. Histori rancangan Crawler Manual untuk data survei — tidak aktif
 
 ### 9.1 Jenis masukan
 
@@ -268,18 +267,18 @@ Form mengikuti template survei berversi: pilih survei/versi, peran responden, ko
 
 Untuk impor, **satu baris adalah satu jawaban untuk satu pertanyaan**. Satu respons dapat mempunyai beberapa baris dengan metadata respons yang konsisten.
 
-| Field | Wajib | Aturan |
-| --- | --- | --- |
-| `survey_id`, `survey_version` | Ya | Cocok dengan template tersedia; versi tidak berubah setelah commit. |
-| `response_id` | Ya | Identitas satu pengisian survei. Form dapat memperoleh ID baru dari server; impor menggunakan ID sumber yang stabil. |
-| `respondent_code` | Ya | Pseudonim, bukan nama/NIK/nomor telepon. Dipakai untuk provenance, bukan untuk menyatukan orang lintas survei tanpa aturan. |
-| `respondent_role` | Ya | `prospective_student` atau `parent`, berdasarkan informasi sumber. Tidak diketahui masuk daftar perlu perbaikan. |
-| `submitted_at` | Ya | Tanggal/waktu pengisian dengan offset; UI menampilkan WIB. Waktu akuisisi dicatat terpisah. |
-| `question_id` | Ya | Terdaftar pada versi template. Teks pertanyaan berasal dari template, bukan menjadi bagian otomatis teks jawaban. |
-| `answer_text` | Kondisional | Wajib untuk pertanyaan teks yang diwajibkan template; tidak boleh hanya whitespace. |
-| `answer_value` | Kondisional | Pilihan atau angka sesuai tipe/rentang template. Pertanyaan opsional dapat kosong dengan penanda jawaban kosong. |
-| `usage_permission` | Ya | `granted`, `not_granted`, atau `unknown`, didukung pencatatan sumber. Hanya `granted` layak masuk dataset analisis MVP. Ini atribut izin pemanfaatan data, bukan sertifikasi hukum. |
-| `source_reference` | Ya | Referensi internal asal pengumpulan, tanpa URL publik berisi data pribadi. |
+| Field                         | Wajib       | Aturan                                                                                                                                                                              |
+| ----------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `survey_id`, `survey_version` | Ya          | Cocok dengan template tersedia; versi tidak berubah setelah commit.                                                                                                                 |
+| `response_id`                 | Ya          | Identitas satu pengisian survei. Form dapat memperoleh ID baru dari server; impor menggunakan ID sumber yang stabil.                                                                |
+| `respondent_code`             | Ya          | Pseudonim, bukan nama/NIK/nomor telepon. Dipakai untuk provenance, bukan untuk menyatukan orang lintas survei tanpa aturan.                                                         |
+| `respondent_role`             | Ya          | `prospective_student` atau `parent`, berdasarkan informasi sumber. Tidak diketahui masuk daftar perlu perbaikan.                                                                    |
+| `submitted_at`                | Ya          | Tanggal/waktu pengisian dengan offset; UI menampilkan WIB. Waktu akuisisi dicatat terpisah.                                                                                         |
+| `question_id`                 | Ya          | Terdaftar pada versi template. Teks pertanyaan berasal dari template, bukan menjadi bagian otomatis teks jawaban.                                                                   |
+| `answer_text`                 | Kondisional | Wajib untuk pertanyaan teks yang diwajibkan template; tidak boleh hanya whitespace.                                                                                                 |
+| `answer_value`                | Kondisional | Pilihan atau angka sesuai tipe/rentang template. Pertanyaan opsional dapat kosong dengan penanda jawaban kosong.                                                                    |
+| `usage_permission`            | Ya          | `granted`, `not_granted`, atau `unknown`, didukung pencatatan sumber. Hanya `granted` layak masuk dataset analisis MVP. Ini atribut izin pemanfaatan data, bukan sertifikasi hukum. |
+| `source_reference`            | Ya          | Referensi internal asal pengumpulan, tanpa URL publik berisi data pribadi.                                                                                                          |
 
 `project_id`, `input_mode`, `source_kind=survey`, operator, waktu ingest, ID batch, checksum berkas, serta status validasi ditambahkan server. Contoh berkas/template menggunakan data sintetis saja. Pertanyaan skala/pilihan tetap disimpan meskipun belum ada teks yang layak untuk NLP.
 
@@ -297,13 +296,13 @@ Tombol **Simpan respons**/**Impor respons valid** membutuhkan validasi server te
 
 ## 10. Aturan kualitas, duplikasi, dan provenance
 
-| Jenis | Kunci dan perilaku |
-| --- | --- |
-| Root sosial | Platform + native post ID; URL kanonik sebagai pendukung/fallback terverifikasi. Varian URL video/post yang sama merupakan satu root. |
-| Komentar/reply | Platform + native content ID jika tersedia, dengan relasi root/parent. Fallback harus stabil, terdokumentasi, dan tidak menyamakan komentar hanya karena teksnya sama. |
+| Jenis           | Kunci dan perilaku                                                                                                                                                                            |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Root sosial     | Platform + native post ID; URL kanonik sebagai pendukung/fallback terverifikasi. Varian URL video/post yang sama merupakan satu root.                                                         |
+| Komentar/reply  | Platform + native content ID jika tersedia, dengan relasi root/parent. Fallback harus stabil, terdokumentasi, dan tidak menyamakan komentar hanya karena teksnya sama.                        |
 | Historis sosial | Bandingkan dengan dataset pengecualian yang dipilih sebelum pengambilan dan sebelum ekspor. Duplikat root beserta thread tidak diakuisisi ulang dalam kebijakan ini. Baseline tidak dimutasi. |
-| Survei | Proyek + survei + versi + response ID + question ID. Kunci sama dan isi sama dilewati; kunci sama dan isi berbeda menjadi konflik. |
-| Lintas sumber | Jawaban survei dan komentar sosial yang kebetulan sama teksnya tidak otomatis digabung. Kode responden tidak dipakai sebagai native ID sosial. |
+| Survei          | Proyek + survei + versi + response ID + question ID. Kunci sama dan isi sama dilewati; kunci sama dan isi berbeda menjadi konflik.                                                            |
+| Lintas sumber   | Jawaban survei dan komentar sosial yang kebetulan sama teksnya tidak otomatis digabung. Kode responden tidak dipakai sebagai native ID sosial.                                                |
 
 Setiap record menyimpan sumber, mode akuisisi, waktu konten/pengisian, waktu ingest, referensi asal, ID pekerjaan/batch, dan alasan kelayakan. Ketidakpastian tanggal, komentar kehilangan parent yang terfilter, dan post di bawah minimum komentar tetap terlihat sebagai flag.
 
@@ -332,21 +331,21 @@ Tindakan ini tidak menggabungkan dataset, melatih model, atau menerbitkan Dashbo
 
 Semua endpoint berikut adalah **usulan untuk backend baru**. Prefix proyek, autentikasi, payload final, dan OpenAPI akan dirinci pada PRD Backend. Frontend tidak membaca path lokal atau menjalankan Python dari browser.
 
-| Operasi | Endpoint contoh | Keluaran yang diperlukan UI |
-| --- | --- | --- |
-| Kapabilitas dan template | `GET /api/v1/projects/:projectId/crawler/capabilities` | Platform/mode tersedia, batas field/upload, dukungan sesi CAPTCHA, template survei/versi, izin. |
-| Katalog baseline | `GET /api/v1/projects/:projectId/datasets` | Dataset ID/versi/skema, status, jumlah, akses. |
-| Validasi rencana | `POST /api/v1/projects/:projectId/acquisition-plans/validate` | Konfigurasi efektif, error field, warning, plan ID/hash dan waktu kedaluwarsa. Tanpa crawling. |
-| Mulai pekerjaan | `POST /api/v1/projects/:projectId/acquisition-jobs` | Job ID, plan yang dipakai, status awal. Header `Idempotency-Key` wajib. |
-| Daftar/detail | `GET /api/v1/projects/:projectId/acquisition-jobs[/:jobId]` | Riwayat terpaginasikan atau snapshot lengkap untuk job yang diizinkan. |
-| Event pekerjaan | `GET /api/v1/projects/:projectId/acquisition-jobs/:jobId/events` | Stream SSE dengan event ID, urutan, waktu server, dan versi snapshot. Polling detail menjadi fallback. |
-| Hentikan | `POST /api/v1/projects/:projectId/acquisition-jobs/:jobId/stop` | Stop diterima atau status terminal terkini; pengulangan aman. |
-| Sesi verifikasi | `POST /api/v1/projects/:projectId/acquisition-jobs/:jobId/verification-session` | Akses browser worker berumur pendek, platform, expiry, dan status; hanya operator berizin. |
-| Staging survei | `POST /api/v1/projects/:projectId/survey-imports` | Import ID dan metadata file/form. Data tidak langsung diterbitkan. |
-| Validasi survei | `POST /api/v1/projects/:projectId/survey-imports/:importId/validate` | Mapping efektif, versi validasi, hitungan respons/baris, konflik, daftar error terpaginasikan. |
-| Commit survei | `POST /api/v1/projects/:projectId/survey-imports/:importId/commit` | Job ID pemrosesan dan hasil akhir dataset; idempotency key serta versi validasi wajib. |
-| Hasil dan berkas | `GET /api/v1/projects/:projectId/datasets/:datasetId/versions/:version` | Manifest, kualitas, preview terpaginasikan, izin dan akses unduh berumur pendek. |
-| Handoff NLP | `POST /api/v1/projects/:projectId/nlp-input-selections` | Referensi dataset tetap dan status penerimaan parsial; tidak menjalankan training. |
+| Operasi                  | Endpoint contoh                                                                 | Keluaran yang diperlukan UI                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Kapabilitas dan template | `GET /api/v1/projects/:projectId/crawler/capabilities`                          | Platform/mode tersedia, batas field/upload, dukungan sesi CAPTCHA, template survei/versi, izin.        |
+| Katalog baseline         | `GET /api/v1/projects/:projectId/datasets`                                      | Dataset ID/versi/skema, status, jumlah, akses.                                                         |
+| Validasi rencana         | `POST /api/v1/projects/:projectId/acquisition-plans/validate`                   | Konfigurasi efektif, error field, warning, plan ID/hash dan waktu kedaluwarsa. Tanpa crawling.         |
+| Mulai pekerjaan          | `POST /api/v1/projects/:projectId/acquisition-jobs`                             | Job ID, plan yang dipakai, status awal. Header `Idempotency-Key` wajib.                                |
+| Daftar/detail            | `GET /api/v1/projects/:projectId/acquisition-jobs[/:jobId]`                     | Riwayat terpaginasikan atau snapshot lengkap untuk job yang diizinkan.                                 |
+| Event pekerjaan          | `GET /api/v1/projects/:projectId/acquisition-jobs/:jobId/events`                | Stream SSE dengan event ID, urutan, waktu server, dan versi snapshot. Polling detail menjadi fallback. |
+| Hentikan                 | `POST /api/v1/projects/:projectId/acquisition-jobs/:jobId/stop`                 | Stop diterima atau status terminal terkini; pengulangan aman.                                          |
+| Sesi verifikasi          | `POST /api/v1/projects/:projectId/acquisition-jobs/:jobId/verification-session` | Akses browser worker berumur pendek, platform, expiry, dan status; hanya operator berizin.             |
+| Staging survei           | `POST /api/v1/projects/:projectId/survey-imports`                               | Import ID dan metadata file/form. Data tidak langsung diterbitkan.                                     |
+| Validasi survei          | `POST /api/v1/projects/:projectId/survey-imports/:importId/validate`            | Mapping efektif, versi validasi, hitungan respons/baris, konflik, daftar error terpaginasikan.         |
+| Commit survei            | `POST /api/v1/projects/:projectId/survey-imports/:importId/commit`              | Job ID pemrosesan dan hasil akhir dataset; idempotency key serta versi validasi wajib.                 |
+| Hasil dan berkas         | `GET /api/v1/projects/:projectId/datasets/:datasetId/versions/:version`         | Manifest, kualitas, preview terpaginasikan, izin dan akses unduh berumur pendek.                       |
+| Handoff NLP              | `POST /api/v1/projects/:projectId/nlp-input-selections`                         | Referensi dataset tetap dan status penerimaan parsial; tidak menjalankan training.                     |
 
 Snapshot pekerjaan minimal memuat `job_id`, `mode`, `status`, `phase`, `created_at`, `started_at`, `deadline_at`, `updated_at`, `snapshot_version`, `platforms`, `counts`, `stop_reason`, `dataset_ref`, dan `allowed_actions`. `dataset_ref` kosong sampai finalisasi berhasil. Per platform tersedia target, acquired roots, qualified roots, komentar/reply unik, duplikasi, error, serta waktu CAPTCHA/cooldown.
 
@@ -391,36 +390,35 @@ Pekerjaan tiga jam harus tetap berjalan di worker ketika tab ditutup. Meng-host 
 
 ## 14. Kualitas pengalaman dan kebutuhan nonfungsional
 
-| Area | Kriteria yang dituju |
-| --- | --- |
-| Bahasa | Bahasa Indonesia, WIB untuk tampilan, label istilah konsisten; timestamp API menyertakan offset/UTC. |
-| Responsif | Layar utama operator nyaman pada desktop; pada lebar 360, 768, dan 1280 piksel tidak kehilangan tombol/status. Tabel boleh mempunyai area scroll sendiri dengan identitas baris tetap terbaca. |
-| Aksesibilitas | Target WCAG 2.2 AA untuk implementasi. Semua kontrol berlabel, navigasi keyboard dan fokus terlihat, error terhubung ke field, status tidak hanya dibedakan warna. Update progres tidak merebut fokus; live announcement dibatasi pada perubahan penting. |
-| Form panjang | Langkah dan ringkasan jelas, field dikelompokkan, error summary bisa memindahkan fokus. Panduan label, grup, validasi, dan notifikasi mengikuti [W3C WAI Forms](https://www.w3.org/WAI/tutorials/forms/). |
-| Respons interaksi | Target respons visual lokal ≤200 ms; tidak menunggu crawling untuk memberi feedback submit. |
-| Pembaruan progres | Saat server/koneksi sehat, target perubahan status terlihat ≤10 detik sejak event server. Waktu platform merespons bukan SLA UI. |
-| Tabel/import | Preview paginasi 50 baris; parsing besar/validasi akhir di server. Target layar inti dapat digunakan ≤3 detik pada profil uji yang disepakati saat implementasi; ukur dan laporkan profilnya. |
-| Ketahanan | Offline/stale, loading, kosong, forbidden, konflik, dan gagal ekspor memiliki state yang dapat dipahami. Retry UI tidak menggandakan side effect. |
-| Keamanan tampilan | Teks sosial/survei sebagai teks aman, link eksternal terverifikasi, tanpa HTML aktif. Kredensial platform berada di worker dan tidak dikirim ke browser operator. |
-| Privasi | Minimalkan identitas responden; tidak memuat jawaban/nama/token dalam URL, telemetry, pesan error publik, atau log browser. Ekspor sesuai izin. |
-| Observabilitas | Audit mulai/stop/commit/handoff/unduh dan correlation ID; metrik operasional tanpa isi jawaban. |
+| Area              | Kriteria yang dituju                                                                                                                                                                                                                                      |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bahasa            | Bahasa Indonesia, WIB untuk tampilan, label istilah konsisten; timestamp API menyertakan offset/UTC.                                                                                                                                                      |
+| Responsif         | Layar utama operator nyaman pada desktop; pada lebar 360, 768, dan 1280 piksel tidak kehilangan tombol/status. Tabel boleh mempunyai area scroll sendiri dengan identitas baris tetap terbaca.                                                            |
+| Aksesibilitas     | Target WCAG 2.2 AA untuk implementasi. Semua kontrol berlabel, navigasi keyboard dan fokus terlihat, error terhubung ke field, status tidak hanya dibedakan warna. Update progres tidak merebut fokus; live announcement dibatasi pada perubahan penting. |
+| Form panjang      | Langkah dan ringkasan jelas, field dikelompokkan, error summary bisa memindahkan fokus. Panduan label, grup, validasi, dan notifikasi mengikuti [W3C WAI Forms](https://www.w3.org/WAI/tutorials/forms/).                                                 |
+| Respons interaksi | Target respons visual lokal ≤200 ms; tidak menunggu crawling untuk memberi feedback submit.                                                                                                                                                               |
+| Pembaruan progres | Saat server/koneksi sehat, target perubahan status terlihat ≤10 detik sejak event server. Waktu platform merespons bukan SLA UI.                                                                                                                          |
+| Tabel/import      | Preview paginasi 50 baris; parsing besar/validasi akhir di server. Target layar inti dapat digunakan ≤3 detik pada profil uji yang disepakati saat implementasi; ukur dan laporkan profilnya.                                                             |
+| Ketahanan         | Offline/stale, loading, kosong, forbidden, konflik, dan gagal ekspor memiliki state yang dapat dipahami. Retry UI tidak menggandakan side effect.                                                                                                         |
+| Keamanan tampilan | Teks sosial/survei sebagai teks aman, link eksternal terverifikasi, tanpa HTML aktif. Kredensial platform berada di worker dan tidak dikirim ke browser operator.                                                                                         |
+| Privasi           | Minimalkan identitas responden; tidak memuat jawaban/nama/token dalam URL, telemetry, pesan error publik, atau log browser. Ekspor sesuai izin.                                                                                                           |
+| Observabilitas    | Audit mulai/stop/commit/handoff/unduh dan correlation ID; metrik operasional tanpa isi jawaban.                                                                                                                                                           |
 
 Retensi data, penghapusan, ekspor terbatas, serta kebijakan izin pemanfaatan perlu dirinci bersama backend/pemilik data sebelum survei nyata diaktifkan. UI menampilkan kebijakan efektif, bukan mengklaim kepatuhan yang belum dievaluasi.
-
 
 ### 14.1 Tema putih oranye dan tipografi wajib
 
 Ketentuan visual ini menggantikan rancangan hijau sebelumnya sesuai revisi pengguna.
 
-| Token | Nilai | Pemakaian |
-| --- | --- | --- |
-| `surface` | `#FFFFFF` | Panel, sidebar, form, header. |
-| `canvas` | `#FAFAFA` | Latar workspace netral terang. |
-| `accent` | `#FF8A24` | Tombol utama, langkah aktif, aksen akuisisi. |
-| `accent_hover` | `#FF7608` | Hover tombol utama. |
-| `accent_soft` | `#FFF3E8` | Pilihan sumber, ringkasan, area bantuan. |
-| `border` | `#E6DDD5` | Pemisah dan batas kontrol. |
-| `text` | `#000000` | Seluruh teks, label, helper, placeholder, tabel, badge, dan tombol. |
+| Token          | Nilai     | Pemakaian                                                           |
+| -------------- | --------- | ------------------------------------------------------------------- |
+| `surface`      | `#FFFFFF` | Panel, sidebar, form, header.                                       |
+| `canvas`       | `#FAFAFA` | Latar workspace netral terang.                                      |
+| `accent`       | `#FF8A24` | Tombol utama, langkah aktif, aksen akuisisi.                        |
+| `accent_hover` | `#FF7608` | Hover tombol utama.                                                 |
+| `accent_soft`  | `#FFF3E8` | Pilihan sumber, ringkasan, area bantuan.                            |
+| `border`       | `#E6DDD5` | Pemisah dan batas kontrol.                                          |
+| `text`         | `#000000` | Seluruh teks, label, helper, placeholder, tabel, badge, dan tombol. |
 
 **Ukuran teks minimum 13 px tanpa pengecualian**, termasuk sidebar, footer, legenda/tabel grafik, badge, input, pesan error, dan tampilan mobile. Body/input memakai 15 px, label/tombol 14 px, teks pendukung 13 px, judul utama 28–36 px. Label grafik dirender sebagai HTML atau cara lain yang mempertahankan ukuran aktual minimal 13 px saat grafik menyusut.
 
