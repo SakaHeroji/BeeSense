@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { act, render, screen, waitFor, within } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -54,6 +54,8 @@ describe('platform collection workspace', () => {
       '/crawler/conversations',
     );
     expect(screen.getByLabelText(/Jumlah post/)).toHaveValue(1000);
+    expect(screen.getByLabelText(/^Mulai publikasi/)).toHaveAttribute('type', 'datetime-local');
+    expect(screen.getByLabelText(/^Sebelum tanggal/)).toHaveAttribute('type', 'datetime-local');
     expect(screen.getByRole('radio', { name: /^Excel lokal/ })).toBeChecked();
     expect(screen.getByRole('checkbox', { name: /Batasi waktu/ })).not.toBeChecked();
     expect(screen.queryByLabelText(/Limit waktu/)).not.toBeInTheDocument();
@@ -65,6 +67,12 @@ describe('platform collection workspace', () => {
     const { user, router } = await mount();
     const start = vi.spyOn(demoApi, 'start');
     await selectConversation(user);
+    fireEvent.change(screen.getByLabelText(/^Mulai publikasi/), {
+      target: { value: '2026-08-01T06:00' },
+    });
+    fireEvent.change(screen.getByLabelText(/^Sebelum tanggal/), {
+      target: { value: '2026-08-31T06:00' },
+    });
     await user.click(screen.getByRole('checkbox', { name: /Batasi waktu/ }));
     const hours = screen.getByLabelText(/Limit waktu/);
     await user.clear(hours);
@@ -88,6 +96,8 @@ describe('platform collection workspace', () => {
     expect(start).toHaveBeenCalledTimes(1);
     const [plan] = start.mock.calls[0];
     expect(plan.config.duration).toBe(5400);
+    expect(plan.config.since).toBe('2026-08-01T06:00');
+    expect(plan.config.until).toBe('2026-08-31T06:00');
     expect(plan.config.storage.destination).toBe('both');
     expect(plan.config.storage.postgresql.connectionString).toBeUndefined();
     expect(JSON.stringify(localStorage)).not.toContain('synthetic-secret');
@@ -102,6 +112,23 @@ describe('platform collection workspace', () => {
     await user.click(screen.getByRole('button', { name: /Tinjau & mulai/ }));
     expect(target).toHaveAttribute('aria-invalid', 'true');
     expect(target).toHaveFocus();
+    expect(validate).not.toHaveBeenCalled();
+  });
+  it('shows an invalid publication range on the crawling transaction', async () => {
+    const { user } = await mount();
+    const validate = vi.spyOn(demoApi, 'validate');
+    await selectConversation(user);
+    fireEvent.change(screen.getByLabelText(/^Mulai publikasi/), {
+      target: { value: '2026-10-02T08:00' },
+    });
+    fireEvent.change(screen.getByLabelText(/^Sebelum tanggal/), {
+      target: { value: '2026-10-01T08:00' },
+    });
+    await user.click(screen.getByRole('button', { name: /Tinjau & mulai/ }));
+    const startDate = screen.getByLabelText(/^Mulai publikasi/);
+    expect(startDate).toHaveAttribute('aria-invalid', 'true');
+    expect(startDate).toHaveFocus();
+    expect(screen.getAllByText('Waktu akhir harus sesudah waktu mulai.')).toHaveLength(2);
     expect(validate).not.toHaveBeenCalled();
   });
   it('ignores a validation response for a configuration that has changed', async () => {

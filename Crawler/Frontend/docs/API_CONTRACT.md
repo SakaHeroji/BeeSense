@@ -14,7 +14,7 @@ Conversation adalah sumber konteks riset yang berdiri sendiri dari eksekusi craw
 | POST `/crawler/conversations`          | Body `{conversation}` untuk conversation baru; server memvalidasi, memberi ID, versi 1 dan timestamp.                |
 | PUT `/crawler/conversations/:id`       | Body `{conversation}`; optimistic concurrency memakai versi lama dan menghasilkan versi baru.                        |
 
-`ConversationDraft` memuat title, objective, since, until, include, exclude, includeMode (`any`/`all`), queries, hashtags, subreddits, relevance (`scope`, contoh relevant/generic/irrelevant, threshold), serta origin (`manual`/`gemini`/`excel`). `Conversation` menambah id, version, createdAt dan updatedAt. Title maksimum 120 karakter. Rentang waktu harus valid; query, scope dan setidaknya satu contoh relevan wajib tersedia; threshold berada pada 0–1.
+`ConversationDraft` memuat title, objective, include, exclude, includeMode (`any`/`all`), queries, hashtags, subreddits, relevance (`scope`, contoh relevant/generic/irrelevant, threshold), serta origin (`manual`/`gemini`/`excel`). `Conversation` menambah id, version, createdAt dan updatedAt. Title maksimum 120 karakter; query, scope dan setidaknya satu contoh relevan wajib tersedia; threshold berada pada 0–1. `since` dan `until` bukan field Conversation.
 
 Endpoint generator tidak menerima field lain, cookie, data job, atau kredensial. Prompt, model, rate limit, sanitasi output dan `GEMINI_API_KEY` menjadi tanggung jawab backend. Frontend tidak menganggap output model benar: origin hanya menandai asal draf, bukan status persetujuan.
 
@@ -22,7 +22,7 @@ Snapshot pada rencana menyertakan seluruh conversation ditambah `frozenAt`. Semu
 
 ### Pertukaran prompt dan Excel lokal
 
-Download prompt Markdown dan pembacaan `.xlsx` berlangsung sepenuhnya di browser, bukan endpoint baru. Prompt mengikat judul ke workbook tanpa formula/macro dengan tiga sheet: `conversation` (satu baris metadata), `discovery` (`type`, `value`), dan `relevance_examples` (`classification`, `text`). Parser hanya menerima tipe discovery `include_keyword`, `exclude_keyword`, `query`, `hashtag`, `subreddit` serta kelas `relevant`, `generic`, `irrelevant`. Setelah lolos validasi, frontend mengirim draft ber-origin `excel` melalui POST/PUT conversation yang sama. Rentang tanggal tetap berasal dari form dan tidak ditimpa workbook.
+Download prompt Markdown dan pembacaan `.xlsx` berlangsung sepenuhnya di browser, bukan endpoint baru. Prompt mengikat judul ke workbook tanpa formula/macro dengan tiga sheet: `conversation` (satu baris metadata), `discovery` (`type`, `value`), dan `relevance_examples` (`classification`, `text`). Parser hanya menerima tipe discovery `include_keyword`, `exclude_keyword`, `query`, `hashtag`, `subreddit` serta kelas `relevant`, `generic`, `irrelevant`. Setelah lolos validasi, frontend mengirim draft ber-origin `excel` melalui POST/PUT conversation yang sama. Workbook tidak memuat rentang tanggal.
 
 ## Crawling dan dataset
 
@@ -40,6 +40,8 @@ Download prompt Markdown dan pembacaan `.xlsx` berlangsung sepenuhnya di browser
 | POST /nlp-input-selections                                | dataset_id/version/checksum/accept_partial; pemilihan input tanpa menjalankan training                                                                  |
 
 Statistik per transaksi menggunakan PlatformProgress.counts: roots, qualified, comments, replies, candidates, duplicates dan rejected, beserta target. Jangan menghitung statistik penuh dari 50 baris preview. `roots + comments + replies` adalah total konten unik per sumber menurut snapshot server. Pencapaian target memakai qualified/target, bukan komentar. Tanggal transaksi berasal dari startedAt dalam Asia/Jakarta; job antre belum mempunyai tanggal eksekusi.
+
+`Config.since` dan `Config.until` adalah rentang publikasi milik transaksi crawling, bukan Conversation. Form mode satu platform dan parallel wajib meminta rentang valid dalam WIB; mulai inklusif dan akhir eksklusif. Memilih atau mengganti Conversation tidak boleh menimpa nilai ini. Snapshot plan membekukan rentang transaksi bersama target, platform, durasi, dan storage.
 
 Storage: destination excel/postgresql/both, postgresql.host/port/connectionEnv, dan connectionString sementara saat validasi. Nilai awal berasal dari JSON universal. URI tidak boleh masuk plan publik, log, URL atau browser storage. Backend penulisan langsung belum tersedia; runner Python menolak database sebelum crawling.
 

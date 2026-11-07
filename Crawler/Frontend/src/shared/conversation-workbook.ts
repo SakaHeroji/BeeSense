@@ -19,6 +19,8 @@ ${cleanTitle}
 
 Buat satu file Excel berformat **.xlsx** untuk menyiapkan discovery keyword dan acuan relevansi Conversation BeeSense berdasarkan judul di atas. Kembalikan file Excel saja, tanpa uraian tambahan. Gunakan Bahasa Indonesia, hindari duplikasi, jangan gunakan formula, macro, hyperlink, atau data tersembunyi.
 
+Jangan menambahkan rentang tanggal publikasi. Periode publikasi ditentukan terpisah pada setiap transaksi crawling dan bukan bagian dari Conversation.
+
 Workbook wajib memiliki tepat tiga sheet berikut.
 
 ### 1. \`conversation\`

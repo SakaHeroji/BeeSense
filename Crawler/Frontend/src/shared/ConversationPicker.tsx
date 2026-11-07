@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Bot, CalendarDays, FilePenLine, FileSpreadsheet, Tags } from 'lucide-react';
-import { conversationOriginLabel, dateTime, isoWib, lines, queryLines } from './domain';
+import { Bot, FilePenLine, FileSpreadsheet, Tags, Target } from 'lucide-react';
+import { conversationOriginLabel, lines, number, queryLines } from './domain';
 import type { Conversation } from './types';
 import { Field, Notice } from './ui';
 
@@ -24,7 +24,7 @@ export function ConversationPicker({
         <div>
           <span className="step-kicker">1 dari 2</span>
           <h2 id="conversation-picker-title">Pilih conversation riset</h2>
-          <p>Judul, keyword, query, rentang publikasi, dan relevansi diambil dari satu snapshot.</p>
+          <p>Judul, keyword, query, dan relevansi diambil dari satu snapshot.</p>
         </div>
         <Link className="button secondary" to="/crawler/conversations">
           <FilePenLine size={17} aria-hidden="true" /> Kelola conversation
@@ -100,11 +100,9 @@ export function ConversationBrief({ conversation }: { conversation: Conversation
       <dl className="conversation-brief-facts">
         <div>
           <dt>
-            <CalendarDays size={15} aria-hidden="true" /> Rentang publikasi
+            <Target size={15} aria-hidden="true" /> Threshold relevansi
           </dt>
-          <dd>
-            {dateTime(isoWib(conversation.since))} – {dateTime(isoWib(conversation.until))}
-          </dd>
+          <dd>{number(conversation.relevance.threshold * 100)}%</dd>
         </div>
         <div>
           <dt>

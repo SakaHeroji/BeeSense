@@ -3,7 +3,6 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import {
   ArrowLeft,
   Bot,
-  CalendarDays,
   CheckCircle2,
   Download,
   FilePenLine,
@@ -21,7 +20,6 @@ import { FieldErrorsContext, useApp } from '../shared/context';
 import {
   dateTime,
   emptyConversationDraft,
-  isoWib,
   number,
   queryLines,
   validateConversation,
@@ -34,7 +32,20 @@ import {
 } from '../shared/conversation-workbook';
 import { Button, Errors, Field, Notice, Spinner, UnsavedGuard } from '../shared/ui';
 
-const cloneDraft = (conversation: Conversation): ConversationDraft => structuredClone(conversation);
+const cloneDraft = (conversation: Conversation): ConversationDraft => ({
+  id: conversation.id,
+  version: conversation.version,
+  title: conversation.title,
+  objective: conversation.objective,
+  include: conversation.include,
+  exclude: conversation.exclude,
+  includeMode: conversation.includeMode,
+  queries: conversation.queries,
+  hashtags: conversation.hashtags,
+  subreddits: conversation.subreddits,
+  relevance: structuredClone(conversation.relevance),
+  origin: conversation.origin,
+});
 
 export default function ConversationWorkspace() {
   const { cap, session, notify } = useApp();
@@ -393,8 +404,9 @@ export default function ConversationWorkspace() {
                       </li>
                     </ol>
                     <p className="conversation-excel-note">
-                      Rentang publikasi tetap memakai nilai pada form. Workbook mengisi tujuan,
-                      keyword, query, hashtag, subreddit, scope, threshold, dan contoh relevansi.
+                      Workbook mengisi tujuan, keyword, query, hashtag, subreddit, scope, threshold,
+                      dan contoh relevansi. Rentang publikasi dipilih saat membuat transaksi
+                      crawling.
                     </p>
                   </section>
                   <Field name="conversation.objective" label="Tujuan riset" required>
@@ -421,33 +433,6 @@ export default function ConversationWorkspace() {
                       <p>Sumber yang berbeda menerjemahkan input ini sesuai kemampuannya.</p>
                     </div>
                   </div>
-                  <fieldset className="social-fieldset">
-                    <legend>
-                      <CalendarDays size={17} aria-hidden="true" /> Rentang publikasi
-                    </legend>
-                    <div className="form-grid">
-                      <Field name="conversation.dates" label="Dari tanggal" required>
-                        {(id) => (
-                          <input
-                            id={id}
-                            type="datetime-local"
-                            value={draft.since}
-                            onChange={(event) => field('since', event.target.value)}
-                          />
-                        )}
-                      </Field>
-                      <Field name="conversation.dates" label="Sampai sebelum tanggal" required>
-                        {(id) => (
-                          <input
-                            id={id}
-                            type="datetime-local"
-                            value={draft.until}
-                            onChange={(event) => field('until', event.target.value)}
-                          />
-                        )}
-                      </Field>
-                    </div>
-                  </fieldset>
                   <div className="form-grid">
                     <Field
                       name="conversation.include"
@@ -655,12 +640,10 @@ export default function ConversationWorkspace() {
               <h3>{selected.title}</h3>
               <p>{selected.objective}</p>
               <dl>
-                <dt>Rentang publikasi</dt>
-                <dd>
-                  {dateTime(isoWib(selected.since))} – {dateTime(isoWib(selected.until))}
-                </dd>
                 <dt>Ruang lingkup</dt>
                 <dd>{selected.relevance.scope}</dd>
+                <dt>Threshold relevansi</dt>
+                <dd>{number(selected.relevance.threshold * 100)}%</dd>
                 <dt>Query</dt>
                 <dd>{queryLines(selected.queries).join(', ')}</dd>
               </dl>

@@ -251,11 +251,41 @@ function PlatformPage({ platform }: { platform: Platform }) {
                     <div className="conversation-required-state">
                       <h3>Pilih conversation untuk melanjutkan</h3>
                       <p>
-                        Semua keyword, query, tanggal publikasi, dan aturan relevansi dikelola dari
-                        menu Conversation.
+                        Semua keyword, query, dan aturan relevansi dikelola dari menu Conversation.
+                        Rentang publikasi dipilih pada transaksi crawling ini.
                       </p>
                     </div>
                   )}
+                  <fieldset className="transaction-date-range">
+                    <legend>Rentang publikasi transaksi</legend>
+                    <div>
+                      <Field
+                        name="dates"
+                        label="Mulai publikasi"
+                        required
+                        hint="Waktu Indonesia Barat (WIB)."
+                      >
+                        {(id) => (
+                          <input
+                            id={id}
+                            type="datetime-local"
+                            value={config.since}
+                            onChange={(event) => field('since', event.target.value)}
+                          />
+                        )}
+                      </Field>
+                      <Field name="until" label="Sebelum tanggal" required>
+                        {(id) => (
+                          <input
+                            id={id}
+                            type="datetime-local"
+                            value={config.until}
+                            onChange={(event) => field('until', event.target.value)}
+                          />
+                        )}
+                      </Field>
+                    </div>
+                  </fieldset>
                 </section>
                 <aside className="social-controls">
                   {isTikTok && <TikTokChromePreparation />}

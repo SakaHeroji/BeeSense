@@ -139,11 +139,11 @@ hasil conversation setelah validasi dan deduplikasi.
 
 ## 5. Satu konfigurasi teks bersama
 
-| Selalu sama untuk semua platform           | Boleh khusus platform                               |
+| Selalu sama dalam satu transaksi parallel  | Boleh khusus platform                               |
 | ------------------------------------------ | --------------------------------------------------- |
 | Keyword include, exclude, dan include mode | Adapter/backend dan metode autentikasi              |
 | Queries dan daftar hashtag sumber          | Referensi sesi, akun, atau konektor                 |
-| Rentang tanggal publikasi                  | Subreddit dan sumber URL yang sesuai platform       |
+| Rentang tanggal publikasi dari transaksi   | Subreddit dan sumber URL yang sesuai platform       |
 | Kebijakan exclude komentar                 | Target, batas komentar/balasan, dan timeout adapter |
 | Scope dan contoh kalimat relevansi         | Batas request dan cooldown sesuai adapter           |
 | Model, revision, dan threshold relevansi   | Dukungan metode pencarian platform                  |
@@ -172,10 +172,13 @@ Contoh bentuk konfigurasi **usulan**, belum diterima parser saat ini:
 {
   "schema_version": 1,
   "name": "Riset Kampus",
-  "execution": { "mode": "parallel_processes", "total_seconds": 3600 },
-  "shared": {
+  "execution": {
+    "mode": "parallel_processes",
+    "total_seconds": 3600,
     "since": "2025-11-06T00:00:00+07:00",
-    "until": "2026-11-07T00:00:00+07:00",
+    "until": "2026-11-07T00:00:00+07:00"
+  },
+  "shared": {
     "include_keywords": ["kuliah", "kampus"],
     "exclude_keywords": ["judi"],
     "include_mode": "any",

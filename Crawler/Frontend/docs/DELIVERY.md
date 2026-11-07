@@ -4,7 +4,7 @@
 
 Seluruh frontend yang terdampak kini memisahkan konteks riset dari operasi
 crawling. Menu **Persiapan → Conversation** menjadi library dan editor berversi untuk
-judul, tujuan, tanggal konten, keyword include/exclude, mode pencocokan, query,
+judul, tujuan, keyword include/exclude, mode pencocokan, query,
 hashtag, subreddit, scope, contoh relevansi dan threshold. Conversation dapat ditulis
 manual atau dibuat sebagai draf Gemini; request generator hanya mengirim `title`,
 dan draf harus ditinjau serta disimpan sebelum dapat dipakai. Tabel library kini
@@ -13,11 +13,16 @@ membaca workbook `.xlsx` tiga sheet untuk mengisi discovery/relevansi lalu menyi
 conversation ber-origin Excel. Parser menolak struktur asing dan formula.
 
 Menu **Crawling → Parallel** dan tujuh halaman platform tidak lagi meminta ulang
-field riset. Operator memilih conversation tersimpan, melihat ringkasannya, lalu hanya
-mengatur platform, target, durasi, storage dan koneksi sumber. Review membekukan
+field riset. Operator memilih conversation tersimpan, melihat ringkasannya, lalu
+mengatur rentang publikasi transaksi, platform, target, durasi, storage dan koneksi
+sumber. Review membekukan
 seluruh conversation sebagai snapshot ID/versi/waktu. Mode parallel menggunakan satu
 snapshot yang sama untuk minimal dua platform; mode platform tunggal memakai
 alur review yang sama. Perubahan conversation berikutnya tidak mengubah job lama.
+
+Rentang publikasi bukan lagi bagian dari Conversation atau workbook Excel. Nilai
+`since`/`until` tetap berada pada `Config` dan dipilih pada setiap transaksi crawling,
+sehingga conversation yang sama dapat digunakan ulang untuk periode yang berbeda.
 
 Kontrak HTTP menambahkan list/detail/create/update conversation dan generator
 server-side. Demo menyediakan library localStorage serta generator deterministik
@@ -26,9 +31,15 @@ persistensi backend dan runner paralel tetap pekerjaan backend berikutnya.
 Frontend tidak menulis database, `auth.json`, Compose, env produksi atau layanan
 aktif. **No migration required.**
 
+Koreksi 7 November 2026 memindahkan rentang publikasi dari Conversation ke
+transaksi crawling. Form single-platform dan parallel sekarang mengatur `since`
+dan `until` masing-masing; pemilihan Conversation hanya menerapkan konteks riset
+dan tidak menimpa periode transaksi. Data Conversation lama yang masih membawa
+tanggal dibersihkan saat dijadikan draft atau snapshot.
+
 Verifikasi revisi ini lulus:
 
-- `npm run test`: 59 tes Vitest dan 2 tes Node.
+- `npm run test`: 61 tes Vitest dan 2 tes Node.
 - `npm run lint`, `npm run typecheck`, `npm run format:check`.
 - `npm run build` untuk mode API dan `npm run build:demo`.
 - Browser nyata pada 1440 px, mobile 375 px dan landscape 812×375; tidak ada
@@ -36,9 +47,9 @@ Verifikasi revisi ini lulus:
 - Audit pedoman web terbaru: struktur landmark, label/error inline, fokus,
   keyboard, hit area, responsif dan reduced motion lulus untuk perubahan ini.
 
-Screenshot berada di `output/playwright/conversation-*.png`,
-`output/playwright/parallel-*.png`, dan
-`output/playwright/youtube-conversation-desktop.png`.
+Screenshot terbaru berada di
+`output/playwright/parallel-transaction-dates-desktop.png` dan
+`output/playwright/youtube-transaction-dates-mobile.png`.
 
 Dockerfile tetap memakai build Node dan Nginx non-root UID 101 dengan health
 `/healthz`. Build/start image belum dapat diverifikasi karena Docker Desktop lokal

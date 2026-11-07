@@ -2906,6 +2906,30 @@ progress::-moz-progress-bar {
 .social-form > .field {
   margin-bottom: 28px;
 }
+.transaction-date-range {
+  min-width: 0;
+  margin: 0 0 24px;
+  padding: 0 0 24px;
+  border: 0;
+  border-bottom: 1px solid #e6ddd5;
+}
+.transaction-date-range legend {
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: 750;
+}
+.transaction-date-range > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.transaction-date-range .field {
+  min-width: 0;
+  margin: 0;
+}
+.transaction-date-range input {
+  min-width: 0;
+}
 .social-fieldset {
   min-width: 0;
   border: 0;
@@ -4705,7 +4729,8 @@ progress::-moz-progress-bar {
     width: 100%;
   }
   .conversation-brief-facts,
-  .platform-conversation-plan dl {
+  .platform-conversation-plan dl,
+  .transaction-date-range > div {
     grid-template-columns: 1fr;
   }
   .conversation-relevance-row > .field:last-child {

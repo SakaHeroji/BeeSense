@@ -213,8 +213,6 @@ export function emptyConversationDraft(title = ''): ConversationDraft {
   return {
     title,
     objective: '',
-    since: wibInput(crawlerDefaults.since),
-    until: wibInput(crawlerDefaults.until),
     include: crawlerDefaults.include_keywords.join('\n'),
     exclude: crawlerDefaults.exclude_keywords.join('\n'),
     includeMode: 'any',
@@ -241,13 +239,6 @@ export function validateConversation(
     add('conversation.title', 'Isi judul conversation, maksimum 120 karakter.');
   if (!conversation.objective.trim() || conversation.objective.trim().length > 600)
     add('conversation.objective', 'Jelaskan tujuan riset, maksimum 600 karakter.');
-  if (
-    !conversation.since ||
-    !conversation.until ||
-    !Number.isFinite(Date.parse(isoWib(conversation.since))) ||
-    isoWib(conversation.since) >= isoWib(conversation.until)
-  )
-    add('conversation.dates', 'Pilih rentang publikasi yang valid dalam WIB.');
   const queries = queryLines(conversation.queries);
   const hashtags = lines(conversation.hashtags);
   if (!queries.length && !hashtags.length)
@@ -285,11 +276,16 @@ export function validateConversation(
 }
 export function applyConversation(config: Config, conversation: Conversation): Config {
   const next = structuredClone(config);
-  next.conversation = { ...structuredClone(conversation), frozenAt: new Date().toISOString() };
+  const conversationSnapshot = structuredClone(conversation) as Conversation & {
+    since?: string;
+    until?: string;
+  };
+  // Conversation lama mungkin masih membawa tanggal. Tanggal transaksi tidak boleh diwarisi.
+  delete conversationSnapshot.since;
+  delete conversationSnapshot.until;
+  next.conversation = { ...conversationSnapshot, frozenAt: new Date().toISOString() };
   next.name = conversation.title;
   next.description = conversation.objective;
-  next.since = conversation.since;
-  next.until = conversation.until;
   next.include = conversation.include;
   next.exclude = conversation.exclude;
   next.includeMode = conversation.includeMode;

@@ -115,7 +115,7 @@ Identitas proyek berasal dari konteks yang diverifikasi server. URL boleh menyim
 
 ### 6.1 Alur pengguna
 
-**Buat/pilih conversation → tinjau konteks riset → pilih mode/platform → tetapkan target/durasi/storage → validasi rencana → tinjau snapshot → mulai → pantau → periksa hasil → siapkan untuk NLP.**
+**Buat/pilih conversation → tinjau konteks riset → pilih mode/platform → tetapkan rentang publikasi/target/durasi/storage → validasi rencana → tinjau snapshot → mulai → pantau → periksa hasil → siapkan untuk NLP.**
 
 Conversation dan crawling merupakan dua konteks terpisah. Tabel conversation dan form editor juga merupakan dua tampilan terpisah agar operator tidak mengedit data sambil memindai library. Editor menyimpan konteks riset berversi. Form crawling memilih satu conversation dan hanya mengatur operasi. Pengguna dapat kembali dengan peringatan bila draft belum disimpan. Konfigurasi yang sedang berjalan bersifat tetap; perubahan conversation menghasilkan versi baru dan tidak mengubah snapshot job lama.
 
@@ -127,10 +127,10 @@ Conversation dan crawling merupakan dua konteks terpisah. Tabel conversation dan
 | Platform             | Tujuh pilihan sumber: YouTube, Reddit, Instagram, TikTok, Threads, Facebook, dan X/Twitter. Minimal satu aktif. Seluruhnya dapat dicoba pada simulasi; mode API mengaktifkan pilihan sesuai capabilities backend dan menjelaskan adapter yang belum tersedia.                              |
 | Query                | Daftar query berasal dari conversation; satu baris satu query, trim dan dedup. Minimal satu query efektif; adapter menerjemahkan discovery sesuai kemampuannya dan tidak diam-diam membuat query dari field lain. Maksimum 100 query, 300 karakter/query sesuai validasi crawler saat ini. |
 | Reddit               | Pilihan subreddit; preset proyek dapat berisi `indonesia`, `karir`, `indotech`. Maksimum 10 sesuai adapter saat ini; tampilkan aturan nama dari capabilities server.                                                                                                                       |
-| Tanggal konten       | Disimpan pada conversation dengan zona WIB. Mulai inklusif, akhir eksklusif; mulai harus lebih kecil dari akhir. Waktu pengambilan merupakan pengaturan crawling terpisah.                                                                                                                 |
+| Tanggal konten       | Disimpan pada konfigurasi transaksi crawling dengan zona WIB, bukan pada conversation. Mulai inklusif, akhir eksklusif; mulai harus lebih kecil dari akhir. Memilih conversation tidak menimpa rentang transaksi.                                                                          |
 | Keyword              | Disimpan pada conversation: include, mode salah satu/semua, dan exclude. Exclude mengalahkan include.                                                                                                                                                                                      |
 | Relevansi            | Scope, contoh relevan/generik/tidak relevan dan threshold disimpan pada conversation dan dibekukan bersama snapshot.                                                                                                                                                                       |
-| Prompt dan Excel     | Judul dapat diunduh sebagai prompt Markdown dengan kontrak tiga sheet. Upload `.xlsx` mengisi tujuan, discovery, keyword dan relevansi, mempertahankan tanggal form, menolak formula/struktur asing, lalu menyimpan origin `excel`.                                                        |
+| Prompt dan Excel     | Judul dapat diunduh sebagai prompt Markdown dengan kontrak tiga sheet. Upload `.xlsx` mengisi tujuan, discovery, keyword dan relevansi, tidak memuat tanggal, menolak formula/struktur asing, lalu menyimpan origin `excel`.                                                               |
 | Target               | Target post memenuhi kriteria per platform, minimum komentar unik/post, serta batas kandidat dan pengambilan. Target tidak menjanjikan hasil.                                                                                                                                              |
 | Waktu                | Durasi maksimum akuisisi 3 jam pada preset proyek; nilainya dapat ditinjau sebelum mulai. Deadline dihitung dari waktu worker mulai, bukan saat membuka formulir/menunggu antrean.                                                                                                         |
 | Batas lanjut         | Maksimum komentar/reply, jeda, timeout, retry 429, dan waktu tunggu CAPTCHA dalam panel Pengaturan lanjut. Nilai di luar kapabilitas backend ditolak.                                                                                                                                      |
@@ -149,7 +149,7 @@ Nilai preset riset proyek saat ini:
 | Reddit 429         | Cooldown awal 360 detik, maksimum 3 retry per pekerjaan; server Retry-After yang lebih lama dihormati. |
 | Reddit CAPTCHA     | Maksimum menunggu 600 detik; pemeriksaan worker setiap 5 detik.                                        |
 
-Tanggal penelitian historis tidak otomatis dipakai untuk penelitian baru. Operator harus memilih rentang tanggal; preset filter dapat diambil dari konfigurasi proyek dan ditinjau. Nilai batas final berasal dari capabilities backend agar frontend dan crawler tidak berbeda aturan.
+Tanggal penelitian historis tidak otomatis dipakai untuk transaksi baru. Operator harus memilih rentang tanggal pada form crawling satu platform atau parallel; preset filter dapat diambil dari konfigurasi proyek dan ditinjau. Nilai batas final berasal dari capabilities backend agar frontend dan crawler tidak berbeda aturan.
 
 Filter include diterapkan pada judul/deskripsi root. Komentar tidak wajib mengulang keyword include agar konteks diskusi tetap tersimpan. Root yang terkena exclude mengeluarkan seluruh thread; komentar yang terkena exclude dapat dikeluarkan sendiri. Post tanpa tanggal yang dapat dipastikan tidak lolos filter tanggal aktif; tanggal komentar perkiraan tetap ditandai sebagai perkiraan.
 

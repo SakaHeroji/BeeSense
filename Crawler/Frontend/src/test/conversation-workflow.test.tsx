@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -49,6 +49,7 @@ describe('conversation-first crawling workflow', () => {
     await user.click(screen.getByRole('button', { name: 'Conversation baru' }));
     expect(screen.getByRole('heading', { name: 'Buat conversation' })).toBeInTheDocument();
     expect(screen.getByLabelText(/^Judul conversation/)).toBeInTheDocument();
+    expect(screen.queryByLabelText(/^Mulai publikasi/)).not.toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: 'Tabel conversation' })).not.toBeInTheDocument();
   });
 
@@ -74,6 +75,8 @@ describe('conversation-first crawling workflow', () => {
       includeMode: 'all',
       origin: 'manual',
     });
+    expect(save.mock.calls[0][0]).not.toHaveProperty('since');
+    expect(save.mock.calls[0][0]).not.toHaveProperty('until');
   });
 
   it('generates a reviewable conversation draft from the title only and saves a version', async () => {
@@ -103,6 +106,11 @@ describe('conversation-first crawling workflow', () => {
     const savedRow = screen.getByRole('row', { name: /Akses beasiswa mahasiswa daerah/ });
     await user.click(within(savedRow).getByRole('button', { name: 'Buka form' }));
     expect(screen.getByRole('button', { name: 'Simpan versi baru' })).toBeInTheDocument();
+    await user.type(screen.getByLabelText(/^Tujuan riset/), ' Tambahan hasil tinjauan.');
+    await user.click(screen.getByRole('button', { name: 'Simpan versi baru' }));
+    await waitFor(() => expect(save).toHaveBeenCalledTimes(2));
+    expect(save.mock.calls[1][0]).toMatchObject({ id: expect.any(String), version: 1 });
+    expect(save.mock.calls[1][0]).not.toHaveProperty('since');
   });
 
   it('starts multiple platforms with one frozen conversation snapshot', async () => {
@@ -112,6 +120,12 @@ describe('conversation-first crawling workflow', () => {
       await screen.findByLabelText(/^Conversation/),
       'conversation-riset-kuliah',
     );
+    fireEvent.change(screen.getByLabelText(/^Mulai publikasi/), {
+      target: { value: '2026-09-01T08:00' },
+    });
+    fireEvent.change(screen.getByLabelText(/^Sebelum tanggal/), {
+      target: { value: '2026-10-01T08:00' },
+    });
     await user.click(screen.getByRole('checkbox', { name: /YouTube/ }));
     await user.click(screen.getByRole('checkbox', { name: /Reddit/ }));
     await user.click(screen.getByRole('button', { name: 'Tinjau & mulai parallel' }));
@@ -125,11 +139,14 @@ describe('conversation-first crawling workflow', () => {
     expect(start).toHaveBeenCalledTimes(1);
     const [plan] = start.mock.calls[0];
     expect(plan.config.executionMode).toBe('parallel');
+    expect(plan.config.since).toBe('2026-09-01T08:00');
+    expect(plan.config.until).toBe('2026-10-01T08:00');
     expect(plan.config.conversation).toMatchObject({
       id: 'conversation-riset-kuliah',
       version: 3,
       title: 'Percakapan tentang pilihan kuliah',
     });
+    expect(plan.config.conversation).not.toHaveProperty('since');
     expect(plan.config.platforms.youtube.enabled).toBe(true);
     expect(plan.config.platforms.reddit.enabled).toBe(true);
     expect(plan.config.platforms.instagram.enabled).toBe(false);

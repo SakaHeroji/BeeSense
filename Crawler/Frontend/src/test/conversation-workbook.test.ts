@@ -53,6 +53,7 @@ describe('Conversation workbook exchange', () => {
     expect(prompt).toContain('`conversation`');
     expect(prompt).toContain('`discovery`');
     expect(prompt).toContain('`relevance_examples`');
+    expect(prompt).toContain('bukan bagian dari Conversation');
     expect(promptFilename('Akses Beasiswa Daerah')).toBe(
       'prompt-conversation-akses-beasiswa-daerah.md',
     );

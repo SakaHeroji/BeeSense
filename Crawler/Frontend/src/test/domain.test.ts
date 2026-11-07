@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  applyConversation,
   csvCell,
   crawlDate,
   crawlDateLabel,
@@ -107,6 +108,21 @@ describe('shared defaults, nullable limits and storage', () => {
 });
 
 describe('transaction dates and redaction', () => {
+  it('keeps publication dates on the transaction when applying a conversation', async () => {
+    const conversation = structuredClone((await demoApi.conversations())[0]) as Awaited<
+      ReturnType<typeof demoApi.conversations>
+    >[number] & { since?: string; until?: string };
+    conversation.since = '2024-01-01T00:00';
+    conversation.until = '2024-02-01T00:00';
+    const config = initialConfig('automatic', 'youtube');
+    config.since = '2026-09-01T08:00';
+    config.until = '2026-10-01T08:00';
+    const applied = applyConversation(config, conversation);
+    expect(applied.since).toBe('2026-09-01T08:00');
+    expect(applied.until).toBe('2026-10-01T08:00');
+    expect(applied.conversation).not.toHaveProperty('since');
+    expect(applied.conversation).not.toHaveProperty('until');
+  });
   it('uses execution time across WIB midnight, never the queued creation date', () => {
     expect(
       crawlDate({ startedAt: '2026-11-02T17:00:00Z', createdAt: '2026-10-01T00:00:00Z' }),

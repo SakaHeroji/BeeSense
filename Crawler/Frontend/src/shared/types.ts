@@ -87,8 +87,6 @@ export interface ConversationDraft {
   version?: number;
   title: string;
   objective: string;
-  since: string;
-  until: string;
   include: string;
   exclude: string;
   includeMode: 'any' | 'all';

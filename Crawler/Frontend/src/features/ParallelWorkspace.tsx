@@ -154,6 +154,36 @@ export default function ParallelWorkspace() {
                 <Layers3 size={21} aria-hidden="true" />
               </div>
               <Errors errors={errors} />
+              <fieldset className="transaction-date-range">
+                <legend>Rentang publikasi transaksi</legend>
+                <div>
+                  <Field
+                    name="dates"
+                    label="Mulai publikasi"
+                    required
+                    hint="Waktu Indonesia Barat (WIB)."
+                  >
+                    {(id) => (
+                      <input
+                        id={id}
+                        type="datetime-local"
+                        value={config.since}
+                        onChange={(event) => field('since', event.target.value)}
+                      />
+                    )}
+                  </Field>
+                  <Field name="until" label="Sebelum tanggal" required>
+                    {(id) => (
+                      <input
+                        id={id}
+                        type="datetime-local"
+                        value={config.until}
+                        onChange={(event) => field('until', event.target.value)}
+                      />
+                    )}
+                  </Field>
+                </div>
+              </fieldset>
               <fieldset
                 className="parallel-platforms"
                 aria-describedby={platformError ? 'parallel-platforms-error' : undefined}
@@ -230,7 +260,7 @@ export default function ParallelWorkspace() {
                 <div className="social-section-heading">
                   <div>
                     <h2>Waktu eksekusi</h2>
-                    <p>Satu deadline untuk seluruh conversation.</p>
+                    <p>Satu deadline untuk seluruh transaksi parallel.</p>
                   </div>
                   <Clock3 size={20} aria-hidden="true" />
                 </div>
